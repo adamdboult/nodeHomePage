@@ -19,6 +19,7 @@ var postTitle;
 var postDate;
 var postNoType;
 var postFull;
+
 fs.readdir(__dirname+'/../../src/jade/blog', function(err, files){
     files.forEach(function(f){
 	postTitle=f.substring(8,f.length-5);
@@ -43,16 +44,6 @@ fs.readdir(__dirname+'/../../src/jade/blog', function(err, files){
     });
     rssString +='</channel>';
     rssString +='</rss>';
-});
-
-fs.readdir(__dirname+'/../../src/jade/models', function(err, files){
-    files.forEach(function(f){
-	postTitle=f;
-	modelArray.push({
-	    title:f.substring(0,f.length-5),
-	    noType:f.substring(0,f.length-5)
-	});
-    });
 });
 
 module.exports=function(app,passport,logger,mailgun,MailComposer){
