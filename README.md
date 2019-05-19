@@ -1,5 +1,5 @@
 # Installation
-sudo apt install node npm build-essential mongodb
+sudo apt install node npm build-essential
 
 sudo npm -g install artillery forever@0.14.2 gulp@3.9.1 bower@1.4.1
 
