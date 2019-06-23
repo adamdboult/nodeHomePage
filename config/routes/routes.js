@@ -46,7 +46,7 @@ fs.readdir(__dirname+'/../../src/jade/blog', function(err, files){
     rssString +='</rss>';
 });
 
-module.exports=function(app,passport,logger,mailgun,MailComposer){
+module.exports=function(app,logger){
     'use strict';
     //var DataSerie=require(__dirname+'/../models/data.js');
     //var rootObject={root:__dirname+'/../../public'};

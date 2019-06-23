@@ -1,14 +1,17 @@
 # Installation
-sudo apt install node npm build-essential
+Install APT dependencies:
+sudo apt install node npm npx build-essential
 
-sudo npm -g install artillery forever@0.14.2 gulp@3.9.1 bower@1.4.1
-
-NB: gulp version should match package.json. Others aren't in package.json so no need to match.
-
+Install NPM packages:
 npm install
-bower install
-gulp
+
+Install Bower components:
+npx bower install
+
+Prepare public files with gulp:
+npx gulp
 
 # Running
-NODE_ENV=production forever start server.js
+Run the webserver:
+NODE_ENV=production npx forever start ./server.js
 
