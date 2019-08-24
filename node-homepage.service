@@ -1,0 +1,15 @@
+[Unit]
+Description=Home Page Node
+Documentation=https://www.bou.lt
+After=network.target
+
+[Service]
+Type=notify
+User=adam
+ExecStart=/usr/bin/node /home/adam/Projects/nodeHomePage/server.js
+Restart=always
+WatchogSec=604800
+
+[Install]
+WantedBy=multi-user.target
+

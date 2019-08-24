@@ -9,6 +9,8 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "*",
     "gulp-jade": "*",
+    "gulp-clean": "*",
+    "del": "*",
     "gulp-jshint": "^2.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-shell": "^0.7.0",
