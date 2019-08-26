@@ -1,21 +1,60 @@
 # Installation
 Install APT dependencies:
-sudo apt install node npm build-essential
+```bash
+sudo apt install nodejs npm build-essential apache2
+```
 
-Install NPM packages:
+Install npx
+```bash
+sudo npm -g install npx
+```
+
+Install NPM packages
+```bash
 npm install
+```
 
-Install Bower components:
-sudo npm install -g npx
+Install Bower components
+```bash
 npx bower install
+```
 
-Prepare public files with gulp:
+Prepare public files with gulp
+```bash
 npx gulp
+```
 
 # Running
-Copy the service file to 
-/lib/systemd/system/
-And then run
+For testing
+```bash
+node server.js
+```
+
+Copy the service file.
+```bash
+sudo cp ./node-homepage.service /lib/systemd/system
 sudo systemctl daemon-reload
-sudo systemctl start node-artificial-economist.service
+sudo systemctl start node-homepage.service
+```
+
+# Setting up SSL
+
+```bash
+sudo systemctl stop apache2.service
+sudo apt install certbot
+sudo certbot certbot only
+sudo systemctl start apache2.service
+```
+
+# Setting up Apache
+Node homepage does not listen on standard HTTP or HTTPS ports.
+```bash
+sudo a2enmod rewrite
+sudo a2enmod ssl
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo cp ./node-homepage.conf /etc/apache2/sites-available
+sudo a2ensite node-homepage.conf
+sudo systemctl reload apache2
+```
 
