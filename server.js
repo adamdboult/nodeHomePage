@@ -25,6 +25,7 @@ app.use(forceDomain({
 }));
 
 //forward http to https
+/*
 function requireHTTPS(req, res, next) {
     if (!req.secure) {
         //FYI this should work for local development as well
@@ -32,8 +33,8 @@ function requireHTTPS(req, res, next) {
     }
     next();
 }
-
-app.use(requireHTTPS);
+*/
+//app.use(requireHTTPS);
 
 app.set('trust proxy', 1);
 
@@ -78,6 +79,7 @@ var HTTPport = process.env.PORT || HTTPportnum;
 //app.listen(HTTPport);
 
 //HTTPS setup
+/*
 var HTTPSportnum = configObj.ports.https;
 var privateKey = fs.readFileSync(configObj.keys.privateKey);
 var certificate = fs.readFileSync(configObj.keys.certificate);
@@ -88,13 +90,15 @@ var options = {key: privateKey,
 	      };
 
 var httpsPort = process.env.PORT || HTTPSportnum;
-
+*/
 // LISTEN
 var httpServer=http.createServer(app);
 httpServer.listen(HTTPport);
 
 logger.debug("App listening on port " + HTTPport);
-
+/*
 var httpsServer=https.createServer(options,app);
 httpsServer.listen(httpsPort);
 logger.debug("HTTPS on port "+httpsPort);
+*/
+
