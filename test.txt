@@ -1,4 +1,0 @@
-\include{01-00-Introduction.tex}
-\include{01-01-diffForms.tex}
-\include{01-02-exteriorDerivative.tex}
-\include{01-03-externalCalculus.tex}
