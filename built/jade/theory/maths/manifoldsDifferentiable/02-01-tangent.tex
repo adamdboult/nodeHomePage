@@ -1,0 +1,88 @@
+
+\subsection{Tangent space and tangent vectors}
+
+Take a topological space: can all subsets in the toplogy be mapped to \(n\) dimensional space? if so, manifold
+
+For this we need openness: a graph for example isn't open and so isn't a manifold
+
+We also need the same number of dimensions at each point
+
+Isn't always the case. eg two circles conneceted by a line is not a manifold. it's 2d in circles, 1d on line (and 3d at connections)
+
+We have a homeomorphism from each point in the toplogy to an n dimensional coordinate system
+
+We also have homeomorphisms of transformation maps, between different points on the topology
+
+The vector space from the homeomorphism is tangent to the manifold at that point. the set of all tangents forms a tangent space
+
+Interior: M; boundry \delta M
+Tangent on a manifold:
+
+The tangent space of manifold \(M\) at point \(p\) is denoted \(TM_p\).
+
+If we have a normal field
+
+\(v=v^ie_i\)
+
+Then we can differentiate wrt a direction \(x\).
+
+\(\dfrac{\delta }{\delta x}v=\dfrac{\delta }{\delta x}v^ie_i\)
+
+\(\dfrac{\delta }{\delta x}v=e_i\dfrac{\delta v^i}{\delta x}\)
+
+Because the basis does not change.
+
+If the basis does change we instead have:
+
+\(\dfrac{\delta }{\delta x}v=\dfrac{\delta }{\delta x}v^ie_i\)
+
+\(\dfrac{\delta }{\delta x}v=e_i\dfrac{\delta v^i}{\delta x}+v^i\dfrac{\delta e_i }{\delta x}\)
+
+General point. basis can vary across manifold
+
+After this basis diff
+
+\subsubsection{Tangent space as vector bundle}
+
+\subsubsection{Christoffel symbols (page)}
+
+Christoffel symbols are connections.
+
+\subsubsection{The torsion tensor (own page)}
+
+Torsion tensor is
+
+\(T_{jk}^i=\Gamma^i_{jk}-\Gamma^i_{kj}\)
+
+
+If torsion is \(0\), then the connection is symmetric.
+
+\subsubsection{Basis of tangent space}
+
+We can use as the basis for tangent space:
+
+\(\{\dfrac{(\delta }{\delta x^1})_p,(\dfrac{\delta }{\delta x^2})_p,...\}\)
+
+
+This means we can write a tangent vector as:
+
+\(u=u^i(\dfrac{\delta }{\delta x^i})_p\)
+
+\subsubsection{Basis of contant space}
+
+We can use as the basis for the contangent space:
+
+\(\{dx^1,dx^2,...\}\)
+
+\subsubsection{Metric on the tangent space (to Riemann)}
+
+\subsubsection{Basis of metric (to Riemann)}
+
+The metric depends on the basis too:
+
+\(g_{ij}(p)=g((\dfrac{\delta }{\delta x^i})_p,(\dfrac{\delta }{\delta x^j})_p)\)
+
+The metric on two tangent vectors is defined on the components.
+
+\(g=g_{ij}(p)u^iv^j\)
+

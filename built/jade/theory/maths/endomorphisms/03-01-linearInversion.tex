@@ -1,0 +1,71 @@
+
+\subsection{Inverse matrices}
+
+An invertible matrix implies that if the matrix is multiplied by another matrix, the original matrix can be recovered.
+
+That is, if we have matrix \(A\), there exists matrix \(A^{-1}\) such that \(AA^{-1}=I\).
+
+Consider a linear map on a vector space.
+
+$Ax=y$
+
+If \(A\) is invertible we can have:
+
+$A^{-1}Ax=A^{-1}y$
+
+$x=A^{-1}y$
+
+If we set \(y=\mathbf 0\) then:
+
+\(x=\mathbf 0\)
+
+So if there is a non-zero vector \(x\) such that:
+
+\(Ax=\mathbf 0\) then \(A\) is not invertible.
+
+\subsection{Left and right inverses}
+
+That is, for all matrices \(A\), the left and right inverses of \(B\), \(B_L^{-1}\) and \(B_R^{-1}\), are defined such that:
+
+$A(BB_R^{-1})=A$
+
+$A(B_L^{-1}B)=A$
+
+Left and right inversions are equal
+
+Note that if the left inverse exists then:
+
+$B_L^{-1}B=I$
+
+And if the right inverse exists:
+
+$BB_R^{-1}=I$
+
+Let’s take the first:
+
+$B_L^{-1}B=I$
+
+$B_L^{-1}BB_L^{-1}=B_L^{-1}$
+
+$B_L^{-1}BB_L^{-1}-B_L^{-1}=0$
+
+$B_L^{-1}(BB_L^{-1}-I)=0$
+
+\subsection{Inversion of products}
+
+\((AB)(AB)^{-1}=I\)
+
+\(A^{-1}AB(AB)^{-1}=A^{-1}\)
+
+\(B^{-1}B(AB)^{-1}=B^{-1}A^{-1}\)
+
+\((AB)^{-1}=B^{-1}A^{-1}\)
+
+\subsection{Inversion of a diagonal matrix}
+
+$DD^{-1}=I$
+
+$D_{ii}D_{ii}^{-1}=1$
+
+$D_{ii}^{-1}=\frac{1}{D_{ii}}$
+

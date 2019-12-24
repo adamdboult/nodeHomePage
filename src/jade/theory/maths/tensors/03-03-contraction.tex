@@ -1,0 +1,45 @@
+
+\subsection{Tensor contraction}
+
+We have a vector \(v\in V\) and \(w\in V^*\).
+
+\(\mathbf v=\sum_i v^i \mathbf e_i\)
+
+\(\mathbf w=\sum_i w_i \mathbf f^i\)
+
+\(\mathbf w\mathbf v=[\sum_i v^i \mathbf e_i][\sum_i w_i \mathbf f^i]\)
+
+\(\mathbf w\mathbf v=\sum_i \sum_j [v^i \mathbf e_i][w_j \mathbf f^j]\)
+
+\(\mathbf w\mathbf v=\sum_i \sum_j v^i w_j \mathbf e_i\mathbf f^j\)
+
+We use the dual basis so:
+
+\(\mathbf w\mathbf v=\sum_i \sum_j v^i w_j \mathbf e_i\mathbf e^j\)
+
+\(\mathbf w\mathbf v=\sum_i \sum_j v^i w_j \delta_i^j\)
+
+We can see that this value is unchanged when there is a change in basis.
+
+What if these were both from \(V\)?
+
+\(\mathbf v=\sum_i v^i \mathbf e_i\)
+
+\(\mathbf w=\sum_i w^i \mathbf e_i\)
+
+\(\mathbf w\mathbf v=[\sum_i v^i \mathbf e_i][\sum_i w^i \mathbf e_i]\)
+
+\(\mathbf w\mathbf v=\sum_i \sum_j v^i w^j \mathbf e_i\mathbf e_i\)
+
+This term is dependent on the basis, and so we do not contract.
+
+So if we have \(v_iw^i\), we can contract, because the result (calculated from the components) does not depend on the basis.
+
+But if we have \(v_iw_i\), the result (calcualted from the components) will change depending on the choice of basis.
+
+We define a new object
+
+\(c=\sum_i w^iv_i\)
+
+This new term, c, does not depend on \(i\), and so we have contracted the index.
+

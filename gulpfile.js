@@ -29,106 +29,38 @@ var sass=require('gulp-sass');
 var clean = require('gulp-clean');
 var del = require('del');
 
+var    exec = require('child_process').exec;
+
 /////////////////
 /* DIRECTORIES */
 /////////////////
-var bowerDir = __dirname+'/bower_components';
-////////////////
-/* FONT FILES */
-////////////////
-
-    var fontFiles = [
-        bowerDir+'/bootstrap/dist/fonts/**/*',
-        bowerDir+'/flat-ui/dist/fonts/**/*',
-        bowerDir+'/bootstrap-material-design/dist/fonts/**/*'
-    ];
-
-    var mathjaxprefix=bowerDir+'/MathJax';
-    var mathjaxFolder=[mathjaxprefix+'/MathJax.js',
-		   mathjaxprefix+'/config/**/*',
-		   mathjaxprefix+'/fonts/HTML-CSS/TeX/woff/**/*',
-		   mathjaxprefix+'/jax/**/*',
-		   mathjaxprefix+'/extensions/**/*'
-		  ];
-
-
-
 gulp.task('emptyDestFolders', function() {
     return del([
-        __dirname+'/public'
+        __dirname+'/public',
+        __dirname+'/built'
     ]);
 });
-    /*
 
-function emptyDestFolders() {
-    var deferred = Q.defer();
-    rmdir(__dirname+'/public', function(error){
-	fs.mkdirSync(__dirname+'/public');
-	deferred.resolve();
+gulp.task('latex', function() {
+
+    var latexSrc = __dirname + '/src/jade/**/*',
+        latexDst = __dirname + '/built/jade';
+
+    return gulp.src(latexSrc)
+        .pipe(gulp.dest(latexDst));
+
+});
+
+gulp.task('latexConvert', function(cb) {
+
+    exec('./convert_latex.sh', function(err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
     });
-    return deferred.promise;
-    
-    //cb();
-    
-    return del(__dirname + 'public/**');
-}
-*/
-function mathjax (){
 
-    gulp.src(mathjaxFolder,{base:mathjaxprefix})
-	.pipe(gulp.dest(__dirname+'/public/js/MathJax/'));
+});
 
-}
-
-function datepicker () {
-
-    var datepickerFolder=[bowerDir+'/bootstrap-datepicker/js/**/*'];
-
-    gulp.src(datepickerFolder,{base:bowerDir+'/bootstrap-datepicker/js'})
-	.pipe(gulp.dest(__dirname+'/public/js/datepicker/'));
-
-}
-
-function fallbackjs () {
-
-    var jsFallBack=[bowerDir+'/jquery/dist/jquery.min.js'];
-
-    gulp.src(jsFallBack)
-	.pipe(gulp.dest(__dirname+'/public/js/'));
-}
-
-    var jsConcatFilesHeader = [
-        bowerDir+'/bootstrap/dist/js/bootstrap.js',
-        //bowerDir+'/Bootflat/bootflat/icheck.min.js',
-        //bowerDir+'/Bootflat/bootflat/jquery.fs.selecter.min.js',
-        //bowerDir+'/Bootflat/bootflat/jquery.fs.stepper.min.js',
-        //bowerDir+'/browser-update/browser-update.min.js',
-        bowerDir+'/d3/d3.min.js',
-        bowerDir+'/angular/angular.min.js'
-        //bowerDir+'/flat-ui/dist/js/flat-ui.min.js'
-        //bowerDir+'/bootstrap-material-design/dist/js/material.min.js',
-        //bowerDir+'/bootstrap-material-design/dist/js/ripples.min.js'
-    ];
-
-
-
-// JS concat, strip debugging and minify
-
-function scriptsDebug () {
-
-    gulp.src(jsConcatFilesHeader)
-	.pipe(concat('coreHeader.js'))
-	.pipe(gulp.dest(__dirname+'/public/js/'));
-
-}
-
-function jshint () {
-// JS hint task
-    gulp.src(jshintFiles)
-	.pipe(jshint())
-	.pipe(jshint.reporter('default'));
-
-}
 
 gulp.task('imageMin', function() {
 
@@ -140,71 +72,6 @@ gulp.task('imageMin', function() {
 
 });
 
-gulp.task('fonts', function() {
-    return gulp.src(fontFiles)
-	.pipe(gulp.dest(__dirname+'/public/fonts/'));
 
-});
-
-gulp.task('scripts', function () {
-
-    return gulp.src(jsConcatFilesHeader)
-	.pipe(concat('coreHeader.js'))
-	.pipe(stripDebug())
-	.pipe(uglify())
-	.pipe(gulp.dest(__dirname+'/public/js/'));
-});
-
-gulp.task('styles',function() {
-
-	var stylesFiles_1 = [
-
-	];
-	var stylesFiles_2 = [
-	];
-
-	var stylesFiles = [
-	    bowerDir+'/bootstrap/dist/css/bootstrap.css',
-	    //bowerDir+'/Bootflat/bootflat/css/bootflat.min.css',
-	    //bowerDir+'/bootstrap-theme-bootswatch-flatly/css/bootstrap.min.css',
-	    //bowerDir+'/bootstrap-material-design/dist/css/roboto.min.css',
-	    //bowerDir+'/bootstrap-material-design/scss/bootstrap-material-design.scss',
-	    //bowerDir+'/bootstrap-material-design/dist/css/ripples.min.css',
-	    //bowerDir+'/flat-ui/dist/css/flat-ui.min.css',
-	    __dirname+'/src/styles/core.scss'
-	];
-	console.log(stylesFiles);
-
-
-
-    console.log(stylesFiles);
-    return gulp.src(stylesFiles)
-	.pipe(concat('styles.scss'))
-        .pipe(sass())
-	.pipe(autoprefix('last 2 versions'))
-	//.pipe(minifyCSS({keepSpecialComments:false}))
-    //	.pipe(stripDebug())
-	.pipe(gulp.dest(__dirname+'/public/css/'));
-});
-
-
-function debugTask() {
-
-    //emptyDestFolders();
-
-    imageMin();
-    fonts();
-    mathjax();
-
-    datepicker();
-
-    scripts-debug();
-    jshint();
-
-    //cb();
-}
-
-exports.default = gulp.series('emptyDestFolders', 'styles', 'imageMin', 'fonts', 'scripts');
-
-exports.debug = debugTask;
+exports.default = gulp.series('emptyDestFolders', 'imageMin', 'latex', 'latexConvert');
 

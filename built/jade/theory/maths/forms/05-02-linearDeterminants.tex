@@ -1,0 +1,146 @@
+
+\subsection{Determinants}
+
+
+From invertible matrix section in endo
+
+
+A matrix can only be inverted if it can be created from a combination of elementary row operations.
+
+How can we identify if a matrix is invertible? We want to create a scalar from the matrix which tells us if this possible. We can this scalar the determinant.
+
+For a matrix \(A\) we label the determinant \(|A|\), or \(\det A\)
+
+We propose \(|A|=0\) when the matrix is not invertible.
+
+So how can we identify the function we need to undertake on the matrix?
+
+\subsubsection{New 1}
+
+We know that linear dependence results in determinants of \(0\).
+
+We can model this as a function on the columns of the matrix.
+
+\(\det M = \det ([M_1, ...,M_n)\)
+
+If there is linear depednence, for example if two columns are the same then:
+
+\(\det ([M_1,...,M_i,...,M_i,...,M_n])=0\)
+
+Similarly, if there is a column of \(0\) then the determinant is \(0\).
+
+\(\det ([M_1,...,0,...,M_n])=0\)
+\subsubsection{New 2}
+
+Show linear in addition
+
+How can we identify the determinant of less simple matrices? We can use the multilinear form.
+
+\(\sum c_i\mathbf M_i=\mathbf 0\)
+
+Where \(\mathbf c \ne \mathbf 0\)
+
+Or:
+
+\(M\mathbf c=\mathbf 0\)
+\subsubsection{Rule 1: Columns of matrices can be the input to a multilinear form}
+
+A matrix can be shown in terms of its columns.
+$A=[v_1,...,v_n]$
+
+$\det A=\det [v_1,...,v_n]$
+
+
+$\det A=\sum_{k_1=1}^m...\sum_{k_n=1}\prod_{i=1}^ma_{ik_i}\det ([e_{k_1},...,e_{k_n}])$
+
+\subsubsection{Multiplying a matrix by a constant multiplies the determinant by the same amount}
+
+If a whole row or columns is \(0\) then:
+
+$\det A=\det [v_1,...,v_i,...,v_n]$
+
+$\det A'=\det [v_1,...,cv_i,...,v_n]$
+
+
+$\det A=\det [v_1,...,v_i,...,v_n]$
+
+$\det A'=\det [v_1,...,cv_i,...,v_n]$
+
+$\det A'=c\det [v_1,...,v_i,...,v_n]$
+
+$\det A'=c\det A$
+
+As a result, multiplying a column by \(0\) makes the determinant \(0\).
+
+A matrix with a column of \(0\) therefore has determinant \(0\)
+
+\subsubsection{Rule 2: A matrix with equal columns has a determinant of \(0\).}
+
+$A=[a_1,...,a_i,...,a_i,...,a_n]$
+
+$D(A)=D([a_1,...,a_i,...,a_i,...,a_n])$
+
+We know from Result 3 that swapping columns reverses the sign. Reversing columns results in the same matrix, so the determinant must be unchanged.
+
+$D(A)=-D(A)$
+
+$D(A)=0$
+
+\subsubsection{Linear dependence}
+
+If a column is a linear combination of other columns, then the matrix cannot be inverted.
+
+$A=[a_1,...,\sum_{j\ne i}^{n}c_ja_j,...,a_n]$
+
+$\det A=\det ([v_1,...,\sum_{j\ne i}^{n}c_jv_j,...,v_n])$
+
+$\det A=\sum_{j\ne i}^{n}c_j\det ([v_1,...,v_j,...,v_n])$
+
+$\det A=\sum_{j\ne i}^{n}c_j\det ([v_1,...,v_j,,...,v_j,...,v_n])$
+
+As there is a repeating vector:
+
+\(\det A=0\)
+
+\subsubsection{Swapping columns multiplies the determinant by \(-1\)}
+
+$A=[v_1,...,v_i+v_j,...,v_i+v_j,...,v_n]$
+
+We know.
+
+$\det A=0$
+
+$\det A=\det ([a_1,...,a_i,...,a_i,...,a_n])+\det([a_1,...,a_i,...,a_j,...,a_n])+\det([a_1,...,a_j,...,a_i,...,a_n])+\det([a_1,...,a_j,...,a_j,...,a_n])$
+
+So:
+
+$\det ([a_1,...,a_i,...,a_i,...,a_n])+\det ([a_1,...,a_i,...,a_j,...,a_n])+\det([a_1,...,a_j,...,a_i,...,a_n])+\det([a_1,...,a_j,...,a_j,...,a_n])=0$
+
+As \(2\) of these have equal columns these are equal to \(0\).
+
+$\det ([a_1,...,a_i,...,a_j,...,a_n])+\det ([a_1,...,a_j,...,a_i,...,a_n])=0$
+
+$\det ([a_1,...,a_i,...,a_j,...,a_n])=-\det ([a_1,...,a_j,...,a_i,...,a_n])$
+
+\subsubsection{Calculating the determinant}
+
+We have
+
+$\det A=\sum_{k_1=1}^m...\sum_{k_n=1}\prod_{i=1}^ma_{ik_i}\det ([e_{k_1},...,e_{k_n}])$
+
+So what is the value of the determinant here?
+
+We know that the determinant of the identity matrix is \(1\).
+
+We know that the determinant of a matrix with identical columns is \(0\).
+
+We know that swapping columns multiplies the determinant by \(-1\).
+
+Therefore the determinants where the values of \(k\) are not all unique are \(0\).
+
+The determinants of the others are either \(-1\) or \(1\) depending on how many swaps are required to restore to the identity matrix.
+
+This is also shown as the Leibni formula.
+
+$\det A = \sum_{\sigma \in S_n}sgn (\sigma )\prod_{i=1}^na_{i,\sigma_i}$
+

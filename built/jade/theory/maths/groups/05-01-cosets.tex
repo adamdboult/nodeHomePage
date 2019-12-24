@@ -1,0 +1,77 @@
+
+\subsection{Cosets and normal subgroups}
+
+
+A coset is defined between a group and a subgroup of the group.
+
+For a group \(G\), and its subgroup \(H\):
+
+\begin{itemize}
+\item The left coset is \(\{gH\}\)
+\item The right coset is \(\{Hg\}\)
+\end{itemize}
+
+For \(\forall g\in G\).
+
+For abellian groups, the left and right cosets are the same.
+
+The left and right cosets can also be the same, even if the group \(G\) is not abelian.
+
+\subsubsection{Normal subgroups}
+
+If the left and right cosets are the same then \(H\) is a normal subgroup.
+
+\subsubsection{Cosets divide a group.}
+
+Consider two left cosets, \(aH\) and \(bH\), with a common element.
+
+This means that \(ah_i=bh_j\).
+
+We can use this to get:
+
+\(a=bh_jh_i^{-1}\)
+
+\(b=ah_ih_j^{-1}\)
+
+We know that:
+
+\(ah\in aH\)
+
+\(bh\in bH\)
+
+So:
+
+\(bh_jh_i^{-1}h\in aH\)
+
+\(ah_ih_j^{-1}h\in bH\)
+
+And so:
+
+\(bH\subset aH\)
+
+\(aH\subset bH\)
+
+Therefore:
+
+\(aH=bH\)
+
+\subsubsection{Example 1}
+
+Consider the group \(\{-1,1\},\times \)
+
+For the subgroup \(\{1\},\times \), the left coset is \(\{gH\}=\{1,-1\}\).
+
+The right coset is the same.
+
+\subsubsection{Example 2}
+
+Consider the group of integers and addition: \((Z,+)\)
+
+For subgroup \((mZ,+)\), the left and right cosets are the same because the group is abelian.
+
+The coset of the subgroup is the subgroup multiplied by each element in \(G\).
+
+This is \(mZ\), \(mZ+1\), \(mZ+2\) and so on.
+
+Once we reach \(mZ+m\) this has looped, and is already a coset, so we only need the sets upto \(mZ+m-1\).
+

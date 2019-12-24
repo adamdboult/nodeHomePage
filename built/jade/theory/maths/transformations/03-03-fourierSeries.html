@@ -1,0 +1,43 @@
+<h2 id="fourier-series">Fourier series</h2>
+<h3 id="fourier-series-1">Fourier series</h3>
+<p>Motivation: we have a function we want to display as another sort of function.</p>
+<p>More specifically, a function can be shown as a combination of sinusoidal waves.</p>
+<p>To frame this let’s imagine a sound wave, with values <span class="math inline"><em>f</em>(<em>t</em>)</span> for all time values <span class="math inline"><em>t</em></span>. We can imagine this as a summation of sinusoidal functions. That is:</p>
+<p><span class="math inline">$f(t)=\sum_{n=0}^\inf a_ncos(nw_0t)$</span></p>
+<p>We want to get another function <span class="math inline"><em>F</em>(<em>ξ</em>)</span> for all frequencies <span class="math inline"><em>ξ</em></span>.</p>
+<h3 id="combinations-of-wave-functions">Combinations of wave functions</h3>
+<p>We can add sinusoidal waves to get new waves.</p>
+<p>For example</p>
+<p><span class="math inline">$s_N(x)=2\sin(x+3)+\sin(-4x)+\frac{1}{2}\cos(x)$</span></p>
+<h3 id="as-a-summation-of-series">As a summation of series</h3>
+<p>We can simplify arbitrary series using the following identities:</p>
+<p><span class="math inline">$\cos(x)=\sin(x+\frac{\tau }{8})$</span></p>
+<p><span class="math inline">sin(−<em>x</em>)= − sin(<em>x</em>)</span></p>
+<p>So we have:</p>
+<p><span class="math inline">$s(x)=2\sin(x+3)-\sin(4x)+\frac{1}{2}\sin(x+\frac{\tau }{8})$</span></p>
+<p>We can put this into the following format:</p>
+<p><span class="math inline">$s(x)=\sum^m_{i=1}a_i\sin(b_ix+c_i)$</span></p>
+<p>Where:</p>
+<p><span class="math inline">$a=[2,-1,\frac{1}{2}]$</span></p>
+<p><span class="math inline"><em>b</em> = [1, 4, 1]</span></p>
+<p><span class="math inline">$c=[3,0,\frac{\tau}{8}]$</span></p>
+<h3 id="ordering-by-b">Ordering by <span class="math inline"><em>b</em></span></h3>
+<p>We can move terms around to get:</p>
+<p><span class="math inline">$s(x)=\sum^m_{i=1}a_i\sin(b_ix+c_i)$</span></p>
+<p>Where:</p>
+<p><span class="math inline">$a=[2,\frac{1}{2},-1]$</span></p>
+<p><span class="math inline"><em>b</em> = [1, 1, 4]</span></p>
+<p><span class="math inline">$c=[3,\frac{\tau}{8},0]$</span></p>
+<h3 id="adding-waves-with-same-frequency">Adding waves with same frequency</h3>
+<p>We know that:</p>
+<p><span class="math inline">sin(<em>a</em> + <em>b</em>)=sin(<em>a</em>)cos(<em>b</em>)+sin(<em>b</em>)cos(<em>a</em>)</span></p>
+<p>So:</p>
+<p><span class="math inline">sin(<em>b</em><sub><em>i</em></sub><em>x</em> + <em>c</em><sub><em>i</em></sub>)=sin(<em>b</em><sub><em>i</em></sub><em>x</em>)cos(<em>c</em><sub><em>i</em></sub>)+sin(<em>c</em><sub><em>i</em></sub>)cos(<em>b</em><sub><em>i</em></sub><em>x</em>)</span></p>
+<p>If <span class="math inline">2</span> terms have the same value for <span class="math inline"><em>b</em><sub><em>i</em></sub></span>, then:</p>
+<p><span class="math inline"><em>a</em><sub><em>i</em></sub>sin(<em>b</em><sub><em>i</em></sub><em>x</em> + <em>c</em><sub><em>i</em></sub>)+<em>a</em><sub><em>j</em></sub>sin(<em>b</em><sub><em>j</em></sub><em>x</em> + <em>c</em><sub><em>j</em></sub>)=<em>a</em><sub><em>i</em></sub>sin(<em>b</em><sub><em>i</em></sub><em>x</em> + <em>c</em><sub><em>i</em></sub>)+<em>a</em><sub><em>j</em></sub>sin(<em>b</em><sub><em>i</em></sub><em>x</em> + <em>c</em><sub><em>j</em></sub>)</span></p>
+<p><span class="math inline"><em>a</em><sub><em>i</em></sub>sin(<em>b</em><sub><em>i</em></sub><em>x</em> + <em>c</em><sub><em>i</em></sub>)+<em>a</em><sub><em>j</em></sub>sin(<em>b</em><sub><em>j</em></sub><em>x</em> + <em>c</em><sub><em>j</em></sub>)=<em>a</em><sub><em>i</em></sub>sin(<em>b</em><sub><em>i</em></sub><em>x</em>)cos(<em>c</em><sub><em>i</em></sub>)+<em>a</em><sub><em>i</em></sub>sin(<em>c</em><sub><em>i</em></sub>)cos(<em>b</em><sub><em>i</em></sub><em>x</em>)+<em>a</em><sub><em>j</em></sub>sin(<em>b</em><sub><em>i</em></sub><em>x</em>)cos(<em>c</em><sub><em>j</em></sub>)+<em>a</em><sub><em>j</em></sub>sin(<em>c</em><sub><em>j</em></sub>)cos(<em>b</em><sub><em>i</em></sub><em>x</em>)</span></p>
+<p>So we now get for:</p>
+<p><span class="math inline">$s(x)=\sum^m_{i=1}a_i\sin(b_ix+c_i)$</span></p>
+<p><span class="math inline"><em>a</em> = [, −1]</span></p>
+<p><span class="math inline"><em>b</em> = [, 4]</span></p>
+<p><span class="math inline"><em>c</em> = [, 0]</span></p>

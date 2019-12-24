@@ -1,0 +1,21 @@
+<h2 id="axiom-schema-of-specification">Axiom schema of specification</h2>
+<h3 id="the-axiom-schema-of-unrestricted-comprehension">The axiom schema of unrestricted comprehension</h3>
+<p>We want to formalise the relationship between the preterite and the set. An obvious way of doing this is to add an axiom for each preterite in our structure that:</p>
+<p><span class="math inline">∀<em>x</em>∃<em>s</em>[<em>P</em>(<em>x</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>This is known as “unrestricted comprehension” and there are problems with this approach.</p>
+<p>Consider a predicate for all terms which are not members of themselves. That is:</p>
+<p><span class="math inline">¬(<em>x</em> ∈ <em>x</em>)</span></p>
+<p>This implies the following is true:</p>
+<p><span class="math inline">∀<em>x</em>∃<em>s</em>[¬(<em>x</em> ∈ <em>x</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>As this is true for all <span class="math inline"><em>x</em></span>, it is true for <span class="math inline"><em>x</em> = <em>s</em></span>. So:</p>
+<p><span class="math inline">∃<em>s</em>[¬(<em>s</em> ∈ <em>s</em>)↔(<em>s</em> ∈ <em>s</em>)]</span></p>
+<p>This statement is false. As we have inferred a false formula, the axiom of unrestricted comprehension does not work. This result is known as Russel’s Paradox.</p>
+<p>This is an axiom schema rather than an axiom. That is, there is a new axiom for each preterite.</p>
+<h3 id="axiom-schema-of-specification-1">Axiom schema of specification</h3>
+<p>To resolve Russels’ paradox, we amend the axiom schema to:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>a</em>∃<em>s</em>[(<em>P</em>(<em>x</em>)∧<em>x</em> ∈ <em>a</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>That is, for every set <span class="math inline"><em>a</em></span>, we can define a subset <span class="math inline"><em>s</em></span> for each predicate.</p>
+<p>This resolves Russel’s Paradox. Let’s take the same steps on the above formula as in unrestricted comprehension;</p>
+<p><span class="math inline">∀<em>x</em>∀<em>a</em>∃<em>s</em>[(¬(<em>x</em> ∈ <em>x</em>)∧<em>x</em> ∈ <em>a</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p><span class="math inline">∃<em>s</em>[(¬(<em>s</em> ∈ <em>s</em>)∧<em>s</em> ∈ <em>s</em>)↔(<em>s</em> ∈ <em>s</em>)]</span></p>
+<p>So long as the subsets <span class="math inline"><em>s</em></span> are not members of themselves, this holds.</p>

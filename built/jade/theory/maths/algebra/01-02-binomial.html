@@ -1,0 +1,24 @@
+<h2 id="binomial-expansion">Binomial expansion</h2>
+<h3 id="introduction">Introduction</h3>
+<p>How can we expand</p>
+<p><span class="math inline">(<em>a</em> + <em>b</em>)<sup><em>n</em></sup>, <em>n</em> ∈ ℕ</span></p>
+<p>We know that:</p>
+<p><span class="math inline">(<em>a</em> + <em>b</em>)<sup><em>n</em></sup> = (<em>a</em> + <em>b</em>)(<em>a</em> + <em>b</em>)<sup><em>n</em> − 1</sup></span></p>
+<p><span class="math inline">(<em>a</em> + <em>b</em>)<sup><em>n</em></sup> = <em>a</em>(<em>a</em> + <em>b</em>)<sup><em>n</em> − 1</sup> + <em>b</em>(<em>a</em> + <em>b</em>)<sup><em>n</em> − 1</sup></span></p>
+<p>Each time this is done, the terms split, and each terms is multiplied by either <span class="math inline"><em>a</em></span> or <span class="math inline"><em>b</em></span>. That means at the end there are <span class="math inline"><em>n</em></span> total multiplications.</p>
+<p>This can be shown as:</p>
+<p><span class="math inline">$(a+b)^n=\sum_{i=1}^n a^i b^{n-i} c_i$</span></p>
+<p>So we want to identify <span class="math inline"><em>c</em><sub><em>i</em></sub></span>.</p>
+<p>Each term can be shown as a series of <span class="math inline"><em>n</em></span> <span class="math inline"><em>a</em></span>s and <span class="math inline"><em>b</em></span>s. For example:</p>
+<ul>
+<li><p><span class="math inline"><em>a</em><em>a</em><em>b</em><em>a</em></span></p></li>
+<li><p><span class="math inline"><em>b</em><em>a</em><em>a</em><em>a</em></span></p></li>
+</ul>
+<p>For any of these, there are <span class="math inline"><em>n</em>!</span> ways or arranging the sequence, but this includes duplicates. If we were given <span class="math inline"><em>n</em></span> unique terms to multiply there would indeed by <span class="math inline"><em>n</em>!</span> different ways this could have arisen, but we can swap <span class="math inline"><em>a</em></span>s and <span class="math inline"><em>b</em></span>s, as they were only generated once. So let’s count duplicates.</p>
+<p>There are duplicates in the <span class="math inline"><em>a</em></span>s. If there are <span class="math inline"><em>i</em></span> <span class="math inline"><em>a</em></span>s, then there are <span class="math inline"><em>i</em>!</span> ways of rearranging this. Similarly, if there are <span class="math inline"><em>n</em> − <em>i</em></span> <span class="math inline"><em>b</em></span>s, then there are <span class="math inline">(<em>n</em> − <em>i</em>)!</span> ways or arranging this.</p>
+<p>As a result the number of actual observed instances, <span class="math inline"><em>c</em><sub><em>i</em></sub></span>, is:</p>
+<p><span class="math inline">$c_i=\frac{n!}{i!(n-i)!}$</span></p>
+<p>And so:</p>
+<p><span class="math inline">$(a+b)^n=\sum^n_{i=0} a^i b^{n-i} \frac{n!}{i!(n-i)!}$</span></p>
+<p>We can also write this last term as:</p>
+<p><span class="math inline">$\begin{pmatrix}n\\i\end{pmatrix}$</span></p>

@@ -1,0 +1,77 @@
+
+\subsection{Gaussian elimination}
+
+\subsubsection{Simultaneous equations}
+
+Matricies can be used to solve simultaneous equations. Condsider the following set of equations.
+
+\begin{itemize}
+\item $2x+y-z=8$
+\item $-3x-y+2z=-11$
+\item $-2x+y+2z=-3$
+\end{itemize}
+
+We can write this in matrix form.
+
+$Ax=y$
+
+$A=\begin{bmatrix}2 & 1&-1\\-3 & -1&2\\-2&1&2\end{bmatrix}$
+
+$x=\begin{bmatrix}x \\y \\z\end{bmatrix}$
+
+$y=\begin{bmatrix}8 \\-11 \\-3\end{bmatrix}$
+
+\subsubsection{Augmented matrix}
+
+Consider a form for summarising these equations. This is the augmented matrix.
+
+$(A|y)=\begin{bmatrix}2 & 1&-1&|&-8\\-3 & -1&2&|&-11\\-2&1&2&|&-3\end{bmatrix}$
+
+We can take this and recovery our original \(A\) and \(y\).
+
+However we can also do things to this augmented matrix which preserve solutions to the set of equations. These are:
+
+Undertaking combinations of these can make it easier to solve the equation. In particular, if we can arrive at the form:
+
+$(A|y)=\begin{bmatrix}1 & 0&0&|&a\\0 & 1&0&|&b\\0&0&1&|&c\end{bmatrix}$
+
+The solutions for \(x,y,z\) are \(a,b,c\).
+
+\subsubsection{Echeleon / triangular form}
+
+We first aim for:
+
+$(A|y)=\begin{bmatrix}a_{11} & a_{12}&a_{13}&|&a\\0 & a_{22}&a_{23}&|&b\\0&0&a_{33}&|&c\end{bmatrix}$
+
+If this cannot be reached there is no single solution. There may be infinite or no solutions.
+
+\subsubsection{Solving}
+
+Once we have the triangular form, we can easily solve.
+
+$(A|y)=\begin{bmatrix}a_{11} & a_{12}&a_{13}&|&a\\0 & a_{22}&a_{23}&|&b\\0&0&a_{33}&|&c\end{bmatrix}$
+
+$(A|y)=\begin{bmatrix}1 & 0&0&|&a\\0 & 1&0&|&b\\0&0&1&|&c\end{bmatrix}$
+
+This process is back substitution (or forward substitution if the matrix is triangular the other way).
+
+\subsubsection{Matrix inversion}
+
+We can think of the inverse of a matrix as one which which takes a series of reverible operations and does these to a matrix then arriving at the identity matrix.
+
+That is, only the three elementary row operations, and combinations of them, can transform a matrix in a way in which it can be reversed. As such All reversible matricies are combinations of the identity matrix and a series of elementary row operations. The inverse matrix is then those series of row operations, in reverse.
+
+We can find identify an inversion by undertaking gaussian elimination. Each step done on the matrix is done to the identify matrix, reversing the process. The end result is the inverted matrix.
+
+Instead of:
+
+$(A|y)=\begin{bmatrix}2 & 1&-1&|&-8\\-3 & -1&2&|&-11\\-2&1&2&|&-3\end{bmatrix}$
+
+Take:
+
+$(A|I)=\begin{bmatrix}2 & 1&-1&|&1&0&0\\-3 & -1&2&|&0&1&0\\-2&1&2&|&0&0&1\end{bmatrix}$
+
+When we solve this we get:
+
+$(I|A^{-1})=\begin{bmatrix}1 & 0&0&|&\frac{3}{4}&\frac{1}{2}&\frac{1}{4}\\0& 1&0&|&\frac{1}{2}&1&\frac{1}{2}\\0&0&1&|&\frac{1}{4}&\frac{1}{2}&\frac{3}{4}\end{bmatrix}$
+

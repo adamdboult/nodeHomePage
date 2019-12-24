@@ -1,0 +1,51 @@
+
+\subsection{Raising and lowering indices}
+
+We showed that the inner product between two vectors with the same basis can be written as:
+
+\(\langle v, w\rangle =\langle \sum_i e_iv^i, \sum_j f_jw^j\rangle \)
+
+\(\langle v, w\rangle =v^i\overline {w^j}\langle e_i, e_j\rangle\)
+
+Defining the metric as:
+
+\(g_{ij}:=\langle e_i,e_j\rangle \)
+
+\(\langle v, w\rangle =v^i\overline {w^j}g_{ij}\)
+
+\subsubsection{Metric inverse}
+
+We can use this to define the inverse of the metric.
+
+\(g^{ij}:=(g_{ij})^{-1}\)
+
+We can use this to raise and lower vectors.
+
+\(v_i:=v^jg_{ij}\)
+
+\subsubsection{Raising and lowering indices of tensors}
+
+If we have tensor:
+
+\(T_{ij}\)
+
+We can define:
+
+\(T_i^k=T_{ij}g^{jk}\)
+
+\(T^{il}=T_{ij}g^{jk}g^{kl}\)
+
+\subsubsection{Tensor contraction}
+
+If we have:
+
+\(T_{ij}x^j\)
+
+We can contract it to:
+
+\(T_{ij}x^j=v_i\)
+
+Similarly we can have:
+
+\(T^{ij}x_j=v^i\)
+

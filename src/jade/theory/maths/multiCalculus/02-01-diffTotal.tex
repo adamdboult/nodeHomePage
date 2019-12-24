@@ -1,0 +1,37 @@
+
+\subsection{Total differentiation}
+
+\subsubsection{Scalar fields}
+
+A scalar field is a function on an underlying input which produces a real output.
+
+Inputs are not limited to real numbers. In this section we consider functions on vector spaces.
+
+\subsubsection{Total differentiation}
+
+Consider a multivariate function.
+
+\(f(x)\).
+
+We can define:
+
+\(\Delta f(x, \Delta x):=f(x+\Delta x)-f(x)\)
+
+\(\Delta f(x, \Delta x)=\sum_{i=1}^nf(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)\)
+
+\(\Delta f(x, \Delta x)=\sum_{i=1}^n\Delta x_i \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}\)
+
+\(\frac{\Delta f}{\Delta x_k}=\sum_{i=1}^n\frac{\Delta x_i}{\Delta x_k} \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}\)
+
+\(\lim_{\Delta x_k \rightarrow 0}\frac{\Delta f}{\Delta x_k}=\sum_{i=1}^n\lim_{\Delta x_k \rightarrow 0}\frac{\Delta x_i}{\Delta x_k} \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}\)
+
+\(\frac{df}{dx_k}=\sum_{i=1}^n\frac{dx_i}{dx_k} \frac{\delta f}{\delta x_i}\)
+
+\subsubsection{Total differentiation of a univariate function}
+
+For a univariate function total differentiation is the same as partial differentiation.
+
+\(\frac{df}{dx}=\frac{dx}{dx} \frac{\delta f}{\delta x}\)
+
+\(\frac{df}{dx}=\frac{\delta f}{\delta x}\)
+

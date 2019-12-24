@@ -1,0 +1,35 @@
+<h2 id="inverse-matrices">Inverse matrices</h2>
+<p>An invertible matrix implies that if the matrix is multiplied by another matrix, the original matrix can be recovered.</p>
+<p>That is, if we have matrix <span class="math inline"><em>A</em></span>, there exists matrix <span class="math inline"><em>A</em><sup>−1</sup></span> such that <span class="math inline"><em>A</em><em>A</em><sup>−1</sup> = <em>I</em></span>.</p>
+<p>Consider a linear map on a vector space.</p>
+<p><span class="math inline"><em>A</em><em>x</em> = <em>y</em></span></p>
+<p>If <span class="math inline"><em>A</em></span> is invertible we can have:</p>
+<p><span class="math inline"><em>A</em><sup>−1</sup><em>A</em><em>x</em> = <em>A</em><sup>−1</sup><em>y</em></span></p>
+<p><span class="math inline"><em>x</em> = <em>A</em><sup>−1</sup><em>y</em></span></p>
+<p>If we set <span class="math inline"><em>y</em> = <strong>0</strong></span> then:</p>
+<p><span class="math inline"><em>x</em> = <strong>0</strong></span></p>
+<p>So if there is a non-zero vector <span class="math inline"><em>x</em></span> such that:</p>
+<p><span class="math inline"><em>A</em><em>x</em> = <strong>0</strong></span> then <span class="math inline"><em>A</em></span> is not invertible.</p>
+<h2 id="left-and-right-inverses">Left and right inverses</h2>
+<p>That is, for all matrices <span class="math inline"><em>A</em></span>, the left and right inverses of <span class="math inline"><em>B</em></span>, <span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup></span> and <span class="math inline"><em>B</em><sub><em>R</em></sub><sup>−1</sup></span>, are defined such that:</p>
+<p><span class="math inline"><em>A</em>(<em>B</em><em>B</em><sub><em>R</em></sub><sup>−1</sup>)=<em>A</em></span></p>
+<p><span class="math inline"><em>A</em>(<em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em>)=<em>A</em></span></p>
+<p>Left and right inversions are equal</p>
+<p>Note that if the left inverse exists then:</p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em> = <em>I</em></span></p>
+<p>And if the right inverse exists:</p>
+<p><span class="math inline"><em>B</em><em>B</em><sub><em>R</em></sub><sup>−1</sup> = <em>I</em></span></p>
+<p>Let’s take the first:</p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em> = <em>I</em></span></p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em><em>B</em><sub><em>L</em></sub><sup>−1</sup> = <em>B</em><sub><em>L</em></sub><sup>−1</sup></span></p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em><em>B</em><sub><em>L</em></sub><sup>−1</sup> − <em>B</em><sub><em>L</em></sub><sup>−1</sup> = 0</span></p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup>(<em>B</em><em>B</em><sub><em>L</em></sub><sup>−1</sup> − <em>I</em>)=0</span></p>
+<h2 id="inversion-of-products">Inversion of products</h2>
+<p><span class="math inline">(<em>A</em><em>B</em>)(<em>A</em><em>B</em>)<sup>−1</sup> = <em>I</em></span></p>
+<p><span class="math inline"><em>A</em><sup>−1</sup><em>A</em><em>B</em>(<em>A</em><em>B</em>)<sup>−1</sup> = <em>A</em><sup>−1</sup></span></p>
+<p><span class="math inline"><em>B</em><sup>−1</sup><em>B</em>(<em>A</em><em>B</em>)<sup>−1</sup> = <em>B</em><sup>−1</sup><em>A</em><sup>−1</sup></span></p>
+<p><span class="math inline">(<em>A</em><em>B</em>)<sup>−1</sup> = <em>B</em><sup>−1</sup><em>A</em><sup>−1</sup></span></p>
+<h2 id="inversion-of-a-diagonal-matrix">Inversion of a diagonal matrix</h2>
+<p><span class="math inline"><em>D</em><em>D</em><sup>−1</sup> = <em>I</em></span></p>
+<p><span class="math inline"><em>D</em><sub><em>i</em><em>i</em></sub><em>D</em><sub><em>i</em><em>i</em></sub><sup>−1</sup> = 1</span></p>
+<p><span class="math inline">$D_{ii}^{-1}=\frac{1}{D_{ii}}$</span></p>

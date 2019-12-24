@@ -1,0 +1,35 @@
+
+\subsection{\(\sigma \)-algebra}
+
+\subsubsection{Review of algebra on a set}
+
+An algebra, \(\Sigma \), on set \(s\) is a set of subsets of \(s\) such that:
+
+\begin{itemize}
+\item Closed under intersection: If \(a\) and \(b\) are in \(\Sigma \) then \(a\land b\) must also be in \(\Sigma \)
+\item \(\forall ab [(a \in \Sigma \land b \in \Sigma )\rightarrow (a\land b \in \Sigma)]\)
+\item Closed under union: If \(a\) and \(b\) are in \(\Sigma \) then \(a\lor b\) must also be in \(\Sigma \).
+\item \(\forall ab [(a \in \Sigma \land b \in \Sigma )\rightarrow (a\lor b \in \Sigma)]\)
+
+If both of these are true, then the following is also true:
+
+\begin{itemize}
+\item Closed under complement: If \(a\) is in \(\Sigma \) then \(s \backslash a\) must also be in \(\Sigma \)	
+\end{itemize}
+
+We also require that the null set (and therefore the original set, null's complement) is part of the algebra.
+
+\subsubsection{\(\sigma \)-algebra}
+
+A \(\sigma \)-algebra is an algebra with an additional condition:
+
+All countable unions of sets in \(A\) are also in \(A\).
+
+This adds a constraint. Consider the real numbers with an algebra of all finite sets.
+
+This contains all finite subsets, and their complements. It does not contain \(\mathbb_{N}\).
+
+However a \(\sigma \)-algebra requires all countable unions to be including, and the natural numbers are a countable union.
+
+The power set is a \(\sigma \)-algebra. All other \(\sigma \)-algebras are subsets of the power set.
+

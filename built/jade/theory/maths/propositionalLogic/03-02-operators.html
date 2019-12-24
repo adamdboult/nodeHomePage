@@ -1,0 +1,25 @@
+<h2 id="how-many-unique-operators-are-there">How many unique operators are there?</h2>
+<p>An arbitrary operator takes <span class="math inline"><em>n</em></span> inputs are returns <span class="math inline"><em>T</em></span> or <span class="math inline"><em>F</em></span>.</p>
+<p>With <span class="math inline">0</span> inputs there is one posible permutation. For every additional input the number of possible permutations doubles. Therefore there are <span class="math inline">2<sup><em>n</em></sup></span> possible permutations.</p>
+<p>For the operator with one permutation there are two operators. For every additional permutation the number of operator doubles. Therefore there are <span class="math inline">2<sup>(2<sup><em>n</em></sup>)</sup></span> possible operations.</p>
+<p>With <span class="math inline">0</span> inputs, we need <span class="math inline">2</span> different operators to cover all outputs. For <span class="math inline">1</span> input we need <span class="math inline">4</span> and for <span class="math inline">2</span> inputs we need <span class="math inline">16</span>.</p>
+<h2 id="we-dont-need-0-ary-operators">We don’t need <span class="math inline">0</span>-ary operators</h2>
+<p>There are two unique <span class="math inline">0</span>-ary operators. One always returns <span class="math inline"><em>T</em></span> and the other always returns <span class="math inline"><em>F</em></span>. These are already described.</p>
+<h2 id="we-need-one-unary-operator">We need one unary operator</h2>
+<p>For the operators with <span class="math inline">1</span> input we have:</p>
+<ul>
+<li><p>one which always returns <span class="math inline"><em>T</em></span></p></li>
+<li><p>one which always returns <span class="math inline"><em>F</em></span></p></li>
+<li><p>one which always returns the same as the input</p></li>
+<li><p>one which returns the opposite of the input</p></li>
+</ul>
+<p>It is this last one, negation, shown as <span class="math inline">¬</span> and is of most interest.</p>
+<h2 id="we-can-use-a-subset-of-binary-operators">We can use a subset of binary operators</h2>
+<p>The full list of binary operators are included below.</p>
+<p>Of these, the first two are <span class="math inline">0</span>-ary operators, and so are not needed. The next four are unary operators, and so are not needed.</p>
+<p>The non-implications can be rewritten using negation.</p>
+<h2 id="brackets-replace-the-need-for-n-ary-operators">Brackets replace the need for n-ary operators</h2>
+<p>N-ary operators contain <span class="math inline">3</span> or more inputs.</p>
+<p>N-ary operators can be defined in terms of binary operators.</p>
+<p>As an example if we want an operator to return positive if all inputs are true, we can use:</p>
+<p><span class="math inline">(<em>θ</em> ∧ <em>γ</em>)∧<em>β</em></span></p>

@@ -1,0 +1,24 @@
+extends ./subSubTemplate.jade
+
+block subSubTitle
+	h1
+\subsection{Curl}
+
+The curl of a vector field is defined as:
+
+\(curl \mathbf F=\nabla \times \mathbf F\)
+
+Where: \(\nabla =(\sum_{i=1}^n e_i\frac{\delta }{\delta x_i})\)
+
+And: \(\mathbf x\times \mathbf y=\||\mathbf x|| ||\mathbf y|| \sin(\theta )\mathbf n\)
+
+The curl of a vector field is another vector field.
+
+The curl measures the rotation about a given point. For example if a vector field is the gradient of a height map, the curl is \(0\) at all points, however for a rotating body of water the curl reflects the rotation at a given point.
+
+\subsubsection{Divergence of the curl}
+
+If we have a vector field \(\mathbf F\), the divergence of its curl is \(0\):
+
+\(\nabla . (\nabla \times \mathbf F)=0\)
+

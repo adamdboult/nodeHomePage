@@ -1,0 +1,21 @@
+<h2 id="integrals">Integrals</h2>
+<h3 id="cosine-and-sine">Cosine and sine</h3>
+<p><span class="math inline">arccos(<em>θ</em>)</span>, <span class="math inline">arcsin(<em>θ</em>)</span> and difficulty of inversing</p>
+<p>In order to determine <span class="math inline"><em>τ</em></span> we need inverse functions for <span class="math inline">cos(<em>θ</em>)</span> or <span class="math inline">sin(<em>θ</em>)</span>.</p>
+<p>These are the <span class="math inline">arccos(<em>θ</em>)</span> and <span class="math inline">arcsin(<em>θ</em>)</span> functions respectively.</p>
+<p>However this is not easily calculated. Instead we look for another function.</p>
+<h3 id="calculating-arctan-theta">Calculating <span class="math inline">arctan(<em>θ</em>)</span></h3>
+<p>So we want a function to inverse this. This is the <span class="math inline">arctan(<em>θ</em>)</span> function.</p>
+<p>If <span class="math inline"><em>y</em> = tan(<em>θ</em>)</span>, then:</p>
+<p><span class="math inline"><em>θ</em> = arctan(<em>y</em>)</span></p>
+<p>We know the derivative for <span class="math inline">tan(<em>θ</em>)</span> is:</p>
+<p><span class="math inline">$\frac{\delta }{\delta \theta }\tan (\theta )=1+\tan^2(\theta )$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta \theta }=1+y^2$</span></p>
+<p>So</p>
+<p><span class="math inline">$\frac{\delta \theta }{\delta y}=\frac{1}{1+y^2}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta y}\arctan (y)=\frac{1}{1+y^2}$</span></p>
+<p>So the value for <span class="math inline">arctan(<em>k</em>)</span> is:</p>
+<p><span class="math inline">$\arctan (k)=\arctan (a)+\int_a^k\frac{\delta }{\delta y}\arctan (y) \delta y$</span></p>
+<p><span class="math inline">$\arctan (k)=\arctan (a)+\int_a^k\frac{1}{1+y^2} \delta y$</span></p>
+<p>What do we know about this function? We know it can map to multiple values of <span class="math inline"><em>θ</em></span> because the underlying <span class="math inline">sin(<em>θ</em>)</span> and <span class="math inline">cos(<em>θ</em>)</span> functions also loop.</p>
+<p>We know that one of the results for <span class="math inline">arctan(0)</span> is <span class="math inline">0</span>.</p>

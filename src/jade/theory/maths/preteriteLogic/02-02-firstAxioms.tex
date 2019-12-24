@@ -1,0 +1,29 @@
+
+\subsection{Inference rules  for first-order logic}
+
+\subsubsection{Existential instantiation}
+
+If \(P\) is true for a specific input, then there exists an input for \(P\) where \(P\) is true.
+
+$P(r)\Rightarrow \exists xP(x)$
+
+\subsubsection{Existential generalisation}
+
+$\exists xP(x)\Rightarrow P(r)$
+
+Where \(r\) is a new symbol.
+
+\subsubsection{Universal instantiation}
+
+If \(P\) is true for all values of \(x\), then \(P\) is true for any input to \(P\).
+
+$\forall xP(x)\Rightarrow P(a/x)$
+
+Where \(a / x\) represents substituting \(a\) for \(x\) within \(P\).
+
+\subsubsection{Universal generalisation}
+
+If there is a derivation for \(P(x)\), then there is a derivation for \(\forall x P(x)\).
+
+$\vdash P(x)\Rightarrow \vdash \forall x P(x)$
+

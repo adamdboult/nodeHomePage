@@ -1,0 +1,28 @@
+<h2 id="defing-sine-and-cosine-using-eulers-formula">Defing sine and cosine using Euler’s formula</h2>
+<h3 id="eulers-formula">Euler’s formula</h3>
+<p>Previously we showed that:</p>
+<p><span class="math inline">$e^x=\sum_{i=0}^\infty \frac{x^i}{i!}$</span></p>
+<p>Consider:</p>
+<p><span class="math inline"><em>e</em><sup><em>i</em><em>θ</em></sup></span></p>
+<p><span class="math inline">$e^{i\theta }=\sum_{j=0}^\infty \frac{(i\theta )^j}{j!}$</span></p>
+<p><span class="math inline">$e^{i\theta }=[\sum_{j=0}^\infty \frac{(\theta )^{4j}}{(4j)!}-\sum_{j=0}^\infty \frac{(\theta )^{4j+2}}{(4j+2)!}]+i[\sum_{j=0}^\infty \frac{(\theta )^{4j+1}}{(4j+1)!}-\sum_{j=0}^\infty \frac{(\theta )^{4j+3}}{(4j+3)!}]$</span></p>
+<p>We then use this to define <span class="math inline">sin </span> and <span class="math inline">cos </span> functions.</p>
+<p><span class="math inline">$\cos (\theta ):=\sum_{j=0}^\infty \frac{(\theta )^{4j}}{(4j)!}-\sum_{j=0}^\infty \frac{(\theta )^{4j+2}}{(4j+2)!}$</span></p>
+<p><span class="math inline">$\sin (\theta ):=\sum_{j=0}^\infty \frac{(\theta )^{4j+1}}{(4j+1)!}-\sum_{j=0}^\infty \frac{(\theta )^{4j+3}}{(4j+3)!}$</span></p>
+<p>So:</p>
+<p><span class="math inline"><em>e</em><sup><em>i</em><em>θ</em></sup> = cos(<em>θ</em>)+<em>i</em>sin(<em>θ</em>)</span></p>
+<h3 id="alternative-formulae-for-sine-and-cosine">Alternative formulae for sine and cosine</h3>
+<p>We know</p>
+<p><span class="math inline"><em>e</em><sup><em>i</em><em>θ</em></sup> = cos(<em>θ</em>)+<em>i</em>sin(<em>θ</em>)</span></p>
+<p><span class="math inline"><em>e</em><sup>−<em>i</em><em>θ</em></sup> = cos(<em>θ</em>)−<em>i</em>sin(<em>θ</em>)</span></p>
+<p>So</p>
+<p><span class="math inline"><em>e</em><sup><em>i</em><em>θ</em></sup> + <em>e</em><sup>−<em>i</em><em>θ</em></sup> = <em>c</em><em>o</em><em>s</em>(<em>θ</em>)+<em>i</em>sin(<em>θ</em>)+cos(<em>θ</em>)−<em>i</em>sin(<em>θ</em>)</span></p>
+<p><span class="math inline">$\cos (\theta )=\frac{e^{i\theta }+e^{-i\theta }}{2}$</span></p>
+<p>And</p>
+<p><span class="math inline"><em>e</em><sup><em>i</em><em>θ</em></sup> − <em>e</em><sup>−<em>i</em><em>θ</em></sup> = <em>c</em><em>o</em><em>s</em>(<em>θ</em>)+<em>i</em>sin(<em>θ</em>)−cos(<em>θ</em>)+<em>i</em>sin(<em>θ</em>)</span></p>
+<p><span class="math inline">$\sin (\theta )=\frac{e^{i\theta }-e^{-i\theta }}{2i}$</span></p>
+<h3 id="sine-and-cosine-are-odd-and-even-functions">Sine and cosine are odd and even functions</h3>
+<p>Sine is an odd function.</p>
+<p><span class="math inline">sin(−<em>θ</em>)= − sin(<em>θ</em>)</span></p>
+<p>Cosine is an even function.</p>
+<p><span class="math inline">cos(−<em>θ</em>)=cos(<em>θ</em>)</span></p>

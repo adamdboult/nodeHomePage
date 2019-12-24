@@ -1,0 +1,45 @@
+\subsection{How many unique operators are there?}
+
+An arbitrary operator takes \(n\) inputs are returns \(T\) or \(F\).
+
+With \(0\) inputs there is one posible permutation. For every additional input the number of possible permutations doubles. Therefore there are \(2^n\) possible permutations.
+
+For the operator with one permutation there are two operators. For every additional permutation the number of operator doubles. Therefore there are \(2^{(2^n)}\) possible operations.
+
+With \(0\) inputs, we need \(2\) different operators to cover all outputs. For \(1\) input we need \(4\) and for \(2\) inputs we need \(16\).
+
+\subsection{We don't need \(0\)-ary operators}
+
+There are two unique \(0\)-ary operators. One always returns \(T\) and the other always returns \(F\). These are already described.
+
+\subsection{We need one unary operator}
+
+For the operators with \(1\) input we have:
+
+\begin{itemize}
+\item one which always returns \(T\)
+\item one which always returns \(F\)
+\item one which always returns the same as the input
+\item one which returns the opposite of the input
+\end{itemize}
+
+It is this last one, negation, shown as \(\neg \) and is of most interest.
+
+\subsection{We can use a subset of binary operators}
+
+The full list of binary operators are included below.
+
+Of these, the first two are \(0\)-ary operators, and so are not needed. The next four are unary operators, and so are not needed.
+
+The non-implications can be rewritten using negation.
+
+\subsection{Brackets replace the need for n-ary operators}
+
+N-ary operators contain \(3\) or more inputs.
+
+N-ary operators can be defined in terms of binary operators.
+
+As an example if we want an operator to return positive if all inputs are true, we can use:
+
+$(\theta \land \gamma )\land \beta $
+

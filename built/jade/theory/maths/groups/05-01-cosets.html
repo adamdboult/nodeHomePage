@@ -1,0 +1,39 @@
+<h2 id="cosets-and-normal-subgroups">Cosets and normal subgroups</h2>
+<p>A coset is defined between a group and a subgroup of the group.</p>
+<p>For a group <span class="math inline"><em>G</em></span>, and its subgroup <span class="math inline"><em>H</em></span>:</p>
+<ul>
+<li><p>The left coset is <span class="math inline">{<em>g</em><em>H</em>}</span></p></li>
+<li><p>The right coset is <span class="math inline">{<em>H</em><em>g</em>}</span></p></li>
+</ul>
+<p>For <span class="math inline">∀<em>g</em> ∈ <em>G</em></span>.</p>
+<p>For abellian groups, the left and right cosets are the same.</p>
+<p>The left and right cosets can also be the same, even if the group <span class="math inline"><em>G</em></span> is not abelian.</p>
+<h3 id="normal-subgroups">Normal subgroups</h3>
+<p>If the left and right cosets are the same then <span class="math inline"><em>H</em></span> is a normal subgroup.</p>
+<h3 id="cosets-divide-a-group.">Cosets divide a group.</h3>
+<p>Consider two left cosets, <span class="math inline"><em>a</em><em>H</em></span> and <span class="math inline"><em>b</em><em>H</em></span>, with a common element.</p>
+<p>This means that <span class="math inline"><em>a</em><em>h</em><sub><em>i</em></sub> = <em>b</em><em>h</em><sub><em>j</em></sub></span>.</p>
+<p>We can use this to get:</p>
+<p><span class="math inline"><em>a</em> = <em>b</em><em>h</em><sub><em>j</em></sub><em>h</em><sub><em>i</em></sub><sup>−1</sup></span></p>
+<p><span class="math inline"><em>b</em> = <em>a</em><em>h</em><sub><em>i</em></sub><em>h</em><sub><em>j</em></sub><sup>−1</sup></span></p>
+<p>We know that:</p>
+<p><span class="math inline"><em>a</em><em>h</em> ∈ <em>a</em><em>H</em></span></p>
+<p><span class="math inline"><em>b</em><em>h</em> ∈ <em>b</em><em>H</em></span></p>
+<p>So:</p>
+<p><span class="math inline"><em>b</em><em>h</em><sub><em>j</em></sub><em>h</em><sub><em>i</em></sub><sup>−1</sup><em>h</em> ∈ <em>a</em><em>H</em></span></p>
+<p><span class="math inline"><em>a</em><em>h</em><sub><em>i</em></sub><em>h</em><sub><em>j</em></sub><sup>−1</sup><em>h</em> ∈ <em>b</em><em>H</em></span></p>
+<p>And so:</p>
+<p><span class="math inline"><em>b</em><em>H</em> ⊂ <em>a</em><em>H</em></span></p>
+<p><span class="math inline"><em>a</em><em>H</em> ⊂ <em>b</em><em>H</em></span></p>
+<p>Therefore:</p>
+<p><span class="math inline"><em>a</em><em>H</em> = <em>b</em><em>H</em></span></p>
+<h3 id="example-1">Example 1</h3>
+<p>Consider the group <span class="math inline">{ − 1, 1},×</span></p>
+<p>For the subgroup <span class="math inline">{1},×</span>, the left coset is <span class="math inline">{<em>g</em><em>H</em>}={1, −1}</span>.</p>
+<p>The right coset is the same.</p>
+<h3 id="example-2">Example 2</h3>
+<p>Consider the group of integers and addition: <span class="math inline">(<em>Z</em>, +)</span></p>
+<p>For subgroup <span class="math inline">(<em>m</em><em>Z</em>, +)</span>, the left and right cosets are the same because the group is abelian.</p>
+<p>The coset of the subgroup is the subgroup multiplied by each element in <span class="math inline"><em>G</em></span>.</p>
+<p>This is <span class="math inline"><em>m</em><em>Z</em></span>, <span class="math inline"><em>m</em><em>Z</em> + 1</span>, <span class="math inline"><em>m</em><em>Z</em> + 2</span> and so on.</p>
+<p>Once we reach <span class="math inline"><em>m</em><em>Z</em> + <em>m</em></span> this has looped, and is already a coset, so we only need the sets upto <span class="math inline"><em>m</em><em>Z</em> + <em>m</em> − 1</span>.</p>

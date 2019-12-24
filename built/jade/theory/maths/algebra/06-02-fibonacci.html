@@ -1,0 +1,54 @@
+<h2 id="fibonacci-sequence">Fibonacci sequence</h2>
+<h3 id="the-generating-function">The generating function</h3>
+<p>Let’s use a generating function to create a function for the Fibonacci sequence’s <span class="math inline"><em>c</em></span>th digit. <span class="math inline"><em>F</em>(<em>c</em>)=∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em></sup><em>s</em><sub><em>i</em></sub></span></p>
+<p>Let’s look at it for other starts:</p>
+<p><span class="math inline"><em>F</em>(<em>c</em> + <em>k</em>)=∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + <em>k</em></sup><em>s</em><sub><em>i</em> + <em>k</em></sub></span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em> + <em>k</em>)=∑<sub><em>i</em> = <em>c</em> + <em>k</em></sub><em>x</em><sup><em>i</em></sup><em>s</em><sub><em>i</em></sub></span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em> + 1)=∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + 1</sup><em>s</em><sub><em>i</em> + 1</sub></span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em> + 2)=∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + 2</sup><em>s</em><sub><em>i</em> + 2</sub></span></p>
+<p>This means</p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + <em>F</em>(<em>c</em> + 1)<em>x</em> = ∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em></sup><em>s</em><sub><em>i</em></sub><em>x</em><sup>2</sup> + ∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + 1</sup><em>s</em><sub><em>i</em> + 1</sub><em>x</em></span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + <em>F</em>(<em>c</em> + 1)<em>x</em> = ∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + 2</sup><em>s</em><sub><em>i</em></sub> + ∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + 2</sup><em>s</em><sub><em>i</em> + 1</sub></span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + <em>F</em>(<em>c</em> + 1)<em>x</em> = ∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + 2</sup>(<em>s</em><sub><em>i</em></sub> + <em>s</em><sub><em>i</em> + 1</sub>)</span></p>
+<h3 id="using-the-definiton-of-the-fibonacci-sequence">Using the definiton of the Fibonacci sequence</h3>
+<p>From the definition of the fibonacci sequence, <span class="math inline"><em>s</em><sub><em>i</em></sub> + <em>s</em><sub><em>i</em> + 1</sub> = <em>s</em><sub><em>i</em> + 2</sub></span>.</p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + <em>F</em>(<em>c</em> + 1)<em>x</em> = ∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em> + 2</sup>(<em>s</em><sub><em>i</em> + 2</sub>)</span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + <em>F</em>(<em>c</em> + 1)<em>x</em> = <em>F</em>(<em>c</em> + 2)</span></p>
+<h3 id="reducing-the-functions">Reducing the functions</h3>
+<p>Next, we expand out <span class="math inline"><em>F</em>(<em>c</em> + 1)</span> and <span class="math inline"><em>F</em>(<em>c</em> + 2)</span>.</p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)−<em>F</em>(<em>c</em> + <em>k</em>)=∑<sub><em>i</em> = <em>c</em></sub><em>x</em><sup><em>i</em></sup><em>s</em><sub><em>i</em></sub> − ∑<sub><em>i</em> = <em>c</em> + <em>k</em></sub><em>x</em><sup><em>i</em></sup><em>s</em><sub><em>i</em></sub></span></p>
+<p><span class="math inline">$F(c)-F(c+k)=\sum^{c+k}_{i=c} x^i s_i$</span></p>
+<p><span class="math inline">$F(c+k)=F(c)-\sum^{c+k}_{i=c} x^i s_i$</span></p>
+<p>So:</p>
+<p><span class="math inline">$F(c+1)=F(c)-\sum^{c+1}_{i=c} x^i s_i$</span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em> + 1)=<em>F</em>(<em>c</em>)−<em>x</em><sup><em>c</em></sup><em>s</em><sub><em>c</em></sub></span></p>
+<p><span class="math inline">$F(c+2)=F(c)-\sum^{c+2}_{i=c} x^i s_i$</span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em> + 2)=<em>F</em>(<em>c</em>)−<em>x</em><sup><em>c</em> + 1</sup><em>s</em><sub><em>c</em> + 1</sub> − <em>x</em><sup><em>c</em></sup><em>s</em><sub><em>c</em></sub></span></p>
+<p>Let’s take our previous equation</p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + <em>F</em>(<em>c</em> + 1)<em>x</em> = <em>F</em>(<em>c</em> + 2)</span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + [<em>F</em>(<em>c</em>)−<em>x</em><sup><em>c</em></sup><em>s</em><sub><em>c</em></sub>]<em>x</em> = <em>F</em>(<em>c</em>)−<em>x</em><sup><em>c</em> + 1</sup><em>s</em><sub><em>c</em> + 1</sub> − <em>x</em><sup><em>c</em></sup><em>s</em><sub><em>c</em></sub></span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)<em>x</em><sup>2</sup> + <em>F</em>(<em>c</em>)<em>x</em> − <em>x</em><sup><em>c</em> + 1</sup><em>s</em><sub><em>c</em></sub> = <em>F</em>(<em>c</em>)−<em>x</em><sup><em>c</em> + 1</sup><em>s</em><sub><em>c</em> + 1</sub> − <em>x</em><sup><em>c</em></sup><em>s</em><sub><em>c</em></sub></span></p>
+<p><span class="math inline"><em>F</em>(<em>c</em>)[<em>x</em><sup>2</sup> + <em>x</em> − 1]=<em>x</em><sup><em>c</em> + 1</sup><em>s</em><sub><em>c</em></sub> − <em>x</em><sup><em>c</em> + 1</sup><em>s</em><sub><em>c</em> + 1</sub> − <em>x</em><sup><em>c</em></sup><em>s</em><sub><em>c</em></sub></span></p>
+<p><span class="math inline">$F(c)=\frac{x^c s_c + x^{c+1}s_{c+1}-x^{c+1}s_c}{1-x-x^2}$</span></p>
+<h3 id="using-the-first-element-in-the-sequence">Using the first element in the sequence</h3>
+<p>For the start of the sequence, <span class="math inline"><em>c</em> = 0</span>, <span class="math inline"><em>s</em><sub>0</sub> = <em>s</em><sub>1</sub> = 1</span>.</p>
+<p><span class="math inline">$F(0)=\frac{x^0 1 + x - x}{1-x-x^2}$</span></p>
+<p><span class="math inline">$F(0)=\frac{1}{1-x-x^2}$</span></p>
+<p>Let’s factorise this:</p>
+<p><span class="math inline">$F(0)=\frac{-1}{(x+\frac{1}{2}+\frac{\sqrt 5}{2})(x+\frac{1}{2}-\frac{\sqrt 5}{2})}$</span></p>
+<p>We can then use partial fraction decomposition</p>
+<p><span class="math inline">$\frac{1}{(M+\delta)(M-\delta)}=\frac{1}{2\delta}[\frac{1}{M-\delta}-\frac{1}{M+\delta}]$</span></p>
+<p>To show that</p>
+<p><span class="math inline">$F(0)=\frac{-1}{\sqrt 5}[\frac{1}{x+\frac{1}{2}-\frac{\sqrt 5}{2}}-\frac{1}{x+\frac{1}{2}+\frac{\sqrt 5}{2}}]$</span></p>
+<p><span class="math inline">$F(0)=\frac{-1}{\sqrt 5}[\frac{\frac{1}{2}+\frac{\sqrt 5}{2}}{(x+\frac{1}{2}-\frac{\sqrt 5}{2})(\frac{1}{2}+\frac{\sqrt 5}{2})}-\frac{\frac{1}{2}-\frac{\sqrt 5}{2}}{(x+\frac{1}{2}+\frac{\sqrt 5}{2})(\frac{1}{2}-\frac{\sqrt 5}{2})}]$</span></p>
+<p><span class="math inline">$F(0)=\frac{-1}{\sqrt 5}[\frac{\frac{1}{2}+\frac{\sqrt 5}{2}}{x(\frac{1}{2}+\frac{\sqrt 5}{2})-1}-\frac{\frac{1}{2}-\frac{\sqrt 5}{2}}{x(\frac{1}{2}-\frac{\sqrt 5}{2})-1}]$</span></p>
+<p><span class="math inline">$F(0)=\frac{1}{\sqrt 5}[(\frac{1}{2}+\frac{\sqrt 5}{2})\frac{1}{1-x(\frac{1}{2}+\frac{\sqrt 5}{2})}-(\frac{1}{2}-\frac{\sqrt 5}{2})\frac{1}{1-x(\frac{1}{2}-\frac{\sqrt 5}{2})}]$</span></p>
+<h3 id="finishing-off">Finishing off</h3>
+<p>As we know</p>
+<p><span class="math inline">$\frac{1}{1-x}=\sum_{i=0}x^i $</span></p>
+<p>So</p>
+<p><span class="math inline">$F(0)=\frac{1}{\sqrt 5}[(\frac{1}{2}+\frac{\sqrt 5}{2})\sum_{i=0} x^i(\frac{1}{2}+\frac{\sqrt 5}{2})^i -(\frac{1}{2}-\frac{\sqrt 5}{2})\sum_{i=0}x^i(\frac{1}{2}-\frac{\sqrt 5}{2})^i]$</span></p>
+<p><span class="math inline">$F(0)=\frac{1}{\sqrt 5}[\sum_{i=0} x^i(\frac{1}{2}+\frac{\sqrt 5}{2})^{i+1} -\sum_{i=0}x^i(\frac{1}{2}-\frac{\sqrt 5}{2})^{i+1}]$</span></p>
+<p><span class="math inline">$F(0)=\frac{1}{\sqrt 5}\sum_{i=0} x^i[(\frac{1}{2}+\frac{\sqrt 5}{2})^{i+1} -(\frac{1}{2}-\frac{\sqrt 5}{2})^{i+1}]$</span></p>
+<p>So the <span class="math inline"><em>n</em></span>th number in the sequence (treating <span class="math inline"><em>n</em> = 1</span> as the first number) is:</p>
+<p><span class="math inline">$\frac{1}{\sqrt 5}[(\frac{1}{2}+\frac{\sqrt 5}{2})^{n} -(\frac{1}{2}-\frac{\sqrt 5}{2})^{n}]$</span></p>

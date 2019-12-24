@@ -1,0 +1,18 @@
+<h2 id="total-differentiation">Total differentiation</h2>
+<h3 id="scalar-fields">Scalar fields</h3>
+<p>A scalar field is a function on an underlying input which produces a real output.</p>
+<p>Inputs are not limited to real numbers. In this section we consider functions on vector spaces.</p>
+<h3 id="total-differentiation-1">Total differentiation</h3>
+<p>Consider a multivariate function.</p>
+<p><span class="math inline"><em>f</em>(<em>x</em>)</span>.</p>
+<p>We can define:</p>
+<p><span class="math inline"><em>Δ</em><em>f</em>(<em>x</em>, <em>Δ</em><em>x</em>):=<em>f</em>(<em>x</em> + <em>Δ</em><em>x</em>)−<em>f</em>(<em>x</em>)</span></p>
+<p><span class="math inline">$\Delta f(x, \Delta x)=\sum_{i=1}^nf(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)$</span></p>
+<p><span class="math inline">$\Delta f(x, \Delta x)=\sum_{i=1}^n\Delta x_i \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}$</span></p>
+<p><span class="math inline">$\frac{\Delta f}{\Delta x_k}=\sum_{i=1}^n\frac{\Delta x_i}{\Delta x_k} \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}$</span></p>
+<p><span class="math inline">$\lim_{\Delta x_k \rightarrow 0}\frac{\Delta f}{\Delta x_k}=\sum_{i=1}^n\lim_{\Delta x_k \rightarrow 0}\frac{\Delta x_i}{\Delta x_k} \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}$</span></p>
+<p><span class="math inline">$\frac{df}{dx_k}=\sum_{i=1}^n\frac{dx_i}{dx_k} \frac{\delta f}{\delta x_i}$</span></p>
+<h3 id="total-differentiation-of-a-univariate-function">Total differentiation of a univariate function</h3>
+<p>For a univariate function total differentiation is the same as partial differentiation.</p>
+<p><span class="math inline">$\frac{df}{dx}=\frac{dx}{dx} \frac{\delta f}{\delta x}$</span></p>
+<p><span class="math inline">$\frac{df}{dx}=\frac{\delta f}{\delta x}$</span></p>

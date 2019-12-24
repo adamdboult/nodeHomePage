@@ -4,7 +4,7 @@ Documentation=https://www.bou.lt
 After=network.target
 
 [Service]
-Type=notify
+Type=simple
 User=adam
 ExecStart=/usr/bin/node /home/adam/Projects/nodeHomePage/server.js
 Restart=always

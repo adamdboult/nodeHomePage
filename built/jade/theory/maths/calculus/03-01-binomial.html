@@ -1,0 +1,31 @@
+<h2 id="defining-e-as-a-binomial">Defining <span class="math inline"><em>e</em></span> as a binomial</h2>
+<h3 id="lemma">Lemma</h3>
+<p><span class="math inline">$f(n,i)=\frac{n!}{n^i(n-i)!}$</span></p>
+<p><span class="math inline">$f(n,i)=\frac{(n-i)!\prod_{j=n-i+1}^nj}{n^i(n-i)!}$</span></p>
+<p><span class="math inline">$f(n,i)=\frac{\prod_{j=n-i+1}^nj}{n^i}$</span></p>
+<p><span class="math inline">$f(n,i)=\frac{\prod_{j=1}^i(j+n-i)}{n^i}$</span></p>
+<p><span class="math inline">$f(n,i)=\prod_{j=1}^i\frac{j+n-i}{n}$</span></p>
+<p><span class="math inline">$f(n,i)=\prod_{j=1}^i(\frac{n}{n}+\frac{j-i}{n})$</span></p>
+<p><span class="math inline">$f(n,i)=\prod_{j=1}^i(1+\frac{j-i}{n})$</span></p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }f(n,i)=\lim_{n\rightarrow \infty }\prod_{j=1}^i(1+\frac{j-i}{n})$</span></p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }f(n,i)=\prod_{j=1}^i1$</span></p>
+<p><span class="math inline">lim<sub><em>n</em> → ∞</sub><em>f</em>(<em>n</em>, <em>i</em>)=1</span></p>
+<h3 id="defining-e">Defining <span class="math inline"><em>e</em></span></h3>
+<p>We know that:</p>
+<p><span class="math inline">$(a+b)^n=\sum^n_{i=0} a^i b^{n-i} \frac{n!}{i!(n-i)!}$</span></p>
+<p>Let’s set <span class="math inline"><em>b</em> = 1</span></p>
+<p><span class="math inline">$(a+1)^n=\sum^n_{i=0} a^i \frac{n!}{i!(n-i)!}$</span></p>
+<p>Let’s set <span class="math inline">$a=\frac{1}{n}$</span></p>
+<p><span class="math inline">$(1+\frac{1}{n})^{n}=\sum^{n}_{i=0} \frac{1}{n^i} \frac{n!}{i!(n-i)!}$</span></p>
+<p><span class="math inline">$(1+\frac{1}{n})^{n}=\sum^{n}_{i=0} \frac{1}{i!} \frac{n!}{n^i(n-i)!}$</span></p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{n}=\lim_{n\rightarrow \infty }\sum^{n}_{i=0} \frac{1}{i!} \frac{n!}{n^i(n-i)!}$</span></p>
+<p>From the lemma above:</p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{n}=\sum^{\infty }_{i=0} \frac{1}{i!}$</span></p>
+<p><span class="math inline">$e=\sum^{\infty }_{i=0} \frac{1}{i!}$</span></p>
+<h3 id="defining-ex">Defining <span class="math inline"><em>e</em><sup><em>x</em></sup></span></h3>
+<p><span class="math inline">$e=\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{n}$</span></p>
+<p><span class="math inline">$e^x=\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{nx}$</span></p>
+<p><span class="math inline">$e^x=\lim_{n\rightarrow \infty }\sum^{nx}_{i=0} \frac{1}{n^i} \frac{(nx)!}{i!(nx-i)!}$</span></p>
+<p><span class="math inline">$e^x=\lim_{n\rightarrow \infty }\sum^{nx}_{i=0} \frac{x^i}{i!} \frac{(nx)!}{(nx)^i(nx-i)!}$</span></p>
+<p>From the lemma:</p>
+<p><span class="math inline">$e^x=\sum^{\infty }_{i=0} \frac{x^i}{i!}$</span></p>

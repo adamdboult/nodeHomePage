@@ -1,0 +1,31 @@
+
+\subsection{Fundamental Theorem of Arithmetic}
+
+\subsubsection{Statement}
+
+Each natural number is a prime or unique product of primes.
+
+\subsubsection{Proof: existance of each number as a product of primes}
+
+If \(n\) is prime, no more is needed.
+
+If \(n\) is not prime, then \(n=ab\), \(a,b\in \mathbb{N} \).
+
+If \(a\) and \(b\) are prime, this is complete. Otherwise we can iterate to find:
+
+$n=\prod_{i=1} p_i$
+
+\subsubsection{Proof: this product of primes is unique}
+
+Consider two different series of primes for the same number:
+
+$s=\prod_{i=1}^n p_i = \prod_{i=1}^m q_i$
+
+We need to show that \(n=m\) and \({p}={q}\).
+
+We know that \(p_i\) divides \(s\). We also know that through Euclid's lemma that if a prime number divides a non-prime number, then it must also divide one of its components. As a result \(p_i\) must divide one of \({q}\).
+
+But as all of \({q}\) are prime then \(p_i\)=\(q_j\).
+
+We can repeat this process to to show that \({p}={q}\) and therefore \(n=m\).
+

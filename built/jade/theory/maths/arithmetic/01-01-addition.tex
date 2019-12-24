@@ -1,0 +1,46 @@
+\subsection{Addition of natural numbers}
+
+
+\subsubsection{Definition}
+Let’s add another function: addition. Defined by:
+
+$\forall a \in \mathbb{N} (a+0=a)$
+
+$\forall a b \in \mathbb{N} (a+s(b)=s(a+b))$
+
+That is, adding zero to a number doesn’t change it, and \((a+b)+1=a+(b+1)\).
+
+\subsubsection{Example}
+
+Let’s use this to solve \(1+2\):
+
+$1+2=1+s(1)$
+
+$1+s(1)=s(1+1)$
+
+$s(1+1)=s(1+s(0))$
+
+$s(1+s(0))=s(s(1+0))$
+
+$s(s(1+0))=s(s(1))$
+
+$s(s(1))=s(2)$
+
+$s(2)=3$
+
+$1+2=3$
+
+All addition can be done iteratively like this.
+
+\subsubsection{Commutative property of addition}
+
+Addition is commutative:
+
+$x+y=y+x$
+
+\subsubsection{Associative property of addition}
+
+Addition is associative:
+
+$x+(y+z)=(x+y)+z$
+

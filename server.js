@@ -46,7 +46,8 @@ app.use(favicon(__dirname + configObj.favicon));
 app.use(express.static(__dirname + '/public'));// set the static files location /public/img will be /img for users
 
 app.locals.pretty=true;
-app.set('views',__dirname+'/src/jade/');
+//app.set('views',__dirname+'/src/jade/');
+app.set('views',__dirname+'/built/jade/');
 app.set('view engine', 'jade');
 
 require(__dirname+'/config/routes/routes')(app, logger);
