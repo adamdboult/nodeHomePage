@@ -1,24 +1,25 @@
-<h1 id="element-wise-notation">Element-wise notation</h1>
-<h2 id="einstein-summation-convention">Einstein summation convention</h2>
+<h1 id="tensors"><span class="header-section-number">1</span> Tensors</h1>
+<h2 id="element-wise-notation"><span class="header-section-number">1.1</span> Element-wise notation</h2>
+<h3 id="einstein-summation-convention"><span class="header-section-number">1.1.1</span> Einstein summation convention</h3>
 <p>A vector can be written as a sum of its components.</p>
 <p><span class="math inline"><em>v</em> = ∑<sub><em>i</em></sub><em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup></span></p>
 <p>The Einstein summation convention is to remove the <span class="math inline">∑<sub><em>i</em></sub></span> symbols where they are implicit.</p>
 <p>For example we would instead write the vector as:</p>
 <p><span class="math inline"><em>v</em> = <em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup></span></p>
-<h3 id="adding-vectors">Adding vectors</h3>
+<h4 id="adding-vectors"><span class="header-section-number">1.1.1.1</span> Adding vectors</h4>
 <p><span class="math inline"><em>v</em> + <em>w</em> = (∑<sub><em>i</em></sub><em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup>)+(∑<sub><em>i</em></sub><em>f</em><sub><em>i</em></sub><em>w</em><sup><em>i</em></sup>)</span></p>
 <p><span class="math inline"><em>v</em> + <em>w</em> = ∑<sub><em>i</em></sub>(<em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup> + <em>f</em><sub><em>i</em></sub><em>w</em><sup><em>i</em></sup>)</span></p>
 <p><span class="math inline"><em>v</em> + <em>w</em> = <em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup> + <em>f</em><sub><em>i</em></sub><em>w</em><sup><em>i</em></sup></span></p>
 <p>If the bases are the same then:</p>
 <p><span class="math inline"><em>v</em> + <em>w</em> = <em>e</em><sub><em>i</em></sub>(<em>v</em><sup><em>i</em></sup> + <em>w</em><sup><em>i</em></sup>)</span></p>
-<h3 id="scalar-multiplication">Scalar multiplication</h3>
+<h4 id="scalar-multiplication"><span class="header-section-number">1.1.1.2</span> Scalar multiplication</h4>
 <p><span class="math inline"><em>c</em><em>v</em> = <em>c</em>∑<sub><em>i</em></sub><em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup></span></p>
 <p><span class="math inline"><em>c</em><em>v</em> = ∑<sub><em>i</em></sub><em>c</em><em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup></span></p>
 <p><span class="math inline"><em>c</em><em>v</em> = <em>c</em><em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup></span></p>
-<h3 id="matrix-multiplication">Matrix multiplication</h3>
+<h4 id="matrix-multiplication"><span class="header-section-number">1.1.1.3</span> Matrix multiplication</h4>
 <p><span class="math inline"><em>A</em><em>B</em><sub><em>i</em><em>k</em></sub> = ∑<sub><em>j</em></sub><em>A</em><sub><em>i</em><em>j</em></sub><em>B</em><sub><em>j</em><em>k</em></sub></span></p>
 <p><span class="math inline"><em>A</em><em>B</em><sub><em>i</em><em>k</em></sub> = <em>A</em><sub><em>i</em><em>j</em></sub><em>B</em><sub><em>j</em><em>k</em></sub></span></p>
-<h3 id="inner-products">Inner products</h3>
+<h4 id="inner-products"><span class="header-section-number">1.1.1.4</span> Inner products</h4>
 <p><span class="math inline">⟨<em>v</em>, <em>w</em>⟩=⟨∑<sub><em>i</em></sub><em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup>, ∑<sub><em>j</em></sub><em>f</em><sub><em>j</em></sub><em>w</em><sup><em>j</em></sup>⟩</span></p>
 <p><span class="math inline">⟨<em>v</em>, <em>w</em>⟩=∑<sub><em>i</em></sub><em>v</em><sup><em>i</em></sup>⟨<em>e</em><sub><em>i</em></sub>, ∑<sub><em>j</em></sub><em>f</em><sub><em>i</em></sub><em>w</em><sup><em>j</em></sup>⟩</span></p>
 <p><span class="math inline">$\langle v, w\rangle =\sum_i \sum_jv^i\overline {w^j}\langle e_i, f_j\rangle$</span></p>
@@ -27,14 +28,14 @@
 <p>We can define the metric as:</p>
 <p><span class="math inline"><em>g</em><sub><em>i</em><em>j</em></sub> := ⟨<em>e</em><sub><em>i</em></sub>, <em>e</em><sub><em>j</em></sub>⟩</span></p>
 <p><span class="math inline">$\langle v, w\rangle =v^i\overline {w^j}g_{ij}$</span></p>
-<h2 id="covariant-and-contravariant-bases">Covariant and contravariant bases</h2>
+<h3 id="covariant-and-contravariant-bases"><span class="header-section-number">1.1.2</span> Covariant and contravariant bases</h3>
 <p>In element form we write a vector as:</p>
 <p><span class="math inline"><em>v</em> = <em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup></span></p>
 <p>The indices are raised and lowered to reflect whether the value is covariant or contravariant.</p>
 <p><span class="math inline"><em>v</em><sup><em>i</em></sup></span> is contravariant. If the basis moves one way, it moves the other.</p>
 <p><span class="math inline"><em>e</em><sub><em>i</em></sub></span> is covariant. If the basis moves, it moves with it.</p>
-<h1 id="tensor-product">Tensor product</h1>
-<h2 id="tensor-product-1">Tensor product</h2>
+<h2 id="tensor-product"><span class="header-section-number">1.2</span> Tensor product</h2>
+<h3 id="tensor-product-1"><span class="header-section-number">1.2.1</span> Tensor product</h3>
 <p>We have spaces <span class="math inline"><em>V</em></span> and <span class="math inline"><em>W</em></span> over field <span class="math inline"><em>F</em></span>. If we have a linear operation which takes a vector from each space and returns a scalar from the underlying field, it is an element of the tensor product of the two spaces.</p>
 <p>For example if we have two vectors:</p>
 <p><span class="math inline"><em>v</em> = <em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup></span></p>
@@ -53,52 +54,52 @@
 <li><p><span class="math inline"><em>T</em><sub><em>i</em><em>j</em></sub> ∈ <em>V</em> ⊗ <em>W</em><sup>*</sup></span></p></li>
 </ul>
 <p>As a vector space, we can add together tensor products, and do scalar multiplication.</p>
-<h3 id="homomorphisms">Homomorphisms</h3>
+<h4 id="homomorphisms"><span class="header-section-number">1.2.1.1</span> Homomorphisms</h4>
 <p>We can define homomorphisms in terms of tensor products.</p>
 <p><span class="math inline"><em>H</em><em>o</em><em>m</em>(<em>V</em>)=<em>V</em> ⊗ <em>V</em><sup>*</sup></span></p>
 <p><span class="math inline"><em>T</em><sub><em>j</em></sub><sup><em>i</em></sup></span></p>
 <p>We use the dual space for the second argument. This is because it ensures that changes to the bases do not affect the maps.</p>
 <p><span class="math inline"><em>w</em><sup><em>j</em></sup> = <em>T</em><sub><em>i</em></sub><sup><em>j</em></sup><em>v</em><sup><em>i</em></sup></span></p>
-<h2 id="raising-and-lowering-indices">Raising and lowering indices</h2>
+<h3 id="raising-and-lowering-indices"><span class="header-section-number">1.2.2</span> Raising and lowering indices</h3>
 <p>We showed that the inner product between two vectors with the same basis can be written as:</p>
 <p><span class="math inline">⟨<em>v</em>, <em>w</em>⟩=⟨∑<sub><em>i</em></sub><em>e</em><sub><em>i</em></sub><em>v</em><sup><em>i</em></sup>, ∑<sub><em>j</em></sub><em>f</em><sub><em>j</em></sub><em>w</em><sup><em>j</em></sup>⟩</span></p>
 <p><span class="math inline">$\langle v, w\rangle =v^i\overline {w^j}\langle e_i, e_j\rangle$</span></p>
 <p>Defining the metric as:</p>
 <p><span class="math inline"><em>g</em><sub><em>i</em><em>j</em></sub> := ⟨<em>e</em><sub><em>i</em></sub>, <em>e</em><sub><em>j</em></sub>⟩</span></p>
 <p><span class="math inline">$\langle v, w\rangle =v^i\overline {w^j}g_{ij}$</span></p>
-<h3 id="metric-inverse">Metric inverse</h3>
+<h4 id="metric-inverse"><span class="header-section-number">1.2.2.1</span> Metric inverse</h4>
 <p>We can use this to define the inverse of the metric.</p>
 <p><span class="math inline"><em>g</em><sup><em>i</em><em>j</em></sup> := (<em>g</em><sub><em>i</em><em>j</em></sub>)<sup>−1</sup></span></p>
 <p>We can use this to raise and lower vectors.</p>
 <p><span class="math inline"><em>v</em><sub><em>i</em></sub> := <em>v</em><sup><em>j</em></sup><em>g</em><sub><em>i</em><em>j</em></sub></span></p>
-<h3 id="raising-and-lowering-indices-of-tensors">Raising and lowering indices of tensors</h3>
+<h4 id="raising-and-lowering-indices-of-tensors"><span class="header-section-number">1.2.2.2</span> Raising and lowering indices of tensors</h4>
 <p>If we have tensor:</p>
 <p><span class="math inline"><em>T</em><sub><em>i</em><em>j</em></sub></span></p>
 <p>We can define:</p>
 <p><span class="math inline"><em>T</em><sub><em>i</em></sub><sup><em>k</em></sup> = <em>T</em><sub><em>i</em><em>j</em></sub><em>g</em><sup><em>j</em><em>k</em></sup></span></p>
 <p><span class="math inline"><em>T</em><sup><em>i</em><em>l</em></sup> = <em>T</em><sub><em>i</em><em>j</em></sub><em>g</em><sup><em>j</em><em>k</em></sup><em>g</em><sup><em>k</em><em>l</em></sup></span></p>
-<h3 id="tensor-contraction">Tensor contraction</h3>
+<h4 id="tensor-contraction"><span class="header-section-number">1.2.2.3</span> Tensor contraction</h4>
 <p>If we have:</p>
 <p><span class="math inline"><em>T</em><sub><em>i</em><em>j</em></sub><em>x</em><sup><em>j</em></sup></span></p>
 <p>We can contract it to:</p>
 <p><span class="math inline"><em>T</em><sub><em>i</em><em>j</em></sub><em>x</em><sup><em>j</em></sup> = <em>v</em><sub><em>i</em></sub></span></p>
 <p>Similarly we can have:</p>
 <p><span class="math inline"><em>T</em><sup><em>i</em><em>j</em></sup><em>x</em><sub><em>j</em></sub> = <em>v</em><sup><em>i</em></sup></span></p>
-<h2 id="kronecker-delta">Kronecker delta</h2>
+<h3 id="kronecker-delta"><span class="header-section-number">1.2.3</span> Kronecker delta</h3>
 <p>Consider matrix multiplication <span class="math inline"><em>A</em><em>I</em></span>.</p>
 <p>We have:</p>
 <p><span class="math inline"><em>A</em><em>I</em><sub><em>i</em><em>k</em></sub> = <em>A</em><sub><em>i</em><em>j</em></sub><em>I</em><sub><em>j</em><em>k</em></sub></span></p>
 <p>We write this instead as:</p>
 <p><span class="math inline"><em>A</em><em>I</em><sub><em>i</em><em>k</em></sub> = <em>A</em><sub><em>i</em><em>j</em></sub><em>δ</em><sub><em>j</em><em>k</em></sub></span></p>
 <p>Where <span class="math inline"><em>δ</em><sub><em>j</em><em>k</em></sub> = 0</span> if <span class="math inline"><em>j</em> ≠ <em>k</em></span> and <span class="math inline"><em>δ</em><sub><em>j</em><em>k</em></sub> = 1</span> if <span class="math inline"><em>j</em> = <em>k</em></span>.</p>
-<h2 id="tensors-form-a-vector-space">Tensors form a vector space</h2>
-<h3 id="recap">Recap</h3>
-<h3 id="tensors-form-a-vector-space-1">Tensors form a vector space</h3>
-<h3 id="dimension-of-a-tensor">Dimension of a tensor</h3>
-<h3 id="basis-of-a-tensor">Basis of a tensor</h3>
-<h1 id="tensors">Tensors</h1>
-<h2 id="tensor-valence">Tensor valence</h2>
-<h2 id="tensor-inverses">Tensor inverses</h2>
+<h3 id="tensors-form-a-vector-space"><span class="header-section-number">1.2.4</span> Tensors form a vector space</h3>
+<h4 id="recap"><span class="header-section-number">1.2.4.1</span> Recap</h4>
+<h4 id="tensors-form-a-vector-space-1"><span class="header-section-number">1.2.4.2</span> Tensors form a vector space</h4>
+<h4 id="dimension-of-a-tensor"><span class="header-section-number">1.2.4.3</span> Dimension of a tensor</h4>
+<h4 id="basis-of-a-tensor"><span class="header-section-number">1.2.4.4</span> Basis of a tensor</h4>
+<h2 id="tensors-1"><span class="header-section-number">1.3</span> Tensors</h2>
+<h3 id="tensor-valence"><span class="header-section-number">1.3.1</span> Tensor valence</h3>
+<h3 id="tensor-inverses"><span class="header-section-number">1.3.2</span> Tensor inverses</h3>
 <p>For second order tensors we have:</p>
 <ul>
 <li><p><span class="math inline"><em>T</em><sub><em>j</em></sub><sup><em>i</em></sup></span></p></li>
@@ -111,10 +112,10 @@
 <li><p><span class="math inline"><em>T</em><sub><em>i</em><em>j</em></sub><em>U</em><sup><em>j</em><em>k</em></sup> = <em>δ</em><sub><em>i</em></sub><sup><em>k</em></sup></span></p></li>
 <li><p><span class="math inline"><em>T</em><sup><em>i</em><em>j</em></sup><em>U</em><sub><em>j</em><em>k</em></sub> = <em>δ</em><sub><em>i</em></sub><sup><em>k</em></sup></span></p></li>
 </ul>
-<h3 id="notation-for-inverses">Notation for inverses</h3>
+<h4 id="notation-for-inverses"><span class="header-section-number">1.3.2.1</span> Notation for inverses</h4>
 <p>If we have <span class="math inline"><em>T</em><sub><em>i</em><em>j</em></sub><em>U</em><sup><em>j</em><em>k</em></sup> = <em>δ</em><sub><em>i</em></sub><sup><em>k</em></sup></span>, we can instead write:</p>
 <p><span class="math inline"><em>T</em><sub><em>i</em><em>j</em></sub><em>T</em><sup><em>j</em><em>k</em></sup> = <em>δ</em><sub><em>i</em></sub><sup><em>k</em></sup></span></p>
-<h2 id="tensor-contraction-1">Tensor contraction</h2>
+<h3 id="tensor-contraction-1"><span class="header-section-number">1.3.3</span> Tensor contraction</h3>
 <p>We have a vector <span class="math inline"><em>v</em> ∈ <em>V</em></span> and <span class="math inline"><em>w</em> ∈ <em>V</em><sup>*</sup></span>.</p>
 <p><span class="math inline"><strong>v</strong> = ∑<sub><em>i</em></sub><em>v</em><sup><em>i</em></sup><strong>e</strong><sub><em>i</em></sub></span></p>
 <p><span class="math inline"><strong>w</strong> = ∑<sub><em>i</em></sub><em>w</em><sub><em>i</em></sub><strong>f</strong><sup><em>i</em></sup></span></p>
@@ -136,23 +137,23 @@
 <p>We define a new object</p>
 <p><span class="math inline"><em>c</em> = ∑<sub><em>i</em></sub><em>w</em><sup><em>i</em></sup><em>v</em><sub><em>i</em></sub></span></p>
 <p>This new term, c, does not depend on <span class="math inline"><em>i</em></span>, and so we have contracted the index.</p>
-<h2 id="symmetric-and-antisymmetric-tensors">Symmetric and antisymmetric tensors</h2>
+<h3 id="symmetric-and-antisymmetric-tensors"><span class="header-section-number">1.3.4</span> Symmetric and antisymmetric tensors</h3>
 <p>Consider a tensor, e g <span class="math inline"><em>T</em><sub><em>a</em><em>b</em><em>c</em></sub></span>.</p>
 <p>In general, this is not symmetric, that is:</p>
 <p><span class="math inline"><em>T</em><sub><em>a</em><em>b</em><em>c</em></sub> ≠ <em>T</em><sub><em>b</em><em>a</em><em>c</em></sub></span></p>
-<h3 id="symmetric-part-of-a-tensor">Symmetric part of a tensor</h3>
+<h4 id="symmetric-part-of-a-tensor"><span class="header-section-number">1.3.4.1</span> Symmetric part of a tensor</h4>
 <p>We can write the symmetric part of this with regard to <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span>.</p>
 <p><span class="math inline">$T_{(ab)c}=\dfrac{1}{2}(T_{abc}+T_{bac})$</span></p>
 <p>Clearly, <span class="math inline"><em>T</em><sub>(<em>a</em><em>b</em>)<em>c</em></sub> = <em>T</em><sub>(<em>b</em><em>a</em>)<em>c</em></sub></span></p>
-<h3 id="antisymmetric-part-of-a-tensor">Antisymmetric part of a tensor</h3>
+<h4 id="antisymmetric-part-of-a-tensor"><span class="header-section-number">1.3.4.2</span> Antisymmetric part of a tensor</h4>
 <p>We can also have an an antisymmetric part with regard to <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span>.</p>
 <p><span class="math inline">$T_{[ab]c}=\dfrac{1}{2}(T_{abc}-T_{bac})$</span></p>
 <p>Clearly, <span class="math inline"><em>T</em><sub>[<em>a</em><em>b</em>]<em>c</em></sub> = −<em>T</em><sub>[<em>b</em><em>a</em>]<em>c</em></sub></span></p>
-<h3 id="tensors-as-sums-of-their-symmetric-and-antisymmetric-parts">Tensors as sums of their symmetric and antisymmetric parts</h3>
+<h4 id="tensors-as-sums-of-their-symmetric-and-antisymmetric-parts"><span class="header-section-number">1.3.4.3</span> Tensors as sums of their symmetric and antisymmetric parts</h4>
 <p><span class="math inline">$T_{(ab)c}+T_{[ab]c}=\dfrac{1}{2}(T_{abc}+T_{bac})+\dfrac{1}{2}(T_{abc}-T_{bac})$</span></p>
 <p><span class="math inline"><em>T</em><sub>(<em>a</em><em>b</em>)<em>c</em></sub> + <em>T</em><sub>[<em>a</em><em>b</em>]<em>c</em></sub> = <em>T</em><sub><em>a</em><em>b</em><em>c</em></sub></span></p>
-<h1 id="higher-order-tensors">Higher-order tensors</h1>
-<h2 id="higher-order-tensors-1">Higher-order tensors</h2>
+<h2 id="higher-order-tensors"><span class="header-section-number">1.4</span> Higher-order tensors</h2>
+<h3 id="higher-order-tensors-1"><span class="header-section-number">1.4.1</span> Higher-order tensors</h3>
 <p>We can create higher order tensors products. For example</p>
 <p><span class="math inline"><em>V</em> ⊗ <em>V</em> ⊗ <em>V</em> ⊗ <em>V</em><sup>*</sup> ⊗ <em>V</em><sup>*</sup></span></p>
 <p>We write elements of these as:</p>
@@ -164,34 +165,34 @@
 <p>1 rank tensor: vector</p>
 <p>2 rank tensor: matrix</p>
 <p>page on covariance and contravariance and type (p,q)</p>
-<h1 id="sort">Sort</h1>
-<h2 id="outer-product">Outer product</h2>
-<h3 id="the-outer-product-is-a-bilinear-map">The outer product is a bilinear map</h3>
+<h2 id="sort"><span class="header-section-number">1.5</span> Sort</h2>
+<h3 id="outer-product"><span class="header-section-number">1.5.1</span> Outer product</h3>
+<h4 id="the-outer-product-is-a-bilinear-map"><span class="header-section-number">1.5.1.1</span> The outer product is a bilinear map</h4>
 <p>This is a bilinear map from two vectors from the same vector space to another vector space.</p>
 <p><span class="math inline"><em>V</em> × <em>V</em> → <em>V</em></span></p>
-<h3 id="calculating-the-outer-product">Calculating the outer product</h3>
+<h4 id="calculating-the-outer-product"><span class="header-section-number">1.5.1.2</span> Calculating the outer product</h4>
 <p><span class="math inline"><em>u</em> ⊗ <em>v</em> = <em>w</em></span></p>
 <p><span class="math inline"><em>w</em><sub><em>i</em><em>j</em></sub> = <em>u</em><sub><em>i</em></sub><em>v</em><sub><em>j</em></sub></span></p>
-<h3 id="the-dimensions-of-the-tensor-outer-product">The dimensions of the tensor outer product</h3>
+<h4 id="the-dimensions-of-the-tensor-outer-product"><span class="header-section-number">1.5.1.3</span> The dimensions of the tensor outer product</h4>
 <p><span class="math inline">dim(<em>V</em> ⊗ <em>W</em>)=dim <em>V</em> × dim <em>W</em></span></p>
-<h3 id="outer-product-on-the-complex-numbers">Outer product on the complex numbers</h3>
-<h3 id="relation-between-the-dot-product-and-outer-product">Relation between the dot product and outer product</h3>
+<h4 id="outer-product-on-the-complex-numbers"><span class="header-section-number">1.5.1.4</span> Outer product on the complex numbers</h4>
+<h4 id="relation-between-the-dot-product-and-outer-product"><span class="header-section-number">1.5.1.5</span> Relation between the dot product and outer product</h4>
 <p>The dot product in the trace of the outer product.</p>
-<h2 id="kronecker-product">Kronecker product</h2>
+<h3 id="kronecker-product"><span class="header-section-number">1.5.2</span> Kronecker product</h3>
 <p>The Kronecker product takes the concept of the outer product and applies to to matrices.</p>
 <p>We can essentially repace every element in the matrix on the left with the element multiplied by the entire matrix on the right.</p>
 <p>Like outer products, Kronecker products are written as:</p>
 <p><span class="math inline"><em>u</em> ⊗ <em>v</em> = <em>w</em></span></p>
-<h2 id="dot-product">Dot product</h2>
-<h3 id="dot-product-is-a-bilinear-form">Dot product is a bilinear form</h3>
+<h3 id="dot-product"><span class="header-section-number">1.5.3</span> Dot product</h3>
+<h4 id="dot-product-is-a-bilinear-form"><span class="header-section-number">1.5.3.1</span> Dot product is a bilinear form</h4>
 <p>This is a bilinear form, a mapping from two vectors in the same vector space to the underlying field.</p>
 <p><span class="math inline"><em>V</em> × <em>V</em> → <em>F</em></span></p>
-<h3 id="calculating-the-dot-product">Calculating the dot product</h3>
+<h4 id="calculating-the-dot-product"><span class="header-section-number">1.5.3.2</span> Calculating the dot product</h4>
 <p>This is calculated by multiplying each matching element, and summing the results.</p>
 <p><span class="math inline">$u\cdot v =\sum_{i=1}^nu_iv_i$</span></p>
-<h3 id="dot-product-on-the-complex-numbers">Dot product on the complex numbers</h3>
+<h4 id="dot-product-on-the-complex-numbers"><span class="header-section-number">1.5.3.3</span> Dot product on the complex numbers</h4>
 <p>Properties don’t hold. Can get zero vectors from non-zero inputs. Get complex numbers from dot product on itself.</p>
 <p>Inner products better deal with complex number fields. However they are not bilinear maps.</p>
-<h2 id="homomorphism-as-a-tensor-product">Homomorphism as a tensor product</h2>
-<h2 id="tensors-1">Tensors</h2>
+<h3 id="homomorphism-as-a-tensor-product"><span class="header-section-number">1.5.4</span> Homomorphism as a tensor product</h3>
+<h3 id="tensors-2"><span class="header-section-number">1.5.5</span> Tensors</h3>
 <p>A tensor is an element of a tensor product.</p>

@@ -1,4 +1,4 @@
-<h2 id="length-of-a-curve">Length of a curve</h2>
+<h2 id="length-of-a-curve"><span class="header-section-number">0.1</span> Length of a curve</h2>
 <p>We have a curve from <span class="math inline"><em>a</em></span> to <span class="math inline"><em>b</em></span> in <span class="math inline"><strong>R</strong><sup><em>n</em></sup></span>.</p>
 <p><span class="math inline"><em>f</em> : [<em>a</em>, <em>b</em>]→<strong>R</strong><sup><em>n</em></sup></span></p>
 <p>We divide this into <span class="math inline"><em>n</em></span> segments.</p>
@@ -13,12 +13,12 @@
 <p><span class="math inline">$L=\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
 <p>The limit is:</p>
 <p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
-<h3 id="method-1">Method 1</h3>
+<h3 id="method-1"><span class="header-section-number">0.1.1</span> Method 1</h3>
 <p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
 <p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||\dfrac{f(t_{i})-f(t_{i-1})}{\Delta t}||\Delta t$</span></p>
 <p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f'(t)||\Delta t$</span></p>
 <p><span class="math inline"><em>L</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup>||<em>f</em>′(<em>t</em>)||<em>d</em><em>t</em></span></p>
-<h3 id="method-2">Method 2</h3>
+<h3 id="method-2"><span class="header-section-number">0.1.2</span> Method 2</h3>
 <p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
 <p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n \sqrt {(f(t_{i})-f(t_{i-1}))^*M(f(t_{i})-f(t_{i-1}))}$</span></p>
 <p><span class="math inline">$L=\int_a^b \sqrt {(dt)^TM(dt)}$</span></p>

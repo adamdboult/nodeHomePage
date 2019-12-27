@@ -1,6 +1,8 @@
 
 import os
 
+import shutil
+
 ###################################
 # Create tex file for each folder #
 ###################################
@@ -33,22 +35,19 @@ for folder in os.listdir(directory_to_walk):
 
     f = open(os.path.join(directory_to_walk, folder + ".jade"), "w")
 
-    f.write("extends ./subTemplate.jade\n")
-    f.write("block subtitle\n")
-    f.write("	div\n")
-    f.write("block subSubContent\n")
-    f.write("	include " + folder + ".html\n")
+    f.write("extends ../../templates/loginHeader.jade\n")
+    f.write("block content\n")
+    f.write("	div.container-fluid\n")
+    f.write("		div.row\n")
+    f.write("			nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n")
+    f.write("				div.sidebar-sticky\n")
+    f.write("					include ../maths_sidebar.jade\n")
+    f.write("			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role=\"main\")\n")
+    #f.write("				div.d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pt-3.pb-2.mb-3.border-bottom\n")
+    f.write("				include " + folder + ".html\n")
 
     f.close()
     #for tex_folder in os.listdir(os.path.join(directory_to_walk, folder)):
     #    print(tex_folder)
 
-#d = os.walk(os.path.join(directory_to_walk, "sets"))
-#for x in d:
-#    print("\n")
-#    print(x)
-#print(d)
-#print(2)
-#os.listdir("./")
-#
-#print(3)
+

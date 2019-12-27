@@ -21,7 +21,7 @@ for i in $(find ./built/jade/theory/maths/ -name \*.tex); do
 
     cd $d
     pandoc $s -o $o
-    pandoc $s --number-sections -o $p
+    pandoc $s --number-sections --toc --toc-depth 2 -o $p
     cd $current_dir
 
 done

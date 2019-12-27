@@ -1,38 +1,39 @@
-<h1 id="undirected-graphs">Undirected graphs</h1>
-<h2 id="vertices-and-edges">Vertices and edges</h2>
+<h1 id="graph-theory"><span class="header-section-number">1</span> Graph theory</h1>
+<h2 id="undirected-graphs"><span class="header-section-number">1.1</span> Undirected graphs</h2>
+<h3 id="vertices-and-edges"><span class="header-section-number">1.1.1</span> Vertices and edges</h3>
 <p>A graph is a set of vertices <span class="math inline"><em>V</em></span>, a set of edges E which are subset of pairs from V.</p>
 <p>undirected so each edge is a set</p>
-<h3 id="degree-of-a-vertex">Degree of a vertex</h3>
+<h4 id="degree-of-a-vertex"><span class="header-section-number">1.1.1.1</span> Degree of a vertex</h4>
 <p>The degree of a vertex is the number of edges connections to it.</p>
-<h2 id="order-and-size-of-graphs">Order and size of graphs</h2>
+<h3 id="order-and-size-of-graphs"><span class="header-section-number">1.1.2</span> Order and size of graphs</h3>
 <p>The order of a graph is the number of vertices, <span class="math inline">|<em>V</em>|</span>.</p>
 <p>The size of a graph is the number of edges, <span class="math inline">|<em>E</em>|</span>.</p>
-<h2 id="subgraphs">Subgraphs</h2>
+<h3 id="subgraphs"><span class="header-section-number">1.1.3</span> Subgraphs</h3>
 <p>We can take a subset of vertices, and all edges which only depend on these vertices. This is an induced subgraph.</p>
-<h3 id="induced-subgraph">Induced subgraph</h3>
-<h2 id="loops-multiple-edges-and-simple-graphs">Loops, multiple edges and simple graphs</h2>
-<h3 id="loops">Loops</h3>
+<h4 id="induced-subgraph"><span class="header-section-number">1.1.3.1</span> Induced subgraph</h4>
+<h3 id="loops-multiple-edges-and-simple-graphs"><span class="header-section-number">1.1.4</span> Loops, multiple edges and simple graphs</h3>
+<h4 id="loops"><span class="header-section-number">1.1.4.1</span> Loops</h4>
 <p>A loop is an edge where both the vertices are the same.</p>
-<h3 id="multiple-edges">Multiple edges</h3>
+<h4 id="multiple-edges"><span class="header-section-number">1.1.4.2</span> Multiple edges</h4>
 <p>If there are two edges with the same pair of indices, there are multiple edges.</p>
-<h3 id="simple-graphs">Simple graphs</h3>
+<h4 id="simple-graphs"><span class="header-section-number">1.1.4.3</span> Simple graphs</h4>
 <p>No loops or multiple edges.</p>
-<h1 id="directed-graphs">Directed graphs</h1>
-<h2 id="direct-acyclic-graphs">Direct acyclic graphs</h2>
-<h1 id="weighted-graphs">Weighted graphs</h1>
-<h2 id="edge-weighted-graph">Edge-weighted graph</h2>
+<h2 id="directed-graphs"><span class="header-section-number">1.2</span> Directed graphs</h2>
+<h3 id="direct-acyclic-graphs"><span class="header-section-number">1.2.1</span> Direct acyclic graphs</h3>
+<h2 id="weighted-graphs"><span class="header-section-number">1.3</span> Weighted graphs</h2>
+<h3 id="edge-weighted-graph"><span class="header-section-number">1.3.1</span> Edge-weighted graph</h3>
 <p>An edge-weighted graphs has weights for each edge.</p>
-<h2 id="vertex-weighted-graph">Vertex-weighted graph</h2>
+<h3 id="vertex-weighted-graph"><span class="header-section-number">1.3.2</span> Vertex-weighted graph</h3>
 <p>A vertex-weighted graph has weights for each vertex.</p>
-<h1 id="graph-representation">Graph representation</h1>
-<h2 id="adjacency-matrix">Adjacency matrix</h2>
+<h2 id="graph-representation"><span class="header-section-number">1.4</span> Graph representation</h2>
+<h3 id="adjacency-matrix"><span class="header-section-number">1.4.1</span> Adjacency matrix</h3>
 <p>We can represent a finite graph as a square matrix. <span class="math inline"><em>m</em><sub><em>i</em><em>j</em></sub></span> is the number of edges connecting vertex <span class="math inline"><em>i</em></span> to vertex <span class="math inline"><em>j</em></span>.</p>
-<h2 id="incidence-matrix">Incidence matrix</h2>
+<h3 id="incidence-matrix"><span class="header-section-number">1.4.2</span> Incidence matrix</h3>
 <p>An incidence matrix has <span class="math inline"><em>m</em><sub><em>i</em><em>j</em></sub></span> representing the number of connections from vertex <span class="math inline"><em>i</em></span> to edge <span class="math inline"><em>j</em></span>.</p>
-<h2 id="degree-matrix">Degree matrix</h2>
+<h3 id="degree-matrix"><span class="header-section-number">1.4.3</span> Degree matrix</h3>
 <p>A degree matrix is a diagonal matrix. Each diagonal contains the degree of the a vertex.</p>
-<h2 id="laplacian-matrix">Laplacian matrix</h2>
+<h3 id="laplacian-matrix"><span class="header-section-number">1.4.4</span> Laplacian matrix</h3>
 <p>The Laplacian matrix <span class="math inline"><em>L</em></span> is formed using the degree matrix <span class="math inline"><em>D</em></span> and the adjacency matrix <span class="math inline"><em>A</em></span>. <span class="math inline"><em>L</em> = <em>D</em> − <em>A</em></span>.</p>
-<h1 id="representing-manifolds">Representing manifolds</h1>
-<h2 id="nearest-neighbour-graph">Nearest-neighbour graph</h2>
-<h2 id="triangular-mesh">Triangular mesh</h2>
+<h2 id="representing-manifolds"><span class="header-section-number">1.5</span> Representing manifolds</h2>
+<h3 id="nearest-neighbour-graph"><span class="header-section-number">1.5.1</span> Nearest-neighbour graph</h3>
+<h3 id="triangular-mesh"><span class="header-section-number">1.5.2</span> Triangular mesh</h3>

@@ -1,14 +1,14 @@
-<h2 id="summation-of-natural-numbers">Summation of natural numbers</h2>
-<h3 id="goal">Goal</h3>
+<h2 id="summation-of-natural-numbers"><span class="header-section-number">0.1</span> Summation of natural numbers</h2>
+<h3 id="goal"><span class="header-section-number">0.1.1</span> Goal</h3>
 <p>Let’s prove that:</p>
 <p><span class="math inline">$\sum_{i=0}^n i= \frac{n(n+1)}{2}$</span></p>
-<h3 id="proof-by-induction">Proof by induction</h3>
+<h3 id="proof-by-induction"><span class="header-section-number">0.1.2</span> Proof by induction</h3>
 <p>We use the inference rules Modus Ponens, which says that if <span class="math inline"><em>X</em></span> is true, and <span class="math inline"><em>X</em> → <em>Y</em></span> is true, then <span class="math inline"><em>Y</em></span> is true.</p>
-<h3 id="true-for-n0">True for <span class="math inline"><em>n</em> = 0</span></h3>
+<h3 id="true-for-n0"><span class="header-section-number">0.1.3</span> True for <span class="math inline"><em>n</em> = 0</span></h3>
 <p>We know this is true for <span class="math inline"><em>n</em> = 0</span>:</p>
 <p><span class="math inline">$0=\frac{0(0+1)}{2}$</span></p>
 <p><span class="math inline">0 = 0</span></p>
-<h3 id="if-its-true-for-n-its-true-for-n1">If it’s true for <span class="math inline"><em>n</em></span>, it’s true for <span class="math inline"><em>n</em> + 1</span></h3>
+<h3 id="if-its-true-for-n-its-true-for-n1"><span class="header-section-number">0.1.4</span> If it’s true for <span class="math inline"><em>n</em></span>, it’s true for <span class="math inline"><em>n</em> + 1</span></h3>
 <p>We can also prove that if it true for <span class="math inline"><em>n</em></span>, it is true for <span class="math inline"><em>n</em> + 1</span>.</p>
 <p><span class="math inline">$\sum_{i=0}^{n+1} i= \frac{(n+1)(n+2)}{2}$</span></p>
 <p><span class="math inline">$(n+1)+\sum_{i=0}^{n} i= \frac{n^2 +3n +2}{2}$</span></p>
@@ -16,5 +16,5 @@
 <p><span class="math inline">$(n+1)+\frac{n(n+1)}{2}= \frac{n^2 +3n +2}{2}$</span></p>
 <p><span class="math inline">$\frac{n^2+3n+2}{2}= \frac{n^2 +3n +2}{2}$</span></p>
 <p><span class="math inline">1 = 1</span></p>
-<h3 id="result">Result</h3>
+<h3 id="result"><span class="header-section-number">0.1.5</span> Result</h3>
 <p>So we know that it is true for <span class="math inline"><em>n</em> = 0</span>, and if it is true for <span class="math inline"><em>n</em></span>, then it is true for <span class="math inline"><em>n</em> + 1</span>. As a result it is true for all natural numbers.</p>

@@ -1,86 +1,87 @@
-<h1 id="introduction">Introduction</h1>
-<h2 id="manifolds-charts-and-atlases">Manifolds, charts and atlases</h2>
+<h1 id="topological-manifolds"><span class="header-section-number">1</span> Topological manifolds</h1>
+<h2 id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
+<h3 id="manifolds-charts-and-atlases"><span class="header-section-number">1.1.1</span> Manifolds, charts and atlases</h3>
 <p>A manifold is a set of points and associated charts.</p>
 <p>A chart is a mapping from each point in a subset of the manifold to a point in a vector space.</p>
 <p>These charts are invertible. If we are given coordinates, we can identify the point in the manifold it comes from.</p>
-<h3 id="example-the-sphere">Example: The sphere</h3>
+<h4 id="example-the-sphere"><span class="header-section-number">1.1.1.1</span> Example: The sphere</h4>
 <p>We can map a hemisphere to a subset of <span class="math inline"><em>R</em><sup>2</sup></span>. Given a point in <span class="math inline"><em>R</em><sup>2</sup></span> we can identify a specific point on the hemisphere, and given a s specific point on the hemisphere we can identify a point in <span class="math inline"><em>R</em><sup>2</sup></span>.</p>
-<h3 id="universal-charts">Universal charts</h3>
+<h4 id="universal-charts"><span class="header-section-number">1.1.1.2</span> Universal charts</h4>
 <p>If the vector space is flat and non-repeating, then a single chart can be used to map the whole manifold.</p>
-<h3 id="atlases">Atlases</h3>
+<h4 id="atlases"><span class="header-section-number">1.1.1.3</span> Atlases</h4>
 <p>If we have a collection of charts which covers each point needs to be covered at least once, we have an atlas. Each chart needs to be to the same dimensional vector space.</p>
-<h2 id="transition-maps">Transition maps</h2>
+<h3 id="transition-maps"><span class="header-section-number">1.1.2</span> Transition maps</h3>
 <p>Where two charts overlap we can express the points where the charts overlap as two different coordinates.</p>
 <p>We can express the mapping from these coordinates as a function. This is a transition map.</p>
-<h3 id="overlapping-charts">Overlapping charts</h3>
+<h4 id="overlapping-charts"><span class="header-section-number">1.1.2.1</span> Overlapping charts</h4>
 <p>If two charts cover some of the same points on a manifold then we can define a function for those points where we move from one vector to another.</p>
 <p>We can represent moving between charts as:</p>
 <p><span class="math inline"><em>a</em><em>b</em><sup>−1</sup></span></p>
-<h2 id="mapping-2d-manifolds-to-riemann-surfaces">Mapping 2D manifolds to Riemann surfaces</h2>
+<h3 id="mapping-2d-manifolds-to-riemann-surfaces"><span class="header-section-number">1.1.3</span> Mapping 2D manifolds to Riemann surfaces</h3>
 <p>Needs to be orientable and metricisable.</p>
-<h1 id="dimension-theory">Dimension theory</h1>
-<h2 id="refinement">Refinement</h2>
-<h2 id="ply-order-of-a-cover">Ply (order) of a cover</h2>
-<h2 id="small-inductive-dimension">Small inductive dimension</h2>
-<h2 id="large-inductive-dimension">Large inductive dimension</h2>
-<h2 id="lebesgue-covering-dimension">Lebesgue covering dimension</h2>
-<h1 id="paths">Paths</h1>
-<h2 id="paths-and-loops">Paths and loops</h2>
-<h3 id="paths-1">Paths</h3>
+<h2 id="dimension-theory"><span class="header-section-number">1.2</span> Dimension theory</h2>
+<h3 id="refinement"><span class="header-section-number">1.2.1</span> Refinement</h3>
+<h3 id="ply-order-of-a-cover"><span class="header-section-number">1.2.2</span> Ply (order) of a cover</h3>
+<h3 id="small-inductive-dimension"><span class="header-section-number">1.2.3</span> Small inductive dimension</h3>
+<h3 id="large-inductive-dimension"><span class="header-section-number">1.2.4</span> Large inductive dimension</h3>
+<h3 id="lebesgue-covering-dimension"><span class="header-section-number">1.2.5</span> Lebesgue covering dimension</h3>
+<h2 id="paths"><span class="header-section-number">1.3</span> Paths</h2>
+<h3 id="paths-and-loops"><span class="header-section-number">1.3.1</span> Paths and loops</h3>
+<h4 id="paths-1"><span class="header-section-number">1.3.1.1</span> Paths</h4>
 <p>We have the set <span class="math inline"><em>X</em></span>. We define a mapping <span class="math inline">[0, 1]→<em>X</em></span></p>
 <p>If a path exists between any two points, then the space is path-connected.</p>
-<h3 id="loops">Loops</h3>
+<h4 id="loops"><span class="header-section-number">1.3.1.2</span> Loops</h4>
 <p>This is a path which ends on itself.</p>
 <p>If <span class="math inline"><em>f</em>(0)=<em>f</em>(1)</span> then it is a loop.</p>
-<h2 id="holes-and-genuses">Holes and genuses</h2>
-<h3 id="holes">Holes</h3>
-<h3 id="genes">Genes</h3>
+<h3 id="holes-and-genuses"><span class="header-section-number">1.3.2</span> Holes and genuses</h3>
+<h4 id="holes"><span class="header-section-number">1.3.2.1</span> Holes</h4>
+<h4 id="genes"><span class="header-section-number">1.3.2.2</span> Genes</h4>
 <p>The genus of a topology is the number of holes in the topology.</p>
-<h2 id="path-connect-spaces">Path-connect spaces</h2>
-<h1 id="simply-connected-2d-manifolds">Simply-connected 2D manifolds</h1>
-<h2 id="elliptic-riemann-sphere">Elliptic (Riemann sphere)</h2>
-<h2 id="parabolic-complex-plane">Parabolic (complex plane)</h2>
-<h2 id="hyperbolic-open-disk">Hyperbolic (open disk)</h2>
-<h1 id="not-simply-connected-2d-manifolds">Not simply-connected 2D manifolds</h1>
-<h2 id="torus">Torus</h2>
-<h2 id="hyper-elliptic-curves">Hyper-elliptic curves</h2>
-<h1 id="functions-between-topologies">Functions between topologies</h1>
-<h2 id="functions-between-topologies-1">Functions between topologies</h2>
+<h3 id="path-connect-spaces"><span class="header-section-number">1.3.3</span> Path-connect spaces</h3>
+<h2 id="simply-connected-2d-manifolds"><span class="header-section-number">1.4</span> Simply-connected 2D manifolds</h2>
+<h3 id="elliptic-riemann-sphere"><span class="header-section-number">1.4.1</span> Elliptic (Riemann sphere)</h3>
+<h3 id="parabolic-complex-plane"><span class="header-section-number">1.4.2</span> Parabolic (complex plane)</h3>
+<h3 id="hyperbolic-open-disk"><span class="header-section-number">1.4.3</span> Hyperbolic (open disk)</h3>
+<h2 id="not-simply-connected-2d-manifolds"><span class="header-section-number">1.5</span> Not simply-connected 2D manifolds</h2>
+<h3 id="torus"><span class="header-section-number">1.5.1</span> Torus</h3>
+<h3 id="hyper-elliptic-curves"><span class="header-section-number">1.5.2</span> Hyper-elliptic curves</h3>
+<h2 id="functions-between-topologies"><span class="header-section-number">1.6</span> Functions between topologies</h2>
+<h3 id="functions-between-topologies-1"><span class="header-section-number">1.6.1</span> Functions between topologies</h3>
 <p>We can define a function from topology to another.</p>
 <p><span class="math inline"><em>f</em>(<em>X</em>)=<em>Y</em></span></p>
-<h3 id="continuous-functions-between-topologies">Continuous functions between topologies</h3>
+<h4 id="continuous-functions-between-topologies"><span class="header-section-number">1.6.1.1</span> Continuous functions between topologies</h4>
 <p>If <span class="math inline"><em>f</em>(<em>X</em>)</span> is continous, then we have a continous function between topologies.</p>
-<h3 id="inverse-functions-between-topologies">Inverse functions between topologies</h3>
+<h4 id="inverse-functions-between-topologies"><span class="header-section-number">1.6.1.2</span> Inverse functions between topologies</h4>
 <p>If <span class="math inline"><em>f</em>(<em>X</em>)</span> is invertible then there is a inverse mapping.</p>
-<h2 id="homotopy">Homotopy</h2>
-<h2 id="homeomorphisms">Homeomorphisms</h2>
+<h3 id="homotopy"><span class="header-section-number">1.6.2</span> Homotopy</h3>
+<h3 id="homeomorphisms"><span class="header-section-number">1.6.3</span> Homeomorphisms</h3>
 <p>If there is a mapping which is invertible and continuous, it is a homeomorphism.</p>
-<h1 id="fibre-bundles">Fibre bundles</h1>
-<h2 id="vector-bundles">Vector bundles</h2>
+<h2 id="fibre-bundles"><span class="header-section-number">1.7</span> Fibre bundles</h2>
+<h3 id="vector-bundles"><span class="header-section-number">1.7.1</span> Vector bundles</h3>
 <p>A vector bundle consists of a base manifold (a base space), and a real vector space at each point in the base manifold.</p>
-<h3 id="example">Example</h3>
+<h4 id="example"><span class="header-section-number">1.7.1.1</span> Example</h4>
 <p>For example we can have a base manifold of a circle, and have a <span class="math inline">1</span>-dimensional vector space at each point on the circle to create an infinitely extended cylinder.</p>
-<h2 id="bundle-projection">Bundle projection</h2>
+<h3 id="bundle-projection"><span class="header-section-number">1.7.2</span> Bundle projection</h3>
 <p>This is a projection from any point on any of the fibres, to the underlying base manifold.</p>
-<h2 id="trivial-and-twisted-bundles">Trivial and twisted bundles</h2>
-<h2 id="cross-sections-and-zero-sections-of-fibre-bundles">Cross-sections and zero-sections of fibre bundles</h2>
-<h2 id="trivial-bundles-and-the-torus">Trivial bundles and the torus</h2>
-<h3 id="trivial-bundles">Trivial bundles</h3>
-<h3 id="the-torus">The torus</h3>
+<h3 id="trivial-and-twisted-bundles"><span class="header-section-number">1.7.3</span> Trivial and twisted bundles</h3>
+<h3 id="cross-sections-and-zero-sections-of-fibre-bundles"><span class="header-section-number">1.7.4</span> Cross-sections and zero-sections of fibre bundles</h3>
+<h3 id="trivial-bundles-and-the-torus"><span class="header-section-number">1.7.5</span> Trivial bundles and the torus</h3>
+<h4 id="trivial-bundles"><span class="header-section-number">1.7.5.1</span> Trivial bundles</h4>
+<h4 id="the-torus"><span class="header-section-number">1.7.5.2</span> The torus</h4>
 <p><span class="math inline"><em>S</em><sub>1</sub> × <em>S</em><sub>1</sub></span></p>
-<h2 id="twisted-bundles-and-the-klein-bottle">Twisted bundles and the Klein bottle</h2>
-<h3 id="twisted-bundles">Twisted bundles</h3>
-<h3 id="klein-bottles">Klein bottles</h3>
+<h3 id="twisted-bundles-and-the-klein-bottle"><span class="header-section-number">1.7.6</span> Twisted bundles and the Klein bottle</h3>
+<h4 id="twisted-bundles"><span class="header-section-number">1.7.6.1</span> Twisted bundles</h4>
+<h4 id="klein-bottles"><span class="header-section-number">1.7.6.2</span> Klein bottles</h4>
 <p><span class="math inline"><em>S</em><sub>1</sub> × <em>S</em><sub>1</sub></span>, but twisted</p>
-<h2 id="mobius-strips">Mobius strips</h2>
+<h3 id="mobius-strips"><span class="header-section-number">1.7.7</span> Mobius strips</h3>
 <p><span class="math inline"><em>S</em><sub>1</sub>×</span> line segment.</p>
-<h1 id="other">Other</h1>
-<h2 id="submanifolds">Submanifolds</h2>
+<h2 id="other"><span class="header-section-number">1.8</span> Other</h2>
+<h3 id="submanifolds"><span class="header-section-number">1.8.1</span> Submanifolds</h3>
 <p>Submanifold: subset of manifold which is also manifold</p>
 <p>Eg: circle inside a sphere</p>
-<h2 id="boundries-and-interiors">Boundries and interiors</h2>
+<h3 id="boundries-and-interiors"><span class="header-section-number">1.8.2</span> Boundries and interiors</h3>
 <p>Around every manifold of dimension <span class="math inline"><em>n</em></span> is a boundry of dimension <span class="math inline">(<em>n</em> − 1)</span>.</p>
 <p>Homeomorphism at boundry: one coordinate always <span class="math inline">≥0</span>. reduced dimension.</p>
 <p>Interior is rest.</p>
-<h2 id="embeddings-and-immersions">Embeddings and immersions</h2>
+<h3 id="embeddings-and-immersions"><span class="header-section-number">1.8.3</span> Embeddings and immersions</h3>
 <p>Whitney embedding theroem: all manfiolds can be embedded in R^n space for some n</p>

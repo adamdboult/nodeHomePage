@@ -1,6 +1,7 @@
-<h1 id="introduction">Introduction</h1>
-<h2 id="order-of-differential-equations">Order of differential equations</h2>
-<h2 id="implicit-and-explit-differential-equations">Implicit and explit differential equations</h2>
+<h1 id="ordinary-differential-equations-odes"><span class="header-section-number">1</span> Ordinary Differential Equations (ODEs)</h1>
+<h2 id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
+<h3 id="order-of-differential-equations"><span class="header-section-number">1.1.1</span> Order of differential equations</h3>
+<h3 id="implicit-and-explit-differential-equations"><span class="header-section-number">1.1.2</span> Implicit and explit differential equations</h3>
 <p>An ordinary differential equation is one with only one independent variable. For example:</p>
 <p><span class="math inline">$\frac{dy}{dx}=f(x)$</span></p>
 <p>The order of a differential equation is the number of differentials of <span class="math inline"><em>y</em></span> included. For example one with the second derivative of <span class="math inline"><em>y</em></span> is of order <span class="math inline">2</span>.</p>
@@ -8,14 +9,14 @@
 <p>An implicit function is one which is not explicit.</p>
 <p>A linear ODE is an explicit ODE where the derivative terms of <span class="math inline"><em>y</em></span> do not multiply together, that is, in the form:</p>
 <p><span class="math inline"><em>y</em><sup>(<em>n</em>)</sup> = ∑<sub><em>i</em></sub><em>a</em><sub><em>i</em></sub>(<em>x</em>)<em>y</em><sup>(<em>i</em>)</sup> + <em>r</em>(<em>x</em>)</span></p>
-<h3 id="first-order-odes">First-order ODEs</h3>
+<h4 id="first-order-odes"><span class="header-section-number">1.1.2.1</span> First-order ODEs</h4>
 <p>We have an evolution:</p>
 <p><span class="math inline">$\frac{dy}{dt}=f(t,y)$</span></p>
 <p>And a starting condition:</p>
 <p><span class="math inline"><em>y</em><sub>0</sub> = <em>f</em>(<em>t</em><sub>0</sub>)</span></p>
 <p>We now discuss various ways to solve these.</p>
-<h1 id="first-order-ordinary-differential-equations">First-order Ordinary Differential Equations</h1>
-<h2 id="ordinary-differential-equations">Ordinary differential equations</h2>
+<h2 id="first-order-ordinary-differential-equations"><span class="header-section-number">1.2</span> First-order Ordinary Differential Equations</h2>
+<h3 id="ordinary-differential-equations"><span class="header-section-number">1.2.1</span> Ordinary differential equations</h3>
 <p>An ordinary differential equation is one with only one independent variable. For example:</p>
 <p><span class="math inline">$\frac{dy}{dx}=f(x)$</span></p>
 <p>The order of a differential equation is the number of differentials of <span class="math inline"><em>y</em></span> included. For example one with the second derivative of <span class="math inline"><em>y</em></span> is of order <span class="math inline">2</span>.</p>
@@ -23,14 +24,14 @@
 <p>An implicit function is one which is not explicit.</p>
 <p>A linear ODE is an explicit ODE where the derivative terms of <span class="math inline"><em>y</em></span> do not multiply together, that is, in the form:</p>
 <p><span class="math inline"><em>y</em><sup>(<em>n</em>)</sup> = ∑<sub><em>i</em></sub><em>a</em><sub><em>i</em></sub>(<em>x</em>)<em>y</em><sup>(<em>i</em>)</sup> + <em>r</em>(<em>x</em>)</span></p>
-<h3 id="first-order-odes-1">First-order ODEs</h3>
+<h4 id="first-order-odes-1"><span class="header-section-number">1.2.1.1</span> First-order ODEs</h4>
 <p>We have an evolution:</p>
 <p><span class="math inline">$\frac{dy}{dt}=f(t,y)$</span></p>
 <p>And a starting condition:</p>
 <p><span class="math inline"><em>y</em><sub>0</sub> = <em>f</em>(<em>t</em><sub>0</sub>)</span></p>
 <p>We now discuss various ways to solve these.</p>
-<h2 id="linear-first-order-ordinary-differential-equations">Linear first-order Ordinary Differential Equations</h2>
-<h3 id="linear-odes">Linear ODEs</h3>
+<h3 id="linear-first-order-ordinary-differential-equations"><span class="header-section-number">1.2.2</span> Linear first-order Ordinary Differential Equations</h3>
+<h4 id="linear-odes"><span class="header-section-number">1.2.2.1</span> Linear ODEs</h4>
 <p>For some we can write:</p>
 <p><span class="math inline">$\frac{dy}{dt}=f(t,y)$</span></p>
 <p><span class="math inline">$\frac{dy}{dt}=q(t)-p(t)y$</span></p>
@@ -41,12 +42,12 @@
 <p><span class="math inline">$\frac{d}{dt}[\mu(t)y]=\mu (t)q(t)$</span></p>
 <p><span class="math inline"><em>μ</em>(<em>t</em>)<em>y</em> = ∫<em>μ</em>(<em>t</em>)<em>q</em>(<em>t</em>)<em>d</em><em>t</em> + <em>C</em></span></p>
 <p>In some cases, this can then be solved.</p>
-<h3 id="example">Example</h3>
+<h4 id="example"><span class="header-section-number">1.2.2.2</span> Example</h4>
 <p><span class="math inline">$\frac{\delta y}{\delta x}=cy$</span></p>
 <p><span class="math inline"><em>y</em> = <em>A</em><em>e</em><sup><em>c</em>(<em>y</em> + <em>a</em>)</sup></span></p>
 <p><span class="math inline">$\frac{\delta^2 y}{\delta x^2}=cy$</span></p>
 <p><span class="math inline">$y=Ae^{\sqrt c (y+a)}$</span></p>
-<h2 id="separable-first-order-ordinary-differential-equations">Separable first-order Ordinary Differential Equations</h2>
+<h3 id="separable-first-order-ordinary-differential-equations"><span class="header-section-number">1.2.3</span> Separable first-order Ordinary Differential Equations</h3>
 <p>For some we can write:</p>
 <p><span class="math inline">$\frac{dy}{dt}=f(t,y)$</span></p>
 <p><span class="math inline">$\frac{dy}{dt}=\frac{g(t)}{h(y)}$</span></p>
@@ -55,8 +56,8 @@
 <p><span class="math inline">$\int h(y)\frac{dy}{dt}dt=\int g(t)dt + C$</span></p>
 <p><span class="math inline">∫<em>h</em>(<em>y</em>)<em>d</em><em>y</em> = ∫<em>g</em>(<em>t</em>)<em>d</em><em>t</em> + <em>C</em></span></p>
 <p>In some cases, these functions can then be integrated and solved.</p>
-<h1 id="second-order-ordinary-differential-equations">Second-order Ordinary Differential Equations</h1>
-<h2 id="linear-second-order-ordinary-differential-equations">Linear second-order Ordinary Differential Equations</h2>
+<h2 id="second-order-ordinary-differential-equations"><span class="header-section-number">1.3</span> Second-order Ordinary Differential Equations</h2>
+<h3 id="linear-second-order-ordinary-differential-equations"><span class="header-section-number">1.3.1</span> Linear second-order Ordinary Differential Equations</h3>
 <p>These are of the form</p>
 <p><span class="math inline">$\frac{d^2y}{dt^2}+p(t)\frac{dy}{dt}+q(t)y=g(t)$</span></p>
 <p>There are two types. Homogenous equations are where <span class="math inline"><em>g</em>(<em>t</em>)=0</span>. Otherwise they are heterogenous.</p>

@@ -2,9 +2,9 @@
 import os
 import shutil
 
-###################################
-# Create tex file for each folder #
-###################################
+#################################
+# Move PDFs to be public facing #
+#################################
 
 directory_to_walk = os.path.join("built", "jade", "theory", "maths")
 
@@ -24,4 +24,6 @@ for file_name in os.listdir(directory_to_walk):
         print(file_name)
         shutil.copyfile(source, destination)
         
-
+maths_source = os.path.join("built", "jade", "theory", "maths", "maths.pdf")
+maths_destination = os.path.join("public", "theory", "maths.pdf")
+shutil.copyfile(maths_source, maths_destination)
