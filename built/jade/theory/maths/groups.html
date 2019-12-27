@@ -1,1 +1,274 @@
-
+<h1 id="introduction">Introduction</h1>
+<h2 id="abstract-algebra">Abstract algebra</h2>
+<p>Abstract algebra allows us to discuss properties of types of mathematical structures.</p>
+<p>Rather than construct a specific object, and explore its properties, we can explore the properties of an abstract structure with certain definitions. We can then apply findings from this to an any structure which meets the definition.</p>
+<h3 id="examples-of-abstract-algebra">Examples of abstract algebra</h3>
+<p>We explore:</p>
+<ul>
+<li><p>Groups</p></li>
+<li><p>Rings</p></li>
+<li><p>Fields</p></li>
+<li><p>Vector spaces</p></li>
+<li><p>Inner product spaces</p></li>
+</ul>
+<h2 id="defining-groups">Defining groups</h2>
+<h3 id="magma">Magma</h3>
+<p>A magma, or groupoid, is a set with a single binary operation.</p>
+<p>These can be defined as an ordered pair <span class="math inline">(<em>s</em>, ⊙)</span> where <span class="math inline"><em>s</em></span> is the set, and <span class="math inline">⊙</span> is the binary operation.</p>
+<p>If <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> are in <span class="math inline"><em>s</em></span>, then <span class="math inline"><em>a</em> ⊙ <em>b</em></span> is also in <span class="math inline"><em>s</em></span>.</p>
+<p>The following are magmas:</p>
+<p>Natural numbers and addition <span class="math inline"><em>n</em> × <em>n</em></span> matrices with determinants other than <span class="math inline">0</span> Natural numbers above <span class="math inline">0</span> and addition Integers and addition Rational numbers and division <span class="math inline">{ − 1, 1}</span> and multiplication</p>
+<p>The following are not magmas:</p>
+<ul>
+<li><p>Natural numbers up to <span class="math inline">10</span> and addition</p></li>
+</ul>
+<h3 id="semigroup">Semigroup</h3>
+<p>A semigroup is a magma whose binary operation is associative.</p>
+<p>The following are semigroups:</p>
+<p>Natural numbers and addition <span class="math inline"><em>n</em> × <em>n</em></span> matrices with determinants other than <span class="math inline">0</span> Natural numbers above <span class="math inline">0</span> and addition Integers and addition</p>
+<p>The following are not semigroups:</p>
+<ul>
+<li><p><span class="math inline">{ − 1, 1}</span> and multiplication</p></li>
+<li><p>Rational numbers and division</p></li>
+<li><p>Natural numbers up to <span class="math inline">10</span> and addition</p></li>
+</ul>
+<h3 id="monoid">Monoid</h3>
+<p>A monoid is a semigroup with an identity element</p>
+<p>The following are monoids:</p>
+<ul>
+<li><p>Natural numbers and addition</p></li>
+<li><p><span class="math inline"><em>n</em> × <em>n</em></span> matrices with determinants other than <span class="math inline">0</span></p></li>
+<li><p>Integers and addition</p></li>
+<li><p><span class="math inline">{ − 1, 1}</span> and multiplication</p></li>
+</ul>
+<p>The following are not monoids:</p>
+<ul>
+<li><p>Natural numbers above <span class="math inline">0</span> and addition</p></li>
+<li><p>Rational numbers and division</p></li>
+<li><p>Natural numbers up to <span class="math inline">10</span> and addition</p></li>
+</ul>
+<h3 id="group">Group</h3>
+<p>A group is a monoid where there is an inverse operation for the binary operation.</p>
+<p>The following are groups:</p>
+<p>Integers and addition <span class="math inline"><em>n</em> × <em>n</em></span> matrices with determinants other than <span class="math inline">0</span> <span class="math inline">{ − 1, 1}</span> and multiplication</p>
+<p>The following are not groups:</p>
+<p>Natural numbers above <span class="math inline">0</span> and addition Rational numbers and division Natural numbers and addition Natural numbers up to <span class="math inline">10</span> and addition</p>
+<h2 id="subgroups">Subgroups</h2>
+<p>A subgroup of a group is a subset of a group, which also forms a group with the same element.</p>
+<p>For example all even numbers are a subgroup of the addition group of integers.</p>
+<h2 id="abelian-groups">Abelian groups</h2>
+<p>A commutative group, that is where <span class="math inline"><em>a</em> ⊙ <em>b</em> = <em>b</em> ⊙ <em>a</em></span>.</p>
+<p>The following are abelian groups:</p>
+<ul>
+<li><p>Integers and addition</p></li>
+<li><p><span class="math inline">{ − 1, 1}</span> and multiplication</p></li>
+</ul>
+<p>The following are not abelian groups:</p>
+<ul>
+<li><p>Natural numbers above <span class="math inline">0</span> and addition</p></li>
+<li><p>Rational numbers and division</p></li>
+<li><p>Natural numbers and addition</p></li>
+<li><p>Natural numbers up to <span class="math inline">10</span> and addition</p></li>
+<li><p><span class="math inline"><em>n</em> × <em>n</em></span> matrices with determinants other than <span class="math inline">0</span></p></li>
+</ul>
+<h2 id="group-order">Group order</h2>
+<p>For finite groups, each element <span class="math inline"><em>e</em></span> has:</p>
+<p><span class="math inline"><em>e</em><sup><em>n</em></sup> = <em>I</em></span></p>
+<p>For some <span class="math inline"><em>n</em> ∈ ℕ</span></p>
+<p>Where <span class="math inline"><em>I</em></span> is the identity element.</p>
+<p>The order of the group is the smallest value of <span class="math inline"><em>n</em></span> such that that holds for all elements.</p>
+<p>For example in the multiplicative group <span class="math inline"><em>G</em> = { − 1, 1}</span> the order is <span class="math inline">2</span>.</p>
+<p>Or:</p>
+<p><span class="math inline">|<em>G</em>|=2</span></p>
+<p>Additionally</p>
+<p><span class="math inline">| − 1|=2</span></p>
+<p><span class="math inline">|1|=1</span></p>
+<h1 id="creating-groups">Creating groups</h1>
+<h2 id="permutations-and-the-symmetric-group">Permutations and the symmetric group</h2>
+<p>A permutation is defined as a bijection from a set to itself.</p>
+<p>For a set of size <span class="math inline"><em>n</em></span>, the number of permutations is <span class="math inline"><em>n</em>!</span>. This is because there are <span class="math inline"><em>n</em></span> possibilities for the first item, <span class="math inline"><em>n</em> − 1</span> for the second and so on.</p>
+<h3 id="the-symmetric-group">The symmetric group</h3>
+<p>The set of all permutations forms a group, the symmetric group. This forms a group because:</p>
+<ul>
+<li><p>There is an identity element</p></li>
+<li><p>Each combination of permutations is also in the group.</p></li>
+<li><p>Each permutation has an inverse in the group.</p></li>
+</ul>
+<h3 id="permutation-groups">Permutation groups</h3>
+<p>A subgroup of the symmetric group is called a permutation group.</p>
+<h2 id="morphism">Morphism</h2>
+<p>Morphisms are functions which preserve the relationships between members of a set, and specified functions.</p>
+<p>That is, if:</p>
+<p><span class="math inline"><em>a</em> ⊙ <em>b</em> = <em>c</em></span></p>
+<p>Then <span class="math inline"><em>f</em>(<em>x</em>)</span> is morphism if:</p>
+<p><span class="math inline"><em>f</em>(<em>a</em>)⊙<em>f</em>(<em>b</em>)=<em>f</em>(<em>a</em> ⊙ <em>b</em>)</span></p>
+<p>Here we discuss morphisms in the context of groups, but we can define morphisms for sets with more than one function, for example with addition and multiplication.</p>
+<p>Morphisms are also known as homomorphisms.</p>
+<p>The following are morphisms of the additive group of integers.</p>
+<p>Where we refer to <span class="math inline"><em>c</em></span>, <span class="math inline"><em>c</em> ≠ 0 ∈ 𝕀</span>.</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=0</span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em></span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>c</em><em>x</em></span></p></li>
+<li><p>Converting natural numbers to integers</p></li>
+</ul>
+<p>The following are not morphisms</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em> + 1</span></p></li>
+</ul>
+<h3 id="isomorphism">Isomorphism</h3>
+<p>An isomorphism is a morphism which has an inverse.</p>
+<p>This means the function is bijective.</p>
+<p>The following are isomorphisms:</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em></span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>c</em><em>x</em></span></p></li>
+<li><p>Converting natural numbers to integers</p></li>
+</ul>
+<p>The following are not isomorphisms</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=0</span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em> + 1</span></p></li>
+</ul>
+<h3 id="endomorphism">Endomorphism</h3>
+<p>An endomorphism is one where the domain and codomain are the same.</p>
+<p>The following are endomorphisms:</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=0</span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em></span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>c</em><em>x</em></span></p></li>
+</ul>
+<p>The following are not endomorphisms</p>
+<ul>
+<li><p>Converting natural numbers to integers</p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em> + 1</span></p></li>
+</ul>
+<h3 id="automorphism">Automorphism</h3>
+<p>An endomorphism which is also an isomorphism</p>
+<p>The following are automorphisms:</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em></span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>c</em><em>x</em></span></p></li>
+</ul>
+<p>The following are not automorphisms</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=0</span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em> + 1</span></p></li>
+<li><p>Converting natural numbers to integers</p></li>
+</ul>
+<h3 id="monomorphism">Monomorphism</h3>
+<p>A morphism which is injective. That is:</p>
+<p><span class="math inline"><em>f</em>(<em>a</em>)=<em>f</em>(<em>b</em>)→<em>a</em> = <em>b</em></span></p>
+<p>The following are monomorphisms:</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em></span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>c</em><em>x</em></span></p></li>
+<li><p>Converting natural numbers to integers</p></li>
+</ul>
+<p>The following are not monomorphisms:</p>
+<ul>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=0</span></p></li>
+<li><p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em> + 1</span></p></li>
+</ul>
+<h2 id="generating-sets">Generating sets</h2>
+<p>We can define a group through a generating set and an operation.</p>
+<p>And define the group as <span class="math inline"><em>G</em> = &lt;<em>S</em>&gt;</span></p>
+<h2 id="finite-groups">Finite groups</h2>
+<p>Consider the set of natural numbers and addition modulo 4. This forms a group containing:</p>
+<p><span class="math inline">{0, 1, 2, 3}</span></p>
+<p>This can be written as <span class="math inline"><em>Z</em><sub>4</sub></span> or more generally as <span class="math inline"><em>Z</em><sub><em>n</em></sub></span>, or <span class="math inline"><em>Z</em>/<em>n</em><em>Z</em></span>.</p>
+<h1 id="group-operations">Group operations</h1>
+<h2 id="the-group-commutator">The group commutator</h2>
+<p>The group commutator is:</p>
+<p><span class="math inline">[<em>a</em>, <em>b</em>]=<em>a</em><sup>−1</sup><em>b</em><sup>−1</sup><em>a</em><em>b</em></span></p>
+<p>If the group is abelian then <span class="math inline">[<em>a</em>, <em>b</em>]=0</span>. The group commutator is a measure of how non-abelian the group is.</p>
+<p>This has the following properties:</p>
+<p>Alternativity: <span class="math inline">[<em>A</em>, <em>A</em>]=<em>I</em></span></p>
+<h2 id="the-direct-product-of-groups">The direct product of groups</h2>
+<p>If we have two groups <span class="math inline"><em>G</em></span> and <span class="math inline"><em>H</em></span> we can form new group <span class="math inline"><em>G</em> × <em>H</em></span>.</p>
+<p>For every <span class="math inline"><em>g</em> ∈ <em>G</em></span> and <span class="math inline"><em>h</em> ∈ <em>H</em></span> there is <span class="math inline">(<em>g</em>, <em>h</em>)∈<em>G</em> × <em>H</em></span>.</p>
+<p>The binary operation we have is:</p>
+<p><span class="math inline">(<em>g</em><sub>1</sub>, <em>h</em><sub>1</sub>)(<em>g</em><sub>2</sub>, <em>h</em><sub>2</sub>)=(<em>g</em><sub>1</sub><em>g</em><sub>2</sub>, <em>h</em><sub>1</sub>, <em>h</em><sub>2</sub>)</span></p>
+<h1 id="specifc-groups">Specifc groups</h1>
+<h2 id="the-trivial-group">The trivial group</h2>
+<p>The trivial group is the group with just the identity member <span class="math inline"><em>I</em></span>.</p>
+<h2 id="the-infinite-cyclic-group-z">The infinite cyclic group (<span class="math inline"><em>Z</em></span>)</h2>
+<h3 id="the-additive-group-of-integers">The additive group of integers</h3>
+<h3 id="generating-cyclic-groups">Generating cyclic groups</h3>
+<p>We can generate a group with a single element, it is a cyclic group.</p>
+<p>For example, we can define a group <span class="math inline"><em>G</em> = &lt;1&gt;</span> which gives us the additive group of integers.</p>
+<h3 id="infinite-cyclic-groups-are-isomorphic-to-the-additive-group-of-integers">Infinite cyclic groups are isomorphic to the additive group of integers</h3>
+<p>More generally, any infinite cyclic group is isomorphic to the additive group of integers.</p>
+<p>Consider the multiplicative group of <span class="math inline">&lt;<em>i</em>&gt;</span>.</p>
+<p>This contains <span class="math inline">{1, −1, <em>i</em>, −<em>i</em>}</span>.</p>
+<p>This is also automorphic to the natural number and modulo addition group above.</p>
+<p>We can define finite cyclic groups of size <span class="math inline"><em>n</em></span> using the generating element <span class="math inline">$z^{\frac{1}{n}}$</span>. This is isomorphic to the general cyclic group <span class="math inline"><em>C</em><sub><em>n</em></sub></span>, and to <span class="math inline"><em>Z</em>/<em>n</em><em>Z</em></span>.</p>
+<h3 id="abelian-cyclic-groups">Abelian cyclic groups</h3>
+<p>Cyclic groups are abelian.</p>
+<h2 id="the-finite-cyclic-groups-c_n-or-z_n">The finite cyclic groups (<span class="math inline"><em>C</em><sub><em>n</em></sub></span> or <span class="math inline"><em>Z</em><sub><em>n</em></sub></span>)</h2>
+<h2 id="the-circle-group-t">The circle group <span class="math inline"><em>T</em></span></h2>
+<p>The circle group, <span class="math inline"><em>T</em></span>, includes all complex numbers of magnitude <span class="math inline">1</span>.</p>
+<h1 id="normal-subgroups">Normal subgroups</h1>
+<h2 id="cosets-and-normal-subgroups">Cosets and normal subgroups</h2>
+<p>A coset is defined between a group and a subgroup of the group.</p>
+<p>For a group <span class="math inline"><em>G</em></span>, and its subgroup <span class="math inline"><em>H</em></span>:</p>
+<ul>
+<li><p>The left coset is <span class="math inline">{<em>g</em><em>H</em>}</span></p></li>
+<li><p>The right coset is <span class="math inline">{<em>H</em><em>g</em>}</span></p></li>
+</ul>
+<p>For <span class="math inline">∀<em>g</em> ∈ <em>G</em></span>.</p>
+<p>For abellian groups, the left and right cosets are the same.</p>
+<p>The left and right cosets can also be the same, even if the group <span class="math inline"><em>G</em></span> is not abelian.</p>
+<h3 id="normal-subgroups-1">Normal subgroups</h3>
+<p>If the left and right cosets are the same then <span class="math inline"><em>H</em></span> is a normal subgroup.</p>
+<h3 id="cosets-divide-a-group.">Cosets divide a group.</h3>
+<p>Consider two left cosets, <span class="math inline"><em>a</em><em>H</em></span> and <span class="math inline"><em>b</em><em>H</em></span>, with a common element.</p>
+<p>This means that <span class="math inline"><em>a</em><em>h</em><sub><em>i</em></sub> = <em>b</em><em>h</em><sub><em>j</em></sub></span>.</p>
+<p>We can use this to get:</p>
+<p><span class="math inline"><em>a</em> = <em>b</em><em>h</em><sub><em>j</em></sub><em>h</em><sub><em>i</em></sub><sup>−1</sup></span></p>
+<p><span class="math inline"><em>b</em> = <em>a</em><em>h</em><sub><em>i</em></sub><em>h</em><sub><em>j</em></sub><sup>−1</sup></span></p>
+<p>We know that:</p>
+<p><span class="math inline"><em>a</em><em>h</em> ∈ <em>a</em><em>H</em></span></p>
+<p><span class="math inline"><em>b</em><em>h</em> ∈ <em>b</em><em>H</em></span></p>
+<p>So:</p>
+<p><span class="math inline"><em>b</em><em>h</em><sub><em>j</em></sub><em>h</em><sub><em>i</em></sub><sup>−1</sup><em>h</em> ∈ <em>a</em><em>H</em></span></p>
+<p><span class="math inline"><em>a</em><em>h</em><sub><em>i</em></sub><em>h</em><sub><em>j</em></sub><sup>−1</sup><em>h</em> ∈ <em>b</em><em>H</em></span></p>
+<p>And so:</p>
+<p><span class="math inline"><em>b</em><em>H</em> ⊂ <em>a</em><em>H</em></span></p>
+<p><span class="math inline"><em>a</em><em>H</em> ⊂ <em>b</em><em>H</em></span></p>
+<p>Therefore:</p>
+<p><span class="math inline"><em>a</em><em>H</em> = <em>b</em><em>H</em></span></p>
+<h3 id="example-1">Example 1</h3>
+<p>Consider the group <span class="math inline">{ − 1, 1},×</span></p>
+<p>For the subgroup <span class="math inline">{1},×</span>, the left coset is <span class="math inline">{<em>g</em><em>H</em>}={1, −1}</span>.</p>
+<p>The right coset is the same.</p>
+<h3 id="example-2">Example 2</h3>
+<p>Consider the group of integers and addition: <span class="math inline">(<em>Z</em>, +)</span></p>
+<p>For subgroup <span class="math inline">(<em>m</em><em>Z</em>, +)</span>, the left and right cosets are the same because the group is abelian.</p>
+<p>The coset of the subgroup is the subgroup multiplied by each element in <span class="math inline"><em>G</em></span>.</p>
+<p>This is <span class="math inline"><em>m</em><em>Z</em></span>, <span class="math inline"><em>m</em><em>Z</em> + 1</span>, <span class="math inline"><em>m</em><em>Z</em> + 2</span> and so on.</p>
+<p>Once we reach <span class="math inline"><em>m</em><em>Z</em> + <em>m</em></span> this has looped, and is already a coset, so we only need the sets upto <span class="math inline"><em>m</em><em>Z</em> + <em>m</em> − 1</span>.</p>
+<h2 id="quotient-groups">Quotient groups</h2>
+<p>We have a group <span class="math inline"><em>G</em></span> and a normal subgroup <span class="math inline"><em>N</em></span>.</p>
+<p>We define a quotient group from this as <span class="math inline"><em>G</em>/<em>N</em></span>. This is the set of cosets from <span class="math inline"><em>N</em></span>.</p>
+<h2 id="group-extension">Group extension</h2>
+<p>This defines a group <span class="math inline"><em>G</em></span> from a normal subgroup <span class="math inline"><em>N</em></span> and a quotient group <span class="math inline"><em>Q</em></span>.</p>
+<h1 id="theorems">Theorems</h1>
+<h2 id="cayleys-theorem">Cayley’s theorem</h2>
+<p>Cayley’s theorem states that every group <span class="math inline"><em>G</em></span> is isomorphic to a subgroup of the symmetric group acting on <span class="math inline"><em>G</em></span>.</p>
+<p>Multiplication by a member of <span class="math inline"><em>G</em></span> is a bijective function, as for each <span class="math inline"><em>g</em></span> there is also a <span class="math inline"><em>g</em><sup>−1</sup></span>.</p>
+<p>This means that multiplication of each member of <span class="math inline"><em>G</em></span> is a permutation, and so is a subset of the symmetric group on <span class="math inline"><em>G</em></span>.</p>
+<h2 id="lagranges-theorem">Lagrange’s theorem</h2>
+<p>Lagrange’s theorem states that for any finite group <span class="math inline"><em>G</em></span>, the order of every subgroup is a divisor of the order of <span class="math inline"><em>G</em></span>.</p>
+<p>Consider subset <span class="math inline"><em>H</em></span>. We know that all cosets are disjoint, and that the union of all cosets is <span class="math inline"><em>G</em></span>.</p>
+<p>As cosets are the same size, we know that:</p>
+<p><span class="math inline">|<em>G</em>|=<em>m</em>|<em>H</em>|</span>, where <span class="math inline"><em>m</em></span> is the number of cosets.</p>
+<p>This means that if a group has order <span class="math inline">10</span>, a subgroup must have order <span class="math inline">1</span>, <span class="math inline">2</span> <span class="math inline">5</span> or <span class="math inline">10</span>.</p>
+<h1 id="group-action">Group action</h1>
+<h2 id="group-action-1">Group action</h2>
+<p>We have a group <span class="math inline"><em>G</em></span> and a set <span class="math inline"><em>S</em></span>.</p>
+<p>We have a function <span class="math inline"><em>g</em>.<em>s</em></span> which maps onto <span class="math inline"><em>S</em></span> such that:</p>
+<ul>
+<li><p><span class="math inline"><em>I</em>.<em>s</em> = <em>s</em></span></p></li>
+<li><p><span class="math inline">(<em>g</em><em>h</em>).<em>s</em> = <em>g</em>(<em>h</em>.<em>s</em>)</span></p></li>
+</ul>

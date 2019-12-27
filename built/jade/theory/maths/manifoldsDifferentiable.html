@@ -1,1 +1,84 @@
-
+<h1 id="introduction">Introduction</h1>
+<h2 id="differentiable-transition-maps">Differentiable transition maps</h2>
+<h3 id="transition-map-recap">Transition map recap</h3>
+<p>Given two charts with an overlap, we have a transition mapping between the two charts of the overlap, where the mapping corresponds to a position on the manifold.</p>
+<h3 id="differentiable-transition-maps-1">Differentiable transition maps</h3>
+<p>If this mapping is differentiable, we have a differentiable manifold.</p>
+<h3 id="smooth-manifolds">Smooth manifolds</h3>
+<p>If transition maps are smooth (<span class="math inline"><em>C</em><sup>∞</sup></span>) then the manifold is smooth.</p>
+<h2 id="differentiable-and-smooth-manifolds">Differentiable and smooth manifolds</h2>
+<h1 id="tangent-space">Tangent space</h1>
+<h2 id="tangent-space-and-tangent-vectors">Tangent space and tangent vectors</h2>
+<p>Take a topological space: can all subsets in the toplogy be mapped to <span class="math inline"><em>n</em></span> dimensional space? if so, manifold</p>
+<p>For this we need openness: a graph for example isn’t open and so isn’t a manifold</p>
+<p>We also need the same number of dimensions at each point</p>
+<p>Isn’t always the case. eg two circles conneceted by a line is not a manifold. it’s 2d in circles, 1d on line (and 3d at connections)</p>
+<p>We have a homeomorphism from each point in the toplogy to an n dimensional coordinate system</p>
+<p>We also have homeomorphisms of transformation maps, between different points on the topology</p>
+<p>The vector space from the homeomorphism is tangent to the manifold at that point. the set of all tangents forms a tangent space</p>
+<p>Interior: M; boundry M Tangent on a manifold:</p>
+<p>The tangent space of manifold <span class="math inline"><em>M</em></span> at point <span class="math inline"><em>p</em></span> is denoted <span class="math inline"><em>T</em><em>M</em><sub><em>p</em></sub></span>.</p>
+<p>If we have a normal field</p>
+<p><span class="math inline"><em>v</em> = <em>v</em><sup><em>i</em></sup><em>e</em><sub><em>i</em></sub></span></p>
+<p>Then we can differentiate wrt a direction <span class="math inline"><em>x</em></span>.</p>
+<p><span class="math inline">$\dfrac{\delta }{\delta x}v=\dfrac{\delta }{\delta x}v^ie_i$</span></p>
+<p><span class="math inline">$\dfrac{\delta }{\delta x}v=e_i\dfrac{\delta v^i}{\delta x}$</span></p>
+<p>Because the basis does not change.</p>
+<p>If the basis does change we instead have:</p>
+<p><span class="math inline">$\dfrac{\delta }{\delta x}v=\dfrac{\delta }{\delta x}v^ie_i$</span></p>
+<p><span class="math inline">$\dfrac{\delta }{\delta x}v=e_i\dfrac{\delta v^i}{\delta x}+v^i\dfrac{\delta e_i }{\delta x}$</span></p>
+<p>General point. basis can vary across manifold</p>
+<p>After this basis diff</p>
+<h3 id="tangent-space-as-vector-bundle">Tangent space as vector bundle</h3>
+<h3 id="christoffel-symbols-page">Christoffel symbols (page)</h3>
+<p>Christoffel symbols are connections.</p>
+<h3 id="the-torsion-tensor-own-page">The torsion tensor (own page)</h3>
+<p>Torsion tensor is</p>
+<p><span class="math inline"><em>T</em><sub><em>j</em><em>k</em></sub><sup><em>i</em></sup> = <em>Γ</em><sub><em>j</em><em>k</em></sub><sup><em>i</em></sup> − <em>Γ</em><sub><em>k</em><em>j</em></sub><sup><em>i</em></sup></span></p>
+<p>If torsion is <span class="math inline">0</span>, then the connection is symmetric.</p>
+<h3 id="basis-of-tangent-space">Basis of tangent space</h3>
+<p>We can use as the basis for tangent space:</p>
+<p><span class="math inline">$\{\dfrac{(\delta }{\delta x^1})_p,(\dfrac{\delta }{\delta x^2})_p,...\}$</span></p>
+<p>This means we can write a tangent vector as:</p>
+<p><span class="math inline">$u=u^i(\dfrac{\delta }{\delta x^i})_p$</span></p>
+<h3 id="basis-of-contant-space">Basis of contant space</h3>
+<p>We can use as the basis for the contangent space:</p>
+<p><span class="math inline">{<em>d</em><em>x</em><sup>1</sup>, <em>d</em><em>x</em><sup>2</sup>, ...}</span></p>
+<h3 id="metric-on-the-tangent-space-to-riemann">Metric on the tangent space (to Riemann)</h3>
+<h3 id="basis-of-metric-to-riemann">Basis of metric (to Riemann)</h3>
+<p>The metric depends on the basis too:</p>
+<p><span class="math inline">$g_{ij}(p)=g((\dfrac{\delta }{\delta x^i})_p,(\dfrac{\delta }{\delta x^j})_p)$</span></p>
+<p>The metric on two tangent vectors is defined on the components.</p>
+<p><span class="math inline"><em>g</em> = <em>g</em><sub><em>i</em><em>j</em></sub>(<em>p</em>)<em>u</em><sup><em>i</em></sup><em>v</em><sup><em>j</em></sup></span></p>
+<h2 id="cotangent-space-and-cotangent-vectors">Cotangent space and cotangent vectors</h2>
+<h1 id="connections">Connections</h1>
+<h2 id="transport">Transport</h2>
+<h2 id="covariant-derivative">Covariant derivative</h2>
+<p>Essentially as we move across path, we are changing the basis.</p>
+<p>We can look at how basis vector change as we translate</p>
+<p>We can define as basis as:</p>
+<p><span class="math inline">$e_i=\frac{\delta x}{\delta x_i}$</span></p>
+<p>How to measure transport</p>
+<p>If we take a vector and move it around a curved surface and return it to the same point, it may not face the same way</p>
+<p>Eg if you’re on equator, move east, north, south to equator, you’ll face diffrent direction</p>
+<p>This is true on smaller movements of a curved surface</p>
+<p>We can use this to measure curvature of a manifold without coordinates</p>
+<h2 id="new">New</h2>
+<p>covariant derivative. how does change in field compare to parallel transport from curent position?</p>
+<p>_v (X)=_<span>t0</span></p>
+<p>We have point <span class="math inline"><em>p</em></span>. We can compare how field in tangent space varies in direction of <span class="math inline"><em>v</em></span>.</p>
+<p>we don’t define basis as each point, but rather how basis changes as you move along a curve</p>
+<h2 id="affine-connections">Affine connections</h2>
+<p>If we have a tangent vector at one point of the manifold, we can map it to a tangent vector at a nearby point on the manifold.</p>
+<p>We can use chain rule. so we can have coordinate maps where there is no overlap.</p>
+<h3 id="smooth-connections">Smooth connections</h3>
+<h3 id="affine-connection">Affine connection</h3>
+<p>We have a vector in a tangent space</p>
+<p>We have a curve on the manifold from the start point</p>
+<p>As we “roll” the tangent, there is a unique vector in each new tangent, determined by transition map</p>
+<p>These are affine transformations</p>
+<p>Given two points, what path? what transfomration? if curuved then different paths will given different transformation.</p>
+<h2 id="parallel-transport">Parallel transport</h2>
+<p>Move and therefore change basis, but components are the same.</p>
+<h1 id="section"></h1>
+<h2 id="orientability-of-surfaces">Orientability of surfaces</h2>

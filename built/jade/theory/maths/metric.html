@@ -1,1 +1,67 @@
-
+<h1 id="linear-metrics">Linear metrics</h1>
+<h2 id="metrics">Metrics</h2>
+<p>We defined a norm as:</p>
+<p><span class="math inline">||<em>v</em>|| = <em>v</em><sup><em>T</em></sup><em>M</em><em>v</em></span></p>
+<p>A metric is the distance between two vectors.</p>
+<p><span class="math inline"><em>d</em>(<em>u</em>, <em>v</em>)=||<em>u</em> − <em>v</em>|| = (<em>u</em> − <em>v</em>)<sup><em>T</em></sup><em>M</em>(<em>u</em> − <em>v</em>)</span></p>
+<h3 id="metric-space">Metric space</h3>
+<p>A set with a metric is a metric space.</p>
+<h2 id="inducing-a-topology">Inducing a topology</h2>
+<p>Metric spaces can be used to induce a topology.</p>
+<h2 id="translation-symmetry">Translation symmetry</h2>
+<p>The distance between two vectors is:</p>
+<p><span class="math inline">(<em>v</em> − <em>w</em>)<sup><em>T</em></sup><em>M</em>(<em>v</em> − <em>w</em>)</span></p>
+<p>So what operations can we do now?</p>
+<p>As before, we can do the transformations which preserve <span class="math inline"><em>u</em><sup><em>T</em></sup><em>M</em><em>v</em></span>, such as the orthogonal group.</p>
+<p>But we can also do other translations</p>
+<p>(v-w)TM(v-w)</p>
+<p>v^TMv+w^TMw-v^TMw-w^TMv</p>
+<p>so symmetry is now O(3,1) and affine translations</p>
+<h3 id="translation-matrix">Translation matrix</h3>
+<p>[[1,x][0, 1] ] moves vector by x</p>
+<h1 id="specific-groups">Specific groups</h1>
+<h2 id="the-affine-group">The affine group</h2>
+<h2 id="the-euclidian-group">The Euclidian group</h2>
+<h2 id="the-galilean-group">The Galilean group</h2>
+<h2 id="the-poincaré-group">The Poincaré group</h2>
+<h1 id="non-linear-norms">Non-linear norms</h1>
+<h2 id="l_p-norms-p-norms"><span class="math inline"><em>L</em><sub><em>p</em></sub></span> norms (<span class="math inline"><em>p</em></span>-norms)</h2>
+<h3 id="lp-norm"><span class="math inline"><em>L</em><sup><em>P</em></sup></span> norm</h3>
+<p>This generalises the Euclidian norm.</p>
+<p><span class="math inline">$||x||_p=(\sum_{i=1}^{n}|x|^p_i)^{1/p}$</span></p>
+<p>This can defined for different values of <span class="math inline"><em>p</em></span>. Note that the absolute value of each element in the vector is used.</p>
+<p>Note also that:</p>
+<p><span class="math inline">||<em>x</em>||<sub>2</sub></span></p>
+<p>Is the Euclidian norm.</p>
+<h3 id="taxicab-norm">Taxicab norm</h3>
+<p>This is the <span class="math inline"><em>L</em><sup>1</sup></span> norm. That is:</p>
+<p><span class="math inline">$||x||_1=\sum_{i=1}^{n}|x|_i$</span></p>
+<h3 id="angles">Angles</h3>
+<h3 id="cauchy-schwarz">Cauchy-Schwarz</h3>
+<h1 id="to-linear-forms">To linear forms</h1>
+<h2 id="norms">Norms</h2>
+<p>We can use norms to denote the “length” of a single vector.</p>
+<p><span class="math inline">$||v||=\sqrt {\langle v, v\rangle }$</span></p>
+<p><span class="math inline">$||v||=\sqrt {v^*Mv}$</span></p>
+<h3 id="euclidian-norm">Euclidian norm</h3>
+<p>If <span class="math inline"><em>M</em> = <em>I</em></span> we have the Euclidian norm.</p>
+<p><span class="math inline">$||v||=\sqrt{v^*v}$</span></p>
+<p>If we are using the real field this is:</p>
+<p><span class="math inline">$||v||=\sqrt{\sum_{i=1}^{n}v^2_i}$</span></p>
+<h3 id="pythagoras-theorem">Pythagoras’ theorem</h3>
+<p>If <span class="math inline"><em>n</em> = 2</span> we have in the real field we have:</p>
+<p><span class="math inline">$||v||=\sqrt{v_1^2+v_2^2}$</span></p>
+<p>We call the two inputs <span class="math inline"><em>x</em></span> and <span class="math inline"><em>y</em></span>, and the length <span class="math inline"><em>z</em></span>.</p>
+<p><span class="math inline">$z=\sqrt {x^2+y^2}$</span></p>
+<p><span class="math inline"><em>z</em><sup>2</sup> = <em>x</em><sup>2</sup> + <em>y</em><sup>2</sup></span></p>
+<h2 id="angles-1">Angles</h2>
+<h3 id="recap-cauchy-schwarz-inequality">Recap: Cauchy-Schwarz inequality</h3>
+<p>This states that:</p>
+<p><span class="math inline">$|\langle u,v\rangle |^2 \le \langle u, u\rangle \dot \langle v, v\rangle $</span></p>
+<p>Or:</p>
+<p><span class="math inline">$\langle v,u\rangle\langle u,v\rangle \le \langle u, u\rangle \dot \langle v, v\rangle $</span></p>
+<h3 id="introduction">Introduction</h3>
+<p><span class="math inline">$\langle v,u\rangle\langle u,v\rangle \le \langle u, u\rangle \dot \langle v, v\rangle $</span></p>
+<p><span class="math inline">$\dfrac{\langle v,u\rangle\langle u,v\rangle}{||u||.||v||} \le ||u||.||v||$</span></p>
+<p><span class="math inline">$\dfrac{||u||.||v||}{\langle v,u\rangle} \ge \dfrac{\langle u,v\rangle}{||u||.||v||}$</span></p>
+<p><span class="math inline">$\cos (\theta )=\dfrac{\langle u,v\rangle }{||u||.||v||}$</span></p>

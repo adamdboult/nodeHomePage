@@ -1,1 +1,346 @@
-
+<h1 id="endomorphisms-of-vector-spaces">Endomorphisms of vector spaces</h1>
+<h2 id="endomorphisms">Endomorphisms</h2>
+<p>An endomorphism maps a vector space onto itself.</p>
+<p><span class="math inline"><em>e</em><em>n</em><em>d</em>(<em>V</em>)=hom(<em>V</em>, <em>V</em>)</span></p>
+<h2 id="endomorphisms-form-a-vector-space">Endomorphisms form a vector space</h2>
+<p>An endomorphism maps a vector space onto itself.</p>
+<p><span class="math inline"><em>e</em><em>n</em><em>d</em>(<em>V</em>)=hom(<em>V</em>, <em>V</em>)</span></p>
+<p>Need to show that endomorphism is a vector space</p>
+<p>Essentially</p>
+<p><span class="math inline"><em>v</em> ∈ <em>V</em></span></p>
+<p>fF</p>
+<p><span class="math inline"><em>a</em><em>v</em> = <em>f</em></span></p>
+<p><span class="math inline"><em>b</em><em>v</em> = <em>g</em></span></p>
+<p><span class="math inline">(<em>a</em> ⊕ <em>b</em>)<em>v</em> = <em>f</em> + <em>g</em></span></p>
+<p><span class="math inline">(<em>a</em> ⊕ <em>b</em>)<em>v</em> = <em>a</em><em>v</em> + <em>b</em><em>v</em></span></p>
+<p>so there is some operation we can do on two members of endo</p>
+<p>linear in addition. That is, if we have two dual “things”, we can define the addition of functions as the operation which results int he outputs being added.</p>
+<p>what about linear in scalar? same approach.</p>
+<p>Well we define</p>
+<p><span class="math inline"><em>c</em> ⊙ <em>a</em>)=<em>c</em><em>a</em><em>v</em></span></p>
+<p>There is a unique endomorphism which results in two other endomorphisms being added together. define this as addition</p>
+<h2 id="dimension-of-endomorphisms">Dimension of endomorphisms</h2>
+<p><span class="math inline">dim(<em>e</em><em>n</em><em>d</em>(<em>V</em>)) = (dim <em>V</em>)<sup>2</sup></span></p>
+<h2 id="basis-of-endomorphisms">Basis of endomorphisms</h2>
+<h2 id="projections">Projections</h2>
+<p>A projection is a linear map which if applied again returns the original result.</p>
+<p>A projection can drop a dimension for example.</p>
+<h2 id="kernels-and-images">Kernels and images</h2>
+<p>The kernel of a linear operator is the set of vectors such that:</p>
+<p><span class="math inline"><em>M</em><em>v</em> = 0</span></p>
+<p>The kernel is also called the nullspace.</p>
+<p>This can be shown as <span class="math inline">ker(<em>M</em>)</span></p>
+<p>The image of a linear operator is the set of vectors <span class="math inline"><em>w</em></span> such that:</p>
+<p><span class="math inline"><em>M</em><em>v</em> = <em>w</em></span>.</p>
+<p>This can be shown as <span class="math inline">ℑ(<em>M</em>)</span></p>
+<p>We also know that:</p>
+<p><span class="math inline"><em>s</em><em>p</em><em>a</em><em>n</em>(<em>M</em>)=ker(<em>M</em>)+ℑ(<em>M</em>)</span></p>
+<h1 id="representing-endomorphisms-with-matrices">Representing endomorphisms with matrices</h1>
+<h2 id="matrix-representation">Matrix representation</h2>
+<h3 id="representing-linear-maps-as-matrices">Representing linear maps as matrices</h3>
+<p>We previously discsussed morphisms on vector spaces. We can write these as matrices.</p>
+<p>Matrices represents transformations of vector spaces</p>
+<h3 id="representing-vectors-as-matrices">Representing vectors as matrices</h3>
+<p>We can represent vectors as row or column matrices.</p>
+<p><span class="math inline">$v=\begin{bmatrix}a_{1} &amp; a_{2}&amp;...&amp;a_{n}\end{bmatrix}$</span></p>
+<p><span class="math inline">$v=\begin{bmatrix}a_{1}\\a_{2}\\...\\a_{m}\end{bmatrix}$</span></p>
+<h2 id="commutation">Commutation</h2>
+<p>We define a function, the commuter, between two objects <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> as:</p>
+<p><span class="math inline">[<em>a</em>, <em>b</em>]=<em>a</em><em>b</em> − <em>b</em><em>a</em></span></p>
+<p>For numbers, <span class="math inline"><em>a</em><em>b</em> − <em>b</em><em>a</em> = 0</span>, however for matrices this is not generally true.</p>
+<h2 id="commutators-and-eigenvectors">Commutators and eigenvectors</h2>
+<p>Consider two matrices which share an eigenvector <span class="math inline"><em>v</em></span>.</p>
+<p><span class="math inline"><em>A</em><em>v</em> = <em>λ</em><sub><em>A</em></sub><em>v</em></span></p>
+<p><span class="math inline"><em>B</em><em>v</em> = <em>λ</em><sub><em>B</em></sub><em>v</em></span></p>
+<p>Now consider:</p>
+<p><span class="math inline"><em>A</em><em>B</em><em>v</em> = <em>A</em><em>λ</em><sub><em>B</em></sub><em>v</em></span></p>
+<p><span class="math inline"><em>A</em><em>B</em><em>v</em> = <em>λ</em><sub><em>A</em></sub><em>λ</em><sub><em>B</em></sub><em>v</em></span></p>
+<p><span class="math inline"><em>B</em><em>A</em><em>v</em> = <em>λ</em><sub><em>A</em></sub><em>λ</em><sub><em>B</em></sub><em>v</em></span></p>
+<p>If the matrices share all the same eigenvectors, then the matrices commute, and <span class="math inline"><em>A</em><em>B</em> = <em>B</em><em>A</em></span>.</p>
+<h2 id="identity-matrix-and-the-kronecker-delta">Identity matrix and the Kronecker delta</h2>
+<h2 id="matrix-additon-and-multiplication">Matrix additon and multiplication</h2>
+<h3 id="matrix-multiplication">Matrix multiplication</h3>
+<p><span class="math inline"><em>A</em> = <em>A</em><sup><em>m</em><em>n</em></sup></span></p>
+<p><span class="math inline"><em>B</em> = <em>B</em><sup><em>n</em><em>o</em></sup></span></p>
+<p><span class="math inline"><em>C</em> = <em>C</em><sup><em>m</em><em>o</em></sup> = <em>A</em>.<em>B</em></span></p>
+<p><span class="math inline">$c_{ij}=\sum_{r=1}^na_{ir}b_{rj}$</span></p>
+<p>Matrix multiplication depends on the order. Unlike for real numbers,</p>
+<p><span class="math inline"><em>A</em><em>B</em> ≠ <em>B</em><em>A</em></span></p>
+<p>Matrix multiplication is not defined unless the condition above on dimensions is met.</p>
+<p>A matrix multiplied by the identity matrix returns the original matrix.</p>
+<p>For matrix <span class="math inline"><em>M</em> = <em>M</em><sup><em>m</em><em>n</em></sup></span></p>
+<p><span class="math inline"><em>M</em> = <em>M</em><em>I</em><sup><em>m</em></sup> = <em>I</em><sup><em>n</em></sup><em>M</em></span></p>
+<h3 id="matrix-addition">Matrix addition</h3>
+<p><span class="math inline">2</span> matricies of the same size, that is with idental dimensions, can be added together.</p>
+<p>If we have <span class="math inline">2</span> matrices <span class="math inline"><em>A</em><sup><em>m</em><em>n</em></sup></span> and <span class="math inline"><em>B</em><sup><em>m</em><em>n</em></sup></span></p>
+<p><span class="math inline"><em>C</em> = <em>A</em> + <em>B</em></span></p>
+<p><span class="math inline"><em>c</em><sub><em>i</em><em>j</em></sub> = <em>a</em><sub><em>i</em><em>j</em></sub> + <em>b</em><sub><em>i</em><em>j</em></sub></span></p>
+<p>An empty matrix with <span class="math inline">0</span>s of the same size as the other matrix is the identity matrix for addition.</p>
+<h3 id="scalar-multiplication">Scalar multiplication</h3>
+<p>A matrix can be multiplied by a scalar. Every element in the matrix is multiplied by this.</p>
+<p><span class="math inline"><em>B</em> = <em>c</em><em>A</em></span></p>
+<p><span class="math inline"><em>b</em><sub><em>i</em><em>j</em></sub> = <em>c</em><em>a</em><sub><em>i</em><em>j</em></sub></span></p>
+<p>The scalar <span class="math inline">1</span> is the identity scalar.</p>
+<h2 id="basis-of-an-endomorphism">Basis of an endomorphism</h2>
+<h2 id="changing-the-basis">Changing the basis</h2>
+<p>For any two bases, there is a unique linear mapping from of the element vectors to the other.</p>
+<h2 id="transposition-and-conjugation">Transposition and conjugation</h2>
+<h3 id="transposition">Transposition</h3>
+<p>A matrix of dimensions <span class="math inline"><em>m</em> * <em>n</em></span> can be transformed into a matrix <span class="math inline"><em>n</em> * <em>m</em></span> by transposition.</p>
+<p><span class="math inline"><em>B</em> = <em>A</em><sup><em>T</em></sup></span></p>
+<p><span class="math inline"><em>b</em><sub><em>i</em><em>j</em></sub> = <em>a</em><em>j</em><em>i</em></span></p>
+<h3 id="transpose-rules">Transpose rules</h3>
+<p><span class="math inline">(<em>M</em><sup><em>T</em></sup>)<sup><em>T</em></sup> = <em>M</em></span></p>
+<p><span class="math inline">(<em>A</em><em>B</em>)<sup><em>T</em></sup> = <em>B</em><sup><em>T</em></sup><em>A</em><sup><em>T</em></sup></span></p>
+<p><span class="math inline">(<em>A</em> + <em>B</em>)<sup><em>T</em></sup> = <em>A</em><sup><em>T</em></sup> + <em>B</em><sup><em>T</em></sup></span></p>
+<p><span class="math inline">(<em>z</em><em>M</em>)<sup><em>T</em></sup> = <em>z</em><em>M</em><sup><em>T</em></sup></span></p>
+<h3 id="conjugation">Conjugation</h3>
+<p>With conjugation we take the complex conjugate of each element.</p>
+<p><span class="math inline">$B=\overline A$</span></p>
+<p><span class="math inline">$b_{ij}=\overline a_{ij}$</span></p>
+<h3 id="conjugation-rules">Conjugation rules</h3>
+<p><span class="math inline">$\overline {(\overline A)}=A$</span></p>
+<p><span class="math inline">$\overline {(AB)}=(\overline A)( \overline B)$</span></p>
+<p><span class="math inline">$\overline {(A+B)}=\overline A+\overline B$</span></p>
+<p><span class="math inline">$\overline {(zM)}=\overline z \overline M$</span></p>
+<h3 id="conjugate-transposition">Conjugate transposition</h3>
+<p>Like transposition, but with conjucate.</p>
+<p><span class="math inline"><em>B</em> = <em>A</em><sup>*</sup></span></p>
+<p><span class="math inline">$b_{ij}=\bar{a_{ji}}$</span></p>
+<p>Alternatively, and particularly in physics, the following symbol is often used instead.</p>
+<p><span class="math inline">(<em>A</em><sup>*</sup>)<sup><em>T</em></sup> = <em>A</em><sup>†</sup></span></p>
+<h2 id="matrix-rank">Matrix rank</h2>
+<h3 id="rank-function">Rank function</h3>
+<p>The rank of a matrix is the dimension of the span of its component columns.</p>
+<p><span class="math inline"><em>r</em><em>a</em><em>n</em><em>k</em>(<em>M</em>)=<em>s</em><em>p</em><em>a</em><em>n</em>(<em>m</em><sub>1</sub>, <em>m</em><sub>2</sub>, ..., <em>m</em><sub><em>n</em></sub>)</span></p>
+<h3 id="column-and-row-span">Column and row span</h3>
+<p>The span of the rows is the same as the span of the columns.</p>
+<h2 id="types-of-matrices">Types of matrices</h2>
+<h3 id="empty-matrix">Empty matrix</h3>
+<p>A matrix where every element is <span class="math inline">0</span>. There is one for each dimension of matrix.</p>
+<p><span class="math inline">$A=\begin{bmatrix}0&amp; 0&amp;...&amp;0\\0 &amp; 0&amp;...&amp;0\\...&amp;...&amp;...&amp;...\\0&amp;0&amp;...&amp;0\end{bmatrix}$</span></p>
+<h2 id="triangular-matrix">Triangular matrix</h2>
+<p>A matrix where <span class="math inline"><em>a</em><sub><em>i</em><em>j</em></sub> = 0</span> where <span class="math inline"><em>i</em> &lt; <em>j</em></span> is upper triangular.</p>
+<p>A matrix where <span class="math inline"><em>a</em><sub><em>i</em><em>j</em></sub> = 0</span> where <span class="math inline"><em>i</em> &gt; <em>j</em></span> is lower triangular.</p>
+<p>A matrix which is either upper or lower triangular is a triangular matrix.</p>
+<h2 id="symmetric-matrices">Symmetric matrices</h2>
+<p>All symmetric matrices are square.</p>
+<p>The identity matrix is an example.</p>
+<p>A matrix where <span class="math inline"><em>a</em><sub><em>i</em><em>j</em></sub> = <em>a</em><sub><em>j</em><em>i</em></sub></span> is symmetric.</p>
+<h2 id="diagonal-matrix">Diagonal matrix</h2>
+<p>A matrix where <span class="math inline"><em>a</em><sub><em>i</em></sub><em>j</em> = 0</span> where <span class="math inline"><em>i</em> ≠ <em>j</em></span> is diagonal.</p>
+<p>All diagonal matrices are symmetric.</p>
+<p>The identity matrix is an example.</p>
+<h1 id="automorphisms-of-vector-spaces">Automorphisms of vector spaces</h1>
+<h2 id="inverse-matrices">Inverse matrices</h2>
+<p>An invertible matrix implies that if the matrix is multiplied by another matrix, the original matrix can be recovered.</p>
+<p>That is, if we have matrix <span class="math inline"><em>A</em></span>, there exists matrix <span class="math inline"><em>A</em><sup>−1</sup></span> such that <span class="math inline"><em>A</em><em>A</em><sup>−1</sup> = <em>I</em></span>.</p>
+<p>Consider a linear map on a vector space.</p>
+<p><span class="math inline"><em>A</em><em>x</em> = <em>y</em></span></p>
+<p>If <span class="math inline"><em>A</em></span> is invertible we can have:</p>
+<p><span class="math inline"><em>A</em><sup>−1</sup><em>A</em><em>x</em> = <em>A</em><sup>−1</sup><em>y</em></span></p>
+<p><span class="math inline"><em>x</em> = <em>A</em><sup>−1</sup><em>y</em></span></p>
+<p>If we set <span class="math inline"><em>y</em> = <strong>0</strong></span> then:</p>
+<p><span class="math inline"><em>x</em> = <strong>0</strong></span></p>
+<p>So if there is a non-zero vector <span class="math inline"><em>x</em></span> such that:</p>
+<p><span class="math inline"><em>A</em><em>x</em> = <strong>0</strong></span> then <span class="math inline"><em>A</em></span> is not invertible.</p>
+<h2 id="left-and-right-inverses">Left and right inverses</h2>
+<p>That is, for all matrices <span class="math inline"><em>A</em></span>, the left and right inverses of <span class="math inline"><em>B</em></span>, <span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup></span> and <span class="math inline"><em>B</em><sub><em>R</em></sub><sup>−1</sup></span>, are defined such that:</p>
+<p><span class="math inline"><em>A</em>(<em>B</em><em>B</em><sub><em>R</em></sub><sup>−1</sup>)=<em>A</em></span></p>
+<p><span class="math inline"><em>A</em>(<em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em>)=<em>A</em></span></p>
+<p>Left and right inversions are equal</p>
+<p>Note that if the left inverse exists then:</p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em> = <em>I</em></span></p>
+<p>And if the right inverse exists:</p>
+<p><span class="math inline"><em>B</em><em>B</em><sub><em>R</em></sub><sup>−1</sup> = <em>I</em></span></p>
+<p>Let’s take the first:</p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em> = <em>I</em></span></p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em><em>B</em><sub><em>L</em></sub><sup>−1</sup> = <em>B</em><sub><em>L</em></sub><sup>−1</sup></span></p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup><em>B</em><em>B</em><sub><em>L</em></sub><sup>−1</sup> − <em>B</em><sub><em>L</em></sub><sup>−1</sup> = 0</span></p>
+<p><span class="math inline"><em>B</em><sub><em>L</em></sub><sup>−1</sup>(<em>B</em><em>B</em><sub><em>L</em></sub><sup>−1</sup> − <em>I</em>)=0</span></p>
+<h2 id="inversion-of-products">Inversion of products</h2>
+<p><span class="math inline">(<em>A</em><em>B</em>)(<em>A</em><em>B</em>)<sup>−1</sup> = <em>I</em></span></p>
+<p><span class="math inline"><em>A</em><sup>−1</sup><em>A</em><em>B</em>(<em>A</em><em>B</em>)<sup>−1</sup> = <em>A</em><sup>−1</sup></span></p>
+<p><span class="math inline"><em>B</em><sup>−1</sup><em>B</em>(<em>A</em><em>B</em>)<sup>−1</sup> = <em>B</em><sup>−1</sup><em>A</em><sup>−1</sup></span></p>
+<p><span class="math inline">(<em>A</em><em>B</em>)<sup>−1</sup> = <em>B</em><sup>−1</sup><em>A</em><sup>−1</sup></span></p>
+<h2 id="inversion-of-a-diagonal-matrix">Inversion of a diagonal matrix</h2>
+<p><span class="math inline"><em>D</em><em>D</em><sup>−1</sup> = <em>I</em></span></p>
+<p><span class="math inline"><em>D</em><sub><em>i</em><em>i</em></sub><em>D</em><sub><em>i</em><em>i</em></sub><sup>−1</sup> = 1</span></p>
+<p><span class="math inline">$D_{ii}^{-1}=\frac{1}{D_{ii}}$</span></p>
+<h2 id="degenerate-singular-matrices">Degenerate (singular) matrices</h2>
+<h2 id="elementary-row-operations">Elementary row operations</h2>
+<p>Some operations to a matrix can be reversed to arrive at the original matrix. Trivially, multiplying by the identity matrix is reversible.</p>
+<p>Similarly, some operations are not reversible. Such as multiplying by the empty matrix.</p>
+<p>All matrix operations which can be reversed are combinations of <span class="math inline">3</span> elementary row operations. These are: Swapping rows</p>
+<p><span class="math inline">$T_{12}=\begin{bmatrix}0&amp; 1&amp;...&amp;0\\1 &amp; 0&amp;...&amp;0\\...&amp;...&amp;...&amp;...\\0&amp;0&amp;...&amp;1\end{bmatrix}$</span></p>
+<p>Multiplying rows by a vector</p>
+<p><span class="math inline">$D_2(m)=\begin{bmatrix}1&amp; 0&amp;...&amp;0\\0 &amp; m&amp;...&amp;0\\...&amp;...&amp;...&amp;...\\0&amp;0&amp;...&amp;1\end{bmatrix}$</span></p>
+<p>Adding rows to other rows</p>
+<p><span class="math inline">$L_{12}(m)=\begin{bmatrix}1&amp; 0&amp;...&amp;0\\m &amp; 1&amp;...&amp;0\\...&amp;...&amp;...&amp;...\\0&amp;0&amp;...&amp;1\end{bmatrix}$</span></p>
+<h2 id="gaussian-elimination">Gaussian elimination</h2>
+<h3 id="simultaneous-equations">Simultaneous equations</h3>
+<p>Matricies can be used to solve simultaneous equations. Condsider the following set of equations.</p>
+<ul>
+<li><p><span class="math inline">2<em>x</em> + <em>y</em> − <em>z</em> = 8</span></p></li>
+<li><p><span class="math inline">−3<em>x</em> − <em>y</em> + 2<em>z</em> = −11</span></p></li>
+<li><p><span class="math inline">−2<em>x</em> + <em>y</em> + 2<em>z</em> = −3</span></p></li>
+</ul>
+<p>We can write this in matrix form.</p>
+<p><span class="math inline"><em>A</em><em>x</em> = <em>y</em></span></p>
+<p><span class="math inline">$A=\begin{bmatrix}2 &amp; 1&amp;-1\\-3 &amp; -1&amp;2\\-2&amp;1&amp;2\end{bmatrix}$</span></p>
+<p><span class="math inline">$x=\begin{bmatrix}x \\y \\z\end{bmatrix}$</span></p>
+<p><span class="math inline">$y=\begin{bmatrix}8 \\-11 \\-3\end{bmatrix}$</span></p>
+<h3 id="augmented-matrix">Augmented matrix</h3>
+<p>Consider a form for summarising these equations. This is the augmented matrix.</p>
+<p><span class="math inline">$(A|y)=\begin{bmatrix}2 &amp; 1&amp;-1&amp;|&amp;-8\\-3 &amp; -1&amp;2&amp;|&amp;-11\\-2&amp;1&amp;2&amp;|&amp;-3\end{bmatrix}$</span></p>
+<p>We can take this and recovery our original <span class="math inline"><em>A</em></span> and <span class="math inline"><em>y</em></span>.</p>
+<p>However we can also do things to this augmented matrix which preserve solutions to the set of equations. These are:</p>
+<p>Undertaking combinations of these can make it easier to solve the equation. In particular, if we can arrive at the form:</p>
+<p><span class="math inline">$(A|y)=\begin{bmatrix}1 &amp; 0&amp;0&amp;|&amp;a\\0 &amp; 1&amp;0&amp;|&amp;b\\0&amp;0&amp;1&amp;|&amp;c\end{bmatrix}$</span></p>
+<p>The solutions for <span class="math inline"><em>x</em>, <em>y</em>, <em>z</em></span> are <span class="math inline"><em>a</em>, <em>b</em>, <em>c</em></span>.</p>
+<h3 id="echeleon-triangular-form">Echeleon / triangular form</h3>
+<p>We first aim for:</p>
+<p><span class="math inline">$(A|y)=\begin{bmatrix}a_{11} &amp; a_{12}&amp;a_{13}&amp;|&amp;a\\0 &amp; a_{22}&amp;a_{23}&amp;|&amp;b\\0&amp;0&amp;a_{33}&amp;|&amp;c\end{bmatrix}$</span></p>
+<p>If this cannot be reached there is no single solution. There may be infinite or no solutions.</p>
+<h3 id="solving">Solving</h3>
+<p>Once we have the triangular form, we can easily solve.</p>
+<p><span class="math inline">$(A|y)=\begin{bmatrix}a_{11} &amp; a_{12}&amp;a_{13}&amp;|&amp;a\\0 &amp; a_{22}&amp;a_{23}&amp;|&amp;b\\0&amp;0&amp;a_{33}&amp;|&amp;c\end{bmatrix}$</span></p>
+<p><span class="math inline">$(A|y)=\begin{bmatrix}1 &amp; 0&amp;0&amp;|&amp;a\\0 &amp; 1&amp;0&amp;|&amp;b\\0&amp;0&amp;1&amp;|&amp;c\end{bmatrix}$</span></p>
+<p>This process is back substitution (or forward substitution if the matrix is triangular the other way).</p>
+<h3 id="matrix-inversion">Matrix inversion</h3>
+<p>We can think of the inverse of a matrix as one which which takes a series of reverible operations and does these to a matrix then arriving at the identity matrix.</p>
+<p>That is, only the three elementary row operations, and combinations of them, can transform a matrix in a way in which it can be reversed. As such All reversible matricies are combinations of the identity matrix and a series of elementary row operations. The inverse matrix is then those series of row operations, in reverse.</p>
+<p>We can find identify an inversion by undertaking gaussian elimination. Each step done on the matrix is done to the identify matrix, reversing the process. The end result is the inverted matrix.</p>
+<p>Instead of:</p>
+<p><span class="math inline">$(A|y)=\begin{bmatrix}2 &amp; 1&amp;-1&amp;|&amp;-8\\-3 &amp; -1&amp;2&amp;|&amp;-11\\-2&amp;1&amp;2&amp;|&amp;-3\end{bmatrix}$</span></p>
+<p>Take:</p>
+<p><span class="math inline">$(A|I)=\begin{bmatrix}2 &amp; 1&amp;-1&amp;|&amp;1&amp;0&amp;0\\-3 &amp; -1&amp;2&amp;|&amp;0&amp;1&amp;0\\-2&amp;1&amp;2&amp;|&amp;0&amp;0&amp;1\end{bmatrix}$</span></p>
+<p>When we solve this we get:</p>
+<p><span class="math inline">$(I|A^{-1})=\begin{bmatrix}1 &amp; 0&amp;0&amp;|&amp;\frac{3}{4}&amp;\frac{1}{2}&amp;\frac{1}{4}\\0&amp; 1&amp;0&amp;|&amp;\frac{1}{2}&amp;1&amp;\frac{1}{2}\\0&amp;0&amp;1&amp;|&amp;\frac{1}{4}&amp;\frac{1}{2}&amp;\frac{3}{4}\end{bmatrix}$</span></p>
+<h1 id="eigenvalues-and-eigenvectors">Eigenvalues and eigenvectors</h1>
+<h2 id="eigenvalues-and-eigenvectors-1">Eigenvalues and eigenvectors</h2>
+<p>Which vectors remain unchanged in direction after a transformation?</p>
+<p>That is, for a matrix <span class="math inline"><em>A</em></span>, what vectors <span class="math inline"><em>v</em></span> are equal to scalar multiplication by <span class="math inline"><em>λ</em></span> following the operation of the matrix.</p>
+<p><span class="math inline"><em>A</em><em>v</em> = <em>λ</em><em>v</em></span></p>
+<h2 id="spectrum">Spectrum</h2>
+<p>The spectrum of a matrix is the set of its eigenvalues.</p>
+<h2 id="eigenvectors-as-a-basis">Eigenvectors as a basis</h2>
+<p>If eigen vectors space space, we can write</p>
+<p><span class="math inline"><em>v</em> = ∑<sub><em>i</em></sub><em>α</em><sub><em>i</em></sub>|<em>λ</em><sub><em>i</em></sub>⟩</span></p>
+<p>Under what circumstances do they span the entirity?</p>
+<h2 id="calculating-eigenvalues-and-eigenvectors-using-the-characteristic-polynomial">Calculating eigenvalues and eigenvectors using the characteristic polynomial</h2>
+<p>The characteristic polynomial of a matrix is a polynomial whose roots are the eigenvalues of the matrix.</p>
+<p>We know from the definition of eigenvalues and eigenvectors that:</p>
+<p><span class="math inline"><em>A</em><em>v</em> = <em>λ</em><em>v</em></span></p>
+<p>Note that</p>
+<p><span class="math inline"><em>A</em><em>v</em> − <em>λ</em><em>v</em> = 0</span></p>
+<p><span class="math inline"><em>A</em><em>v</em> − <em>λ</em><em>I</em><em>v</em> = 0</span></p>
+<p><span class="math inline">(<em>A</em> − <em>λ</em><em>I</em>)<em>v</em> = 0</span></p>
+<p>Trivially we see that <span class="math inline"><em>v</em> = 0</span> is a solution.</p>
+<p>Otherwise matrix <span class="math inline"><em>A</em> − <em>λ</em><em>I</em></span> must be non-invertible. That is:</p>
+<p><span class="math inline"><em>D</em><em>e</em><em>t</em>(<em>A</em> − <em>λ</em><em>I</em>)=0</span></p>
+<h2 id="calculating-eigenvalues">Calculating eigenvalues</h2>
+<p>For example</p>
+<p><span class="math inline">$A=\begin{bmatrix}2&amp;1\\1 &amp; 2\end{bmatrix}$</span></p>
+<p><span class="math inline">$A-\lambda I=\begin{bmatrix}2-\lambda &amp;1\\1 &amp; 2-\lambda \end{bmatrix}$</span></p>
+<p><span class="math inline"><em>D</em><em>e</em><em>t</em>(<em>A</em> − <em>λ</em><em>I</em>)=(2 − <em>λ</em>)(2 − <em>λ</em>)−1</span></p>
+<p>When this is <span class="math inline">0</span>.</p>
+<p><span class="math inline">(2 − <em>λ</em>)(2 − <em>λ</em>)−1 = 0</span></p>
+<p><span class="math inline"><em>λ</em> = 1, 3</span></p>
+<h2 id="calculating-eigenvectors">Calculating eigenvectors</h2>
+<p>You can plug this into the original problem.</p>
+<p>For example</p>
+<p><span class="math inline"><em>A</em><em>v</em> = 3<em>v</em></span></p>
+<p><span class="math inline">$\begin{bmatrix}2&amp;1\\1 &amp; 2\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=3\begin{bmatrix}x_1\\x_2\end{bmatrix}$</span></p>
+<p>As vectors can be defined at any point on the line, we normalise <span class="math inline"><em>x</em><sub>1</sub> = 1</span>.</p>
+<p><span class="math inline">$\begin{bmatrix}2&amp;1\\1 &amp; 2\end{bmatrix}\begin{bmatrix}1\\x_2\end{bmatrix}=\begin{bmatrix}3\\3x_2\end{bmatrix}$</span></p>
+<p>Here <span class="math inline"><em>x</em><sub>2</sub> = 1</span> and so the eigenvector corresponding to eigenvalue <span class="math inline">3</span> is:</p>
+<p><span class="math inline">$\begin{bmatrix}1\\1\end{bmatrix}$</span></p>
+<h2 id="traces">Traces</h2>
+<p>The trace of a matrix is the sum of its diagonal components.</p>
+<p><span class="math inline">$Tr(M)=\sum_i^nm_{ii}$</span></p>
+<p>The trace of a matrix is equal to the sum of its eigenvectors.</p>
+<h2 id="properties-of-traces">Properties of traces</h2>
+<p>Traces commute</p>
+<p><span class="math inline"><em>T</em><em>r</em>(<em>A</em><em>B</em>)=<em>T</em><em>r</em>(<em>B</em><em>A</em>)</span></p>
+<p>Traces of <span class="math inline">1 × 1</span> matrices are equal to their component.</p>
+<p><span class="math inline"><em>T</em><em>r</em>(<em>M</em>)=<em>m</em><sub>11</sub></span></p>
+<h2 id="trace-trick">Trace trick</h2>
+<p>If we want to manipulate the scalar:</p>
+<p><span class="math inline"><em>v</em><sup><em>T</em></sup><em>M</em><em>v</em></span></p>
+<p>We can use properties of the trace.</p>
+<p><span class="math inline"><em>v</em><sup><em>T</em></sup><em>M</em><em>v</em> = <em>T</em><em>r</em>(<em>v</em><sup><em>T</em></sup><em>M</em><em>v</em>)</span></p>
+<p><span class="math inline"><em>v</em><sup><em>T</em></sup><em>M</em><em>v</em> = <em>T</em><em>r</em>([<em>v</em><sup><em>T</em></sup>][<em>M</em><em>v</em>])</span></p>
+<p><span class="math inline"><em>v</em><sup><em>T</em></sup><em>M</em><em>v</em> = <em>T</em><em>r</em>([<em>M</em><em>v</em>][<em>v</em><sup><em>T</em></sup>])</span></p>
+<p><span class="math inline"><em>v</em><sup><em>T</em></sup><em>M</em><em>v</em> = <em>T</em><em>r</em>(<em>M</em><em>v</em><em>v</em><sup><em>T</em></sup>)</span></p>
+<h1 id="matrix-operations">Matrix operations</h1>
+<h2 id="matrix-powers">Matrix powers</h2>
+<p>For a square matrix <span class="math inline"><em>M</em></span> we can calculate <span class="math inline"><em>M</em><em>M</em><em>M</em><em>M</em>...</span>, or <span class="math inline"><em>M</em><sup><em>n</em></sup></span> where <span class="math inline"><em>n</em> ∈ ℕ</span>.</p>
+<h2 id="powers-of-diagonal-matrices">Powers of diagonal matrices</h2>
+<p>Generally, calculating a matrix to an integer power can be complicated. For diagonal matrices it is trivial.</p>
+<p>For a diagonal matrix <span class="math inline"><em>M</em> = <em>D</em><sup><em>n</em></sup></span>, <span class="math inline"><em>m</em><sub><em>i</em><em>j</em></sub> = <em>d</em><sub><em>i</em><em>j</em></sub><sup><em>n</em></sup></span>.</p>
+<h2 id="matrix-exponentials">Matrix exponentials</h2>
+<p>The exponential of a complex number is defined as:</p>
+<p><span class="math inline">$e^x=\sum \frac{1}{j!}x^j$</span></p>
+<p>We can extend this definition to matrices.</p>
+<p><span class="math inline">$e^X:=\sum \frac{1}{j!}X^j$</span></p>
+<p>The dimension of a matrix and its exponential are the same.</p>
+<h2 id="matrix-logarithms">Matrix logarithms</h2>
+<p>If we have <span class="math inline"><em>e</em><sup><em>A</em></sup> = <em>B</em></span> where <span class="math inline"><em>A</em></span> and <span class="math inline"><em>B</em></span> are matrices then we can say that <span class="math inline"><em>A</em></span> is matrix logarithm of <span class="math inline"><em>B</em></span>.</p>
+<p>That is:</p>
+<p><span class="math inline">log <em>B</em> = <em>A</em></span></p>
+<p>The dimensions of a matrix and its logarithm are the same.</p>
+<h2 id="matrix-square-roots">Matrix square roots</h2>
+<p>For a matrix <span class="math inline"><em>M</em></span>, the square root <span class="math inline">$M^{\frac{1}{2}}$</span> is <span class="math inline"><em>A</em></span> where <span class="math inline"><em>A</em><em>A</em> = <em>M</em></span>.</p>
+<p>This does not necessarily exist.</p>
+<p>Square roots may not be unique.</p>
+<p>Real matrices may have no real square root.</p>
+<h1 id="matrix-decomposition">Matrix decomposition</h1>
+<h2 id="similar-matrices">Similar matrices</h2>
+<p>In hermitian, show all symmtric matrices are hermitian</p>
+<p>For a diagonal matrix, eigenvalues are the diagonal entries?</p>
+<p>Similar matrix:</p>
+<p><span class="math inline"><em>M</em> = <em>P</em><sup>−1</sup><em>A</em><em>P</em></span></p>
+<p><span class="math inline"><em>M</em></span> and <span class="math inline"><em>A</em></span> have the same eigenvalues. If <span class="math inline"><em>A</em></span> diagonal, then entries are eigenvalues.</p>
+<h2 id="defective-and-diagonalisable-matrices">Defective and diagonalisable matrices</h2>
+<h2 id="diagonalisable-matrices-and-eigendecomposition">Diagonalisable matrices and eigendecomposition</h2>
+<p>If matrix <span class="math inline"><em>M</em></span> is diagonalisable if there exists matrix <span class="math inline"><em>P</em></span> and diagonal matrix <span class="math inline"><em>A</em></span> such that:</p>
+<p><span class="math inline"><em>M</em> = <em>P</em><sup>−1</sup><em>A</em><em>P</em></span></p>
+<h3 id="diagonalisiable-matrices-and-powers">Diagonalisiable matrices and powers</h3>
+<p>If these exist then we can more easily work out matrix powers.</p>
+<p><span class="math inline"><em>M</em><sup><em>n</em></sup> = (<em>P</em><sup>−1</sup><em>A</em><em>P</em>)<sup><em>n</em></sup> = <em>P</em><sup>−1</sup><em>A</em><sup><em>n</em></sup><em>P</em></span></p>
+<p><span class="math inline"><em>A</em><sup><em>n</em></sup></span> is easy to calculate, as each entry in the diagonal taken to the power of <span class="math inline"><em>n</em></span>.</p>
+<h3 id="defective-matrices">Defective matrices</h3>
+<p>Defective matrices are those which cannot be diagonalised.</p>
+<p>Non-singular matries can be defective or not defective, for example the identiy matrix.</p>
+<p>Singular matrices can also be defective or not defective, for example the empty matrix.</p>
+<h3 id="eigen-decomposition">Eigen-decomposition</h3>
+<p>Consider an eigenvector <span class="math inline"><em>v</em></span> and eigenvalue <span class="math inline"><em>λ</em></span> of matrix <span class="math inline"><em>M</em></span>.</p>
+<p>We known that <span class="math inline"><em>M</em><em>v</em> = <em>λ</em><em>v</em></span>.</p>
+<p>If <span class="math inline"><em>M</em></span> is full rank then we can generalise for all eigenvectors and eigenvalues:</p>
+<p><span class="math inline"><em>M</em><em>Q</em> = <em>Q</em><em>Λ</em></span></p>
+<p>Where <span class="math inline"><em>Q</em></span> is the eigenvectors as columns, and <span class="math inline"><em>Λ</em></span> is a diagonal matrix with the corresponding eigenvalues. We can then show that:</p>
+<p><span class="math inline"><em>M</em> = <em>Q</em><em>Λ</em><em>Q</em><sup>−1</sup></span></p>
+<p>This is only possible to calculate if the matrix of eigenvectors is non-singular. Otherwise the matrix is defective.</p>
+<p>If there are linearly dependent eigenvectors then we cannot use eigen-decomposition.</p>
+<h2 id="using-the-eigen-decomposition-to-invert-a-matrix">Using the eigen-decomposition to invert a matrix</h2>
+<p>This can be used to invert <span class="math inline"><em>M</em></span>.</p>
+<p>We know that:</p>
+<p><span class="math inline"><em>M</em><sup>−1</sup> = (<em>Q</em><em>Λ</em><em>Q</em><sup>−1</sup>)<sup>−1</sup></span></p>
+<p><span class="math inline"><em>M</em><sup>−1</sup> = <em>Q</em><sup>−1</sup><em>Λ</em><sup>−1</sup><em>Q</em></span></p>
+<p>We know <span class="math inline"><em>Λ</em></span> can be easily inverted by taking the reciprocal of each diagonal element. We already know both <span class="math inline"><em>Q</em></span> and its inverse from the decomposition.</p>
+<p>If any eigenvalues are <span class="math inline">0</span> then <span class="math inline"><em>Λ</em></span> cannot be inverted. These are singular matrices.</p>
+<h2 id="spectral-theorem-for-finite-dimensional-vector-spaces">Spectral theorem for finite-dimensional vector spaces</h2>
+<h1 id="the-linear-groups">The linear groups</h1>
+<h2 id="general-linear-groups-gln-f">General linear groups <span class="math inline"><em>G</em><em>L</em>(<em>n</em>, <em>F</em>)</span></h2>
+<p>The general linear group, <span class="math inline"><em>G</em><em>L</em>(<em>n</em>, <em>F</em>)</span>, contains all <span class="math inline"><em>n</em> ⊙ <em>n</em></span> invertible matrices <span class="math inline"><em>M</em></span> over field <span class="math inline"><em>F</em></span>.</p>
+<p>The binary operation is multiplication.</p>
+<h2 id="endomorphisms-as-group-actions">Endomorphisms as group actions</h2>
+<p>We can view each member of the group <span class="math inline"><em>g</em></span> as a homomorphim on <span class="math inline"><em>s</em></span>.</p>
+<p>Where <span class="math inline"><em>s</em></span> is a vector space <span class="math inline"><em>V</em></span>, the representation on each group member is an invertible square matrix.</p>
+<p>If the set we use is the vector space <span class="math inline"><em>V</em></span>, then we can represent each group element with a square matrix acting on <span class="math inline"><em>V</em></span>.</p>
+<p>Faithful means ab holds for repesentation too.</p>
+<p>Representation theory. groups defined by ab=c. if we can match each eleemnt to amatrix where this holds we have represented the matrix.</p>
+<h2 id="representing-finite-groups">Representing finite groups</h2>
+<p>Finite groups can all be represented with square matrices.</p>
+<h2 id="representing-compact-groups">Representing compact groups</h2>

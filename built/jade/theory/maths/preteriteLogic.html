@@ -1,1 +1,166 @@
-
+<h1 id="zero-order-logic">Zero-order logic</h1>
+<h2 id="terms-and-predicates">Terms and predicates</h2>
+<h3 id="predicates">Predicates</h3>
+<p>Zero-order logic adds predicates. Like propositional variables, these have truth values. Unlike propositional variable, predicates take terms as inputs.</p>
+<p>For example using propositional logic we can write the statement “you are 25” as <span class="math inline"><em>θ</em></span>.</p>
+<p>With preterites we can write this as <span class="math inline"><em>P</em>(<em>y</em><em>o</em><em>u</em>, 25)</span>.</p>
+<p>A propositional variable can be considered a special case of a predicate variable, where the number of inputs is <span class="math inline">0</span>.</p>
+<h2 id="relations-and-equality">Relations and equality</h2>
+<h3 id="relations">Relations</h3>
+<p>A special type of predicates is a relation. These take two terms and can be written differently: <span class="math inline"><em>P</em>(<em>x</em>, <em>y</em>)⇔<em>x</em> ⊕ <em>y</em></span></p>
+<h3 id="equality">Equality</h3>
+<p>In preterite logic we define the relation for equality.</p>
+<p><span class="math inline"><em>a</em> = <em>b</em></span></p>
+<p>It is defined by the following:</p>
+<ul>
+<li><p>Reflexivity : <span class="math inline"><em>x</em> = <em>x</em></span></p></li>
+<li><p>Symmetry: <span class="math inline"><em>x</em> = <em>y</em> ↔ <em>y</em> = <em>x</em></span></p></li>
+<li><p>Transivity: <span class="math inline"><em>x</em> = <em>y</em> ∧ <em>y</em> = <em>z</em> → <em>x</em> = <em>z</em></span></p></li>
+<li><p>Substitution for functions: <span class="math inline"><em>x</em> = <em>y</em> → <em>f</em>(<em>x</em>)=<em>f</em>(<em>y</em>)</span></p></li>
+<li><p>Substitution for formulae: <span class="math inline"><em>x</em> = <em>y</em> ∧ <em>P</em>(<em>x</em>)→<em>P</em>(<em>y</em>)</span></p></li>
+</ul>
+<h2 id="functions-and-brackets">Functions and brackets</h2>
+<h3 id="functions-or-maps">Functions (or maps)</h3>
+<p>Functions take other terms, and are themselves terms. For example if we wanted to know if someone can legally drive in a specific country, we could use:</p>
+<p><span class="math inline"><em>P</em>(<em>y</em><em>o</em><em>u</em>, <em>a</em><em>g</em><em>e</em>(<em>U</em><em>K</em>))</span></p>
+<p>A function may not be able to produce an output for all inputs. For examples <span class="math inline"><em>a</em><em>g</em><em>e</em>(<em>g</em><em>r</em><em>e</em><em>e</em><em>n</em>)</span> has no interpretation.</p>
+<p>Functions can also take different numbers of inputs. Constants, such as “you” and “UK” can be shown as functions with <span class="math inline">0</span> inputs. As a result we could instead write:</p>
+<p><span class="math inline"><em>P</em>(<em>y</em><em>o</em><em>u</em>(), <em>a</em><em>g</em><em>e</em>(<em>U</em><em>K</em>()))</span></p>
+<p>We generally denote functions with a lower case letter, so would instead write:</p>
+<p><span class="math inline"><em>P</em>(<em>y</em>(), <em>a</em>(<em>b</em>()))</span></p>
+<p>Functions are also called maps.</p>
+<h2 id="signatures">Signatures</h2>
+<h3 id="structures">Structures</h3>
+<p>A logical structure consists of:</p>
+<ul>
+<li><p>Domain</p></li>
+<li><p>Interpretation</p></li>
+<li><p>Signature</p></li>
+</ul>
+<h3 id="domain">Domain</h3>
+<p>The domain is the set of variables in the structure.</p>
+<p>We include an infinite number of variables.</p>
+<h3 id="interpretation">Interpretation</h3>
+<p>The interpretation assigns values to propositional and predicate variables.</p>
+<h3 id="signature">Signature</h3>
+<p>A logical signature describes the language of the logic which is used to construct statements. This includes:</p>
+<ul>
+<li><p>Functions</p></li>
+<li><p>Relations</p></li>
+<li><p>Operators</p></li>
+</ul>
+<p>The language of a signature is all possible sentences, or formulae which can be constructed from this signature.</p>
+<p>We include an infinite number of functions, relations and all operators.</p>
+<h2 id="completeness-of-zero-order-logic">Completeness of zero-order logic</h2>
+<p>A theory is complete if all true formulae are included.</p>
+<p>Note that there are three types of formulae in a theory.</p>
+<ul>
+<li><p>Tautologies (always true)</p></li>
+<li><p>Refutable formulae (always false)</p></li>
+<li><p>Satisfiable formulae which are not tautologies (true in some, but not all, interpretations).</p></li>
+</ul>
+<h2 id="injective-bijective-and-surjective-functions">Injective, bijective and surjective functions</h2>
+<h3 id="injective-functions">Injective functions</h3>
+<p><span class="math inline"><em>f</em>(<em>a</em>)=<em>f</em>(<em>b</em>)→<em>a</em> = <em>b</em></span></p>
+<h3 id="surjective-functions">Surjective functions</h3>
+<p>All points in codomain have at least one matching point in domain</p>
+<p>Mapping info, details</p>
+<h3 id="bijective">Bijective</h3>
+<p>Both injective and surjective</p>
+<h3 id="other">Other</h3>
+<p>__Identity function__</p>
+<p>The identity function maps a term to itself.</p>
+<p>__Idempotent__</p>
+<p>An idempotent function is a function which does not change the term if the function is used more than once. An example is multiplying by <span class="math inline">0</span>.</p>
+<h3 id="inverse-functions">Inverse functions</h3>
+<p>An inverse function of a function is one which maps back onto the original value.</p>
+<p><span class="math inline"><em>g</em>(<em>x</em>)</span> is an inverse function of <span class="math inline"><em>f</em>(<em>x</em>)</span> if</p>
+<p><span class="math inline"><em>g</em>(<em>f</em>(<em>x</em>)) = <em>x</em></span></p>
+<h3 id="properties-of-binary-functions">Properties of binary functions</h3>
+<p>Binary functions can be written as:</p>
+<p><span class="math inline"><em>f</em>(<em>a</em>, <em>b</em>)=<em>a</em> ⊕ <em>b</em></span></p>
+<p>A function is commutative if:</p>
+<p><span class="math inline"><em>x</em> ⊕ <em>y</em> = <em>y</em> ⊕ <em>x</em></span></p>
+<p>A function is associative if:</p>
+<p><span class="math inline">(<em>x</em> ⊕ <em>y</em>)⊕<em>z</em> = <em>x</em> ⊕ (<em>y</em> ⊕ <em>z</em>)</span></p>
+<p>A function <span class="math inline">⊗</span> is left distributive over <span class="math inline">⊕</span> if:</p>
+<p><span class="math inline"><em>x</em> ⊗ (<em>y</em> ⊕ <em>z</em>)=(<em>x</em> ⊗ <em>y</em>)⊕(<em>x</em> ⊗ <em>z</em>)</span></p>
+<p>Alternatively, function <span class="math inline">⊗</span> is right distributive over <span class="math inline">⊕</span> if:</p>
+<p><span class="math inline">(<em>x</em> ⊕ <em>y</em>)⊗<em>z</em> = (<em>x</em> ⊗ <em>z</em>)⊕(<em>y</em> ⊕ <em>z</em>)</span></p>
+<p>A function is distributive over another function if it both left and right distributive over it.</p>
+<h2 id="binary-functions">Binary functions</h2>
+<h3 id="properties-of-binary-functions-1">Properties of binary functions</h3>
+<p>Binary functions can be written as:</p>
+<p><span class="math inline"><em>f</em>(<em>a</em>, <em>b</em>)=<em>a</em> ⊕ <em>b</em></span></p>
+<p>A function is commutative if:</p>
+<p><span class="math inline"><em>x</em> ⊕ <em>y</em> = <em>y</em> ⊕ <em>x</em></span></p>
+<p>A function is associative if:</p>
+<p><span class="math inline">(<em>x</em> ⊕ <em>y</em>)⊕<em>z</em> = <em>x</em> ⊕ (<em>y</em> ⊕ <em>z</em>)</span></p>
+<p>A function <span class="math inline">⊗</span> is left distributive over <span class="math inline">⊕</span> if:</p>
+<p><span class="math inline"><em>x</em> ⊗ (<em>y</em> ⊕ <em>z</em>)=(<em>x</em> ⊗ <em>y</em>)⊕(<em>x</em> ⊗ <em>z</em>)</span></p>
+<p>Alternatively, function <span class="math inline">⊗</span> is right distributive over <span class="math inline">⊕</span> if: <span class="math inline">(<em>x</em> ⊕ <em>y</em>)⊗<em>z</em> = (<em>x</em> ⊗ <em>z</em>)⊕(<em>y</em> ⊕ <em>z</em>)</span></p>
+<p>A function is distributive over another function if it both left and right distributive over it.</p>
+<h1 id="first-order-logic">First-order logic</h1>
+<h2 id="writing-first-order-logic">Writing first-order logic</h2>
+<h3 id="existential-quantifier">Existential quantifier</h3>
+<p>We introduce a shorthand for “at least one term satisfies a predicate”, that is:</p>
+<p><span class="math inline"><em>P</em>(<em>x</em><sub>0</sub>)∨<em>P</em>(<em>x</em><sub>1</sub>)∨<em>P</em>(<em>x</em><sub>2</sub>)∨<em>P</em>(<em>x</em><sub>2</sub>)∨<em>P</em>(<em>x</em><sub>3</sub>)…</span></p>
+<p>The short hand is:</p>
+<p><span class="math inline">∃<em>x</em><em>P</em>(<em>x</em>)</span></p>
+<h3 id="niversal-quantifier">niversal quantifier</h3>
+<p>We introduce another shorthand, this time for:</p>
+<p><span class="math inline"><em>P</em>(<em>x</em><sub>0</sub>)∧<em>P</em>(<em>x</em><sub>1</sub>)∧<em>P</em>(<em>x</em><sub>2</sub>)∧<em>P</em>(<em>x</em><sub>2</sub>)∧<em>P</em>(<em>x</em><sub>3</sub>)…</span></p>
+<p>The shorthand is</p>
+<p><span class="math inline">∀<em>x</em><em>P</em>(<em>x</em>)</span></p>
+<h3 id="free-and-bound-variables">Free and bound variables</h3>
+<p>A bound variable is one which is quantified in the formula. A free variable is one which is not. Consider:</p>
+<p><span class="math inline">∀<em>x</em><em>P</em>(<em>x</em>, <em>y</em>)</span></p>
+<p>In this, <span class="math inline"><em>x</em></span> is bound while <span class="math inline"><em>y</em></span> is free.</p>
+<p>Free variables can be interpreted differently, while bound variables cannot.</p>
+<p>We can also bind a specific variable to a value. For example <span class="math inline">0</span> can be defined to be bound.</p>
+<h3 id="ground-terms">Ground terms</h3>
+<p>A ground term does not contain any free variables. A ground formula is one which only includes ground terms.</p>
+<p><span class="math inline">∀<em>x</em> <em>x</em></span> is a ground term.</p>
+<p><span class="math inline">∀<em>x</em><em>P</em>(<em>x</em>)</span> is a ground formula.</p>
+<h2 id="inference-rules-for-first-order-logic">Inference rules for first-order logic</h2>
+<h3 id="existential-instantiation">Existential instantiation</h3>
+<p>If <span class="math inline"><em>P</em></span> is true for a specific input, then there exists an input for <span class="math inline"><em>P</em></span> where <span class="math inline"><em>P</em></span> is true.</p>
+<p><span class="math inline"><em>P</em>(<em>r</em>)⇒∃<em>x</em><em>P</em>(<em>x</em>)</span></p>
+<h3 id="existential-generalisation">Existential generalisation</h3>
+<p><span class="math inline">∃<em>x</em><em>P</em>(<em>x</em>)⇒<em>P</em>(<em>r</em>)</span></p>
+<p>Where <span class="math inline"><em>r</em></span> is a new symbol.</p>
+<h3 id="universal-instantiation">Universal instantiation</h3>
+<p>If <span class="math inline"><em>P</em></span> is true for all values of <span class="math inline"><em>x</em></span>, then <span class="math inline"><em>P</em></span> is true for any input to <span class="math inline"><em>P</em></span>.</p>
+<p><span class="math inline">∀<em>x</em><em>P</em>(<em>x</em>)⇒<em>P</em>(<em>a</em>/<em>x</em>)</span></p>
+<p>Where <span class="math inline"><em>a</em>/<em>x</em></span> represents substituting <span class="math inline"><em>a</em></span> for <span class="math inline"><em>x</em></span> within <span class="math inline"><em>P</em></span>.</p>
+<h3 id="universal-generalisation">Universal generalisation</h3>
+<p>If there is a derivation for <span class="math inline"><em>P</em>(<em>x</em>)</span>, then there is a derivation for <span class="math inline">∀<em>x</em><em>P</em>(<em>x</em>)</span>.</p>
+<p><span class="math inline">⊢<em>P</em>(<em>x</em>)⇒ ⊢ ∀<em>x</em><em>P</em>(<em>x</em>)</span></p>
+<h2 id="duality-of-first-order-logic">Duality of first-order logic</h2>
+<p>The dual of:</p>
+<p><span class="math inline">∃<em>x</em>¬<em>P</em>(<em>x</em>)</span></p>
+<p>Is:</p>
+<p><span class="math inline">¬∀<em>x</em><em>P</em>(<em>x</em>)</span></p>
+<h2 id="gödels-completeness-theorem">Gödel’s completeness theorem</h2>
+<h3 id="completeness-of-first-order-logic">Completeness of first-order logic</h3>
+<p>We previously showed that zero-order logic was complete. What about first-order logic?</p>
+<p>Gödel’s’ completeness theorem says that for first order logic, a theory can include all tautologies, the first category.</p>
+<p>If the completeness theorem is true and a formula is not in the theory, then the formula is either refutable or satisfiable under some, but not all interpretations.</p>
+<p>That is, either the theory will contain <span class="math inline"><em>θ</em></span>, <span class="math inline">¬<em>θ</em></span>, or <span class="math inline"><em>θ</em></span> will be satisfiable in some but not all interpretations, and neither will be in the in theory.</p>
+<p>To prove this we look for a proof that every formula is either refutable or true under some structure. So for an arbitrary formula <span class="math inline"><em>θ</em></span> we want to show it is either refutable or satisfiable under some interpretation.</p>
+<h3 id="part-1-converting-the-form-of-the-formula">Part 1: Converting the form of the formula</h3>
+<p>Remove free variables, functions</p>
+<p>Note that if this is true, all valid formulae of the form below are provable:</p>
+<p><span class="math inline">¬<em>θ</em></span></p>
+<p>This means that there is no interpretation where the following is true:</p>
+<p><span class="math inline"><em>θ</em></span></p>
+<p>Conversely if <span class="math inline">¬<em>θ</em></span> is not in the theory, then <span class="math inline"><em>θ</em></span> must be true under some interpretation.</p>
+<p>That is, if all valid formulae are provable, then all</p>
+<p>Reformulating the question:</p>
+<p>This is the most basic form of the completeness theorem. We immediately restate it in a form more convenient for our purposes:</p>
+<p>Theorem 2. Every formula <span class="math inline"><em>θ</em></span> is either refutable or satisfiable in some structure.</p>
+<p>“<span class="math inline"><em>θ</em></span>is refutable” means by definition “<span class="math inline">¬<em>θ</em></span> is provable”.</p>
+<h3 id="decidability">Decidability</h3>
+<p>Given a formula, can we find out if can be derived from the axioms? We can follow a process for doing so which would inform us if the formula was or was not a theorem. Alternative, the process could carry on forever.</p>
+<p>If the process never carries on forever the system is decidable: there is a finite process to determine whether the formula is in or out. If the process halts for true formulas, but can carry on forever for false formulas, the system is semi-decidable. If the process takes a long time, we do not know if it is looping infinitely, or approaching its halt point.</p>
+<p>Intuitively, use of axioms can make an existing formula shorter or longer, so finding all short formulas can require going forwards and backwards an infinite number of times.</p>

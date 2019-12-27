@@ -1,1 +1,170 @@
-
+<h1 id="multivariate-space">Multivariate space</h1>
+<h2 id="regions">Regions</h2>
+<p>A region is a subset</p>
+<h3 id="type-i-regions-y-simple-regions">Type-I regions (y-simple regions)</h3>
+<h3 id="type-ii-regions-x-simple-regions">Type-II regions (x-simple regions)</h3>
+<h3 id="elementary-regions">Elementary regions</h3>
+<p>An elementary region is a region which is either a type-I region or a type-II region.</p>
+<h3 id="simple-regions">Simple regions</h3>
+<p>A simple region is a region which is both a type-I and a type-II region.</p>
+<h2 id="curves-and-closed-curves">Curves and closed curves</h2>
+<p>In a space we can identify a curve between two points. If the input in the real numbers then this curve is unique.</p>
+<p>For more general scalar fields this will not be the case. Two points in <span class="math inline">ℝ<sup>2</sup></span> could be joined by an infinite number of paths.</p>
+<p>A curve can be defined as a function on the real numbers. The curve itself is totally ordered, and homogenous to the real number line.</p>
+<p>We can write the curve therefore as:</p>
+<p><span class="math inline"><em>r</em> : [<em>a</em>, <em>b</em>]→<em>C</em></span></p>
+<p>Where <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> are the start and end points of the curve, and <span class="math inline"><em>C</em></span> is the resulting curve.</p>
+<h3 id="closed-curves">Closed curves</h3>
+<p>If the start and end point of the curve are the same then the curve is closed. We can write this as:</p>
+<p><span class="math inline">∮<sub><em>C</em></sub><em>f</em>(<em>r</em>)<em>d</em><em>s</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>r</em>(<em>t</em>))|<em>r</em>′(<em>t</em>)|<em>d</em><em>t</em></span></p>
+<h2 id="surfaces">Surfaces</h2>
+<h2 id="length-of-a-curve">Length of a curve</h2>
+<p>We have a curve from <span class="math inline"><em>a</em></span> to <span class="math inline"><em>b</em></span> in <span class="math inline"><strong>R</strong><sup><em>n</em></sup></span>.</p>
+<p><span class="math inline"><em>f</em> : [<em>a</em>, <em>b</em>]→<strong>R</strong><sup><em>n</em></sup></span></p>
+<p>We divide this into <span class="math inline"><em>n</em></span> segments.</p>
+<p>The <span class="math inline"><em>i</em></span>th cut is at:</p>
+<p><span class="math inline">$t_i=a+\dfrac{i}{n}(b-a)$</span></p>
+<p>So the first cut is at:</p>
+<p><span class="math inline"><em>t</em><sub>0</sub> = <em>a</em></span></p>
+<p><span class="math inline"><em>t</em><sub><em>n</em></sub> = <em>b</em></span></p>
+<p>The distance between two sequential cuts is:</p>
+<p><span class="math inline">||<em>f</em>(<em>t</em><sub><em>i</em></sub>)−<em>f</em>(<em>t</em><sub><em>i</em> − 1</sub>||</span></p>
+<p>The sum of all these differences is:</p>
+<p><span class="math inline">$L=\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
+<p>The limit is:</p>
+<p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
+<h3 id="method-1">Method 1</h3>
+<p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
+<p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||\dfrac{f(t_{i})-f(t_{i-1})}{\Delta t}||\Delta t$</span></p>
+<p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f'(t)||\Delta t$</span></p>
+<p><span class="math inline"><em>L</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup>||<em>f</em>′(<em>t</em>)||<em>d</em><em>t</em></span></p>
+<h3 id="method-2">Method 2</h3>
+<p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n ||f(t_{i})-f(t_{i-1})||$</span></p>
+<p><span class="math inline">$L=\lim_{n\rightarrow \infty }\sum_{i=1}^n \sqrt {(f(t_{i})-f(t_{i-1}))^*M(f(t_{i})-f(t_{i-1}))}$</span></p>
+<p><span class="math inline">$L=\int_a^b \sqrt {(dt)^TM(dt)}$</span></p>
+<h1 id="scalar-fields">Scalar fields</h1>
+<h2 id="total-differentiation">Total differentiation</h2>
+<h3 id="scalar-fields-1">Scalar fields</h3>
+<p>A scalar field is a function on an underlying input which produces a real output.</p>
+<p>Inputs are not limited to real numbers. In this section we consider functions on vector spaces.</p>
+<h3 id="total-differentiation-1">Total differentiation</h3>
+<p>Consider a multivariate function.</p>
+<p><span class="math inline"><em>f</em>(<em>x</em>)</span>.</p>
+<p>We can define:</p>
+<p><span class="math inline"><em>Δ</em><em>f</em>(<em>x</em>, <em>Δ</em><em>x</em>):=<em>f</em>(<em>x</em> + <em>Δ</em><em>x</em>)−<em>f</em>(<em>x</em>)</span></p>
+<p><span class="math inline">$\Delta f(x, \Delta x)=\sum_{i=1}^nf(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)$</span></p>
+<p><span class="math inline">$\Delta f(x, \Delta x)=\sum_{i=1}^n\Delta x_i \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}$</span></p>
+<p><span class="math inline">$\frac{\Delta f}{\Delta x_k}=\sum_{i=1}^n\frac{\Delta x_i}{\Delta x_k} \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}$</span></p>
+<p><span class="math inline">$\lim_{\Delta x_k \rightarrow 0}\frac{\Delta f}{\Delta x_k}=\sum_{i=1}^n\lim_{\Delta x_k \rightarrow 0}\frac{\Delta x_i}{\Delta x_k} \frac{f(x+\Delta x_i+\sum_{j=0}^{i-1}\Delta x_j)-f(x+\sum_{j=0}^{i-1}\Delta x_j)}{\Delta x_i}$</span></p>
+<p><span class="math inline">$\frac{df}{dx_k}=\sum_{i=1}^n\frac{dx_i}{dx_k} \frac{\delta f}{\delta x_i}$</span></p>
+<h3 id="total-differentiation-of-a-univariate-function">Total differentiation of a univariate function</h3>
+<p>For a univariate function total differentiation is the same as partial differentiation.</p>
+<p><span class="math inline">$\frac{df}{dx}=\frac{dx}{dx} \frac{\delta f}{\delta x}$</span></p>
+<p><span class="math inline">$\frac{df}{dx}=\frac{\delta f}{\delta x}$</span></p>
+<h2 id="del">Del</h2>
+<p><span class="math inline">$\nabla =(\sum_{i=1}^n e_i\frac{\delta }{\delta x_i})$</span></p>
+<p>Where <span class="math inline"><em>e</em></span> are the basis vectors.</p>
+<p>This on its own means nothing. It is similar to the partial differentiation function.</p>
+<h2 id="gradient">Gradient</h2>
+<p>In a scalar field we can calculate the partial derivative at any point with respect to one input.</p>
+<p>We may wish to consider these collectively. To do that we use the gradient operator.</p>
+<p>We previously introduced the Del operator where:</p>
+<p><span class="math inline">$\nabla =(\sum_{i=1}^n e_i\frac{\delta }{\delta x_i})$</span></p>
+<p>Where <span class="math inline"><em>e</em></span> are the basis vectors.</p>
+<p>This on its own means nothing. It is similar to the partial differentiation function.</p>
+<p>We now multiply Del by the function. This gives us:</p>
+<p><span class="math inline">$\nabla f=(\sum_{i=1}^n e_i\frac{\delta f}{\delta x_i})$</span>. This gives us a vector in the underlying vector space.</p>
+<p>This is the gradient.</p>
+<h2 id="directional-derivative">Directional derivative</h2>
+<p>We have a function, <span class="math inline"><em>f</em>(<strong>x</strong>)</span>.</p>
+<p>Given a vector <span class="math inline"><em>v</em></span>, we can identify by how much this scalar function changes as you move in that direction.</p>
+<p><span class="math inline">$\nabla_v f(x):=\lim_{\delta \rightarrow 0}\dfrac{f(\mathbf x+\delta \mathbf v)-f(\mathbf x) }{\delta }$</span></p>
+<p>The directional derivative is the same dimension as underlying field.</p>
+<h3 id="other">Other</h3>
+<p>Differentiation of scalar field, <span class="math inline"><em>d</em><em>f</em></span>, can be defined as a vector field where grad is 0. can differ with orientation, scale</p>
+<h2 id="line-integral-of-scalar-fields">Line integral of scalar fields</h2>
+<h2 id="double-integral-of-scalar-fields">Double integral of scalar fields</h2>
+<h2 id="surface-integral-of-scalar-fields">Surface integral of scalar fields</h2>
+<h2 id="gradient-theorem">Gradient theorem</h2>
+<p>In a scalar field, the line integral of the gradient field is the difference between the value of the scalar field at the start and end points.</p>
+<p>This generalises the fundamental theorem of calclulus.</p>
+<h2 id="greens-theorem">Green’s theorem</h2>
+<p>We have a curve <span class="math inline"><em>C</em></span> on a plane.</p>
+<p>Inside this is region <span class="math inline"><em>D</em></span>.</p>
+<p>We have two functions: <span class="math inline"><em>L</em>(<em>x</em>, <em>y</em>)</span> and <span class="math inline"><em>M</em>(<em>x</em>, <em>y</em>)</span> defined on the region and curve.</p>
+<p><span class="math inline">$\oint_C (L dx + M dy)=\int \int_D (\dfrac{\delta M}{\delta x}-\dfrac{\delta L}{\delta y})dx dy$</span></p>
+<h2 id="differential-forms">Differential forms</h2>
+<h3 id="type-i">Type-I</h3>
+<p>For type-I, we can integrate over y, then integrate over x.</p>
+<h3 id="type-ii">Type-II</h3>
+<p>For type-II, we can integrate over x, then integrate over y.</p>
+<h1 id="vector-fields">Vector fields</h1>
+<h2 id="jacobian-matrix">Jacobian matrix</h2>
+<p>If we have <span class="math inline"><em>n</em></span> inputs and <span class="math inline"><em>m</em></span> functions such that:</p>
+<p><span class="math inline"><em>f</em><sub><em>i</em></sub>(<strong>x</strong>)</span></p>
+<p>The Jacobian is a matrix where:</p>
+<p><span class="math inline">$J_{ij}= \dfrac{\delta f_i}{\delta x_j}$</span></p>
+<h2 id="divergence">Divergence</h2>
+<p>This takes a vector field and produces a scalar field.</p>
+<p>It is the dot product of the vector field with the del operator.</p>
+<p><span class="math inline"><em>d</em><em>i</em><em>v</em><em>F</em> = ∇.<em>F</em></span></p>
+<p>Where <span class="math inline">$\nabla =(\sum_{i=1}^n e_i\frac{\delta }{\delta x_i})$</span></p>
+<p><span class="math inline">$div F = \sum_{i=1}^n e_i\frac{\delta F_i}{\delta x_i}$</span></p>
+<h3 id="divergence-as-net-flow">Divergence as net flow</h3>
+<p>Divergence can be thought of as the net flow into a point.</p>
+<p>For example, if we have a body of water, and a vector field as the velocity at any given point, then the divergence is <span class="math inline">0</span> at all points.</p>
+<p>This is because water is incompressible, and so there can be no net flows.</p>
+<p>Areas which flow out are sources, while areas that flow inwards are sinks.</p>
+<h3 id="solenoidal-vector-fields">Solenoidal vector fields</h3>
+<p>If there is no divergence, then the vector field is called solenoidal.</p>
+<h2 id="scalar-potential">Scalar potential</h2>
+<p>Given a vector field <span class="math inline"><strong>F</strong></span> we may be able to identify a scalar field <span class="math inline"><em>P</em></span> such that:</p>
+<p><span class="math inline"><strong>F</strong> = −∇<em>P</em></span></p>
+<h2 id="non-uniqueness-of-scalar-potentials">Non-uniqueness of scalar potentials</h2>
+<p>Scalar potentials are not unique.</p>
+<p>If <span class="math inline"><em>P</em></span> is a scalar potential of <span class="math inline"><strong>F</strong></span>, then so is <span class="math inline"><em>P</em> + <em>c</em></span>, where <span class="math inline"><em>c</em></span> is a constant.</p>
+<h3 id="conservative-vector-fields">Conservative vector fields</h3>
+<p>Not all vector fields have scalar potentials. Those that do are conservative.</p>
+<p>For example if a vector field is the gradient of a scalar height function, then the height is a scalar potential.</p>
+<p>If a vector field is the rotation of water, there will not be a scalar potential.</p>
+<p>extends ./subSubTemplate.jade</p>
+<p>block subSubTitle h1</p>
+<h2 id="curl">Curl</h2>
+<p>The curl of a vector field is defined as:</p>
+<p><span class="math inline"><em>c</em><em>u</em><em>r</em><em>l</em><strong>F</strong> = ∇ × <strong>F</strong></span></p>
+<p>Where: <span class="math inline">$\nabla =(\sum_{i=1}^n e_i\frac{\delta }{\delta x_i})$</span></p>
+<p>And: <span class="math inline"><strong>x</strong> × <strong>y</strong> = ∥|<strong>x</strong>||||<strong>y</strong>||sin(<em>θ</em>)<strong>n</strong></span></p>
+<p>The curl of a vector field is another vector field.</p>
+<p>The curl measures the rotation about a given point. For example if a vector field is the gradient of a height map, the curl is <span class="math inline">0</span> at all points, however for a rotating body of water the curl reflects the rotation at a given point.</p>
+<h3 id="divergence-of-the-curl">Divergence of the curl</h3>
+<p>If we have a vector field <span class="math inline"><strong>F</strong></span>, the divergence of its curl is <span class="math inline">0</span>:</p>
+<p><span class="math inline">∇.(∇×<strong>F</strong>)=0</span></p>
+<h2 id="vector-potential">Vector potential</h2>
+<p>Given a vector field <span class="math inline"><strong>F</strong></span> we may be able to identify another vector field <span class="math inline"><em>A</em></span> such that:</p>
+<p><span class="math inline"><strong>F</strong> = ∇ × <strong>A</strong></span></p>
+<h3 id="existence">Existence</h3>
+<p>We know that the divergence of the curl for any vector field is <span class="math inline">0</span>, so this applies to <span class="math inline"><em>A</em></span>:</p>
+<p><span class="math inline">∇.(∇×<strong>A</strong>)=0</span></p>
+<p>Therefore:</p>
+<p><span class="math inline">∇.<strong>F</strong> = 0</span></p>
+<p>This means that if there is a vector potential of <span class="math inline"><strong>F</strong></span>, then <span class="math inline"><strong>F</strong></span> has no divergence.</p>
+<h3 id="non-uniqueness-of-vector-potentials">Non-uniqueness of vector potentials</h3>
+<p>Vector potentials are not unique.</p>
+<p>If <span class="math inline"><strong>A</strong></span> is a vector potential of <span class="math inline"><strong>F</strong></span>, then so is <span class="math inline"><strong>A</strong> + ∇<em>c</em></span>, where <span class="math inline"><em>c</em></span> is a scalar field and <span class="math inline">∇<em>c</em></span> is its gradient.</p>
+<h3 id="conservative-vector-fields-1">Conservative vector fields</h3>
+<p>Not all vector fields have scalar potentials. Those that do are conservative.</p>
+<p>For example if a vector field is the gradient of a scalar height function, then the height is a scalar potential.</p>
+<p>If a vector field is the rotation of water, there will not be a scalar potential.</p>
+<h2 id="line-integral-of-vector-fields">Line integral of vector fields</h2>
+<p>We may wish to integrate along a curve in a vector field.</p>
+<p>We previously showed that we can write a curve as a function on the real line:</p>
+<p><span class="math inline"><em>r</em> : [<em>a</em>, <em>b</em>]→<em>C</em></span></p>
+<p>The integral is therefore the sum of the function at all points, with some weighting. We write this:</p>
+<p><span class="math inline">$\int_C f(r) ds=\lim_{\Delta s rightarrow 0 }\sum_{i=0}^n f(r(t_i))\Delta s_i$</span></p>
+<p>In a vector field we use</p>
+<p><span class="math inline">∫<sub><em>C</em></sub><em>f</em>(<em>r</em>)<em>d</em><em>s</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>r</em>(<em>t</em>)).<em>r</em>′(<em>t</em>)<em>d</em><em>t</em></span></p>
+<h2 id="double-integral-of-vector-fields">Double integral of vector fields</h2>
+<h2 id="surface-integral-for-vector-fields">Surface integral for vector fields</h2>
+<h1 id="stokes-theorem">Stoke’s theorem</h1>
+<h2 id="the-divergence-theorem">The divergence theorem</h2>
+<h2 id="stokes-theorem-1">Stoke’s theorem</h2>

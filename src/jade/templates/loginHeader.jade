@@ -2,52 +2,47 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="utf-8")
-		//meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-		//meta(name="description" content="Adam Boult's homepage.")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(name="description", content="Adam Boult's homepage.")
 
-		script(src="https://code.jquery.com/jquery-3.4.1.min.js")
-		link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet")
-		//link(href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css" rel="stylesheet")
+		title Adam Boult
 
-		script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
-		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+		//link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons")
+		//link(rel="stylesheet", href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css")
+		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+
+		//script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+		//script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+
+		//script(src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js")
+
+		script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
+		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
 
 		script#MathJax-script(async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js")
 
-		title Adam Boult
-		script
-			| if (typeof jQuery == 'undefined') {
-			|     console.log("Jquery missing");
-			| }
-			| var bootstrap_enabled = (typeof $().modal == 'function');
-			| console.log(bootstrap_enabled);
-
 	body
-		//nav.navbar.navbar-expand-lg.navbar-light.bg-light
-		//nav.navbar.navbar-expand-lg.navbar-light.bg-primary(style="background-color: #e3f2fd;")
-		nav.navbar.navbar-expand-lg.navbar-light.bg-light
-			a.navbar-brand(href='/') Bou.lt
-			button.navbar-toggler(type="button", data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+		nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+			a.navbar-brand.abs(href='/') Bou.lt
+			button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
 				span.navbar-toggler-icon
-			div.collapse.navbar-collapse(id="navbarSupportedContent")
-				ul.navbar-nav.mr-auto
+			div.collapse.navbar-collapse#navbarNavAltMarkup
+				ul.navbar-nav
 					li.nav-item
 						a.nav-link(href="/theory/") Notes
-					//li
-					//	a(href="/news/") News
-					//li
-					//	a(href="/models/") Models
-					//li
-					//	a(href="https://github.com/adamdboult/yetipredict.git") Github
-				ul.nav.navbar-nav.navbar-right
+				ul.navbar-nav.ml-auto
+					li.nav-item
+						a.nav-link(href="https://www.yetipredict.com") YetiPredict
 					li.nav-item
 						a.nav-link(href="https://www.artificialeconomist.com") Artificial Economist
 					li.nav-item
-						a.nav-link(href="https://www.yetipredict.com") YetiPredict
-					li
 						a.nav-link(href="/about/") About
-
 		block content
+		//script.
+		//	$(document).ready(function(){
+		//		//This command is used to initialize some elements and make them work properly
+		//		$.material.init();
+		//	});
 

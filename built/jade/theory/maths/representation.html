@@ -1,1 +1,100 @@
-
+<h1 id="algebra-on-a-field">Algebra on a field</h1>
+<h2 id="bilinear-maps">Bilinear maps</h2>
+<p>A bilinear map (or function) is a map from two inputs to an output which preserves addition and scalar multiplication. This is in contrast to a linear map, which only has one input.</p>
+<p>In addition, the function is linear in both arguments.</p>
+<p>That is if function <span class="math inline"><em>f</em></span> is bilinear then:</p>
+<p><span class="math inline"><em>X</em> = <em>a</em><em>M</em> + <em>b</em><em>N</em></span></p>
+<p><span class="math inline"><em>Y</em> = <em>c</em><em>O</em> + <em>d</em><em>P</em></span></p>
+<p><span class="math inline"><em>f</em>(<em>X</em>, <em>Y</em>)=<em>f</em>(<em>a</em><em>M</em> + <em>b</em><em>N</em>, <em>c</em><em>O</em> + <em>d</em><em>P</em>)</span></p>
+<p><span class="math inline"><em>f</em>(<em>X</em>, <em>Y</em>)=<em>f</em>(<em>a</em><em>M</em>, <em>c</em><em>O</em> + <em>d</em><em>P</em>)+<em>f</em>(<em>b</em><em>N</em>, <em>c</em><em>O</em> + <em>d</em><em>P</em>)</span></p>
+<p><span class="math inline"><em>f</em>(<em>X</em>, <em>Y</em>)=<em>f</em>(<em>a</em><em>M</em>, <em>c</em><em>O</em>)+<em>f</em>(<em>a</em><em>M</em>, <em>d</em><em>P</em>)+<em>f</em>(<em>b</em><em>N</em>, <em>c</em><em>O</em>)+<em>f</em>(<em>b</em><em>N</em>, <em>d</em><em>P</em>)</span></p>
+<p><span class="math inline"><em>f</em>(<em>X</em>, <em>Y</em>)=<em>a</em><em>c</em><em>f</em>(<em>M</em>, <em>O</em>)+<em>a</em><em>d</em><em>f</em>(<em>M</em>, <em>P</em>)+<em>b</em><em>c</em><em>f</em>(<em>N</em>, <em>O</em>)+<em>b</em><em>d</em><em>f</em>(<em>N</em>, <em>P</em>)</span></p>
+<p>Note that:</p>
+<p><span class="math inline"><em>f</em>(<em>X</em>, <em>Y</em>)=<em>f</em>(<em>X</em> + 0, <em>Y</em>)</span></p>
+<p><span class="math inline"><em>f</em>(<em>X</em>, <em>Y</em>)=<em>f</em>(<em>X</em>, <em>Y</em>)+<em>f</em>(0, <em>Y</em>)</span></p>
+<p><span class="math inline">(0, <em>Y</em>)=0</span></p>
+<p>That is, if any input is <span class="math inline">0</span> in an additative sense, the value of the map must be zero.</p>
+<h2 id="algebra-on-a-field-1">Algebra on a field</h2>
+<h1 id="cross-products">Cross products</h1>
+<h2 id="the-cross-product">The cross product</h2>
+<p><span class="math inline"><em>v</em> × <em>u</em></span></p>
+<h3 id="cross-product-is-a-bilinear-map">Cross product is a bilinear map</h3>
+<p>This is a bilinear map from two vectors in <span class="math inline">ℝ<sup>3</sup></span> to another vector in the same space.</p>
+<p><span class="math inline"><em>V</em> × <em>V</em> → <em>V</em></span></p>
+<h3 id="calculating-the-cross-product">Calculating the cross product</h3>
+<p>This is calcualted by:</p>
+<p><span class="math inline"><em>u</em> × <em>v</em> = ||<em>u</em>||||<em>v</em>||sin(<em>θ</em>)<em>n</em></span></p>
+<p>The resulting vector is perpendicular to both input vectors.</p>
+<h1 id="lie-groups">Lie groups</h1>
+<h2 id="lie-groups-1">Lie groups</h2>
+<h1 id="lie-algebra">Lie algebra</h1>
+<h2 id="lie-algebra-1">Lie algebra</h2>
+<p>Lie groups have symmetries. We can consider only the infintesimal symmetries.</p>
+<p>For example the unit circle has many symmetries, but we can consider only those which rotate infintesimally.</p>
+<h3 id="example">Example</h3>
+<p>Take a continous group, such as <span class="math inline"><em>U</em>(1)</span>. Its Lie algebra is all matrices such that their exponential is in the Lie group.</p>
+<p><span class="math inline">𝔲(1)={<em>X</em> ∈ ℂ<sup>1 × 1</sup>|<em>e</em><sup><em>t</em><em>X</em></sup> ∈ <em>U</em>(1)∀<em>t</em> ∈ ℝ}</span></p>
+<p>This is satisfied by the matrices where <span class="math inline"><em>M</em> = −<em>M</em><sup>*</sup></span>. Note that this means the diagonals are all <span class="math inline">0</span>.</p>
+<h3 id="scale-of-specific-lie-algebra-matrices-doesnt-matter">Scale of specific Lie algebra matrices doesn’t matter</h3>
+<p>Because of <span class="math inline"><em>t</em></span>.</p>
+<h3 id="commutation-of-lie-group-algebra">Commutation of Lie group algebra</h3>
+<p>Consider two members of the Lie algebra: <span class="math inline"><em>A</em></span> and <span class="math inline"><em>B</em></span>. The commutator is:</p>
+<p><span class="math inline"><em>A</em></span>.</p>
+<p>The corresponding Lie group member is:</p>
+<p><span class="math inline"><em>e</em><sup><em>t</em>(<em>A</em> + <em>B</em>)</sup> = <em>e</em><sup><em>t</em><em>A</em></sup><em>e</em><sup><em>t</em><em>B</em></sup></span></p>
+<p>While the Lie group multiplication may not commute, the corresponding addition of the Lie algebra does.</p>
+<h2 id="the-lie-bracket">The Lie bracket</h2>
+<p>We can define the Lie bracket from the ring commutator.</p>
+<p>We use the Lie bracket, rather than multiplication, as the operator over a field homomorphism.</p>
+<p><span class="math inline">[<em>A</em>, <em>B</em>]</span></p>
+<p>This generates another element in the algebra.</p>
+<p>This satisifies:</p>
+<ul>
+<li><p>Bilinearity: <span class="math inline">[<em>x</em><em>A</em> + <em>y</em><em>B</em>, <em>C</em>]=<em>x</em>[<em>A</em>, <em>C</em>]+<em>y</em>[<em>B</em>, <em>C</em>]</span></p></li>
+<li><p>Alternativity: <span class="math inline">[<em>A</em>, <em>A</em>]=0</span></p></li>
+<li><p>Jacobi identity: <span class="math inline">[<em>A</em>, [<em>B</em>, <em>C</em>]] + [<em>C</em>, [<em>A</em>, <em>B</em>]] + [<em>B</em>, [<em>C</em>, <em>A</em>]] = 0</span></p></li>
+<li><p>Anticommutivity: <span class="math inline">[<em>A</em>, <em>B</em>]= − [<em>B</em>, <em>A</em>]</span></p></li>
+</ul>
+<p>One option for the Lie bracket is the ring commutor. So that:</p>
+<p><span class="math inline">[<em>A</em>, <em>B</em>]=<em>A</em><em>B</em> − <em>B</em><em>A</em></span></p>
+<h2 id="commutation-of-lie-groups">Commutation of Lie groups</h2>
+<p>We can measure commutation of Lie groups using:</p>
+<p><span class="math inline"><em>A</em><em>B</em><em>A</em><sup>−1</sup><em>B</em><sup>−1</sup></span></p>
+<p>If the group commutes then:</p>
+<p><span class="math inline"><em>A</em><em>B</em><em>A</em><sup>−1</sup><em>B</em><sup>−1</sup> = <em>B</em><em>A</em><sup>−1</sup><em>B</em><sup>−1</sup> = <em>I</em></span></p>
+<h3 id="commutation-of-lie-algebra-complete-this">Commutation of Lie algebra: COMPLETE THIS</h3>
+<p>This corresponds to <span class="math inline">[<em>A</em>, <em>B</em>]=<em>A</em><em>B</em> − <em>B</em><em>A</em></span> in the underlying lie algebra, if we expand.</p>
+<p><span class="math inline"><em>A</em> = <em>e</em><sup><em>t</em><em>a</em></sup></span></p>
+<p><span class="math inline"><em>B</em> = <em>e</em><sup><em>t</em><em>b</em></sup></span></p>
+<p><span class="math inline"><em>A</em><em>B</em><em>A</em><sup>−1</sup><em>B</em><sup>−1</sup> = <em>e</em></span></p>
+<h1 id="lie-algebra-of-specific-lie-groups">Lie algebra of specific Lie groups</h1>
+<h2 id="lie-algebra-of-on">Lie algebra of <span class="math inline"><em>O</em>(<em>n</em>)</span></h2>
+<h3 id="on-forms-a-lie-group"><span class="math inline"><em>O</em>(<em>n</em>)</span> forms a Lie group</h3>
+<h3 id="lie-algebra-of-on-1">Lie algebra of <span class="math inline"><em>O</em>(<em>n</em>)</span></h3>
+<p>The Lie algebra of (n) is defined as:</p>
+<p><span class="math inline">𝔬(<em>n</em>)={<em>X</em> ∈ ℝ<sup><em>n</em> × <em>n</em></sup>|<em>e</em><sup><em>t</em><em>X</em></sup> ∈ <em>O</em>(<em>n</em>)∀<em>t</em> ∈ ℝ}</span></p>
+<p>This is satisfied by the skew-symmetric matrices where <span class="math inline"><em>M</em> = −<em>M</em><sup><em>T</em></sup></span>. Note that this means the diagonals are all <span class="math inline">0</span>.</p>
+<h2 id="lie-algebra-of-un">Lie algebra of <span class="math inline"><em>U</em>(<em>n</em>)</span></h2>
+<h3 id="un-forms-a-lie-group"><span class="math inline"><em>U</em>(<em>n</em>)</span> forms a Lie group</h3>
+<h3 id="lie-algebra-of-un-1">Lie algebra of <span class="math inline"><em>U</em>(<em>n</em>)</span></h3>
+<p>The Lie algebra of (n) is defined as:</p>
+<p><span class="math inline">𝔲(<em>n</em>)={<em>X</em> ∈ ℂ<sup><em>n</em> × <em>n</em></sup>|<em>e</em><sup><em>t</em><em>X</em></sup> ∈ <em>U</em>(<em>n</em>)∀<em>t</em> ∈ ℝ}</span></p>
+<p>This is satisfied by the skew-Hermitian matrices where <span class="math inline"><em>M</em> = −<em>M</em><sup>*</sup></span>. Note that this means the diagonals are all <span class="math inline">0</span> or pure imaginary.</p>
+<h2 id="lie-algebra-of-son">Lie algebra of <span class="math inline"><em>S</em><em>O</em>(<em>n</em>)</span></h2>
+<h3 id="son-forms-a-lie-group"><span class="math inline"><em>S</em><em>O</em>(<em>n</em>)</span> forms a Lie group</h3>
+<h3 id="lie-algebra-of-son-1">Lie algebra of <span class="math inline"><em>S</em><em>O</em>(<em>n</em>)</span></h3>
+<p>The Lie algebra of (n) is defined as:</p>
+<p><span class="math inline">𝔰𝔬(<em>n</em>)={<em>X</em> ∈ ℝ<sup><em>n</em> × <em>n</em></sup>|<em>e</em><sup><em>t</em><em>X</em></sup> ∈ <em>S</em><em>O</em>(<em>n</em>)∀<em>t</em> ∈ ℝ}</span></p>
+<p>This is satisfied by the skew-symmetric matrices where <span class="math inline"><em>M</em> = −<em>M</em><sup><em>T</em></sup></span>. Note that this means the diagonals are all <span class="math inline">0</span>.</p>
+<h2 id="lie-algebra-of-sun">Lie algebra of <span class="math inline"><em>S</em><em>U</em>(<em>n</em>)</span></h2>
+<h3 id="sun-forms-a-lie-group"><span class="math inline"><em>S</em><em>U</em>(<em>n</em>)</span> forms a Lie group</h3>
+<h3 id="lie-algebra-of-sun-1">Lie algebra of <span class="math inline"><em>S</em><em>U</em>(<em>n</em>)</span></h3>
+<p>The Lie algebra of (n) is defined as:</p>
+<p><span class="math inline">𝔰𝔲(<em>n</em>)={<em>X</em> ∈ ℂ<sup><em>n</em> × <em>n</em></sup>|<em>e</em><sup><em>t</em><em>X</em></sup> ∈ <em>S</em><em>U</em>(<em>n</em>)∀<em>t</em> ∈ ℝ}</span></p>
+<p>This is satisfied by the skew-Hermitian matrices where <span class="math inline"><em>M</em> = −<em>M</em><sup>*</sup></span> and the trace is <span class="math inline">0</span>. Note that this means the diagonals are all <span class="math inline">0</span> or pure imaginary.</p>
+<h1 id="hypercomplex-numbers">Hypercomplex numbers</h1>
+<h2 id="hypercomplex-numbers-1">Hypercomplex numbers</h2>
+<h2 id="quaternions">Quaternions</h2>
+<h2 id="clifford-algebra">Clifford algebra</h2>
+<h1 id="sort">Sort</h1>
+<h2 id="projective-line-in-the-field">Projective line in the field</h2>

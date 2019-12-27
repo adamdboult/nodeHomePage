@@ -1,1 +1,246 @@
-
+<h1 id="partial-differentiation">Partial differentiation</h1>
+<h2 id="the-partial-differential-operator">The partial differential operator</h2>
+<h3 id="differential">Differential</h3>
+<p>When we change the value of an input to a function, we also change the output. We can examine these changes.</p>
+<p>Consider the value of a function <span class="math inline"><em>f</em>(<em>x</em>)</span> at points <span class="math inline"><em>x</em><sub>1</sub></span> and <span class="math inline"><em>x</em><sub>2</sub></span>.</p>
+<p><span class="math inline"><em>y</em><sub>1</sub> = <em>f</em>(<em>x</em><sub>1</sub>)</span></p>
+<p><span class="math inline"><em>y</em><sub>2</sub> = <em>f</em>(<em>x</em><sub>2</sub>)</span></p>
+<p><span class="math inline"><em>y</em><sub>2</sub> − <em>y</em><sub>1</sub> = <em>f</em>(<em>x</em><sub>2</sub>)−<em>f</em>(<em>x</em><sub>1</sub>)</span></p>
+<p><span class="math inline">$\frac{y_2-y_1}{x_2-x_1}=\frac{f(x_2)-f(x_1)}{x_2-x_1}$</span></p>
+<p>Let’s define <span class="math inline"><em>x</em><sub>2</sub></span> in terms of its distance from x_1:</p>
+<p><span class="math inline"><em>x</em><sub>2</sub> = <em>x</em><sub>1</sub> + <em>ϵ</em></span></p>
+<p><span class="math inline">$\frac{y_2-y_1}{\epsilon }=\frac{f(x_1+\epsilon )-f(x_1)}{\epsilon }$</span></p>
+<p>We define the differential of a function as:</p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )-f(x)}{\epsilon }$</span></p>
+<p>If this is defined, then we say the function is differentiable at that point.</p>
+<h3 id="differential-operator">Differential operator</h3>
+<h2 id="differentiating-constants-the-identity-function-and-linear-functions">Differentiating constants, the identity function, and linear functions</h2>
+<h3 id="constants">Constants</h3>
+<p><span class="math inline"><em>f</em>(<em>x</em>)=<em>c</em></span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )-f(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{c-c}{\epsilon }=0$</span></p>
+<h3 id="x"><span class="math inline"><em>x</em></span></h3>
+<p><span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em></span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )-f(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{x+\epsilon -x}{\epsilon }=1$</span></p>
+<h3 id="addition">Addition</h3>
+<p><span class="math inline"><em>f</em>(<em>x</em>)=<em>g</em>(<em>x</em>)+<em>h</em>(<em>g</em>)</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )+h(x+\epsilon )-g(x)-h(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )-g(x)}{\epsilon }+\lim_{\epsilon \rightarrow 0^+}\frac{h(x+\epsilon )-h(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\frac{\delta g}{\delta x}+\frac{\delta h}{\delta x}$</span></p>
+<h2 id="partial-differentiation-is-a-linear-operator">Partial differentiation is a linear operator</h2>
+<h3 id="intro">Intro</h3>
+<h2 id="the-chain-rule-the-product-rule-and-the-quotient-rule">The chain rule, the product rule and the quotient rule</h2>
+<h3 id="chain-rule">Chain rule</h3>
+<p><span class="math inline"><em>f</em>(<em>x</em>)=<em>f</em>(<em>g</em>(<em>x</em>))</span></p>
+<p><span class="math inline">$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(g(x+\epsilon) )-f(g(x))}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )-g(x)}{g(x+\epsilon )-g(x)}\frac{f(g(x+\epsilon) )-f(g(x))}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )-g(x)}{\epsilon }\frac{f(g(x+\epsilon) )-f(g(x))}{g(x+\epsilon )-g(x)}$</span></p>
+<p><span class="math inline">$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}[\frac{g(x+\epsilon )-g(x)}{\epsilon }]\lim_{\epsilon \rightarrow 0^+}[\frac{f(g(x+\epsilon) )-f(g(x))}{g(x+\epsilon )-g(x)}]$</span></p>
+<p><span class="math inline">$\frac{\delta f}{\delta x}=\frac{\delta g}{\delta x}\frac{\delta f}{\delta g}$</span></p>
+<h3 id="product-rule">Product rule</h3>
+<p><span class="math inline"><em>y</em> = <em>f</em>(<em>x</em>)<em>g</em>(<em>x</em>)</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x+\epsilon )+f(x)g(x+\epsilon )-f(x)g(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x+\epsilon )}{\epsilon }+\lim_{\epsilon \rightarrow 0^+}\frac{f(x)g(x+\epsilon )-f(x)g(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}g(x+\epsilon )\frac{f(x+\epsilon )-f(x)}{\epsilon }+\lim_{\epsilon \rightarrow 0^+}f(x)\frac{g(x+\epsilon )-g(x)}{\epsilon }$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=g(x)\frac{\delta f}{\delta x }+f(x)\frac{\delta g}{\delta x}$</span></p>
+<h3 id="quotient-rule">Quotient rule</h3>
+<p><span class="math inline">$y=\frac{f(x)}{g(x)}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}\frac{f(x)}{g(x)}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}f(x)\frac{1}{g(x)}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=\frac{\delta f}{\delta x}\frac{1}{g(x)}-\frac{\delta g}{\delta x}\frac{f(x)}{g(x)^2}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=\frac{\frac{\delta f}{\delta x}g(x)-\frac{\delta g}{\delta x}f(x)}{g(x)^2}$</span></p>
+<h2 id="differentiating-natural-number-power-functions">Differentiating natural number power functions</h2>
+<h3 id="other">Other</h3>
+<p><span class="math inline">$\frac{\delta }{\delta x}x^n=\lim_{\delta \rightarrow 0}\frac{(x+\delta)^n-x^n}{\delta}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}x^n=\lim_{\delta \rightarrow 0}\frac{(\sum_{i=0}^n x^i\delta ^{n-i}\frac{n!}{i!(n-i)!})-x^n}{\delta}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}x^n=\lim_{\delta \rightarrow 0}\sum_{i=0}^{n-1} x^i\delta ^{n-i-1}\frac{n!}{i!(n-i)!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}x^n=\lim_{\delta \rightarrow 0}x^{n-1}\frac{n!}{(n-1)!(n-n+1)!}+\sum_{i=0}^{n-2} x^i\delta ^{n-i-1}\frac{n!}{i!(n-i)!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}x^n=nx^{n-1}$</span></p>
+<h2 id="lhôpitals-rule">L’Hôpital’s rule</h2>
+<h3 id="lhôpitals-rule-1">L’Hôpital’s rule</h3>
+<p>If there are two functions which are both tend to <span class="math inline">0</span> at a limit, calculating the limit of their divisor is hard. We can use L’Hopital’s rule.</p>
+<p>We want to calculate:</p>
+<p><span class="math inline">$\lim_{x\rightarrow c}\frac{f(x)}{g(x)}$</span></p>
+<p>This is:</p>
+<p><span class="math inline">$\lim_{x\rightarrow c}\frac{f(x)}{g(x)}=\lim_{x\rightarrow c}\frac{\frac{f(x)-0}{\delta}}{\frac{g(x)-0}{\delta}}$</span></p>
+<p>If:</p>
+<p><span class="math inline">lim<sub><em>x</em> → <em>c</em></sub><em>f</em>(<em>x</em>)=lim<sub><em>x</em> → <em>c</em></sub><em>g</em>(<em>x</em>)=0</span></p>
+<p>Then</p>
+<p><span class="math inline">$\lim_{x\rightarrow c}\frac{f(x)}{g(x)}=\lim_{x\rightarrow c}\frac{\frac{f(x)-f(c)}{\delta}}{\frac{g(x)-f(c)}{\delta}}$</span></p>
+<p><span class="math inline">$\lim_{x\rightarrow c}\frac{f(x)}{g(x)}=\frac{f'(x)}{g'(x)}$</span></p>
+<h2 id="rolles-theorem">Rolle’s theorem</h2>
+<h3 id="rolles-theorem-1">Rolle’s theorem</h3>
+<p>Take a real function <span class="math inline"><em>f</em>(<em>x</em>)</span> on closed interval <span class="math inline">[<em>a</em>, <em>b</em>]</span>, differentiable on <span class="math inline">(<em>a</em>, <em>b</em>, )</span>, and <span class="math inline"><em>f</em>(<em>a</em>)=<em>f</em>(<em>b</em>)</span>.</p>
+<p>Rolle’s theorem states that:</p>
+<p><span class="math inline">∃<em>c</em> ∈ (<em>a</em>, <em>b</em>)(<em>f</em>’(<em>c</em>)=0)</span></p>
+<p>Generalised Rolle’s theorem states that:</p>
+<p>Generalised Rolle’s theorem implies Rolle’s theorem, so we only need to prove the generalised theorem.</p>
+<h2 id="mean-value-theorem">Mean value theorem</h2>
+<h3 id="mean-value-theorem-1">Mean value theorem</h3>
+<p>Take a real function <span class="math inline"><em>f</em>(<em>x</em>)</span> on closed interval <span class="math inline">[<em>a</em>, <em>b</em>]</span>, differentiable on <span class="math inline">(<em>a</em>, <em>b</em>, )</span>.</p>
+<p>The mean value theorem states that:</p>
+<p><span class="math inline">$\exists c\in(a,b) (f’(c)=\frac{f(b)-f(a)}{b-a})$</span></p>
+<h2 id="elasticity">Elasticity</h2>
+<h3 id="introduction">Introduction</h3>
+<p>We have (x)</p>
+<p><span class="math inline">$Ef(x)=\frac{x}{f(x)}\frac{\delta f(x)}{\delta x}$</span></p>
+<p>This is the same as:</p>
+<p><span class="math inline">$Ef(x)=\frac{\delta \ln f(x)}{\delta \ln x}$</span></p>
+<h2 id="smooth-functions">Smooth functions</h2>
+<h2 id="analytic-function">Analytic function</h2>
+<h3 id="introduction-1">Introduction</h3>
+<h1 id="higher-order-differentials">Higher-order differentials</h1>
+<h2 id="differentiable-functions">Differentiable functions</h2>
+<h3 id="introduction-2">Introduction</h3>
+<p>A differentiable function is one where the differential is defined at all points on the real line.</p>
+<p>All differentiable functions are continuous. Not all continuous functions are differentiable.</p>
+<h3 id="differentiability-class">Differentiability class</h3>
+<p>We can describe a function with its differentiability class. If a function can be differentiated <span class="math inline"><em>n</em></span> times and these differentials are all continous, then the function is class <span class="math inline"><em>C</em><sup><em>n</em></sup></span>.</p>
+<h3 id="smooth-functions-1">Smooth functions</h3>
+<p>If a function can be differentiated infinitely many times to produce continous functions, it is <span class="math inline"><em>C</em><sup>∞</sup></span>, or smooth.</p>
+<h2 id="critial-points">Critial points</h2>
+<h3 id="critical-points">Critical points</h3>
+<p>Where partial derivative are <span class="math inline">0</span>.</p>
+<h1 id="exponentials">Exponentials</h1>
+<h2 id="defining-e-as-a-binomial">Defining <span class="math inline"><em>e</em></span> as a binomial</h2>
+<h3 id="lemma">Lemma</h3>
+<p><span class="math inline">$f(n,i)=\frac{n!}{n^i(n-i)!}$</span></p>
+<p><span class="math inline">$f(n,i)=\frac{(n-i)!\prod_{j=n-i+1}^nj}{n^i(n-i)!}$</span></p>
+<p><span class="math inline">$f(n,i)=\frac{\prod_{j=n-i+1}^nj}{n^i}$</span></p>
+<p><span class="math inline">$f(n,i)=\frac{\prod_{j=1}^i(j+n-i)}{n^i}$</span></p>
+<p><span class="math inline">$f(n,i)=\prod_{j=1}^i\frac{j+n-i}{n}$</span></p>
+<p><span class="math inline">$f(n,i)=\prod_{j=1}^i(\frac{n}{n}+\frac{j-i}{n})$</span></p>
+<p><span class="math inline">$f(n,i)=\prod_{j=1}^i(1+\frac{j-i}{n})$</span></p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }f(n,i)=\lim_{n\rightarrow \infty }\prod_{j=1}^i(1+\frac{j-i}{n})$</span></p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }f(n,i)=\prod_{j=1}^i1$</span></p>
+<p><span class="math inline">lim<sub><em>n</em> → ∞</sub><em>f</em>(<em>n</em>, <em>i</em>)=1</span></p>
+<h3 id="defining-e">Defining <span class="math inline"><em>e</em></span></h3>
+<p>We know that:</p>
+<p><span class="math inline">$(a+b)^n=\sum^n_{i=0} a^i b^{n-i} \frac{n!}{i!(n-i)!}$</span></p>
+<p>Let’s set <span class="math inline"><em>b</em> = 1</span></p>
+<p><span class="math inline">$(a+1)^n=\sum^n_{i=0} a^i \frac{n!}{i!(n-i)!}$</span></p>
+<p>Let’s set <span class="math inline">$a=\frac{1}{n}$</span></p>
+<p><span class="math inline">$(1+\frac{1}{n})^{n}=\sum^{n}_{i=0} \frac{1}{n^i} \frac{n!}{i!(n-i)!}$</span></p>
+<p><span class="math inline">$(1+\frac{1}{n})^{n}=\sum^{n}_{i=0} \frac{1}{i!} \frac{n!}{n^i(n-i)!}$</span></p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{n}=\lim_{n\rightarrow \infty }\sum^{n}_{i=0} \frac{1}{i!} \frac{n!}{n^i(n-i)!}$</span></p>
+<p>From the lemma above:</p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{n}=\sum^{\infty }_{i=0} \frac{1}{i!}$</span></p>
+<p><span class="math inline">$e=\sum^{\infty }_{i=0} \frac{1}{i!}$</span></p>
+<h3 id="defining-ex">Defining <span class="math inline"><em>e</em><sup><em>x</em></sup></span></h3>
+<p><span class="math inline">$e=\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{n}$</span></p>
+<p><span class="math inline">$e^x=\lim_{n\rightarrow \infty }(1+\frac{1}{n})^{nx}$</span></p>
+<p><span class="math inline">$e^x=\lim_{n\rightarrow \infty }\sum^{nx}_{i=0} \frac{1}{n^i} \frac{(nx)!}{i!(nx-i)!}$</span></p>
+<p><span class="math inline">$e^x=\lim_{n\rightarrow \infty }\sum^{nx}_{i=0} \frac{x^i}{i!} \frac{(nx)!}{(nx)^i(nx-i)!}$</span></p>
+<p>From the lemma:</p>
+<p><span class="math inline">$e^x=\sum^{\infty }_{i=0} \frac{x^i}{i!}$</span></p>
+<h2 id="differentiating-ex">Differentiating <span class="math inline"><em>e</em><sup><em>x</em></sup></span></h2>
+<h3 id="intro-1">Intro</h3>
+<p>We have <span class="math inline">$e^x=\sum^{\infty }_{i=0} \frac{x^i}{i!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}e^x=\frac{\delta }{\delta x}\sum^{\infty }_{i=0} \frac{x^i}{i!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}e^x=\sum^{\infty }_{i=0} \frac{\delta }{\delta x}\frac{x^i}{i!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}e^x=\sum^{\infty }_{i=1} \frac{\delta }{\delta x}\frac{x^i}{i!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}e^x=\sum^{\infty }_{i=1} \frac{x^{i-1}}{(i-1)!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}e^x=\sum^{\infty }_{i=0} \frac{x^{i}}{i!}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}e^x=e^x$</span></p>
+<h2 id="differentiating-exponents-logarithms-and-power-functions">Differentiating exponents, logarithms and power functions</h2>
+<h3 id="differentiating-the-natural-logarithm">Differentiating the natural logarithm</h3>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\frac{\ln(x+\delta)-ln(x)}{\delta }$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\frac{\ln\frac{x+\delta}{x}}{\delta }$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\frac{\ln(1+\frac{\delta}{x})}{\delta }$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}\lim_{\delta \rightarrow 0}\frac{x}{\delta}\ln(1+\frac{\delta}{x})$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}\ln(\lim_{\delta \rightarrow 0}(1+\frac{\delta}{x})^{\frac{x}{\delta }})$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}\ln(e)$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}$</span></p>
+<h3 id="differentiating-logarithms-of-other-bases">Differentiating logarithms of other bases</h3>
+<p><span class="math inline">$log_a(x)=\frac{\log_b(x)}{\log_b(a)}$</span></p>
+<p><span class="math inline">$log_a(x)=\frac{\ln(x)}{\ln(a)}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\log_a(x)=\frac{\delta }{\delta x}\frac{\ln(x)}{ln(a)}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\log_a(x)=\frac{1}{xln(a)}$</span></p>
+<h3 id="exponents">Exponents</h3>
+<p><span class="math inline"><em>y</em> = <em>a</em><sup><em>x</em></sup></span></p>
+<p><span class="math inline">ln(<em>y</em>)=<em>x</em>ln(<em>a</em>)</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln(y)=\frac{\delta }{\delta x}x\ln(a)$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}\ln(y)=\ln(a)$</span></p>
+<p><span class="math inline">$\frac{1}{y}\frac{\delta }{\delta x}y=\ln(a)$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}a^x=a^x\ln(a)$</span></p>
+<h3 id="power-functions">Power functions</h3>
+<p><span class="math inline"><em>y</em> = <em>x</em><sup><em>n</em></sup></span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}x^n$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}e^{n\ln(x)}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=\frac{n}{x}e^{n\ln(x)}$</span></p>
+<p><span class="math inline">$\frac{\delta }{\delta x}y=nx^{n-1}$</span></p>
+<h1 id="integration">Integration</h1>
+<h2 id="riemann-integral">Riemann integral</h2>
+<h3 id="riemann-sums">Riemann sums</h3>
+<p>Given a function <span class="math inline"><em>f</em>(<em>x</em>)</span> and an interval <span class="math inline">[<em>a</em>, <em>b</em>]</span>, we can divide <span class="math inline">[<em>a</em>, <em>b</em>]</span> into <span class="math inline"><em>n</em></span> sections and calculate:</p>
+<p><span class="math inline">$\sum_{j=0}^{n(b-a)}f(a+\frac{j}{n})$</span></p>
+<p>This is the Riemann sum.</p>
+<h3 id="riemann-integral-1">Riemann integral</h3>
+<p>We take the limit of the Riemann sum as <span class="math inline"><em>n</em> → ∞</span></p>
+<p><span class="math inline">$\int_a^b f(x)dx:= \lim_{n\rightarrow \infty } \sum_{j=0}^{n(b-a)} f(a+ \frac{j}{n} )$</span></p>
+<h3 id="linearity">Linearity</h3>
+<p><span class="math inline">$\int_a^bf(x)+g(x)dx=\lim_{n\rightarrow \infty }\sum_{j=0}^{n(b-a)}f(a+\frac{j}{n})+g(a+\frac{j}{n})$</span></p>
+<p><span class="math inline">$\int_a^bf(x)+g(x)dx=\lim_{n\rightarrow \infty }\sum_{j=0}^{n(b-a)}f(a+\frac{j}{n})+\lim_{n\rightarrow \infty }\sum_{j=0}^{n(b-a)}g(a+\frac{j}{n})$</span></p>
+<p><span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)+<em>g</em>(<em>x</em>)<em>d</em><em>x</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> + ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>g</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+<h3 id="continuation">Continuation</h3>
+<p><span class="math inline">$\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }\sum_{j=0}^{n(b-a)}f(a+\frac{j}{n})+\lim_{n\rightarrow \infty }\sum_{j=0}^{n(c-b)}f(b+\frac{j}{n})$</span></p>
+<p><span class="math inline">$\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }[\sum_{j=0}^{n(b-a)}f(a+\frac{j}{n})+\sum_{j=0}^{n(c-b)}f(b+\frac{j}{n})]$</span></p>
+<p><span class="math inline">$\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }[\sum_{j=0}^{n(b-a)}f(a+\frac{j}{n})+\sum_{j=n(b-a)}^{n(c-b)+n(b-a)}f(b+\frac{j-n(b-a)}{n})]$</span></p>
+<p><span class="math inline">$\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }[\sum_{j=0}^{n(b-a)}f(a+\frac{j}{n})+\sum_{j=n(b-a)}^{n(c-a)}f(a+\frac{j}{n})]$</span></p>
+<p><span class="math inline">$\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }[\sum_{j=0}^{n(c-a)}f(a+\frac{j}{n})$</span></p>
+<p><span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> + ∫<sub><em>b</em></sub><sup><em>c</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = ∫<sub><em>a</em></sub><sup><em>c</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+<h2 id="definite-and-indefinite-integrals">Definite and indefinite integrals</h2>
+<h3 id="introduction-3">Introduction</h3>
+<h2 id="anti-derivative">Anti-derivative</h2>
+<h3 id="content">Content</h3>
+<h2 id="integration-by-parts">Integration by parts</h2>
+<h3 id="integration-by-parts-1">Integration by parts</h3>
+<p>We have:</p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=f(x)g(x)$</span></p>
+<p>We want that in terms of <span class="math inline"><em>y</em></span>.</p>
+<p>We know from the product rule of differentiation:</p>
+<p><span class="math inline"><em>y</em> = <em>a</em>(<em>x</em>)<em>b</em>(<em>x</em>)</span></p>
+<p>Means that:</p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=a'(x)b(x)+a(x)b'(x)$</span></p>
+<p>So let’s relabel <span class="math inline"><em>f</em>(<em>x</em>)</span> as <span class="math inline"><em>h</em>′(<em>x</em>)</span></p>
+<p><span class="math inline"><em>δ</em></span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=h'(x)g(x)$</span></p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}+h(x)g'(x)=h'(x)g(x)+h(x)g'(x)$</span></p>
+<p><span class="math inline"><em>y</em> + ∫<em>h</em>(<em>x</em>)<em>g</em>′(<em>x</em>)=∫<em>h</em>′(<em>x</em>)<em>g</em>(<em>x</em>)+<em>h</em>(<em>x</em>)<em>g</em>′(<em>x</em>)</span></p>
+<p><span class="math inline"><em>y</em> + ∫<em>h</em>(<em>x</em>)<em>g</em>′(<em>x</em>)=<em>h</em>(<em>x</em>)<em>g</em>(<em>x</em>)</span></p>
+<p><span class="math inline"><em>y</em> = <em>h</em>(<em>x</em>)<em>g</em>(<em>x</em>)−∫<em>h</em>(<em>x</em>)<em>g</em>′(<em>x</em>)</span></p>
+<p>For example:</p>
+<p><span class="math inline">$\frac{\delta y}{\delta x}=x.\cos(x)$</span></p>
+<p><span class="math inline"><em>f</em>(<em>x</em>)=<em>c</em><em>o</em><em>s</em>(<em>x</em>)</span></p>
+<p><span class="math inline"><em>g</em>(<em>x</em>)=<em>x</em></span></p>
+<p><span class="math inline"><em>h</em>(<em>x</em>)=<em>s</em><em>i</em><em>n</em>(<em>x</em>)</span></p>
+<p><span class="math inline"><em>g</em>′(<em>x</em>)=1</span></p>
+<p>So:</p>
+<p><span class="math inline"><em>y</em> = <em>x</em>∫<em>c</em><em>o</em><em>s</em>(<em>x</em>)<em>d</em><em>x</em> − ∫<em>s</em><em>i</em><em>n</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+<p><span class="math inline"><em>y</em> = <em>x</em><em>s</em><em>i</em><em>n</em>(<em>x</em>)−<em>c</em><em>o</em><em>s</em>(<em>x</em>)+<em>c</em></span></p>
+<h2 id="integrals">Integrals</h2>
+<h3 id="methods-of-integration">Methods of integration</h3>
+<p>Trigonometric substitution</p>
+<p>Inverse function integration function integration</p>
+<p>Anti-derivative</p>
+<p>Taking the derivative of a function provides another function. The anti-derivative of a function is a function which, when differentiated, provides the original function.</p>
+<p>As this function can include any additive constant, there are an infinite number of anti-derivatives for any function.</p>
+<p>Integration</p>
+<p>Limit of summation</p>
+<p>Show same as anti-derivative</p>
+<p>Show properties of function same as summation (can take constants out etc)</p>
+<h3 id="getting-functions-from-derivatives">Getting functions from derivatives</h3>
+<p><span class="math inline">$f(c)=f(a)+\int^c_a \frac{\delta }{\delta x}f(x) dx$</span></p>
+<p>Definite integration</p>
+<p>Indefinite integration</p>
+<h2 id="fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</h2>
+<h3 id="mean-value-theorem-for-integration">Mean value theorem for integration</h3>
+<p>Take function <span class="math inline"><em>f</em>(<em>x</em>)</span>. From the extreme value theorem we know that:</p>
+<p><span class="math inline">∃<em>m</em> ∈ ℝ∃<em>M</em> ∈ ℝ∀<em>x</em> ∈ [<em>a</em>, <em>b</em>](<em>m</em> &lt; <em>f</em>(<em>x</em>)&lt;<em>M</em>)</span></p>
+<h3 id="fundamental-theorem-of-calculus-1">Fundamental theorem of calculus</h3>
+<p>From continuation we know that:</p>
+<p><span class="math inline">∫<sub><em>a</em></sub><sup><em>x</em><sub>1</sub></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> + ∫<sub><em>x</em><sub>1</sub></sub><sup><em>x</em><sub>1</sub> + <em>δ</em><em>x</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = ∫<sub><em>a</em></sub><sup><em>x</em><sub>1</sub> + <em>δ</em><em>x</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+<p><span class="math inline">∫<sub><em>x</em></sub><sup><em>x</em><sub>1</sub> + <em>δ</em><em>x</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = ∫<sub><em>a</em></sub><sup><em>x</em><sub>1</sub> + <em>δ</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> − ∫<sub><em>a</em></sub><sup><em>x</em><sub>1</sub></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+<p>Indefinite integrals</p>

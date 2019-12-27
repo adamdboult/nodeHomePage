@@ -1,1 +1,77 @@
-
+<h1 id="more-on-sequences">More on sequences</h1>
+<h2 id="limit-of-a-sequence">Limit of a sequence</h2>
+<p>A sequence converges to a limit if</p>
+<p>Can converge to a number (1/x)</p>
+<p>Can converge to +/- infinity (x)</p>
+<p>Otherwise, does not converge (1,-1,1,-1…)</p>
+<p>Superior and inferior limits</p>
+<p>A bounded increasing sequence converges to least upper bound</p>
+<h3 id="identifying-the-limit-of-a-sequence">Identifying the limit of a sequence</h3>
+<p>Direct comparison test</p>
+<p>Root test</p>
+<h1 id="divergent-series">Divergent series</h1>
+<h2 id="partial-sum">Partial sum</h2>
+<p>Take a series. We can define the partial sum as:</p>
+<p><span class="math inline">$s_k=\sum_{i=1}^ka_i$</span></p>
+<h2 id="cesàro-sum">Cesàro sum</h2>
+<p>The Cesàro sum is the limit of the average of the first <span class="math inline"><em>n</em></span> partial sums.</p>
+<p>That is:</p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }\frac{1}{n}\sum_{k=1}^ns_k$</span></p>
+<p>Consider the sequence <span class="math inline">{1, −1, 1, −1, ...}</span></p>
+<p>The partial sum is:</p>
+<p><span class="math inline">$s_k=\sum_{i=1}^ka_i$</span></p>
+<p><span class="math inline"><em>s</em><sub><em>k</em></sub> = <em>k</em>mod(2)</span></p>
+<p>The Cesàro sum is: <span class="math inline">$\lim_{n\rightarrow \infty }\frac{1}{n}\sum_{k=1}^ns_k$</span></p>
+<p><span class="math inline">$\lim_{n\rightarrow \infty }\frac{1}{n}\sum_{k=1}^nk\mod(2)$</span></p>
+<p><span class="math inline">$\frac{1}{2}$</span></p>
+<h2 id="abel-summation">Abel summation</h2>
+<h1 id="constructing-the-real-numbers">Constructing the real numbers</h1>
+<h2 id="cauchy-sequences">Cauchy sequences</h2>
+<h3 id="cauchy-sequence">Cauchy sequence</h3>
+<p>A cauchy sequence is a sequence such that for an any arbitrarily small number <span class="math inline"><em>ϵ</em></span>, there is a point in the sequence where all possible pairs after this are even closer together.</p>
+<p><span class="math inline">(∀<em>ϵ</em> &gt; 0)(∃<em>N</em> ∈ ℕ : ∀<em>m</em>, <em>n</em> ∈ ℕ &gt; <em>N</em>)(|<em>a</em><sub><em>m</em></sub> − <em>a</em><sub><em>n</em></sub>|&lt;<em>ϵ</em>)</span></p>
+<p>This last term gives a distance between two entries. In addition to the number line, this could be used on vectors, where distances are defined.</p>
+<p>As a example, <span class="math inline">$\frac{1}{n}$</span> is a cauchy sequence, <span class="math inline">$\sum_i \frac{1}{n}$</span> is not.</p>
+<h3 id="completeness">Completeness</h3>
+<p>Cauchy sequences can be defined on some given set. For example given all the numbers between <span class="math inline">0</span> and <span class="math inline">1</span> there are any number of different cauchy sequences converging at some point.</p>
+<p>If it is possible to define a cauchy sequence on a set where the limit is not in the set, then the set is incomplete.</p>
+<p>For example, the numbers between <span class="math inline">0</span> and <span class="math inline">1</span> but not including <span class="math inline">0</span> and <span class="math inline">1</span> are not complete. It is possible to define sequences which converge to these missing points.</p>
+<p>More abstractly, you could have all vectors where <span class="math inline"><em>x</em><sup>2</sup> + <em>y</em><sup>2</sup> &lt; 1</span>. This is incomplete (or open) as sequences on these vectors can converge to limits not in the set.</p>
+<p>Cauchy sequences are important when considering real numbers. We could define a sequence converging on <span class="math inline">$\sqrt 2$</span>, but as this number is not in the set, it is incomplete.</p>
+<h2 id="incompleteness-of-the-real-numbers">Incompleteness of the real numbers</h2>
+<h3 id="the-square-root-of-2-is-not-a-rational-number">The square root of <span class="math inline">2</span> is not a rational number</h3>
+<p>Let’s prove there are numbers which are not rational. Consider <span class="math inline">$\sqrt 2$</span> and let’s show that it being rational leads to a contradiction.</p>
+<p><span class="math inline">$\sqrt 2=\frac{x}{y}$</span></p>
+<p><span class="math inline">$2=\frac{x^2}{y^2}$</span></p>
+<p><span class="math inline">2<em>y</em><sup>2</sup> = <em>x</em><sup>2</sup></span></p>
+<p>So we know that <span class="math inline"><em>x</em><sup>2</sup></span> is even, and can be shown as <span class="math inline"><em>x</em> = 2<em>n</em></span>.</p>
+<p><span class="math inline">2<em>y</em><sup>2</sup> = (2<em>n</em>)<sup>2</sup></span></p>
+<p><span class="math inline"><em>y</em><sup>2</sup> = 2<em>n</em><sup>2</sup></span></p>
+<p>So <span class="math inline"><em>y</em></span> is even. But if both <span class="math inline"><em>x</em></span> and <span class="math inline"><em>y</em></span> are even, then the fraction was not reduced.</p>
+<p>This presents a contraction so the original statement must have been false.</p>
+<p>So we know there isn’t a rational solution to <span class="math inline">$\sqrt 2$</span>.</p>
+<h2 id="density-of-rationals-and-reals">Density of rationals and reals</h2>
+<h3 id="rationals-are-dense-in-reals">Rationals are dense in reals</h3>
+<h3 id="reals-are-dense-in-reals">Reals are dense in reals</h3>
+<h3 id="reals-are-dense-in-rationals">Reals are dense in rationals</h3>
+<h2 id="sigma--algebra"><span class="math inline"><em>σ</em></span>-algebra</h2>
+<h3 id="review-of-algebra-on-a-set">Review of algebra on a set</h3>
+<p>An algebra, <span class="math inline"><em>Σ</em></span>, on set <span class="math inline"><em>s</em></span> is a set of subsets of <span class="math inline"><em>s</em></span> such that:</p>
+<ul>
+<li><p>Closed under intersection: If <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> are in <span class="math inline"><em>Σ</em></span> then <span class="math inline"><em>a</em> ∧ <em>b</em></span> must also be in <span class="math inline"><em>Σ</em></span></p></li>
+<li><p><span class="math inline">∀<em>a</em><em>b</em>[(<em>a</em> ∈ <em>Σ</em> ∧ <em>b</em> ∈ <em>Σ</em>)→(<em>a</em> ∧ <em>b</em> ∈ <em>Σ</em>)]</span></p></li>
+<li><p>Closed under union: If <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> are in <span class="math inline"><em>Σ</em></span> then <span class="math inline"><em>a</em> ∨ <em>b</em></span> must also be in <span class="math inline"><em>Σ</em></span>.</p></li>
+<li><p><span class="math inline">∀<em>a</em><em>b</em>[(<em>a</em> ∈ <em>Σ</em> ∧ <em>b</em> ∈ <em>Σ</em>)→(<em>a</em> ∨ <em>b</em> ∈ <em>Σ</em>)]</span></p></li>
+</ul>
+<p>If both of these are true, then the following is also true:</p>
+<ul>
+<li><p>Closed under complement: If <span class="math inline"><em>a</em></span> is in <span class="math inline"><em>Σ</em></span> then <span class="math inline"><em>s</em> ∖ <em>a</em></span> must also be in <span class="math inline"><em>Σ</em></span></p></li>
+</ul>
+<p>We also require that the null set (and therefore the original set, null’s complement) is part of the algebra.</p>
+<h3 id="sigma--algebra-1"><span class="math inline"><em>σ</em></span>-algebra</h3>
+<p>A <span class="math inline"><em>σ</em></span>-algebra is an algebra with an additional condition:</p>
+<p>All countable unions of sets in <span class="math inline"><em>A</em></span> are also in <span class="math inline"><em>A</em></span>.</p>
+<p>This adds a constraint. Consider the real numbers with an algebra of all finite sets.</p>
+<p>This contains all finite subsets, and their complements. It does not contain <span class="math inline">ℕ</span>.</p>
+<p>However a <span class="math inline"><em>σ</em></span>-algebra requires all countable unions to be including, and the natural numbers are a countable union.</p>
+<p>The power set is a <span class="math inline"><em>σ</em></span>-algebra. All other <span class="math inline"><em>σ</em></span>-algebras are subsets of the power set.</p>

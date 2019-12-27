@@ -1,1 +1,400 @@
-
+<h1 id="introduction-to-sets">Introduction to sets</h1>
+<h2 id="membership-relation">Membership relation</h2>
+<p>Say we have a preterite <span class="math inline"><em>P</em>(<em>x</em>)</span> which is true for some values of <span class="math inline"><em>x</em></span>. Sets allow us to explore the properties of these values.</p>
+<p>We may want to talk about a collection of terms for which <span class="math inline"><em>P</em>(<em>x</em>)</span> is true, which we call a set.</p>
+<p>To do this we need to introduce new axioms, however first we can add (conservative) definitions to help us do this.</p>
+<p>We introduce a new relation: membership. If element <span class="math inline"><em>x</em></span> is in set <span class="math inline"><em>s</em></span> then the following relation is true, otherwise it is false:</p>
+<p><span class="math inline"><em>x</em> ∈ <em>s</em></span></p>
+<p>Sets are also terms. In first-order logic they will be included in quantifiers. Indeed, in set theory, we aim to treat everything as sets.</p>
+<p>If a term is not a member of another term, we can write this using the non-member relation as follows:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>s</em>[¬(<em>x</em> ∈ <em>s</em>)↔<em>x</em> ∉ <em>s</em>]</span></p>
+<h2 id="axiom-of-extensionality">Axiom of extensionality</h2>
+<p>If two sets contain the same elements, they are equal.</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[∀<em>z</em>(<em>z</em> ∈ <em>x</em> ↔ <em>z</em> ∈ <em>y</em>)→<em>x</em> = <em>y</em>]</span></p>
+<p>This is an axiom, not a definition, because equality was defined as part of first-order logic.</p>
+<p>Note that this is not bidirectional. <span class="math inline"><em>x</em> = <em>y</em></span> does not imply that <span class="math inline"><em>x</em></span> and <span class="math inline"><em>y</em></span> contain the same elements. This is appropraite as <span class="math inline">$\frac{1}{2}= \frac{2}{4}$</span> for example, even though they are written differently as sets.</p>
+<h3 id="reflexivity-of-equality">Reflexivity of equality</h3>
+<p>The reflexive property is:</p>
+<p><span class="math inline">∀<em>x</em>(<em>x</em> = <em>x</em>)</span></p>
+<p>We can replace the intance of <span class="math inline"><em>y</em></span> with <span class="math inline"><em>x</em></span>:</p>
+<p><span class="math inline">∀<em>x</em>[∀<em>z</em>(<em>z</em> ∈ <em>x</em> ↔ <em>z</em> ∈ <em>x</em>)→<em>x</em> = <em>x</em>]</span></p>
+<p>We can show that the following is true:</p>
+<p><span class="math inline">∀<em>z</em>(<em>z</em> ∈ <em>x</em> ↔ <em>z</em> ∈ <em>x</em>)</span></p>
+<p>Therefore:</p>
+<p><span class="math inline">∀<em>x</em>[<em>T</em> → <em>x</em> = <em>x</em>]</span></p>
+<p><span class="math inline"><em>x</em> = <em>x</em></span></p>
+<h3 id="symmetry-of-equality">Symmetry of equality</h3>
+<p>The symmetry property is:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[(<em>x</em> = <em>y</em>)↔(<em>y</em> = <em>x</em>)]</span></p>
+<p>We know that the following are true:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[∀<em>z</em>(<em>z</em> ∈ <em>x</em> ↔ <em>z</em> ∈ <em>y</em>)→<em>x</em> = <em>y</em>]</span></p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[∀<em>z</em>(<em>z</em> ∈ <em>x</em> ↔ <em>z</em> ∈ <em>y</em>)→<em>y</em> = <em>x</em>]</span></p>
+<p>So:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[∀<em>z</em>(<em>z</em> ∈ <em>x</em> ↔ <em>z</em> ∈ <em>y</em>)→(<em>x</em> = <em>y</em> ∧ <em>y</em> = <em>x</em>)]</span></p>
+<h3 id="transitivity-of-equality">Transitivity of equality</h3>
+<p>The transitive property is:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>∀<em>z</em>[(<em>x</em> = <em>y</em> ∧ <em>y</em> = <em>z</em>)→<em>x</em> = <em>z</em>]</span></p>
+<h3 id="substitution-for-functions">Substitution for functions</h3>
+<p>The substitutive property for functions is:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[(<em>x</em> = <em>y</em>)→(<em>f</em>(<em>x</em>)=<em>f</em>(<em>y</em>))]</span></p>
+<h3 id="substitution-for-formulae">Substitution for formulae</h3>
+<p>The substitutive property for formulae is:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[((<em>x</em> = <em>y</em>)∧<em>P</em>(<em>x</em>)) → <em>P</em>(<em>y</em>)]</span></p>
+<p>Doesn’t this require iterating over predicates? Is this possible in first order logic??</p>
+<h3 id="result-1-the-empty-set-is-unique">Result 1: The empty set is unique</h3>
+<p>We can now show the empty set is unique.</p>
+<h3 id="result-2-every-element-of-a-set-exists">Result 2: Every element of a set exists</h3>
+<p>If an element did not exist, the set containing it would be equal to a set which did not contain that element.</p>
+<h3 id="result-3-sets-are-unique">Result 3: Sets are unique</h3>
+<h2 id="equivalence-classes">Equivalence classes</h2>
+<p>We have already ready defined the relationship equality, between terms.</p>
+<p><span class="math inline"><em>a</em> = <em>b</em></span>.</p>
+<p>Sometimes we may wish to talk about a collection of terms which are all equal to each other. This is an equivalence class.</p>
+<p>Though we have not yet defined it, integers are example of this. For example <span class="math inline">−1</span> can be written as <span class="math inline">0 − 1</span>, <span class="math inline">1 − 2</span> and so on.</p>
+<p><span class="math inline">∀<em>y</em><em>f</em><em>o</em><em>r</em><em>a</em><em>l</em><em>l</em><em>x</em><em>x</em> = <em>y</em> → <em>x</em> ∈ <em>z</em></span></p>
+<p>For all sets, we can call the class of all sets equal to the set an equivalence class.</p>
+<p>This does not necessarily exist.</p>
+<h1 id="defining-sets">Defining sets</h1>
+<h2 id="axiom-schema-of-specification">Axiom schema of specification</h2>
+<h3 id="the-axiom-schema-of-unrestricted-comprehension">The axiom schema of unrestricted comprehension</h3>
+<p>We want to formalise the relationship between the preterite and the set. An obvious way of doing this is to add an axiom for each preterite in our structure that:</p>
+<p><span class="math inline">∀<em>x</em>∃<em>s</em>[<em>P</em>(<em>x</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>This is known as “unrestricted comprehension” and there are problems with this approach.</p>
+<p>Consider a predicate for all terms which are not members of themselves. That is:</p>
+<p><span class="math inline">¬(<em>x</em> ∈ <em>x</em>)</span></p>
+<p>This implies the following is true:</p>
+<p><span class="math inline">∀<em>x</em>∃<em>s</em>[¬(<em>x</em> ∈ <em>x</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>As this is true for all <span class="math inline"><em>x</em></span>, it is true for <span class="math inline"><em>x</em> = <em>s</em></span>. So:</p>
+<p><span class="math inline">∃<em>s</em>[¬(<em>s</em> ∈ <em>s</em>)↔(<em>s</em> ∈ <em>s</em>)]</span></p>
+<p>This statement is false. As we have inferred a false formula, the axiom of unrestricted comprehension does not work. This result is known as Russel’s Paradox.</p>
+<p>This is an axiom schema rather than an axiom. That is, there is a new axiom for each preterite.</p>
+<h3 id="axiom-schema-of-specification-1">Axiom schema of specification</h3>
+<p>To resolve Russels’ paradox, we amend the axiom schema to:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>a</em>∃<em>s</em>[(<em>P</em>(<em>x</em>)∧<em>x</em> ∈ <em>a</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>That is, for every set <span class="math inline"><em>a</em></span>, we can define a subset <span class="math inline"><em>s</em></span> for each predicate.</p>
+<p>This resolves Russel’s Paradox. Let’s take the same steps on the above formula as in unrestricted comprehension;</p>
+<p><span class="math inline">∀<em>x</em>∀<em>a</em>∃<em>s</em>[(¬(<em>x</em> ∈ <em>x</em>)∧<em>x</em> ∈ <em>a</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p><span class="math inline">∃<em>s</em>[(¬(<em>s</em> ∈ <em>s</em>)∧<em>s</em> ∈ <em>s</em>)↔(<em>s</em> ∈ <em>s</em>)]</span></p>
+<p>So long as the subsets <span class="math inline"><em>s</em></span> are not members of themselves, this holds.</p>
+<h2 id="implications-of-axiom-schema-of-specification">Implications of axiom schema of specification</h2>
+<h3 id="all-finite-subsets-exist">All finite subsets exist</h3>
+<p>Finite subsets. Don’t know about infinite subsets</p>
+<p>If we can define a subset, by the axiom of specification it exists.</p>
+<p>For example if set <span class="math inline">{<em>a</em>, <em>b</em>, <em>c</em>}</span> exists, we can define a preterite to select any subset of this.</p>
+<p>For example we can use define a <span class="math inline"><em>P</em>(<em>x</em>)</span> as <span class="math inline"><em>x</em> = <em>a</em> ∨ <em>x</em> = <em>b</em></span> to extract the subset <span class="math inline">{<em>a</em>, <em>b</em>}</span>.</p>
+<p>If a subset is infinitely large,</p>
+<h3 id="intersections-of-finite-sets-exist">Intersections of finite sets exist</h3>
+<p>Can prove exists from this axiom</p>
+<h3 id="if-any-set-exists-the-empty-set-exists">If any set exists, the empty set exists</h3>
+<p><span class="math inline">∀<em>x</em>∀<em>a</em>∃<em>s</em>[(<em>P</em>(<em>x</em>)∧<em>x</em> ∈ <em>a</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<h2 id="set-builder-notation">Set-builder notation</h2>
+<h3 id="notation">Notation</h3>
+<p>NB. This should be later, the way they are described links to the axiom schema of specification.</p>
+<p>We can use short-hand to describe sets.</p>
+<p><span class="math inline">{<em>x</em> ∈ <em>S</em> : <em>P</em>(<em>x</em>)}</span></p>
+<p>This defines a set by a restriction. For example we will later be able to define natural numbers above <span class="math inline">5</span> as:</p>
+<p><span class="math inline">{<em>x</em> ∈ ℕ : <em>x</em> &gt; 5}</span></p>
+<h3 id="class-builder-notation">Class builder notation</h3>
+<p>Emuneration can be done through set builder notation too</p>
+<p>Can define sets formally! defintion doesn’t just affect sets</p>
+<p><span class="math inline">∀<em>x</em>(<em>x</em> ∈ <em>C</em> ↔ <em>P</em>(<em>x</em>))</span></p>
+<p>NB: We’re not saying C exists</p>
+<p>Can then use examples of equiv class</p>
+<p><span class="math inline">∀<em>x</em>(<em>x</em> ∈ <em>C</em> ↔ <em>x</em> = <em>x</em>)</span></p>
+<h2 id="empty-set">Empty set</h2>
+<p>We can use this to define the empty set - the set with no members.</p>
+<p><span class="math inline">⌀ = {}</span></p>
+<p>Using the above definition this is the same as writing:</p>
+<p><span class="math inline">∀<em>x</em>¬(<em>x</em> ∈ ⌀)</span></p>
+<h2 id="defining-sets-by-enumeration">Defining sets by enumeration</h2>
+<p>We can describe a set by the elements it contains.</p>
+<p><span class="math inline"><em>s</em> = {<em>a</em>, <em>b</em>, <em>c</em>}</span></p>
+<p>This is a shorthand way of writing:</p>
+<p><span class="math inline">∀<em>x</em>(<em>x</em> ∈ <em>s</em> ↔ (<em>x</em> = <em>a</em> ∨ <em>x</em> = <em>b</em> ∨ <em>x</em> = <em>c</em>))</span></p>
+<h2 id="finite-and-infinite-sets">Finite and infinite sets</h2>
+<h3 id="finite-sets">Finite sets</h3>
+<p>A set is finite is there is a proper subset without a bijection.</p>
+<p>Proper subset: <span class="math inline"><em>A</em> ⊂ <em>B</em></span></p>
+<p>For example for set <span class="math inline">{<em>a</em>, <em>b</em>, <em>c</em>}</span> There is no subset with a bijection.</p>
+<h3 id="infinite-sets">Infinite sets</h3>
+<p>For the natural numbers, all natural numbers except 0 is a proper subset, and there is a bijection.</p>
+<h2 id="cardinality">Cardinality</h2>
+<h3 id="cardinality-of-finite-sets">Cardinality of finite sets</h3>
+<p>The cardinality of a set <span class="math inline"><em>s</em></span> is shown as <span class="math inline">|<em>s</em>|</span>. It is the number of elements in the set. We define it formally below.</p>
+<h3 id="injectives-surjectives-and-bijectives">Injectives, surjectives and bijectives</h3>
+<p>Consider <span class="math inline">2</span> sets. If there is an injective from <span class="math inline"><em>a</em></span> to <span class="math inline"><em>b</em></span> then for every element in <span class="math inline"><em>a</em></span> there is a unique element in <span class="math inline"><em>b</em></span>.</p>
+<p>If this injective exists then we say <span class="math inline">|<em>a</em>|≤|<em>b</em>|</span>.</p>
+<p>Similarly, if there is a surjective, that is for every element in <span class="math inline"><em>b</em></span> there is a unique element in <span class="math inline"><em>a</em></span>, then <span class="math inline">|<em>a</em>|≥|<em>b</em>|</span>.</p>
+<p>Therefore, if there is a bijection, <span class="math inline">|<em>a</em>|=|<em>b</em>|</span>, and if there is only an injective or a surjective then <span class="math inline">|<em>a</em>|&lt;|<em>b</em>|</span> or <span class="math inline">|<em>a</em>|&gt;|<em>b</em>|</span> respectively.</p>
+<h3 id="cardinality-as-a-function">Cardinality as a function</h3>
+<p>Every set has a cardinality. As a result cardinality cannot be a well-defined function, for the same reason there is no set of all sets.</p>
+<p>Cardinality functions can be defined on subsets.</p>
+<h1 id="ordering">Ordering</h1>
+<h2 id="inequalities">Inequalities</h2>
+<h3 id="less-than-or-equal">Less than or equal</h3>
+<p>Orderings define relations between elements in a set, where one element can preceed the other.</p>
+<p>Orderings are antisymmetric. That is, the only case where the relation is satisfied in both directions is if the elements are equal.</p>
+<p><span class="math inline">(<em>a</em> ≤ <em>b</em>)∧(<em>b</em> ≤ <em>a</em>)→(<em>a</em> = <em>b</em>)</span></p>
+<p>Orderings are transitive. That is:</p>
+<p><span class="math inline">(<em>a</em> ≤ <em>b</em>)∧(<em>b</em> ≤ <em>c</em>)→(<em>a</em> ≤ <em>c</em>)</span></p>
+<h3 id="greater-than-or-equal">Greater than or equal</h3>
+<h3 id="less-than-and-greater-than">Less than and greater than</h3>
+<p>The relation <span class="math inline">≤</span> is refered to as non-strict.</p>
+<p>There is a similar strict relation relation, <span class="math inline">&lt;</span>:</p>
+<p><span class="math inline">(<em>a</em> ≤ <em>b</em>)∧¬(<em>b</em> ≤ <em>a</em>)→(<em>a</em> &lt; <em>b</em>)</span></p>
+<h2 id="ordered-sets">Ordered sets</h2>
+<h3 id="totally-ordered-sets">Totally ordered sets</h3>
+<p>A totally ordered set is one where the relation is defined on all pairs:</p>
+<p><span class="math inline">∀<em>a</em>∀<em>b</em>(<em>a</em> ≤ <em>b</em>)∨(<em>b</em> ≤ <em>a</em>)</span></p>
+<p>Note that totality implies reflexivity.</p>
+<h3 id="partially-ordered-sets-poset">Partially ordered sets (poset)</h3>
+<p>A partially ordered set, or poset, is one where the relation is defined between each element and itself.</p>
+<p><span class="math inline">∀<em>a</em>(<em>a</em> ≤ <em>a</em>)</span></p>
+<p>That is, every element is related to itself.</p>
+<p>These are also called posets.</p>
+<h3 id="well-ordering">Well-ordering</h3>
+<p>A well-ordering on a set is a total order on the set where the set contains a minimum number. For example the relation <span class="math inline">≤</span> on the natural numbers is a well-ordering because <span class="math inline">0</span> is the minimum.</p>
+<p>The relation <span class="math inline">≤</span> on the integers however is not a well-ordering, as there is no minimum number in the set.</p>
+<h2 id="intervals">Intervals</h2>
+<p>For a totally ordered set we can define a subset as being all elements with a relationship to a number. For example:</p>
+<p><span class="math inline">[<em>a</em>, <em>b</em>]={<em>x</em> : <em>a</em> ≤ <em>x</em> ∧ <em>x</em> ≤ <em>b</em>}</span></p>
+<p>This denotes a closed interval. Using the definition above we can also define an open interval:</p>
+<p><span class="math inline">(<em>a</em>, <em>b</em>)={<em>x</em> : <em>a</em> &lt; <em>x</em> ∧ <em>x</em> &lt; <em>b</em>}</span></p>
+<h2 id="infinitum-and-supremum">Infinitum and supremum</h2>
+<h3 id="infinitum">Infinitum</h3>
+<p>Consider a subset <span class="math inline"><em>S</em></span> of a partially ordered set <span class="math inline"><em>T</em></span>.</p>
+<p>The infinitum of <span class="math inline"><em>S</em></span> is the greatest element in <span class="math inline"><em>T</em></span> that is less than or equal to all elements in <span class="math inline"><em>S</em></span>.</p>
+<p>For example:</p>
+<p><span class="math inline">inf[0, 1]=0</span></p>
+<p><span class="math inline">inf(0, 1)=0</span></p>
+<h3 id="supremum">Supremum</h3>
+<p>The supremum is the opposite: the smallest element in <span class="math inline"><em>T</em></span> which is greater than or equal to all elements in <span class="math inline"><em>S</em></span>.</p>
+<p><span class="math inline">sup[0, 1]=1</span></p>
+<p><span class="math inline">sup(0, 1)=1</span></p>
+<h3 id="max-and-min">Max and min</h3>
+<p>If the infinitum of a set <span class="math inline"><em>S</em></span> is in <span class="math inline"><em>S</em></span>, then the infinimum is the minimum of set <span class="math inline"><em>S</em></span>. Otherwise, the minimum is not defined.</p>
+<p><span class="math inline">min[0, 1]=0</span></p>
+<p><span class="math inline">min(0, 1)</span> isn’t defined.</p>
+<p>Similarly:</p>
+<p><span class="math inline">max[0, 1]=1</span></p>
+<p><span class="math inline">max(0, 1)</span> isn’t defined.</p>
+<h1 id="set-algebra">Set algebra</h1>
+<h2 id="set-union-and-intersection">Set union and intersection</h2>
+<p>We discuss functions. Just because we can write a function of sets which exist, does not mean the results of the functions exist. For that we need axioms discussed later.</p>
+<h3 id="union-function">Union function</h3>
+<p>We define a function on two sets, <span class="math inline"><em>a</em> ∨ <em>b</em></span>, such that the result contains all elements from either sets.</p>
+<p><span class="math inline">∀<em>a</em>∀<em>x</em>∀<em>y</em>[<em>a</em> ∈ (<em>x</em> ∨ <em>y</em>)↔(<em>a</em> ∈ <em>x</em> ∨ <em>a</em> ∈ <em>y</em>)]</span></p>
+<p>This is commutative: <span class="math inline"><em>a</em> ∨ <em>b</em> = <em>b</em> ∨ <em>a</em></span></p>
+<p>This is associative: <span class="math inline">(<em>a</em> ∨ <em>b</em>)∨<em>c</em> = <em>a</em> ∨ (<em>b</em> ∨ <em>c</em>)</span></p>
+<h3 id="intersection-function">Intersection function</h3>
+<p>We define a function, <span class="math inline"><em>a</em> ∧ <em>b</em></span>, on two sets, such that the result contains all elements which are in both.</p>
+<p><span class="math inline">∀<em>a</em>∀<em>x</em>∀<em>y</em>[<em>a</em> ∈ (<em>x</em> ∧ <em>y</em>)↔(<em>a</em> ∈ <em>x</em> ∧ <em>a</em> ∈ <em>y</em>)]</span></p>
+<p>This is commutative: <span class="math inline"><em>a</em> ∧ <em>b</em> = <em>b</em> ∧ <em>a</em></span></p>
+<p>This is associative: <span class="math inline">(<em>a</em> ∧ <em>b</em>)∧<em>c</em> = <em>a</em> ∨ (<em>b</em> ∧ <em>c</em>)</span></p>
+<h3 id="distribution-of-union-and-intersection">Distribution of union and intersection</h3>
+<p>Union is distributive over intersection: <span class="math inline"><em>a</em> ∨ (<em>b</em> ∧ <em>c</em>)=(<em>a</em> ∨ <em>b</em>)∧(<em>a</em> ∨ <em>c</em>)</span></p>
+<p>Intersection is distributive over union: <span class="math inline"><em>a</em> ∧ (<em>b</em> ∨ <em>c</em>)=(<em>a</em> ∧ <em>b</em>)∨(<em>a</em> ∧ <em>c</em>)</span></p>
+<h2 id="complements-and-disjoint-sets">Complements and disjoint sets</h2>
+<h3 id="disjoint-sets">Disjoint sets</h3>
+<p>Sets are disjoint is there is no overlap in their elements. Two sets are <span class="math inline"><em>s</em><sub><em>i</em></sub></span> and <span class="math inline"><em>s</em><sub><em>j</em></sub></span> are mutually exclusive if:</p>
+<p><span class="math inline"><em>s</em><sub><em>i</em></sub> ∧ <em>s</em><sub><em>j</em></sub> = ∅</span></p>
+<p>A collection of events <span class="math inline"><em>s</em></span> are all mutually exclusive if all pairs are mutually exclusive. That is:</p>
+<p><span class="math inline">∀<em>s</em><sub><em>i</em></sub> ∈ <em>s</em>∀<em>s</em><sub><em>j</em></sub> ∈ <em>s</em>[<em>s</em><sub><em>i</em></sub> ∧ <em>s</em><sub><em>j</em></sub> ≠ ∅ → <em>s</em><sub><em>i</em></sub> = <em>s</em><sub><em>j</em></sub>]</span></p>
+<h3 id="complement-function">Complement function</h3>
+<p><span class="math inline"><em>x</em><sup><em>C</em></sup></span> is the completement. It is defined such that:</p>
+<p><span class="math inline">∀<em>x</em>[<em>x</em> ∧ <em>x</em><sup><em>C</em></sup> = ⌀]</span></p>
+<p>For a set <span class="math inline"><em>b</em></span>, the complement with respect to <span class="math inline"><em>a</em></span> is all elements in <span class="math inline"><em>a</em></span> which are not in <span class="math inline"><em>b</em></span>.</p>
+<p><span class="math inline">∀<em>x</em> ∈ <em>a</em>∀<em>y</em> ∈ <em>b</em>[<em>x</em> ∈ (<em>a</em> \ <em>b</em>)∧<em>y</em> ∈ (<em>a</em> \ <em>b</em>)]</span></p>
+<p><span class="math inline"><em>b</em> ∧ (<em>a</em> \ <em>b</em>)=⌀</span></p>
+<p>That is, <span class="math inline"><em>b</em></span> and <span class="math inline"><em>a</em> \ <em>b</em></span> are disjoint.</p>
+<h3 id="existence-of-the-complement">Existence of the complement</h3>
+<p>For two sets <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> we can write <span class="math inline">(<em>a</em> \ <em>b</em>)</span>. This is the set of elements of <span class="math inline"><em>a</em></span> which are not in <span class="math inline"><em>b</em></span>.</p>
+<p>Consider the axiom of specification:</p>
+<p><span class="math inline">∀<em>x</em>∀<em>a</em>∃<em>s</em>[(<em>P</em>(<em>x</em>)∧<em>x</em> ∈ <em>a</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>We can also write</p>
+<p><span class="math inline">∀<em>x</em>∀<em>a</em>∀<em>b</em>∃<em>s</em>[(<em>x</em> ∉ <em>b</em> ∧ <em>x</em> ∈ <em>a</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p>Which provides the complement, <span class="math inline"><em>s</em></span>.</p>
+<h2 id="axiom-of-union">Axiom of union</h2>
+<h3 id="motivation">Motivation</h3>
+<p>While we have described various sets, we have not said that they exist. That is, if <span class="math inline"><em>A</em></span> and <span class="math inline"><em>B</em></span> both exist, then currently we cannot ensure <span class="math inline"><em>A</em> ∧ <em>B</em></span> exists, just that it can be described.</p>
+<p>The axiom of union enables us to ensure all sets from unions and intersections exist.</p>
+<h3 id="axiom-of-union-1">Axiom of union</h3>
+<p><span class="math inline">∀<em>a</em>∃<em>b</em>∀<em>c</em>[<em>c</em> ∈ <em>b</em> ↔ ∃<em>d</em>(<em>c</em> ∈ <em>d</em> ∧ <em>d</em> ∈ <em>a</em>)]</span></p>
+<p>That is, for every set <span class="math inline"><em>a</em></span>, there exists a set <span class="math inline"><em>b</em></span> where all the elements in <span class="math inline"><em>b</em></span> are the elements of the elements in <span class="math inline"><em>a</em></span>.</p>
+<p>Here, <span class="math inline"><em>b</em></span> is the union of the sets in <span class="math inline"><em>a</em></span>.</p>
+<h2 id="boolean-algebra">Boolean algebra</h2>
+<h3 id="boolean-algebra-in-propositional-logic">Boolean algebra in propositional logic</h3>
+<p>We previously discussed properties of normal form, and the results from these properties.</p>
+<p>If another structure shares these properties then they will also share the results.</p>
+<h3 id="sets-satisfy-the-definitions-of-a-boolean-algebra">Sets satisfy the definitions of a boolean algebra</h3>
+<p>If a mathematical structure has the following properties, it shares the results from normal form, and is a boolean algebra.</p>
+<ul>
+<li><p>Both binary operators are commutitive - <span class="math inline"><em>A</em> ∧ <em>B</em> = <em>B</em> ∧ <em>A</em></span> and <span class="math inline"><em>A</em> ∨ <em>B</em> = <em>B</em> ∨ <em>A</em></span></p></li>
+<li><p>Both binary operators are associative - <span class="math inline">(<em>A</em> ∧ <em>B</em>)∧<em>C</em> = <em>A</em> ∧ (<em>B</em> ∧ <em>C</em>)</span> and <span class="math inline">(<em>A</em> ∨ <em>B</em>)∨<em>C</em> = <em>A</em> ∨ (<em>B</em> ∨ <em>C</em>)</span></p></li>
+<li><p>Completements - <span class="math inline"><em>A</em> ∧ ¬<em>A</em> = ∅</span> and <span class="math inline"><em>A</em> ∨ ¬<em>A</em> = <em>U</em></span></p></li>
+<li><p>Absorption - <span class="math inline"><em>A</em> ∧ (<em>A</em> ∨ <em>B</em>)=<em>A</em></span> and <span class="math inline"><em>A</em> ∨ (<em>A</em> ∧ <em>B</em>)=<em>A</em></span></p></li>
+<li><p>Identity - <span class="math inline"><em>A</em> ∧ <em>U</em> = <em>A</em></span> and <span class="math inline"><em>A</em> ∨ ∅ = <em>A</em></span></p></li>
+<li><p>Distributivity - <span class="math inline"><em>A</em> ∧ (<em>B</em> ∨ <em>C</em>)=(<em>A</em> ∧ <em>B</em>)∨(<em>A</em> ∧ <em>C</em>)</span> and <span class="math inline"><em>A</em> ∨ (<em>B</em> ∧ <em>C</em>)=(<em>A</em> ∨ <em>B</em>)∧(<em>A</em> ∨ <em>C</em>)</span></p></li>
+</ul>
+<p>These hold for sets, and so boolean algebra holds for sets.</p>
+<h2 id="algebra-on-a-set">Algebra on a set</h2>
+<h3 id="standard-algebra">Standard algebra</h3>
+<p>An algebra, <span class="math inline"><em>Σ</em></span>, on set <span class="math inline"><em>s</em></span> is a set of subsets of <span class="math inline"><em>s</em></span> such that:</p>
+<ul>
+<li><p>Closed under intersection: If <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> are in <span class="math inline"><em>Σ</em></span> then <span class="math inline"><em>a</em> ∧ <em>b</em></span> must also be in <span class="math inline"><em>Σ</em></span></p></li>
+<li><p><span class="math inline">∀<em>a</em><em>b</em>[(<em>a</em> ∈ <em>Σ</em> ∧ <em>b</em> ∈ <em>Σ</em>)→(<em>a</em> ∧ <em>b</em> ∈ <em>Σ</em>)]</span></p></li>
+<li><p>Closed under union: If <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> are in <span class="math inline"><em>Σ</em></span> then <span class="math inline"><em>a</em> ∨ <em>b</em></span> must also be in <span class="math inline"><em>Σ</em></span>.</p></li>
+<li><p><span class="math inline">∀<em>a</em><em>b</em>[(<em>a</em> ∈ <em>Σ</em> ∧ <em>b</em> ∈ <em>Σ</em>)→(<em>a</em> ∨ <em>b</em> ∈ <em>Σ</em>)]</span></p></li>
+</ul>
+<p>If both of these are true, then the following is also true:</p>
+<ul>
+<li><p>Closed under complement: If <span class="math inline"><em>a</em></span> is in <span class="math inline"><em>Σ</em></span> then <span class="math inline"><em>s</em> ∖ <em>a</em></span> must also be in <span class="math inline"><em>Σ</em></span></p></li>
+</ul>
+<p>We also require that the null set (and therefore the original set, null’s complement) is part of the algebra.</p>
+<h1 id="natural-numbers">Natural numbers</h1>
+<h2 id="axiom-of-infinity">Axiom of infinity</h2>
+<p>The axiom of infinity states that:</p>
+<p><span class="math inline">∃<em>I</em>(⌀ ∈ <em>I</em> ∧ ∀<em>x</em> ∈ <em>I</em>((<em>x</em> ∨ {<em>x</em>}) ∈ <em>I</em>))</span></p>
+<p>There exists a set, called the infinite set. This contains the empty set, and for all elements in <span class="math inline"><em>I</em></span> the set also contains the successor to it.</p>
+<h3 id="sequential-function">Sequential function</h3>
+<p>Let’s define the sequential function:</p>
+<p><span class="math inline"><em>s</em>(<em>n</em>):={<em>n</em> ∨ {<em>n</em>}}</span></p>
+<p>We can now rewrite the axiom of infinity as:</p>
+<p><span class="math inline">∃ℕ(⌀ ∈ ℕ ∧ ∀<em>x</em> ∈ ℕ(<em>s</em>(<em>x</em>)∈ℕ))</span></p>
+<h3 id="zero">Zero</h3>
+<p>This set contains the null set: <span class="math inline">⌀ ∈ ℕ</span>.</p>
+<p>Zero is defined as the empty set.</p>
+<p><span class="math inline">0 := {}</span></p>
+<h3 id="natural-numbers-1">Natural numbers</h3>
+<p>For all elements in the infinite set, there also exists another element in the infinite set: <span class="math inline">∀<em>x</em> ∈ ℕ((<em>x</em> ∨ {<em>x</em>}) ∈ ℕ)</span>.</p>
+<p>We then define all sequential numbers as the set of all preceding numbers. So:</p>
+<p><span class="math inline">1 := {0}={{}}</span></p>
+<p><span class="math inline">2 := {0, 1}={{},{{}}}</span></p>
+<p><span class="math inline">3 := {0, 1, 2}={{},{{}}, {{}, {{}}}}</span></p>
+<h3 id="existence-of-natural-numbers">Existence of natural numbers</h3>
+<p>Does each natural number exist? We know the infinite set exists, and we also know the axiom schema of specification:</p>
+<p>Point is: For each set, all finite subsets exist. PROVE ELSEWHERE</p>
+<h3 id="from-infinite-set-to-natural-set">From infinite set to natural set</h3>
+<p>We don’t know I is limited to natural numbers. Could contain urelements etc.</p>
+<h3 id="more">More</h3>
+<p>Infinite set axiom written using N. should be I</p>
+<p>I could be superset of N, for example set of all natural numbers, and also the set containing the set containing 2.</p>
+<p>Can extract N using axiom of specification</p>
+<p>We need a way to define the set of natural numbers:</p>
+<p><span class="math inline">∀<em>n</em>(<em>n</em> ∈ ℕ ↔ ([<em>n</em> = ∅ ∨ ∃<em>k</em>(<em>n</em> = <em>k</em> ∨ {<em>k</em>})]∧))</span></p>
+<p>If we can can define N, we can show it exists from specicication</p>
+<p><span class="math inline">∀<em>x</em>∃<em>s</em>[<em>P</em>(<em>x</em>)↔(<em>x</em> ∈ <em>s</em>)]</span></p>
+<p><span class="math inline">∀<em>n</em>∃<em>s</em>[<em>n</em> ∈ <em>N</em> ↔ (<em>n</em> ∈ <em>s</em>)]</span></p>
+<h2 id="cardinality-of-the-natural-numbers">Cardinality of the natural numbers</h2>
+<p>Consider the infinite set, that is the set of all natural numbers which is defined in ZFC. Clearly there isn’t a natural number cardinality of this – we instead write <span class="math inline">ℵ<sub>0</sub></span>.</p>
+<p>We call sets with this cardinality, countably infinite.</p>
+<p>So:</p>
+<p><span class="math inline">|ℕ|=ℵ<sub>0</sub></span></p>
+<h3 id="cardinality-of-natural-numbers">Cardinality of natural numbers</h3>
+<p>We define:</p>
+<p><span class="math inline">|∅| = 0</span></p>
+<p>That, the empty set has a cardinality of <span class="math inline">0</span>.</p>
+<p>As we define <span class="math inline">0</span> as the empty set, <span class="math inline">|0|=0</span>.</p>
+<p>What is <span class="math inline">1</span>? using the definition above we know <span class="math inline">|1|&gt;|0|</span>, so let’s say <span class="math inline">|1|=1</span>, and more generally:</p>
+<p><span class="math inline">∀<em>n</em> ∈ ℕ|<em>n</em>|=<em>n</em></span></p>
+<h2 id="ordering-1">Ordering</h2>
+<h3 id="ordering-of-the-natural-numbers">Ordering of the natural numbers</h3>
+<p>For natural numbers we can say that number <span class="math inline"><em>n</em></span> preceeds number <span class="math inline"><em>s</em>(<em>n</em>)</span>. That is:</p>
+<p><span class="math inline"><em>n</em> ≤ <em>s</em>(<em>n</em>)</span></p>
+<p>Similarly:</p>
+<p><span class="math inline"><em>s</em>(<em>n</em>)≤<em>s</em>(<em>s</em>(<em>n</em>))</span></p>
+<p>From the transitive property we know that:</p>
+<p><span class="math inline"><em>n</em> ≤ <em>s</em>(<em>s</em>(<em>n</em>))</span></p>
+<p>We can continue this to get:</p>
+<p><span class="math inline"><em>n</em> ≤ <em>s</em>(<em>s</em>(...<em>s</em>(<em>n</em>)..))</span></p>
+<p>What can we say about an arbitary comparison?</p>
+<p><span class="math inline"><em>a</em> ≤ <em>b</em></span></p>
+<p>We know that either:</p>
+<ul>
+<li><p><span class="math inline"><em>a</em> = <em>b</em></span></p></li>
+<li><p><span class="math inline"><em>b</em> = <em>s</em>(<em>s</em>(...<em>s</em>(<em>a</em>)...))</span></p></li>
+<li><p><span class="math inline"><em>a</em> = <em>s</em>(<em>s</em>(...<em>s</em>(<em>b</em>)...))</span></p></li>
+</ul>
+<p>In the first case the relation holds.</p>
+<p>In the second case the relation holds.</p>
+<p>In the third case the relation does not hold, but antisymmetry holds.</p>
+<p>As this is is then defined on any pair, the order on natural numbers is total.</p>
+<p>As there is a minimum, <span class="math inline">0</span>, the relation is also well-ordered.</p>
+<p>However if this does not hold then the following instead holds:</p>
+<h1 id="subsets-and-powersets">Subsets and powersets</h1>
+<h2 id="subset-relation">Subset relation</h2>
+<h3 id="subset">Subset</h3>
+<p>If all terms which are members of term <span class="math inline"><em>x</em></span> are also members of term <span class="math inline"><em>y</em></span>, then <span class="math inline"><em>x</em></span> is a subset of <span class="math inline"><em>y</em></span>.</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[(∀<em>z</em>(<em>z</em> ∈ <em>x</em> → <em>z</em> ∈ <em>y</em>)) ↔ (<em>x</em> ⊆ <em>y</em>)]</span></p>
+<h3 id="proper-subset">Proper subset</h3>
+<p>If two sets are equal, then each is a subset of the other. A proper subset is one which is a subset, and not equal to the other set.</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>[((∀<em>z</em>(<em>z</em> ∈ <em>x</em> → <em>z</em> ∈ <em>y</em>)))∧(<em>x</em> ≠ <em>y</em>)↔(<em>x</em> ⊂ <em>y</em>)]</span></p>
+<h2 id="powerset-function">Powerset function</h2>
+<p>The power set of <span class="math inline"><em>s</em></span>, <span class="math inline"><em>P</em>(<em>s</em>)</span>, contains all subsets of <span class="math inline"><em>s</em></span>.</p>
+<p><span class="math inline">∀<em>x</em><em>x</em> ⊆ <em>s</em> ↔ <em>x</em> ∈ <em>P</em>(<em>x</em>)</span></p>
+<p>Do all subsets exist?? show elsewhere.</p>
+<h2 id="cantors-theorem">Cantors theorem</h2>
+<p>The cardinality of the powerset is strictly greater than the cardinality of the underlying set.</p>
+<p>That is, <span class="math inline">|<em>P</em>(<em>s</em>)| &lt; |<em>s</em>|</span>.</p>
+<p>This applies to finite sets and infinite sets. In particular, this means that the powerset of the natural numbers is bigger than the natural numbers.</p>
+<h3 id="proof">Proof</h3>
+<p>If one set is at least as big as another, then then is a surjection from that set to the other.</p>
+<p>That is, if we can prove that there is no surjection from a set to its powerset, then we have proved the theorem.</p>
+<p>We consider <span class="math inline"><em>f</em>(<em>s</em>)</span>. If there is a surjection, then for every subset of <span class="math inline"><em>s</em></span> there should be a mapping from <span class="math inline"><em>s</em></span> to that subset.</p>
+<p>We take set <span class="math inline"><em>s</em></span> and have the powerset of this, <span class="math inline"><em>P</em>(<em>s</em>)</span>.</p>
+<p>Consider the set:</p>
+<p><span class="math inline"><em>A</em> = {<em>x</em> ∈ <em>s</em>|<em>x</em> ∉ <em>f</em>(<em>x</em>)}</span></p>
+<p>That is, the set of all elements of <span class="math inline"><em>s</em></span> which do not map to the surjection.</p>
+<h1 id="tuples">Tuples</h1>
+<h2 id="tuples-1">Tuples</h2>
+<p>We can get a list of sets in an order. A 2-tuple is an ordered pair:</p>
+<p><span class="math inline">(<em>a</em>, <em>b</em>)</span></p>
+<p>We can write an ordered pair of <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span> as:</p>
+<p><span class="math inline">{{<em>a</em>},{<em>a</em>, <em>b</em>}}</span></p>
+<p>Ordred pair definition, and tuple</p>
+<p><span class="math inline">(<em>a</em>, <em>b</em>)=(<em>c</em>, <em>d</em>)↔(<em>a</em> = <em>c</em> ∧ <em>b</em> = <em>d</em>)</span></p>
+<p>This is the characteristic property.</p>
+<h2 id="axiom-of-pairing">Axiom of pairing</h2>
+<p>For any pair of sets, <span class="math inline"><em>x</em></span> and <span class="math inline"><em>y</em></span> there is another set <span class="math inline"><em>z</em></span> which containing only <span class="math inline"><em>x</em></span> and <span class="math inline"><em>y</em></span>.</p>
+<p><span class="math inline">∀<em>x</em>∀<em>y</em>∃<em>z</em>∀<em>a</em>[<em>a</em> ∈ <em>z</em> ↔ <em>a</em> = <em>x</em> ∨ <em>a</em> = <em>y</em>]</span></p>
+<h3 id="for-each-set-there-exists-a-set-containing-only-that-set">For each set, there exists a set containing only that set</h3>
+<p>Take the axiom, but replace all instance of <span class="math inline"><em>y</em></span> with <span class="math inline"><em>x</em></span>.</p>
+<p><span class="math inline">∀<em>x</em>∃<em>z</em>∀<em>a</em>[<em>a</em> ∈ <em>z</em> ↔ <em>a</em> = <em>x</em> ∨ <em>a</em> = <em>x</em>]</span></p>
+<p><span class="math inline">∀<em>x</em>∃<em>z</em>∀<em>a</em>[<em>a</em> ∈ <em>z</em> ↔ <em>a</em> = <em>x</em>]</span></p>
+<h3 id="for-any-finite-number-of-sets-there-is-a-set-containing-only-those-sets">For any finite number of sets, there is a set containing only those sets</h3>
+<h3 id="for-any-finite-number-of-sets-there-is-a-set-containing-the-intersection-of-those-sets">For any finite number of sets, there is a set containing the intersection of those sets</h3>
+<h2 id="cartesian-product">Cartesian product</h2>
+<p>The cartesian product takes two sets, and creates a set containing all ordered pairs of <span class="math inline"><em>a</em></span> and <span class="math inline"><em>b</em></span>.</p>
+<p><span class="math inline"><em>a</em> × <em>b</em></span></p>
+<h2 id="direct-sums">Direct sums</h2>
+<h1 id="functions">Functions</h1>
+<h2 id="constructing-functions">Constructing functions</h2>
+<h3 id="use-of-ordered-pairs">Use of ordered pairs</h3>
+<p>We can define this as a set of ordered pairs.</p>
+<p><span class="math inline">{{<em>a</em>},{<em>a</em>, <em>b</em>}}</span></p>
+<h2 id="domains-and-ranges">Domains and ranges</h2>
+<h3 id="domain">Domain</h3>
+<p>All values on which the function can be called</p>
+<p><span class="math inline">∀<em>x</em>(<em>f</em>(<em>x</em>)=<em>y</em>)→<em>P</em>(<em>y</em>))</span></p>
+<h3 id="image">Image</h3>
+<p><span class="math inline">∀<em>x</em>((∃<em>y</em><em>f</em>(<em>x</em>)=<em>y</em>)→<em>P</em>(<em>y</em>))</span></p>
+<p>Outputs of a function.</p>
+<p>AKA: Range</p>
+<p>The image of <span class="math inline"><em>x</em></span> is <span class="math inline"><em>f</em>(<em>x</em>)</span>.</p>
+<h3 id="preimage">Preimage</h3>
+<p>The preimage of <span class="math inline"><em>y</em></span> is all <span class="math inline"><em>x</em></span> where <span class="math inline"><em>f</em>(<em>x</em>)=<em>y</em></span>.</p>
+<h3 id="codomain">Codomain</h3>
+<p>Sometimes the image is a subset of another set. For example a function may map onto natural numbers above <span class="math inline">0</span>. Natural numbers above <span class="math inline">0</span> would be the image, and the natural numbers would be the codomain.</p>
+<h3 id="example">Example</h3>
+<p><span class="math inline"><em>f</em>(<em>n</em>)=<em>s</em>(<em>n</em>)</span></p>
+<p>Domain is: <span class="math inline">ℕ</span></p>
+<p>Codomain is also: <span class="math inline">ℕ</span></p>
+<p>Image is <span class="math inline">ℕ ∧ <em>n</em> ≠ 0</span></p>
+<h3 id="describing-functions">Describing functions</h3>
+<p>If function <span class="math inline"><em>f</em></span> maps from set <span class="math inline"><em>X</em></span> to set <span class="math inline"><em>Y</em></span> we can write this as:</p>
+<p><span class="math inline"><em>f</em> : <em>X</em> → <em>Y</em></span></p>
+<h2 id="axiom-of-regularity">Axiom of regularity</h2>
+<p>The axiom of regularity states that:</p>
+<p><span class="math inline">∀<em>x</em>[<em>x</em> ≠ ⌀ → ∃<em>y</em> ∈ <em>x</em>(<em>y</em> ∧ <em>x</em>)=⌀]</span></p>
+<p>That is, for all non-empty sets, there is an element of the set which is disjoint from the set itself.</p>
+<p>This means that no set can be a member of itself.</p>

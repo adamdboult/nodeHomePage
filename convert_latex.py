@@ -30,6 +30,16 @@ for folder in os.listdir(directory_to_walk):
         f.write(line + "\n")
 
     f.close()
+
+    f = open(os.path.join(directory_to_walk, folder + ".jade"), "w")
+
+    f.write("extends ./subTemplate.jade\n")
+    f.write("block subtitle\n")
+    f.write("	div\n")
+    f.write("block subSubContent\n")
+    f.write("	include " + folder + ".html\n")
+
+    f.close()
     #for tex_folder in os.listdir(os.path.join(directory_to_walk, folder)):
     #    print(tex_folder)
 

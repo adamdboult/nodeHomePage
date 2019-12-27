@@ -1,1 +1,148 @@
-
+<h1 id="introduction-to-optimisation">Introduction to optimisation</h1>
+<h2 id="introduction-to-unconstrained-optimisation">Introduction to unconstrained optimisation</h2>
+<h3 id="goals">Goals</h3>
+<p>We want to identify either the maximum or the minimum.</p>
+<p>There exist local minima and global minima.</p>
+<h3 id="optimising-through-limits">Optimising through limits</h3>
+<p>If we are looking to minimise a function, and the limits are <span class="math inline">∞</span> or <span class="math inline">−∞</span> then we can optimise by taking large or small values.</p>
+<p>We can examine this for each variable.</p>
+<p>This also applies for maximising a function.</p>
+<h3 id="optimisation-through-stationary-points">Optimisation through stationary points</h3>
+<p>Stationary points of a function are points where marginal changes do not have an impact on the value of the function. As a result they are either local maxima or minima.</p>
+<h3 id="optimisation-through-algorithms">Optimisation through algorithms</h3>
+<p>If we cannot identify stationary points easily, we can instead use algorithms to identify optima.</p>
+<h3 id="stationary-points-of-strictly-concave-and-convex-functions">Stationary points of strictly concave and convex functions</h3>
+<p>If a function is strictly concave it will only have one stationary point, a local, and global, maxima.</p>
+<p>If a function is strictly convex it will only have one stationary point, a local, and global, minima.</p>
+<h2 id="local-optima">Local optima</h2>
+<h2 id="optimising-convex-functions">Optimising convex functions</h2>
+<h2 id="constrained-optimisation">Constrained optimisation</h2>
+<h2 id="analytic-optimisation">Analytic optimisation</h2>
+<h3 id="convex-and-concave-functions">Convex and concave functions</h3>
+<p>Convex functions only have one minimum, and concave functions have only one maximum.</p>
+<p>If a function is not concave or convex, it may have multiple minima</p>
+<p>If a function is convex, then there is only one critical point – the local minimum. We can identify this this by looking for critical points using first-order conditions.</p>
+<p>Similarly, if a function is concave, then there is only one critical point – the local maximum.</p>
+<p>We can identify whether a function is concave or convex by evaluating the Hessian matrix.</p>
+<h3 id="evaluating-multiple-local-optima">Evaluating multiple local optima</h3>
+<p>We can evaluate each of the local minima or maxima, and compare the sizes.</p>
+<p>We can identify these by taking partial derivatives of the function in question and identifying where this function is equal to zero.</p>
+<p><span class="math inline"><em>u</em> = <em>f</em>(<em>x</em>)</span></p>
+<p><span class="math inline">$u_{x_i}=\frac{\delta f}{\delta x_i}=0$</span></p>
+<p>We can then solve this bundle of equations to find the stationary values of <span class="math inline"><em>x</em></span>.</p>
+<p>After identifying the vector <span class="math inline"><em>x</em></span> for these points we can then determine whether or not the points are minima or maxima by examining the second derivative at these points. If it is positive it is a local minima, and therefore not an optimal point. Points beyond these will be higher, and may be higher than any local maxima.</p>
+<h1 id="unconstrained-optimisation-of-differentiable-functions">Unconstrained optimisation of differentiable functions</h1>
+<h2 id="stationary-points-and-first-order-conditions">Stationary points and first-order conditions</h2>
+<h2 id="stationary-points-and-first-order-conditions-1">Stationary points and first-order conditions</h2>
+<h2 id="stationary-points-and-first-order-conditions-2">Stationary points and first-order conditions</h2>
+<h2 id="hessian-matrix">Hessian matrix</h2>
+<p>We can take a function and make a matrix of its second order partial derivatives. This is the Hessian matrix, and it describes the local curvature of the function.</p>
+<p>If the function <span class="math inline"><em>f</em></span> has <span class="math inline"><em>n</em></span> parameters, the Hessian matrix is <span class="math inline"><em>n</em> × <em>n</em></span>, and is defined as:</p>
+<p><span class="math inline">$H_{ij}=\frac{\delta^2 f}{\delta x_i \delta x_j}$</span></p>
+<p>If the function is convex, then the Hessian matrix is positive semi-definite for all points, and vice versa.</p>
+<p>If the function is concave, then the Hessian matrix is negative semi-definite for all points, and vice versa.</p>
+<p>We can diagnose critical points by evaluating the Hessian matrix at those points.</p>
+<p>If it is positive definite, it is a local minimum. If it is negative definite it is a local maximum. If there are both positive and negative eigenvalues it is a saddle point.</p>
+<h1 id="linear-optimisation">Linear optimisation</h1>
+<h2 id="single-equality-constraint">Single equality constraint</h2>
+<h3 id="constrained-optimisation-1">Constrained optimisation</h3>
+<p>Rather than maximise <span class="math inline"><em>f</em>(<em>x</em>)</span>, we want to maximise <span class="math inline"><em>f</em>(<em>x</em>)</span> subject to <span class="math inline"><em>g</em>(<em>x</em>)=0</span>.</p>
+<p>We write this, the Lagrangian, as:</p>
+<p><span class="math inline">$\mathcal{L}(x,\lambda )=f(x)-\sum^m_k\lambda_k [g_k(x)-c_k]$</span></p>
+<p>We examine the stationary points for both vector <span class="math inline"><em>x</em></span> and <span class="math inline"><em>λ</em></span>. By including the latter we ensure that these points are consistent with the constraints.</p>
+<h3 id="solving-the-langrangian-with-one-constraint">Solving the Langrangian with one constraint</h3>
+<p>Our function is:</p>
+<p><span class="math inline">ℒ(<em>x</em>, <em>λ</em>)=<em>f</em>(<em>x</em>)−<em>λ</em>[<em>g</em>(<em>x</em>)−<em>c</em>]</span></p>
+<p>The first-order conditions are:</p>
+<p><span class="math inline">ℒ<sub><em>λ</em></sub> = −[<em>g</em>(<em>x</em>)−<em>c</em>]</span></p>
+<p><span class="math inline">$\mathcal{L}_{x_i}=\frac{\delta f}{\delta x_i}-\lambda \frac{\delta g}{\delta x_i}$</span></p>
+<p>The solution is stationary so:</p>
+<p><span class="math inline">$\mathcal{L}_{x_i}=\frac{\delta f}{\delta x_i}-\lambda \frac{\delta g}{\delta x_i}=0$</span></p>
+<p><span class="math inline">$\lambda \frac{\delta g}{\delta x_i}=\frac{\delta f}{\delta x_i}$</span></p>
+<p><span class="math inline">$\lambda =\frac{\frac{\delta f}{\delta x_i}}{\frac{\delta g}{\delta x_i}}$</span></p>
+<p>Finally, we can use the following in practical applications.</p>
+<p><span class="math inline">$\frac{\frac{\delta f}{\delta x_i}}{\frac{\delta g}{\delta x_i}}=\frac{\frac{\delta f}{\delta x_j}}{\frac{\delta g}{\delta x_j}}$</span></p>
+<h2 id="multiple-equality-constraints">Multiple equality constraints</h2>
+<h3 id="solving-the-langrangian-with-many-constraints">Solving the Langrangian with many constraints</h3>
+<p>This time we have:</p>
+<p><span class="math inline">$\mathcal{L}_{x_i}=\frac{\delta f}{\delta x_i}-\sum^m_k\lambda_k \frac{\delta g_k}{\delta x_i}=0$</span></p>
+<p><span class="math inline">$\mathcal{L}_{x_j}=\frac{\delta f}{\delta x_j}-\sum^m_k\lambda_k \frac{\delta g_k}{\delta x_j}=0$</span></p>
+<p><span class="math inline">$\frac{\delta f}{\delta x_i}-\sum^m_k\lambda_k \frac{\delta g_k}{\delta x_i}=\frac{\delta f}{\delta x_j}-\sum^m_k\lambda_k \frac{\delta g_k}{\delta x_j}$</span></p>
+<h2 id="inequality-constraints">Inequality constraints</h2>
+<h3 id="lagrangians-with-inequality-constraints">Lagrangians with inequality constraints</h3>
+<p>We can add constraints to an optimisation problem. These constraints can be equality constraints or inequality constraints. We can write constrained optimisation problem as:</p>
+<p>Minimise <span class="math inline"><em>f</em>(<em>x</em>)</span> subject to</p>
+<p><span class="math inline"><em>g</em><sub><em>i</em></sub>(<em>x</em>)≤0</span> for <span class="math inline"><em>i</em> = 1, …, <em>m</em></span></p>
+<p><span class="math inline"><em>h</em><sub><em>i</em></sub>(<em>x</em>)=0</span> for <span class="math inline"><em>i</em> = 1, …, <em>p</em></span></p>
+<p>We write the Lagrangian as:</p>
+<p><span class="math inline">$\mathcal{L}(x, \lambda, \nu )=f(x)+\sum_{i=1}^m\lambda_i g_i(x)+\sum_{i=1}^p\nu_ih_i(x)$</span></p>
+<p>If we try and solve this like a standard Lagrangian, then all of the inequality constraints will instead by equality constraints.</p>
+<h3 id="affinity-of-the-lagrangian">Affinity of the Lagrangian</h3>
+<p>The Lagrangian function is affine with respect to <span class="math inline"><em>λ</em></span> and <span class="math inline"><em>ν</em></span>.</p>
+<p><span class="math inline">$\mathcal{L}(x, \lambda, \nu )=f(x)+\sum_{i=1}^m\lambda_i g_i(x)+\sum_{i=1}^p\nu_ih_i(x)$</span></p>
+<p><span class="math inline">ℒ<sub><em>λ</em><sub><em>i</em></sub></sub>(<em>x</em>, <em>λ</em>, <em>ν</em>)=<em>g</em><sub><em>i</em></sub>(<em>x</em>)</span></p>
+<p><span class="math inline">ℒ<sub><em>ν</em><sub><em>i</em></sub></sub>(<em>x</em>, <em>λ</em>, <em>ν</em>)=<em>h</em><sub><em>i</em></sub>(<em>x</em>)</span></p>
+<p>As the partial differential is constant, the partial differential is an affine function.</p>
+<h2 id="primal-and-dual-problems">Primal and dual problems</h2>
+<h3 id="the-primal-problem">The primal problem</h3>
+<p>We already have this.</p>
+<h3 id="the-dual-problem">The dual problem</h3>
+<p>We can define the Lagrangian dual function:</p>
+<p><span class="math inline"><em>g</em>(<em>λ</em>, <em>ν</em>)=inf<sub><em>x</em> ∈ <em>X</em></sub>ℒ(<em>x</em>, <em>λ</em>, <em>ν</em>)</span></p>
+<p>That is, we have a function which chooses the returns the value of the optimised Lagrangian, given the values of <span class="math inline"><em>λ</em></span> and <span class="math inline"><em>ν</em></span>.</p>
+<p>This is an unconstrained function.</p>
+<p>We can prove this function is concave (how?).</p>
+<p>The infimum of a set of concave (and therefore also affine) functions is concave.</p>
+<p>The supremum of a set of convex (and therefore also affine) functions is convex.</p>
+<p>Given a function with inputs <span class="math inline"><em>x</em></span>, what values of <span class="math inline"><em>x</em></span> maximise the function?</p>
+<p>We explore constrained and unconstrained optimisation. The former is where restrictions are placed on vector <span class="math inline"><em>x</em></span>, such as a budget constraint in economics.</p>
+<h3 id="the-dual-problem-is-concave">The dual problem is concave</h3>
+<h3 id="the-duality-gap">The duality gap</h3>
+<p>We refer to the optimal solution for the primary problem as <span class="math inline"><em>p</em><sup>*</sup></span>, and the optimal solution for the dual problem as <span class="math inline"><em>d</em><sup>*</sup></span>.</p>
+<p>The duality gap is <span class="math inline"><em>p</em><sup>*</sup> − <em>d</em><sup>*</sup></span>.</p>
+<h2 id="complementary-slackness-for-linear-optimisation">Complementary slackness for linear optimisation</h2>
+<h2 id="farkas-lemma">Farkas’ lemma</h2>
+<p>We have matrix <span class="math inline"><em>A</em></span> and vector <span class="math inline"><em>b</em></span>.</p>
+<p>Either:</p>
+<ul>
+<li><p><span class="math inline"><em>A</em><em>x</em> = <em>b</em></span>; <span class="math inline"><em>x</em> ≥ 0</span></p></li>
+<li><p><span class="math inline"><em>A</em><sup><em>T</em></sup><em>y</em> ≥ 0</span>; <span class="math inline"><em>b</em><sup><em>T</em></sup><em>y</em> &lt; 0</span></p></li>
+</ul>
+<h1 id="quadratic-optimisation">Quadratic optimisation</h1>
+<h2 id="the-quadratic-optimisation-problem">The quadratic optimisation problem</h2>
+<h1 id="constrainted-non-linear-optimisation">Constrainted non-linear optimisation</h1>
+<h2 id="weak-duality-theorem">Weak duality theorem</h2>
+<p>The duality gap (<span class="math inline"><em>p</em><sup>*</sup> − <em>d</em><sup>*</sup></span> is non-negative.</p>
+<h2 id="lagrange-multipliers">Lagrange multipliers</h2>
+<h2 id="the-dual-problem-for-non-linear-optimisation">The dual problem for non-linear optimisation</h2>
+<h2 id="the-weak-duality-theorem">The weak duality theorem</h2>
+<h1 id="sort">Sort</h1>
+<h1 id="constrained-convex-optimisation">Constrained convex optimisation</h1>
+<h2 id="slaters-condition">Slater’s condition</h2>
+<h3 id="strong-duality">Strong duality</h3>
+<p>Strong duality is where the duality gap is <span class="math inline">0</span>.</p>
+<h3 id="slaters-condition-1">Slater’s condition</h3>
+<p>Slater’s condition says that strong duality holds if there is an input where the inequality constraints are satisified strictly.</p>
+<p>That is they are <span class="math inline"><em>g</em>(<em>x</em>)&lt;0</span>, not <span class="math inline"><em>g</em>(<em>x</em>)≤0</span></p>
+<p>This means that the conditions are slack.</p>
+<p>This only applies if the problem is convex. That is, if Slater’s condition holds, and the problem is convex, then strong duality holds.</p>
+<h2 id="the-strong-duality-theorem">The strong duality theorem</h2>
+<h2 id="karush-kuhn-tucker-conditions">Karush-Kuhn-Tucker conditions</h2>
+<p>If our problem is non-convex, or if Slater’s condition does not hold, how else can be find a solution?</p>
+<p>A solution, <span class="math inline"><em>p</em><sup>*</sup></span> can satisify KKT conditions.</p>
+<h2 id="unconstrained-envelope-theorem">Unconstrained envelope theorem</h2>
+<p>Consider a function which takes two parameters:</p>
+<p><span class="math inline"><em>f</em>(<em>x</em>, <em>α</em></span></p>
+<p>We want to choose <span class="math inline"><em>x</em></span> to maximise <span class="math inline"><em>f</em></span>, given <span class="math inline"><em>α</em></span>.</p>
+<p><span class="math inline"><em>V</em>(<em>α</em>)=sup<sub><em>x</em> ∈ <em>X</em></sub><em>f</em>(<em>x</em>, <em>α</em>)</span></p>
+<p>There is a subset of <span class="math inline"><em>X</em></span> where <span class="math inline"><em>f</em>(<em>x</em>, <em>α</em>)=<em>V</em>(<em>α</em>)</span>.</p>
+<p><span class="math inline"><em>X</em><sup>*</sup>(<em>α</em>)={<em>x</em> ∈ <em>X</em>|<em>f</em>(<em>x</em>, <em>α</em>)=<em>V</em>(<em>α</em>)}</span></p>
+<p>This means that <span class="math inline"><em>V</em>(<em>α</em>)=<em>f</em>(<em>x</em><sup>*</sup>, <em>α</em>)</span> for <span class="math inline"><em>x</em><sup>*</sup> ∈ <em>X</em><sup>*</sup></span>.</p>
+<p>Let’s assume that there is only one <span class="math inline"><em>x</em><sup>*</sup></span>.</p>
+<p><span class="math inline"><em>V</em>(<em>α</em>)=<em>f</em>(<em>x</em><sup>*</sup>, <em>α</em>)</span></p>
+<p>What happens to the value function as we relax <span class="math inline"><em>α</em></span>?</p>
+<p><span class="math inline"><em>V</em><sub><em>α</em><sub><em>i</em></sub></sub>(<em>α</em>)=<em>f</em><sub><em>α</em><sub><em>i</em></sub></sub>(<em>x</em><sup>*</sup>(<em>α</em>),<em>α</em>)</span>.</p>
+<p><span class="math inline">$V_{\alpha_i}(\alpha )=f_x\dfrac{\delta x^*}{\delta \alpha }+f_{\alpha_i}$</span>.</p>
+<p>We know that <span class="math inline"><em>f</em><sub><em>x</em></sub> = 0</span> from first order conditions. So:</p>
+<p><span class="math inline"><em>V</em><sub><em>α</em><sub><em>i</em></sub></sub>(<em>α</em>)=<em>f</em><sub><em>α</em><sub><em>i</em></sub></sub></span>.</p>
+<p>That is, at the optimum, as the constant is relaxed, we can treat the <span class="math inline"><em>x</em><sup>*</sup></span> as fixed, as the first-order movement is <span class="math inline">0</span>.</p>

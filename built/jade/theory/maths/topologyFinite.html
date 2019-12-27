@@ -1,1 +1,87 @@
-
+<h1 id="nearness-functions">Nearness functions</h1>
+<h2 id="topologies">Topologies</h2>
+<h2 id="topologies-on-sets">Topologies on sets</h2>
+<p><span class="math inline"><em>T</em></span> is a topology on set <span class="math inline"><em>X</em></span> if:</p>
+<ul>
+<li><p><span class="math inline"><em>X</em> ∈ <em>T</em></span></p></li>
+<li><p><span class="math inline">⌀ ∈ <em>T</em></span></p></li>
+<li><p>Unions of <span class="math inline"><em>T</em></span> are in <span class="math inline"><em>T</em></span></p></li>
+<li><p>Intersections of <span class="math inline"><em>T</em></span> are in <span class="math inline"><em>T</em></span></p></li>
+</ul>
+<h2 id="examples-of-topologies-the-trivial-topology">Examples of topologies: The trivial topology</h2>
+<p>The trivial topology contains only the underlying set and the empty set.</p>
+<h2 id="examples-of-topologies-the-discrete-toplogy">Examples of topologies: The discrete toplogy</h2>
+<p>The discrete toplogy contains all subsets of the underlying set (is this the power set?)</p>
+<h1 id="neighbourhoods">Neighbourhoods</h1>
+<h2 id="neighbourhood-topology">Neighbourhood topology</h2>
+<p>We have a set <span class="math inline"><em>X</em></span>.</p>
+<p>For each element <span class="math inline"><em>x</em> ∈ <em>X</em></span>, there is a non-empty set of neighbourhoods <span class="math inline"><em>N</em> ∈ <strong>N</strong>(<em>x</em>)</span> where <span class="math inline"><em>x</em> ∈ <em>N</em> ⊆ <em>X</em></span> such that:</p>
+<ul>
+<li><p>If <span class="math inline"><em>N</em></span> is a subset of <span class="math inline"><em>M</em></span>, <span class="math inline"><em>M</em></span> is a neighbourhood.</p></li>
+<li><p>The intersection of two neighbourhoods of <span class="math inline"><em>x</em></span> is a neighbourhood of <span class="math inline"><em>x</em></span>.</p></li>
+<li><p><span class="math inline"><em>N</em></span> is a neighbourhood for each point in some <span class="math inline"><em>M</em> ⊆ <em>N</em></span></p></li>
+</ul>
+<h2 id="topological-distinguishability">Topological distinguishability</h2>
+<p>If two points have the same neighbourhoods then they are topologically indistinguishable.</p>
+<p>For example in the trivial topology, all points are topologically indistinguishable.</p>
+<h2 id="open-sets">Open sets</h2>
+<p><span class="math inline"><em>U</em></span> is an open set if it is a neighbourhood for all its points.</p>
+<h1 id="open-and-closed-sets">Open and closed sets</h1>
+<h2 id="limit-points-and-closure">Limit points and closure</h2>
+<h3 id="limit-points">Limit points</h3>
+<p>A point <span class="math inline"><em>x</em></span> in the topological set <span class="math inline"><em>X</em></span> is a limit point for <span class="math inline"><em>S</em> ⊂ <em>X</em></span> if every neighbourhood of <span class="math inline"><em>x</em></span> contains another point in <span class="math inline"><em>S</em></span>.</p>
+<p>For example <span class="math inline">−1</span> is a limit point for the real numbers where <span class="math inline"><em>S</em></span> is <span class="math inline">[0, 1]</span> (or <span class="math inline">(0, 1)</span>.</p>
+<h3 id="closure">Closure</h3>
+<p>The closure of a subset of a topological space is the subset itself along with all limit points.</p>
+<p>So the closure of <span class="math inline">|<em>x</em>|&lt;1</span> includes <span class="math inline">−1</span> and <span class="math inline">1</span>.</p>
+<h2 id="boundries-and-interiors">Boundries and interiors</h2>
+<p>The boundry of the subset <span class="math inline"><em>S</em></span> of a topology is the intersection with the closure of <span class="math inline"><em>S</em></span> with the closure of the complement of <span class="math inline"><em>S</em></span>.</p>
+<p>So the boundry of both <span class="math inline">(0, 1)</span> and <span class="math inline">[0, 1]</span> are <span class="math inline">0</span> and <span class="math inline">1</span>.</p>
+<p>The interior of <span class="math inline"><em>S</em></span> is <span class="math inline"><em>S</em></span> without the boundry.</p>
+<p>So the interior of <span class="math inline">(0, 1)</span> and <span class="math inline">[0, 1]</span> are both <span class="math inline">(0, 1)</span>.</p>
+<h2 id="closed-sets">Closed sets</h2>
+<p>The complement of any open set is a closed set.</p>
+<p>A set can be open, closed, both or neither.</p>
+<h1 id="compactness">Compactness</h1>
+<h2 id="covers">Covers</h2>
+<p>A space <span class="math inline"><em>X</em></span> is covered by a set of subsets of <span class="math inline"><em>X</em></span>, <span class="math inline"><em>C</em></span>, if the union of <span class="math inline"><em>C</em></span> is <span class="math inline"><em>X</em></span>.</p>
+<h2 id="subcover">Subcover</h2>
+<p>A subset of <span class="math inline"><em>C</em></span> which still covers <span class="math inline"><em>X</em></span> is a a subcover.</p>
+<h2 id="open-cover">Open cover</h2>
+<p><span class="math inline"><em>C</em></span> is an open cover if each member is an open set.</p>
+<h2 id="bases-of-topologies">Bases of topologies</h2>
+<p>Subset <span class="math inline"><em>B</em></span> of topology <span class="math inline"><em>T</em></span> is a base for <span class="math inline"><em>T</em></span> if all elements of <span class="math inline"><em>T</em></span> are unions of members of <span class="math inline"><em>B</em></span>.</p>
+<h3 id="second-countable-space">Second-countable space</h3>
+<p>If <span class="math inline"><em>B</em></span> is finite then the toplogy is a second-countable space.</p>
+<h1 id="separation">Separation</h1>
+<h2 id="connected-and-separated-sets">Connected and separated sets</h2>
+<p>Two subsets of <span class="math inline"><em>X</em></span> in topological space <span class="math inline"><em>T</em></span> are separated if each subset is disjoint from the other’s closure.</p>
+<p>So <span class="math inline">[ − 1, 0)</span> and <span class="math inline">(0, 1)</span> are separated.</p>
+<p><span class="math inline">[ − 1, 0]</span> and <span class="math inline">(0, 1)</span> are not separated.</p>
+<p>Sets which are not separated are connected.</p>
+<h1 id="cartesian-products">Cartesian products</h1>
+<h2 id="box-topology">Box topology</h2>
+<h2 id="product-topology">Product topology</h2>
+<h1 id="creating-topologies-from-sets">Creating topologies from sets</h1>
+<h2 id="the-trivial-topology">The trivial topology</h2>
+<p>A topology which contains just <span class="math inline"><em>X</em></span> and <span class="math inline">⌀</span> is the trivial topology.</p>
+<h2 id="discrete-topology">Discrete topology</h2>
+<h1 id="taxonomy-of-spaces">Taxonomy of spaces</h1>
+<h2 id="lindelöf-space">Lindelöf space</h2>
+<p>In a Lindelöf space all open covers have countable subcovers.</p>
+<p>This is weaker than compactness, which requires that every open cover has a finite subcover.</p>
+<h2 id="kolmogorov-space">Kolmogorov space</h2>
+<p>In a Kolmogorov (or <span class="math inline"><em>T</em><sub>0</sub></span>) space, for every pair of points there is a neighbourhood containing one but not the other.</p>
+<h1 id="local-properties">Local properties</h1>
+<h2 id="local-properties-1">Local properties</h2>
+<p>Locally, a topology may have properties which are not present globally.</p>
+<h2 id="locally-compact-spaces">Locally compact spaces</h2>
+<h2 id="locally-connected-spaces">Locally connected spaces</h2>
+<h1 id="to-inf">TO INF</h1>
+<h2 id="hausdorf-space">Hausdorf space</h2>
+<p>In a Hausdorf (or T<span class="math inline"><em></em><sub>2</sub></span>) space, any two different points have neighbourhoods which are disjoint.</p>
+<h2 id="compact-spaces">Compact spaces</h2>
+<p>A space <span class="math inline"><em>X</em></span> is compact if each open cover has a finite subcover.</p>
+<p>If we can define a cover which does not have a finite subcover, then the space is not compact.</p>
+<p>For example an infinite cover could be tend towards <span class="math inline">(0, 1)</span>, eg as <span class="math inline">$\dfrac{1}{n},1-\dfrac{1}{n}$</span></p>
+<p>This covers <span class="math inline">(0, 1)</span>, but there is no finite subcover. As a result <span class="math inline">(0, 1)</span> is not compact.</p>
