@@ -2,6 +2,7 @@ bower_components/
 data/
 private/
 node_modules/
+built/
 public/
 *.log
 MongoDBDump/
