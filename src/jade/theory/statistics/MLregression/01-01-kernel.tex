@@ -1,0 +1,27 @@
+
+\subsection{Kernel regression}
+
+\subsubsection{Introduction}
+
+For parametric regression we have:
+
+\(y=f(X)\)
+
+Where the form of \(f(X)\) is fixed, such as for linear regression.
+
+For non-parametric regression we have:
+
+\(y=m(X)\)
+
+Where \m(X)\) is not fixed.
+
+We can estimate \(m(X)\) using kernel regression.
+
+\(m(X)=\frac{\sum_{i=1}^nK_h(x-x_i)y_i}{\sum_{i=1}^nK_h(x-x_i)}\)
+
+We know this because we have:
+
+\(E(y|X)=\int yf(y|x)dy=\int y\frac{f(x,y)}{f(x)}dy\)
+
+We then use kernel density estimation for both.
+

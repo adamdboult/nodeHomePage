@@ -1,0 +1,31 @@
+
+\subsection{Estimating the Markov chain stochastic matrix}
+
+\subsubsection{Introduction}
+
+Given a sequence: \(x_1,...x_n\).
+
+The likelihood is:
+
+\(L=\prod_{i=2}^n p_{x_{i-1},x_i}\)
+
+If there are \(k\) states we can rewrite this as:
+
+\(L=prod_{i=1}^k\prod_{j=1}^k n_{ij}p_{ij}\)
+
+Where \(p_{ij}\) is the chance of moving from state \(i\) to state \(j\), and \(n_{ij}\) is the number of transtions between \(i\) and \(j\).
+
+The log likelhood is:
+
+\(\ln L=\sum_{i=1}^k\sum_{j=1}^kn_{ij}\ln p_{ij}\)
+
+\subsubsection{Constrained optimisation}
+
+Not all parameters are free. All probabilities must sum to \(1\).
+
+\(\ln L=\sum_{i=1}^k\sum_{j=1}^kn_{ij}\ln p_{ij}-sum_{i=1}\lambda_i (\sum_{j=1}p_{ij}-1)\)
+
+This gives us:
+
+\(\hat p_{ij}=\dfrac{n_{ij}}{\sum_k n_{ik}}\)
+

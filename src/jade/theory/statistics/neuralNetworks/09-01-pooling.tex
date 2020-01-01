@@ -1,0 +1,15 @@
+
+\subsection{Pooling layers}
+
+The input is a matrix. We place a number of windows on the input matrix. The max of each window is an input to the next layer.
+
+Means fewer parameters, easier to compute, less chance of overfitting
+
+Parameters: height, width of window, stride (amount shifts by each window)
+
+We can also add padding to the edge of the image so we don't lose data.
+
+Same padding (use 0), valid padding (no padding)
+
+Pooling layer compresses, takes 2x2. Max pooling returns highest activiation
+

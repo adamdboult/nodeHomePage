@@ -1,0 +1,29 @@
+
+\subsection{Autoregressive Conditional Heteroskedasticity (ARCH)}
+
+\subsubsection{Variance of the AR(\1\)) model}
+
+The standard AR(\1\)) model is:
+
+\(y_t=\alpha + \beta y_{t-1}+\epsilon_t \)
+
+The variance is:
+
+\(Var(y_t)=Var(\alpha + \beta y_{t-1}+\epsilon_t)\)
+
+\(Var(y_t)(1-\beta^2)=Var(\epsilon_t)\)
+
+Assuming the errors are IID we have:
+
+\(Var(y_t))=\dfrac{\sigma^2 }{1-\beta^2 }\)
+
+This is independent of historic observations, which may not be desirable.
+
+\subsubsection{Conditional variance}
+
+Consider the alternative formulation:
+
+\(y_t=\epsilon_t f(y_{t-1})\)
+
+This allows for conditional heteroskedasticity.
+

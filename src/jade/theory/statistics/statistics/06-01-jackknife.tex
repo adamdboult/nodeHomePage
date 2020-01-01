@@ -1,0 +1,27 @@
+
+\subsection{The jackknife}
+
+We have a statistic:
+
+\(S(x_1, x_2,...,x_n)\)
+
+We may want to estimate moments for this statistic, but are unable to do so.
+
+\subsubsection{The jackknife estimator}
+
+The jackknife is an approach for getting moments for statistics.
+
+We start by creating \(n\) statistics each leaving out one observation. 
+
+\(\bar S_i(x_1,x_2,...x_{i-1},x_{i+1},...,x_n)\)
+
+We define:
+
+\(\bar S=\dfrac{1}{n}\sum_i\bar S_i\)
+
+\subsubsection{Moments of the jackknife estimator}
+
+We want to know the variance.
+
+\(Var \bar S=\frac{n-1}{n}\sum_i(\bar S_i-\bar S)^2\).
+

@@ -1,0 +1,41 @@
+
+\subsection{2 Stage OLS (2SOLS) estimator}
+
+\subsubsection{Motivation}
+
+If \(x\) is correlated with the error term the OLS estimate will be biased.
+
+\subsubsection{2 Stage OLS - first stage}
+
+We have 
+
+\(y_i=x_i \theta + \epsilon_i \)
+
+\(x_i=z_i \rho +\mu_i\)
+
+We do OLS on the second to get \(\hat \rho \).
+
+\(\hat \rho =(Z^TZ)^{-1}Z^TX\)
+
+We use this to get predicted values of \(X\).
+
+\(\hat X=Z\rho =Z(Z^TZ)^{-1}Z^TX = P_ZX\)
+
+\subsubsection{2 Stage OLS - second stage}
+
+We then regress \(y\) on the estimated \(X\):
+
+\(y_i=\hat x_i\theta +\epsilon_i\)
+
+Our prediction is then:
+
+\(\hat {\theta_{2SOLS} = (\hat {X^T}\hat X)^{-1}\hat {X^T}y)\)
+
+\(\hat {\theta_{2SOLS} = ((P_ZX)^TP_ZX)^{-1}(P_ZX)^Ty)\)
+
+\(\hat {\theta_{2SOLS} = (X^TP_ZX)^{-1}X^TP_Zy)\)
+
+If the dimension of \(Z\) is the same as \(X\) this collapses to:
+
+\(\hat {\theta_{2SOLS} = (Z^TX)^{-1}Z^Ty\)
+

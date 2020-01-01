@@ -1,0 +1,45 @@
+
+\subsection{The cross-sectional model}
+
+\subsubsection{Hierarchical data}
+
+Our standard linear model is:
+
+\(y_i=\alpha + X_i\theta +\epsilon_i\)
+
+If we had two sets of data we could view these as:
+
+\(y_{i,0}=\alpha_0 + X_{i,0}\theta_0 +\epsilon_{i,0}\)
+
+\(y_{i,1}=\alpha_1 + X_{i,1}\theta_1 +\epsilon_{i,1}\)
+
+Here, the data data from \(1\) does not affect the parameters in \(2\).
+
+\subsubsection{Pooled data}
+
+If we think the data generating process is similar between models, then by restricting the freedom of parameters between models we can get more data for each estimate.
+
+For example if we think that all parameters are the same between the models we can estimate:
+
+\(y_{i,0}=\alpha + X_{i,0}\theta +\epsilon_{i,0}\)
+
+\(y_{i,1}=\alpha + X_{i,1}\theta +\epsilon_{i,1}\)
+
+Or:
+
+\(y_{ij}=\alpha + X_{ij}\theta + \epsilon_{ij}\)
+
+\subsubsection{Fixed slopes}
+
+Intercepts may be different between the groups. In this case we can instead use the model:
+
+\(y_{ij}=\alpha + X_{ij}\theta + \xi_j + \epsilon_{ij}\)
+
+There are different ways of estimating this model:
+
+\begin{itemize}
+\item Pooled OLS
+\item Fixed effects
+\item Random effects
+\end{itemize}
+

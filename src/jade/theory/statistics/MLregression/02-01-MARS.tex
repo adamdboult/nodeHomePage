@@ -1,0 +1,24 @@
+
+\subsection{Multivariate Adaptive Regression Splines (MARS)}
+
+A linear model looks like:
+
+\(\hat y =c+\sum_i x_i\theta_i\)
+
+MARS instead produces a linear model for subsets of X.
+
+\(\hat y =c+\sum_i B_j(x_i,a_j)\theta_i\)
+
+Where:
+
+\begin{itemize}
+\item \(B_j=max(0, x_i-a_j)\); or
+\item \(B_j=-max(0, a_j-x_i)\)
+\end{itemize}
+
+This is trained using a forward pass and a backward pass.
+
+\subsubsection{Forward pass}
+
+\subsubsection{Backward pass}
+

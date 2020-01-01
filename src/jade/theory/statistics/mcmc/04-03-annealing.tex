@@ -1,0 +1,19 @@
+
+\subsection{Simulated annealing}
+
+\subsubsection{Introduction}
+
+We can use a version of Metropolis-Hastings to find the global maximum of a function \(f(x)\).
+
+We start with an arbitrary point \(x_0\).
+
+We move randomly from this to identiy a candidate point \(x_c\).
+
+We accept this with probability depending on the the relationship between \(x_0\) and \(x_c\).
+
+This process will converge on the global maximum.
+
+\subsubsection{Hyperparameter}
+
+There is a hyperparameter for selection. At the extreme this becomes a greedy function.
+

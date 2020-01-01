@@ -1,0 +1,79 @@
+
+\subsection{Bayes theorem}
+
+\subsubsection{Conditional probability}
+
+We define conditional probability
+
+$P(E_i|E_j):=\frac{P(E_i\land E_j)}{P(E_j)}$
+
+We can show this is between \(0\) and \(1\).
+
+$P(E_j)=P(E_i\land E_j)+P(\bar{E_i}\land E_j)$
+
+$P(E_i|E_j):=\frac{P(E_i\land E_j)}{ P(E_i\land E_j)+P(\bar{E_i}\land E_j)}$
+
+We know:
+
+$P(x_i|y_j):=\frac{P(x_i \land y_j)}{P(y_j)}$
+
+$P(y_j|x_i):=\frac{P(x_i \land y_j)}{P(x_i)}$
+
+So:
+
+$P(x_i|y_j)P(y_j)=P(y_j|x_i) P(x_i)$
+
+$P(x_i|y_j)=\frac{P(y_j|x_i) P(x_i)}{P(y_j)}$
+
+Note that this is undefined when \(P(y_j)=0\)
+
+Note that for the same event, 
+
+$P(x_i|x_j)=\frac{P(x_i\land x_j)}{P(x_j)}$
+
+$P(x_i|x_j)=0$
+
+For the same outcome:
+
+$P(x_i|x_i)=\frac{P(x_i\land x_i)}{P(x_i)}$
+
+$P(x_i|x_i)=\frac{P(x_i)}{P(x_i)}$
+
+$P(x_i|x_i)=1$
+
+\subsubsection{Bayes theorem}
+
+From the definition of conditional probability we know that:
+
+$P(E_i|E_j):=\frac{P(E_i\land E_j)}{P(E_j)}$
+
+$P(E_j|E_i):=\frac{P(E_i\land E_j)}{P(E_i)}$
+
+So:
+
+$P(E_i\land E_j)=P(E_i|E_j)P(E_j)$
+
+$P(E_i\land E_j)=P(E_j|E_i)P(E_i)$
+
+So:
+
+$P(E_i|E_j)P(E_j)=P(E_j|E_i)P(E_i)$
+
+\subsubsection{Independent variables}
+
+Events are independent if:
+
+$P(E_i|E_j)=P(E_i)$
+
+Note that:
+
+$P(E_i\land E_j)=P(E_i|E_j)P(E_j)$
+
+And so for independent events:
+
+$P(E_i\land E_j)=P(E_i)P(E_j)$
+
+\subsubsection{Conjugate priors}
+
+If the prior \(P(\theta)\) and the posterior \(P(\theta | X)\) are in the same family of distributions (eg both Gaussian), then the prior and posterior are conjugate distributions
+

@@ -1,0 +1,31 @@
+
+\subsection{Bayesian CART}
+
+\subsubsection{Our prior}
+
+Call the collective parameters of the tree \(\Theta =(T, k, r)\) and \(\theta \).
+
+Collectively our prior is defined by \(P(\Theta )\) and \(P(\theta )\)
+
+\subsubsection{Bayes' theorem}
+
+We want to know the posterior given our data \(X\).
+
+\(P(\Theta | X)=\frac{P(X|\Theta )P(\Theta )}{P(X)}\)
+
+\(P(\Theta | X)\propto P(X|\Theta )P(\Theta )\)
+
+\subsubsection{Expanded posterior}
+
+We know explore \(P(X|\Theta )\)
+
+\(P(X|\Theta )=\int P(X| \theta , \Theta)P(\theta)d\theta \)
+
+This means our posterior is:
+
+\(P(\Theta | X)\propto P(\Theta )\int P(X| \theta , \Theta)P(\theta)d\theta \)
+
+\subsubsection{Estimation}
+
+This can be estimated with MCMC.
+

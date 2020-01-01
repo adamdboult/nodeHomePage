@@ -1,0 +1,25 @@
+
+\subsection{Error Correction Model}
+
+\subsubsection{Static model}
+
+Like PAM we start with static estimator.
+
+\subsubsection{The ECM}
+
+The ECM does a regression with first differences, and includes lagged error terms.
+
+We start with a basic first-difference model. 
+
+\(\Delta y_t= \Delta x_t\)
+
+We could also expand this to include laggs for both x and y. Here we don't.
+
+We know that long term \(y_t=\theta x_t\). We use the error from this in a first difference model. 
+
+\(\Delta y_t= \alpha \Delta x_t + \beta (y_{t-1}-\theta x_{t-1})\)
+
+Page on identifying error terms 
+
+Also, page on Vector Error Correction Model (VECM)
+

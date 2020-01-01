@@ -1,0 +1,25 @@
+
+\subsection{Mixed logit (random coefficients)}
+
+\subsubsection{Introduction}
+
+In our standard model we have:
+
+\(z_{ij}=\beta x_{ij} +\epsilon_{ij} \)
+
+If we allow the parameters to vary for each individual we have:
+
+\(z_{ij}=\beta_i x_{ij} +\epsilon_{ij} \)
+
+The probability of choosing \(j\) now depends on the distribution of \(\beta \).
+
+In the IID case we had:
+
+\(P_{ij}=\dfrac{e^{\beta x_{ij}}{\sum_k e^{\beta x_{ik}}}\)
+
+Rather than evaluate this at a single point \(\beta \) we integrate.
+
+\(P_{ij}=\int \dfrac{e^{\beta x_{ij}}{\sum_k e^{\beta x_{ik}}}f(\beta )d\beta \)
+
+If \(\beta \) is degenerate this reduces to the standard logit model.
+

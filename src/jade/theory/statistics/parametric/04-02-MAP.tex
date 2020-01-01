@@ -1,0 +1,24 @@
+
+\subsection{Maximum A-Priori estimation (MAP) for generative models}
+
+\subsubsection{Bayesian regression for generative models}
+
+We know:
+
+\(P(\theta |y,X)=\frac{P(y, \theta, X )}{P(y, X)}\)
+
+\(P(\theta |y,X)=\frac{P(y, X |\theta )P(\theta )}{P(y, X)}\)
+
+The bottom bit is a normalisation factor, and so we can use:
+
+\(P(\theta |y,X)\propto P(y, X| \theta)P(\theta)\)
+
+We have here:
+
+\begin{itemize}
+\item Our prior - \(P(\theta )\)
+\item Our posterior - \(P(\theta |y,X)\)
+\item Our likelihood function - \(P(y, X| \theta )\)
+\end{itemize}
+
+

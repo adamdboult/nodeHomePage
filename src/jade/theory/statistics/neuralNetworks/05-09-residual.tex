@@ -1,0 +1,13 @@
+
+\subsection{Residual blocks}
+
+In a node we have:
+
+\(a_{ij}=\sigma_{ij}(W_{ij}a_{i-1})\)
+
+That is, the value of a node, is the activation on the sum of the weights of the previous layer.
+
+Residual block however look further back that one layer. They include the full data from an older layer (without weights)
+
+\(a_{ij}=\sigma_{ij}(W_{ij}a_{i-1}+a_k)\)
+

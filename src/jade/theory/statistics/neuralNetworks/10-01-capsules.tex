@@ -1,0 +1,47 @@
+
+\subsection{Capsules}
+
+\subsubsection{Primary capsule layers}
+
+Outputs of convolutions are scalars. however we can also create vectors, if we associate some convolutions with each other
+
+eg if we have 6 convolutions, the output of these can be used to create a 6 dimensional vector for each window.
+
+\subsubsection{Normalisation in primary capsule layers (vector squishing)}
+
+We can normalise the length of these vectors to between \(0\) and \(1\).
+
+The output of this repesents the chance of finding the feature they are looking for, and the orientation
+
+If the vector length is low, feature not found. if high, feature found.
+
+We have orientation from vector, and position from window
+
+\subsubsection{Routing capsule layers}
+
+We now have a layer of position and orientation of basic shapes (triangles, rectangles etc)
+
+We want to know which more complex thing they are part of.
+
+So the output of this step is again a matrix with position and orientation, but of more complex features
+
+To determine the activation from each basic shape to the next feature we use routing-by-agreement.
+
+This takes each basic shape and works out what it would look like if the complex feature was present.
+
+If a complex feature has two basic shapes, they will both have the same predicted complex shape. Otherwise the relationship is spurious and they will not
+
+If they agree we have a high weight
+
+This process is complex and computationally expensive.
+
+However we don't need pooling layers now
+
+\subsubsection{caps net}
+
+Does normal conv first, then primary, then secondary.
+
+\subsubsection{caps: reconstruction}
+
+We have vector space of feature position and orietnation. we can recreate output
+

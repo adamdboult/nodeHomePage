@@ -1,0 +1,29 @@
+
+\subsection{Gibb's sampling}
+
+\subsubsection{Introduction}
+
+As with Metropolis-Hastings, we want to generate samples for \(P(X)\) and use this to approximate its form.
+
+We do this by using the conditional distribution. If \(X\) is a vector then we also have:
+
+\(P(x_j|x_0,...,x_{j-1},x_{j+1},...,x_n)\)
+
+We use our knowledge of this distribution.
+
+Start with vector x_0.
+
+This has components \(x_{0,j}\)
+
+To form the next vector \(x_1\) we loop through each component.
+
+\(P(x_{1,0}|x_{0,0},x_{0,1},...,x_{0,n})\)
+
+We use this to form \(x_{1,0}\)
+
+However after th the first component we update this so it uses the updated variables.
+
+\(P(x_{1,k}|x_{1,0},...,x_{1,k-1},x_{0,k},...,x_{0,n}\)
+
+This means we only need to know the conditional distributions.
+

@@ -1,0 +1,102 @@
+
+\subsection{Identification through exogeneous variables}
+
+Previously our structural model was:
+
+\(Q=\alpha_1 + \beta_1 P + \epsilon_1 \)
+
+\(Q=\alpha_2 + \beta_2 P + \epsilon_2 \)
+
+And our reduced form:
+
+\(P =\frac{\alpha_2-\alpha_1 }{\beta_1-\beta_2}+\frac{\epilon_2-\epsilon_1 }{\beta_1-\beta_2}\)
+
+\(Q =\frac{\alpha_2\beta_1-\alpha_1\beta_2 }{\beta_1-\beta_2}+\frac{\beta_1\epsilon_2 -\beta_2\epsilon_1}{\beta_1-\beta_2}\)
+
+Or:
+
+\(P=\pi_1 + \tau_1 \)
+
+\(Q= \pi_2 + \tau_2\)
+
+\subsubsection{Adding another variable}
+
+This time we add another measured variable, \(I\).
+
+\(Q=\alpha_1 + \beta_1 P + \theta_1 I + \epsilon_1 \)
+
+\(Q=\alpha_2 + \beta_2 P + \theta_2 I + \epsilon_2 \)
+
+The reduced form is now:
+
+\(P =\frac{\alpha_2 -alpha_1 }{\beta_1-\beta_2}+\frac{\theta_2-\theta_1 }{\beta_1-\beta_2}I+\frac{\epsilon_2-\epsilon_1}{\beta_1-\beta_2}\)
+
+\(Q =\frac{\alpha_2\beta_1-\alpha_1\beta_2 }{\beta_1-\beta_2}+\frac{\theta_2\beta_1-\theta_\beta_2}{\beta_1-\beta_2}I+\frac{\beta_1\epsilon_2 -\beta_2\epsilon_1}{\beta_1-\beta_2}\)
+
+Or:
+
+\(P =\pi_{11} +\pi_{12}I + \tau_1 \)
+
+\(Q= \pi_{21} +\pi_{22}I + \tau_2 \)
+
+We can estimate \(\pi_1 \) and \(\pi_2 \) as \(\hat \pi_1\) and \(\hat \pi_2\) respectively.
+
+We can now create estimators \(\hat \pi_{11}\), \(\hat \pi_{12}\), \(\hat \pi_{21}\) and \(\hat \pi_{22}\).
+
+\subsubsection{Identification with an exogeneous variable}
+
+We now have \(4\) estimators and \(6\) parameters, meaning that we still cannot identify the model.
+
+\subsubsection{Partial identification}
+
+Can we use \(\hat \pi \) to identify any of the structural parameters?
+
+We know that:
+
+\begin{itemize}
+\item \(\pi_{11} =\frac{\alpha_2 -\alpha_1 }{\beta_1-\beta_2}\)
+\item \(\pi_{12} =\frac{\theta_2-\theta_1}{\beta_1-\beta_2}\)
+\item \(\pi_{21} =\frac{\alpha_2\beta_1-\alpha_1\beta_2}{\beta_1-\beta_2}\)
+\item \(\pi_{22} =\frac{\theta_2\beta_1-\theta_1\beta_2}{\beta_1-\beta_2} \)
+\end{itemize}
+
+If the exogenous variable only affects one side of the equation, so \(\theta_1=0\), we have:
+
+\begin{itemize}
+\item \(\pi_{11} =\frac{\alpha_2 -\alpha_1 }{\beta_1-\beta_2}\)
+\item \(\pi_{12} =\frac{\theta_2}{\beta_1-\beta_2}\)
+\item \(\pi_{21} =\frac{\alpha_2\beta_1-\alpha_1\beta_2}{\beta_1-\beta_2}\)
+\item \(\pi_{22} =\frac{\theta_2\beta_1}{\beta_1-\beta_2} \)
+\end{itemize}
+
+So we can see that:
+
+\(\hat \beta_1 = \frac{\hat \pi_{22}}{\hat \pi_{12}}\)
+
+This means we now have:
+
+\begin{itemize}
+\item \(\pi_{11} =\frac{\pi_{12}(\alpha_2 -\alpha_1 )}{\pi_{22}-\pi_{12}\beta_2}\)
+\item \(\pi_{12} =\frac{\pi_{12}\theta_2}{\pi_{22}-\pi_{12}\beta_2}\)
+\item \(\pi_{21} =\frac{\pi_{12}(\alpha_2\beta_1-\alpha_1\beta_2)}{\pi_{22}-\pi_{12}\beta_2}\)
+\item \(\pi_{22} =\frac{\pi_{12}\theta_2\beta_1}{\pi_{22}-\pi_{12}\beta_2}\)
+\end{itemize}
+
+We can use this to also identify \(\alpha_1\).
+
+\subsubsection{Complete identification}
+
+If we have independent variables for each of the two equations, we can fully identify the model.
+
+We will have \(6\) estimators and \(6\) parameters.
+
+We are estimating:
+
+\(Q=\alpha_1 + \beta_1 P + \theta_1 I + \epsilon_1 \)
+
+\(Q=\alpha_2 + \beta_2 P + \theta_2 J + \epsilon_2 \)
+
+\(I\) and \(J\) are essentially instrumental variables for the model.
+
+\(I\) is an instrumental variable for demand shocks, and \(J\) is an instrumental variable for supply shocks.
+

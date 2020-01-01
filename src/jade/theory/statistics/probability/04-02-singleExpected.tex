@@ -1,0 +1,74 @@
+
+\subsection{Expected value}
+\subsubsection{Definition}
+
+For a random variable (or vector of random variables), \(x\), we define the expected value of \(f(x)\) as :
+
+$E[f(x)]:=\sum f(x_i) P(x_i)$
+
+The expected value of random variable \(x\) is therefore this where \(f(x)=x\).
+
+$E(x)=\sum_i x_i P(x_i)$
+
+\subsubsection{Linearity of expectation}
+
+We can show that \(E(x+y)=E(x)+E(y)\):
+
+$E[x+y]=\sum_i \sum_j (x_i+y_j) P(x_i \land y_j)$
+
+$E[x+y]=\sum_i \sum_j x_i [P(x_i \land y_j)]+\sum_i \sum_j [y_j P(x_i \land y_j)]$
+
+$E[x+y]=\sum_i x_i \sum_j [P(x_i \land y_j)]+\sum_j y_j \sum_i [P(x_i \land y_j)]$
+
+$E[x+y]=\sum_i x_i P(x_i)+\sum_j y_j P(y_j) $
+
+$E[x+y]=E[x]+E[y]$
+
+\subsubsection{Expectations of multiples}
+
+Expectations
+
+$E(cx)=\sum_i cx P(x_i)$
+
+$E(cx)=c\sum_i x P(x_i)$
+
+$E(cx)=cE(x)$
+
+\subsubsection{Expectations of constants}
+
+$E(c)=\sum_i c_i P(c_i)$
+
+$E(c)= c P(c)$
+
+$E(c)= c$
+
+\subsubsection{Conditional expectation}
+
+If \(Y\) is a variable we are interested in understanding, and \(X\) is a vector of other variables, we can create a model for \(Y\) given \(X\).
+
+This is the conditional expectation.
+
+$E[Y|X]$
+
+$E[P(Y|X)Y]$
+
+In the continuous case this is
+
+$E(Y|X)=\int_{-\infty }^{\infty }yP(y|X)dy$
+
+We can then identify an error vector.
+
+$\epsilon :=Y-E(Y|X)$
+
+So:
+
+$Y=E(Y|X)+\epsilon $
+
+Here \(Y\) is called the dependent variable, and \(X\) is called the dependent variable.
+
+\subsubsection{Iterated expectation}
+
+\(E[E[Y]]=E[Y]\)
+
+\(E[E[Y|X]=E[Y]\)
+

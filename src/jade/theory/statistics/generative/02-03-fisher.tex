@@ -1,0 +1,35 @@
+
+\subsection{Fisher information}
+
+The Fisher information is the variance:
+
+\(E[(\frac{\delta }{\delta \theta }\log f(X, \theta ))^2 |\theta ]\)
+
+\(E[\frac{\delta^2 }{\delta \theta^2 }\log f(X, \theta ) |\theta ]\)
+
+Same as expectation of score squared, because centred around \(0\).
+
+\subsubsection{Fisher information matrix}
+
+We have \(k\) parameters.
+
+\(I(\theta )_{ij}=E[(\frac{\delta }{\delta \theta_i}\log f(X, \theta ))(\frac{\delta }{\delta \theta_j }\log f(X, \theta ))|\theta ]\)
+
+\subsubsection{Observed Fisher information matrix}
+
+The Fisher information matrix contains informatio about the population
+
+The observed Fisher infoirmation is the negative of the Hessian of the log likelihood.
+
+We have:
+
+\begin{itemize}
+\item \(l(\theta |\mathbf X)=\sum_i\ln P(\mathbf x_i|\theta )\)
+\item \(J(\theta^*)=-\del \del^Tl(\theta|mathbf X )|_{\theta = \theta^*\)
+\end{itemize}
+
+The Fisher information is the expected value of this.
+
+\(I(\theta )=E[J(\theta)]\)
+
+

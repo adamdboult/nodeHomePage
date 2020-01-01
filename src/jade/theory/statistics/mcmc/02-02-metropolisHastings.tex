@@ -1,0 +1,28 @@
+
+\subsection{The Metropolis-Hastings algorithm}
+
+\subsubsection{The Metropolis-Hastings algorithm}
+
+The Metropolis-Hastings algorithm creates a set of samples \(x\) such that the distribution of the samples approaches the goal distribution.
+
+\subsubsection{Initialisation}
+
+The algorithm takes an arbitrary starting sample \(x_0\). It then must decide which sample to consider next.
+
+\subsubsection{Generation}
+
+It does this using a Markov chain. That is, there is a map \(g(x_j, x_i)\).
+
+This distribution is generally a normal distribution around \(x_i\), making the process a random walk.
+
+\subsubsection{Acceptance}
+
+Now we have a considered sample, we can either accept or reject it. It is this step that makes the end distribution approximage the function.
+
+We accept if \(\frac{f(x_j)}{f(x_i)}>u\), where \(u\) is a random variable between \(0\) and \(1\), generated each time.
+
+We can calculate this because we know this function.
+
+\subsubsection{Properties}
+
+

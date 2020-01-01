@@ -1,0 +1,33 @@
+
+\subsection{The random effects estimator}
+
+\subsubsection{Introduction}
+
+Our model is:
+
+\(y_{ij}=\alpha + X_{ij}\theta + \xi_j + \epsilon_{ij}\)
+
+\subsubsection{FGLS recap}
+
+\subsubsection{The random effects estimator}
+
+For fixed effects, we had the requirement that group membership be uncorrelated with the error term, but that it could be correlated with other independent variables.
+
+For random effects models, group membership cannot be correlated with other variables.
+
+We have:
+
+\(y_{ij}=\alpha + X_{ij}\theta +\epsilon_{ij}+U_{ij}\)
+
+We now model \(U_{ij}=\bar U_{j}+\rho_j\).
+
+\(y_{ij}=\alpha + X_{ij}\theta +\epsilon_{ij}+\bar U_{j}+\rho_j\)
+
+This randomness of the effect implies, for example, that if we ran the survey again we would expect a different effect
+
+\subsubsection{Clustering standard error}
+
+\subsubsection{Estimation}
+
+We use GLS.
+

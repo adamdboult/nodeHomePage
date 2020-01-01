@@ -1,0 +1,41 @@
+
+\subsection{Extreme IID multinomial}
+
+\subsubsection{IID}
+
+The probability of \(j\) being chosen is:
+
+\(P_{ij}=P(\epsilon_{ik} <v_{ij} -v_{ik} +\epsilon_{ij}\forall k\ne j)\)
+
+If these are independent then we have:
+
+\(P_{ij}=\prod_{k\ne j} P(\epsilon_{ik} <v_{ij} -v_{ik} +\epsilon_{ij})\)
+
+\(P_{ij}=\prod_{k\ne j} F_\epsilon (v_{ij} -v_{ik} +\epsilon_{ij})\)
+
+We do not know \(\epsilon_{ij} so we have to integrate over possibilities.
+
+\(P_{ij}=\int [\prod_{k\ne j} F_\epsilon (v_{ij} -v_{ik} +\epsilon_{ij})]f_\epsilon(\epsilon_{ij})d\epsilon_{ij}\)
+
+\subsubsection{Extreme values}
+
+We have:
+
+\(P_{ij}=\int [\prod_{k\ne j} F_\epsilon (v_{ij} -v_{ik} +\epsilon_{ij})]f_\epsilon(\epsilon_{ij})d\epsilon_{ij}\)
+
+If \(\epsilon \) is extreme value type-I this gives us:
+
+\(P_{ij}=\dfrac{e^{v_{ij}}{\sum_k e^{v_{ik}}}\)
+
+\subsubsection{Independence of irrelevant alternatives}
+
+Consider the ratio two probabilities:
+
+\(\dfrac{P_{ij}}{P_{im}}=\dfrac{e^{v_{ij}}}{e^{v_{im}}}\)
+
+This means that changes to any other products do not affect relative odds.
+
+This can be undesirable. For example removing one option may cause unbalanced substitution.
+
+For example raising the price of buses may cause more substitution to trains than helicopter, for a commute.
+

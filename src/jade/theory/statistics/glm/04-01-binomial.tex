@@ -1,0 +1,43 @@
+
+\subsection{The binomial data generating process}
+
+\subsubsection{Introduction}
+
+For linear regression our data generating process is:
+
+\(y=\alpha + \beta x +\epsilon \)
+
+For linear classification our data generating process is:
+
+\(z=\alpha + \beta x +\epsilon \)
+
+And set \(y\) to \(1\) if \(z>0\)
+
+Or:
+
+\(y=\mathbf I[\alpha+\beta x+\epsilon >0]\)
+
+\subsubsection{Probability of each class}
+
+The probability that an invididual with characteristics \(x\) is classified as \(1\) is:
+
+\(P_1=P(y=1|x)\)
+
+\(P_1=P(\alpha + \beta x+\epsilon >0)\)
+
+\(P_1=\int \mathbf I [\alpha + \beta x+\epsilon >0]f(\epsilon )d\epsilon \)
+
+\(P_1=\int \mathbf I [\epsilon >-\alpha-\beta x ]f(\epsilon )d\epsilon \)
+
+\(P_1=\int_{\epsilon=-\alpha-\beta x}^\infty f(\epsilon )d\epsilon \)
+
+\(P_1=1-F(-\alpha-\beta x) \)
+
+\subsubsection{Example: The logistic function}
+
+Depending on the probability distribution of \(epsilon \) we have different classifiers.
+
+For the logistic case we then have
+
+\(P(y=1|x)=\dfrac{e^{\alpha + \beta x}{1+e^{\alpha + \beta x}}\)
+

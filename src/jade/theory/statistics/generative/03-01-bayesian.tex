@@ -1,0 +1,39 @@
+
+\subsection{Bayesian parameter estimation}
+
+\subsubsection{Bayes rule}
+
+We want to generate the probability distribution of \(\theta \) given the evidence \(X\).
+
+We can transform this using Bayes rule.
+
+\(P(\theta | X)=\frac{P(X|\theta )P(\theta )}{P(X)}\)
+
+Here we have:
+
+\begin{itemize}
+\item Our prior - \(P(\theta )\)
+\item Our likelihood function - \(P(X|\theta )\)
+\item Our posterior - \(P(\theta | X)\)
+\end{itemize}
+
+\subsubsection{ Normal priors and posteriors}
+
+If our prior is a normal distribution then:
+
+\(P(\theta )=\frac{1}{\sqrt {(2\pi )^n|\Sigma_0|}}e^{-\frac{1}{2}(x-\mu )^T\Sigma_0^{-1}(x-\mu)}\)
+
+Similarly, if our likelihood function \(P(X|\theta )\) is a normal distriubtion then:
+
+\(P(X|\theta )=\frac{1}{\sqrt {2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma ^2}}\)
+
+We can now plug these into Bayes rule:
+
+\(P(\theta |X)=\frac{1}{P(X)}\frac{1}{\sqrt {2\pi \sigma_0^2}}e^{-\frac{(\theta-\mu_0)^2}{2\sigma_0^2}}\frac{1}{\sqrt {2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma ^2}}\)
+
+\(P(\theta |X)\propto e^{-\frac{1}{2}[\frac{(\theta-\mu_0)^2}{\sigma_0^2}+\frac{(x-\mu)^2}{\sigma ^2}]}\)
+
+We can then set this an a new Gaussian:
+
+\(P(\theta |X)=\frac{1}{\sqrt {(2\pi )^{n}|\Sigma|}^{\frac{1}{2}}} e^{-\frac{1}{2}[\frac{(\theta-\mu_0)^2}{\sigma_0^2}+\frac{(x-\mu)^2}{\sigma ^2}]}\)
+

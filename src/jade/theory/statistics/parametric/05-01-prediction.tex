@@ -1,0 +1,39 @@
+
+\subsection{Predictions and residuals}
+
+\subsubsection{Introduction}
+
+Our data \((\mathbf y, \mathbf X)\) is divided into \((y_i, \mathbf x_i)\).
+
+We create a function \(\hat y_i = f(\mathbf x_i)\).
+
+The best predictor of \(y\) given \(x\) is:
+
+\(g(X)=E[Y|X]\)
+
+The goal of regression is to find an approximation of this function.
+
+\subsubsection{Link}
+
+\(P(y|X, \theta )\)
+
+\(\hat y =f(\mathbf x)\)
+
+\subsubsection{Residuals}
+
+\(\epsilon_i = y_i- \hat y_i\)
+
+\subsubsection{Residual sum of squares (RSS)}
+
+\(RSS=\sum_i \epsilon_i^2\)
+
+\(RSS=\sum_i (y_i-\hat y_i)^2\)
+
+\subsubsection{Explained sum of squares (ESS)}
+
+\(ESS=\sum_i (\bar y-\hat y_i)^2\)
+
+\subsubsection{Total sum of squares (TSS)}
+
+\(TSS=\sum_i (y_i-\bar y)^2\)
+

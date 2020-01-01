@@ -1,0 +1,42 @@
+
+\subsection{Expectation of OLS estimators}
+
+\subsubsection{Expectation in terms of observables}
+
+We have: \(\hat{\theta }=(X^TX)^{-1}X^Ty\)
+
+Let’s take the expectation.
+
+\(E[\hat{\theta }]=E[(X^TX)^{-1}X^Ty]\)
+
+\subsubsection{Expectation in terms of errors}
+
+Let’s model \(y\) as a function of \(X\). As we place no restrictions on the error terms, this is not as assumption.
+
+\(y=X\theta +\epsilon\). 
+
+\(E[\hat{\theta }]=E[(X^TX)^{-1}X^T(X\theta +\epsilon)]\)
+
+\(E[\hat{\theta }]=E[(X^TX)^{-1}X^TX\theta ]+E[(X^TX)^{-1}X^T \epsilon)]\)
+
+\(E[\hat{\theta }]=\theta +E[(X^TX)^{-1}X^T \epsilon)]\)
+
+\(E[\hat{\theta }]=\theta +E[(X^TX)^{-1}X^T]E[ \epsilon]+cov [(X^TX)^{-1}X^T ,\epsilon]\)
+
+\subsubsection{The Gauss-Markov: Expected error is \(0\)}
+
+\(E[\epsilon  =0]\)
+
+This means that:
+
+\(E[\hat{\theta }]=\theta + cov [(X^TX)^{-1}X^T ,\epsilon]\)
+
+\subsubsection{The Gauss-Markov: Errors and indepedent variables are uncorrelated}
+
+If the error terms and \(X\) are uncorrelated then \(E[\epsilon|X]=0\) and therefore:
+
+\(E[\hat{\theta }]=\theta\)
+
+So this is an unbiased estimator, so long as the condition holds.
+
+

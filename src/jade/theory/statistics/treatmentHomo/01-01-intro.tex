@@ -1,0 +1,24 @@
+
+\subsection{Treatment data}
+
+\subsubsection{Recap}
+
+With multilevel data with fixed coefficients we have:
+
+\(y_{ij}=\mathbf x_{ij}\theta +m_j + \epsilon_{ij}\)
+
+We can estimate \(m_j\) using fixed effects or similar methods.
+
+\subsubsection{Treatment data}
+
+If the data is grouped by whether an entity was treated then will have:
+
+\begin{itemize}
+\item \(y_{i0}\) - the outcome if the entity was not treated
+\item \(y_{i1}\) - the outcome if the entity was treated
+\end{itemize}
+
+However we only observe \(y_i\) and \(D_i\).
+
+\(y_i=y_{i0}+D_i(y_{i1}-y_{10})\)
+

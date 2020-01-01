@@ -1,0 +1,30 @@
+
+\subsection{Kullback-Leibler divergence}
+\subsubsection{Introduction}
+
+Bayesian inference means we have full distribution of p(w), not just moments of a specific point estimate
+
+\subsubsection{Cross entropy:}
+
+H(P,Q)=E_P(I(Q))
+
+So for a discrete distribution this is:
+
+\(H(P,Q)=-\sum_x P(x)\log Q(x)\)
+
+Q is prior
+
+P is posterior
+
+\subsubsection{Kullback-Leibler divergence}
+
+When we move from a prior to a posterior distribution, the entropy of the probability distribution changes.
+
+D_{KL}(P||Q)=H(P,Q)-H(P)
+
+KL divergence is also called the information gain.
+
+\subsubsection{Gibb's inequality}
+
+\(D_{KL}(P||Q)\ge 0\)
+

@@ -1,0 +1,23 @@
+
+\subsection{Least Absolute Shrinkage and Selection Operator (LASSO)}
+
+\subsubsection{Introduction}
+
+With LASSO we add a constraint to \(\hat \theta \).
+
+\(\sum_i \hat \theta_i \le t\)
+
+Regularisation of LLS. Sum of thetas are constrained to be below hyperparameter \(t\)
+
+L1 regularisation
+
+This is also known as sparce regression, because many weights are set to \(0\).
+
+This now looks like:
+
+\(w_{lasso} = \arg \min ||y-Xw||^2_2+\lambda ||w||_1\)
+
+\subsubsection{Hyperparameter}
+
+\(t\) is a hyperparameter.
+

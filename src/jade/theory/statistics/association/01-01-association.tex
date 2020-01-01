@@ -1,0 +1,39 @@
+
+\subsection{Association rules}
+
+\subsubsection{The data}
+
+We have a transaction dataset, \(D\).
+
+This includes transactions of items in \(I\).
+
+Any subset of \(I\) is an itemset.
+
+A subset of size \(k\) is a \(k\)-itemset.
+
+Transactions are a \(k\)-itemset with a unique id, tid.
+
+The set of all transactions is \(T\).
+
+A tidset is a subset of \(T\).
+
+\subsubsection{Forming a lattice}
+
+We have a total order on the items.
+
+An itemset \(ab\) is greater than \(a\), for examplle.
+
+The two points of the lattice are the nullset, and \(I\).
+
+\subsubsection{Mappings}
+
+We have a mapping from \(I\) to \(T\) called \(t\).
+
+We have another mapping from \(T\) to \(I\) called \(i\).
+
+\subsubsection{Frequency}
+
+We define the frequency of an itemset as the number of transactions it appears in.
+
+We can write the frequency of \(A\) as \(\sum A\).
+

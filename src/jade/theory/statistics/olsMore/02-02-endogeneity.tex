@@ -1,0 +1,77 @@
+
+\subsection{Parameter identification problem with simultaneous equations}
+
+\subsubsection{Identification terminology}
+
+A system is under-identified if there are not enough estimators for all structural parameters.
+
+A system is exactly identified if there are the same number of estimators as structural parameters.
+
+A system is over-identified if there are more estimators than structural parameters.
+
+In general we have in our structural form:
+
+\(\sum^n_i\beta_{ij}y_i=\sum^m_i\gamma_{ij}x_i+\epsilon_j\)
+
+This is a system with \(n\) endogeneous variables and \(m\) exogeneous variables.
+
+We can write this in matrix form.
+
+\(B\mathbf y =\Gamma \mathbf x + \math bf \epsilon\)
+
+We can use this to get:
+
+\(\mathbf y =B^{-1}\Gamma \mathbf x + B^{-1}\math bf \epsilon\)
+
+We estimate by placing restrictions on \(\Gamma\).
+
+\subsubsection{Strucutral models}
+
+If our data generating process is:
+
+\(Q=\alpha + \beta P +\epsilon \)
+
+We can estimate \(\alpha \)and \(\beta \) through measuring \(P\) and \(Q\).
+
+If, however the data generating process involves simulataneous equations, we can have:
+
+\(Q=\alpha_1 + \beta_1 P + \epsilon_1 \)
+
+\(Q=\alpha_2 + \beta_2 P + \epsilon_2 \)
+
+\subsubsection{Reduced form}
+
+We can reduce this:
+
+\(\alpha_1 + \beta_1 P + \epsilon_1 =\alpha_2 + \beta_2 P + \epsilon_2 \)
+
+\((\alpha_1 -\alpha_2 )+ (\beta_1 -\beta_2 )P + (\epsilon_1 -\epsilon_2 )=0\)
+
+\(P =\frac{\alpha_2-\alpha_1 }{\beta_1-\beta_2}+\frac{\epilon_2-\epsilon_1 }{\beta_1-\beta_2}\)
+
+We can rewrite this as:
+
+\(P=\pi_1 + \tau_1 \)
+
+Similarly we can reduce for \(Q\):
+
+\(Q =\frac{\alpha_2\beta_1-\alpha_1\beta_2 }{\beta_1-\beta_2}+\frac{\beta_1\epsilon_2 -\beta_2\epsilon_1}{\beta_1-\beta_2}\)
+
+\(Q= \pi_2 + \tau_2\)
+
+\subsubsection{We can't directly estimate structural models}
+
+If \(P\) is correlated with \(epsilon_1\) or \(\epsilon_2\) then our estimates for \(\beta_1\) and \(\beta_2\) will be biased.
+
+This also affects \(Q\).
+
+From the reduced forms we can see that \(P\) will be correlated, due to simultaneity.
+
+\subsubsection{The identification problem}
+
+We can estimate \(\pi_1 \) and \(\pi_2\), but this does not allow us to identify any of the structural parameters.
+
+We have \(2\) estimators, but \(4\) parameters.
+
+This is the identification problem.
+

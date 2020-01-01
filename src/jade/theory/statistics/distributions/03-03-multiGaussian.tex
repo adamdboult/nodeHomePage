@@ -1,0 +1,33 @@
+
+\subsection{Multivariable Gaussian distribution}
+
+\subsubsection{Definition}
+
+For univariate:
+
+\(x \sim N(\mu, \sigma^2 )\)
+
+We define the multivariate gaussian distribution as the distribution where any linear combination of components are gaussian.
+
+For multivariate:
+
+\(X \sim N(\mu, \Sigma )\)
+
+Where \(\mu \) is now a vector, and \(\Sigma \) is the covariance matrix.
+
+Density function is :
+
+\(f_x=\frac{1}{\sqrt {(2\pi )^n|\Sigma |}} e^{-\frac{1}{2}(x-\mu )^T\Sigma^{-1}(x-\mu)}\)
+
+For normal gaussian it is:
+
+\(f_x=\frac{1}{\sqrt {2\pi |\sigma^2}} e^{-\frac{1}{2\sigma^2}(x-\mu )^2)}\)
+
+This is the same wher \(n=1\).
+
+\subsubsection{Singular Gaussians}
+
+Need det \(|\Sigma |\) and \(\Sigma^{-1\}\). These rely on the covariance matrix not being degenerate.
+
+If the covariance matrix is degenerate we can instead use the pseudo inverse, and the pseudo determinant.
+

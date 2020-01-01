@@ -1,0 +1,33 @@
+
+\subsection{Priors of trees}
+
+\subsubsection{Priors for simple trees}
+
+We can define a tree as a set of nodes: \(T\).
+
+For each node we define a splitting variable \(k\) and a splitting threshold \(r\).
+
+Our prior is \(P(T, k, r)\).
+
+We split this up to:
+
+\(P(T, k, r)=P(T)P(k, r|T)\)
+
+\(P(T, k, r)=P(T)P(k|T)P(r|T, k)\)
+
+So we want to estimate:
+
+\begin{itemize}
+\item \(P(T)\) - The number of nodes.
+\item \(P(k|T)\) - Which variables we split by, given the tree size.
+\item \(P(r|T, k)\) - The cutoff, given the tree size and the variables we are splitting by.
+\end{itemize}
+
+\subsubsection{Priors for mixed trees}
+
+If at the leaf we have a parametric model, our prior is instead:
+
+\(P(T, k, r, \theta )=P(T)P(k|T)P(r|T, k)P(\theta | T, k, r)\)
+
+We then need to additionally estimate \(P(\theta | T, k, r)\).
+

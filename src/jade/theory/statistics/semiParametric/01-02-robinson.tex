@@ -1,0 +1,41 @@
+
+\subsection{The Robinson estimator}
+
+\subsubsection{Partialling out}
+
+\(y_i=\mathbf x_i\theta +g(\mathbf z_i) +\epsilon_i\)
+
+Consider:
+
+\(E(y_i|\mathbf z_i)=E(\mathbf x_i\theta +g(\mathbf z_i) + \epsilon_i|\mathbf z_i)\)
+
+\(E(y_i|\mathbf z_i)=E(\mathbf x_i\theta|\mathbf z_i)+E(g(\mathbf z_i)|\mathbf z_i) + E(\epsilon_i|\mathbf z_i)\)
+
+\(E(y_i|\mathbf z_i)=E(\mathbf x_i|\mathbf z_i)\theta+g(\mathbf z_i)\)
+
+We can now remove the parametric part:
+
+\(y_i-E(y_i|\mathbf z_i)=\mathbf x_i\theta +g(\mathbf z_i) + \epsilon_i - E(\mathbf x_i|\mathbf z_i)\theta -g(\mathbf z_i)\)
+
+\(y_i-E(y_i|\mathbf z_i)=(\mathbf x_i- E(\mathbf x_i|\mathbf z_i))\theta +\epsilon_i\)
+
+We define:
+
+\begin{itemize}
+\item \(\bar y_i = y_i-E(y_i|\mathbf z_i)\)
+\item \(\bar x_i = \mathbf x_i- E(\mathbf x_i|\mathbf z_i)\)
+\end{itemize}
+
+\(\bar y_i =\bar x_i \theta +\epsilon_i\)
+
+\subsubsection{Estimating \(\bar y_i\) and \(\bar x_i\)}
+
+So we can use OLS if we can estimate.
+
+\begin{itemize}
+\item \(E(y_i|\mathbf z_i)\)
+\item \(E(\mathbf x_i|\mathbf z_i)\)
+\end{itemize}
+
+We can do this with non-parametric methods.
+

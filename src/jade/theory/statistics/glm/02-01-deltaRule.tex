@@ -1,0 +1,45 @@
+
+\subsection{Delta rule}
+
+\subsubsection{Introduction}
+
+We want to train the parameters \(\theta \).
+
+We can do this with gradient descent, by working out how much the loss function falls as we change each parameter.
+
+The delta rule tells us how to do this.
+
+\subsubsection{The loss function}
+
+The error of the network is:
+
+\(E=\sum_j\frac{1}{2}(y_j-a_j)^2\)
+
+We know that \(a_j=a(\theta x_j)\) and so:
+
+\(E=\sum_j\frac{1}{2}(y_j-a(\theta x_j))^2\)
+
+\subsubsection{Minimising loss}
+
+We can see the change in error as we change the parameter:
+
+\(\frac{\delta E}{\delta \theta_i }=\sum_j \frac{\delta E}{\delta a_j}\frac{\delta a_j}{\delta z_j}\frac{\delta z_j}{\delta \theta_i}\)
+
+\(\frac{\delta E}{\delta \theta_i }=-\sum_j(y_j-a_j)a'(z_j)x_{ij}\)
+
+\subsubsection{Delta}
+
+We define delta as:
+
+\(\delta_i=-\frac{\delta E}{\delta z_j}=\sum_j(y_j-a_j)a'(z_j)\)
+
+So:
+
+\(\frac{\delta E}{\delta \theta_i }=\delta_i x_{ij}\)
+
+\subsubsection{The delta rule}
+
+We update the parameters using gradient descent:
+
+\(\Delta \theta_i=\alpha \delta_i x_{ij}\)
+

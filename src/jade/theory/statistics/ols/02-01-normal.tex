@@ -1,0 +1,43 @@
+
+\subsection{Normal equation}
+
+\subsubsection{Least squares}
+
+The square error is \(\sum_i (\hat{y_i}-y_i)^2\).
+
+The differential of this with respect to \(\hat{\theta_j }\) is:
+
+\(2\sum_i \frac{\delta \hat{y_i}}{\delta \hat{\theta_j}}(\hat{y_i}-y_i)\)
+
+The stationary point is where this is zero:
+
+\(\sum_i \frac{\delta \hat{y_i}}{\delta \hat{\theta_j}}(\hat{y_i}-y_i)=0\)
+
+\subsubsection{Linear least squares}
+
+Here, \(\hat{y_i}= \sum_j x_{ij}\hat{\theta_j}\)
+
+Therefore: \(\frac{\delta \hat{y_i}}{\delta \hat{\theta_j}}=x_{ij}\)
+
+And so the stationary point is where
+
+\(\sum_i x_{ij}( \sum_j x_{ij}\hat{\theta_j }-y_i)=0\)
+
+\(\sum_i x_{ij}( \sum_j x_{ij}\hat{\theta_j)}= \sum_i x_{ij}y_i\)
+
+\subsubsection{Normal equation}
+
+We can write this in matrix form.
+
+\(X^TX\hat{\theta }=X^Ty\)
+
+We can solve this as:
+
+\(\hat{\theta }=(X^TX)^{-1}X^Ty\)
+
+\subsubsection{Perfectly correlated variables}
+
+If variables are perfectly correlated then we cannot solve the normal equation.
+
+Intuitively, this is because for perfectly correlated variables there is no single best parameter, as changes to one parameter can be counteracted by changes to another.
+

@@ -1,0 +1,16 @@
+
+\subsection{Mixed regression trees}
+
+In classical trees all items in a leaf are assigned the same values. In this model, all are given \(\theta \) for a parametric model.
+
+This makes the resulting trees smoother.
+
+We have some \(\hat y_i = f(\mathbf x_i, \theta ) + \epsilon \)
+
+The approach generalises classic regression trees. There the estimate was \(\bar y\). Here it's a regression.
+
+\subsubsection{Training}
+
+At each node we do OLS. If the \(R^2\) of the model is less than some constant, we find a split which maximises the minimum of the two new \(R^2\).
+
+

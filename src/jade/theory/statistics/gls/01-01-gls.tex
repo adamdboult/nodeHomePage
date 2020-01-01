@@ -1,0 +1,32 @@
+
+\subsection{The Generalised Least Squares (GLS) estimator}
+
+\subsubsection{Introduction}
+
+We make the same assumptions as OLS.
+
+\(\mathbf {y}=\mathbf {X}\theta+\boldsymbol {\epsilon }\)
+
+We assume:
+
+\begin{itemize}
+\item \(E[\epsilon |\boldsymbol X]=0\)
+\item \(Cov [\epsilon |\boldsymbol X]=\boldsymbol \Omega \)
+\end{itemize}
+
+\subsubsection{The GLS estimator}
+
+GLS estimator is:
+
+\(\hat \theta_{GLS} = argmin_b (y-Xb)^T\Omega^{-1}(y-Xb)\)
+
+\(\hat \theta_{GLS}=(X^T\Omega ^{-1}X)^{-1}X^T\Omega^{-1}y\)
+
+This is the vector that minimises the Mahalanobis distance.
+
+This is equivalent to doing OLS on a linearly transformed version of the data.
+
+\subsubsection{Identifying \(\Omega \)}
+
+If \(\Omega \) is known, we can proceed. Generally, however, \(\Omega \) is not known, and so the GLS estimate in infeasible.
+

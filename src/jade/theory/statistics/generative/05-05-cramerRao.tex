@@ -1,0 +1,23 @@
+
+\subsection{Cramér-Rao lower bound}
+
+For an unbiased estimator, the variance cannot be below the Cramer-Rao lower bound.
+
+\(Var (\hat \theta )\ge \frac{1}{I(\theta )}\)
+
+Where \(I(\theta )\) is the Fisher information.
+
+We can prove this.
+
+We have the score:
+
+\(V=\frac{\delta }{\delta \theta }\ln f(X, \theta )\)
+
+\(V=\frac{1}{f(X, \theta )}\frac{\delta }{\delta \theta } f(X, \theta )\)
+
+The expectation of the score is \(0\):
+
+\(E[V]=E[\frac{1}{f(X, \theta )}\frac{\delta }{\delta \theta } f(X, \theta )]\)
+
+\(E[V]=\int \frac{1}{f(X, \theta )}\frac{\delta }{\delta \theta } f(X, \theta )dx\)
+

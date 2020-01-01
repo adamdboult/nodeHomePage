@@ -1,0 +1,24 @@
+
+\subsection{Adaboost}
+
+\subsubsection{Introduction}
+
+Boosting is a way to create multiple learners for use in an ensemble predictor.
+
+The goal is to create many predictors, which may not be themselves very accuracte, but have a high degree of independence.
+
+\subsubsection{AdaBoost}
+
+AdaBoost is a popular algorithm for boosting.
+
+It works by:
+
+\begin{itemize}
+\item Creating a set of weak learners using different restrictions on features in the training data.
+\item Choosing the weak learner that most reduces the error of the combined learners, and give it a weighting which most reduces the error of the combined learners.
+\item Creating a new weighting for the dataset, where ones poorly predicted (by the combination of learners) are given high weights.
+\item Repeating the process a fixed number of times.
+\end{itemize}
+
+
+

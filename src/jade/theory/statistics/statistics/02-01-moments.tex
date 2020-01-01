@@ -1,0 +1,25 @@
+
+\subsection{Bias from single and joint estimation}
+
+\subsubsection{Bias from single estimation}
+
+\(\mathbf x_i\) and \(\mathbf z_i\) are not independent, so we cannot estimate just \(y_i=\mathbf x_i\theta \).
+
+\subsubsection{Bias from joint estimation}
+
+We could estimate our equation with a single ML algorithm.
+
+\(y_i=f(\mathbf x_i, \theta) +g(\mathbf z_i) +\epsilon_i\)
+
+For example, using LASSO.
+
+However this would introduce bias into our estimates for \(\theta \).
+
+\subsubsection{Bias from iterative estimation}
+
+We could iteratively estimate both \(\theta \) and \(g(\mathbf z_i)\).
+
+For example iteratvely doing OLS for \(\theta \) and random forests for \(z_i\).
+
+This would also introduce bias into \(\thete \).
+

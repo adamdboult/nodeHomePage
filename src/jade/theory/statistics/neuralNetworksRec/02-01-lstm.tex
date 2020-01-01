@@ -1,0 +1,33 @@
+
+\subsection{Long Short-Term Mmemory (LSTM)}
+
+\subsubsection{Introduction}
+
+These are a more complex RNN architecture.
+
+\subsubsection{Cell state}
+
+Each cell has as an as input the cell state from the previous cell \(C_{t-1}\)
+
+The LSTM cell updates the cell state to \(C_{t}\) and pushes it to the next cell.
+
+\subsubsection{Other inputs to the cell}
+
+We have \(x_t\), the input of the cell, and \(h_{t-1}\), the output of the previous cell.
+
+\subsubsection{Cell output and the output gate}
+
+We run an activation function on the cell state \(C_t\) to get a candidate output.
+
+We multiply this by the outcome of the output gate to get the actual result.
+
+\subsubsection{The input gate}
+
+We create a candidate change to the state.
+
+We multiply this by the input gate value, and add it to the state.
+
+\subsubsection{The forget gate}
+
+This is a multiplication factor. What \% of the state should be removed?
+

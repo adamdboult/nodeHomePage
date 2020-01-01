@@ -1,0 +1,120 @@
+
+\subsection{The multinomial data generating process}
+
+\subsubsection{Introduction}
+
+In the binomial case we had:
+
+\(z_i=\alpha + \beta x_i +\epsilon_i \)
+
+And set \(y_i\) to \(1\) if \(z_i>0\)
+
+In the multinomial case we have \(m\) alternatives
+
+\(z_{ij}=\alpha + \beta x_{ij} +\epsilon_{ij} \)
+
+And set \(y_{ij}=1\) if \(z_{ij}>z_{ik}\forall k\ne j\)
+
+\subsubsection{Generalised version}
+
+We can rewrite this as:
+
+\(z_{ij}=v_{ij} +\epsilon_{ij} \)
+
+Where:
+
+\(v_{ij}=\alpha+\beta x_{ij}\)
+
+In this case \(v\) does not depend on \(j\), but in other formulations it could.
+
+\subsubsection{Probabilities}
+
+\(P_{ij}=P(y_{ij}=1|x_{ij})\)
+
+\(P_{ij}=P(z_{ij}>z_{ik}\forall k\ne j)\)
+
+\(P_{ij}=P(\epsilon_{ik} <v_{ij} -v_{ik} +\epsilon_{ij}\forall k\ne j)\)
+
+\subsubsection{The form of the multinomial model: Intercepts}
+
+Previously we described the multinomial model
+
+\(z_{ij}=v_{ij} +\epsilon_{ij} \)
+
+Where:
+
+\(v_{ij}=\alpha+\beta x_{ij}\)
+
+The probability of \(j\) being chosen is.
+
+\(P_{ij}=P(\epsilon_{ik} <v_{ij} -v_{ik} +\epsilon_{ij}\forall k\ne j)\)
+
+Interceps in \(v\) cancel out. Therefore in the basic model there is no need to use
+
+\(v_{ij}=\alpha+\beta x_{ij}\)
+
+We can instead use:
+
+\(v_{ij}=\beta x_{ij}\)
+
+\subsubsection{The form of the multinomial model: Conditional model}
+
+We have :
+
+\(v_{ij}=\beta x_{ij}\)
+
+What do we include in \(x_{ij}\)?
+
+We can include observable characteristics for each product:
+
+\(v_{ij}=\alpha_j + \beta x_j\)
+
+One of the \(\alpha_j\) must be normalised to \(0\), as only differences matter. We cannot tell the difference if all \(\alpha \) are raised by the same amount.
+
+For consistency with other models we can write this as:
+
+\(v_{ij}=\beta x_{ij}\)
+
+Even though this does not vary from individual to individual.
+
+Here \(\beta \) represents average preferences for each product characteristic.
+
+\subsubsection{The form of the multinomial model: The multinomial model}
+
+We have differing characteristics for each individual:
+
+\(v_{ij}=\beta x_i\)
+
+However this adds a constant for each product. For this to discriminate we need varying coefficients.
+
+\(v_{ij}=\beta_j x_i\)
+
+As we only observe differences, one of the \(\beta_j\) must be normalised to \(0\).
+
+We can rewrite this.
+
+\(v_{ij}=\sum_k \beta_k\delta_{kj} x_i\)
+
+\(v_{ij}=\beta z_{ij}\)
+
+The original \(x_i\) is dense and contains data about the individual.
+
+\(z_{ij}\) is sparce and only has entries in the \{j\} section.
+
+Here \(\beta \) represents how the 
+
+\subsubsection{The form of the multinomial model: Combined multinomial and conditional model}
+
+If we have observations of the characteristics of both individuals and alternatives we can write:
+
+\(v_{ij}=\beta_m m_{ij}+\beta_cc_{ij}\)
+
+\(v_{ij}=\beta x_{ij}\)
+
+Here \(\beta \) represents both:
+
+\begin{itemize}
+\item Average preferences for customer characteristics (conditional)
+\item How preferences change as individual characteristics change (multinomial)
+\end{itemize}
+

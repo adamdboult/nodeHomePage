@@ -1,0 +1,47 @@
+
+\subsection{The projection and annihilation matrices}
+
+\subsubsection{The projection matrix}
+
+We have \(X\).
+
+The projection matrix is \(X(X^TX)^{-1}X^T\)
+
+The projection matrix maps from actual y to predicted y
+
+\(\hat y = Py\)
+
+Each entry refers to the covariance between actual and fitted
+
+\(p_{ij}=\frac{\cov (\hat y_i, y_j}{\var (y_j)}\)
+
+\subsubsection{The annihilation matrix}
+
+We can get residuals too:
+
+u=y-\hat y=y-py=(1-P)y
+
+1-P is called the annihilator matrix
+
+We can now use the propagation of uncertainty
+
+\(\Sigma^f = A\Sigma^x A^T\)
+
+To get:
+
+\(\Sigma^u = (I-P)\Sigma^y (I-P)\)
+
+Annihilator matrix is:
+
+\(M_X=I-X(X^TX)^{-1}X^T\)
+
+Called this because:
+
+\(M_XX=X-X(X^TX)^{-1}X^TX\)
+
+\(M_XX=0\)
+
+Is called residual maker
+
+My=\epsilon
+ 

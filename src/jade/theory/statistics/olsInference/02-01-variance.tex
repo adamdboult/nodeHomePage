@@ -1,0 +1,45 @@
+
+\subsection{Variance of OLS estimators}
+
+\subsubsection{Variance-covariance matrix}
+
+We know:
+
+\(\hat \theta =(X^TX)^{-1}X^Ty\)
+
+\(y=X\theta +\epsilon\)
+
+Therefore:
+
+\(\hat \theta =(X^TX)^{-1}X^T(X\theta +\epsilon)\)
+
+\(\hat \theta =\theta +(X^TX)^{-1}X^T\epsilon\)
+
+\(\hat \theta -\theta =(X^TX)^{-1}X^T\epsilon\)
+
+\(Var [\hat \theta ]=E[(\hat \theta -\theta)(\hat \theta -\theta )^T]\)
+
+\(Var [\hat \theta ]=E[(X^TX)^{-1}X^T\epsilon(X^TX^{-1}X^T\epsilon )^T]\)
+
+\(Var [\hat \theta ]=E[(X^TX)^{-1}X^T\epsilon \epsilon^T X(X^TX)^{-1}]\)
+
+\(Var [\hat \theta ]=(X^TX)^{-1}X^TE[\epsilon \epsilon^T ]X(X^TX)^{-1}\)
+
+We write:
+
+\(\Omega=E[\epsilon \epsilon^T]\)
+
+\(Var [\hat \theta ]=(X^TX)^{-1}X^T\Omega X(X^TX)^{-1}\)
+
+Depending on how we estimate \(\Omega\), we get different variance terms.
+
+\subsubsection{Variance under IID}
+
+If IID:
+
+\(\Omega = I\sigma^2_{\epsilon }\)
+
+\(Var [\hat \theta ]=(X^TX)^{-1}X^TI\sigma^2_{\epsilon } X(X^TX)^{-1}\)
+
+\(Var [\hat \theta ]=\sigma^2_\epsilon (X^TX)^{-1}\)
+

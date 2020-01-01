@@ -1,0 +1,69 @@
+
+\subsection{Bayesian parameter estimation for dependent models}
+
+\subsubsection{Recap}
+
+For non-dependent models we had:
+
+\(P(\theta |y)=\frac{P(y, \theta)}{P(y)}\)
+
+\(P(\theta |y)=\frac{P(y| \theta)P(\theta )}{P(y)}\)
+
+The bottom bit is a normalisation factor, and so we can use:
+
+\(P(\theta |y)\propto P(y| \theta)P(\theta )\)
+
+We have here:
+
+\begin{itemize}
+\item Our prior - \(P(\theta )\)
+\item Our posterior - \(P(\theta |y)\)
+\item Our likelihood function - \(P(y| \theta)\)
+\end{itemize}
+
+\subsubsection{Bayesian regression for generative models}
+
+We know:
+
+\(P(\theta |y,X)=\frac{P(y, \theta, X )}{P(y, X)}\)
+
+\(P(\theta |y,X)=\frac{P(y, X |\theta )P(\theta )}{P(y, X)}\)
+
+The bottom bit is a normalisation factor, and so we can use:
+
+\(P(\theta |y,X)\propto P(y, X| \theta)P(\theta)\)
+
+We have here:
+
+\begin{itemize}
+\item Our prior - \(P(\theta )\)
+\item Our posterior - \(P(\theta |y,X)\)
+\item Our likelihood function - \(P(y, X| \theta )\)
+\end{itemize}
+
+\subsubsection{Bayesian regression for discriminative models}
+
+We know:
+
+\(P(\theta |y,X)=\frac{P(y, \theta, X )}{P(y, X)}\)
+
+\(P(\theta |y,X)=\frac{P(y| \theta, X )P(\theta, X)}{P(y, X)}\)
+
+\(P(\theta |y,X)=\frac{P(y| \theta, X )P(\theta )P(X|\theta )}{P(y, X)}\)
+
+We assume \(P(X|\theta )=X\) and so:
+
+\(P(\theta |y,X)=\frac{P(y| \theta, X )P(\theta )P(X)}{P(y, X)}\)
+
+The bottom bit is a normalisation factor, and so we can use:
+
+\(P(\theta |y,X)\propto P(y| X, \theta)P(\theta)\)
+
+We have here:
+
+\begin{itemize}
+\item Our prior - \(P(\theta )\)
+\item Our posterior - \(P(\theta |y,X)\)
+\item Our likelihood function - \(P(y| X, \theta )\)
+\end{itemize}
+

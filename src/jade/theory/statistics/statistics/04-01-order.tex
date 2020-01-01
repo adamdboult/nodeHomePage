@@ -1,0 +1,55 @@
+
+\subsection{Order statistics}
+
+\subsubsection{Defining order statistics}
+
+The \(k\)th order statistic is the \(k\)th smallest value in a sample.
+
+\(x_{(1)}\) is the smallest value in a sample, the minimum.
+
+\(x_{(n)}\) is the largest value in a sample, the maximum.
+
+\subsubsection{Probability distributions of order statistics}
+
+The probability distribution of order statistics depends on the underlying probability distribution.
+
+\subsubsection{Probability distribution of sample maximum}
+
+If we have:
+
+\(Y=\max \mathbf X\)
+
+The probability distribution is:
+
+\(P(Y\le y)=P(X_1\le y, X_2\le y,...,X_n\le y)\)
+
+If these are iid we have:
+
+\(P(Y\le y)=\prod_i P(X_i\le y)\)
+
+\(F_y(y)=F_X(y)^n\)
+
+The density function is:
+
+\(f_y(y)=nF_X(y)^{n-1}f_x(y)\)
+
+\subsubsection{Probability distribution of the sample minimum}
+
+If we have:
+
+\(Y=\min \mathbf X\)
+
+The probability distribution is:
+
+\(P(Y\le y)=P(X_1\ge y, X_2\ge y,...,X_n\ge y)\)
+
+If these are iid we have:
+
+\(P(Y\le y)=\prod_i P(X_i\ge y)\)
+
+\(F_y(y)=[1-F_X(y)]^n\)
+
+The density function is:
+
+\(f_y(y)=-n[1-F_X(y)]^{n-1}f_x(y)\)
+

@@ -1,0 +1,23 @@
+
+\subsection{Mean Squared Error (MSE) and Root Mean Squared Error (RMSE) of an estimator}
+
+\subsubsection{Mean squared error}
+
+Mean squared error
+
+\(MSE = E[(\hat \theta - \theta )^2]=E[((\hat \theta - E[\hat \theta ])+(E[\hat \theta ]-\theta ))^2]\)
+
+\(MSE = E[(\hat \theta - \theta )^2]=E[(\hat \theta - E[\hat \theta ])^2+(E[\hat \theta ]-\theta )^2+2(E[\hat \theta ]-\theta )(\hat \theta- E[\hat \theta ])]\)
+
+\(MSE = E[(\hat \theta - \theta )^2]=E[(\hat \theta - E[\hat \theta ])^2]+E[(E[\hat \theta ]-\theta)^2] +E[2(E[\hat \theta ]-\theta )(\hat \theta- E[\hat \theta ])]\)
+
+\(MSE = E[(\hat \theta - \theta )^2]=Var(\hat \theta )+(E[\hat \theta ]-\theta)^2 +2(E[\hat \theta ]-\theta )E[\hat \theta- E[\hat \theta ]]\)
+
+\(MSE = E[(\hat \theta - \theta )^2]=Var(\hat \theta )+Bias (\hat \theta )^2\)
+
+\subsubsection{Root Mean Square Error (RMSE)}
+
+This is the square root of the MSE.
+
+It is also called the Root Mean Square Deviation (RMSD)
+

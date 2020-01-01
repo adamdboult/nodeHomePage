@@ -1,0 +1,46 @@
+
+\subsection{Pruning decision trees}
+
+Training a decision tree until there is only one entry from the training set will result in overfitting.
+
+We can use pruning to regularise trees.
+
+\subsubsection{Pruning}
+
+\subsubsection{Reduced error pruning}
+
+From bottom, replace each node with a leaf of the most popular class. Accept if no reduction in accuracy.
+
+\subsubsection{Cost complexity pruning}
+
+Take full tree \(T_0\)
+
+Iteratively find a subtree to replace with a leaf. Cost function is accuracy and number of leaves.
+
+Remove this generating \(T_{i+1}\)
+
+When we have just the root, choose a single tree using CV.
+
+\subsubsection{Growing and pruning}
+
+Generally we would split the data up. Grow the tree with one set and then prune with the other.
+
+We can split our data up and iterate between growing and pruning.
+
+When pruning, for each pair of leaves we test to see if they should be merged.
+
+If our two sets are \(A\) and \(B\) we can do:
+
+\begin{itemize}
+\item \(A\): Grow
+\item \(B\): Prune
+\item \(B\): Grow
+\item \(A\): Prune
+\end{itemize}
+
+And repeat this process.
+
+\subsubsection{Partial regression trees}
+
+Once we have built a tree, we keep a single leaf and disard the rest.
+

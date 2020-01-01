@@ -1,0 +1,23 @@
+
+\subsection{The Naive Bayes posterior}
+
+\subsubsection{Bayes theorem}
+
+Consider Bayes' theorem
+
+\(P(y|x_1,x_2,...,x_n)=\frac{P(x_1,x_2,...,x_n|y)P(y)}{P(x_1,x_2,...,x_n)}\)
+
+Here, \(y\) is the label, and \(x_1,x_2,...,x_n\) is the evidence. We want to know the probability of each label given evidence.
+
+The denominator, \(P(x_1,x_2,...,x_n)\), is the same for all, so we only need to identify:
+
+\(P(y|x_1,x_2,...,x_n)\propto P(x_1,x_2,...,x_n|y)P(y)\)
+
+\subsubsection{The assumption of Naive Bayes}
+
+We assume each \(x\) is independent. Therefore:
+
+\(P(x_1,x_2,...,x_n|y)=P(x_1|y)P(x_2|y)...P(x_n|y)\)
+
+\(P(y|x_1,x_2,...,x_n)\propto P(x_1|y)P(x_2|y)...P(x_n|y)P(y)\)
+

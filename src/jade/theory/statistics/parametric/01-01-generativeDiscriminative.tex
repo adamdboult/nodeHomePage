@@ -1,0 +1,41 @@
+
+\subsection{Generative and discriminative models}
+
+\subsubsection{Recap}
+
+For parametric models without dependent variables we have a form:
+
+\(P(y| \theta )\)
+
+And we have various ways of estimating \(\theta \).
+
+We can write this as a likelihood function:
+
+\(L(\theta ;y )=P(y|\theta)\)
+
+\subsubsection{Discriminative models}
+
+In discriminative models we learn:
+
+\(P(y|X, \theta )\)
+
+Which we can write as a likelihood function:
+
+\(L(\theta ;y, X )=P(y| X, \theta)\)
+
+\subsubsection{Generative models}
+
+In generative models we learn:
+
+\(P(y, X| \theta )\)
+
+Which we can write as a likelihood function:
+
+\(L(\theta ;y, X )=P(y, X|\theta)\)
+
+We can use the generative model to calculate dependent probabilities.
+
+\(P(y| X, \theta )=\frac{P(y, X| \theta )P(\theta )}{P(X, \theta )}\)
+
+\(P(y| X, \theta )=\frac{P(y, X| \theta )}{P(X| \theta )}\)
+

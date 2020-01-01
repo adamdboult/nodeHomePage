@@ -1,0 +1,26 @@
+
+\subsection{The Expectation-Maximisation algorithm}
+
+\subsubsection{Expectation-Maximisation algorithm}
+
+This is used to learn the parameters for a Gaussian Mixture Model
+
+We cannot simply maximise the likelihood function, because this cannot be specified for a latent model.
+
+The log likelihood function normally is:
+
+\(L(\theta ; X)=p(X|\theta )\)
+
+With hidden variables it is:
+
+\(L(\theta ; X, Z)=p(X|\theta )=\int p(X, Z|\theta)dZ\)
+
+\subsubsection{1: Expectation step}
+
+We consider the expected log likelihood. We call this 
+
+\(E[\log L(\theta ; X, Z)]\)
+
+\subsubsection{2: Maximisation step}
+
+

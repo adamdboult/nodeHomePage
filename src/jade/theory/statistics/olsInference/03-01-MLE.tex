@@ -1,0 +1,41 @@
+
+\subsection{Maximum Likelihood Estimator (MLE) and OLS equivalence}
+
+\subsubsection{The OLS estimator}
+
+\(\hat \theta_{OLS}=(X^TX)^{-1}X^Ty\)
+
+\(E[\hat \theta_{OLS}]=w\)
+
+\(Var[\hat \theta_{OLS}]=\sigma^2 (X^TX)^{-1}\)
+
+\subsubsection{The MLE estimator}
+
+\(y_i=\mathbf x_i\theta +\epsilon_i \)
+
+\(P(y=y_i|x=x_i)=P(\epsilon_i=y_i-\mathbf x_i \theta )\)
+
+If we assume \(\epsilon_i \sim N(0, \sigma^2_\epsilon )\) we have:
+
+\(P(y=y_i|x=x_i)=\dfrac{1}{\sqrt {2\pi \sigma^2_\epsilon }}e^{-\dfrac{(y_i-\mathbf x_i\theta )^2}{2\sigma_\epsilon^2}}\)
+
+\(L(X, \theta )=\prod_{i=1}^n\dfrac{1}{\sqrt {2\pi \sigma^2_\epsilon }}e^{-\dfrac{(y_i-\mathbf x_i\theta )^2}{2\sigma_\epsilon^2}}\)
+
+\(l(X, \theta )=\sum_{i=1}^n -\dfrac{1}{2}\ln (2\pi \sigma_\epsilon^2)-\dfrac{(y_i-\mathbf x_i\theta )^2}{2\sigma_\epsilon^2}\)
+
+\(\dfrac{\delta l}{\delta \theta_j }=\sum_{i=1}^n2x_{ij}\dfrac{y_i-\mathbf x_{i}\theta }{2\sigma^2_\epsilon}\)
+
+\(\sum_{i=1}^nx_{ij}(y_i-\hat \theta_{MLE}\mathbf x_{i} )=0\)
+
+\(X^T(y-X\hat \theta_{MLE} )=0\)
+
+\(X^Ty=X^TX\hat \theta_{MLE} \)
+
+\(\hat \theta_{MLE}=(X^TX)^{-1}X^Ty\)
+
+\subsubsection{Equivalence}
+
+If errors are normally IID then:
+
+\(\hat \theta_{OLS}=\hat \theta_{MLE}\)
+

@@ -1,0 +1,47 @@
+
+\subsection{k-means clustering}
+
+\subsubsection{Introduction}
+
+K-means clustering is the most widely used unsupervised model.
+
+In k-means clustering we identify \(k\) centroids in the feature space. We then calculate the distance from each data point to each of the centroids, and allocate the data point to the nearest centroid.
+
+This requires a method for calculating the location of the centroids.
+
+\subsubsection{Identifying the centroids}
+
+We apply an iterative approach to identifying the centroids.
+
+We first initialise by assigning centroids randomly to existing data points.
+
+We then iteratively perform the following:
+
+\begin{itemize}
+\item Calculate the distances between each data point and each centroid.
+\item Assign each data point to the closed centroid.
+\item Update each centroid location to the mean of the data points allocated to it.
+\end{itemize}
+
+\subsubsection{Calculating distances}
+
+This method requires us to calculate the distance between two points in the feature space.
+
+For k-means we use the Euclidian distance.
+
+\subsubsection{Potential issues}
+
+It is possibile for a centroid to have no data assigned to it. If this happens we can eliminate the cluster, or reassign some data points.
+
+The algorithm may only arrive at a local minima. In order to maximise the chance of an effective clustering, we can do k-means under different initialisations of the centroids in order to minimise risk of bad local optima.
+
+\subsubsection{Choosing \(k\)}
+
+If the points in each cluster follow a normal distribution, that's a good sign. This can be tested with Anderson-Darling.
+
+If it's not normal, we can split the cluster into 2.
+
+\subsubsection{Using clusting as part of data analysis}
+
+We can choose \(k\) if output is being used in later data analysis (eg type assignment, complaint level or something)
+

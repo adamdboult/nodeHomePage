@@ -1,0 +1,27 @@
+
+\subsection{Classical principal component analysis}
+
+\subsubsection{Introduction}
+
+Principal component analysis takes a dataset \(X\) with \(m\) variables and returns a principal component matrix \(A\) with size \(m\times k\).
+
+Each new dimension is a linear function of the existing data. \(Z=XA\).
+
+Each dimension in uncorrelated, and ordered, in order of descending explanation of variability.
+
+The problem of principal component analysis is to find these weightings \(A\).
+
+\subsubsection{Classical PCA}
+
+We take the first \(k\) eigenvectors of the covariance matrix, ordered by eigenvalue.
+
+\subsubsection{Getting the eigenvectors using SVD}
+
+We can decompose \(X=U\Sigma A^T\).
+
+We can take the eigenvectors from \(A\).
+
+\subsubsection{Choosing the number of dimension}
+
+We can choose \(k\) such that a certain percentage of the variance is retained.
+

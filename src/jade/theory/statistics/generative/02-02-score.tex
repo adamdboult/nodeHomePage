@@ -1,0 +1,41 @@
+
+\subsection{Score}
+
+\subsubsection{Recap: Log-likelihood}
+
+The log-likelihood for IID data is:
+
+\(l(\theta ; X)=\sum_{i=1}^n \ln P(X_i|\theta )\)
+
+\subsubsection{The score}
+
+The score is defined as the differential of the log-likelihood function with respect to \(\theta \).
+
+\(V(\theta, X)=\dfrac{\delta }{\delta \theta }l(\theta ; X) \)
+
+\(V(\theta, X)=\dfrac{1 }{\prod_{i=1}^nP(X_i|\theta )}\dfrac{\delta }{\delta \theta}L(\theta; X) \)
+
+\subsubsection{Expectation of the score}
+
+The expectation of the score, given the true value of \(\theta \) is:
+
+\(E[V(X|\theta)]=\int V(X|\theta) dX\)
+
+\(E[V(X|\theta)]=E[\dfrac{1 }{\prod_{i=1}^nP(X_i|\theta )}\dfrac{\delta }{\delta \theta}L(\theta; X) ]\)
+
+\(E[V(X|\theta)]=\int \dfrac{1 }{\prod_{i=1}^nP(X_i|\theta )}\dfrac{\delta }{\delta \theta}L(\theta; X) \)
+
+\(E[\dfrac{1 }{\prod_{i=1}^nP(X_i|\theta )}]\)
+
+\(\int \dfrac{1 }{\prod_{i=1}^nP(X_i|\theta )}P(\theta )d\theta \)
+
+We can show that the expected value of this is \(0\).
+
+\subsubsection{Variance of the score}
+
+The variance of the score is:
+
+\(var [\dfrac{\delta }{\delta \theta }l(\theta ; X) ]\)
+
+\(var [\dfrac{1 }{\prod_{i=1}^nP(X_i|\theta )}]\)
+
