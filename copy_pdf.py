@@ -52,5 +52,5 @@ for file_name in os.listdir(directory_to_walk):
         
 statistics_source = os.path.join("built", "jade", "theory", "statistics", "statistics.pdf")
 statistics_destination = os.path.join("public", "theory", "statistics.pdf")
-shutil.copyfile(maths_source, statistics_destination)
+shutil.copyfile(statistics_source, statistics_destination)
 
