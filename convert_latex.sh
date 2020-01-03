@@ -30,11 +30,11 @@ for i in $(find ./built/jade/theory/ -name \*.tex); do
 done
 
 cd ./built/jade/theory/maths
-pdflatex ./maths.tex
+pdflatex ./maths.tex > /dev/null 2>&1
 cd $current_dir
 
 cd ./built/jade/theory/statistics
-pdflatex ./statistics.tex
+pdflatex ./statistics.tex > /dev/null 2>&1
 cd $current_dir
 
 ############
