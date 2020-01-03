@@ -2,85 +2,49 @@
 import os
 import shutil
 
-###########################################
-# Create tex file for each folder (maths) #
-###########################################
 
-directory_to_walk = os.path.join("built", "jade", "theory", "maths")
+###################################
+# Create tex file for each folder #
+###################################
 
-for folder in os.listdir(directory_to_walk):
-    #print("")
-    #print(folder)
-    if not os.path.isdir(os.path.join(directory_to_walk, folder)):
-        continue
+subjects = ["maths", "statistics"]
 
-    tex_files = os.listdir(os.path.join(directory_to_walk, folder))
-    tex_files = sorted(tex_files)
-    lines = []
+for subject in subjects:
 
-    for tex_file in tex_files:
-        line = "\input{" + folder + "/" + os.path.splitext(tex_file)[0] + "}"
-        lines.append(line)
-    #print(lines)
-    f = open(os.path.join(directory_to_walk, folder + ".tex"), "w")
+    directory_to_walk = os.path.join("built", "jade", "theory", subject)
 
-    for line in lines:
-        f.write(line + "\n")
+    for folder in os.listdir(directory_to_walk):
+        #print("")
+        #print(folder)
+        if not os.path.isdir(os.path.join(directory_to_walk, folder)):
+            continue
 
-    f.close()
+        tex_files = os.listdir(os.path.join(directory_to_walk, folder))
+        tex_files = sorted(tex_files)
+        lines = []
 
-    f = open(os.path.join(directory_to_walk, folder + ".jade"), "w")
+        for tex_file in tex_files:
+            line = "\input{" + folder + "/" + os.path.splitext(tex_file)[0] + "}"
+            lines.append(line)
+        #print(lines)
+        f = open(os.path.join(directory_to_walk, folder + ".tex"), "w")
 
-    f.write("extends ../../templates/loginHeader.jade\n")
-    f.write("block content\n")
-    f.write("	div.container-fluid\n")
-    f.write("		div.row\n")
-    f.write("			nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n")
-    f.write("				div.sidebar-sticky\n")
-    f.write("					include ../maths_sidebar.jade\n")
-    f.write("			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role=\"main\")\n")
-    f.write("				include " + folder + ".html\n")
+        for line in lines:
+            f.write(line + "\n")
 
-    f.close()
+        f.close()
 
-################################################
-# Create tex file for each folder (statistics) #
-################################################
+        f = open(os.path.join(directory_to_walk, folder + ".jade"), "w")
 
-directory_to_walk = os.path.join("built", "jade", "theory", "statistics")
+        f.write("extends ../../templates/loginHeader.jade\n")
+        f.write("block content\n")
+        f.write("	div.container-fluid\n")
+        f.write("		div.row\n")
+        f.write("			nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n")
+        f.write("				div.sidebar-sticky\n")
+        f.write("					include ../" + subject + "_sidebar.jade\n")
+        f.write("			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role=\"main\")\n")
+        f.write("				include " + folder + ".html\n")
 
-for folder in os.listdir(directory_to_walk):
-    #print("")
-    #print(folder)
-    if not os.path.isdir(os.path.join(directory_to_walk, folder)):
-        continue
-
-    tex_files = os.listdir(os.path.join(directory_to_walk, folder))
-    tex_files = sorted(tex_files)
-    lines = []
-
-    for tex_file in tex_files:
-        line = "\input{" + folder + "/" + os.path.splitext(tex_file)[0] + "}"
-        lines.append(line)
-    #print(lines)
-    f = open(os.path.join(directory_to_walk, folder + ".tex"), "w")
-
-    for line in lines:
-        f.write(line + "\n")
-
-    f.close()
-
-    f = open(os.path.join(directory_to_walk, folder + ".jade"), "w")
-
-    f.write("extends ../../templates/loginHeader.jade\n")
-    f.write("block content\n")
-    f.write("	div.container-fluid\n")
-    f.write("		div.row\n")
-    f.write("			nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n")
-    f.write("				div.sidebar-sticky\n")
-    f.write("					include ../statistics_sidebar.jade\n")
-    f.write("			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role=\"main\")\n")
-    f.write("				include " + folder + ".html\n")
-
-    f.close()
+        f.close()
 

@@ -29,11 +29,14 @@ for i in $(find ./built/jade/theory/ -name \*.tex); do
 
 done
 
+# Run twice to get table of contents
 cd ./built/jade/theory/maths
+pdflatex ./maths.tex > /dev/null 2>&1
 pdflatex ./maths.tex > /dev/null 2>&1
 cd $current_dir
 
 cd ./built/jade/theory/statistics
+pdflatex ./statistics.tex > /dev/null 2>&1
 pdflatex ./statistics.tex > /dev/null 2>&1
 cd $current_dir
 
