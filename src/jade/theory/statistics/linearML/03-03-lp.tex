@@ -9,20 +9,20 @@ We can generalise this to:
 
 For ridge regression there is always a solution.
 
-For least squares there is a solution if X^TX is invertible
+For least squares there is a solution if \(X^TX\) is invertible
 
 For Lasso we must use numerical optimisation.
 
-lasso and L1 induces sparcity
+lasso and \(L_1\) induces sparcity
 
-Goal is min ||y - f(x)|| + \lambda g(w)
+Goal is \(min ||y - f(x)|| + \lambda g(w)\)
 
-Ridge regression: g(w)=||w||
+Ridge regression: \(g(w)=||w||\)
 
-If lambda 0, OLS, if infinite, w goes to 0
+If \(\lambda =0\), OLS, if infinite, \(w\) goes to \(0\).
 
-Normal equation changes to: (\lambda I + X^TX)^{-1}X^Ty
+Normal equation changes to: \(\lambda I + X^TX)^{-1}X^Ty\)
 
-We can preprocess to avoid processing of 1s. shift mean of y to 0. normalise x mean 0 var 1
+We can preprocess to avoid processing of 1s. shift mean of \(y\) to \(0\). normalise \(x\) mean \(0\) var \(1\).
 
 

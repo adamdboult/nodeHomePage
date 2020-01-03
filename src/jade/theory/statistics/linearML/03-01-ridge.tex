@@ -3,22 +3,22 @@
 
 Regularisation of LLS. The cost function now includes a norm on \(M\theta \).
 
-L2 regularisation
+\(L_2\) regularisation
 
-This allows us to solve problems where there are too many features. L1 also allows us to to do this.
+This allows us to solve problems where there are too many features. \(L_1\) also allows us to to do this.
 
 \subsubsection{Overspecified}
 
-If n>d we can minimise weights subject to Xw=y. This is the same as the least norm.
+If \(n>d\) we can minimise weights subject to Xw=y. This is the same as the least norm.
 
 \subsubsection{Maximum A-Priori (MAP) estimator for linear regression}
 
-Maximum a priori estimation. equiv to ridge regression with a priori estimate of 0
+Maximum a priori estimation. equiv to ridge regression with a priori estimate of \(0\)
 
-W_{RR}=(\lamda I+X^TX)^{-1}X^Ty
+\(W_{RR}=(\lambda I+X^TX)^{-1}X^Ty\)
 
-E_[w{RR}]=(\lambda I+X^TX)^{-1}X^TXw
+\(E_[w{RR}]=(\lambda I+X^TX)^{-1}X^TXw\)
 
-Var[W_{RR}]=\a
+\(Var[W_{RR}]=a\)
 
 

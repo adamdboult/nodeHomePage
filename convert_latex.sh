@@ -19,6 +19,8 @@ for i in $(find ./built/jade/theory/ -name \*.tex); do
     p=$b".pdf"
     d="$(dirname "${i}")/"
 
+    printf $d"/"$i"\n"
+
     cd $d
     pandoc $s --mathjax -o $o
     #pandoc $s --number-sections --toc --toc-depth 2 -o $p

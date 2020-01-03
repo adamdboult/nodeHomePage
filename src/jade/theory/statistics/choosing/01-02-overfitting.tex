@@ -29,39 +29,40 @@ OR regularisation: keep all features, but reduce magnitude of theta
 
 \subsubsection{Regularisation}
 
-Make cost function include size of theta^2 values
+Make cost function include size of \(\theta^2\) values
 
-min 1/2m [sum (h(x)-y)^2 + 1000 theta3 ^2 + 1000 theta4 ^2]
+\(min 1/2m [sum (h(x)-y)^2 + 1000 theta3 ^2 + 1000 theta4 ^2]\)
 
 or more broadly:
 
-min 1/2m[sum ..... + lamba sum thetaj^2]
+\(min 1/2m[sum ..... + lamba sum thetaj^2]\)
 
 Tend to not include theta 0 as convention, no regularisation
 
 Update for linear regression is
 
-theta j = theta j -alpha{(1/m)* sum(h(x)-y)xj + (lambda/m thetaj)}
+\(\theta j = theta j -alpha{(1/m)* sum(h(x)-y)xj + (lambda/m thetaj)}\)
 
-theta j = theta j (1- alpha lambda / m) -alpha {(1/m)*sum(h(x)-y)xj}
+\(\theta j = theta j (1- alpha lambda / m) -alpha {(1/m)*sum(h(x)-y)xj}\)
 
 This is the same as before, but theta j updates from a smaller theta j each time
 
 Normal equation needs a change
 
-(X'X)^-1X'y=theta'')
+\((X'X)^-1X'y=\theta'')\)
 
 Now is
 
-(X'X+lambdaI)^-1X y  ')
+\((X'X+lambdaI)^-1X y  ')\)
 
 although for theta 0, lambda zero, so indentiy matrix, but first element 0
 
 REGULARISATION FOR REGULARISATION
 
-add to end of J(theta):
+add to end of \(J(theta)\):
 
-+ lamda/2m .sum thetaj^21
+\(\lambda/2m .sum thetaj^21\)
 
-	p update for theta j j>0:
-	p is a as linear regression, but h(x) is a different function
+update for \(\theta \)\(j\) \(j>0\):
+is a as linear regression, but \(h(x)\) is a different function
+

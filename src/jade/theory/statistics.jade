@@ -1,3 +1,9 @@
-extends ./statistics/subTemplate.jade
-block subSubContent
-	include ./statistics_sidebar.jade
+extends ../templates/loginHeader.jade
+block content
+	div.container-fluid
+		div.row
+			nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+				div.sidebar-sticky
+					include ./statistics_sidebar.jade
+			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role="main")
+				include ./statistics/preface.html
