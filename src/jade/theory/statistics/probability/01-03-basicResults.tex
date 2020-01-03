@@ -1,0 +1,115 @@
+
+\subsection{Basic results}
+
+\subsubsection{Probability of null}
+
+\(P(\Omega )=1\)
+
+\(P(\Omega \lor \varnothing )=1\)
+
+\(P(\Omega )+P(\varnothing )=1\)
+
+\(P(\varnothing )=0\)
+
+\subsubsection{Monotonicity}
+
+Consider \(E_i\subseteq E_j\):
+
+\(E_j=E_i\lor E_k\)
+
+\(P(E_j)=P(E_i\lor E_k)\)
+
+Disjoint so:
+
+\(P(E_j)=P(E_i)+P(E_k)\)
+
+We know that \(P(E_k)\ge 0\) from axiom \(1\) so:
+
+\(P(E_j)\ge P(E_i)\)
+
+\subsubsection{Bounds of probabilities}
+
+As all events are subsets of the sample space:
+
+\(P(\Omega )\ge P(E)\)
+
+\(1\ge P(E)\)
+
+From axiom \(1\) then know:
+
+\(\forall E\in F [0\le P(E)\le 1]\)
+
+\subsubsection{Union and intersection for null and universal}
+
+\(P(E\land \varnothing )=P(\varnothing )=0\)
+
+\(P(E\lor \Omega )=P(\Omega )=1\)
+
+\(P(E\lor \varnothing)=P(E)\)
+
+\(P(E\land \Omega )=P(E)\)
+
+\subsubsection{Separation rule}
+
+Firstly:
+
+\(P(E_i)=P(E_i\land \Omega)\)
+
+\(P(E_i)=P(E_i\land (E_j\lor E_j^C))\)
+
+\(P(E_i)=P((E_i\land E_j)\lor (E_i\land E_j^C))\)
+
+As the latter are disjoint:
+
+\(P(E_i)=P((E_i\land E_j)+(E_i\land E_j^C))\)
+
+\subsubsection{Addition rule}
+
+We know that:
+
+\(P(E_i\lor E_j)=P((E_i\lor E_j)\land (E_j\lor E_j^C))\)
+
+By the distributive law of sets:
+
+\(P(E_i\lor E_j)=P((E_i\land E_j^C)\lor E_j)\)
+
+\(P(E_i\lor E_j)=P((E_i\land E_j^C)\lor (E_j\land (E_i\lor E_i^C))\)
+
+By the distributive law of sets:
+
+\(P(E_i\lor E_j)=P((E_i\land E_j^C)\lor (E_j\land E_i)\lor (E_j\land E_i^C))\)
+
+As these are disjoint:
+
+\(P(E_i\lor E_j)=P(E_i\land E_j^C)+ P(E_j\land E_i)+P(E_j\land E_i^C)\)
+
+From the separation rule:
+
+\(P(E_i\lor E_j)=P(E_i)-P(E_i\land E_j)+ P(E_j\land E_i)+P(E_j)-P(E_j\land E_i)\)
+
+\(P(E_i\lor E_j)=P(E_i)+P(E_j)-P(E_i\land E_j)\)
+
+\subsubsection{Probability of complements}
+
+From the addition rule:
+
+\(P(E_i\lor E_j)=P(E_i)+P(E_j)-P(E_i\land E_j)\)
+
+Consider \(E\) and \(E^C\):
+
+\(P(E\lor E^C)=P(E)+P(E^C)-P(E\land E^C)\)
+
+We know that \(E\) and \(E^C\) are disjoint, that is:
+
+\(E\land E^C=\varnothing\)
+
+Similarly by construction:
+
+\(E\lor E^C=\Omega \)
+
+So:
+
+\(P(\Omega )=P(E)+P(E^C)-P(\varnothing)\)
+
+\(1=P(E)+P(E^C)\)
+
