@@ -19,7 +19,7 @@ We can easily calculate \(P(y)\), by looking at the frequency across the sample.
 
 \subsubsection{Estimating \(P(x_1|y)\)}
 
-Normally, \(P(x_1|y)=\frac{n_c}{n_y}\), where:
+Normally, \(P(x_1|y)=\dfrac{n_c}{n_y}\), where:
 
 \begin{itemize}
 \item \(n_c\) is the number of instances where the evidence is \(c\) and the label is \(y\).
@@ -30,10 +30,10 @@ Normally, \(P(x_1|y)=\frac{n_c}{n_y}\), where:
 
 To reduce the risk of specific probabilities being zero, we can adjust them, so that:
 
-\(P(x_1|y)=\frac{n_c+mp}{n_y+m}\), where:
+\(P(x_1|y)=\dfrac{n_c+mp}{n_y+m}\), where:
 
 \begin{itemize}
-\item \(p\) is the prior probability. If this is unknown, use \(\frac{1}{k}\), where \(k\) is the number of classes.
+\item \(p\) is the prior probability. If this is unknown, use \(\dfrac{1}{k}\), where \(k\) is the number of classes.
 \item \(m\) is a parameter called the equivilant sample size.
 \end{itemize}
 

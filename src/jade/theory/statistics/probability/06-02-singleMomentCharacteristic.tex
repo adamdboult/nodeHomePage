@@ -29,11 +29,11 @@ One method is to use the probability density function and the definitions of mom
 
 Which expands to:
 
-\(E[e^{tX}]=\sum_{j=1}^\infty \frac{t^jE[X^j]}{j!}\)
+\(E[e^{tX}]=\sum_{j=1}^\infty \dfrac{t^jE[X^j]}{j!}\)
 
 By taking the \(m\)th derivative of this, we get
 
-\(E[X^m]+\sum_{j=m+1}^\infty \frac{t^jE[X^j]}{j!}\)
+\(E[X^m]+\sum_{j=m+1}^\infty \dfrac{t^jE[X^j]}{j!}\)
 
 We can then set \(t=0\) to get
 
@@ -69,11 +69,11 @@ As this can be broken down into sinusoidal functions it can more readily be inte
 
 This expands to
 
-\(E[e^{itX}]=\sum_{j=1}^\infty \frac{i^jt^jE[X^j]}{j!}\)
+\(E[e^{itX}]=\sum_{j=1}^\infty \dfrac{i^jt^jE[X^j]}{j!}\)
 
 By taking the \(m\)th derivative we get.
 
-\(E[X^m]i^m+\sum_{j=m+1}^\infty \frac{t^jE[X^j]}{j!}\)
+\(E[X^m]i^m+\sum_{j=m+1}^\infty \dfrac{t^jE[X^j]}{j!}\)
 
 By setting \(t=0\) we then get:
 
@@ -113,11 +113,11 @@ Characteristic function
 
 \(\phi_X(t)=E[e^{itX}]\)
 
-\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{\phi_X^j(a)(t-a)}{j!}\)
+\(\phi_X(t)=\sum_{j=0}^{\infty }\dfrac{\phi_X^j(a)(t-a)}{j!}\)
 
 Around \(a=0\)
 
-\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{\phi_X^j(0)(t)}{j!}\)
+\(\phi_X(t)=\sum_{j=0}^{\infty }\dfrac{\phi_X^j(0)(t)}{j!}\)
 
 The characteristic function is now given in terms of its moments.
 
@@ -127,19 +127,19 @@ We know:
 
 So:
 
-\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{E[X^j]i^j(t)^j}{j!}\)
+\(\phi_X(t)=\sum_{j=0}^{\infty }\dfrac{E[X^j]i^j(t)^j}{j!}\)
 
-\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{E[X^j](it)^j}{j!}\)
+\(\phi_X(t)=\sum_{j=0}^{\infty }\dfrac{E[X^j](it)^j}{j!}\)
 
 We know:
 
-\(\frac{E[X^0](it)^0}{0!}=E[1]=1\)
+\(\dfrac{E[X^0](it)^0}{0!}=E[1]=1\)
 
-\(\frac{E[X^1](it)^1}{1!}=E[X](it)=it\mu_X \)
+\(\dfrac{E[X^1](it)^1}{1!}=E[X](it)=it\mu_X \)
 
-\(\frac{E[X^2](it)^2}{2!}=\frac{-E[X^2]t^2}{2}=\frac{-(\mu_X +\sigma_X^2 )t^2}{2}\)
+\(\dfrac{E[X^2](it)^2}{2!}=\dfrac{-E[X^2]t^2}{2}=\dfrac{-(\mu_X +\sigma_X^2 )t^2}{2}\)
 
 So:
 
-\(\phi_X(t)=1+it\mu_X -\frac{(\mu_X +\sigma_X^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[X^j](it)^j}{j!}\)
+\(\phi_X(t)=1+it\mu_X -\dfrac{(\mu_X +\sigma_X^2 )t^2}{2} +\sum_{j=3}^{\infty }\dfrac{E[X^j](it)^j}{j!}\)
 

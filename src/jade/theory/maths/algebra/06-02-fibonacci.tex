@@ -60,49 +60,49 @@ Let's take our previous equation
 
 \(F(c)[x^2+x-1]=x^{c+1}s_c-x^{c+1}s_{c+1}-x^c s_c\)
 
-\(F(c)=\frac{x^c s_c + x^{c+1}s_{c+1}-x^{c+1}s_c}{1-x-x^2}\)
+\(F(c)=\dfrac{x^c s_c + x^{c+1}s_{c+1}-x^{c+1}s_c}{1-x-x^2}\)
 
 \subsubsection{Using the first element in the sequence}
 
 For the start of the sequence, \(c=0\), \(s_0=s_1=1\).
 
-\(F(0)=\frac{x^0 1 + x - x}{1-x-x^2}\)
+\(F(0)=\dfrac{x^0 1 + x - x}{1-x-x^2}\)
 
-\(F(0)=\frac{1}{1-x-x^2}\)
+\(F(0)=\dfrac{1}{1-x-x^2}\)
 
 Let's factorise this:
 
-\(F(0)=\frac{-1}{(x+\frac{1}{2}+\frac{\sqrt 5}{2})(x+\frac{1}{2}-\frac{\sqrt 5}{2})}\)
+\(F(0)=\dfrac{-1}{(x+\dfrac{1}{2}+\dfrac{\sqrt 5}{2})(x+\dfrac{1}{2}-\dfrac{\sqrt 5}{2})}\)
 
 We can then use partial fraction decomposition
 
-\(\frac{1}{(M+\delta)(M-\delta)}=\frac{1}{2\delta}[\frac{1}{M-\delta}-\frac{1}{M+\delta}]\)
+\(\dfrac{1}{(M+\delta)(M-\delta)}=\dfrac{1}{2\delta}[\dfrac{1}{M-\delta}-\dfrac{1}{M+\delta}]\)
 
 To show that
 
-\(F(0)=\frac{-1}{\sqrt 5}[\frac{1}{x+\frac{1}{2}-\frac{\sqrt 5}{2}}-\frac{1}{x+\frac{1}{2}+\frac{\sqrt 5}{2}}]\)
+\(F(0)=\dfrac{-1}{\sqrt 5}[\dfrac{1}{x+\dfrac{1}{2}-\dfrac{\sqrt 5}{2}}-\dfrac{1}{x+\dfrac{1}{2}+\dfrac{\sqrt 5}{2}}]\)
 
-\(F(0)=\frac{-1}{\sqrt 5}[\frac{\frac{1}{2}+\frac{\sqrt 5}{2}}{(x+\frac{1}{2}-\frac{\sqrt 5}{2})(\frac{1}{2}+\frac{\sqrt 5}{2})}-\frac{\frac{1}{2}-\frac{\sqrt 5}{2}}{(x+\frac{1}{2}+\frac{\sqrt 5}{2})(\frac{1}{2}-\frac{\sqrt 5}{2})}]\)
+\(F(0)=\dfrac{-1}{\sqrt 5}[\dfrac{\dfrac{1}{2}+\dfrac{\sqrt 5}{2}}{(x+\dfrac{1}{2}-\dfrac{\sqrt 5}{2})(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})}-\dfrac{\dfrac{1}{2}-\dfrac{\sqrt 5}{2}}{(x+\dfrac{1}{2}+\dfrac{\sqrt 5}{2})(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})}]\)
 
-\(F(0)=\frac{-1}{\sqrt 5}[\frac{\frac{1}{2}+\frac{\sqrt 5}{2}}{x(\frac{1}{2}+\frac{\sqrt 5}{2})-1}-\frac{\frac{1}{2}-\frac{\sqrt 5}{2}}{x(\frac{1}{2}-\frac{\sqrt 5}{2})-1}]\)
+\(F(0)=\dfrac{-1}{\sqrt 5}[\dfrac{\dfrac{1}{2}+\dfrac{\sqrt 5}{2}}{x(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})-1}-\dfrac{\dfrac{1}{2}-\dfrac{\sqrt 5}{2}}{x(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})-1}]\)
 
-\(F(0)=\frac{1}{\sqrt 5}[(\frac{1}{2}+\frac{\sqrt 5}{2})\frac{1}{1-x(\frac{1}{2}+\frac{\sqrt 5}{2})}-(\frac{1}{2}-\frac{\sqrt 5}{2})\frac{1}{1-x(\frac{1}{2}-\frac{\sqrt 5}{2})}]\)
+\(F(0)=\dfrac{1}{\sqrt 5}[(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})\dfrac{1}{1-x(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})}-(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})\dfrac{1}{1-x(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})}]\)
 
 \subsubsection{Finishing off}
 
 As we know
 
-\(\frac{1}{1-x}=\sum_{i=0}x^i \)
+\(\dfrac{1}{1-x}=\sum_{i=0}x^i \)
 
 So
 
-\(F(0)=\frac{1}{\sqrt 5}[(\frac{1}{2}+\frac{\sqrt 5}{2})\sum_{i=0} x^i(\frac{1}{2}+\frac{\sqrt 5}{2})^i -(\frac{1}{2}-\frac{\sqrt 5}{2})\sum_{i=0}x^i(\frac{1}{2}-\frac{\sqrt 5}{2})^i]\)
+\(F(0)=\dfrac{1}{\sqrt 5}[(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})\sum_{i=0} x^i(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})^i -(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})\sum_{i=0}x^i(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})^i]\)
 
-\(F(0)=\frac{1}{\sqrt 5}[\sum_{i=0} x^i(\frac{1}{2}+\frac{\sqrt 5}{2})^{i+1} -\sum_{i=0}x^i(\frac{1}{2}-\frac{\sqrt 5}{2})^{i+1}]\)
+\(F(0)=\dfrac{1}{\sqrt 5}[\sum_{i=0} x^i(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})^{i+1} -\sum_{i=0}x^i(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})^{i+1}]\)
 
-\(F(0)=\frac{1}{\sqrt 5}\sum_{i=0} x^i[(\frac{1}{2}+\frac{\sqrt 5}{2})^{i+1} -(\frac{1}{2}-\frac{\sqrt 5}{2})^{i+1}]\)
+\(F(0)=\dfrac{1}{\sqrt 5}\sum_{i=0} x^i[(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})^{i+1} -(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})^{i+1}]\)
 
 So the \(n\)th number in the sequence (treating \(n=1\) as the first number) is:
 
-\(\frac{1}{\sqrt 5}[(\frac{1}{2}+\frac{\sqrt 5}{2})^{n} -(\frac{1}{2}-\frac{\sqrt 5}{2})^{n}]\)
+\(\dfrac{1}{\sqrt 5}[(\dfrac{1}{2}+\dfrac{\sqrt 5}{2})^{n} -(\dfrac{1}{2}-\dfrac{\sqrt 5}{2})^{n}]\)
 

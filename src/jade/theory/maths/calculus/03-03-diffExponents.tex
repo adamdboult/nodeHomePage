@@ -3,29 +3,29 @@
 
 \subsubsection{Differentiating the natural logarithm}
 
-\(\frac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\frac{\ln(x+\delta)-ln(x)}{\delta }\)
+\(\dfrac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\dfrac{\ln(x+\delta)-ln(x)}{\delta }\)
 
-\(\frac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\frac{\ln\frac{x+\delta}{x}}{\delta }\)
+\(\dfrac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\dfrac{\ln\dfrac{x+\delta}{x}}{\delta }\)
 
-\(\frac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\frac{\ln(1+\frac{\delta}{x})}{\delta }\)
+\(\dfrac{\delta }{\delta x}\ln (x)=\lim_{\delta \rightarrow 0}\dfrac{\ln(1+\dfrac{\delta}{x})}{\delta }\)
 
-\(\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}\lim_{\delta \rightarrow 0}\frac{x}{\delta}\ln(1+\frac{\delta}{x})\)
+\(\dfrac{\delta }{\delta x}\ln (x)=\dfrac{1}{x}\lim_{\delta \rightarrow 0}\dfrac{x}{\delta}\ln(1+\dfrac{\delta}{x})\)
 
-\(\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}\ln(\lim_{\delta \rightarrow 0}(1+\frac{\delta}{x})^{\frac{x}{\delta }})\)
+\(\dfrac{\delta }{\delta x}\ln (x)=\dfrac{1}{x}\ln(\lim_{\delta \rightarrow 0}(1+\dfrac{\delta}{x})^{\dfrac{x}{\delta }})\)
 
-\(\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}\ln(e)\)
+\(\dfrac{\delta }{\delta x}\ln (x)=\dfrac{1}{x}\ln(e)\)
 
-\(\frac{\delta }{\delta x}\ln (x)=\frac{1}{x}\)
+\(\dfrac{\delta }{\delta x}\ln (x)=\dfrac{1}{x}\)
 
 \subsubsection{Differentiating logarithms of other bases}
 
-\(log_a(x)=\frac{\log_b(x)}{\log_b(a)}\)
+\(log_a(x)=\dfrac{\log_b(x)}{\log_b(a)}\)
 
-\(log_a(x)=\frac{\ln(x)}{\ln(a)}\)
+\(log_a(x)=\dfrac{\ln(x)}{\ln(a)}\)
 
-\(\frac{\delta }{\delta x}\log_a(x)=\frac{\delta }{\delta x}\frac{\ln(x)}{ln(a)}\)
+\(\dfrac{\delta }{\delta x}\log_a(x)=\dfrac{\delta }{\delta x}\dfrac{\ln(x)}{ln(a)}\)
 
-\(\frac{\delta }{\delta x}\log_a(x)=\frac{1}{xln(a)}\)
+\(\dfrac{\delta }{\delta x}\log_a(x)=\dfrac{1}{xln(a)}\)
 
 \subsubsection{Exponents}
 
@@ -33,23 +33,23 @@
 
 \(\ln(y)=x\ln(a)\)
 
-\(\frac{\delta }{\delta x}\ln(y)=\frac{\delta }{\delta x}x\ln(a)\)
+\(\dfrac{\delta }{\delta x}\ln(y)=\dfrac{\delta }{\delta x}x\ln(a)\)
 
-\(\frac{\delta }{\delta x}\ln(y)=\ln(a)\)
+\(\dfrac{\delta }{\delta x}\ln(y)=\ln(a)\)
 
-\(\frac{1}{y}\frac{\delta }{\delta x}y=\ln(a)\)
+\(\dfrac{1}{y}\dfrac{\delta }{\delta x}y=\ln(a)\)
 
-\(\frac{\delta }{\delta x}a^x=a^x\ln(a)\)
+\(\dfrac{\delta }{\delta x}a^x=a^x\ln(a)\)
 
 \subsubsection{Power functions}
 
 \(y=x^n\)
 
-\(\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}x^n\)
+\(\dfrac{\delta }{\delta x}y=\dfrac{\delta }{\delta x}x^n\)
 
-\(\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}e^{n\ln(x)}\)
+\(\dfrac{\delta }{\delta x}y=\dfrac{\delta }{\delta x}e^{n\ln(x)}\)
 
-\(\frac{\delta }{\delta x}y=\frac{n}{x}e^{n\ln(x)}\)
+\(\dfrac{\delta }{\delta x}y=\dfrac{n}{x}e^{n\ln(x)}\)
 
-\(\frac{\delta }{\delta x}y=nx^{n-1}\)
+\(\dfrac{\delta }{\delta x}y=nx^{n-1}\)
 

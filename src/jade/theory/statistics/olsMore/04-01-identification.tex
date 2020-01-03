@@ -9,9 +9,9 @@ Previously our structural model was:
 
 And our reduced form:
 
-\(P =\frac{\alpha_2-\alpha_1 }{\beta_1-\beta_2}+\frac{\epsilon_2-\epsilon_1 }{\beta_1-\beta_2}\)
+\(P =\dfrac{\alpha_2-\alpha_1 }{\beta_1-\beta_2}+\dfrac{\epsilon_2-\epsilon_1 }{\beta_1-\beta_2}\)
 
-\(Q =\frac{\alpha_2\beta_1-\alpha_1\beta_2 }{\beta_1-\beta_2}+\frac{\beta_1\epsilon_2 -\beta_2\epsilon_1}{\beta_1-\beta_2}\)
+\(Q =\dfrac{\alpha_2\beta_1-\alpha_1\beta_2 }{\beta_1-\beta_2}+\dfrac{\beta_1\epsilon_2 -\beta_2\epsilon_1}{\beta_1-\beta_2}\)
 
 Or:
 
@@ -29,9 +29,9 @@ This time we add another measured variable, \(I\).
 
 The reduced form is now:
 
-\(P =\frac{\alpha_2 -alpha_1 }{\beta_1-\beta_2}+\frac{\theta_2-\theta_1 }{\beta_1-\beta_2}I+\frac{\epsilon_2-\epsilon_1}{\beta_1-\beta_2}\)
+\(P =\dfrac{\alpha_2 -alpha_1 }{\beta_1-\beta_2}+\dfrac{\theta_2-\theta_1 }{\beta_1-\beta_2}I+\dfrac{\epsilon_2-\epsilon_1}{\beta_1-\beta_2}\)
 
-\(Q =\frac{\alpha_2\beta_1-\alpha_1\beta_2 }{\beta_1-\beta_2}+\frac{\theta_2\beta_1-\theta_1\beta_2}{\beta_1-\beta_2}I+\frac{\beta_1\epsilon_2 -\beta_2\epsilon_1}{\beta_1-\beta_2}\)
+\(Q =\dfrac{\alpha_2\beta_1-\alpha_1\beta_2 }{\beta_1-\beta_2}+\dfrac{\theta_2\beta_1-\theta_1\beta_2}{\beta_1-\beta_2}I+\dfrac{\beta_1\epsilon_2 -\beta_2\epsilon_1}{\beta_1-\beta_2}\)
 
 Or:
 
@@ -54,32 +54,32 @@ Can we use \(\hat \pi \) to identify any of the structural parameters?
 We know that:
 
 \begin{itemize}
-\item \(\pi_{11} =\frac{\alpha_2 -\alpha_1 }{\beta_1-\beta_2}\)
-\item \(\pi_{12} =\frac{\theta_2-\theta_1}{\beta_1-\beta_2}\)
-\item \(\pi_{21} =\frac{\alpha_2\beta_1-\alpha_1\beta_2}{\beta_1-\beta_2}\)
-\item \(\pi_{22} =\frac{\theta_2\beta_1-\theta_1\beta_2}{\beta_1-\beta_2} \)
+\item \(\pi_{11} =\dfrac{\alpha_2 -\alpha_1 }{\beta_1-\beta_2}\)
+\item \(\pi_{12} =\dfrac{\theta_2-\theta_1}{\beta_1-\beta_2}\)
+\item \(\pi_{21} =\dfrac{\alpha_2\beta_1-\alpha_1\beta_2}{\beta_1-\beta_2}\)
+\item \(\pi_{22} =\dfrac{\theta_2\beta_1-\theta_1\beta_2}{\beta_1-\beta_2} \)
 \end{itemize}
 
 If the exogenous variable only affects one side of the equation, so \(\theta_1=0\), we have:
 
 \begin{itemize}
-\item \(\pi_{11} =\frac{\alpha_2 -\alpha_1 }{\beta_1-\beta_2}\)
-\item \(\pi_{12} =\frac{\theta_2}{\beta_1-\beta_2}\)
-\item \(\pi_{21} =\frac{\alpha_2\beta_1-\alpha_1\beta_2}{\beta_1-\beta_2}\)
-\item \(\pi_{22} =\frac{\theta_2\beta_1}{\beta_1-\beta_2} \)
+\item \(\pi_{11} =\dfrac{\alpha_2 -\alpha_1 }{\beta_1-\beta_2}\)
+\item \(\pi_{12} =\dfrac{\theta_2}{\beta_1-\beta_2}\)
+\item \(\pi_{21} =\dfrac{\alpha_2\beta_1-\alpha_1\beta_2}{\beta_1-\beta_2}\)
+\item \(\pi_{22} =\dfrac{\theta_2\beta_1}{\beta_1-\beta_2} \)
 \end{itemize}
 
 So we can see that:
 
-\(\hat \beta_1 = \frac{\hat \pi_{22}}{\hat \pi_{12}}\)
+\(\hat \beta_1 = \dfrac{\hat \pi_{22}}{\hat \pi_{12}}\)
 
 This means we now have:
 
 \begin{itemize}
-\item \(\pi_{11} =\frac{\pi_{12}(\alpha_2 -\alpha_1 )}{\pi_{22}-\pi_{12}\beta_2}\)
-\item \(\pi_{12} =\frac{\pi_{12}\theta_2}{\pi_{22}-\pi_{12}\beta_2}\)
-\item \(\pi_{21} =\frac{\pi_{12}(\alpha_2\beta_1-\alpha_1\beta_2)}{\pi_{22}-\pi_{12}\beta_2}\)
-\item \(\pi_{22} =\frac{\pi_{12}\theta_2\beta_1}{\pi_{22}-\pi_{12}\beta_2}\)
+\item \(\pi_{11} =\dfrac{\pi_{12}(\alpha_2 -\alpha_1 )}{\pi_{22}-\pi_{12}\beta_2}\)
+\item \(\pi_{12} =\dfrac{\pi_{12}\theta_2}{\pi_{22}-\pi_{12}\beta_2}\)
+\item \(\pi_{21} =\dfrac{\pi_{12}(\alpha_2\beta_1-\alpha_1\beta_2)}{\pi_{22}-\pi_{12}\beta_2}\)
+\item \(\pi_{22} =\dfrac{\pi_{12}\theta_2\beta_1}{\pi_{22}-\pi_{12}\beta_2}\)
 \end{itemize}
 
 We can use this to also identify \(\alpha_1\).

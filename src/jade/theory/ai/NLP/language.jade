@@ -10,10 +10,10 @@ block subSubContent
 	p We can state this problem:
 	p \(P(child|did\ you\ call\ your)\)
 	p By definition this is:
-	p \(P(child|did\ you\ call\ your)= \frac{P(did\ you\ call\ your\ child)}{P(did\ you\ call\ your)}\)
+	p \(P(child|did\ you\ call\ your)= \dfrac{P(did\ you\ call\ your\ child)}{P(did\ you\ call\ your)}\)
 	p We can estimate each of these:
-	p \(P(did\ you\ call\ your\ child)=\frac{|did\ you\ call\ your\ child|}{|5\ word\ sentences|}\)
-	p \(P(did\ you\ call\ your)=\frac{|did\ you\ call\ your|}{|4\ word\ sentences|}\)
+	p \(P(did\ you\ call\ your\ child)=\dfrac{|did\ you\ call\ your\ child|}{|5\ word\ sentences|}\)
+	p \(P(did\ you\ call\ your)=\dfrac{|did\ you\ call\ your|}{|4\ word\ sentences|}\)
 	h3
 		b Data requirements
 	p This needs a large corpus, which may not be practical.
@@ -32,15 +32,15 @@ block subSubContent
 	h3
 		b Smoothing
 	p We can use smoothing to address small corpuses.
-	p \(P(did\ you\ call\ your\ child)=\frac{|did\ you\ call\ your\ child|+1}{|5\ word\ sentences|+V}\)
-	p \(P(did\ you\ call\ your)=\frac{|did\ you\ call\ your|+1}{|4\ word\ sentences|+V}\)
+	p \(P(did\ you\ call\ your\ child)=\dfrac{|did\ you\ call\ your\ child|+1}{|5\ word\ sentences|+V}\)
+	p \(P(did\ you\ call\ your)=\dfrac{|did\ you\ call\ your|+1}{|4\ word\ sentences|+V}\)
 	p For some value \(V\).
 	h3
 		b Perplexity
 	p We can compare probabilistic language models using perplexity.
 	p We can then choose the model with the lowest perplexity.
-	p \(perplexity(w_1, w_2, ..., w_n)=P(w_1, w_2, ..., w_n)^{-\frac{1}{n}}\)
+	p \(perplexity(w_1, w_2, ..., w_n)=P(w_1, w_2, ..., w_n)^{-\dfrac{1}{n}}\)
 	p We can expand this:
-	p \(perplexity(w_1, w_2, ..., w_n)=\prod_i P(w_i| w_1, ..., w_{i-1})^{-\frac{1}{n}}\)
+	p \(perplexity(w_1, w_2, ..., w_n)=\prod_i P(w_i| w_1, ..., w_{i-1})^{-\dfrac{1}{n}}\)
 	p Depending on which n-gram we use we can then simplify this.
 
