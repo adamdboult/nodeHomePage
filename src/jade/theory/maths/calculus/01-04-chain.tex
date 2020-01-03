@@ -3,41 +3,41 @@
 
 \subsubsection{Chain rule}
 
-$f(x)=f(g(x))$
+\(f(x)=f(g(x))\)
 
-$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(g(x+\epsilon) )-f(g(x))}{\epsilon }$
+\(\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(g(x+\epsilon) )-f(g(x))}{\epsilon }\)
 
-$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )-g(x)}{g(x+\epsilon )-g(x)}\frac{f(g(x+\epsilon) )-f(g(x))}{\epsilon }$
+\(\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )-g(x)}{g(x+\epsilon )-g(x)}\frac{f(g(x+\epsilon) )-f(g(x))}{\epsilon }\)
 
-$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )-g(x)}{\epsilon }\frac{f(g(x+\epsilon) )-f(g(x))}{g(x+\epsilon )-g(x)}$
+\(\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{g(x+\epsilon )-g(x)}{\epsilon }\frac{f(g(x+\epsilon) )-f(g(x))}{g(x+\epsilon )-g(x)}\)
 
-$\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}[\frac{g(x+\epsilon )-g(x)}{\epsilon }]\lim_{\epsilon \rightarrow 0^+}[\frac{f(g(x+\epsilon) )-f(g(x))}{g(x+\epsilon )-g(x)}]$
+\(\frac{\delta f}{\delta x}=\lim_{\epsilon \rightarrow 0^+}[\frac{g(x+\epsilon )-g(x)}{\epsilon }]\lim_{\epsilon \rightarrow 0^+}[\frac{f(g(x+\epsilon) )-f(g(x))}{g(x+\epsilon )-g(x)}]\)
 
-$\frac{\delta f}{\delta x}=\frac{\delta g}{\delta x}\frac{\delta f}{\delta g}$
+\(\frac{\delta f}{\delta x}=\frac{\delta g}{\delta x}\frac{\delta f}{\delta g}\)
 
 \subsubsection{Product rule}
 
-$y=f(x)g(x)$
+\(y=f(x)g(x)\)
 
-$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x)}{\epsilon }$
+\(\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x)}{\epsilon }\)
 
-$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x+\epsilon )+f(x)g(x+\epsilon )-f(x)g(x)}{\epsilon }$
+\(\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x+\epsilon )+f(x)g(x+\epsilon )-f(x)g(x)}{\epsilon }\)
 
-$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x+\epsilon )}{\epsilon }+\lim_{\epsilon \rightarrow 0^+}\frac{f(x)g(x+\epsilon )-f(x)g(x)}{\epsilon }$
+\(\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}\frac{f(x+\epsilon )g(x+\epsilon )-f(x)g(x+\epsilon )}{\epsilon }+\lim_{\epsilon \rightarrow 0^+}\frac{f(x)g(x+\epsilon )-f(x)g(x)}{\epsilon }\)
 
-$\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}g(x+\epsilon )\frac{f(x+\epsilon )-f(x)}{\epsilon }+\lim_{\epsilon \rightarrow 0^+}f(x)\frac{g(x+\epsilon )-g(x)}{\epsilon }$
+\(\frac{\delta y}{\delta x}=\lim_{\epsilon \rightarrow 0^+}g(x+\epsilon )\frac{f(x+\epsilon )-f(x)}{\epsilon }+\lim_{\epsilon \rightarrow 0^+}f(x)\frac{g(x+\epsilon )-g(x)}{\epsilon }\)
 
-$\frac{\delta y}{\delta x}=g(x)\frac{\delta f}{\delta x }+f(x)\frac{\delta g}{\delta x}$
+\(\frac{\delta y}{\delta x}=g(x)\frac{\delta f}{\delta x }+f(x)\frac{\delta g}{\delta x}\)
 
 \subsubsection{Quotient rule}
 
-$y=\frac{f(x)}{g(x)}$
+\(y=\frac{f(x)}{g(x)}\)
 
-$\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}\frac{f(x)}{g(x)}$
+\(\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}\frac{f(x)}{g(x)}\)
 
-$\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}f(x)\frac{1}{g(x)}$
+\(\frac{\delta }{\delta x}y=\frac{\delta }{\delta x}f(x)\frac{1}{g(x)}\)
 
-$\frac{\delta }{\delta x}y=\frac{\delta f}{\delta x}\frac{1}{g(x)}-\frac{\delta g}{\delta x}\frac{f(x)}{g(x)^2}$
+\(\frac{\delta }{\delta x}y=\frac{\delta f}{\delta x}\frac{1}{g(x)}-\frac{\delta g}{\delta x}\frac{f(x)}{g(x)^2}\)
 
-$\frac{\delta }{\delta x}y=\frac{\frac{\delta f}{\delta x}g(x)-\frac{\delta g}{\delta x}f(x)}{g(x)^2}$
+\(\frac{\delta }{\delta x}y=\frac{\frac{\delta f}{\delta x}g(x)-\frac{\delta g}{\delta x}f(x)}{g(x)^2}\)
 

@@ -3,7 +3,7 @@
 
 If two sets contain the same elements, they are equal.
 
-$\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow x=y]$
+\(\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow x=y]\)
 
 This is an axiom, not a definition, because equality was defined as part of first-order logic.
 
@@ -13,19 +13,19 @@ Note that this is not bidirectional. \(x=y\) does not imply that \(x\) and \(y\)
 
 The reflexive property is:
 
-$\forall x(x=x)$
+\(\forall x(x=x)\)
 
 We can replace the instance of \(y\)  with \(x\):
 
-$\forall x [\forall z(z\in x \leftrightarrow z\in x)\rightarrow x=x]$
+\(\forall x [\forall z(z\in x \leftrightarrow z\in x)\rightarrow x=x]\)
 
 We can show that the following is true:
 
-$\forall z(z\in x \leftrightarrow z\in x)$
+\(\forall z(z\in x \leftrightarrow z\in x)\)
 
 Therefore:
 
-$\forall x [T \rightarrow x=x]$
+\(\forall x [T \rightarrow x=x]\)
 
 \(x=x\)
 
@@ -33,35 +33,35 @@ $\forall x [T \rightarrow x=x]$
 
 The symmetry property is:
 
-$\forall x \forall y[(x=y)\leftrightarrow (y=x)]$
+\(\forall x \forall y[(x=y)\leftrightarrow (y=x)]\)
 
 We know that the following are true:
 
-$\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow x=y]$
+\(\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow x=y]\)
 
-$\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow y=x]$
+\(\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow y=x]\)
 
 So:
 
-$\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow (x=y\land y=x)]$
+\(\forall x \forall y[\forall z(z\in x \leftrightarrow z\in y)\rightarrow (x=y\land y=x)]\)
 
 \subsubsection{Transitivity of equality}
 
 The transitive property is:
 
-$\forall x \forall y \forall z[(x=y \land y=z) \rightarrow x=z]$
+\(\forall x \forall y \forall z[(x=y \land y=z) \rightarrow x=z]\)
 
 \subsubsection{Substitution for functions}
 
 The substitutive property for functions is:
 
-$\forall x \forall y[(x=y)\rightarrow (f(x)=f(y))]$
+\(\forall x \forall y[(x=y)\rightarrow (f(x)=f(y))]\)
 
 \subsubsection{Substitution for formulae}
 
 The substitutive property for formulae is:
 
-$\forall x \forall y[((x=y)\land P(x))\rightarrow P(y)]$
+\(\forall x \forall y[((x=y)\land P(x))\rightarrow P(y)]\)
 
 Doesn’t this require iterating over predicates? Is this possible in first order logic??
 

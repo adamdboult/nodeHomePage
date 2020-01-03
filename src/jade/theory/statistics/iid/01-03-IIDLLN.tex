@@ -3,27 +3,27 @@
 
 The sample mean is:
 
-$\bar X_n=\frac{1}{n}\sum_{i=1}^nX_i$
+\(\bar X_n=\frac{1}{n}\sum_{i=1}^nX_i\)
 
 The variance of this is:
 
-$Var[\bar X_n]=Var[\frac{1}{n}\sum_{i=1}^nX_i]$
+\(Var[\bar X_n]=Var[\frac{1}{n}\sum_{i=1}^nX_i]\)
 
-$Var[\bar X_n]=\frac{1}{n^2}nVar[X]$
+\(Var[\bar X_n]=\frac{1}{n^2}nVar[X]\)
 
-$Var[\bar X_n]=\frac{\sigma^2}{n} $
+\(Var[\bar X_n]=\frac{\sigma^2}{n} \)
 
 We know from Chebyshev’s inequality:
 
-$P(|X-\mu | \ge k\sigma )\le \frac{1}{k^2}$
+\(P(|X-\mu | \ge k\sigma )\le \frac{1}{k^2}\)
 
 Use \(\bar X_n\) as \(X\):
 
-$P(|\bar X_n-\mu | \ge \frac{k\sigma }{\sqrt n})\le \frac{1}{k^2}$
+\(P(|\bar X_n-\mu | \ge \frac{k\sigma }{\sqrt n})\le \frac{1}{k^2}\)
 
 Update \(k\) so \(k:=\frac{k\sqrt n}{\sigma}\)
 
-$P(|\bar X_n-\mu | \ge k)\le \frac{\sigma^2}{nk^2}$
+\(P(|\bar X_n-\mu | \ge k)\le \frac{\sigma^2}{nk^2}\)
 
 As \(n\) increases, the chance that the sample mean lies outside a given distance from the population mean approaches \(0\).
 

@@ -23,8 +23,9 @@ for i in $(find ./built/jade/theory/ -name \*.tex); do
 
     cd $d
     #printf $d"/"$i
-    pandoc $s -o $o
-    pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    pandoc $s --number-sections -o $p
     cd $current_dir
 
 done

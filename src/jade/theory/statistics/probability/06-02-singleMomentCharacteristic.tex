@@ -7,15 +7,15 @@
 
 Cumulative probability function
 
-$F=\int_{-\infty }^\infty xP(x)$
+\(F=\int_{-\infty }^\infty xP(x)\)
 
 Moment generating function
 
-$F=\int_{-\infty }^\infty e^{tx}P(x)$
+\(F=\int_{-\infty }^\infty e^{tx}P(x)\)
 
 Characteristic function
 
-$F=\int_{-\infty }^\infty e^{itx}P(x)$
+\(F=\int_{-\infty }^\infty e^{itx}P(x)\)
 
 \subsubsection{Moment generating function}
 
@@ -25,37 +25,37 @@ We can transform our function in other forms which maintain all of the required 
 
 One method is to use the probability density function and the definitions of moments, but there are other options. For example, consider the function:
 
-$E[e^{tX}]$
+\(E[e^{tX}]\)
 
 Which expands to:
 
-$E[e^{tX}]=\sum_{j=1}^\infty \frac{t^jE[X^j]}{j!}$
+\(E[e^{tX}]=\sum_{j=1}^\infty \frac{t^jE[X^j]}{j!}\)
 
 By taking the \(m\)th derivative of this, we get
 
-$E[X^m]+\sum_{j=m+1}^\infty \frac{t^jE[X^j]}{j!}$
+\(E[X^m]+\sum_{j=m+1}^\infty \frac{t^jE[X^j]}{j!}\)
 
 We can then set \(t=0\) to get
 
-$E[X^m]$
+\(E[X^m]\)
 
 Alternatively, see that differentiating \(m\) times gets us
 
-$E[X^me^{tX}]$
+\(E[X^me^{tX}]\)
 
 If we can get this function, we can then easily generate moments.
 
 The function we need to get is:
 
-$E[e^{tX}]$
+\(E[e^{tX}]\)
 
 In the discrete case this is:
 
-$E[e^{tX}]=\sum_{i=1}e^{tx_i}p_i$
+\(E[e^{tX}]=\sum_{i=1}e^{tx_i}p_i\)
 
 In the continuous case:
 
-$E[e^{tX}]=\int_{-\infty }^\infty e^{tx}P(x) dx$
+\(E[e^{tX}]=\int_{-\infty }^\infty e^{tx}P(x) dx\)
 
 \subsubsection{Characteristic function}
 
@@ -63,25 +63,25 @@ It may not be possible to calculate the integral for the moment generating funct
 
 Consider
 
-$E[e^{itX}]$
+\(E[e^{itX}]\)
 
 As this can be broken down into sinusoidal functions it can more readily be integrated.
 
 This expands to
 
-$E[e^{itX}]=\sum_{j=1}^\infty \frac{i^jt^jE[X^j]}{j!}$
+\(E[e^{itX}]=\sum_{j=1}^\infty \frac{i^jt^jE[X^j]}{j!}\)
 
 By taking the \(m\)th derivative we get.
 
-$E[X^m]i^m+\sum_{j=m+1}^\infty \frac{t^jE[X^j]}{j!}$
+\(E[X^m]i^m+\sum_{j=m+1}^\infty \frac{t^jE[X^j]}{j!}\)
 
 By setting \(t=0\) we then get:
 
-$E[X^m]i^m$
+\(E[X^m]i^m\)
 
 Alternatively see that differentiating \(m\) times gets us
 
-$E[(iX)^me^{itX}]$
+\(E[(iX)^me^{itX}]\)
 
 So we can get the moment by differentiating \(m\) times, and multiplying by \(i^{-m}\).
 
@@ -93,52 +93,53 @@ Characteristic function
 
 \subsubsection{Moments of constants added to variables}
 
-$\phi_{X+c}(t)=E[e^{it(X+c)}]$
+\(\phi_{X+c}(t)=E[e^{it(X+c)}]\)
 
-$\phi_{X+c}(t)=E[e^{itX}e^itc]$
+\(\phi_{X+c}(t)=E[e^{itX}e^itc]\)
 
-$\phi_{X+c}(t)=e^{itc}E[e^{itX}]$
+\(\phi_{X+c}(t)=e^{itc}E[e^{itX}]\)
 
-$\phi_{X+c}(t)=e^{itc}\phi_X(t)$
+\(\phi_{X+c}(t)=e^{itc}\phi_X(t)\)
 
-$\phi_{X}(t)=e^{-itc}\phi_{X+c}(t)$
+\(\phi_{X}(t)=e^{-itc}\phi_{X+c}(t)\)
 
 \subsubsection{Moments of constants multiplied by events}
 
-$\phi_{cX}(t)=E[e^{itcX}]$
+\(\phi_{cX}(t)=E[e^{itcX}]\)
 
-$\phi_{cX}(t) = \phi_{X}(ct)$
+\(\phi_{cX}(t) = \phi_{X}(ct)\)
 
 \subsubsection{Taylor series of a characteristic function}
 
-$\phi_X(t)=E[e^{itX}]$
+\(\phi_X(t)=E[e^{itX}]\)
 
-$\phi_X(t)=\sum_{j=0}^{\infty }\frac{\phi_X^j(a)(t-a)}{j!}$
+\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{\phi_X^j(a)(t-a)}{j!}\)
 
 Around \(a=0\)
 
-$\phi_X(t)=\sum_{j=0}^{\infty }\frac{\phi_X^j(0)(t)}{j!}$
+\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{\phi_X^j(0)(t)}{j!}\)
 
 The characteristic function is now given in terms of its moments.
 
 We know:
 
-$\phi_X^j(0)=E[X^j]i^j$
+\(\phi_X^j(0)=E[X^j]i^j\)
 
 So:
 
-$\phi_X(t)=\sum_{j=0}^{\infty }\frac{E[X^j]i^j(t)^j}{j!}$
+\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{E[X^j]i^j(t)^j}{j!}\)
 
-$\phi_X(t)=\sum_{j=0}^{\infty }\frac{E[X^j](it)^j}{j!}$
+\(\phi_X(t)=\sum_{j=0}^{\infty }\frac{E[X^j](it)^j}{j!}\)
 
 We know:
 
-$\frac{E[X^0](it)^0}{0!}=E[1]=1$
+\(\frac{E[X^0](it)^0}{0!}=E[1]=1\)
 
-$\frac{E[X^1](it)^1}{1!}=E[X](it)=it\mu_X $
+\(\frac{E[X^1](it)^1}{1!}=E[X](it)=it\mu_X \)
 
-$\frac{E[X^2](it)^2}{2!}=\frac{-E[X^2]t^2}{2}=\frac{-(\mu_X +\sigma_X^2 )t^2}{2}$
+\(\frac{E[X^2](it)^2}{2!}=\frac{-E[X^2]t^2}{2}=\frac{-(\mu_X +\sigma_X^2 )t^2}{2}\)
 
 So:
 
-$\phi_X(t)=1+it\mu_X -\frac{(\mu_X +\sigma_X^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[X^j](it)^j}{j!}$
+\(\phi_X(t)=1+it\mu_X -\frac{(\mu_X +\sigma_X^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[X^j](it)^j}{j!}\)
+

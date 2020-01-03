@@ -17,6 +17,7 @@ for folder in os.listdir(directory_to_walk):
     tex_files = os.listdir(os.path.join(directory_to_walk, folder))
     tex_files = sorted(tex_files)
     lines = []
+
     for tex_file in tex_files:
         line = "\include{" + folder + "/" + tex_file + "}"
         lines.append(line)
@@ -57,6 +58,7 @@ for folder in os.listdir(directory_to_walk):
     tex_files = os.listdir(os.path.join(directory_to_walk, folder))
     tex_files = sorted(tex_files)
     lines = []
+
     for tex_file in tex_files:
         line = "\include{" + folder + "/" + tex_file + "}"
         lines.append(line)
@@ -76,7 +78,7 @@ for folder in os.listdir(directory_to_walk):
     f.write("		div.row\n")
     f.write("			nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n")
     f.write("				div.sidebar-sticky\n")
-    f.write("					include ../maths_sidebar.jade\n")
+    f.write("					include ../statistics_sidebar.jade\n")
     f.write("			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role=\"main\")\n")
     f.write("				include " + folder + ".html\n")
 

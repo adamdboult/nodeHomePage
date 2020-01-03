@@ -4,21 +4,21 @@
 
 Previously we defined addition and multiplication in terms of successive use of the sucessor function. That is, the definition of addition was:
 
-$\forall a \in \mathbb{N} (a+0=a)$
+\(\forall a \in \mathbb{N} (a+0=a)\)
 
-$\forall a b \in \mathbb{N} (a+s(b)=s(a+b))$
+\(\forall a b \in \mathbb{N} (a+s(b)=s(a+b))\)
 
 And similarly for multiplication:
 
-$\forall a \in \mathbb{N} (a.0=0)$
+\(\forall a \in \mathbb{N} (a.0=0)\)
 
-$\forall a b \in \mathbb{N} (a.s(b)=a.b+a)$
+\(\forall a b \in \mathbb{N} (a.s(b)=a.b+a)\)
 
 Additional functions could also be defined, following the same pattern:
 
-$\forall a \in \mathbb{N} (a\oplus _n 0=c)$
+\(\forall a \in \mathbb{N} (a\oplus _n 0=c)\)
 
-$\forall a b \in \mathbb{N} (a\oplus _{n} s(b)=(a\oplus_{n} b)\oplus_{n-1}a)$
+\(\forall a b \in \mathbb{N} (a\oplus _{n} s(b)=(a\oplus_{n} b)\oplus_{n-1}a)\)
 
 \subsubsection{Powers}
 
@@ -26,35 +26,35 @@ Exponents can also be defined:
 
 \subsubsection{Axioms}
 
-$\forall a \in \mathbb{N} a^0=1$
+\(\forall a \in \mathbb{N} a^0=1\)
 
-$\forall a b \in \mathbb{N} a^{s(b)}=a^b.a$
+\(\forall a b \in \mathbb{N} a^{s(b)}=a^b.a\)
 
 \subsubsection{Example}
 
 So \(2^2\) can be calculated like:
 
-$2^2=2^{s(1)}$
+\(2^2=2^{s(1)}\)
 
-$2^{s(1)}=2.2^1$
+\(2^{s(1)}=2.2^1\)
 
-$2.2^1=2.2.2^0$
+\(2.2^1=2.2.2^0\)
 
-$2.2.2^0=2.2.1$
+\(2.2.2^0=2.2.1\)
 
-$2.2.1=4$
+\(2.2.1=4\)
 
 Unlike addition and multiplication, exponention is not commutative. That is
 
-$a^b\ne b^a$
+\(a^b\ne b^a\)
 
 \subsubsection{Exponential rules}
 
-$a^ba^c=a^{b+c}$
+\(a^ba^c=a^{b+c}\)
 
-$(a^b)^c=a^{bc}$
+\((a^b)^c=a^{bc}\)
 
-$(ab)^c=a^cb^c$
+\((ab)^c=a^cb^c\)
 
 \subsubsection{Powers of natural numbers}
 

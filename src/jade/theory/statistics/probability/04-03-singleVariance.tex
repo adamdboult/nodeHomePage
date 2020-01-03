@@ -5,83 +5,83 @@
 
 The variance of a random variable is given by:
 
-$Var(x)=E((x-E(x))^2)$
+\(Var(x)=E((x-E(x))^2)\)
 
-$Var(x)=E(x^2+E(x)^2-2xE(x))$
+\(Var(x)=E(x^2+E(x)^2-2xE(x))\)
 
-$Var(x)=E(x^2)+E(E(x)^2)-E(2xE(x))$
+\(Var(x)=E(x^2)+E(E(x)^2)-E(2xE(x))\)
 
-$Var(x)=E(x^2)+E(x)^2-2E(x)^2$
+\(Var(x)=E(x^2)+E(x)^2-2E(x)^2\)
 
-$Var(x)=E(x^2)-E(x)^2$
+\(Var(x)=E(x^2)-E(x)^2\)
 
 \subsubsection{Variance of a constant}
 
-$Var(c)=E(c^2)-E(c)^2$
+\(Var(c)=E(c^2)-E(c)^2\)
 
-$Var(c)= c^2-c^2$
+\(Var(c)= c^2-c^2\)
 
-$Var(c)=0$
+\(Var(c)=0\)
 
 \subsubsection{Variance of multiple}
 
-$Var(cx)=E((cx)^2)-E(cx)^2$
+\(Var(cx)=E((cx)^2)-E(cx)^2\)
 
-$Var(cx)=E(c^2x^2)-[\sum_i cx P(x_i)]^2$
+\(Var(cx)=E(c^2x^2)-[\sum_i cx P(x_i)]^2\)
 
-$Var(cx)=c^2E(x^2)-c^2[\sum_i x P(x_i)]^2$
+\(Var(cx)=c^2E(x^2)-c^2[\sum_i x P(x_i)]^2\)
 
-$Var(cx)=c^2[E(x^2)- E(x)^2]$
+\(Var(cx)=c^2[E(x^2)- E(x)^2]\)
 
-$Var(cx)=c^2Var(x)$
+\(Var(cx)=c^2Var(x)\)
 
 \subsubsection{Link between variance of expectation}
 
-$E(x)^2+Var(x)=E(x)^2+E((x-E(x))^2)$
+\(E(x)^2+Var(x)=E(x)^2+E((x-E(x))^2)\)
 
-$E(x)^2+Var(x)=E(x)^2+E(x^2+E(x)^2-2xE(x))$
+\(E(x)^2+Var(x)=E(x)^2+E(x^2+E(x)^2-2xE(x))\)
 
-$E(x)^2+Var(x)=E(x)^2+E(x^2)+E(E(x)^2)-E(2xE(x))$
+\(E(x)^2+Var(x)=E(x)^2+E(x^2)+E(E(x)^2)-E(2xE(x))\)
 
-$E(x)^2+Var(x)=E(x)^2+E(x^2)+E(x)^2-2E(x)E(x))$
+\(E(x)^2+Var(x)=E(x)^2+E(x^2)+E(x)^2-2E(x)E(x))\)
 
-$E(x)^2+Var(x)=E(x^2)$
+\(E(x)^2+Var(x)=E(x^2)\)
 
 \subsubsection{Covariance}
 
-$Var(x+y)=E((x+y)^2)-E(x+y)^2$
+\(Var(x+y)=E((x+y)^2)-E(x+y)^2\)
 
-$Var(x+y)=E(x^2+y^2+2xy)-E(x+y)^2$
+\(Var(x+y)=E(x^2+y^2+2xy)-E(x+y)^2\)
 
-$Var(x+y)=E(x^2)+E(y^2)+E(2xy)-E(x+y)^2$
+\(Var(x+y)=E(x^2)+E(y^2)+E(2xy)-E(x+y)^2\)
 
-$Var(x+y)=E(x^2)+E(y^2)+E(2xy)-[E(x)+E(y)]^2$
+\(Var(x+y)=E(x^2)+E(y^2)+E(2xy)-[E(x)+E(y)]^2\)
 
-$Var(x+y)=E(x^2)+E(y^2)+E(2xy)-E(x)^2-E(y)^2-2E(x)E(y)]$
+\(Var(x+y)=E(x^2)+E(y^2)+E(2xy)-E(x)^2-E(y)^2-2E(x)E(y)]\)
 
-$Var(x+y)=[E(x^2)-E(x)^2]+[E(y^2)-E(y)^2]+E(2xy)-2E(x)E(y)$
+\(Var(x+y)=[E(x^2)-E(x)^2]+[E(y^2)-E(y)^2]+E(2xy)-2E(x)E(y)\)
 
-$Var(x+y)=Var(x) +Var(y)+2[E(xy)-E(x)E(y)]$
+\(Var(x+y)=Var(x) +Var(y)+2[E(xy)-E(x)E(y)]\)
 
 We then define:
 
-$Cov(x,y):=E(xy)-E(x)E(y)$
+\(Cov(x,y):=E(xy)-E(x)E(y)\)
 
 Noting that:
 
-$Cov(x,x)=E(xx)-E(x)E(x)$
+\(Cov(x,x)=E(xx)-E(x)E(x)\)
 
-$Cov(x,x)=Var(x) $
+\(Cov(x,x)=Var(x) \)
 
 So:
 
-$Var(x+y)=Var(x)+Var(y)+2Cov(x,y)$
+\(Var(x+y)=Var(x)+Var(y)+2Cov(x,y)\)
 
-$Var(x+y)=Cov(x,x)+Cov(x,y)+Cov(y,x)+Cov(y,y) $
+\(Var(x+y)=Cov(x,x)+Cov(x,y)+Cov(y,x)+Cov(y,y) \)
 
-$Cov(x,c)=E(xc)-E(x)E(c)$
+\(Cov(x,c)=E(xc)-E(x)E(c)\)
 
-$Cov(x,c)=cE(x)-cE(x)$
+\(Cov(x,c)=cE(x)-cE(x)\)
 
-$Cov(x,c)=0$
+\(Cov(x,c)=0\)
 

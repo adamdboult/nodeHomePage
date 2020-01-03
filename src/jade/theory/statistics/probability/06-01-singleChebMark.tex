@@ -2,23 +2,23 @@
 \subsection{Markov's inequality and Chebyshev's inequality}
 \subsubsection{Lemma 1}
 
-$E[I_{X\ge a}]=P(X\ge a)$
+\(E[I_{X\ge a}]=P(X\ge a)\)
 
 Consider the indicator function.
 
-$I_{X\ge a}$
+\(I_{X\ge a}\)
 
 This is equal to \(0\) if \(X\) is below \(a\) and \(1\) otherwise.
 
 We can take expectations of this.
 
-$E[I_{X\ge a}]=P(X\ge a).1+P(X<a).0=P(X\ge a)$
+\(E[I_{X\ge a}]=P(X\ge a).1+P(X<a).0=P(X\ge a)\)
 
-$E[I_{X\ge a}]=P(X\ge a)$
+\(E[I_{X\ge a}]=P(X\ge a)\)
 
 \subsubsection{Lemma 2}
 
-$aI_{X\ge a}\le X$
+\(aI_{X\ge a}\le X\)
 
 While \(X\) is below \(a\) the left side is equal to \(0\), which holds.
 
@@ -28,39 +28,39 @@ While \(X\) is above \(a\) the left side is equal to \(a\), which holds.
 
 \subsubsection{Markov’s inequality}
 
-$P(X\ge a)\le \frac{\mu  }{a}$
+\(P(X\ge a)\le \frac{\mu  }{a}\)
 
 From above:
 
-$aI_{X\ge a}\le X$
+\(aI_{X\ge a}\le X\)
 
 We can take expectations of both sides:
 
-$E[aI_{X\ge a}]\le E[X]$
+\(E[aI_{X\ge a}]\le E[X]\)
 
-$aP(X\ge a)\le E[X]$
+\(aP(X\ge a)\le E[X]\)
 
-$P(X\ge a)\le \frac{\mu  }{a}$
+\(P(X\ge a)\le \frac{\mu  }{a}\)
 
 \subsubsection{Chebyshev’s inequality}
 
 We know from Markov’s inequality that:
 
-$P(X\ge a)\le \frac{\mu }{a}$
+\(P(X\ge a)\le \frac{\mu }{a}\)
 
 Let’s take the variable \(X\) to be \((X-\mu )^2\)
 
-$P((X-\mu )^2\ge a)\le \frac{E[(X-\mu )^2]}{a}$
+\(P((X-\mu )^2\ge a)\le \frac{E[(X-\mu )^2]}{a}\)
 
-$P((X-\mu )^2\ge a)\le \frac{\sigma^2}{a}$
+\(P((X-\mu )^2\ge a)\le \frac{\sigma^2}{a}\)
 
-$P(|X-\mu | \ge \sqrt{a})\le \frac{\sigma^2}{a}$
+\(P(|X-\mu | \ge \sqrt{a})\le \frac{\sigma^2}{a}\)
 
 Take \(a\) to be a multiple \(k^2\) of the variance \(\sigma^2\).
 
-$a=k^2\sigma^2$
+\(a=k^2\sigma^2\)
 
-$P(|X-\mu | \ge k\sigma )\le \frac{\sigma^2}{k^2\sigma^2}$
+\(P(|X-\mu | \ge k\sigma )\le \frac{\sigma^2}{k^2\sigma^2}\)
 
-$P(|X-\mu | \ge k\sigma )\le \frac{1}{k^2}$
+\(P(|X-\mu | \ge k\sigma )\le \frac{1}{k^2}\)
 

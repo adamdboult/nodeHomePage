@@ -5,128 +5,128 @@
 
 \subsubsection{Characteristic function of summed IID events}
 
-$Z=\sum_{i=1}^nY_i$
+\(Z=\sum_{i=1}^nY_i\)
 
-$\phi_Z(t)=E[e^{itZ}]$
+\(\phi_Z(t)=E[e^{itZ}]\)
 
-$\phi_Z(t)=E[e^{it\sum_{i=1}^nY_i}]$
+\(\phi_Z(t)=E[e^{it\sum_{i=1}^nY_i}]\)
 
-$\phi_Z(t)=E[e^{itY}]^n$
+\(\phi_Z(t)=E[e^{itY}]^n\)
 
-$\phi_Z(t)=\phi_Y(t)^n$
+\(\phi_Z(t)=\phi_Y(t)^n\)
 
 \subsubsection{Taylor series: first moments dominate with means}
 
-$Z=\sum_{i=1}^nY_i$
+\(Z=\sum_{i=1}^nY_i\)
 
-$Y=\frac{X}{n}$
+\(Y=\frac{X}{n}\)
 
-$\phi_Z(t)=\phi_Y(t)^n$
+\(\phi_Z(t)=\phi_Y(t)^n\)
 
-$\phi_Z(t)=\phi_{\frac{X}{n}}(t)^n$
+\(\phi_Z(t)=\phi_{\frac{X}{n}}(t)^n\)
 
-$\phi_Z(t)=\phi_X(\frac{t}{n})^n$
+\(\phi_Z(t)=\phi_X(\frac{t}{n})^n\)
 
-$\phi_X(t)=1+it\mu_X -\frac{(\mu_X +\sigma_X^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[X^j](it)^j}{j!}$
+\(\phi_X(t)=1+it\mu_X -\frac{(\mu_X +\sigma_X^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[X^j](it)^j}{j!}\)
 
-$\phi_X(\frac{t}{n})=1+i\frac{t\mu_X }{n}-\frac{(\mu_X +\sigma_X^2 )(\frac{t}{n})^2}{2} +\sum_{j=3}^{\infty }\frac{E[X^j](i\frac{t}{n})^j}{j!}$
+\(\phi_X(\frac{t}{n})=1+i\frac{t\mu_X }{n}-\frac{(\mu_X +\sigma_X^2 )(\frac{t}{n})^2}{2} +\sum_{j=3}^{\infty }\frac{E[X^j](i\frac{t}{n})^j}{j!}\)
 
-$\phi_X(\frac{t}{n})=1+i\frac{t\mu_X }{n}-\frac{(\mu_X +\sigma_X^2 )t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[X^j](i\frac{t}{n})^j}{j!}$
+\(\phi_X(\frac{t}{n})=1+i\frac{t\mu_X }{n}-\frac{(\mu_X +\sigma_X^2 )t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[X^j](i\frac{t}{n})^j}{j!}\)
 
 \subsubsection{Eliminating the imaginary term}
 
 We want \(\mu \) to be \(0\).
 
-$Z=\sum_{i=1}^nY_i$
+\(Z=\sum_{i=1}^nY_i\)
 
-$Y=\frac{X-\mu_X }{n}$
+\(Y=\frac{X-\mu_X }{n}\)
 
-$\phi_Y(t)=1+it\mu_Y -\frac{(\mu_Y +\sigma_Y^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}$
+\(\phi_Y(t)=1+it\mu_Y -\frac{(\mu_Y +\sigma_Y^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}\)
 
-$\mu_Y =E[\frac{X-\mu_X }{n}] ={\mu_X -\mu_X }{n}=0$
+\(\mu_Y =E[\frac{X-\mu_X }{n}] ={\mu_X -\mu_X }{n}=0\)
 
-$\phi_Y(t)=1-\frac{\sigma_Y^2t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}$
+\(\phi_Y(t)=1-\frac{\sigma_Y^2t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}\)
 
-$\sigma^2_Y =E[(\frac{X-\mu_X }{n})^2]$
+\(\sigma^2_Y =E[(\frac{X-\mu_X }{n})^2]\)
 
-$\sigma^2_Y =E[\frac{X^2+\mu^2_X-2X\mu_X }{n^2}]$
+\(\sigma^2_Y =E[\frac{X^2+\mu^2_X-2X\mu_X }{n^2}]\)
 
-$\sigma^2_Y =\frac{E[X^2]+E[\mu^2_X]-E[2X\mu_X] }{n^2}]$
-$\sigma^2_Y =\frac{E[X^2]-\mu^2_X}{n^2}]$
+\(\sigma^2_Y =\frac{E[X^2]+E[\mu^2_X]-E[2X\mu_X] }{n^2}]\)
+\(\sigma^2_Y =\frac{E[X^2]-\mu^2_X}{n^2}]\)
 
-$\sigma^2_Y =\frac{\sigma^2_X}{n^2}$
+\(\sigma^2_Y =\frac{\sigma^2_X}{n^2}\)
 
-$\phi_Y(t)=1-\frac{\sigma_X^2t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{n})^j](it)^j}{j!}$
+\(\phi_Y(t)=1-\frac{\sigma_X^2t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{n})^j](it)^j}{j!}\)
 
-$\phi_Z(t)=\phi_Y(t)^n$
+\(\phi_Z(t)=\phi_Y(t)^n\)
 
-$\phi_Z(t)=[1-\frac{\sigma_X^2t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{n})^j](it)^j}{j!}]^n$
+\(\phi_Z(t)=[1-\frac{\sigma_X^2t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{n})^j](it)^j}{j!}]^n\)
 
-$\phi_Z(t)=[1-\frac{\sigma_X^2t^2}{2n^2}]^n$
+\(\phi_Z(t)=[1-\frac{\sigma_X^2t^2}{2n^2}]^n\)
 
 Eliminating \(\sigma^2 \)
 
-$Z=\sum_{i=1}^nY_i$
+\(Z=\sum_{i=1}^nY_i\)
 
-$Y=\frac{X-\mu_X }{\sigma n}$
+\(Y=\frac{X-\mu_X }{\sigma n}\)
 
-$\phi_Y(t)=1+it\mu_Y -\frac{(\mu_Y +\sigma_Y^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}$
+\(\phi_Y(t)=1+it\mu_Y -\frac{(\mu_Y +\sigma_Y^2 )t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}\)
 
-$\mu_Y =E[\frac{X-\mu_X }{\sigma_X n}] ={\mu_X -\mu_X }{\sigma_X n}=0$
+\(\mu_Y =E[\frac{X-\mu_X }{\sigma_X n}] ={\mu_X -\mu_X }{\sigma_X n}=0\)
 
-$\phi_Y(t)=1-\frac{\sigma_Y^2t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}$
+\(\phi_Y(t)=1-\frac{\sigma_Y^2t^2}{2} +\sum_{j=3}^{\infty }\frac{E[Y^j](it)^j}{j!}\)
 
-$\sigma^2_Y =E[(\frac{X-\mu_X }{\sigma n})^2]$
+\(\sigma^2_Y =E[(\frac{X-\mu_X }{\sigma n})^2]\)
 
-$\sigma^2_Y =E[\frac{X^2+\mu^2_X-2X\mu_X }{\sigma^2 n^2}]$
+\(\sigma^2_Y =E[\frac{X^2+\mu^2_X-2X\mu_X }{\sigma^2 n^2}]\)
 
-$\sigma^2_Y =\frac{E[X^2]+\mu^2_X-2E[X]\mu_X }{\sigma^2 n^2}$
+\(\sigma^2_Y =\frac{E[X^2]+\mu^2_X-2E[X]\mu_X }{\sigma^2 n^2}\)
 
-$\sigma^2_Y =\frac{E[X^2]-\mu^2_X}{\sigma^2 n^2}$
+\(\sigma^2_Y =\frac{E[X^2]-\mu^2_X}{\sigma^2 n^2}\)
 
-$\sigma^2_Y =\frac{\sigma^2_X}{\sigma^2 n^2}$
+\(\sigma^2_Y =\frac{\sigma^2_X}{\sigma^2 n^2}\)
 
-$\sigma^2_Y =\frac{1}{n^2}$
+\(\sigma^2_Y =\frac{1}{n^2}\)
 
-$\phi_Y(t)=1-\frac{t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{\sigma n})^j](it)^j}{j!}$
+\(\phi_Y(t)=1-\frac{t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{\sigma n})^j](it)^j}{j!}\)
 
-$\phi_Z(t)=\phi_Y(t)^n$
+\(\phi_Z(t)=\phi_Y(t)^n\)
 
-$\phi_Z(t)=[1-\frac{t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{\sigma n})^j](it)^j}{j!}]^n$
+\(\phi_Z(t)=[1-\frac{t^2}{2n^2} +\sum_{j=3}^{\infty }\frac{E[(\frac{X-\mu}{\sigma n})^j](it)^j}{j!}]^n\)
 
-$\phi_Z(t)=[1-\frac{t^2}{2n^2}]^n$
+\(\phi_Z(t)=[1-\frac{t^2}{2n^2}]^n\)
 
 \subsubsection{Preparing for exponential expansion}
 
 We know that
 
-$[1+\frac{x}{n}]^n=e^x$
+\([1+\frac{x}{n}]^n=e^x\)
 
 As \(n \rightarrow \infty\).
 
 With:
 
-$Z=\sum_{i=1}^nY_i$
+\(Z=\sum_{i=1}^nY_i\)
 
-$Y=\frac{X-\mu_X }{\sigma n}$
+\(Y=\frac{X-\mu_X }{\sigma n}\)
 
 We have:
 
-$\phi_Z(t)=[1-\frac{t^2}{2n^2}]^n$
+\(\phi_Z(t)=[1-\frac{t^2}{2n^2}]^n\)
 
 With:
 
-$Z=\sum_{i=1}^nY_i$
+\(Z=\sum_{i=1}^nY_i\)
 
-$Y=\frac{X-\mu_X }{\sigma \sqrt n}$
+\(Y=\frac{X-\mu_X }{\sigma \sqrt n}\)
 
 We have:
 
-$\phi_Z(t)=[1-\frac{t^2}{2n}]^n$
+\(\phi_Z(t)=[1-\frac{t^2}{2n}]^n\)
 
 Which tends towards
 
-$\phi_Z(t)=e^{-\frac{1}{2}t^2}$
+\(\phi_Z(t)=e^{-\frac{1}{2}t^2}\)
 
 \subsubsection{Rescaling}
 
@@ -134,51 +134,51 @@ The average of random variables, less their mean, and divided by their standard 
 
 What does this say about the actual distribution of sample averages?
 
-$Z=\sum_{i=1}^nY_i$
+\(Z=\sum_{i=1}^nY_i\)
 
-$Y_i=\frac{X_i-\mu_X }{\sigma_X \sqrt n}$
+\(Y_i=\frac{X_i-\mu_X }{\sigma_X \sqrt n}\)
 
 \sum_{i=1}^nY_i
 
-$Y=\frac{X}{n}$
+\(Y=\frac{X}{n}\)
 
 Let's create \(Q\).
 
-$Q=\frac{Z\sigma_X }{\sqrt n}+\mu_X$
+\(Q=\frac{Z\sigma_X }{\sqrt n}+\mu_X\)
 
-$Q=\frac{(\sum_{i=1}^nY_i)\sigma_X }{\sqrt n}+\mu_X$
+\(Q=\frac{(\sum_{i=1}^nY_i)\sigma_X }{\sqrt n}+\mu_X\)
 
-$Q=\frac{(\sum_{i=1}^n(\frac{X_i-\mu_X }{\sigma_X \sqrt n}))\sigma_X }{\sqrt n}+\mu_X$
+\(Q=\frac{(\sum_{i=1}^n(\frac{X_i-\mu_X }{\sigma_X \sqrt n}))\sigma_X }{\sqrt n}+\mu_X\)
 
-$Q=\sum_{i=1}^n(\frac{X_i-\mu_X }{n})+\mu_X$
+\(Q=\sum_{i=1}^n(\frac{X_i-\mu_X }{n})+\mu_X\)
 
-$Q=\sum_{i=1}^n(\frac{X_i-\mu_X }{n}+\frac{\mu_X}{n})$
+\(Q=\sum_{i=1}^n(\frac{X_i-\mu_X }{n}+\frac{\mu_X}{n})\)
 
-$Q=\sum_{i=1}^n(\frac{X_i}{n})$
+\(Q=\sum_{i=1}^n(\frac{X_i}{n})\)
 
 This is the sample average.
 
-$\phi_Q(t)=\phi_{\frac{Z\sigma_X }{\sqrt n}+\mu_X}(t)$
+\(\phi_Q(t)=\phi_{\frac{Z\sigma_X }{\sqrt n}+\mu_X}(t)\)
 
-$\phi_Q(t)=\phi_Z(\frac{t\sigma_X }{\sqrt n})e^{it\mu_X}$
+\(\phi_Q(t)=\phi_Z(\frac{t\sigma_X }{\sqrt n})e^{it\mu_X}\)
 
-$\phi_Z(\frac{t\sigma_X }{\sqrt n})=e^{-\frac{1}{2}(\frac{t\sigma_X }{\sqrt n})^2}$
+\(\phi_Z(\frac{t\sigma_X }{\sqrt n})=e^{-\frac{1}{2}(\frac{t\sigma_X }{\sqrt n})^2}\)
 
-$\phi_Z(\frac{t\sigma_X }{\sqrt n})=e^{-\frac{1}{2}\frac{t^2\sigma^2_X }{n}}$
+\(\phi_Z(\frac{t\sigma_X }{\sqrt n})=e^{-\frac{1}{2}\frac{t^2\sigma^2_X }{n}}\)
 
-$\phi_Q(t)=e^{-\frac{1}{2}\frac{t^2\sigma^2_X }{n}}e^{it\mu_X}$
+\(\phi_Q(t)=e^{-\frac{1}{2}\frac{t^2\sigma^2_X }{n}}e^{it\mu_X}\)
 
 \subsubsection{Normal distribution}
 
 We name the normal distribution this function when \(n=1\)
 
-$N(\mu_X, \sigma^2_X)=e^{-\frac{1}{2}\frac{t^2\sigma^2_X }{n}}e^{it\mu_X}$
+\(N(\mu_X, \sigma^2_X)=e^{-\frac{1}{2}\frac{t^2\sigma^2_X }{n}}e^{it\mu_X}\)
 
-$N(\mu_X, \sigma^2_X)=e^{-\frac{1}{2}t^2\sigma^2_X }e^{it\mu_X}$
+\(N(\mu_X, \sigma^2_X)=e^{-\frac{1}{2}t^2\sigma^2_X }e^{it\mu_X}\)
 
 \subsubsection{Getting the probability distribution function}
 
-$\phi_X(t)=e^{-\frac{1}{2}t^2\sigma^2_X} e^{it\mu_X}$
+\(\phi_X(t)=e^{-\frac{1}{2}t^2\sigma^2_X} e^{it\mu_X}\)
 
-$\phi_X(t)=e^{-\frac{1}{2}t^2\sigma^2_X}[\cos (t\mu_X )+i\sin (t\mu_X)]$
+\(\phi_X(t)=e^{-\frac{1}{2}t^2\sigma^2_X}[\cos (t\mu_X )+i\sin (t\mu_X)]\)
 
