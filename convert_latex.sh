@@ -11,8 +11,6 @@ python3 ./createDerivedLatexFiles.py
 #########################
 # Convert all tex files #
 #########################
-#for i in $(find ./built/jade/theory/maths/ -name \*.tex); do
-#for i in $(find ./built/jade/theory/statistics -name \*.tex); do
 for i in $(find ./built/jade/theory/ -name \*.tex); do
     b=$(basename -- $i)
     b=${b%.tex}
@@ -22,13 +20,20 @@ for i in $(find ./built/jade/theory/ -name \*.tex); do
     d="$(dirname "${i}")/"
 
     cd $d
-    #printf $d"/"$i
     pandoc $s --mathjax -o $o
     #pandoc $s --number-sections --toc --toc-depth 2 -o $p
-    pandoc $s --number-sections -o $p
+    #pandoc $s --number-sections -o $p
     cd $current_dir
 
 done
+
+cd ./built/jade/theory/maths
+pdflatex ./maths.tex
+cd $current_dir
+
+cd ./built/jade/theory/statistics
+pdflatex ./statistics.tex
+cd $current_dir
 
 ############
 # Copy pdf #
