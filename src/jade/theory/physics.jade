@@ -1,31 +1,10 @@
-extends ./physics/subTemplate.jade
-block subSubContent
-	h3
-		b Dynamic systems
-	p
-		a(href="./physics/continuous") Continuous systems
-	h3
-		b Spacetime
-	p
-		a(href="./physics/worldlines") Paths
-	p
-		a(href="./physics/metrics") Lorentz and Euclidian metrics
-	p
-		a(href="./physics/fields") Fields
-	h3
-		b Quantum mechanics
-	p
-		a(href="./physics/QM") Quantum mechanics
-	p
-		a(href="./physics/QFT") Quantum Field Theory (QFT)
-	h3
-		b Electromagnetism
-	h3
-		b Classical mechanics
-	p
-		a(href="./physics/newton") Newtonian mechanics
-	h3
-		b Engineering
-	p
-		a(href="./physics/engineeringElectrical") Electrical engineering
-
+extends ../templates/loginHeader.jade
+block content
+	div.container-fluid
+		div.row
+			nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+				div.sidebar-sticky
+					include ./physics_sidebar.jade
+			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role="main")
+				p Please select a chapter from the left.
+				include ./physics/preface.html

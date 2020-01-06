@@ -24,7 +24,6 @@ for i in $(find ./built/jade/theory/ -name \*.tex); do
     cd $d
     pandoc $s --mathjax -o $o
     #pandoc $s --number-sections --toc --toc-depth 2 -o $p
-    #pandoc $s --number-sections -o $p
     cd $current_dir
 
 done
@@ -38,6 +37,11 @@ cd $current_dir
 cd ./built/jade/theory/statistics
 pdflatex ./statistics.tex > /dev/null 2>&1
 pdflatex ./statistics.tex > /dev/null 2>&1
+cd $current_dir
+
+cd ./built/jade/theory/ai
+pdflatex ./ai.tex > /dev/null 2>&1
+pdflatex ./ai.tex > /dev/null 2>&1
 cd $current_dir
 
 ############

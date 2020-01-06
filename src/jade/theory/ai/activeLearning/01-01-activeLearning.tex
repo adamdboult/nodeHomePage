@@ -1,0 +1,41 @@
+\subsection{Constraint Satisfaction Problem}
+
+\subsubsection{Introduction}
+
+For active learning, only need to update covariance matrix? just needed to select one with highest variance
+
+
+Active learning is greedy algorithm to reduce entropy
+
+
+As we get more info, our posterior becomes our new prior
+
+
+If we can pick observations to use  to update model, can use those with biggest variance
+
+Can be useful if getting y is expensive. requires experiement etc
+
+
+4 steps:
+
+\begin{itemize}
+\item Form \(p(y_0|x_0,y,X)\) for all unmeasured \(x_0\).
+\item Choose \(x_0\) with the largest \(\sigma_0^2\) and observe \(y_0\)
+\item Updated the parameters with this.
+\item repeat
+\end{itemize}
+
+\(\sigma_0^2 =\sigma^2+x_0^T\Sigma x_0\)
+
+Updating Sigma and mu for bayesian linear:
+
+\(\Sigma = (\lambda I + \sigma^{-2}(x_0x_o^T+\sum_{i=1}^nx_ix_i^T))^{-1}\)
+
+\(\mu = (\lambda \sigma^2I+ x_0x_0^T+\sum_{i=1}^nx_ix_i^T)^{-1}(x_0y_0+\sum_{i=1}^nx_iy_i)\)
+
+Once we have  an \(x_0\) we can easily get \(\mu_0\) by calculating \(x_0^T\mu\). Multiplying by the mean weights.
+
+We can also get the variance of the estimate:
+
+\(\sigma^2_0=\sigma^2+x_0^T\Sigma \)
+

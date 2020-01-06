@@ -1,27 +1,10 @@
-extends ./culture/subTemplate.jade
-block subSubContent
-	h3
-		b Cooking
-	p
-		a(href="./culture/ingredients") Ingredients
-	p
-		a(href="./culture/methods") Methods
-	p
-		a(href="./culture/dough") Dough
-	p
-		a(href="./culture/oils") Oils
-	p
-		a(href="./culture/dairy") Dairy
-	p
-		a(href="./culture/drinks") Drinks
-	p
-		a(href="./culture/sauce") Sauce
-	h3
-		b Dance
-	h3
-		b Art
-	h3
-		b Music
-	h3
-		b Architecture
-	
+extends ../templates/loginHeader.jade
+block content
+	div.container-fluid
+		div.row
+			nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+				div.sidebar-sticky
+					include ./culture_sidebar.jade
+			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role="main")
+				p Please select a chapter from the left.
+				include ./culture/preface.html

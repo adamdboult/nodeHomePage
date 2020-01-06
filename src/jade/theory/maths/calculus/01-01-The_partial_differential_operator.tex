@@ -29,3 +29,33 @@ If this is defined, then we say the function is differentiable at that point.
 
 \subsubsection{Differential operator}
 
+\subsubsection{Graph test}
+
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = $x$,
+    ylabel = {$f(x)$},
+]
+%Below the red parabola is defined
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=red,
+]
+{x^2 + 5};
+\addlegendentry{$x^2 + 5$}
+%Here the blue parabloa is defined
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+{2 * x};
+\addlegendentry{$2x$}
+ 
+\end{axis}
+\end{tikzpicture}
+
+

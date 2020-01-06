@@ -1,0 +1,71 @@
+
+\subsection{Probabilistic language models}
+
+\subsubsection{Introduction}
+
+Probabilistic language models can predict future words given a history of words.
+
+This can be used for predictive text. For example if a user types "Did you call your" we may want to estimate the probability that the next word is "child".
+
+We can state this problem:
+
+\(P(child|did\ you\ call\ your)\)
+
+By definition this is:
+
+\(P(child|did\ you\ call\ your)= \dfrac{P(did\ you\ call\ your\ child)}{P(did\ you\ call\ your)}\)
+
+We can estimate each of these:
+
+\(P(did\ you\ call\ your\ child)=\dfrac{|did\ you\ call\ your\ child|}{|5\ word\ sentences|}\)
+
+\(P(did\ you\ call\ your)=\dfrac{|did\ you\ call\ your|}{|4\ word\ sentences|}\)
+
+\subsubsection{Data requirements}
+
+This needs a large corpus, which may not be practical.
+
+Additionallly, the words must be indexed, and not simply stored as a bag of words.
+
+\subsubsection{Decomposition}
+
+We can decompose the probabilities using the chain rule.
+
+\(P(did\ you\ call\ your\ child)=P(did)P(you|did)...P(child|did\ you\ call\ your)\)
+
+\(P(w_1,...,w_k)= \prod_k p(w_k|w_1,...,w_{k-1})\)
+
+\subsubsection{N-grams}
+
+We can simplify the decomposition using the Markov assumption:
+
+\(P(w_k|w_1,...,w_{k-1})=P(w_k|w_{k-1})\)
+
+This is a \(1\)-gram.
+
+We can do this for \(n\) words back. This is an \(n\)-gram.
+
+\subsubsection{Smoothing}
+
+We can use smoothing to address small corpuses.
+
+\(P(did\ you\ call\ your\ child)=\dfrac{|did\ you\ call\ your\ child|+1}{|5\ word\ sentences|+V}\)
+
+\(P(did\ you\ call\ your)=\dfrac{|did\ you\ call\ your|+1}{|4\ word\ sentences|+V}\)
+
+For some value \(V\).
+
+\subsubsection{Perplexity}
+
+We can compare probabilistic language models using perplexity.
+
+We can then choose the model with the lowest perplexity.
+
+\(perplexity(w_1, w_2, ..., w_n)=P(w_1, w_2, ..., w_n)^{-\dfrac{1}{n}}\)
+
+We can expand this:
+
+\(perplexity(w_1, w_2, ..., w_n)=\prod_i P(w_i| w_1, ..., w_{i-1})^{-\dfrac{1}{n}}\)
+
+Depending on which n-gram we use we can then simplify this.
+

@@ -1,0 +1,22 @@
+
+\subsection{Monte-Carlo Tree Search}
+
+\subsubsection{Introduction}
+
+In search tree, each node has wins/total.
+
+So start with just root in 0/0.
+
+Algo:
+
+\begin{itemize}
+\item Start at root
+\item Take n choices to arrive at node which has not been explored (or until w/l state)
+\item play randomly from there
+\item Back prob up (eg if win, then 1/1 for path back to root, or 0/1 if loss)
+\end{itemize}
+
+Wins/simulation count
+
+So deterministic when choosing paths, up until play randomly.
+

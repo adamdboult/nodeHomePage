@@ -1,0 +1,39 @@
+
+\subsection{Multiple restrictions}
+
+Calculating choices: Restricted choices
+
+But what about where there is not clear maximum, like:
+
+\(f=ln(x)+ln(y)\)
+
+Here the agent would always prefer more of \(x\) and \(y\). In practice agents are often limited in their choices by budget constraints. That is, they cannot choose all combinations of inputs.
+
+Here we can use a Lagrangian. This maximises the value of a function subject to constraints on inputs. This may not always be appropriate. The budget constraint for an agent is often an inequality, for example consumption is less than or equal to income, but the Lagrangian takes this to be binding.
+
+Fortunately, this can be resolved. The value of \(\lambda \) in the Lagrangian corresponds to the marginal effect of weakening the constraint. This is positive where the constraint is binding on the agent, but not positive if it is not. Therefore if we find the constraint is not binding, we can remove it from the optimisation.
+
+Under some conditions, constraints will always be binding. These are useful for specific cases of agents later.
+
+In order for the constraint to be binding we make an additional assumption:
+
+\subsubsection{Condition 1: Non-satiation}
+
+The marginal utility of a good is always positive.
+
+Note that we can “do economics” without this, but we want rely on Lagrangians.
+
+\subsubsection{Condition 2: Decreasing marginal utility}
+
+This ensures that we do not get corner solutions, for example consuming all apples.
+
+These two assumptions allow the use of the Lagrangian.
+
+We know that for the Lagrangian the following is true:
+
+\(\dfrac{\dfrac{\delta f}{\delta x}}{\dfrac{\delta g}{\delta x}}=\dfrac{\dfrac{\delta f}{\delta y}}{\dfrac{\delta g}{\delta y}}\)
+
+\(\dfrac{\dfrac{\delta f}{\delta x}}{\dfrac{\delta f}{\delta y}}=\dfrac{\dfrac{\delta g}{\delta x}}{\dfrac{\delta g}{\delta y}}\)
+
+Where \(f\) is the utility function and \(g\) is the budget constraint.
+

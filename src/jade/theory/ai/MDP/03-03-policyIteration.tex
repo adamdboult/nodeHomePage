@@ -1,0 +1,20 @@
+
+\subsection{Policy iteration}
+
+\subsubsection{Policy iteration method}
+
+We start with a random policy.
+
+We then loop:
+
+\begin{itemize}
+\item Evaluate the policy, using the Bellman equations.
+\item Update the policy
+\end{itemize}
+
+We update the policy by changing \(a\) to maximise:
+
+\(v_pi ' (s)= r_\pi + \gamma P_\pi v_\pi(s)\) 
+
+For example, if we have a policy of doing \(a\) in state \(s\), we would see if we increase the value if we change \(a\) to \(a'\).
+

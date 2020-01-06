@@ -1,0 +1,53 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Artificial intelligence}
+\maketitle
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\include{preface}
+
+\part{Decision theory under certainty}
+\include{accentuators}
+\include{discrete}
+\include{singleAgent}
+
+\part{Intertemporal decision theory under certainty}
+\include{environmentDeterministic}
+\include{intertemporal}
+\include{robotics}
+
+\part{Decison theory under uncertainty}
+\include{uncertainty}
+\include{MDP}
+\include{POMDP}
+\include{reinforcement}
+\include{control}
+
+\part{Game theory under certainty}
+\include{gameTheory}
+\include{repeated}
+\include{gameTheoryDeep}
+
+\part{Game theory under uncertainty}
+\include{gameImperfect}
+\include{gameStochastic}
+
+\part{Robotics}
+\include{NLP}
+\include{vision}
+
+\part{Improving knowledge}
+\include{knowledge}
+\include{logic}
+\include{activeLearning}
+
+\end{document}
+

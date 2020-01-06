@@ -1,0 +1,24 @@
+
+\subsection{Visibility graphs}
+
+Visibility graph generates nodes from points on obstacles, current position and goal. generate graph.
+
+Use A* to solve
+
+That algorithm is called VGRAPH
+
+\subsection{Robots with volume}
+
+What if robot takes up space?
+
+Expand each obstacle by size of robot
+
+How to grow each obstacle? draw shape of robot around each obstacle. shape is relative to point, so the growth is asymmetric if you choose a point for the robot which is not in the middle. eg a vertex.
+
+\subsection{Rotation of robots}
+
+What about rotation? grow robot by shape of all rotations. but this is overly conservative. will miss paths
+
+Can do vgraph for each rotation, and switch between rotations. can choose 2 or 3 rotations
+
+

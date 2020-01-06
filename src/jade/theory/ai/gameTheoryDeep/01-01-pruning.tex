@@ -1,0 +1,46 @@
+
+\subsection{Alpha-beta pruning}
+
+\subsubsection{Pruning}
+
+Alpha-beta pruning
+
+We can use pruning to reduce the number of nodes we search.
+
+Alpha-beta pruning is a method for pruning. For each node we maintain two values:
+
+\begin{itemize}
+\item Alpha. The lower bound on the maximum value of the children.
+\item Beta. The upper bound on the minimum value of the children.
+\end{itemize}
+
+Consider a player node with a score of \(2\), which has a neighbour. This neighbour has a 
+
+We can know for sure we don't need to explore some paths. for example consider the mini player. there is a node we know the minimax value of a node is 2, and there is a neighbour with one child with a value of 3, then 
+	
+
+like DFS, but keep track of:
+
+\begin{itemize}
+\item alpha (largest value for max across viewed children)
+\item initialise to  \(+/-\infty \)
+\item initialise to \(\infty \)
+\end{itemize}
+
+Propagate \(\alpha \) and \(\beta \) down during search. prune where \(\alpha \ge \beta \)
+
+Update \(\alpha \) and \(\beta \) by propagating upwards.
+
+Only update alpha on max nodes, beta on min node
+
+
+Ordering matters. if it's worst, then no pruning. want an ordering with lots of pruning
+	p can:
+	p + do shallow nodes
+	p + order node so best are done first
+	p + domain knowledge heuristics (chess: capture, threaten, forward, backwards)
+
+In practice can get time down to \(O(b^\frac{m}{2})\).
+
+Use heuristic. deep blue uses \(6000\)
+

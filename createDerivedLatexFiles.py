@@ -7,7 +7,7 @@ import shutil
 # Create tex file for each folder #
 ###################################
 
-subjects = ["maths", "statistics"]
+subjects = ["maths", "statistics", "ai"]
 
 for subject in subjects:
 
@@ -42,8 +42,10 @@ for subject in subjects:
         f.write("		div.row\n")
         f.write("			nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n")
         f.write("				div.sidebar-sticky\n")
+        f.write("					br")
         f.write("					include ../" + subject + "_sidebar.jade\n")
         f.write("			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role=\"main\")\n")
+        f.write("				br")
         f.write("				include " + folder + ".html\n")
 
         f.close()

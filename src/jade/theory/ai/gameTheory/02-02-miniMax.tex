@@ -1,0 +1,42 @@
+
+\subsection{Minimax}
+\subsubsection{Games}
+
+Games are different to search. In a search algorithm we are looking for a sequence of actions. In a game we are looking for a reaction function. Unlike in seach, there are other players.
+
+We can use iterative deepening search.
+
+\subsubsection{Heuristics}
+
+The search space can be too big to look through all the nodes. 
+
+Rather than look for win states, we evaluate a non-terminal state using heuristics.
+
+\subsubsection{Stochastic games}
+
+Can use expectminimax
+
+For max node, return highest expectminimax of children
+
+For min node ---
+
+For chance node, average of children weightted
+
+Minimax: two players, max min
+
+Max goes first, maximises results. min minimises results
+
+A node's minimax value is the best outcome against best player.
+
+To find optimal strategy, depth first search of game tree.
+
+Propagate minimax values up tree as terminal nodes are discovered
+
+If a state is terminal, its value is utility of state
+
+If a state is max node, highest value of children
+
+If a state is min node, lowest value of children
+
+Minimax is optimal, complete (for finite trees)
+
