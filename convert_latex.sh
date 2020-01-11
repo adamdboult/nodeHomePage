@@ -29,19 +29,45 @@ for i in $(find ./built/jade/theory/ -name \*.tex); do
 done
 
 # Run twice to get table of contents
+
+cd ./built/jade/theory/ai
+pdflatex ./ai.tex > /dev/null 2>&1
+pdflatex ./ai.tex > /dev/null 2>&1
+cd $current_dir
+
+cd ./built/jade/theory/biology
+pdflatex ./biology.tex > /dev/null 2>&1
+pdflatex ./biology.tex > /dev/null 2>&1
+cd $current_dir
+
+#cd ./built/jade/theory/computer
+#pdflatex ./computer.tex > /dev/null 2>&1
+#pdflatex ./computer.tex > /dev/null 2>&1
+#cd $current_dir
+
+cd ./built/jade/theory/culture
+pdflatex ./culture.tex > /dev/null 2>&1
+pdflatex ./culture.tex > /dev/null 2>&1
+cd $current_dir
+
+#cd ./built/jade/theory/economics
+#pdflatex ./economics.tex > /dev/null 2>&1
+#pdflatex ./economics.tex > /dev/null 2>&1
+#cd $current_dir
+
 cd ./built/jade/theory/maths
 pdflatex ./maths.tex > /dev/null 2>&1
 pdflatex ./maths.tex > /dev/null 2>&1
 cd $current_dir
 
+cd ./built/jade/theory/physics
+pdflatex ./physics.tex > /dev/null 2>&1
+pdflatex ./physics.tex > /dev/null 2>&1
+cd $current_dir
+
 cd ./built/jade/theory/statistics
 pdflatex ./statistics.tex > /dev/null 2>&1
 pdflatex ./statistics.tex > /dev/null 2>&1
-cd $current_dir
-
-cd ./built/jade/theory/ai
-pdflatex ./ai.tex > /dev/null 2>&1
-pdflatex ./ai.tex > /dev/null 2>&1
 cd $current_dir
 
 ############
