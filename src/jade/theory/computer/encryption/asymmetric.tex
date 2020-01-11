@@ -1,0 +1,25 @@
+
+\subsection{Asymmetric encryption}
+
+Here we use different keys to encrypt and decrypt the file.
+
+Consider two users who wish to send a message securely.
+
+One option would be to use symmetric encrpytion. They would have to meet and share this key securely, however, as transferring it over an insecure network would mean it could be copied.
+
+With public key encryption each user has a public and a private key. The private key is kept secure locally, while the public key can be broadcasted.
+
+In order to encrypt the file, the recipient's public key is used, while both the private and public key are needed to decrypt the file.
+
+As a result anyone can encrypt a file to send to the user, but only the user can read what is sent.
+
+Public-key encryption can be used to facilitate symmetric encryption. If only one party has a public key then the other user can send a symmetric key securely using the public key.
+
+Using this, asymmetric encrpyiton is only used at the start.
+
+This is how HTTPS operates, where the website has a public key, but the client does not.
+
+Each user still needs to trust that the public key is accurate. This could be done by hosting the public key on a secure location.
+
+RSA is an algorithm used for public-key encrpytion, including for HTTPS handshakes and PGP.
+

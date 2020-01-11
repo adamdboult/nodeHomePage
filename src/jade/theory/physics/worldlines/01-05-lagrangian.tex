@@ -1,0 +1,85 @@
+
+\subsection{Lagrangians}
+
+We have:
+
+\(S = \int_a^b \sqrt {(\mathbf {\dot q})^T\mathbf M\mathbf {\dot q}}dt\)
+
+We can define:
+
+\(L=\sqrt {(\mathbf {\dot q})^T\mathbf M\mathbf {\dot q}}\)
+
+So we have:
+
+\(S=\int_a^b L dt\)
+
+\subsection{Definiton 1: Lagrangians}
+
+For each state we can calcualte a Lagrangian which is a function of the coordinates and their velocity.
+
+\(L[q, q^i]\)
+
+\subsection{Axiom 2: There exists a correct Lagrangian}
+
+\subsection{Definition 2: Action}
+
+We define the action of a length of time as:
+
+\(A=\int_{t_0}^{t_1} L[q(t), q(t)^.]dt\)
+
+\subsection{Axiom 3: Principle of stationary action}
+
+\(\delta A=0\)
+
+That is, the coordinates and their velocities are such that action is stationary.
+
+\subsection{Theory 1: Euler-Lagrange}
+
+We have \(q(t)\) which makes the action stationary. Consider adding proportion\(\epsilon \) of another function \(f(t)\) to \(q(t)\).
+
+\(A’=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), q(t)^.+\epsilon f^’(t)]dt\)
+
+\(\dfrac{A’-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), q(t)^.+\epsilon f^’(t)]-L[q,q^.]dt\)
+
+We can do a Taylor expansion of \(A’\).
+
+\(A’=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), q(t)^.+\epsilon f^’(t)]dt\)
+
+\(A’=\int_{t_0}^{t_1} L[q(t),q(t)^.]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]+\epsilon^2 [...]dt\)
+
+So:
+
+\(\dfrac{A’-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1}L[q(t),q(t)^.]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]+\epsilon^2 [...]-L[q,q^.]dt\)
+
+\(\dfrac{A’-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]+\epsilon [...]dt\)
+
+We can now make the left side \(0\), by using the definition of stationary action.
+
+\(\lim_{\epsilon \rightarrow 0} \dfrac{A’-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]dt\)
+
+\(\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]dt=0\)
+
+\(\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}]dt +\int_{t_0}^{t_1}[f^.\dfrac{\delta L}{\delta q^.}]dt=0\)
+
+Note that
+
+\(\int_{t_0}^{t_1}[f^.\dfrac{\delta L}{\delta q^.}]dt=[f\dfrac{\delta L}{\delta q^.}]_{t_0}^{t_1}-\int_{t_0}^{t_1}f \dfrac{d}{dt}\dfrac{\delta L}{\delta q^.}dt\)
+
+We assume that \(f(t_0)=f(t_1)=0\) and so:
+
+\(\int_{t_0}^{t_1}[f^.\dfrac{\delta L}{\delta q^.}]dt=-\int_{t_0}^{t_1}f \dfrac{d}{dt}\dfrac{\delta L}{\delta q^.}dt\)
+
+Plugging this back in we get:
+
+\(\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}]-f \dfrac{d}{dt}\dfrac{\delta L}{\delta q^.}dt]=0\)
+
+\(\int_{t_0}^{t_1}f[\dfrac{\delta L}{\delta q}]-\dfrac{d}{dt}\dfrac{\delta L}{\delta q^.}dt]=0\)
+
+Since this applies to all possible functions we get:
+
+\(\dfrac{\delta L}{\delta q}=\dfrac{d}{dt}\dfrac{\delta L}{\delta q^.}\)
+
+\subsection{Definition: Momentum}
+
+\(p=\dfrac{\delta L}{\delta q^.}\)
+

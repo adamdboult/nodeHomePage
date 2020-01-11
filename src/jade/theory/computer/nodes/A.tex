@@ -1,0 +1,21 @@
+
+\subsection{A* search}
+
+If the heuristic is admissible, then a* is optimal. Intuitively because the the heuristic steers away from any suboptimal solutions.
+
+Admissible? For all nodes n , h(n)<=h*(n). where h* is true cost
+
+\(f(n)=g(n)+h(n)\)
+
+\(g(n\) is the cost to reach \(n\) from the current position.
+
+Informed: Yes
+
+Time: Exponential
+
+Space: Big, all nodes kept in memory
+
+Complete: Yes
+
+Optimal: Yes, if the heuristic is admissible
+

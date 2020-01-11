@@ -1,0 +1,19 @@
+
+\subsection{Bellman equations}
+
+We breakdown the value function into an immediate reward, and the discounted value function of the next state.
+
+This is because the expectation function is linear.
+
+\(v_\pi (s)=R_{s,\pi(s)}+\gamma \sum_{s'}P_{s,\pi(s)}(s')v_\pi (s')\)
+
+We can write this in matrix form.
+
+\(v_pi (s)= r_\pi + \gamma P_\pi v_\pi(s)\)
+
+We can then solve this:
+
+\(v_pi (s)= (I-\gamma P_\pi)^{-1})r_\pi\)
+
+This depends on the starting state.
+

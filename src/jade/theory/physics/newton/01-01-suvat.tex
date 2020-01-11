@@ -1,0 +1,134 @@
+
+\subsection{SUVAT}
+
+\subsubsection{Introduction}
+
+For a constant acceleration environment we want to find equations to link:
+\begin{itemize}
+\item Initial speed: \(v_{t_0}\)
+\item End speed: \(v_{t_1}\)
+\item Time: \(t_1-t_0\)
+\item Acceleration: \(a\)
+\item Displacement \(s_{t_1}-s_{t_0}\)
+\end{itemize}
+
+\subsubsection{The SUVAT equations}
+
+These are the following, and are derived below.
+
+\begin{itemize}
+\item \(v_{t_1}=a(t_1-t_0)+v_{t_0}\)
+\item \((s_{t_1}-s_{t_0})=v_{t_0}(t_1-t_0)+\dfrac{1}{2}a(t_1-t_0)^2\)
+\item \((s_{t_1}-s_{t_0})=v_{t_1}(t_1-t_0)-\dfrac{1}{2}a(t_1-t_0)^2\)
+\item \(v_{t_1}^2= v_{t_0}^2+2a(s_{t_1}-s_{t_0})\)
+\item \((s_{t_1}-s_{t_0})=(t_1-t_0)\dfrac{v_{t_1}+v_{t_1}}{2}\)
+\end{itemize}
+
+\subsubsection{Equation 1: No displacement}
+
+This equation is:
+
+\(v_{t_1}=a(t_1-t_0)+v_{t_0}\)
+
+To derive this start with:
+
+\(v_t:=\dfrac{\delta s_t}{\delta t}\)
+
+\(a:=\dfrac{\delta v_t}{\delta t}\)
+
+If acceleration is constant, then 
+
+\(\dfrac{\delta v_t}{\delta t}=a\)
+
+\(v_t=\int a dt +v_0\)
+
+\(v_t=at+v_0\)
+\subsubsection{Equation 2: No end velocity}
+
+This equation is:
+
+\((s_{t_1}-s_{t_0})=v_{t_0}(t_1-t_0)+\dfrac{1}{2}a(t_1-t_0)^2\)
+
+To derive this start with:
+
+\(v:=\dfrac{\delta s_t}{\delta t}\)
+
+Then:
+
+\(\dfrac{\delta s_t}{\delta t}=at+v_0\)
+
+\(s_t=\dfrac{1}{2}at^2+v_0t+s_0\)
+
+\((s_t-s_0)=v_0t+\dfrac{1}{2}at^2 \)
+
+\subsubsection{Equation 3: No start velocity}
+
+This equation is:
+
+\((s_{t_1}-s_{t_0})=v_{t_1}(t_1-t_0)-\dfrac{1}{2}a(t_1-t_0)^2\)
+
+To derive this start with:
+
+\(v_t=at+v_0\)
+
+\((s_t-s_0)=t\dfrac{v_t+v_0}{2}\)
+
+So:
+
+\(v_0=v_t-at\)
+
+\(v_0=\dfrac{2}{t}(s_t-s_0)- v_t\)
+
+\(v_t-at=\dfrac{2}{t}(s_t-s_0)- v_t\)
+
+\((s_t-s_0)=v_tt-\dfrac{1}{2}at^2\)
+
+\subsubsection{Equation 4: No time}
+
+This equation is:
+
+\(v_{t_1}^2= v_{t_0}^2+2a(s_{t_1}-s_{t_0})\)
+
+To derive this start with:
+
+\(v_t=at+v_0\)
+
+\((s_t-s_0)=t\dfrac{v_t+v_0}{2}\)
+
+So:
+
+\(t=\dfrac{v_t-v_0}{a}\)
+
+\(t=2\dfrac{s_t-s_0}{v_t+v_0}\)
+
+\(\dfrac{v_t-v_0}{a}=2\dfrac{s_t-s_0}{v_t+v_0}\)
+
+\((v_t-v_0)(v_t+v_0)=2a(s_t-s_0)\)
+
+\(v^2_t= v^2_0+2a(s_t-s_0)\)
+\subsubsection{Equation 5: No acceleration}
+
+This equation is:
+
+\((s_{t_1}-s_{t_0})=(t_1-t_0)\dfrac{v_{t_1}+v_{t_1}}{2}\)
+
+To derive this start with:
+
+\(v_t=at+v_0\)
+
+\(s_t-s_0=\dfrac{1}{2}at^2+v_0t\)
+
+So:
+
+\(a=\dfrac{v_t-v_0}{t}\)
+
+\(a=\dfrac{2[(s_t-s_0)-v_0t]}{t^2}\)
+
+\(\dfrac{v_t-v_0}{t}=\dfrac{2[(s_t-s_0)-v_0t]}{t^2}\)
+
+\(t(v_t-v_0)=2[(s_t-s_0)-v_0t]\)
+
+\(t(v_t+v_0)=2(s_t-s_0)\)
+
+\((s_t-s_0)=t\dfrac{v_t+v_0}{2}\)
+

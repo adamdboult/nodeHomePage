@@ -1,0 +1,53 @@
+
+\subsection{Momentum gradient descent}
+
+\subsubsection{Batch gradient descent}
+
+:= used to denote an update of variable. Used in programming, eg x=x+1.
+
+\(\theta _j := \alpha \dfrac{\delta }{\delta \theta _j}J(\theta _0,\theta _1)\)
+
+\(\alpha \) sets rate of descent.
+
+\(\theta 0 := \theta 0 - \alpha/m \sum(h0(x) - y)\)
+
+\(\theta j := \theta j - \alpha/m \sum(h0(x) - y)xj\)
+
+Can check if j theta increasing, means bad methodology, lower alpha
+
+Get run for x iterations,evaluate j(theta)
+
+Can use matrices to do each step
+
+Can check convergence by checking cost over last 1000 or so, rather than all
+
+Smaller learning rate can get to better solution, as can circle drain for small samples
+
+Slowly decreasing learning rate can get better solutions
+
+\(\alpha = const1/(i + cost2)\)
+
+Do gradient descent on all samples
+
+The standard gradient descent algorithm above is also known as batch gradient descent. There are other implementations.
+
+\subsubsection{Mini-batch gradient descent}
+
+Use \(b\) samples on each iteration, \(b\) is parameter, between stochastic and batch
+
+\(b=2-100\) for example
+
+\subsubsection{Stochastic gradient descent}
+
+Do gradient descent on one (?!) sample only
+
+Not guaranteed for each step to go towards minimum, but each step much faster
+
+\subsubsection{Stochastic gradient descent with momentum}
+
+The gradient we use is not just determined by the single sample, it is a moving average of past samples.
+
+\subsubsection{Epochs}
+
+This refers to the number of times the whole dataset has been run.
+

@@ -1,0 +1,67 @@
+
+\subsection{Constraint Satisfaction Problem}
+
+A CSP problem is one where we don't care about the path, we just want to identify the goal state.
+
+For example, solving a sudoku
+
+\subsubsection{Defining a CSP}
+
+A CSP has:
+
+\begin{itemize}
+\item Variables \(X_i\).
+\item Domain for each variable \(D_i\).
+\item Constraints \(C_j\).
+\end{itemize}
+
+In a CSP there are a range of variables each with a domain. There are on top constraints on combinations of values.
+
+A solution does not violate any constraint.
+
+To solve, start with no allocations of variables. successor function assigns a value to an unassigned variable. goal test
+
+Use heuristic minimum remaining value MRV: choose variable with fewest remaining legal values
+
+Least constraining value: choose item in domain which constrains the least other moves
+
+Forward checking. keep track of remaining legal moves for each variable. terminate if none left
+
+After each move, update legal moves for each
+
+Implement all this with recursive backtrack function, which returns a solution or failure. This is a depth first search
+
+\subsubsection{Arc-consistency}
+
+X-Y is arc consistent if all of domain of X is consistnet with some value of Y.
+
+\subsubsection{Node-consistency}
+
+X is node consistent if all of domain satisfies all unary constraint.
+
+\subsubsection{Path-consistency}
+
+Arc consistency for additional variables.
+
+\subsubsection{Constraint propagation}
+
+Constraint propagation can be used to prevent bad choices
+
+We can check for:
+
+\begin{itemize}
+\item node-consistency
+\item arc-consistency
+\item path-consistency
+\end{itemize}
+
+\subsubsection{AC-3}
+
+AC-3 algorihm makes a CSP arc-consistent
+
+Take all arcs.
+
+It may be possible to break the problem down into sub problems, making the problems much easier to solve.
+
+Can do this before/after other algorithm.
+
