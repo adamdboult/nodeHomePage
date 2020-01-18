@@ -2,8 +2,7 @@
 import os
 import shutil
 
-subjects = ["maths", "statistics", "ai", "biology", "culture", "physics"]
-#subjects = ["maths", "statistics", "ai", "biology", "culture", "physics", "computer", "economics"]
+subjects = ["maths", "statistics", "ai", "biology", "culture", "physics", "computer", "economics"]
 
 directory_to_make = os.path.join("public", "theory")
 if not os.path.exists(directory_to_make):

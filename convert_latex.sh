@@ -19,7 +19,7 @@ for i in $(find ./built/jade/theory/ai/ -name \*.tex); do
     p=$b".pdf"
     d="$(dirname "${i}")/"
 
-    printf $d"/"$i"\n"
+    #printf $d"/"$i"\n"
 
     cd $d
     pandoc $s --mathjax -o $o
@@ -36,7 +36,7 @@ for i in $(find ./built/jade/theory/biology/ -name \*.tex); do
     p=$b".pdf"
     d="$(dirname "${i}")/"
 
-    printf $d"/"$i"\n"
+    #printf $d"/"$i"\n"
 
     cd $d
     pandoc $s --mathjax -o $o
@@ -54,7 +54,7 @@ for i in $(find ./built/jade/theory/culture/ -name \*.tex); do
     p=$b".pdf"
     d="$(dirname "${i}")/"
 
-    printf $d"/"$i"\n"
+    #printf $d"/"$i"\n"
 
     cd $d
     pandoc $s --mathjax -o $o
@@ -72,7 +72,7 @@ for i in $(find ./built/jade/theory/statistics/ -name \*.tex); do
     p=$b".pdf"
     d="$(dirname "${i}")/"
 
-    printf $d"/"$i"\n"
+    #printf $d"/"$i"\n"
 
     cd $d
     pandoc $s --mathjax -o $o
@@ -90,7 +90,7 @@ for i in $(find ./built/jade/theory/maths/ -name \*.tex); do
     p=$b".pdf"
     d="$(dirname "${i}")/"
 
-    printf $d"/"$i"\n"
+    #printf $d"/"$i"\n"
 
     cd $d
     pandoc $s --mathjax -o $o
@@ -108,7 +108,7 @@ for i in $(find ./built/jade/theory/physics -name \*.tex); do
     p=$b".pdf"
     d="$(dirname "${i}")/"
 
-    printf $d"/"$i"\n"
+    #printf $d"/"$i"\n"
 
     cd $d
     pandoc $s --mathjax -o $o
@@ -116,6 +116,41 @@ for i in $(find ./built/jade/theory/physics -name \*.tex); do
     cd $current_dir
 
 done
+
+for i in $(find ./built/jade/theory/economics -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+for i in $(find ./built/jade/theory/computer -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
 
 #######
 # PDF #
@@ -132,20 +167,20 @@ pdflatex ./biology.tex > /dev/null 2>&1
 pdflatex ./biology.tex > /dev/null 2>&1
 cd $current_dir
 
-#cd ./built/jade/theory/computer
-#pdflatex ./computer.tex > /dev/null 2>&1
-#pdflatex ./computer.tex > /dev/null 2>&1
-#cd $current_dir
+cd ./built/jade/theory/computer
+pdflatex ./computer.tex > /dev/null 2>&1
+pdflatex ./computer.tex > /dev/null 2>&1
+cd $current_dir
 
 cd ./built/jade/theory/culture
 pdflatex ./culture.tex > /dev/null 2>&1
 pdflatex ./culture.tex > /dev/null 2>&1
 cd $current_dir
 
-#cd ./built/jade/theory/economics
-#pdflatex ./economics.tex > /dev/null 2>&1
-#pdflatex ./economics.tex > /dev/null 2>&1
-#cd $current_dir
+cd ./built/jade/theory/economics
+pdflatex ./economics.tex > /dev/null 2>&1
+pdflatex ./economics.tex > /dev/null 2>&1
+cd $current_dir
 
 cd ./built/jade/theory/maths
 pdflatex ./maths.tex > /dev/null 2>&1
