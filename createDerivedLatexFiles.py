@@ -38,6 +38,10 @@ for subject in subjects:
 
         f.write("extends ../../templates/loginHeader.jade\n")
         f.write("block content\n")
+        f.write("	style\n")
+        f.write("		| h1 {font-weight: bold; text-decoration:underline; text-align:center;}\n")
+        f.write("		| h2 {font-weight: bold; text-decoration:underline;}\n")
+        f.write("		| h3 {font-weight: bold;}\n")
         f.write("	div.container-fluid\n")
         f.write("		div.row\n")
         f.write("			nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n")
