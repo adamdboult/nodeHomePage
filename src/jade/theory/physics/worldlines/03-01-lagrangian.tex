@@ -1,0 +1,122 @@
+
+\subsection{Lagrangians}
+
+We have:
+
+\(S = \int_a^b \sqrt {(\mathbf {\dot q})^T\mathbf M\mathbf {\dot q}}dt\)
+
+We can define:
+
+\(L=\sqrt {(\mathbf {\dot q})^T\mathbf M\mathbf {\dot q}}\)
+
+So we have:
+
+\(S=\int_a^b L dt\)
+
+\subsection{Principle of stationary action}
+
+\(\delta A=0\)
+
+That is, the coordinates and their velocities are such that action is stationary.
+
+\subsection{Euler-Lagrange}
+
+We have \(q(t)\) which makes the action stationary. Consider adding proportion \(\epsilon \) of another function \(f(t)\) to \(q(t)\).
+
+\(A’=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f’(t)]dt\)
+
+\(\dfrac{A’-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f’(t)]-L[q,\dot q]dt\)
+
+We can do a Taylor expansion of \(A’\).
+
+\(A’=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f’(t)]dt\)
+
+\(A’=\int_{t_0}^{t_1} L[q(t),\dot {q(t)}]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]+\epsilon^2 [...]dt\)
+
+So:
+
+\(\dfrac{A’-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1}L[q(t),\dot {q(t)}]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]+\epsilon^2 [...]-L[q,\dot q]dt\)
+
+\(\dfrac{A’-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot {q}}]+\epsilon [...]dt\)
+
+We can now make the left side \(0\), by using the definition of stationary action.
+
+\(\lim_{\epsilon \rightarrow 0} \dfrac{A’-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]dt\)
+
+\(\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]dt=0\)
+
+\(\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}]dt +\int_{t_0}^{t_1}[f^.\dfrac{\delta L}{\delta \dot q}]dt=0\)
+
+Note that
+
+\(\int_{t_0}^{t_1}[f^.\dfrac{\delta L}{\delta \dot q}]dt=[f\dfrac{\delta L}{\delta \dot q}]_{t_0}^{t_1}-\int_{t_0}^{t_1}f \dfrac{d}{dt}\dfrac{\delta L}{\delta \dot q}dt\)
+
+We assume that \(f(t_0)=f(t_1)=0\) and so:
+
+\(\int_{t_0}^{t_1}[f^.\dfrac{\delta L}{\delta \dot q}]dt=-\int_{t_0}^{t_1}f \dfrac{d}{dt}\dfrac{\delta L}{\delta \dot q}dt\)
+
+Plugging this back in we get:
+
+\(\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}]-f \dfrac{d}{dt}\dfrac{\delta L}{\delta \dot q}dt]=0\)
+
+\(\int_{t_0}^{t_1}f[\dfrac{\delta L}{\delta q}]-\dfrac{d}{dt}\dfrac{\delta L}{\delta \dot q}dt]=0\)
+
+Since this applies to all possible functions we get:
+
+\(\dfrac{\delta L}{\delta q}=\dfrac{d}{dt}\dfrac{\delta L}{\delta \dot q}\)
+
+\subsection{Definition: Momentum}
+
+\(p=\dfrac{\delta L}{\delta \dot q}\)
+
+\subsection{EL v2}
+\(L=\sqrt {(\mathbf {\dot q})^T\mathbf M\mathbf {\dot q}}\)
+
+\(\dfrac{\delta L}{\delta q}- \dfrac{d}{dt}(\dfrac{\delta L}{\delta \dot q})=0\)
+
+We have
+
+\(S=\int_a^b L(q(t), \dot q(t))dt \)
+
+\(\delta S=\delta \int_a^b L(q(t), \dot q(t))dt \)
+
+\(J=\int_a^b L(t,q(t), \dot q(t)) dt\)
+
+\(J=\sum_{k=0}^{n-1}\)
+
+
+\subsection{EL v3}
+
+
+\(A=\sum L(x(t), \dot x(t)) \delta t \)
+
+\(A=\sum L(\dfrac{x(t)+x(t-1)}{2}, \dfrac{x(t)-x(t-1)}{\delta t}) \delta t \)
+
+ 
+
+\(\dfrac{\delta }{\delta x(t)}A = \sum \dfrac{\delta }{\delta x(t)}L(\dfrac{x(t)+x(t-1)}{2}, \dfrac{x(t)-x(t-1)}{\delta t}) \delta t \)
+
+ 
+
+\(\dfrac{\delta }{\delta x(t)}A = \delta t [\dfrac{\delta }{\delta x(t)}L(\dfrac{x(t)+x(t-1)}{2}, \dfrac{x(t)-x(t-1)}{\delta t}) + \dfrac{\delta }{\delta x(t)}L(\dfrac{x(t+1)+x(t)}{2}, \dfrac{x(t+1)-x(t)}{\delta t})]\)
+
+ 
+
+\(\dfrac{\delta }{\delta x(t)}A = \delta t [\dfrac{1}{2}L_x +\dfrac{1}{\delta t}L_{\dot x} + \dfrac{1}{2}L_x -\dfrac{1}{\delta t}L_{\dot x}]\)
+
+ 
+
+\(A=\int_a^b L(q(t), \dot q(t)) dt\)
+
+\(A=\sum L(q(t), \dot q(t)) \delta t\)
+
+\(A=\sum L(\dfrac{q(t)+q(t-1)}{2}, \dfrac{q(t)-q(t-1)}{\delta t}) \delta t\)
+
+\(\dfrac{\delta }{\delta q_i(t)}A = \sum \dfrac{\delta }{\delta q_i(t)}L(\dfrac{q(t)-q(t-1)}{2}, \dfrac{q(t)-q(t-1)}{\delta t}) \delta t\)
+
+\(\dfrac{\delta }{\delta q_i(t)}A = \delta t [\dfrac{\delta }{\delta q_i(t)}L(\dfrac{q(t)+q(t-1)}{2}, \dfrac{q(t)-q(t-1)}{\delta t})+\dfrac{\delta }{\delta q_i(t)}L(\dfrac{q(t+1)+q(t)}{2}, \dfrac{q(t+1)-q(t)}{\delta t})]\)
+
+ 
+
+\(\dfrac{\delta }{\delta q_i(t)}A = \delta t [\dfrac{1}{2}L_{q_i}+\dfrac{1}{\delta t}L_{\dot q_i}+\dfrac{1}{2}L_{q_i}-\dfrac{1}{\delta t}L_{\dot q_i}+\dfrac{\delta }{\delta q_i(t)}L(\dfrac{q(t+1)+q(t)}{2}, \dfrac{q(t+1)-q(t)}{\delta t})]\)
+
