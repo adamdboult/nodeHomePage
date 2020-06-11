@@ -1,0 +1,36 @@
+
+\subsection{Introduction}
+
+bart causal is different to causal tree
+
+In stuff now two problems:
++ non random but constant effect
++ Random but heterogenous effect
+
+causal trees can find heterogenous treatment effects
+
+Approaches:
+We have treated and untreated. X and y
+Estimate y|x for treated, and untreated separately.
+Then take differnece for a given x to be the estimated treatment effect
+
+2nd approach:
+have treatment as input
+diffence is again y|x - y|x treatment minus no treatment
+
+3rd approach: (type of single tree)
+split not by predictive power, but by treatment effect differnece
+
+4th approach:
+cross validation
+at each leaft we note the sample average treatment effect
+goal is to choose hyper parameters which minimise sum of diffence between these and cross valid data
+
+Once we have the trees from the last one, calculate the effect using test data. nb: separate creating of tree to estimation of treatment effect
+
+\subsection{Instrumental forests}
+
+Estimate LATE
+
+like causal forest, but do IV regression on leaf.
+

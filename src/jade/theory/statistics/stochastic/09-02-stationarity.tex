@@ -1,0 +1,53 @@
+
+\subsection{Testing for stationarity with Dickey-Fuller (DF) and Augmented Dicky-Fuller (ADF)}
+
+\subsubsection{Stationarity}
+
+\subsubsection{Unit roots}
+
+
+\subsubsection{Integration order}
+
+\subsubsection{Dickey-Fuller}
+
+The Dickey-Fuller test tests if there is a unit root.
+
+The AR(\(1\)) model is:
+
+\(y_t=\alpha + \beta y_{t-1}+\epsilon_t\)
+
+We can rewrite this as:
+
+\(\Delta y_t=\alpha + (\beta -1)y_{t-1}+\epsilon_t\)
+
+We test if \(\beta -1)=0\).
+
+If the coefficient on the last term is \(1\) we have a random walk, and the process is non-stationary.
+
+If the last term is \(<1\) then we have a stationary process.
+
+\subsubsection{Variation: Removing the drift}
+
+If our model has no intercept it is:
+
+\(y_t=\beta y_{t-1}+\epsilon_t\)
+
+\(\Delta y_t=(\beta -1)y_{t-1}+\epsilon_t\)
+
+\subsubsection{Variation: Adding a deterministic trend}
+
+If our model has a time trend it is:
+
+\(y_t=\alpha \beta y_{t-1}+\gamma t + \epsilon_t\)
+
+\(\Delta y_t=\alpha + (\beta -1)y_{t-1}+\gamma t+\epsilon_t\)
+
+\subsubsection{Augmented Dickey-Fuller}
+
+We include more lagged variables.
+
+\(y_t=\alpha + \beta t + \sum_i^p \theta_i y_{t-i}+\epsilon_t\)
+
+If no unit root, can do normal OLS?
+
+

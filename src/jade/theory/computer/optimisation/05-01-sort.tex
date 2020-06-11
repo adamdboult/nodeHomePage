@@ -1,0 +1,43 @@
+
+\subsection{Floating point}
+
+\subsection{Integer}
+
+\subsection{Tree path}
+
+\subsection{Array}
+
+Eg 8 queens
+
+
+\subsection{Search tree}
+in search tree, each node has state which is used for test. could be ID of node (for path finding), path history and cost (for trav salesman)
+
+frontier (not open list)
+
+backward search. only possible if end state is clearly defined. eg maze. not clear if don't know eg 8 queens.
+
+can do breadth first on them simultaneously?
+
+problem has: initial state. actions, transition model
+
+model \(T(s, a)-> s_n+1\). as in , given state and action, we have new state
+
+goal test on each state
+
+path cost for each sucessor
+
+search tree. we expand when testing action.
+
+open lists in unexplored notes.
+
+loopy paths. if we go \(a->b\) don't need to go \(b->a\) because if goal, not any closer, if util, higher cost.
+
+redunant paths. if we've already been to c, no need to explore going there from somewhere else in goal
+
+if already been to c at lower cost, no point for util
+
+actions is function on state.
+
+keep explored states in open list
+

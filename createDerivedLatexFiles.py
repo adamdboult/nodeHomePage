@@ -7,7 +7,7 @@ import shutil
 # Create tex file for each folder #
 ###################################
 
-subjects = ["maths", "statistics", "ai", "biology", "culture", "physics", "computer", "economics"]
+subjects = ["maths", "statistics", "ai", "biology", "culture", "physics", "computer", "economics", "engineering"]
 
 for subject in subjects:
 

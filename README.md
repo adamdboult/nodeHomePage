@@ -37,15 +37,6 @@ sudo systemctl daemon-reload
 sudo systemctl start node-homepage.service
 ```
 
-# Setting up SSL
-
-```bash
-sudo systemctl stop apache2.service
-sudo apt install certbot
-sudo certbot certbot only
-sudo systemctl start apache2.service
-```
-
 # Setting up Apache
 Node homepage does not listen on standard HTTP or HTTPS ports.
 ```bash
@@ -56,5 +47,19 @@ sudo a2enmod proxy_http
 sudo cp ./node-homepage.conf /etc/apache2/sites-available
 sudo a2ensite node-homepage.conf
 sudo systemctl reload apache2
+```
+
+# Setting up SSL
+
+```bash
+sudo systemctl stop apache2.service
+sudo apt install certbot
+sudo certbot certonly
+sudo systemctl start apache2.service
+```
+# Renewing certificates
+
+```bash
+sudo certbot renew
 ```
 

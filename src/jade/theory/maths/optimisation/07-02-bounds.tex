@@ -1,0 +1,29 @@
+
+\subsection{Identifying upper and lower bounds of linear programming}
+
+In min/max problem, any feasibly solution is an upper/lower bound.
+
+can we get a bound at the other side?
+yes, by doing linear combinations of inequalities
+eg maximise
+\(30x + 100y\)
+subject to:
+\(4x + 10y <= 40\)
+\(x >=3 \)
+
+We can identify a lower bound by inputting something which works, for example \(x=3\) and \(y=0\). This gives us a lower bound of \(90\).
+
+To get an upper bound we can manipulate the constraints:
+\(40x + 100y<=400\)
+\(10x>=30\)
+And then:
+\(40x+100y<=370+30\)
+\(40x+100y<=370+10x\)
+\(30x+100y<=370\)
+
+So we have an upper bound of \(370\).
+
+This lower bound is a result of doing linear combinations of the inequalities. For different combinations, we could have a lower lower bound.
+
+This is the dual problem. How do we choose the linear combination of inequalities such that the resulting lower bound is minimised?
+

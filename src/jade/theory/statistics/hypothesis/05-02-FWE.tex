@@ -1,0 +1,32 @@
+
+\subsection{Family-Wise Error Rate (FWER)}
+
+What is the chance of making at least one false positive result?
+
+Number of tests: \(m\)
+
+Number of false positive results: \(V\)
+
+\(FWER=P(V>0)\)
+
+\subsection{False Discovery Rate (FDR)}
+
+The proportion of false discoveries is:
+
+\(Q=\frac{V}{V+S}\)
+
+Where:
+\(V\) is the number of false positives
+
+\(S\) is the number of true positives
+
+The FRD is \(E[Q]\).
+
+\subsection{The Bonferroni correction}
+
+We change the significance level.
+
+reject if \(p\le \frac{\alpha }{m}\)
+
+If \(m=1\) this is the standard test.
+

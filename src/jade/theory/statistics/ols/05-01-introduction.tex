@@ -1,0 +1,19 @@
+
+\subsection{Introduction}
+
+OLS:
+
+\(\hat \theta =\frac{\sum_i (X_i-\mu_X)(y_i-\mu_y)}{\sum_i(x_i-\mu_X)^2}\)
+
+Trimming
+
+\(\hat \theta =\frac{n^{-1}\sum_i (X_i-\mu_X)(y_i-\mu_y)\mathbf 1_i}{n^{-1}\sum_i(x_i-\mu_X)^2\mathbf 1_i}\)
+
+Where:
+
+\(\mathbf 1_i=\mathbf 1(\hat f(z_i)\ge b)\)
+
+Where \(b=b(n)\) is a trimming parameter, where:
+
+\(b\rightarrow 0\) as \(n\rightarrow \infty \)
+

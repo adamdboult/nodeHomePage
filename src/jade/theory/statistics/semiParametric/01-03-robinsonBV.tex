@@ -1,6 +1,16 @@
 
 \subsection{Bias and variance of the Robinson estimator}
 
+robinson: can't have confounded in dummy. but can in real. general result of propensity stuff?
+
+Framing: Partialling out is an alternative to OLS where \(n<<p\) doesn't hold. alterntive to LASSO etc
+
+\(\hat \theta \approx N(\theta, V/n)\)
+
+\(V=(E[\hat D^2)^{-1}E[\hat D^2\epsilon^2 ](E[\hat D^2])^{-1}\)
+
+These are robust standard errors. 
+
 \subsubsection{Moments of the Robinson estimator}
 
 If IID then
@@ -12,4 +22,62 @@ Otherwise, can use GLM
 What are the properties of the estimator?
 
 \(E[\hat \theta ]=E[\dfrac{\sum_i (X_i-\hat X_i)(y_i-\hat y_i)}{\sum_i(x_i-\hat X_i)^2}]\)
+
+
+\subsection{Non-linear treatment effects in the Robinson estimator}
+
+Page on reformulating as non-linear. can do it. show can be estimated using arg min
+https://arxiv.org/pdf/1712.04912.pdf
+
+
+\subsection{DML}
+
+in DML. page on orthogonality scores, page on constructing them; page on using them to estimate parameters (GMM)
+
+We have \(P(X)=f(\theta , \rho)\)
+\(\hat \theta = f(X, n)\)
+\(\theta = g(\rho , X)\)
+
+So error is:
+\(\hat \theta - \theta=f(X, n)-g(\rho , X)\)
+
+Bias is defined as:
+\(Bias(\hat \theta, \theta ) = E[\hat \theta - \theta]=E[\hat \theta ] - \theta \)
+\(Bias = E[\hat \theta - \theta]=E[f(X, n)-g(\rho , X)]\)
+\(Bias = E[\hat \theta - \theta]=E[f(X, n)]-g(\rho ,X)\)
+
+double ML: regression each parametric parameter on ML of other variables.
+eg: get \(e(x|z)\)
+\(e(d|x)\)
+\(d=m(x)+v\)
+\(d\) is correlated with \(x\) so bias.
+\(v\) is corrleated with \(d\) but not \(x\). use as "iv".
+Still need estimate for \(g(x)\).
+
+for iterative, process is:
++ estimate \(g(x)\)
++ plug into other and estimate theta
++ this section should be in sample splitting. rename iterative estimation. separate pages for bias, variance
++ how does this work?? paper says random forest regression and OLS. intialise \(\theta \) randomly?
++ page on bias, variance, efficiency?
++ page on sample splitting, why?
+
++ page on goal: \(x\) and \(z\) orthogonal for split sampling
++ page on \(X=m_0(Z)+\mu\), first stage machine learning, synthetic instrumental variables? h3 on that for multiple variables on interest. regression for each
+
+\subsection{DML1}
+Divide into \(k\).
+
+For each do ML on nuicance (how???) use all instances outside of sample
+
+Then do GMM using orthogonality condition to calculate \(\theta \). (how??) use instances in sample
+
+Average \(\theta \) from each class
+
+
+\subsection{Last stage Robinson}
+
+Separate page for last stage: note we can do OLS, GLS etc with choice of \(\Omega \).
+
+
 
