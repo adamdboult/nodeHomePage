@@ -1,7 +1,5 @@
 
-\subsection{Maximum likelihood estimation}
-
-\subsubsection{Maximising the likelihood function}
+\subsection{Maximising the likelihood function}
 
 We have a likelihood function of the data.
 
@@ -15,11 +13,11 @@ That is, for which values  of \(\theta \) was the observation we saw most likely
 
 This is a mode estimate.
 
-\subsubsection{IID}
+\subsection{IID}
 
 \(L(\theta ; X)=\prod_i P(x_i|\theta )\)
 
-\subsubsection{Logarithms}
+\subsection{Logarithms}
 
 We can take logarithms, which preserve stationary points. As logarithms are defined on all values above \(0\), and all probabilities are also above zero (or zero), this preserves solutions.
 
@@ -29,7 +27,7 @@ The non-zero stationary points of:
 
 \(\ln L(\theta ; X)=\sum_i \ln P(x_i|\theta )\)
 
-\subsubsection{Example: Coin flip}
+\subsection{Example: Coin flip}
 
 Let’s take our simple example about coins. Heads and tails are the only options, so \(P(H)+P(T)=1\). 
 
@@ -45,7 +43,3 @@ If we had \(5\) heads and \(5\) tails we would have:
 
 So \(P(H)=\dfrac{1}{2}\) is the value which makes our observation most likely.
 
-\subsubsection{Relative likelihood ratios}
-
-A bit like confidence intervals
-	

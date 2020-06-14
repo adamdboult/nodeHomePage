@@ -1,8 +1,6 @@
 
 \subsection{Likelihood function}
 
-\subsubsection{Likelihood function}
-
 We want to estimate parameters. One way of looking into this is to look at the likelihood function:
 
 \(L(\theta ; X)=P(X|\theta )\)
@@ -11,7 +9,7 @@ The likelihood function shows the chance of the observed data being generated, g
 
 If this has high peaks then it provides information that \(\theta \) is located in this region.
 
-\subsubsection{IID}
+\subsection{IID}
 
 For multiple events, the likelihood function is:
 
@@ -28,12 +26,4 @@ If the events are identically distributed, the chance of flipping a head doesnâ€
 \(L(\theta ; X)=P(A|\theta ).P(B|\theta ).P(C|\theta ).P(D|\theta )...\)
 
 \(L(\theta ; X)=\prod_{i=1}^n P(X_i|\theta )\)
-
-\subsubsection{Log-likelihood function}
-
-\(L(\theta ; X)=\prod_{i=1}^n P(X_i|\theta )\)
-
-\(\ln L(\theta ; X)=\ln \prod_{i=1}^n P(X_i|\theta )\)
-
-\(l(\theta ; X)=\sum_{i=1}^n \ln P(X_i|\theta )\)
 

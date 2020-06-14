@@ -1,13 +1,5 @@
 
-\subsection{Score}
-
-\subsubsection{Recap: Log-likelihood}
-
-The log-likelihood for IID data is:
-
-\(l(\theta ; X)=\sum_{i=1}^n \ln P(X_i|\theta )\)
-
-\subsubsection{The score}
+\subsection{The score}
 
 The score is defined as the differential of the log-likelihood function with respect to \(\theta \).
 
@@ -15,7 +7,7 @@ The score is defined as the differential of the log-likelihood function with res
 
 \(V(\theta, X)=\dfrac{1 }{\prod_{i=1}^nP(X_i|\theta )}\dfrac{\delta }{\delta \theta}L(\theta; X) \)
 
-\subsubsection{Expectation of the score}
+\subsection{Expectation of the score}
 
 The expectation of the score, given the true value of \(\theta \) is:
 
@@ -31,7 +23,7 @@ The expectation of the score, given the true value of \(\theta \) is:
 
 We can show that the expected value of this is \(0\).
 
-\subsubsection{Variance of the score}
+\subsection{Variance of the score}
 
 The variance of the score is:
 
