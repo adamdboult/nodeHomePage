@@ -1,7 +1,9 @@
 
-\subsection{Generalised Method of Moments (GMM)}
+\subsection{Difference from Method Of Moments (MOM)}
 
-\subsubsection{Introduction}
+More conditions than data.
+
+\subsection{Generalised Method of Moments (GMM)}
 
 We have a function on the output and a parameter:
 
@@ -33,13 +35,13 @@ We can estimate it if IID:
 
 \(\hat W(\hat \theta )= (\dfrac{1}{n}\sum_i g(y, \hat \theta)g(y, \hat \theta)^T)^{-1}\)
 
-\subsubsection{Two-step feasible GMM}
+\subsection{Two-step feasible GMM}
 
 Estimate using \(\mathbf W=\mathbf I\)
 
 Consistent, but not efficient.
 
-\subsubsection{Moment conditions}
+\subsection{Moment conditions}
 
 OLS:
 
@@ -91,7 +93,14 @@ We want to minimise moment loss
 
 \(\hat \theta = argmin_\theta (\frac{1}{n}\sum_ig(\mathbf x_i, \theta))^T\hat W(\frac{1}{n}\sum_ig(\mathbf x_i, \theta))\)
 
-Asymptotic
+\subsection{Asymptotic}
+
+CLT means normal.
+
+They are consistent IF moment condition is true.
+
+There is an explicit formula for variance.
+
 
 \(\sqrt n (\hat \theta -\theta_0)\rightarrow^d N[0, (G^TWG)^{-1}G^TW\Omega W^TG(G^TW^TG)^{-1}]\)
 
@@ -108,4 +117,14 @@ Do the above from OLS? This is where robust etc stuff comes from
 If it is specified. Moment conditions are equal to the number of moments, then \(W\) doesn't matter. This is normal Method of Moments.
 
 Estimating the weighting matrix
+
+\subsection{Iterated GMM}
+
+\subsection{Moment-covariance matrix}
+
+\subsection{Bias and variance of the GMM estimator}
+
+page on Bias and variance of the GMM estimator (cluster assumption should be part of moment condition?) part of later calculation of weighting?
+
+Can do robust, hac, clustering as part of GMM too.
 

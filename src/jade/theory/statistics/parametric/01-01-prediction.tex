@@ -1,7 +1,5 @@
 
-\subsection{Predictions and residuals}
-
-\subsubsection{Introduction}
+\subsection{Predictions}
 
 Our data \((\mathbf y, \mathbf X)\) is divided into \((y_i, \mathbf x_i)\).
 
@@ -13,27 +11,31 @@ The best predictor of \(y\) given \(x\) is:
 
 The goal of regression is to find an approximation of this function.
 
-\subsubsection{Link}
-
-\(P(y|X, \theta )\)
-
-\(\hat y =f(\mathbf x)\)
-
-\subsubsection{Residuals}
+\subsection{Residuals}
 
 \(\epsilon_i = y_i- \hat y_i\)
 
-\subsubsection{Residual sum of squares (RSS)}
+\subsection{Residual sum of squares (RSS)}
 
 \(RSS=\sum_i \epsilon_i^2\)
 
 \(RSS=\sum_i (y_i-\hat y_i)^2\)
 
-\subsubsection{Explained sum of squares (ESS)}
+\subsection{Explained sum of squares (ESS)}
 
 \(ESS=\sum_i (\bar y-\hat y_i)^2\)
 
-\subsubsection{Total sum of squares (TSS)}
+\subsection{Total sum of squares (TSS)}
 
 \(TSS=\sum_i (y_i-\bar y)^2\)
+
+\subsection{Relationship between prediction and probability distribution}
+
+\(P(y|X, \theta )\)
+
+\(\hat y =f(\mathbf x)\)
+
+Through integration?
+
+\(E[y] = \int P(y|X, \theta ) dy\)
 

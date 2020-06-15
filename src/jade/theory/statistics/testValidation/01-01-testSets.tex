@@ -1,0 +1,29 @@
+
+\subsection{Overfitting}
+
+Overfitting is a risk. Instead we split to test, train. risk of using too many features. more features always improve training score, not necessarily test score.
+
+As model gets more complex, both test and train do better. however at some point, test stops doing better, overfitting
+
+Structural risk minimisation can address this trade off. use test and training sets. train model on train, rate it on test
+
+Structural minimisation curve has accuracy of boths sets over complexity
+
+To avoid overfitting:
+
++ reduce number of features
++ do a model selection
++ use regularisation
++ do cross validation 
+
+Can choose other model parameters
+
+How to evalute model?
+
+\subsection{K-fold cross-validation}
+
+Can do k-fold cross validation. given algo A and dataset D, divide D into k equal sized subsets
+
+For each subset, train the model on all other subsets and test on the other subset. average error between folds
+
+
