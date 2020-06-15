@@ -5,7 +5,7 @@ A CSP problem is one where we don't care about the path, we just want to identif
 
 For example, solving a sudoku
 
-\subsubsection{Defining a CSP}
+\subsection{Defining a CSP}
 
 A CSP has:
 
@@ -31,19 +31,19 @@ After each move, update legal moves for each
 
 Implement all this with recursive backtrack function, which returns a solution or failure. This is a depth first search
 
-\subsubsection{Arc-consistency}
+\subsection{Arc-consistency}
 
 X-Y is arc consistent if all of domain of X is consistnet with some value of Y.
 
-\subsubsection{Node-consistency}
+\subsection{Node-consistency}
 
 X is node consistent if all of domain satisfies all unary constraint.
 
-\subsubsection{Path-consistency}
+\subsection{Path-consistency}
 
 Arc consistency for additional variables.
 
-\subsubsection{Constraint propagation}
+\subsection{Constraint propagation}
 
 Constraint propagation can be used to prevent bad choices
 
@@ -55,7 +55,7 @@ We can check for:
 \item path-consistency
 \end{itemize}
 
-\subsubsection{AC-3}
+\subsection{AC-3}
 
 AC-3 algorihm makes a CSP arc-consistent
 

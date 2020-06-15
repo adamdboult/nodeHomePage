@@ -1,0 +1,76 @@
+
+\subsection{Assumtions}
+
+Generally, k states, markov chain?
+
+Assumptions are:
+
++ Lasting immunity
++ No births/other deaths
+
+Components:
+
++ \(S(t)\) - Susceptible
++ \(I(t)\) - Infected
++ \(R(t)\) - Removed (recovered or died)
+
+Proportion of people who recover each period - \(\gamma \).
+
+Each period, infected can transmit to \(\beta \) people. Total of \(I\beta \).
+
+Not everyone susceptible though, so \(I\beta \dfrac{S}{N}\)
+
+Dynamics:
+
++ \(\dfrac{dR}{dt} = \gamma I\)
++ \(\dfrac{dS}{dt} = -\beta I \dfrac{S}{N}\)
++ \(\dfrac{dI}{dt} = \beta I \dfrac{S}{N} - \gamma I\)
+
+Note that \(dfrac{dR}{dt} + dfrac{dI}{dt} + \dfrac{dS}{dt} = 0\)
+
+We can then work out \(\dfrac{dI}{dS}\)
+
+\(\dfrac{dI}{dS} = \dfrac{\dfrac{dI}{dt}}{\dfrac{dS}{dt}}\)
+
+\(\dfrac{dI}{dS} = \dfrac{\beta I \dfrac{S}{N} - \gamma I}{-\beta I \dfrac{S}{N}}\)
+
+\(\dfrac{dI}{dS} = \dfrac{\beta S - \gamma N}{-\beta S}\)
+
+\(\dfrac{dI}{dS} = - 1 + \dfrac{\gamma }{\beta }\dfrac{N}{S}\)
+
+We can then work out \(\dfrac{dS}{dR}\)
+
+\(\dfrac{dS}{dR} = \dfrac{\dfrac{dS}{dt}}{\dfrac{dR}{dt}}\)
+
+\(\dfrac{dS}{dR} = \dfrac{-\beta I \dfrac{S}{N}}{\gamma I}\)
+
+\(\dfrac{dS}{dR} = -\dfrac{\beta }{\gamma }\dfrac{S}{N}\)
+
+We can rewrite the infection dynamic:
+
++ \(\dfrac{dI}{dt} = \beta I \dfrac{S}{N} - \gamma I\)
++ \(\dfrac{dI}{dt} = I(\beta \dfrac{S}{N} - \gamma )\)
++ \(\dfrac{dI}{dt} = I\gamma (\dfrac{\beta }{\gamma }\dfrac{S}{N} - 1)\)
+
+This means that outbreak if \(\dfrac{\beta }{\gamma } > \dfrac{S}{N}\)
+
+\(R_0 = \dfrac{\beta }{\gamma }\)
+
+What is steady state?
+
+\(\dfrac{dI}{dt} = I(\beta \dfrac{S}{N} - \gamma )\)
+
+\(\dfrac{dI}{dt} = 0\)
+
+\(R_0 \dfrac{S}{N} = 1 )\)
+
+\(\dfrac{S}{N} = \dfrac{1}{R_0} )\)
+
+\(\dfrac{\beta }{\gamma } > \dfrac{S}{N}\)
+
+
+\subsection{Vaccinations}
+
+What proportion need vaccination?
+
+
