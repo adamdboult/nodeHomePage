@@ -1,8 +1,6 @@
 
 \subsection{Sample covariance}
 
-\subsubsection{Calculating}
-
 We previously defined the population covariance as \(\sigma_{XY}=E[(X-\mu_X)^T(Y-\mu_Y)]\).
 
 We define the sample covariance as \(\sigma_{XY}=\dfrac{1}{n}\sum_i(x_i-\bar x)(y_i-\bar y)\).
@@ -15,23 +13,23 @@ We can calculate this using matrices:
 
 \(\sigma_{XY}=\dfrac{1}{n}M^TN\).
 
-\subsubsection{Sample correlation}
+\subsection{Sample correlation}
 
 \(\rho_{XY}=\dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}\)
 
-\subsubsection{Covariance matrix}
+\subsection{Covariance matrix}
 
 If we have \(n\) variables we can have a \(n\times n \) matrix \(\Sigma \) where:
 
 \(\Sigma_{ij} = \sigma_{ij}=\dfrac{1}{n}(X_i-\bar x_i)^T(X_j-\bar x_j)\)
 
-\subsubsection{Centred covariance}
+\subsection{Centred covariance}
 
 If \(\bar x = \bar y = 0\) then:
 
 \(\sigma_{XY}=\dfrac{1}{n}X^TY\)
 
-\subsubsection{Correlation matrix}
+\subsection{Correlation matrix}
 
 Here each entry is the correlation rather than the covariance.
 
