@@ -23,24 +23,36 @@ html(lang="en")
 				span.navbar-toggler-icon
 			div.collapse.navbar-collapse#navbarNavAltMarkup
 				ul.navbar-nav
-					li.nav-item
-						a.nav-link(href="/theory/maths") Maths
-					li.nav-item
-						a.nav-link(href="/theory/computer") Computer science
-					li.nav-item
-						a.nav-link(href="/theory/statistics") Probability and statistics
-					li.nav-item
-						a.nav-link(href="/theory/physics") Physics
-					li.nav-item
-						a.nav-link(href="/theory/ai") Artificial intelligence
-					li.nav-item
-						a.nav-link(href="/theory/biology") Biology
-					li.nav-item
-						a.nav-link(href="/theory/engineering") Engineering
-					li.nav-item
-						a.nav-link(href="/theory/economics") Economics
-					li.nav-item
-						a.nav-link(href="/theory/culture") Culture
+					//li.nav-item
+					//	a.nav-link(href="/theory/maths") Maths
+					//li.nav-item
+					//	a.nav-link(href="/theory/computer") Computer science
+					//li.nav-item
+					//	a.nav-link(href="/theory/statistics") Probability and statistics
+					//li.nav-item
+					//	a.nav-link(href="/theory/physics") Physics
+					//li.nav-item
+					//	a.nav-link(href="/theory/ai") Artificial intelligence
+					//li.nav-item
+					//	a.nav-link(href="/theory/biology") Biology
+					//li.nav-item
+					//	a.nav-link(href="/theory/engineering") Engineering
+					//li.nav-item
+					//	a.nav-link(href="/theory/economics") Economics
+					//li.nav-item
+					//	a.nav-link(href="/theory/culture") Culture
+					li.nav-item.dropdown
+						a.nav-link.dropdown-toggle(href="/theory", id=navbarDropdown, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Notes
+						div.dropdown-menu(aria-labelledby="navbarDropdown")
+							a.dropdown-item(href="/theory/maths") Maths
+							a.dropdown-item(href="/theory/computer") Computer science
+							a.dropdown-item(href="/theory/statistics") Probability and statistics
+							a.dropdown-item(href="/theory/physics") Physics
+							a.dropdown-item(href="/theory/ai") Artificial intelligence
+							a.dropdown-item(href="/theory/biology") Biology
+							a.dropdown-item(href="/theory/engineering") Engineering
+							a.dropdown-item(href="/theory/economics") Economics
+							a.dropdown-item(href="/theory/culture") Culture
 				ul.navbar-nav.ml-auto
 					li.nav-item
 						a.nav-link(href="https://www.economoose.com") Economoose.com
