@@ -42,24 +42,35 @@ html(lang="en")
 					//li.nav-item
 					//	a.nav-link(href="/theory/culture") Culture
 					li.nav-item.dropdown
-						a.nav-link.dropdown-toggle(href="/theory", id=navbarDropdown, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Notes
+						a.nav-link.dropdown-toggle(href="/theory/", id=navbarDropdown, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Notes
 						div.dropdown-menu(aria-labelledby="navbarDropdown")
 							a.dropdown-item(href="/theory/maths") Maths
 							a.dropdown-item(href="/theory/computer") Computer science
 							a.dropdown-item(href="/theory/statistics") Probability and statistics
-							a.dropdown-item(href="/theory/physics") Physics
+							//a.dropdown-item(href="/theory/physics") Physics
 							a.dropdown-item(href="/theory/ai") Artificial intelligence
-							a.dropdown-item(href="/theory/biology") Biology
-							a.dropdown-item(href="/theory/engineering") Engineering
+							//a.dropdown-item(href="/theory/biology") Biology
+							//a.dropdown-item(href="/theory/engineering") Engineering
 							a.dropdown-item(href="/theory/economics") Economics
-							a.dropdown-item(href="/theory/culture") Culture
+							//a.dropdown-item(href="/theory/culture") Culture
+					li.nav-item
+						a.nav-link(href="/news/") Blog
 				ul.navbar-nav.ml-auto
 					li.nav-item
-						a.nav-link(href="https://www.economoose.com") Economoose.com
+						a(href="https://github.com/adamdboult/") GitHub
 					li.nav-item
-						a.nav-link(href="https://www.yetipredict.com") YetiPredict.com
-					li.nav-item
-						a.nav-link(href="https://www.artificialeconomist.com") ArtificialEconomist.com
+						a(href="https://wwww.linkedin.com/in/adamdboult") LinkedIn
+					a.nav-link.dropdown-toggle(href="/other/", id=navbarOther, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Projects
+					div.dropdown-menu(aria-labelledby="navbarOther")
+						a.dropdown-item(href="https://www.artificialeconomist.com") ArtificialEconomist.com
+						a.dropdown-item(href="https://www.economoose.com") Economoose.com
+						a.dropdown-item(href="https://www.yetipredict.com") YetiPredict.com
+					//li.nav-item
+					//	a.nav-link(href="https://www.economoose.com") Economoose.com
+					//li.nav-item
+					//	a.nav-link(href="https://www.yetipredict.com") YetiPredict.com
+					//li.nav-item
+					//	a.nav-link(href="https://www.artificialeconomist.com") ArtificialEconomist.com
 					//li.nav-item
 					//	a.nav-link(href="/about/") About
 		block content

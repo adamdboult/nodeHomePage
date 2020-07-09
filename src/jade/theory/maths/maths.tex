@@ -10,7 +10,7 @@
 \title{Maths}
 \maketitle
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{0}
 \tableofcontents
 
 \include{preface}
@@ -20,37 +20,54 @@
 \include{propositionalLogicInference}
 \include{propositionalLogicAxioms}
 \include{preteriteLogic}
-\include{setsBasic}
+\include{godelCompleteness}
 
-\part{Arithmetic}
+\part{Arithmetic of natural numbers}
+\include{robinson}
 \include{peano}
+\include{orderings}
 \include{arithmetic}
-\include{rational}
-\include{logicSecond}
-\include{sets}
-
-\part{Number theory}
-\include{sequences}
-\include{algebra}
-\include{polynomials}
-\include{polynomialsMulti}
-\include{generating}
-\include{algebraCardinality}
 \include{primes}
 \include{modulus}
 \include{GCD_LCM}
 \include{arithmeticFundamental}
+\include{sequences}
+\include{algebra}
 \include{godelNumbering}
-\include{reals}
+\include{godelIncompleteness}
+
+\part{General Set Theory (GST)}
+\include{setsSpecification}
+\include{setsBasic}
+\include{setsExtensionality}
+\include{setsAdjunction}
+\include{algebraCardinality}
+
+\part{Zermelo–Fraenkel set theory (ZF)}
+\include{logicSecond}
+\include{sets}
+\include{setsAxiomUnion}
+
+\part{Elementary number theory}
+\include{integers}
+\include{rational}
+\include{numbersAlgebraic}
 \include{complex}
+\include{sequencesInfinite}
+\include{reals}
+
+\part{Elementary algebra}
+\include{polynomials}
+\include{polynomialsMulti}
+\include{generating}
 \include{diophantine}
 
-\part{Abstract algebra}
-\include{groups}
-\include{rings}
-\include{fields}
+\part{Systems of linear equations}
+\include{linearSystems}
+\include{linearSystemsOperations}
 
 \part{Univariate real analysis}
+\include{orderingInfinite}
 \include{propertiesFunctions}
 \include{calculus}
 \include{e}
@@ -61,16 +78,8 @@
 \include{trigonometryOther}
 \include{transformations}
 \include{importantFunctions}
-
-\part{Linear algebra}
-\include{linearAlgebra}
-\include{endomorphisms}
-\include{forms}
-\include{maps}
-\include{representation}
-\include{exteriorAlgebra}
-\include{tensors}
-\include{functionalAnalysis}
+\include{ODE}
+\include{optimisationUni}
 
 \part{Multivariate real analysis}
 \include{multiFunctions}
@@ -81,21 +90,43 @@
 \include{differentialEquations}
 \include{exteriorCalculus}
 \include{calculusVariations}
-\include{optimisation.tex}
+\include{optimisationMulti}
 
 \part{Complex analysis}
 \include{complexAnalysis}
 \include{riemann}
 
-\part{Topology}
+\part{Analytic geometry}
 \include{metric}
+\include{affineEuclid}
+\include{manifoldsEuclid}
+\include{polygon2D}
+\include{polygon3D}
+\include{geometryAlgebraic}
+
+\part{Abstract algebra}
+\include{groups}
+\include{rings}
+\include{fields}
+
+\part{Abstract linear algebra}
+\include{linearAlgebra}
+\include{endomorphisms}
+\include{forms}
+\include{maps}
+\include{representation}
+\include{exteriorAlgebra}
+\include{tensors}
+\include{functionalAnalysis}
+
+\part{Manifolds}
 \include{topologyFinite}
-\include{measures}
 \include{manifoldsTopological}
 \include{manifoldsDifferentiable}
 \include{manifoldsRiemann}
-\include{affineEuclid}
-\include{manifoldsEuclid}
+
+\part{Other topology}
+\include{measures}
 \include{graph}
 \include{category}
 

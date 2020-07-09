@@ -1,7 +1,5 @@
 
-\subsection{Riemann integral}
-
-\subsubsection{Riemann sums}
+\subsection{Riemann sums}
 
 Given a function \(f(x)\) and an interval \([a,b]\), we can divide \([a,b]\) into \(n\) sections and calculate:
 
@@ -9,13 +7,13 @@ Given a function \(f(x)\) and an interval \([a,b]\), we can divide \([a,b]\) int
 
 This is the Riemann sum.
 
-\subsubsection{Riemann integral}
+\subsection{Riemann integral}
 
 We take the limit of the Riemann sum as \(n\rightarrow \infty\)
 
 \(\int_a^b f(x)dx:= \lim_{n\rightarrow \infty } \sum_{j=0}^{n(b-a)} f(a+ \dfrac{j}{n} )\)
 
-\subsubsection{Linearity}
+\subsection{Linearity}
 
 \(\int_a^bf(x)+g(x)dx=\lim_{n\rightarrow \infty }\sum_{j=0}^{n(b-a)}f(a+\dfrac{j}{n})+g(a+\dfrac{j}{n})\)
 
@@ -23,7 +21,7 @@ We take the limit of the Riemann sum as \(n\rightarrow \infty\)
 
 \(\int_a^bf(x)+g(x)dx=\int_a^bf(x)dx +\int_a^bg(x)dx\)
 
-\subsubsection{Continuation}
+\subsection{Continuation}
 
 \(\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }\sum_{j=0}^{n(b-a)}f(a+\dfrac{j}{n})+\lim_{n\rightarrow \infty }\sum_{j=0}^{n(c-b)}f(b+\dfrac{j}{n})\)
 
@@ -33,7 +31,7 @@ We take the limit of the Riemann sum as \(n\rightarrow \infty\)
 
 \(\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }[\sum_{j=0}^{n(b-a)}f(a+\dfrac{j}{n})+\sum_{j=n(b-a)}^{n(c-a)}f(a+\dfrac{j}{n})]\)
 
-\(\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }[\sum_{j=0}^{n(c-a)}f(a+\dfrac{j}{n})\)
+\(\int_a^bf(x)dx+\int_b^cf(x)dx=\lim_{n\rightarrow \infty }[\sum_{j=0}^{n(c-a)}f(a+\dfrac{j}{n})]\)
 
 \(\int_a^bf(x)dx+\int_b^cf(x)dx=\int_a^cf(x)dx\)
 

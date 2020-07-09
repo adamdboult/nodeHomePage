@@ -10,7 +10,7 @@
 \title{Probability and Statistics}
 \maketitle
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{0}
 \tableofcontents
 
 \include{preface}
@@ -18,14 +18,19 @@
 \part{Probability}
 \include{probability}
 \include{probabilityBayes}
+\include{entropy}
+
+\part{Variables}
 \include{probabilityVariables}
 \include{probabilityMoments}
-\include{entropy}
-\include{iid}
 \include{distributions}
+
+\part{Sampling and statistics}
+\include{iid}
 \include{stats}
 \include{sampling}
 \include{likelihood}
+\include{privacy}
 
 \part{Stochastic processes}
 \include{stochastic}
@@ -38,6 +43,7 @@
 \include{integration}
 \include{optimisation}
 \include{calculusStochastic}
+\include{compression}
 
 \part{Exploratory data analysis}
 \include{distance}
@@ -46,7 +52,6 @@
 \include{summary}
 \include{summaryMultiple}
 \include{hypothesisZT}
-\include{privacy}
 
 \part{Estimating generative probability distributions}
 \include{nonParametric}
@@ -122,8 +127,9 @@
 \include{treatmentHomo}
 \include{treatmentHetero}
 
-\part{Time series}
+\part{Estimating time series models}
 \include{markov}
+\include{markovHMMEstimation}
 \include{forecastingUni}
 \include{forecastingMulti}
 \include{time}
@@ -137,6 +143,7 @@
 \include{hashes}
 \include{encryptionClassical}
 \include{encryptionModern}
+\include{encryptionAsymmetric}
 \include{signal}
 
 \end{document}
