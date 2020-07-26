@@ -192,6 +192,46 @@ for i in $(find ./built/jade/theory/culture/ -name \*.tex); do
 done
 
 printf "Done culture\n\n"
+printf "Doing philosophy...\n"
+
+for i in $(find ./built/jade/theory/philosophy/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done philosophy\n\n"
+printf "Doing history...\n"
+
+for i in $(find ./built/jade/theory/history/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done history\n\n"
 
 #######
 # PDF #
@@ -241,6 +281,16 @@ printf "Pandoc culture\n\n"
 cd ./built/jade/theory/culture
 pdflatex ./culture.tex > /dev/null 2>&1
 pdflatex ./culture.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc philosophy\n\n"
+cd ./built/jade/theory/philosophy
+pdflatex ./philosophy.tex > /dev/null 2>&1
+pdflatex ./philosophy.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc history\n\n"
+cd ./built/jade/theory/history
+pdflatex ./history.tex > /dev/null 2>&1
+pdflatex ./history.tex > /dev/null 2>&1
 cd $current_dir
 printf "Done!\n\n"
 ############
