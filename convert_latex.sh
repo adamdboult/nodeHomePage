@@ -12,7 +12,7 @@ python3 ./createDerivedLatexFiles.py
 # Convert all tex files #
 #########################
 
-printf "Doing maths...\n"
+printf "Doing \"Mathematics\"...\n"
 
 for i in $(find ./built/jade/theory/maths/ -name \*.tex); do
     b=$(basename -- $i)
@@ -31,8 +31,8 @@ for i in $(find ./built/jade/theory/maths/ -name \*.tex); do
 
 done
 
-printf "Done maths\n\n"
-printf "Doing computer...\n"
+printf "Done \"Mathematics\"\n\n"
+printf "Doing \"Computer Science\"...\n"
 
 for i in $(find ./built/jade/theory/computer -name \*.tex); do
     b=$(basename -- $i)
@@ -52,6 +52,26 @@ for i in $(find ./built/jade/theory/computer -name \*.tex); do
 done
 
 printf "Done computer\n\n"
+printf "Doing probability...\n"
+
+for i in $(find ./built/jade/theory/probability/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done probability\n\n"
 printf "Doing statistics...\n"
 
 for i in $(find ./built/jade/theory/statistics/ -name \*.tex); do
@@ -232,6 +252,26 @@ for i in $(find ./built/jade/theory/history/ -name \*.tex); do
 done
 
 printf "Done history\n\n"
+printf "Doing organisations...\n"
+
+for i in $(find ./built/jade/theory/organisations/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done organisations\n\n"
 
 #######
 # PDF #
@@ -246,6 +286,11 @@ printf "Pandoc computer\n\n"
 cd ./built/jade/theory/computer
 pdflatex ./computer.tex > /dev/null 2>&1
 pdflatex ./computer.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc probability\n\n"
+cd ./built/jade/theory/probability
+pdflatex ./probability.tex > /dev/null 2>&1
+pdflatex ./probability.tex > /dev/null 2>&1
 cd $current_dir
 printf "Pandoc statistics\n\n"
 cd ./built/jade/theory/statistics
@@ -292,6 +337,12 @@ cd ./built/jade/theory/history
 pdflatex ./history.tex > /dev/null 2>&1
 pdflatex ./history.tex > /dev/null 2>&1
 cd $current_dir
+printf "Pandoc organisations\n\n"
+cd ./built/jade/theory/organisations
+pdflatex ./organisations.tex > /dev/null 2>&1
+pdflatex ./organisations.tex > /dev/null 2>&1
+cd $current_dir
+
 printf "Done!\n\n"
 ############
 # Copy pdf #

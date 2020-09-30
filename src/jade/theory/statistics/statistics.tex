@@ -7,43 +7,13 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Probability and Statistics}
+\title{Statistics}
 \maketitle
 
 \setcounter{tocdepth}{0}
 \tableofcontents
 
 \include{preface}
-
-\part{Probability}
-\include{probability}
-\include{probabilityBayes}
-\include{entropy}
-
-\part{Variables}
-\include{probabilityVariables}
-\include{probabilityMoments}
-\include{distributions}
-
-\part{Sampling and statistics}
-\include{iid}
-\include{stats}
-\include{sampling}
-\include{likelihood}
-\include{privacy}
-
-\part{Stochastic processes}
-\include{stochastic}
-\include{stochasticMarkov}
-\include{stochasticMulti}
-\include{samplingProcess}
-\include{bayesianNetworks}
-
-\part{Stochastic methods}
-\include{integration}
-\include{optimisation}
-\include{calculusStochastic}
-\include{compression}
 
 \part{Exploratory data analysis}
 \include{distance}
@@ -84,19 +54,35 @@
 \include{linearML}
 \include{linearMLChoosing}
 \include{glm}
+\include{glmMulti}
 
 \part{Supervised machine learning}
 \include{trees}
+\include{treesRegression}
+\include{treesBayesian}
 \include{SVM}
-\include{supervised}
+\include{VariationalBayes}
 \include{supervisedNaiveBayes}
 \include{supervisedKNN}
 \include{discriminantAnalysis}
 \include{MLregression}
 \include{ensemble}
+\include{treesEnsemble}
+\include{supervised}
+\include{supervisedConfidence}
+\include{supervisedInterpret}
+\include{semiSupervised}
+\include{missingSupervised}
+\include{recommend}
 
 \part{Supervised neural networks}
 \include{neuralNetworks}
+\include{neuralNetworksLink}
+\include{neuralNetworksAlternative}
+\include{neuralNetworksPreTraining}
+\include{neuralNetworksMulti}
+\include{neuralNetworksProbabilistic}
+\include{neuralNetworksRegression}
 \include{neuralNetworksRegularising}
 \include{neuralNetworksConvolution}
 
@@ -122,10 +108,12 @@
 \part{Advanced inference}
 \include{anova}
 \include{olsMore}
-\include{recommend}
+\include{missingInference}
+\include{measurementError}
 \include{semiParametric}
 \include{treatmentHomo}
 \include{treatmentHetero}
+\include{treesCausal}
 
 \part{Estimating time series models}
 \include{markov}
@@ -136,11 +124,19 @@
 \include{NLP}
 \include{neuralNetworksRec}
 \include{RNNEncoderDecoder}
-\include{machineLearningText}
-\include{machineLearningAudio}
+\include{survivalAnalysis}
+
+\part{Applications for time series models}
+\include{machineLearningTextPrediction}
+\include{machineLearningTextTranslation}
+\include{machineLearningAudioVoice}
+\include{machineLearningAudioSong}
+\include{machineLearningAudioText}
+\include{machineLearningWeather}
 
 \part{Communication}
 \include{hashes}
+\include{merkelTrees}
 \include{encryptionClassical}
 \include{encryptionModern}
 \include{encryptionAsymmetric}

@@ -63,3 +63,9 @@ sudo systemctl start apache2.service
 sudo certbot renew
 ```
 
+# Docker instructions
+npg is the name of the app? can change.
+docker build -t "nhp:Dockerfile" .
+
+
+

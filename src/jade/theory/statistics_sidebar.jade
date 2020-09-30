@@ -1,59 +1,9 @@
 div
 	h2(style="text-decoration:none;")
 		b 
-			a(href="/theory/statistics") Probability and statistics
+			a(href="/theory/statistics") Statistics
 	p
 		a(href="/theory/statistics.pdf") Download PDF
-	h3
-		b Probability
-	p
-		a(href="/theory/statistics/probability") Events, the probability function and the Kolgomorov axioms
-	p
-		a(href="/theory/statistics/probabilityBayes") Conditional probability and Bayes' theorem
-	p
-		a(href="/theory/statistics/entropy") Entropy
-	h3
-		b Variables
-	p
-		a(href="/theory/statistics/probabilityVariables") Variables
-	p
-		a(href="/theory/statistics/probabilityMoments") Moments
-	p
-		a(href="/theory/statistics/distributions") Parametric distributions
-	h3
-		b Sampling and statistics
-	p
-		a(href="/theory/statistics/iid") Independent and identically distributed variables
-	p
-		a(href="/theory/statistics/stats") Statistics
-	p
-		a(href="/theory/statistics/sampling") Sampling from probability distributions
-	p
-		a(href="/theory/statistics/likelihood") Likelihood functions
-	p
-		a(href="/theory/statistics/privacy") Privacy
-	h3
-		b Stochastic processes
-	p
-		a(href="/theory/statistics/stochastic") Stochastic processes
-	p
-		a(href="/theory/statistics/stochasticMarkov") Markov processes
-	p
-		a(href="/theory/statistics/stochasticMulti") Multivariate time series
-	p
-		a(href="/theory/statistics/samplingProcess") Sampling from processes
-	p
-		a(href="/theory/statistics/bayesianNetworks") Bayesian networks
-	h3
-		b Stochastic methods
-	p
-		a(href="/theory/statistics/integration") Integration
-	p
-		a(href="/theory/statistics/optimisation") Optimisation
-	p
-		a(href="/theory/statistics/calculusStochastic") Stochastic calculus
-	p
-		a(href="/theory/statistics/compression") Lossy compression
 	h3
 		b Exploratory data analysis
 	p
@@ -121,15 +71,21 @@ div
 	p
 		a(href="/theory/statistics/linearMLChoosing") Choosing linear models for prediction
 	p
-		a(href="/theory/statistics/glm") Generalised linear models
+		a(href="/theory/statistics/glm") Generalised linear models, the delta rule and binary classification
+	p
+		a(href="/theory/statistics/glmMulti") Generalised linear models and multiclass classification
 	h3
 		b Supervised machine learning
 	p
-		a(href="/theory/statistics/trees") Classification And Regression Trees (CART)
+		a(href="/theory/statistics/trees") Classification trees
+	p
+		a(href="/theory/statistics/treesRegression") Regression Trees
+	p
+		a(href="/theory/statistics/treesBayesian") Bayesian trees
 	p
 		a(href="/theory/statistics/SVM") Support Vector Machines (SVM)
 	p
-		a(href="/theory/statistics/supervised") Other machine learning classifiers
+		a(href="/theory/statistics/variationalBayes") Variational Bayes
 	p
 		a(href="/theory/statistics/supervisedNaiveBayes") The Naive Bayes classifier
 	p
@@ -140,10 +96,36 @@ div
 		a(href="/theory/statistics/MLregression") Non-parametric regression
 	p
 		a(href="/theory/statistics/ensemble") Ensemble methods
+	p
+		a(href="/theory/statistics/treesEnsemble") Ensemble methods for trees
+	p
+		a(href="/theory/statistics/supervised") Regularising black box models
+	p
+		a(href="/theory/statistics/supervisedConfidence") Confidence intervals of black box models
+	p
+		a(href="/theory/statistics/supervisedInterpret") Interpreting black box models
+	p
+		a(href="/theory/statistics/semiSupervised") Semi-supervised learning
+	p
+		a(href="/theory/statistics/missingSupervised") Imputing missing data for prediction
+	p
+		a(href="/theory/statistics/recommend") Recommenders
 	h3
 		b Supervised neural networks
 	p
-		a(href="/theory/statistics/neuralNetworks") Multi-layer perceptrons
+		a(href="/theory/statistics/neuralNetworks") Multi-layer perceptrons and backpropagation
+	p
+		a(href="/theory/statistics/neuralNetworksLink") Additional link functions for neural networks
+	p
+		a(href="/theory/statistics/neuralNetworksAlternative") Alternatives to backpropagation
+	p
+		a(href="/theory/statistics/neuralNetworksPreTraining") Pre-training neural networks
+	p
+		a(href="/theory/statistics/neuralNetworksMulti") Multi-class neural networks
+	p
+		a(href="/theory/statistics/neuralNetworksProbabilistic") Probabilistic neural networks
+	p
+		a(href="/theory/statistics/neuralNetworksRegression") Neural networks and regression
 	p
 		a(href="/theory/statistics/neuralNetworksRegularising") Regularising neural networks
 	p
@@ -187,13 +169,17 @@ div
 	p
 		a(href="/theory/statistics/olsMore") Instrumental Variables
 	p
-		a(href="/theory/statistics/recommend") Missing data and measurement error
+		a(href="/theory/statistics/missingInference") Imputing missing data for inference
+	p
+		a(href="/theory/statistics/measurementError") Measurement error and inference
 	p
 		a(href="/theory/statistics/semiParametric") Semi-parametric regression
 	p
 		a(href="/theory/statistics/treatmentHomo") Homogeneous treatment effects
 	p
 		a(href="/theory/statistics/treatmentHetero") Heterogeneous treatment effects
+	p
+		a(href="/theory/statistics/treesCausal") Causal trees
 	h3
 		b Estimating time series models
 	p
@@ -213,13 +199,27 @@ div
 	p
 		a(href="/theory/statistics/RNNEncoderDecoder") Recurrent Neural Network (RNN) encoders and decoders
 	p
-		a(href="/theory/statistics/machineLearningText") Text recognition
+		a(href="/theory/statistics/survivalAnalysis") Survival analysis
+	h3
+		b Applications for time series models
 	p
-		a(href="/theory/statistics/machineLearningAudio") Audio recognition
+		a(href="/theory/statistics/machineLearningTextPrediction") Text prediction
+	p
+		a(href="/theory/statistics/machineLearningTextTranslation") Text translation
+	p
+		a(href="/theory/statistics/machineLearningAudioVoice") Voice recognition
+	p
+		a(href="/theory/statistics/machineLearningAudioSong") Song recognition
+	p
+		a(href="/theory/statistics/machineLearningAudioText") Audio-to-text / text-to-audio
+	p
+		a(href="/theory/statistics/machineLearningWeather") Weather forecasting
 	h3
 		b Communication
 	p
 		a(href="/theory/statistics/hashes") Hashes
+	p
+		a(href="/theory/statistics/merkelTrees") Merkel trees
 	p
 		a(href="/theory/statistics/encryptionClassical") Classical encryption
 	p
