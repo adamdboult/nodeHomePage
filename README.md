@@ -1,3 +1,9 @@
+
+# Docker instructions
+npg is the name of the app? can change.
+docker build -t "nhp:Dockerfile" .
+docker run --detach -p 3000:3000 nhp:Dockerfile
+
 # Installation
 Install APT dependencies:
 ```bash
@@ -50,7 +56,6 @@ sudo systemctl reload apache2
 ```
 
 # Setting up SSL
-
 ```bash
 sudo systemctl stop apache2.service
 sudo apt install certbot
@@ -58,14 +63,7 @@ sudo certbot certonly
 sudo systemctl start apache2.service
 ```
 # Renewing certificates
-
 ```bash
 sudo certbot renew
 ```
-
-# Docker instructions
-npg is the name of the app? can change.
-docker build -t "nhp:Dockerfile" .
-
-
 

@@ -7,4 +7,5 @@ public/
 *.pyc
 *__pycache__/
 artillery_*
+.git/
 
