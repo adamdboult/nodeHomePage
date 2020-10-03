@@ -1,8 +1,10 @@
 
 # Docker instructions
 npg is the name of the app? can change.
-docker build -t "nhp:Dockerfile" .
-docker run --detach -p 3000:3000 nhp:Dockerfile
+```bash
+sudo docker build -t "nhp:Dockerfile" .
+sudo docker run --detach -p 3000:3000 nhp:Dockerfile
+```
 
 # Installation
 Install APT dependencies:
