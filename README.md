@@ -64,6 +64,7 @@ sudo apt install certbot
 sudo certbot certonly
 sudo systemctl start apache2.service
 ```
+
 # Renewing certificates
 ```bash
 sudo certbot renew

@@ -12,9 +12,9 @@ python3 ./createDerivedLatexFiles.py
 # Convert all tex files #
 #########################
 
-printf "Doing \"Mathematics\"...\n"
+printf "Doing \"Logic\"...\n"
 
-for i in $(find ./built/jade/theory/maths/ -name \*.tex); do
+for i in $(find ./built/jade/theory/logic/ -name \*.tex); do
     b=$(basename -- $i)
     b=${b%.tex}
     s=$b".tex"
@@ -31,7 +31,67 @@ for i in $(find ./built/jade/theory/maths/ -name \*.tex); do
 
 done
 
-printf "Done \"Mathematics\"\n\n"
+printf "Done \"Logic\"\n\n"
+printf "Doing \"Algebra\"...\n"
+
+for i in $(find ./built/jade/theory/algebra/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Algebra\"\n\n"
+printf "Doing \"Analysis\"...\n"
+
+for i in $(find ./built/jade/theory/analysis/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Analysis\"\n\n"
+printf "Doing \"Geometry\"...\n"
+
+for i in $(find ./built/jade/theory/geometry/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Geometry\"\n\n"
 printf "Doing \"Computer Science\"...\n"
 
 for i in $(find ./built/jade/theory/computer -name \*.tex); do
@@ -277,10 +337,25 @@ printf "Done organisations\n\n"
 # PDF #
 #######
 # Run twice to get table of contents
-printf "Pandoc maths\n\n"
-cd ./built/jade/theory/maths
-pdflatex ./maths.tex > /dev/null 2>&1
-pdflatex ./maths.tex > /dev/null 2>&1
+printf "Pandoc logic\n\n"
+cd ./built/jade/theory/logic
+pdflatex ./logic.tex > /dev/null 2>&1
+pdflatex ./logic.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc algebra\n\n"
+cd ./built/jade/theory/algebra
+pdflatex ./algebra.tex > /dev/null 2>&1
+pdflatex ./algebra.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc analysis\n\n"
+cd ./built/jade/theory/analysis
+pdflatex ./analysis.tex > /dev/null 2>&1
+pdflatex ./analysis.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc geometry\n\n"
+cd ./built/jade/theory/geometry
+pdflatex ./geometry.tex > /dev/null 2>&1
+pdflatex ./geometry.tex > /dev/null 2>&1
 cd $current_dir
 printf "Pandoc computer\n\n"
 cd ./built/jade/theory/computer

@@ -4,7 +4,7 @@ import shutil
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-subjects = ["maths", "computer", "probability", "statistics", "physics", "ai", "biology", "engineering", "economics", "culture", "philosophy", "history", "organisations"]
+subjects = ["logic", "algebra", "analysis", "geometry", "computer", "probability", "statistics", "physics", "ai", "biology", "engineering", "economics", "culture", "philosophy", "history", "organisations"]
 
 directory_to_make = os.path.join(dir_path, "public", "theory")
 if not os.path.exists(directory_to_make):
