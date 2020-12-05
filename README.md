@@ -4,8 +4,13 @@ npg is the name of the app? can change.
 ```bash
 sudo docker build -t "nhp:Dockerfile" .
 sudo docker run --detach -p 3000:3000 nhp:Dockerfile
+
+
 ```
 
+or just 
+sudo docker-compose build
+sudo docker-compose up --detach
 # Installation
 Install APT dependencies:
 ```bash
