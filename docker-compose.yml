@@ -1,7 +1,7 @@
 version: "3"
 services:
   nodejs:
-    container_name: nodejs
+    container_name: homepage_nodejs
     build:
         context: ./
         dockerfile: ./Dockerfile
