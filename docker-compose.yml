@@ -1,6 +1,6 @@
 version: "3"
 services:
-  nodejs:
+  homepage_nodejs:
     container_name: homepage_nodejs
     build:
         context: ./
