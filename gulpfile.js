@@ -13,20 +13,19 @@ var jshint = require('gulp-jshint');
 //var changed = require('gulp-changed');
 //var minifyHTML = require('gulp-minify-html');
 var concat = require('gulp-concat');
-var stripDebug = require('gulp-strip-debug');
-var uglify = require('gulp-uglify');
+//var stripDebug = require('gulp-strip-debug');
+//var uglify = require('gulp-uglify');
 var autoprefix = require('gulp-autoprefixer');
 //var minifyCSS = require('gulp-minify-css');
 var sass=require('gulp-sass');
-var rmdir = require('rimraf');
+//var rmdir = require('rimraf');
 var fs=require('fs');
 //var shell=require('gulp-shell');
-var Q = require('q');
-var autoprefix = require('gulp-autoprefixer');
+//var Q = require('q');
 
 var sass=require('gulp-sass');
 
-var clean = require('gulp-clean');
+//var clean = require('gulp-clean');
 var del = require('del');
 
 var exec = require('child_process').exec;
@@ -95,8 +94,8 @@ gulp.task('styles', function() {
 
 gulp.task('latex', function() {
 
-    var latexSrc = __dirname + '/src/jade/**/*',
-        latexDst = __dirname + '/built/jade';
+    var latexSrc = __dirname + '/src/pug/**/*',
+        latexDst = __dirname + '/built/pug';
 
     return gulp.src(latexSrc)
         .pipe(gulp.dest(latexDst));

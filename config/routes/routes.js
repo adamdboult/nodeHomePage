@@ -20,11 +20,11 @@ var postDate;
 var postNoType;
 var postFull;
 
-fs.readdir(__dirname+'/../../src/jade/blog', function(err, files){
+fs.readdir(__dirname+'/../../src/pug/blog', function(err, files){
     files.forEach(function(f){
-	postTitle=f.substring(8,f.length-5);
+	postTitle=f.substring(8,f.length-4);
 	postDate=new Date(f.substring(0,4),f.substring(4,6)-1,f.substring(6,8));
-	postNoType=f.substring(0,f.length-5);
+	postNoType=f.substring(0,f.length-4);
 	postFull=f;
 	blogArray.push({
 	    full:postFull,
@@ -42,6 +42,7 @@ fs.readdir(__dirname+'/../../src/jade/blog', function(err, files){
 	rssString +='</item>';
 	
     });
+
     rssString +='</channel>';
     rssString +='</rss>';
 });

@@ -7,9 +7,9 @@ var logger = require(__dirname + '/config/winston');
 //DEPENDENCIES, 'jade' not included but referenced later
 var express  = require('express'),
     http = require('http'),
-    https = require('https'),
+    //https = require('https'),
     fs=require('fs'),
-    forceDomain = require("forcedomain"),
+    //forceDomain = require("forcedomain"),
     favicon = require('serve-favicon'),
     spawn = require('child_process').spawn;
 
@@ -18,12 +18,13 @@ var configObj = JSON.parse(fs.readFileSync(__dirname + '/config/config.json' , '
 
 //START EXPRESS
 var app = express();
+/*
 app.use(forceDomain({
     hostname: configObj.siteName,
     //  port: 443,
     protocol: 'https'
 }));
-
+*/
 //forward http to https
 /*
 function requireHTTPS(req, res, next) {
@@ -46,9 +47,10 @@ app.use(favicon(__dirname + configObj.favicon));
 app.use(express.static(__dirname + '/public'));// set the static files location /public/img will be /img for users
 
 app.locals.pretty=true;
-//app.set('views',__dirname+'/src/jade/');
-app.set('views',__dirname+'/built/jade/');
-app.set('view engine', 'jade');
+//app.set('views',__dirname+'/src/pug/');
+app.set('views',__dirname+'/built/pug/');
+//app.set('view engine', 'pug');
+app.set('view engine', 'pug');
 
 require(__dirname+'/config/routes/routes')(app, logger);
 

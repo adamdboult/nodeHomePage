@@ -11,7 +11,7 @@ subjects = ["logic", "algebra", "analysis", "geometry", "computer", "probability
 
 for subject in subjects:
 
-    directory_to_walk = os.path.join("built", "jade", "theory", subject)
+    directory_to_walk = os.path.join("built", "pug", "theory", subject)
 
     for folder in os.listdir(directory_to_walk):
         #print("")
@@ -34,9 +34,9 @@ for subject in subjects:
 
         f.close()
 
-        f = open(os.path.join(directory_to_walk, folder + ".jade"), "w")
+        f = open(os.path.join(directory_to_walk, folder + ".pug"), "w")
 
-        f.write("extends ../../templates/loginHeader.jade\n")
+        f.write("extends ../../templates/loginHeader.pug\n")
         f.write("block content\n")
         f.write("	style\n")
         f.write("		| h1 {font-weight: bold; text-decoration:underline; text-align:center;}\n")
@@ -48,7 +48,7 @@ for subject in subjects:
         f.write("			nav.col-md-2.bg-light.sidebar\n")
         f.write("				div.sidebar-sticky\n")
         f.write("					br\n")
-        f.write("					include ../" + subject + "_sidebar.jade\n")
+        f.write("					include ../" + subject + "_sidebar.pug\n")
         #f.write("			main.col-md-9.ml-sm-auto.col-lg-10.px-4(role=\"main\")\n")
         f.write("			.col-md-10\n")
         f.write("				br\n")

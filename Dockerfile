@@ -6,8 +6,7 @@ FROM node:current-slim
 WORKDIR /usr/src/nodeHomePage
 
 # Update/upgrade
-RUN apt-get update
-RUN apt-get -y upgrade
+RUN apt-get update && apt-get -y upgrade
 
 # Install basic stuff
 RUN apt-get -y install build-essential apache2 git
@@ -18,13 +17,7 @@ RUN apt-get -y install pandoc texlive-full
 # Install python
 RUN apt-get -y install python3
 
-# Install node
-#RUN apt-get -y install nodejs npm
-#RUN npm -g install npx
-
 # Copy the file from your host to your current location.
-#COPY package.json .
-#COPY bower.json .
 COPY . .
 
 # Install
