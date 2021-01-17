@@ -1,9 +1,0 @@
-{
-    "ports":{
-	"http": 3000,
-	"https": 8000
-    },
-    "siteName": "www.bou.lt",
-    "favicon": "/public/img/yetiPredict.ico"
-}
-

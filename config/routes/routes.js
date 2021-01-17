@@ -47,7 +47,7 @@ fs.readdir(__dirname+'/../../src/pug/blog', function(err, files){
     rssString +='</rss>';
 });
 
-module.exports=function(app,logger){
+module.exports=function(app){
     'use strict';
     //var DataSerie=require(__dirname+'/../models/data.js');
     //var rootObject={root:__dirname+'/../../public'};

@@ -1,16 +1,16 @@
 {
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "del": "^6.0.0",
     "express": "^4.16.4",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "jquery": "^3.5.1",
     "jshint": "^2.10.2",
-    "pug": "^3.0.0",
-    "serve-favicon": "^2.5.0",
-    "winston": "^3.2.1"
+    "mathjax": "^3.1.2",
+    "popper.js": "^1.16.1",
+    "pug": "^3.0.0"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,7 @@
   },
   "description": "Adam Boult's homepage",
   "scripts": {
-    "gulp_debug": "gulp debug",
-    "bower_install": "bower install",
-    "bower_update": "bower update"
+    "gulp_debug": "gulp debug"
   },
   "license": "SEE LICENSE IN LICENSE.md"
 }

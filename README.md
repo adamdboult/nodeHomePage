@@ -22,12 +22,6 @@ Install npm packages.
 npm install
 ```
 
-Install bower components.
-
-```bash
-npx bower install
-```
-
 Prepare public files with gulp.
 
 ```bash
