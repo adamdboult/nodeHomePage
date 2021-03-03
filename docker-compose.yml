@@ -1,11 +1,11 @@
 version: "3"
 services:
   homepage_nodejs:
-    container_name: homepage_nodejs
+    container_name: homepage-nodejs
     build:
         context: ./
-        dockerfile: ./Dockerfile
+        dockerfile: ./docker/web/Dockerfile
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3000:80"
 
