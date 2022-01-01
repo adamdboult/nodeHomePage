@@ -100,6 +100,18 @@ gulp.task('latex', function() {
 
 });
 
+// Generate sidebars
+gulp.task('sidebars', function(cb) {
+
+    exec('python3 ./create_sidebars.py', function(err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+
+
+});
+
 // Latex convert
 gulp.task('latexConvert', function(cb) {
     
@@ -112,5 +124,5 @@ gulp.task('latexConvert', function(cb) {
 });
 
 // Exports
-exports.default = gulp.series('jshint', 'emptyDestFolders', 'favicon', 'packages', 'scripts', 'styles', 'latex', 'latexConvert');
+exports.default = gulp.series('jshint', 'emptyDestFolders', 'favicon', 'packages', 'scripts', 'styles', 'latex', 'sidebars', 'latexConvert');
 

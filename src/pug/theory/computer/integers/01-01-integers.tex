@@ -1,0 +1,40 @@
+
+\subsection{Representing integers}
+
+We can expand the natural numbers to the integers.
+
+Consider a byte representing the natural numbers. Previously this would have gone from \(0\) to \(255\), with a series of all \(1\)s representing \(255\).
+
+To introduce integers all numbers with a \(1\) in the leftmost bit are considered to be negative.
+
+
+\subsection{Signed magnitude}
+
+You can use the first bit as the sign. eg \(-1\) is represented as \(1001\).
+
+The downside to this is that arithmetic operations for integers don't work.
+
+\subsection{Representing using one's complement}
+
+If \(1\) is \(0001\), \(-1\) is \(1110\).
+
+One's complement refers to the NOT operation on the binary number.
+
+The advantage of this approach is that it works well with adders.
+
+Downsides are that negative zero exists (\(0000\) and \(1111\) are both \(0\)).
+
+In addition logic needs to deal with end-around carry.
+
+\subsection{Two's complement}
+
+We can represent the value of negative numbers with two’s complement. 
+
+In one's complement, the inverse of a number is the NOT operation on the binary number.
+
+For two's complement, the inverse is the number which means \(x + inverse(x) = 2^n\) where \(n\) is the number of digits.
+
+So we have \(0011\) as \(3\), the inverse is \(1101\) because \(3+13=2^4=16\).
+
+The use of two’s complement allows us to use the arithmetical logical units for the integers.
+

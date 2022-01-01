@@ -1,0 +1,73 @@
+
+\subsection{Conditional probability}
+
+We define conditional probability
+
+\(P(E_i|E_j):=\dfrac{P(E_i\land E_j)}{P(E_j)}\)
+
+We can show this is between \(0\) and \(1\).
+
+\(P(E_j)=P(E_i\land E_j)+P(\bar{E_i}\land E_j)\)
+
+\(P(E_i|E_j):=\dfrac{P(E_i\land E_j)}{ P(E_i\land E_j)+P(\bar{E_i}\land E_j)}\)
+
+We know:
+
+\(P(E_i|E_j):=\dfrac{P(E_i \land E_j)}{P(E_j)}\)
+
+\(P(E_j|E_i):=\dfrac{P(E_i \land E_j)}{P(E_i)}\)
+
+So:
+
+\(P(E_i|E_j)P(E_j)=P(E_j|E_i) P(E_i)\)
+
+\(P(E_i|E_j)=\dfrac{P(E_j|E_i) P(E_i)}{P(E_j)}\)
+
+Note that this is undefined when \(P(E_j)=0\)
+
+Note that for the same event, 
+
+\(P(E_i|E_j)=\dfrac{P(E_i\land E_j)}{P(E_j)}\)
+
+\(P(E_i|E_j)=0\)
+
+For the same outcome:
+
+\(P(E_i|E_i)=\dfrac{P(E_i\land E_i)}{P(E_i)}\)
+
+\(P(E_i|E_i)=\dfrac{P(E_i)}{P(E_i)}\)
+
+\(P(E_i|E_i)=1\)
+
+\subsection{Bayes' theorem}
+
+From the definition of conditional probability we know that:
+
+\(P(E_i|E_j):=\dfrac{P(E_i\land E_j)}{P(E_j)}\)
+
+\(P(E_j|E_i):=\dfrac{P(E_i\land E_j)}{P(E_i)}\)
+
+So:
+
+\(P(E_i\land E_j)=P(E_i|E_j)P(E_j)\)
+
+\(P(E_i\land E_j)=P(E_j|E_i)P(E_i)\)
+
+So:
+
+\(P(E_i|E_j)P(E_j)=P(E_j|E_i)P(E_i)\)
+
+\subsection{Independent events}
+
+Events are independent if:
+
+\(P(E_i|E_j)=P(E_i)\)
+
+Note that:
+
+\(P(E_i\land E_j)=P(E_i|E_j)P(E_j)\)
+
+And so for independent events:
+
+\(P(E_i\land E_j)=P(E_i)P(E_j)\)
+

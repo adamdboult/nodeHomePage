@@ -1,0 +1,23 @@
+
+\subsection{Half adder}
+
+We first introduce the half adder.
+
+Take two inputs \(A\) and \(B\) and put both inputs to two binary operators.
+
+The operators are an XOR gate and an AND gate.
+
+The AND gate only returns \(1\) if both inputs are \(1\). The XOR gate returns \(1\) if only one input is \(1\).
+
+The XOR gate returns the second “digit” while the AND date returns the first.
+
+This means we take two number at either \(0\) or \(1\), and return beteen \(0\) and \(2\) in binary form.
+
+\subsection{Full adder}
+
+If we are adding, say, a 2 bit number, then we need the abilty to carry numbers. The full adder takes two numbers, and also a carry from the previous digit. The full adder then adds these three numbers.
+
+The carry from each full adder (or half adder) is then passed to the next digit.
+
+If the carry is \(1\) for the final digit then there has been an overflow.
+

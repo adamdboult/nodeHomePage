@@ -1,0 +1,31 @@
+\subsection{Macros}
+
+Not separate, code is replaced before it is run
+
+\begin{verbatim}
+#define PI 3.14
+\end{verbatim}
+
+These are then expanded before compiling.
+
+\subsection{Parametised macros}
+
+We can also replace using functions. 
+
+For example we could do:
+
+\begin{verbatim}
+print(3 + 1)
+print(2 + 1)
+\end{verbatim}
+
+or
+
+\begin{verbatim}
+#define plusOne(x) (x+1)
+print(plusOne(x))
+print(plusOne(x))
+\end{verbatim}
+
+
+

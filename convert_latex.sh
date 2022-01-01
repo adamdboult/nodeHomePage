@@ -232,6 +232,26 @@ for i in $(find ./built/pug/theory/engineering -name \*.tex); do
 done
 
 printf "Done engineering\n\n"
+printf "Doing equilibrium...\n"
+
+for i in $(find ./built/pug/theory/equilibrium -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done equilibrium\n\n"
 printf "Doing economics...\n"
 
 for i in $(find ./built/pug/theory/economics -name \*.tex); do
@@ -252,9 +272,9 @@ for i in $(find ./built/pug/theory/economics -name \*.tex); do
 done
 
 printf "Done economics\n\n"
-printf "Doing culture...\n"
+printf "Doing macroeconomics...\n"
 
-for i in $(find ./built/pug/theory/culture/ -name \*.tex); do
+for i in $(find ./built/pug/theory/macroeconomics -name \*.tex); do
     b=$(basename -- $i)
     b=${b%.tex}
     s=$b".tex"
@@ -271,10 +291,10 @@ for i in $(find ./built/pug/theory/culture/ -name \*.tex); do
 
 done
 
-printf "Done culture\n\n"
-printf "Doing philosophy...\n"
+printf "Done macroeconomics\n\n"
+printf "Doing public choice...\n"
 
-for i in $(find ./built/pug/theory/philosophy/ -name \*.tex); do
+for i in $(find ./built/pug/theory/publicChoice/ -name \*.tex); do
     b=$(basename -- $i)
     b=${b%.tex}
     s=$b".tex"
@@ -291,7 +311,7 @@ for i in $(find ./built/pug/theory/philosophy/ -name \*.tex); do
 
 done
 
-printf "Done philosophy\n\n"
+printf "Done public choice\n\n"
 printf "Doing history...\n"
 
 for i in $(find ./built/pug/theory/history/ -name \*.tex); do
@@ -312,9 +332,9 @@ for i in $(find ./built/pug/theory/history/ -name \*.tex); do
 done
 
 printf "Done history\n\n"
-printf "Doing organisations...\n"
+printf "Doing epistemology...\n"
 
-for i in $(find ./built/pug/theory/organisations/ -name \*.tex); do
+for i in $(find ./built/pug/theory/epistemologyOntology/ -name \*.tex); do
     b=$(basename -- $i)
     b=${b%.tex}
     s=$b".tex"
@@ -331,7 +351,27 @@ for i in $(find ./built/pug/theory/organisations/ -name \*.tex); do
 
 done
 
-printf "Done organisations\n\n"
+printf "Done history\n\n"
+printf "Doing philosophy...\n"
+
+for i in $(find ./built/pug/theory/philosophy/ -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done philosophy\n\n"
 
 #######
 # PDF #
@@ -392,30 +432,40 @@ cd ./built/pug/theory/engineering
 pdflatex ./engineering.tex > /dev/null 2>&1
 pdflatex ./engineering.tex > /dev/null 2>&1
 cd $current_dir
+printf "Pandoc equilibrium\n\n"
+cd ./built/pug/theory/equilibrium
+pdflatex ./equilibrium.tex > /dev/null 2>&1
+pdflatex ./equilibrium.tex > /dev/null 2>&1
+cd $current_dir
 printf "Pandoc economics\n\n"
 cd ./built/pug/theory/economics
 pdflatex ./economics.tex > /dev/null 2>&1
 pdflatex ./economics.tex > /dev/null 2>&1
 cd $current_dir
-printf "Pandoc culture\n\n"
-cd ./built/pug/theory/culture
-pdflatex ./culture.tex > /dev/null 2>&1
-pdflatex ./culture.tex > /dev/null 2>&1
+printf "Pandoc macroeconomics\n\n"
+cd ./built/pug/theory/macroeconomics
+pdflatex ./macroeconomics.tex > /dev/null 2>&1
+pdflatex ./macroeconomics.tex > /dev/null 2>&1
 cd $current_dir
-printf "Pandoc philosophy\n\n"
-cd ./built/pug/theory/philosophy
-pdflatex ./philosophy.tex > /dev/null 2>&1
-pdflatex ./philosophy.tex > /dev/null 2>&1
+printf "Pandoc public choice\n\n"
+cd ./built/pug/theory/publicChoice
+pdflatex ./publicChoice.tex > /dev/null 2>&1
+pdflatex ./publicChoice.tex > /dev/null 2>&1
 cd $current_dir
 printf "Pandoc history\n\n"
 cd ./built/pug/theory/history
 pdflatex ./history.tex > /dev/null 2>&1
 pdflatex ./history.tex > /dev/null 2>&1
 cd $current_dir
-printf "Pandoc organisations\n\n"
-cd ./built/pug/theory/organisations
-pdflatex ./organisations.tex > /dev/null 2>&1
-pdflatex ./organisations.tex > /dev/null 2>&1
+printf "Pandoc epistemologyOntology\n\n"
+cd ./built/pug/theory/epistemologyOntology
+pdflatex ./epistemologyOntology.tex > /dev/null 2>&1
+pdflatex ./epistemologyOntology.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc philosophy\n\n"
+cd ./built/pug/theory/philosophy
+pdflatex ./philosophy.tex > /dev/null 2>&1
+pdflatex ./philosophy.tex > /dev/null 2>&1
 cd $current_dir
 
 printf "Done!\n\n"
