@@ -137,7 +137,7 @@ for subject in subjects:
         print(contents_in_folder)
         print("Tex:")
         print(contents_in_tex)
-        
+        raise Exception("Contents do no match") 
 
     
     ####
