@@ -17,33 +17,38 @@ all: empty_dest favicon packages scripts styles latex sidebars latex_convert
 #    jshint ./src/**/*.js
     
 empty_dest:
-    rm -rf ./built
-    rm -rf ./public
+	rm -rf ./built/
+	rm -rf ./public/
+	mkdir ./built/
+	mkdir ./public/
 
 favicon:
-    cp ./src/img/compiled/* ./public/
+	cp ./src/img/compiled/* ./public/
 
 packages:
-    cp -r ./node_modules/mathjax/es5/**/* ./public/packages/mathjax/
-    cp -r ./node_modules/bootstrap/dist/**/* ./public/packages/bootstrap/
-    cp -r ./node_modules/jquery/dist/**/* ./public/packages/jquery/
-    cp -r ./node_modules/popper.js/dist/umd/**/* ./public/packages/popper.js/
+	mkdir ./public/packages/
+	cp -R ./node_modules/mathjax/es5 ./public/packages/mathjax
+	cp -R ./node_modules/bootstrap/dist ./public/packages/bootstrap
+	cp -R ./node_modules/jquery/dist ./public/packages/jquery
+	cp -R ./node_modules/popper.js/dist/umd ./public/packages/popper.js
 
 scripts:
-      cp ./src/js/**/* ./public/js/
+	mkdir ./public/js/
+	#cp ./src/js/* ./public/js/
       
 styles:
-    cp ./src/styles/**/*.css ./public/css/
-    sass ./src/styles/**/*.scss:./public/css/
+	mkdir ./public/css/
+	#cp ./src/styles/**/*.css ./public/css/
+	#sass ./src/styles/**/*.scss:./public/css/
 
 latex:
-    cp -r ./src/pug/**/* ./built/pug/
+	cp -R ./src/pug ./built/pug
 
 sidebars:
-    python3 ./create_sidebars.py
+	python3 ./create_sidebars.py
 
 latex_convert:
-    ./convert_latex.sh
+	./convert_latex.sh
     
     
 
