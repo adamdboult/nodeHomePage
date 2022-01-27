@@ -12,8 +12,5 @@
     "url": "git://git@github.com/adamdboult/nodeHomePage.git"
   },
   "description": "Adam Boult's homepage",
-  "scripts": {
-    "gulp_debug": "gulp debug"
-  },
   "license": "SEE LICENSE IN LICENSE.md"
 }

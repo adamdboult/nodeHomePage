@@ -7,4 +7,4 @@ public/
 *.pyc
 *__pycache__/
 artillery_*
-
+.sass-cache/

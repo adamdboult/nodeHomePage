@@ -33,12 +33,12 @@ packages:
 	cp -R ./node_modules/popper.js/dist/umd ./public/packages/popper.js
 
 scripts:
-	mkdir ./public/js/
-	#cp ./src/js/* ./public/js/
+	#mkdir ./public/js/
+	cp -R ./src/js ./public/js
       
 styles:
 	mkdir ./public/css/
-	#cp ./src/styles/**/*.css ./public/css/
+	#cp -R./src/styles/**/*.css ./public/css/
 	#sass ./src/styles/**/*.scss:./public/css/
 
 latex:
