@@ -9,22 +9,36 @@ sudo docker-compose up --detach
 # Kubernetes instructions
 
 Terminology:
+
 + Pods are collections of docker containers. Can be just one docker container or more
 + Nodes are where pods are deployed. Could be one node, or more.
 + Cluster is a collection of nodes
 
 ## General setup
 
+If need to hard reset
+```bash
+microk8s reset --destroy-storage
+```
+
 Enable things.
 Registry allows the use of local Docker builds.
 
 ```bash
-microk8s enable dns dashboard storage registry
+sudo microk8s enable dns dashboard storage registry
 ```
+
+Might need to change firewall rules https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#2-deploying-microk8s
+
+```bash
+sudo ufw allow in on cni0 && sudo ufw allow out on cni0
+sudo ufw default allow routed
+```
+
 
 Enable loadbalancer. Separate as asks questions.
 ```bash
-microk8s enable metallb
+sudo microk8s enable metallb
 ```
 
 
@@ -103,10 +117,10 @@ Install npm packages.
 npm install
 ```
 
-Prepare public files with gulp.
+Prepare public files with make.
 
 ```bash
-npx gulp
+make
 ```
 
 # Non-docker running

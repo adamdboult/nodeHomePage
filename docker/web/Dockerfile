@@ -8,6 +8,5 @@ ENV LANG C.UTF-8
 WORKDIR /Projects/nodeHomePage/
 
 COPY . .
-#RUN npm install && npx gulp
 RUN npm install && make
 CMD [ "node", "server.js", "80" ]

@@ -1,10 +1,9 @@
-bower_components/
-node_modules/
-built/
-public/
 *.log
 *~
 *.pyc
+node_modules/
+built/
+public/
 *__pycache__/
 artillery_*
 .sass-cache/
