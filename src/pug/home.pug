@@ -1,4 +1,4 @@
-extends templates/loginHeader.pug
+extends templates/header.pug
 
 block content
 	.container.fill
@@ -7,7 +7,7 @@ block content
 			h1.bs-docs-featurette-title Adam Boult
 			p.lead This is Adam Boult's personal website
 		.row
-			.col-sm-4
+			.col-sm-6
 				h3
 					b Projects
 				p
@@ -19,7 +19,7 @@ block content
 				p
 					a(href="https://www.yetipredict.com") YetiPredict.com
 					| . Track your own predictions, privately or publicly, to check you are on track and are planning accurately.
-			.col-sm-4
+			.col-sm-6
 				//a(href="/theory")
 				//	h3 Notes
 				h3
@@ -43,7 +43,7 @@ block content
 						|  
 						a(href="/theory/geometry.pdf") (pdf)
 					li
-						a(href="/theory/computer/") Computer science
+						a(href="/theory/computer/") Computer science, Lisp and C
 						|  
 						a(href="/theory/computer.pdf") (pdf)
 					li
@@ -58,6 +58,10 @@ block content
 						a(href="/theory/physics/") Physics
 						|  
 						a(href="/theory/physics.pdf") (pdf)
+					li
+						a(href="/theory/programming/") Other programming languages
+						|  
+						a(href="/theory/programming.pdf") (pdf)
 					li
 						a(href="/theory/ai/") Decision and game theory
 						|  
@@ -98,15 +102,15 @@ block content
 					//	a(href="/theory/philosophy/") Political science and philosophy
 					//	|  
 					//	a(href="/theory/philosophy.pdf") (pdf)
-			.col-sm-4
-				//a(href="https://www.economoose.com")
-				//	h3 Economoose
-				//p Explore economic data.
-				h3 Blog
-				p 
-					| My 
-					a(href="/news/") blog
-					| .
+			//.col-sm-4
+			//	//a(href="https://www.economoose.com")
+			//	//	h3 Economoose
+			//	//p Explore economic data.
+			//	h3 Blog
+			//	p 
+			//		| My 
+			//		a(href="/news/") blog
+			//		| .
 		//footer
 		//	h3 Contact
 		//	p.version Created by Adam Boult

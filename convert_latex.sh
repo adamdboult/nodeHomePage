@@ -92,7 +92,7 @@ for i in $(find ./built/pug/theory/geometry/ -name \*.tex); do
 done
 
 printf "Done \"Geometry\"\n\n"
-printf "Doing \"Computer Science\"...\n"
+printf "Doing \"Computer Science, Lisp and C\"...\n"
 
 for i in $(find ./built/pug/theory/computer -name \*.tex); do
     b=$(basename -- $i)
@@ -111,8 +111,8 @@ for i in $(find ./built/pug/theory/computer -name \*.tex); do
 
 done
 
-printf "Done computer\n\n"
-printf "Doing probability...\n"
+printf "Done \"Computer Science\"\n\n"
+printf "Doing \"Probability\"...\n"
 
 for i in $(find ./built/pug/theory/probability/ -name \*.tex); do
     b=$(basename -- $i)
@@ -131,8 +131,8 @@ for i in $(find ./built/pug/theory/probability/ -name \*.tex); do
 
 done
 
-printf "Done probability\n\n"
-printf "Doing statistics...\n"
+printf "Done \"Probability\"\n\n"
+printf "Doing \"Statistics\"...\n"
 
 for i in $(find ./built/pug/theory/statistics/ -name \*.tex); do
     b=$(basename -- $i)
@@ -151,8 +151,8 @@ for i in $(find ./built/pug/theory/statistics/ -name \*.tex); do
 
 done
 
-printf "Done statistics\n\n"
-printf "Doing physics...\n"
+printf "Done \"Statistics\"\n\n"
+printf "Doing \"Physics\"...\n"
 
 for i in $(find ./built/pug/theory/physics -name \*.tex); do
     b=$(basename -- $i)
@@ -171,8 +171,28 @@ for i in $(find ./built/pug/theory/physics -name \*.tex); do
 
 done
 
-printf "Done physics\n\n"
-printf "Doing AI...\n"
+printf "Done \"Physics\"\n\n"
+printf "Doing \"Programming\"...\n"
+
+for i in $(find ./built/pug/theory/programming -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Programming\"\n\n"
+printf "Doing \"AI\"...\n"
 
 for i in $(find ./built/pug/theory/ai/ -name \*.tex); do
     b=$(basename -- $i)
@@ -191,8 +211,8 @@ for i in $(find ./built/pug/theory/ai/ -name \*.tex); do
 
 done
 
-printf "Done AI\n\n"
-printf "Doing biology...\n"
+printf "Done \"AI\"\n\n"
+printf "Doing \"Biology\"...\n"
 
 for i in $(find ./built/pug/theory/biology/ -name \*.tex); do
     b=$(basename -- $i)
@@ -211,8 +231,8 @@ for i in $(find ./built/pug/theory/biology/ -name \*.tex); do
 
 done
 
-printf "Done biology\n\n"
-printf "Doing engineering...\n"
+printf "Done \"Biology\"\n\n"
+printf "Doing \"Engineering\"...\n"
 
 for i in $(find ./built/pug/theory/engineering -name \*.tex); do
     b=$(basename -- $i)
@@ -231,8 +251,8 @@ for i in $(find ./built/pug/theory/engineering -name \*.tex); do
 
 done
 
-printf "Done engineering\n\n"
-printf "Doing equilibrium...\n"
+printf "Done \"Engineering\"\n\n"
+printf "Doing \"Equilibrium\"...\n"
 
 for i in $(find ./built/pug/theory/equilibrium -name \*.tex); do
     b=$(basename -- $i)
@@ -251,8 +271,8 @@ for i in $(find ./built/pug/theory/equilibrium -name \*.tex); do
 
 done
 
-printf "Done equilibrium\n\n"
-printf "Doing economics...\n"
+printf "Done \"Equilibrium\"\n\n"
+printf "Doing \"Economics\"...\n"
 
 for i in $(find ./built/pug/theory/economics -name \*.tex); do
     b=$(basename -- $i)
@@ -271,8 +291,8 @@ for i in $(find ./built/pug/theory/economics -name \*.tex); do
 
 done
 
-printf "Done economics\n\n"
-printf "Doing macroeconomics...\n"
+printf "Done \"Economics\"\n\n"
+printf "Doing \"Macroeconomics\"...\n"
 
 for i in $(find ./built/pug/theory/macroeconomics -name \*.tex); do
     b=$(basename -- $i)
@@ -291,8 +311,8 @@ for i in $(find ./built/pug/theory/macroeconomics -name \*.tex); do
 
 done
 
-printf "Done macroeconomics\n\n"
-printf "Doing public choice...\n"
+printf "Done \"Macroeconomics\"\n\n"
+printf "Doing \"Public Choice\"...\n"
 
 for i in $(find ./built/pug/theory/publicChoice/ -name \*.tex); do
     b=$(basename -- $i)
@@ -311,8 +331,8 @@ for i in $(find ./built/pug/theory/publicChoice/ -name \*.tex); do
 
 done
 
-printf "Done public choice\n\n"
-printf "Doing history...\n"
+printf "Done \"Public Choice\"\n\n"
+printf "Doing \"History\"...\n"
 
 for i in $(find ./built/pug/theory/history/ -name \*.tex); do
     b=$(basename -- $i)
@@ -331,8 +351,8 @@ for i in $(find ./built/pug/theory/history/ -name \*.tex); do
 
 done
 
-printf "Done history\n\n"
-printf "Doing epistemology...\n"
+printf "Done \"History\"\n\n"
+printf "Doing \"Epistemology\"...\n"
 
 for i in $(find ./built/pug/theory/epistemologyOntology/ -name \*.tex); do
     b=$(basename -- $i)
@@ -351,8 +371,8 @@ for i in $(find ./built/pug/theory/epistemologyOntology/ -name \*.tex); do
 
 done
 
-printf "Done history\n\n"
-printf "Doing philosophy...\n"
+printf "Done \"History\"\n\n"
+printf "Doing \"Philosophy\"...\n"
 
 for i in $(find ./built/pug/theory/philosophy/ -name \*.tex); do
     b=$(basename -- $i)
@@ -371,7 +391,7 @@ for i in $(find ./built/pug/theory/philosophy/ -name \*.tex); do
 
 done
 
-printf "Done philosophy\n\n"
+printf "Done \"Philosophy\"\n\n"
 
 #######
 # PDF #
@@ -416,6 +436,11 @@ printf "Pandoc physics\n\n"
 cd ./built/pug/theory/physics
 pdflatex ./physics.tex > /dev/null 2>&1
 pdflatex ./physics.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc programming\n\n"
+cd ./built/pug/theory/programming
+pdflatex ./programming.tex > /dev/null 2>&1
+pdflatex ./programming.tex > /dev/null 2>&1
 cd $current_dir
 printf "Pandoc AI\n\n"
 cd ./built/pug/theory/ai

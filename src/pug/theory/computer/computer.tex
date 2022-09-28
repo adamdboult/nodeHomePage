@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Computer science}
+\title{Computer science, Lisp and C}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -15,7 +15,7 @@
 
 \include{preface}
 
-\part{Combinatorial logic}
+\part{Binary arithmetic}
 \include{logic}
 \include{numbers}
 \include{integers}
@@ -31,14 +31,27 @@
 \part{Turing machines}
 \include{automatons}
 \include{machineCode}
+\include{arrays}
 \include{pointers}
 \include{analyticEngine}
 \include{halting}
 \include{busyBeaver}
 
-\part{Simple calculations}
-\include{multiplicationDivision}
-\include{arrays}
+%\part{Comparison of machine languages}
+%Reduced Instruction Set Computer (RISC)
+%Complex Instruction Set Computer (CISC)
+
+%Main ones
+%IBM System/360
+%Motorola 6800
+%Motorola 68000
+%Zilog Z80 (gameboy based on this, ppu separate). based on intel 8080
+%Intel 8086 (x86)
+%ARM
+%PowerPC
+%MIPS
+
+
 
 \part{High-level programming with Fortran I}
 \include{highLevel}
@@ -68,7 +81,8 @@
 \include{BASIC}
 \include{sideEffects}
 
-\part{Numerical methods for integers}
+\part{Natural number algorithms}
+\include{multiplicationDivision}
 \include{sqrtNatural}
 \include{primes}
 \include{factorise}
@@ -81,7 +95,7 @@
 \include{algorithms}
 \include{complexity}
 
-\part{Divide-and-conquer}
+\part{Divide and conquer algorithms}
 \include{divideConquer}
 
 \part{Numerical methods for real numbers}
@@ -113,11 +127,6 @@
 \include{hashTable}
 \include{dynamic}
 
-\part{Object-oriented programming}
-\include{objects}
-\include{OOP}
-\include{cpp}
-
 \part{Linear algebra}
 \include{rootsLinear}
 \include{rootsNonLinear}
@@ -137,69 +146,8 @@
 \part{Constrained optimisation}
 \include{constrained}
 
-\part{Unix operating system}
-\include{unixFileSystem}
+\part{Compression}
 \include{compression}
-
-\part{Databases}
-\include{databases}
-
-\part{Networking}
-
-\part{Virtual Machines and interpreters}
-\include{java}
-\include{emulation}
-\include{javascript}
-\include{lua}
-
-\part{2D graphics}
-\include{fonts}
-\include{markdown}
-\include{LaTeX}
-\include{HTML}
-\include{image}
-
-\part{3D graphics}
-\include{2DRayCasting}
-\include{binarySpacePartitioning}
-\include{3DProjection}
-\include{textureMapping}
-\include{3D}
-\include{filteringAliasing}
-
-\part{SQL}
-\include{SQL}
-\include{SQLite}
-\include{mongoDB}
-
-\part{Python}
-\include{python}
-\include{numpy}
-\include{sciPy}
-\include{matPlotLib}
-\include{pandas}
-\include{seaborn}
-
-\part{R}
-\include{R}
-\include{tidyr}
-\include{ggplot}
-\include{dplyr}
-\include{purrr}
-\include{tibble}
-\include{rmarkdown}
-\include{rShiny}
-\include{rDataTable}
-
-\part{Other languages}
-\include{stata}
-
-\part{Improving knowledge}
-\include{knowledge}
-\include{expert}
-
-\part{Sort}
-\include{parallel}
 
 \end{document}
 

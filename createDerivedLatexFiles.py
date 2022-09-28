@@ -7,7 +7,7 @@ import shutil
 # Create tex file for each folder #
 ###################################
 
-subjects = ["logic", "algebra", "analysis", "geometry", "computer", "probability", "statistics", "physics", "ai", "biology", "engineering", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"]
+subjects = ["logic", "algebra", "analysis", "geometry", "computer", "probability", "statistics", "physics", "programming", "ai", "biology", "engineering", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"]
 
 for subject in subjects:
 
@@ -36,7 +36,7 @@ for subject in subjects:
 
         f = open(os.path.join(directory_to_walk, folder + ".pug"), "w")
 
-        f.write("extends ../../templates/loginHeader.pug\n")
+        f.write("extends ../../templates/header.pug\n")
         f.write("block content\n")
         f.write("	style\n")
         f.write("		| h1 {font-weight: bold; text-decoration:underline; text-align:center;}\n")

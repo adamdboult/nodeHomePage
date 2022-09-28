@@ -7,7 +7,7 @@ import shutil
 # Create tex file for each folder #
 ###################################
 
-subjects = ["logic", "algebra", "analysis", "geometry", "computer", "probability", "statistics", "physics", "ai", "biology", "engineering", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"]
+subjects = ["logic", "algebra", "analysis", "geometry", "computer", "probability", "statistics", "physics", "programming", "ai", "biology", "engineering", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"]
 
 for subject in subjects:
 
@@ -38,7 +38,7 @@ for subject in subjects:
     ####
     # Write non-sidebar
     ####
-    non_sidebar_file_data.write("extends ../templates/loginHeader.pug\n")
+    non_sidebar_file_data.write("extends ../templates/header.pug\n")
     non_sidebar_file_data.write("block content\n")
     non_sidebar_file_data.write("	div.container-fluid\n")
     non_sidebar_file_data.write("		div.row\n")
