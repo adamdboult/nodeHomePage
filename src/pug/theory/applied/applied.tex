@@ -1,0 +1,50 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Statistics for specific domains}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Computer vision}
+\include{machineLearningCharacter}
+\include{machineLearningImage}
+\include{machineLearningFacial}
+\include{vision}
+
+\part{Applications for time series models}
+\include{machineLearningTextPrediction}
+\include{machineLearningTextTranslation}
+\include{NLP}
+
+\part{Audio and Natural Language Processing}
+\include{machineLearningAudioVoice}
+\include{machineLearningAudioSong}
+\include{machineLearningAudioText}
+
+\part{Linguistics}
+\include{linguisticsComparative}
+\include{linguisticsInternalReconstruction}
+\include{linguisticsUniversalGrammar}
+
+\part{Communication}
+\include{hashes}
+\include{merkelTrees}
+\include{encryptionClassical}
+\include{encryptionModern}
+\include{encryptionAsymmetric}
+
+\part{Other}
+\include{machineLearningWeather}
+
+\end{document}
+

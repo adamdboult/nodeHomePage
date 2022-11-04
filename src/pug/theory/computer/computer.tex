@@ -37,21 +37,13 @@
 \include{halting}
 \include{busyBeaver}
 
-%\part{Comparison of machine languages}
-%Reduced Instruction Set Computer (RISC)
-%Complex Instruction Set Computer (CISC)
-
-%Main ones
-%IBM System/360
-%Motorola 6800
-%Motorola 68000
-%Zilog Z80 (gameboy based on this, ppu separate). based on intel 8080
-%Intel 8086 (x86)
-%ARM
-%PowerPC
-%MIPS
-
-
+\part{Compilers}
+Assembly vs machine code
+Using literals (for now just integers) in assembly
+Variables rather than addresses
+Evaluating mathematical expressions using abstract syntax trees, and prefix notation
+More on abstract syntax trees (evaluating whole document?)
+Macros
 
 \part{High-level programming with Fortran I}
 \include{highLevel}
@@ -68,18 +60,21 @@
 \include{cFunctions}
 \include{cVariables}
 \include{cArithmeticOperations}
-\include{cRelations}
 \include{cLogical}
-\include{cBitwise}
 \include{cPointers}
 \include{cAssignment}
 \include{cControlFlow}
-\include{cLibrariesNamespaces}
-\include{strings}
-\include{cMacros}
-\include{algol}
-\include{BASIC}
+
+\part{More C}
 \include{sideEffects}
+\include{cBitwise}
+\include{cRelations}
+\include{strings}
+Including string literals
+
+\part{To unix etc section? C}
+\include{cLibrariesNamespaces}
+\include{cMacros}
 
 \part{Natural number algorithms}
 \include{multiplicationDivision}
@@ -88,7 +83,10 @@
 \include{factorise}
 
 \part{Simple array algorithms}
+\include{arrayReduction}
 \include{sorting}
+\include{sortingSelection}
+\include{sortingInsertion}
 \include{searching}
 
 \part{Assessing algorithms}
@@ -111,6 +109,7 @@
 
 \part{Using nodes as abstract data types}
 \include{linkedList}
+\include{sortingInsertionLinked}
 \include{binarySearchTree}
 \include{heapSort}
 
@@ -148,6 +147,10 @@
 
 \part{Compression}
 \include{compression}
+
+\part{Other}
+\include{algol}
+\include{BASIC}
 
 \end{document}
 

@@ -1,0 +1,41 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Neural networks}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Supervised neural networks}
+\include{MLPBack}
+\include{neuralNetworksLink}
+\include{neuralNetworksAlternative}
+\include{neuralNetworksPreTraining}
+\include{neuralNetworksMulti}
+\include{neuralNetworksProbabilistic}
+\include{neuralNetworksRegression}
+\include{neuralNetworksRegularising}
+\include{neuralNetworksConvolution}
+\include{neuralNetworksAttention}
+
+\part{Generative neural networks}
+\include{VAE}
+\include{RBM}
+\include{SOM}
+\include{generativeNN}
+
+\part{Estimating time series models}
+\include{neuralNetworksRec}
+\include{RNNEncoderDecoder}
+
+\end{document}
+

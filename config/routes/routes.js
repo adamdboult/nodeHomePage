@@ -62,8 +62,11 @@ module.exports=function(app){
 	res.render('blog',{posts:blogArray});
     });
 
-    app.get('/theory', function(req,res){
+    /*app.get('/theory', function(req,res){
 	res.render('theory');
+    });*/
+    app.get('/theory', function(req,res){
+	res.redirect('/');
     });
 
     app.get('/rss', function(req,res){

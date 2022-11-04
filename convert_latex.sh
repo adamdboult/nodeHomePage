@@ -152,6 +152,46 @@ for i in $(find ./built/pug/theory/statistics/ -name \*.tex); do
 done
 
 printf "Done \"Statistics\"\n\n"
+printf "Doing \"Neural networks\"...\n"
+
+for i in $(find ./built/pug/theory/neuralNetworks -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Neural networks\"\n\n"
+printf "Doing \"Statistics for specific domains\"...\n"
+
+for i in $(find ./built/pug/theory/applied -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Statistics for specific domains\"\n\n"
 printf "Doing \"Physics\"...\n"
 
 for i in $(find ./built/pug/theory/physics -name \*.tex); do
@@ -192,6 +232,126 @@ for i in $(find ./built/pug/theory/programming -name \*.tex); do
 done
 
 printf "Done \"Programming\"\n\n"
+printf "Doing \"Other compiled languages\"...\n"
+
+for i in $(find ./built/pug/theory/OOP -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Other compiled languages\"\n\n"
+printf "Doing \"Virtual machines and emulation\"...\n"
+
+for i in $(find ./built/pug/theory/VMEmulation -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Virtual machines and emulation\"\n\n"
+printf "Doing \"Python\"...\n"
+
+for i in $(find ./built/pug/theory/python -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"Python\"\n\n"
+printf "Doing \"R\"...\n"
+
+for i in $(find ./built/pug/theory/R -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"R\"\n\n"
+printf "Doing \"Javascript\"...\n"
+
+for i in $(find ./built/pug/theory/javascript -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"other programming languages\"\n\n"
+printf "Doing \"R\"...\n"
+
+for i in $(find ./built/pug/theory/otherProgrammingLanguages -name \*.tex); do
+    b=$(basename -- $i)
+    b=${b%.tex}
+    s=$b".tex"
+    o=$b".html"
+    p=$b".pdf"
+    d="$(dirname "${i}")/"
+
+    #printf $d"/"$i"\n"
+
+    cd $d
+    pandoc $s --mathjax -o $o
+    #pandoc $s --number-sections --toc --toc-depth 2 -o $p
+    cd $current_dir
+
+done
+
+printf "Done \"other programming languages\"\n\n"
 printf "Doing \"AI\"...\n"
 
 for i in $(find ./built/pug/theory/ai/ -name \*.tex); do
@@ -432,6 +592,16 @@ cd ./built/pug/theory/statistics
 pdflatex ./statistics.tex > /dev/null 2>&1
 pdflatex ./statistics.tex > /dev/null 2>&1
 cd $current_dir
+printf "Pandoc neural networks\n\n"
+cd ./built/pug/theory/neuralNetworks
+pdflatex ./neuralNetworks.tex > /dev/null 2>&1
+pdflatex ./neuralNetworks.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc statistics for specific domains\n\n"
+cd ./built/pug/theory/applied
+pdflatex ./applied.tex > /dev/null 2>&1
+pdflatex ./applied.tex > /dev/null 2>&1
+cd $current_dir
 printf "Pandoc physics\n\n"
 cd ./built/pug/theory/physics
 pdflatex ./physics.tex > /dev/null 2>&1
@@ -441,6 +611,36 @@ printf "Pandoc programming\n\n"
 cd ./built/pug/theory/programming
 pdflatex ./programming.tex > /dev/null 2>&1
 pdflatex ./programming.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc other compiled languages\n\n"
+cd ./built/pug/theory/OOP
+pdflatex ./OOP.tex > /dev/null 2>&1
+pdflatex ./OOP.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc VM\n\n"
+cd ./built/pug/theory/VMEmulation
+pdflatex ./VMEmulation.tex > /dev/null 2>&1
+pdflatex ./VMEmulation.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc python\n\n"
+cd ./built/pug/theory/python
+pdflatex ./python.tex > /dev/null 2>&1
+pdflatex ./python.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc R\n\n"
+cd ./built/pug/theory/R
+pdflatex ./R.tex > /dev/null 2>&1
+pdflatex ./R.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc javascript\n\n"
+cd ./built/pug/theory/javascript
+pdflatex ./javascript.tex > /dev/null 2>&1
+pdflatex ./javascript.tex > /dev/null 2>&1
+cd $current_dir
+printf "Pandoc other programming languages\n\n"
+cd ./built/pug/theory/otherProgrammingLanguages
+pdflatex ./otherProgrammingLanguages.tex > /dev/null 2>&1
+pdflatex ./otherProgrammingLanguages.tex > /dev/null 2>&1
 cd $current_dir
 printf "Pandoc AI\n\n"
 cd ./built/pug/theory/ai
