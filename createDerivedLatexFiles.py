@@ -7,7 +7,14 @@ import shutil
 # Create tex file for each folder #
 ###################################
 
-subjects = ["logic", "algebra", "analysis", "geometry", "computer", "probability", "statistics", "neuralNetworks", "applied", "physics", "programming", "OOP", "VMEmulation", "python", "R", "javascript", "otherProgrammingLanguages", "ai", "biology", "engineering", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"]
+subjects = [
+    "logic", "algebra", "analysis", "geometry", "computer",
+    "probability", "statistics", "neuralNetworks",
+    "physics", "biology", "engineering", "applied",
+    "unix", "graphics", "networks", "cpp", "java", "javascript", "python",
+    "VMEmulation", "otherCLanguages", "otherLispLanguages", "otherCompiledLanguages", "R", "otherLanguages",
+    "ai", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"
+]
 
 for subject in subjects:
 

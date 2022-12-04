@@ -1,0 +1,154 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Unix}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+%\part{Comparison of machine languages}
+%Reduced Instruction Set Computer (RISC)
+%Complex Instruction Set Computer (CISC)
+
+%Main ones
+%IBM System/360
+%Motorola 6800
+%Motorola 68000
+%Zilog Z80 (gameboy based on this, ppu separate). based on intel 8080
+%Intel 8086 (x86)
+%ARM
+%PowerPC
+%MIPS
+
+\part{OS basics}
+
+\include{batchProcessing}
+\include{interrupts}
+\include{concurrencyControl}
+\include{bios}
+
+\part{Linux file systems}
+%doing before devices because file systems can be just in RAM - no devices. eg linux distros which just load from flash drive
+\include{fileSystems}
+\include{fileSystemsLinux}
+\include{fileSystemsNavigation}
+\include{fileSystemsCommands}
+\include{shellReading}
+\include{fileSystemsChanging}
+\include{grep}
+\include{sed}
+\include{edVi}
+\include{checkSums}
+\include{compression}
+\include{jails}
+
+\part{Interactive terminals}
+% /dev folder. /dev/null, /dev/zero, /dev/random.  % inc /dev/random, /dev/urandom, security risks (because pseudo)
+\include{basicShell}
+\include{keyboardLocales}
+
+\part{Users and permissions}
+% passwd(give root a password?)
+%useradd, userdel[what happens to files with user as owner?], chown, su[run as different user], logout. use passwd to set passwords. sudo command, whoami. /etc/passwd is file with info on users. also /etc/shadow (which contains hash of password). /home/[user] folders. pinky/finger
+%groups. usermod to add user to group. users have primary group associated with just them, usually same name. can change using usermod. groupadd, groupdel, groupmod, 777 etc. what happens to file when group deleted? chgrp. command groups shows what groups a user is in
+%cont groups gpasswd to set passwords for groups. /etc/groups, /etc/gshadow
+%masks for permissions. umask
+%run elevated temp using setuid setgid
+%prevening attacks: ulimit to prevent fork bomb[ie setting up many processes to do a denial of service attack]. ulimit also prevents excessive use of memory/cpu. stored in /etc/security/limits.conf
+% Linux Security Modules and SElinux page
+% /root is root home directory
+% /sbin for binaries only root can run
+% /usr/bin and /usr/sbin    for binaries for all users. not aimed for use by system admin?. /usr generally read only stuff
+% /var more write only?
+\part{Systemd}
+% new includes init, service
+%\include{cron} %old
+
+\part{Compiling}
+\include{gcc}
+\include{cHeaders}
+\include{gdb}
+\include{make}
+%\include{stackTrace} % using backtrace() function from glibc to do stack trace
+
+\part{Programming techniques}
+\include{staticAnalysis}
+\include{dynamicAnalysis}
+
+\part{Package management}
+% uname[to get info on kernel etc]
+\include{debian}
+\include{redHat}
+\include{arch}
+\include{docker}
+%\include{snapFlatpakAppImage}
+
+\part{Scripting}
+\include{sh}
+\include{bash}
+\include{awk}
+\include{perl}
+
+\part{Parallel programming}
+% map reduce
+% race conditions
+% multi threading
+% thread safety. mutex. semaphore. locks.
+% futures and promises
+% cuda and gpgpu
+\include{parallel}
+
+\part{Databases}
+\include{csv}
+\include{XML}
+\include{JSON}
+\include{YAML}
+\include{databases}
+\include{SQL}
+\include{SQLite}
+%\include{noSQL} % mongo
+
+\part{Device storage}
+%commands:
+%+ fdisk
+%+ mount
+%+ umount
+%+ swapon
+%+ mkswap
+%+ df
+%+ mkfs
+%+ fsck[fix file system]
+%swapfile (separate to partition)
+%fstab
+%/mnt
+%/media
+
+\part{Text editors}
+\include{vim}
+\include{emacs}
+
+\part{Encryption}
+\include{encryptionHardDrive}
+\include{encryptionRAM}
+
+\part{Decompiling}
+\include{hexEditor}
+\include{ghidra}
+%\include{trojan} % concept of time bomb/logic bomb? payload
+%\include{virus} % To networks?and worms? ceoncept of spread and replication not in trojan
+
+\part{Improving knowledge}
+\include{knowledge}
+\include{expert}
+
+\end{document}
+
