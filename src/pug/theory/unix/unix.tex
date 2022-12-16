@@ -36,48 +36,88 @@
 \include{concurrencyControl}
 \include{bios}
 
+
+%printk (print in kernel world, different to printf in user world)
+%lsmod to list kernel modules
+%insmod to insert kernel module
+% dmesg to see kernel messages
+% module_init() and module_exit() to specify functions to run when module loaded and unloaded
+% #include <linux/module.h> to use module_init() and module_exit()
+% #include <linux/init.h> to use __init and __exit
+% #include <linux/fs.h> to use file_operations struct
+
+% /boot ?
+% /boot/vmlinuz-... (kernel)
+
 \part{Linux file systems}
 %doing before devices because file systems can be just in RAM - no devices. eg linux distros which just load from flash drive
+
+% trailing & and nohup somewhere?
+% comm and sort somewhere
+
 \include{fileSystems}
 \include{fileSystemsLinux}
 \include{fileSystemsNavigation}
-\include{fileSystemsCommands}
-\include{shellReading}
 \include{fileSystemsChanging}
-\include{grep}
-\include{sed}
+\include{shellReading}
+\include{fileSystemsCommands}
+\include{sedTr}
+\include{thompsonShellXargs}
 \include{edVi}
 \include{checkSums}
 \include{compression}
 \include{jails}
 
-\part{Interactive terminals}
+\part{Devices}
 % /dev folder. /dev/null, /dev/zero, /dev/random.  % inc /dev/random, /dev/urandom, security risks (because pseudo)
+
+% character devices
+% block devices
 \include{basicShell}
 \include{keyboardLocales}
 
 \part{Users and permissions}
 % passwd(give root a password?)
-%useradd, userdel[what happens to files with user as owner?], chown, su[run as different user], logout. use passwd to set passwords. sudo command, whoami. /etc/passwd is file with info on users. also /etc/shadow (which contains hash of password). /home/[user] folders. pinky/finger
+%useradd, userdel[what happens to files with user as owner?],logout. use passwd to set passwords. whoami. /etc/passwd is file with info on users. also /etc/shadow (which contains hash of password). pinky
+%chown, su[run as different user], sudo command, pinky/finger
+% /root is root home directory. /home/[user] folders. 
+% /sbin for binaries only root can run
+% /usr/bin and /usr/sbin    for binaries for all users. not aimed for use by system admin?.
+%\include{users}
 %groups. usermod to add user to group. users have primary group associated with just them, usually same name. can change using usermod. groupadd, groupdel, groupmod, 777 etc. what happens to file when group deleted? chgrp. command groups shows what groups a user is in
 %cont groups gpasswd to set passwords for groups. /etc/groups, /etc/gshadow
 %masks for permissions. umask
 %run elevated temp using setuid setgid
+%\include{groups}
+
 %prevening attacks: ulimit to prevent fork bomb[ie setting up many processes to do a denial of service attack]. ulimit also prevents excessive use of memory/cpu. stored in /etc/security/limits.conf
 % Linux Security Modules and SElinux page
-% /root is root home directory
-% /sbin for binaries only root can run
-% /usr/bin and /usr/sbin    for binaries for all users. not aimed for use by system admin?. /usr generally read only stuff
+%/usr generally read only stuff
 % /var more write only?
+
+
+
+
+
+
 \part{Systemd}
 % new includes init, service
 %\include{cron} %old
 
 \part{Compiling}
+
+% diff and patch
+% diff -u oldFile newFile > mods.diff  # -u tells diff to output unified diff format
+% patch < mods.diff
+% xdelta is similar, but aimed at binary files, whereas diff and patch are aimed at text files
+
 \include{gcc}
 \include{cHeaders}
 \include{gdb}
 \include{make}
+\include{cLibrariesNamespaces}
+\include{cMacros}
+
 %\include{stackTrace} % using backtrace() function from glibc to do stack trace
 
 \part{Programming techniques}
@@ -86,6 +126,22 @@
 
 \part{Package management}
 % uname[to get info on kernel etc]
+
+% debian package updates
+% apt-get update to get list of packages possible updates
+% apt-get upgrade to upgrade packages
+
+% debian install package:
+% apt-get install <package>
+% apt-get remove <package>
+% apt-get purge <package> # removes conf files too
+
+% debian rebuild package from source:
+% apt-get build-dep <package> # gets dependencies of building pacakge
+% apt-get source <package>
+
+% apt exists as alternative to apt-get and apt-cache. front end for it, somewhat more user friendly
+
 \include{debian}
 \include{redHat}
 \include{arch}

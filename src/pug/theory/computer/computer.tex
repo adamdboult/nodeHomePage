@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Computer science, Lisp and C}
+\title{Computer science, C and Lisp}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -15,7 +15,8 @@
 
 \include{preface}
 
-\part{Binary arithmetic}
+\part{Arithmetic on states}
+\include{logicStates}
 \include{logic}
 \include{numbers}
 \include{integers}
@@ -30,45 +31,35 @@
 
 \part{Turing machines}
 \include{automatons}
-\include{machineCode}
-\include{arrays}
-\include{pointers}
-\include{analyticEngine}
-\include{halting}
 \include{busyBeaver}
 
-\part{Compilers}
+\part{Other abstract machines}
+\include{registerMachines}
+\include{stackMachines}
+\include{machineCode}
+\include{pointers}
+\include{arrays}
+\include{analyticEngine}
 
+\part{Imperative programming with C}
+\include{cVariables}
+\include{cArithmeticOperations}
+\include{cGlobalLocal}
+\include{cControlFlow}
+\include{cPointers}
+\include{cFunctions}
+\include{sideEffects}
+\include{cBitwise}
+\include{strings}
+\include{cFloats}
 
-\part{High-level programming with Fortran I}
-\include{highLevel}
-\include{controlFlow}
-\include{fortran}
+\part{C standard library}
 
 \part{Functional programming with Lisp}
 \include{function}
 \include{lambda}
 \include{functional}
 \include{lisp}
-
-\part{Programming with functions and imperatives with C}
-\include{cFunctions}
-\include{cVariables}
-\include{cArithmeticOperations}
-\include{cLogical}
-\include{cPointers}
-\include{cAssignment}
-\include{cControlFlow}
-
-\part{More C}
-\include{sideEffects}
-\include{cBitwise}
-\include{cRelations}
-\include{strings}
-
-\part{To unix etc section? C}
-\include{cLibrariesNamespaces}
-\include{cMacros}
 
 \part{Natural number algorithms}
 \include{multiplicationDivision}
@@ -101,9 +92,11 @@
 \part{Numerical methods for complex numbers}
 \include{mandelbrot}
 
-\part{Using nodes as abstract data types}
+\part{Linked lists}
 \include{linkedList}
 \include{sortingInsertionLinked}
+
+\part{Using nodes as abstract data types}
 \include{binarySearchTree}
 \include{heapSort}
 
@@ -143,8 +136,8 @@
 \include{compression}
 
 \part{Other}
+\include{fortran}
 \include{algol}
-\include{BASIC}
 
 \end{document}
 

@@ -6,7 +6,7 @@ current_dir=$(pwd)
 ###################################
 # Create tex file for each folder #
 ###################################
-python3 ./createDerivedLatexFiles.py
+python3 createDerivedLatexFiles.py
 
 #########################
 # Convert all tex files #
@@ -28,7 +28,7 @@ do
     #printf ""
     printf "Doing \"${subject}\"...\n"
 
-    for i in $(find ./built/pug/theory/${subject}/ -name \*.tex); do
+    for i in $(find built/pug/theory/${subject}/ -name \*.tex); do
         b=$(basename -- $i)
         b=${b%.tex}
         s=$b".tex"
@@ -52,8 +52,8 @@ do
     cd built/pug/theory/
     cd $subject
     #printf "$(pwd)"
-    pdflatex ./${subject}.tex > /dev/null 2>&1
-    pdflatex ./${subject}.tex > /dev/null 2>&1
+    pdflatex ${subject}.tex > /dev/null 2>&1
+    pdflatex ${subject}.tex > /dev/null 2>&1
     cd $current_dir
 
 done
@@ -62,5 +62,5 @@ done
 ############
 # Copy pdf #
 ############
-python3 ./copy_pdf.py
+python3 copy_pdf.py
 

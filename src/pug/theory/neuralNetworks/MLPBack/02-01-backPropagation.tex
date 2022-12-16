@@ -1,0 +1,56 @@
+
+\subsection{Adapting the delta rule}
+
+To arrive at the delta rule we considered the cost function:
+
+\(E=\sum_j\dfrac{1}{2}(y_j-a_j)^2\)
+
+And used the chain rule:
+
+\(\dfrac{\delta E}{\delta \theta_i }=\dfrac{\delta E}{\delta a_j}\dfrac{\delta a_j}{\delta z_j}\dfrac{\delta z_j}{\delta \theta_i}\)
+
+This gave us:
+
+\(\Delta \theta_i=\alpha \sum_j(y_j-a_j)a'(z_j)x_{ij}\)
+
+Or, setting \(\delta_i=-\dfrac{\delta E}{\delta z_j}=\sum_j(y_j-a_j)a'(z_j)\)
+
+\(\Delta \theta_i=\alpha \delta_j x_{ij}\)
+
+Let's update the rule for multiple layers:
+
+\(\dfrac{\delta E}{\delta \theta_{li}}=\dfrac{\delta E}{\delta a_{lj}}\dfrac{\delta a_{lj}}{\delta z_{lj}}\dfrac{\delta z_{lj}}{\delta \theta_{li}}\)
+
+Previously \(\dfrac{\delta z_{lj}}{\delta \theta_{li}}=x_i\). We now use the more general \(a_{li}\). For the first layer, these will be the same.
+
+We can then instead write:
+
+\(\Delta \theta_i=\alpha \delta_{lj} a_{li}\)
+
+\subsection{Calculating delta values}
+
+Now we need a way of calculating the value of \(\delta_{lj}\) for all neurons.
+
+\(\delta_i=-\dfrac{\delta E}{\delta z_{lj}}\)
+
+If this is an output node, then this is simply \(\sum_j(y_j-a_j)a'(z_j)\)
+
+If this is not an output node, then the impact of change in the parameter will affect the results through all intermediate neurons.
+
+In this case:
+
+\(\dfrac{\delta E}{\delta z_{lj}}=\sum_{k\in succ{l}}\dfrac{\delta E}{\delta z_{k}}\dfrac{\delta z_{k}}{\delta z_{lj}}\)
+
+\(\dfrac{\delta E}{\delta z_{lj}}=\sum_{k\in succ{l}}-\delta_{k}\dfrac{\delta z_{k}}{\delta a_{kj}}\dfrac{\delta a_{kj}}{\delta z_{lj}}\)
+
+\(\dfrac{\delta E}{\delta z_{lj}}=\sum_{k\in succ{l}}-\delta_{k}\theta_{kj}a'_{kj}\)
+
+\(\delta_i=a'_{kj}\sum_{k\in succ{l}}\delta_{k}\theta_{kj}\)
+
+For each layer there is a matrix, where the columns and rows represent the \(theta \) between the current layer and the next layer. We have a matrix for each layer in the network.
+
+\subsection{Initialising parameters}
+
+We start by randomly initialisng the value of each \(\theta \).
+
+We do this to prevent each neuron from moving in sync.

@@ -139,10 +139,12 @@ for subject in subjects:
     contents_in_tex.sort()
     if (contents_in_folder != contents_in_tex):
         print("\n\nContents in folder do not match tex (" + subject + ")")
-        print("Folder:")
-        print(contents_in_folder)
-        print("Tex:")
-        print(contents_in_tex)
+        print("Folder not in tex:")
+        #print(contents_in_folder)
+        print([content for content in contents_in_folder if content not in contents_in_tex])
+        print("Tex not in folder:")
+        #print(contents_in_tex)
+        print([content for content in contents_in_tex if content not in contents_in_folder])
         raise Exception("Contents do no match") 
 
     

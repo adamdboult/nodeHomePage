@@ -1,0 +1,74 @@
+
+\subsection{Introduction}
+
+functions which make generators: yield function
+
+python decorators
++ decorators (apply @ function to function below to decorate it. syntactic sugar)
+  * eg below
+
+\begin{verbatim}
+
+    def my_decorator(func):
+        def inner(a):
+            print("Printing ", a, " in a decorated way")
+            return
+        return inner
+    @my_decorator
+    def just_printing(a):
+        print(a)
+
+\end{verbatim}
+
+function annotations/type hints:
+
+\begin{quote}
+def f(a: str, b:str = "apple")->str:
+\end{quote}
+
+typing. not actually checked but can do typing as descriptor
+
+pointers and side effects of functions in python (when pass objects etc?)
+
+currying in python
+
+python:
++ passing lists and objects to functions rather than doing literally
+
+\begin{quote}
+    f = def(a, b)
+\end{quote}
+can do
+\begin{quote}
+    f(*l)
+\end{quote}
+where
+\begin{quote}
+    l=[1,2]
+\end{quote}
+
+
+or can do
+\begin{quote}
+    f(**args)
+\end{quote}
+
+where
+
+\begin{quote}
+    args = {"a":1, "b":2}
+\end{quote}
++ can accept random literals with *arguments
++ can accept named literals with **kwargs (ie key word arguments)
+
+best practice
++ function names: lower\_case\_and\_underscore
+
+main function in python
+
+defining functions:
++ triple quote comment at start for documentation
+
+functions as objects:
++ everything is object
++ objects are first class. can accept objects. can return objects

@@ -1,0 +1,60 @@
+
+\subsection{Introduction}
+
+making a tensor:
+torch.tensor
+
+\begin{verbatim}
+torch.from_numpy
+torch.ones_like
+torch.ones
+torch.rand
+torch.zeroes
+\end{verbatim}
+
+diff from numpy
+    1. device type (can attach cuda cores)
+    2. requires\_grad (property of derivative)
+
+
+
+linear algebra on tensors:
+  * *@-+
+  * diff in any from numpy
+
+thing on tensors:
+  * nn.Linear
+  * nn.ReLU
+  * nn.Softmax
+
+other tensor stuff
+  * torch.save/torch.load
+  * diff inf any from numpy
+
+data:
+  * torch.utils.data.DataLoader
+  * torch.utils.data.Dataset
+
+networks
+  * nn.Module
+  * nn.sequential
+  * feedforward
+  * backprob
+    1. torch autograd
+
+specific types of models
+  * torchvision (images)
+    1. datasets available
+  * torchtext
+    1. datasets available
+  * torchaudio
+    1. datasets available
+
+
+JIT compiling and pytorch
+
+XLA and pytorch
+  * XLA is on TPU?
+
+
+fast.ai is a thing that sits on top of pytorch
