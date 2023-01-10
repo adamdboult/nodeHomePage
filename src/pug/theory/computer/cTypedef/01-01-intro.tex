@@ -1,0 +1,33 @@
+
+\subsection{Introduction}
+
+\begin{verbatim}
+typedef int my_score;
+void my_function(my_score score) {}
+\end{verbatim}
+
+allows you to write functions that accept int etc, but only specificly defined, not ints more generally.
+just allows for safer code writing, optional
+
+If we are doing a typedef for a struct it will look like this:
+
+\begin{verbatim}
+typedef struct my_score_struct {
+   int a;
+   char b;
+} my_score;
+void my_function(my_score score) {}
+\end{verbatim}
+
+We can also split out the struct definition and the alias.
+
+\begin{verbatim}
+struct my_score_struct{
+   int a;
+   char b;
+};
+typedef my_score_struct my_score;
+
+void my_function(my_score score) {}
+\end{verbatim}
+

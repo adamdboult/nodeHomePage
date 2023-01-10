@@ -2,19 +2,23 @@
 import os
 import shutil
 
+import sys
 
 ###################################
 # Create tex file for each folder #
 ###################################
-
+"""
 subjects = [
     "logic", "algebra", "analysis", "geometry", "computer",
-    "probability", "statistics", "neuralNetworks",
+    "probabilityUnivariate", "probabilityMultivariate", "probabilityTimeSeriesUnivariate", "probabilityTimeSeriesMultivariate", "machineLearning", "neuralNetworks",
     "physics", "biology", "engineering", "applied",
-    "unix", "graphics", "networks", "cpp", "java", "javascript", "python",
-    "VMEmulation", "otherCLanguages", "otherLispLanguages", "otherCompiledLanguages", "R", "otherLanguages",
-    "ai", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"
+    "unix", "graphics", "networks", "databases", "cpp", "java", "javascript", "python",
+    "VMEmulation", "otherCLanguages", "otherLispLanguages", "otherCompiledLanguages", "R", "otherLanguages", "distributedComputing",
+    "ai", "equilibrium", "IO", "MBF", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"
 ]
+"""
+subjects = [sys.argv[1]]
+
 for subject in subjects:
 
     ####
@@ -146,7 +150,6 @@ for subject in subjects:
         #print(contents_in_tex)
         print([content for content in contents_in_tex if content not in contents_in_folder])
         raise Exception("Contents do no match") 
-
     
     ####
     # Fin

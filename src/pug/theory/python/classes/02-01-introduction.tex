@@ -1,0 +1,130 @@
+
+\subsection{Inheritance}
+
+\begin{verbatim}
+
+class BaseClass:
+
+    x = 1
+
+class DerivedClass(BaseClass):
+    y = 1
+
+\end{verbatim}
+
+\subsection{Identifying inheritance}
+
+\begin{verbatim}
+
+issubclass(class, classinfo)
+\end{verbatim}
+
+\subsection{Encapsulation in Python}
+
+Public: Accessible from anywhere
+Protected: Accessible from within class and subclass
+Private: Accessible from within class
+
+Done with underscores. \(x\) below is public. \(y\) is protected. \(z\) is private.
+\begin{verbatim}
+
+class MyClass:
+
+    def __init__(self, x, y, z):
+        self.x = x
+        self._y = y
+        self.__z = z
+        
+\end{verbatim}
+
+Can also do these for methods
+
+\begin{verbatim}
+
+class MyClass:
+
+    def a():
+        print(1)
+    def _b():
+        print(2)
+    def __c()
+        print(3)
+
+        
+\end{verbatim}
+
+
+\subsection{Getters and setters}
+
+Used for encapsulation and cleaning.
+
+\begin{verbatim}
+
+class MyClass:
+
+    def __init__(self, x, y, z):
+        self.x = x
+        self._y = y
+        self.__z = z
+
+    def get_z(self):
+        return(self.__z)
+    def set_y(self, y):
+        self._y = y
+        
+\end{verbatim}
+
+
+\subsection{Multiple inheritance}
+
+\begin{verbatim}
+
+class BaseClassA:
+
+    x = 1
+class BaseClassB:
+
+    y = 1
+
+class DerivedClass(BaseClassA, BaseClassB):
+    z = 1
+
+\end{verbatim}
+
+\subsection{Super}
+Access methods and parameters from parent class.
+
+\begin{verbatim}
+
+class BaseClass:
+
+    x = 1
+
+class DerivedClass(BaseClassA):
+    z = super().x + 1
+
+\end{verbatim}
+
+\subsection{Overwriting}
+
+\begin{verbatim}
+
+class BaseClass:
+
+    def do_thing(self):
+        print(1)
+
+class DerivedClass(BaseClassA):
+    def do_thing(self):
+        print(2)
+
+\end{verbatim}
+
+\subsection{Checking membership}
+
+Check is member of class or subclass.
+
+\begin{verbatim}
+isinstance(object, int)
+\end{verbatim}
+

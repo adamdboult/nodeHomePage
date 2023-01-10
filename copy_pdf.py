@@ -2,16 +2,21 @@
 import os
 import shutil
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
+import sys
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+"""
 subjects = [
     "logic", "algebra", "analysis", "geometry", "computer",
-    "probability", "statistics", "neuralNetworks",
+    "probabilityUnivariate", "probabilityMultivariate", "probabilityTimeSeriesUnivariate", "probabilityTimeSeriesMultivariate", "machineLearning", "neuralNetworks",
     "physics", "biology", "engineering", "applied",
-    "unix", "graphics", "networks", "cpp", "java", "javascript", "python",
-    "VMEmulation", "otherCLanguages", "otherLispLanguages", "otherCompiledLanguages", "R", "otherLanguages",
-    "ai", "equilibrium", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"
+    "unix", "graphics", "networks", "databases", "cpp", "java", "javascript", "python",
+    "VMEmulation", "otherCLanguages", "otherLispLanguages", "otherCompiledLanguages", "R", "otherLanguages", "distributedComputing",
+    "ai", "equilibrium", "IO", "MBF", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"
 ]
+"""
+subjects = [sys.argv[1]]
+
 directory_to_make = os.path.join(dir_path, "public", "theory")
 if not os.path.exists(directory_to_make):
     os.makedirs(directory_to_make)

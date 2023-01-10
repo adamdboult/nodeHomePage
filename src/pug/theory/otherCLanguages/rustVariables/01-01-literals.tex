@@ -1,27 +1,90 @@
 
-\subsection{Literals}
+\subsection{Integer literals}
+
+Decimal literals:
 
 \begin{verbatim}
-
-type annotation is the x: i132 thing
-let x:u32 = 2
-can do 
-i8, i16, i32, i64, i128
-u8, u16, u32, u64, u128
-f32, f64
-
-literals
-decimal
 12345
 12_345
-hex: 0xff
-oct: 0o77
-bin: 0b110
-byte (u8?): b'A'
+012345
+\end{verbatim}
 
+Hex, oct and bin literals
 
-can do eg:
-+ let x = 5i32
-+ let x = 0b101i32
+\begin{verbatim}
+0xff
+0o77
+0b110
+\end{verbatim}
+
+\subsection{Integer literals in a given format}
+
+can do 
+\begin{verbatim}
+i8, i16, i32, i64, i128
+u8, u16, u32, u64, u128
+
+5i32
+0b101i32
 
 \end{verbatim}
+
+
+\subsection{Assignment and type notations}
+
+\subsection{Type annotations}
+
+\begin{verbatim}
+let x:u32 = 2
+\end{verbatim}
+
+Can split out declaration and definition.
+
+\begin{verbatim}
+let x:u32
+x = 2
+\end{verbatim}
+
+\subsection{Mutable variables}
+
+Can't do this because default immutableimmutable.
+\begin{verbatim}
+let x = 1
+x = x + 1
+\end{verbatim}
+
+can do
+
+\begin{verbatim}
+let x = 1
+let x = x + 1
+
+\end{verbatim}
+this is shadowing the variable?
+
+We can make variables mutable.
+\begin{verbatim}
+let mut x = 1
+x = x + 1
+\end{verbatim}
+
+
+\subsection{Const}
+
+Different to immutable because const are known at compile-time, whereas immutables may not be known until run time.
+\begin{verbatim}
+const x = 1
+
+\end{verbatim}
+
+\subsection{String literals}
+\begin{verbatim}
+byte (u8?): b'A'
+\end{verbatim}
+
+\subsection{Float literals}
+
+\begin{verbatim}
+f32, f64
+\end{verbatim}
+

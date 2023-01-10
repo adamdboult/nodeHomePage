@@ -1,74 +1,83 @@
 
-\subsection{Introduction}
+\subsection{Defining functions}
 
-functions which make generators: yield function
+Best practice is to name them \(lower\_case\_and\_underscore\).
 
-python decorators
-+ decorators (apply @ function to function below to decorate it. syntactic sugar)
-  * eg below
+Everything including functions are objects. As a result functions are first class. Functions can accept functions and can return functions.
 
 \begin{verbatim}
 
-    def my_decorator(func):
-        def inner(a):
-            print("Printing ", a, " in a decorated way")
-            return
-        return inner
-    @my_decorator
-    def just_printing(a):
-        print(a)
+def my_function_no_parameters():
+    return 0
+    
+def my_function_with_parameters(x, y):
+    return x + y
 
 \end{verbatim}
 
-function annotations/type hints:
+\subsection{Decorators}
 
-\begin{quote}
-def f(a: str, b:str = "apple")->str:
-\end{quote}
+apply @ function to function below to decorate it. syntactic sugar
 
-typing. not actually checked but can do typing as descriptor
+\begin{verbatim}
 
-pointers and side effects of functions in python (when pass objects etc?)
+def my_decorator(func):
+    def inner(a):
+        print("Printing ", a, " in a decorated way")
+        return
+    return inner
+    
+@my_decorator
+def just_printing(a):
+    print(a)
 
-currying in python
+\end{verbatim}
 
-python:
-+ passing lists and objects to functions rather than doing literally
+\subsection{Default parameters}
 
-\begin{quote}
-    f = def(a, b)
-\end{quote}
-can do
-\begin{quote}
-    f(*l)
-\end{quote}
-where
-\begin{quote}
-    l=[1,2]
-\end{quote}
+\begin{verbatim}
+def f(a: int = 1, b: int = 2) -> int:
+    return a + b
+\end{verbatim}
+
+\subsection{Side effects of functions}
+
+Can have side effects on objects in parameters if mutable.
+
+Can have side effects on global variables if present.
+
+\subsection{Passing lists and objects to functions rather than doing literally}
+
+\begin{verbatim}
+def f(a, b):
+    return a + b
+\end{verbatim}
+
+Can accept multiple variables with *arguments
+
+\begin{verbatim}
+l=[1,2]
+f(*l)
+\end{verbatim}
+
+Or can accept named literals with **kwargs (ie key word arguments)
+
+\begin{verbatim}
+args = {"a":1, "b":2}
+f(**args)
+\end{verbatim}
+
+\subsection{Main function in python}
+
+\begin{verbatim}
+def main():
+    // Do stuff
+if __name__ == "__main__":
+    main()
+\end{verbatim}
+
+\subsection{Generators and the yield function}
+
+functions which make generators: yield function
 
 
-or can do
-\begin{quote}
-    f(**args)
-\end{quote}
-
-where
-
-\begin{quote}
-    args = {"a":1, "b":2}
-\end{quote}
-+ can accept random literals with *arguments
-+ can accept named literals with **kwargs (ie key word arguments)
-
-best practice
-+ function names: lower\_case\_and\_underscore
-
-main function in python
-
-defining functions:
-+ triple quote comment at start for documentation
-
-functions as objects:
-+ everything is object
-+ objects are first class. can accept objects. can return objects

@@ -1,0 +1,32 @@
+\subsection{Function annotations}
+
+\begin{verbatim}
+
+def my_function(x: "annotation of the input variable x") -> "annotation of the return":
+    return x
+
+\end{verbatim}
+
+\subsection{Type hints}
+
+Can but types in annotations. Types are not checked at run time.
+
+\begin{verbatim}
+def f(a: str, b: str = "apple") -> str:
+    return a
+\end{verbatim}
+
+\subsection{Function documentation}
+defining functions:
++ triple quote comment at start for documentation
+
+\begin{verbatim}
+
+def my_function_no_parameters():
+    """
+    This is the documentation of my function.
+    """
+    return 0
+
+\end{verbatim}
+

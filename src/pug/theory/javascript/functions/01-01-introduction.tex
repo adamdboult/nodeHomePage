@@ -1,0 +1,30 @@
+
+\subsection{Introduction}
+
+Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+
+dynamically typed functions
+
+\begin{verbatim}
+function myFunction(a, b) {
+  return a * b;
+}
+myFunction(10, 2);
+\end{verbatim}
+
+\subsection{Callbacks}
+
+pass function as argument
+
+\begin{verbatim}
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+myCalculator(5, 5, myDisplayer);
+\end{verbatim}
+
+

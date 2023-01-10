@@ -1,0 +1,65 @@
+
+\subsection{If-then-else}
+
+\begin{verbatim}
+if () x else y
+\end{verbatim}
+can group multiple with block
+
+\begin{verbatim}
+if () {} else {}
+\end{verbatim}
+block curly counts as single command
+
+
+
+can pass varibales to logical evaluation
+\begin{verbatim}
+int x = 1;
+if (x)
+\end{verbatim}
+
+evaluating ints and longs. seems to be if >= 1 then true otherwise false?
+does something on char too?
+
+\subsection{Conditional operator}
+
+If we want to set the value of something based on a conditional, eg:
+
+\begin{verbatim}
+if (a > b) {
+    result = x;
+}
+else {
+    result = y;
+}
+\end{verbatim}
+
+We can instead do the following
+
+\begin{verbatim}
+result = a > b ? x : y;
+\end{verbatim}
+
+If we have something of the form:
+
+\begin{verbatim}
+if (a) {
+    result = a;
+}
+else {
+    result = y;
+}
+\end{verbatim}
+
+
+We can write the following in some implementations of C.
+
+\begin{verbatim}
+result = a ? : y;
+\end{verbatim}
+
+Known as the Elvis operator (because of "?:").
+
+
+

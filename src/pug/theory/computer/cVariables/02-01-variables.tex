@@ -1,6 +1,69 @@
 
 
-\subsection{Assigning variables}
+\subsection{Variable initialisation and assignment to literals}
+
+Variables rather than addresses
+within a scope memory location is equivalent to variable: in high level and variables
+
+
+We can assign a value to a variable by eg:
+
+\begin{verbatim}
+int a = 10;
+\end{verbatim}
+
+This does two different things. First it declares the variable \(a\). This assigns part of the memory for the variable.
+Secondly it defines the value of the memory represented by the variable to \(10\).
+
+These can be split out as follows.
+
+\begin{verbatim}
+int a;
+a = 10;
+\end{verbatim}
+
+If the variable is declared before it is defined it is an uninitialised variable, and its value is undefined.
+
+In addition to decimal we can also set values using other literals.
+
+\begin{verbatim}
+int a = 10;
+int b = 010;
+int c = 0x10;
+\end{verbatim}
+
+Here \(b\) is octal because of the first \(0\) in the literal. In decimal it is 8.
+\(c\) is hexidecimal because of the first \(0x\) in the literal. In decimal it is 16.
+
+
+
 
 \subsection{Assigning variables from other variables}
+
+We can also assign variables from other variables.
+
+\begin{verbatim}
+int a = 10;
+int b = a;
+\end{verbatim}
+
+The following is valid syntax but unlikely to be what was intended.
+\begin{verbatim}
+int a = 10;
+int b;
+int c = b = a;
+\end{verbatim}
+
+
+\subsection{Note on lvalues}
+
+lvalue in c
+identifiable location in memory. not a constant. not a function. not a literal, not a calculation  eg (a+b)
+
+left has to be lvalue. right can be lvalue or not
+int a = 1; // OK. a is an lvalue. doesn't matter what right is.
+int b = a; // OK. b is an lvalue. right is also an lvalue, which is ok.
+(a+b) = 5; // not OK
+5 = a; // Not OK
+left hand side has to be an lvalue. has to be an address we can set result of right hand side to.
 

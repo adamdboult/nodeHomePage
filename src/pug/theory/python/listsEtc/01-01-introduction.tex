@@ -6,13 +6,57 @@ Python get array size,  size of other iterables, sets
 map and filters run on iterable. also the loops?
 is a set an iterable?
 
++ conditional substitutions of lists in python
+
+\subsection{Lists}
+
+Python lists are dynamic arrays.
+
+\begin{verbatim}
+
+a = [1,2,3]
+
+\end{verbatim}
+
+Lists are mutable.
+
+\subsection{List slices}
+
+\subsection{List comprehensions}
+
+\subsection{Lambda functions}
 filter
 
 + map function
 + lambda functions
-+ slices
-+ conditional substitutions of lists in python
 
-+ comprehensions
+\subsection{Tuples}
 
-+ array vs list vs tuple
+\begin{verbatim}
+
+a = (1,2,3)
+
+\end{verbatim}
+
+Tuples are immutable.
+
+why not just use copy on write instead of tuples?
++ complex to implement?
+
+why tuples
+broadly safety
++ mean that if create one tuple based on another, deep copy?
+if mutable
++ a=(1,2,3)
++ b=a
++ b[0]=2
+  * this fails, but if it didn't we might get the following
++ print(a)
+  * (2,2,3)
++ print(b)
+  * (2,2,3)
+
+with mutability can still do eg a=a[2] because this is creating a new thing and using it in name
+immutability means can't do eg b[3] = 2
+allows optimiser to assume not mutable. can cause speed ups
+

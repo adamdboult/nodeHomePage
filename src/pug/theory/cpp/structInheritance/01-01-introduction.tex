@@ -1,0 +1,39 @@
+
+\subsection{Introduction}
+
+\begin{verbatim}
+struct point_2d {
+   int x;
+   int y;
+};
+
+struct point_3d: point_2d {
+    int z;
+};
+
+point_3d my_point;
+my_point.x = 1;
+my_point.y = 2;
+my_point.z = 3;
+
+\end{verbatim}
+
+\subsection{Multiple inheritance}
+
+\begin{verbatim}
+struct point_2d {
+   int x;
+   int y;
+};
+
+struct colour {
+  char red;
+  char green;
+  char blue;
+};
+
+struct point_3d_colour: point_2d, colour {
+  int z;
+};
+\end{verbatim}
+

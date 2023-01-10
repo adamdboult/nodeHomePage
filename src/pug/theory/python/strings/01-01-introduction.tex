@@ -1,15 +1,45 @@
 
-\subsection{Introduction}
+\subsection{Defining strings}
 
+\begin{verbatim}
+x = "Hello"
+\end{verbatim}
+
+Can type hint a string
+\begin{verbatim}
+x: str = "Hello"
+\end{verbatim}
+
+
+\subsection{String pool}
+
+Strings stored in a pool. If 100 variables are of the same string, not stored 100 times.
+
+\subsection{Immutability of strings}
+
+Can't do the following.
+
+\begin{verbatim}
+x = "Hello"
+x[2] = "b"
+\end{verbatim}
+
+For security (if not, presumably copy on write could be implemented).
+
+\subsection{Operations on strings}
 string strip
 
-string printing:
-+ concatenation
-+ % operators
-+ commas (still work?)
-+ string.format method
+concatenation
 
-b strings print(b"...")
-without that defaults to unicode
+\subsection{Iterating over a string}
 
-f strings
+Can treat strings like an array
+
+Following prints out each character on a new row.
+
+\begin{verbatim}
+x = "Hello"
+for ch in x:
+    print(ch)
+\end{verbatim}
+

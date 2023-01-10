@@ -1,2 +1,17 @@
 
 \subsection{Introduction}
+
+which packages do each of these 3 use?
+
+\subsection{asyncio}
+
+subject to gil?
+
+\subsection{threaded}
+
+subject to gil? only 1 thread at a time. other thread like io mean gil go to another thread, so still faster. ie, only one thread running at a time, but if one thread is waiting for io response, can go to other thread.
+
+\subsection{multiprocessing}
+
+(pool, process). in pool, each process has own gil. map, imap, imap unordered. used to get around gil by having multiple concurrent threads.
+

@@ -1,0 +1,79 @@
+
+\subsection{Array}
+
+Array not in default data types. List is different: Dynamic, can hold different data types.
+
+import array
+
+\subsection{Nodes}
+
+\begin{verbatim}
+
+class Node(object):
+    def __init__(self):
+        self.data = None
+        self.next = None
+
+\end{verbatim}
+
+
+\subsection{Linked Lists}
+
+\begin{verbatim}
+
+class LinkedList:
+    def __init__(self):
+        self.current_node = None
+
+    def add_node(self, data):
+        new_node = Node()
+        new_node.data = data
+        new_node.next = self.current_node
+        self.current_node = new_node
+
+    def print(self):
+        node = self.current_node
+        while node:
+            print node.data
+            node = node.next
+            
+linkedList = LinkedList()
+linkedList.add_node(1)
+linkedList.add_node(2)
+linkedList.add_node(3)
+linkedList.add_node(4)
+
+ll.print()
+
+\end{verbatim}
+
+\subsection{Sets}
+
+Uses a hash table.
+
+Following returns \(1, 3, 5\).
+\begin{verbatim}
+
+a = {1,3,5,3}
+a
+
+\end{verbatim}
+
+\subsection{Queues}
+
+Can use a list, but is slow. Requires moving everything around.
+
+Short for double ended queue.
+
+collections.deque
+
+also can do queue.Queue but seems to be based on collections.deque
+
+Double ended queues are implemented as double linked lists.
+
+\subsection{Stacks}
+
+Can also use a list, but can be slower if expanding array?
+
+Like for queue, can use collections.deque
+

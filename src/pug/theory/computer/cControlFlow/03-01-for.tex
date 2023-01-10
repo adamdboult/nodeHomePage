@@ -1,0 +1,44 @@
+
+\subsection{For loops}
+
+
+
+\begin{verbatim}
+int a = 1;
+for (int n=10; n>0; n--) {
+    a = a + 5;
+}
+\end{verbatim}
+
+
+\subsection{Continue in for loops}
+\begin{verbatim}
+int a = 1;
+for (int n=10; n>0; n--) {
+    if (n==5) continue;
+    a = a + 2;
+}
+\end{verbatim}
+
+
+\subsection{Break in for loops}
+\begin{verbatim}
+int a = 1;
+for (int n=10; n>0; n--) {
+    if (n==5) break;
+    a = a + 1;
+}
+\end{verbatim}
+
+\subsection{Using multiple variables}
+
+for loops like this. can do multiple variables like below.
+
+\begin{verbatim}
+
+for (int n=0, i=100 ; n!=i ; n++, i--)
+{
+   // whatever here...
+}
+\end{verbatim}
+

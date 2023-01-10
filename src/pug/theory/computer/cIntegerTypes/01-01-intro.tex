@@ -1,0 +1,118 @@
+
+\subsection{Integer types in C}
+
+\subsection{Standard (signed) integers}
+
+Following are equivalent.
+
+Signed means includes +ve and -ve numbers.
+
+These are at least 16-bit (ie could be 32, 64, 16, or something else - up to the implementaion)
+
+In 16 bit this goes between -32,767 and 32,767.
+
+\begin{verbatim}
+int a = 1;
+signed int a = 1;
+signed a = 1;
+\end{verbatim}
+
+\subsection{Unsigned integers}
+
+If these are 16-bit these are between \(0\) and \(65,535\).
+ 
+\begin{verbatim}
+unsigned int a = 1;
+unsigned a = 1;
+\end{verbatim}
+
+\subsection{Short integers}
+
+These are at least 16 bit, and equal or lesser than standard integers in their bits.
+
+\begin{verbatim}
+short int a = 1;
+signed short int a = 1;
+signed short a = 1;
+short a = 1;
+\end{verbatim}
+
+Unsigned versions.
+
+\begin{verbatim}
+unsigned short int a = 1;
+unsigned short a = 1;
+\end{verbatim}
+
+\subsection{32-bit}
+
+Guaranteed to be at least as big as int, and at least 32 bit.
+
+\begin{verbatim}
+long int a = 1;
+signed long int a = 1;
+signed long a = 1;
+long a = 1;
+\end{verbatim}
+
+Unsigned versions:
+
+\begin{verbatim}
+unsigned long int a = 1;
+unsigned long a = 1;
+\end{verbatim}
+
+
+\subsection{64-bit}
+
+Guaranteed to be at least as big as long, and at least 64 bit.
+
+\begin{verbatim}
+long long int a = 1;
+signed long long int a = 1;
+signed long long a = 1;
+long long a = 1;
+\end{verbatim}
+
+Unsigned versions:
+
+\begin{verbatim}
+unsigned long long int a = 1;
+unsigned long long a = 1;
+\end{verbatim}
+
+\subsection{char}
+
+At least 8 bit.
+
+char can be unsigned or signed.
+\begin{verbatim}
+char a = 1;
+\end{verbatim}
+
+
+If signed is between -127 and 128 (if 8 bit)
+\begin{verbatim}
+signed char a = 1;
+\end{verbatim}
+
+If unsigned is between 0 and 255 (if 8 bit)
+\begin{verbatim}
+unsigned char a = 1;
+\end{verbatim}
+
+\subsection{Using American Standard Code for Information Interchange (ASCII)}
+
+\begin{verbatim}
+char a = "a";
+\end{verbatim}
+
+
+\subsection{Casting}
+
+\begin{verbatim}
+unsigned short int a = 1;
+unsigned long long b = (long long) a;
+\end{verbatim}
+
+

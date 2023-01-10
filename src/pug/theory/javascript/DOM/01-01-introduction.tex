@@ -1,0 +1,36 @@
+
+\subsection{Introduction}
+
+
+make element
+\begin{verbatim}
+const myElem = document.createElement('span');
+\end{verbatim}
+
+Attributes like classes and the id can be set as well
+
+\begin{verbatim}
+myElem.classList.add('foo');
+myElem.id = 'bar';
+myElem.dataset.attr = 'baz';
+\end{verbatim}
+
+Can attach to the body
+\begin{verbatim}
+document.body.appendChild(myElem);
+\end{verbatim}
+
+After setting the tag will look like this:
+
+\begin{verbatim}
+<span class="foo" id="bar" data-attr="baz"></span>
+\end{verbatim}
+
+changing existing elements
+\begin{verbatim}
+document.querySelector('.class'); // get first element with class of "class"
+document.querySelector('#id'); // select the first element with the id of id
+document.querySelector('[data-other]'); // select the first element with the data-other attribute
+document.querySelectorAll('.multiple'); // return array of all element with the 'multiple' class
+\end{verbatim}
+

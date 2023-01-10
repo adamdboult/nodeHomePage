@@ -1,0 +1,27 @@
+
+\subsection{Introduction}
+
+Automatically creates boilerplate for classes which used to store data, including \(\_\_init\_\_\) function with the relevant parameters.
+
+\begin{verbatim}
+from dataclasses import dataclass
+
+@dataclass
+class MyClass:
+
+    x: str
+    y: float
+    z: int = 0
+\end{verbatim}
+
+\begin{verbatim}
+generates among other methods:
+
+class MyClass:
+
+    def __init__(self, x: str, y: float, z: int = 0):
+        self.x = x
+        self.y = y
+        self.z = z
+\end{verbatim}
+

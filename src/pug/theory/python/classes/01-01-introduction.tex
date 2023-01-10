@@ -1,13 +1,79 @@
 
-\subsection{Introduction}
+\subsection{Instance methods and the init constructor}
 
-python inheritance. inherit from multiple?
+\begin{verbatim}
 
-Python double underscore get set delete in classes. Descriptors?
+class MyClass:
 
-documenttion strings on classes?
+    def __init__(self, name):
+        self.name = name
+        self.data = []
 
-Python 
+    def do_something(self, x):
+        self.data.append(x)
+
+myObject = MyClass("bob")
+
+\end{verbatim}
+
+Or optionally with type hints:
+
+\begin{verbatim}
+myObject: MyClass = MyClass("bob")
+
+\end{verbatim}
+
+\subsection{Class documentation}
+
+\begin{verbatim}
+
+class MyClass:
+
+    """
+    Documentation of class
+    """
+
+    def do_something(self, x):
+        """Documentation of method"""
+        self.data.append(x)
+        
+\end{verbatim}
+
+\subsection{Global variables in classes and class methods}
+
+Need to use decorators for classmethod and staticmethod to get them to work properly, though possibly being phased out?
+
+\begin{verbatim}
+
+class MyClass:
+
+    x = 1
+
+    def __init__(self, name):
+        self.name = name
+        self.data = []
+    
+    @classmethod
+    def do_something(cls, y):
+        cls.x = y
+        
+\end{verbatim}
+
+\subsection{Static methods}
+
+\begin{verbatim}
+
+class MyClass:
+
+    @staticmethod
+    def do_something(x):
+        print(x)
+        
+\end{verbatim}
+
+\subsection{Getaddr and setaddr}
+
+Can be used to validate data, present properly and ensure encapsulation.
 
 \begin{verbatim}
 
@@ -26,20 +92,63 @@ Python
     __deladdr__
 
 \end{verbatim}
-    
-Implementing data structures in python. Nodes. Linked list. Set. Queue(dequeue) stack (list)
 
-Factory 
+\subsection{Class destructor}
 
-class naming in python: UpperCaseNames
-class stuff:
-+ constructor
-+ Double underscore immutable
-+ instance methods: operate on "self" def method(self). modify instance
-+ class method: operate on class, class as input, not instance def method(cls). modify class. flag as class using @ to prevent errors
-+ static methods: def method(). can't modify class or instnaces. flag as static to prevent error
-+ iterators, "next" method
+Called when object deleted (eg by garbage collector or "del myObject")
 
-"super" in classes
-make class inherit from another class
-+ multi class inheritance?
+\begin{verbatim}
+
+class MyClass:
+
+    def __init__(self, name):
+        self.name = name
+        self.data = []
+
+    def __del__(self):
+        pass
+        
+\end{verbatim}
+
+\subsection{Replacing built in functions}
+
+\begin{verbatim}
+
+class MyClass:
+
+    def __init__(self, things):
+        self.things = things
+
+    def __len__(self):
+        return len(self.things)
+        
+\end{verbatim}
+
+\subsection{Operator overloading}
+
+Can overload other operators too.
+\begin{verbatim}
+
+class MyClass:
+
+    def __init__(self, val):
+        self.val = val
+
+    def __add__(self, other):
+        return len(self.val + other.val)
+
+x = MyClass(1)
+y = MyClass(2)
+x + y
+        
+\end{verbatim}
+
+\subsection{Class iterators}
+
+\begin{verbatim}
+
+__iter__
+
+__next__
+\end{verbatim}
+

@@ -5,20 +5,63 @@ ints and floats
 
 complex
 
-casting 
-
-dynamic typing
-
 
 type checking. na checking
 
 define as specific data type in python. long int etc
 
-integer caching
-
 null/na etc in python. nan. inf
-
-+ casting in python
 
 overflows of int etc size in python
 what happens if number gets too big?
+
+
+\subsection{Arithmetic}
+
+// in python is integer point division. / is floating point division
+
+\subsection{References and copying on write}
+
+\begin{verbatim}
+
+a = 1000
+b = a
+
+\end{verbatim}
+
+This gives \(b\) the same address as \(a\).
+
+If we instead do the following then \(b\) will have a different reference after it is changed.
+
+\begin{verbatim}
+a = 1000
+b = a
+b = b + 1
+\end{verbatim}
+
+
+\subsection{Small integer caching}
+
+Everything in Python is an object.
+
+Normally, when a number is referenced an object for it is created.
+
+If the number is a small integer (between \(-5\) and \(256\) inclusive) instead a reference to these objects are used.
+
+\subsection{Casting}
+
+\subsection{Booleans}
+
+\subsection{Dynamic typing and lack of generics}
+
+Don't need generics because of dynamic typing.
+
+Uses ducktyping.
+
+\subsection{Type hints}
+
+\begin{verbatim}
+x: int = 1
+y: float = 2
+\end{verbatim}
+

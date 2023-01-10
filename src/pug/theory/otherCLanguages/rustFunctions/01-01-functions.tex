@@ -1,5 +1,26 @@
 
-\subsection{Rust functions}
+\subsection{Macros}
+
+macros end in "!"
+eg println!
+
+\begin{verbatim}
+macro_rules! say_hello {
+    // `()` indicates that the macro takes no argument.
+    () => {
+        // The macro will expand into the contents of this block.
+        println!("Hello!");
+    };
+}
+
+fn main() {
+    // This call will expand into `println!("Hello");`
+    say_hello!()
+}
+\end{verbatim}
+
+
+\subsection{Functions}
 
 \begin{verbatim}
 fn main() {}
@@ -7,8 +28,3 @@ fn my_function(x: i32) -> i32 {}
 
 \end{verbatim}
 
-\subsection{Rust macros}
-
-
-macros end in "!"
-eg println!

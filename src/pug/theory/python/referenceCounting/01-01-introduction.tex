@@ -1,0 +1,23 @@
+
+\subsection{"del"}
+
+Second "print()" fails because we have released the variable.
+
+\begin{verbatim}
+
+x = 1000
+print(x)
+del x
+print(x)
+
+
+\end{verbatim}
+
+\subsection{Reference counting in Python}
+
+Reference count on each object.
+
+References tracked automatically.
+
+If references hits \(0\), object is automatically deleted.
+

@@ -1,0 +1,172 @@
+
+\subsection{Introduction}
+
+
+iterator stuff:
++ "yield" in functions
++ generators
++ "next"
+
+\subsection{Object literals}
+
+can define object literals
+
+\begin{verbatim}
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+const person = {};
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+\end{verbatim}
+
+\subsection{Access}
+
+\begin{verbatim}
+objectName.property
+objectName["property"]
+\end{verbatim}
+
+
+can iterate over properties in object
+for (let variable in object) {
+  // code to be executed
+}
+
+Object.getOwnPropertyNames()
+
+Object.values(myObj); gets values
+
+\subsection{Deleting parts of object}
+
+can delete
+\begin{verbatim}
+delete person.age;
+delete person["age"];
+\end{verbatim}
+
+\subsection{Nested objects}
+
+can nest objects
+\begin{verbatim}
+myObj = {
+  name:"John",
+  age:30,
+  cars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+\end{verbatim}
+
+Can access nested parts of objects.
+\begin{verbatim}
+
+myObj.cars.car2;
+myObj["cars"]["car2"];
+\end{verbatim}
+
+
+\subsection{Printing objects}
+
+\begin{verbatim}
+JSON.stringify(myObj); can print
+\end{verbatim}
+
+\subsection{Getters and settings}
+
+getters and setters for object. can access and update values in a more flexible way.
+
+\begin{verbatim}
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "en",
+  get lang() {
+    return this.language.toUpperCase();
+  }
+};
+person.lang; will retrun En
+\end{verbatim}
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "",
+  set lang(lang) {
+    this.language = lang.toUpperCase();
+  }
+};
+\begin{verbatim}
+person.lang = "en"; will make language be "En"
+\end{verbatim}
+
+methods in object literals
+\begin{verbatim}
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+\end{verbatim}
+
+
+constructors to make objects
+
+\begin{verbatim}
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+\end{verbatim}
+
+primatives can be done as objects
+\begin{verbatim}
+new String()    // A new String object
+new Number()    // A new Number object
+new Boolean()   // A new Boolean object
+new Object()    // A new Object object
+new Array()     // A new Array object
+new RegExp()    // A new RegExp object
+new Function()  // A new Function object
+new Date()      // A new Date object 
+\end{verbatim}
+
+but primatives faster than doing this.
+
+can add things to constructors using prototype
+
+\begin{verbatim}
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+Person.prototype.nationality = "English";
+
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+\end{verbatim}
+
+making an object iterable: @@iterator method
+use of 
+
+\subsection{thing?}
+is generator stuff?
+\begin{verbatim}
+
+function* my_function(){
+\end{verbatim}
+
+arrays and sets
+
+
++ JavaScript this

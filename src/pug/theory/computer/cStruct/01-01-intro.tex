@@ -1,0 +1,41 @@
+
+\subsection{Introduction}
+
+\begin{verbatim}
+struct myStructure {
+  int myNum;
+  char myLetter;
+};
+
+struct myStructure s1;
+
+s1.myNum = 13;
+s1.myLetter = 'B';
+
+\end{verbatim}
+
+\subsection{Accessing via pointers}
+
+The following two ways of accessing via a pointer are the same.
+\begin{verbatim}
+
+struct myStructure {
+  int myNum;
+  char myLetter;
+};
+
+struct myStructure s1;
+
+s1.myNum = 13;
+s1.myLetter = 'B';
+
+struct myStructure * p;
+p = &s1;
+
+(*p).myNum;
+(*p).myLetter;
+
+p->myNum;
+p->myLetter;
+\end{verbatim}
+

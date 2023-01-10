@@ -1,0 +1,72 @@
+
+\subsection{Basics}
+
+
+\begin{verbatim}
+void foo() {
+    int a = 0;
+    a++;
+    printf("%d%d\n", a);
+}
+\end{verbatim}
+
+calling this print 1, 1, 1, 1
+
+c is staticly typed. functions can only take correct type
+
+scoping (lexical scoping?)
+static binding: global variable. variable points to same address throughout
+dynamic binding: ones on stack (or heap). variable does not point to same address throughout
+allocated within functions. automatically freed when function finished.
+
+variables inside functions are local, can't be accessed by other functions. even if called from within another function
+
+c doesn't accept default parameters in function
+
+stack memory: allocated at run time.
+data released when function finished
+
+\subsection{The main function}
+
+Can move main code into its own function, reducing global scope and risk of mistakes.
+
+\begin{verbatim}
+int main (void) {
+    return 0;
+}
+\end{verbatim}
+
+\subsection{Splitting out function declaration and definition}
+
+splitting out declaration and definition of functions allow definitions to be placed more conveniently. eg main at top rather than bottom
+declarations of functions (or variables) must be made before referenced in functions
+
+as with variables, defining functions takes two forms
+int increment (int a);
+int increment (int a) {a = a + 1; return a}
+(is this right? can we define functions after declaring without repeating whole of declaration?
+
+declaration is also known as the function prototype
+
+\subsection{Static variables in functions}
+
+Static variables in functions are global variables, but only accessed via scope of function.
+
+\begin{verbatim}
+void foo() {
+    static int a = 0;
+    int b = 0;
+    a++;
+    b++;
+    printf("%d%d\n", a, b);
+}
+\end{verbatim}
+
+calling this print 11, 21, 31, 41 etc
+
+\subsection{Pointers to functions}
+
+function pointers in c
+
+passing functions as arguments in c. possible!
+
