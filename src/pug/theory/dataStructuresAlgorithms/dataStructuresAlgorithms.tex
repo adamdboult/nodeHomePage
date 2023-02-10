@@ -1,0 +1,46 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Data structures and algorithms, and Lisp}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Linked lists}
+\include{linkedList}
+\include{sortingInsertionLinked}
+
+\part{Using nodes as abstract data types}
+\include{binarySearchTree}
+\include{heapSort}
+
+\part{Solving tree problems}
+\include{depthStack}
+\include{breadthQueue}
+\include{dijkstra}
+\include{treeHeuristic}
+\include{travellingSalesman}
+\include{CSP}
+
+\part{Dynamic programming}
+\include{memoisation}
+\include{hashTable}
+\include{dynamic}
+
+\part{Lisp}
+\include{function}
+\include{lambda}
+\include{functional}
+\include{lisp}
+
+\end{document}
+

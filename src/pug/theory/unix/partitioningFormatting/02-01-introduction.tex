@@ -1,0 +1,26 @@
+
+\subsection{Introduction}
+
+once partitions have been made, they show up on /dev/
+
+
+\subsection{Making ext4 partitions}
+
+\begin{verbatim}
+
+mkfs.ext4 /dev/<textless_root_partition>
+
+\end{verbatim}
+
+\subsection{Making FAT partitions}
+
+also for grub boot?
+
+\begin{verbatim}
+
+mkfs.fat -F 32 /dev/<efi_system_partition>
+
+\end{verbatim}
+
+\subsection{Swap}
+swap, though this is discussed later

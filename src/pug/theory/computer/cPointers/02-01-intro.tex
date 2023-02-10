@@ -1,0 +1,56 @@
+
+
+\subsection{Defining arrays}
+
+\begin{verbatim}
+int vals[] = {1, 2, 3, 4, 5};
+\end{verbatim}
+
+Can also define empty array:
+
+\subsection{Accessing values in arrays}
+
+The following are the same. Difference is just syntactic sugar.
+
+\begin{verbatim}
+a[i]
+*(a+i)
+\end{verbatim}
+
+\subsection{Array shifting}
+
+Relevant for insertion in place.
+
+\subsection{sizeof()}
+
+This function gets the length of an array. It is determined at compile time.
+
+\subsection{Buffer overflows}
+
+
+\subsection{Multi-dimensional arrays}
+
+The following are the same. The difference is just syntactic sugar.
+
+\begin{verbatim}
+a[i][j]
+??
+\end{verbatim}
+
+(Doesn't this need to know dimensions of all but last one? How does this work if size not known in eg a function?)
+
+\subsection{Sort}
+
+Regular arrays. If want to insert or remove can create new array with new size.
+Traversal of array is O(1)
+
+array slices etc operations
+
+c increase size of array. automatically creates array twice as big?? how does this work with stack??
+
+size of array unknown at runtime unless provided
+
+
+arrays if you have array of length 4 and you look at 5 what happens? Does compiler prevent? What about if just have pointer to array?
+
+

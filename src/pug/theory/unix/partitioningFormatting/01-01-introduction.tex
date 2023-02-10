@@ -1,0 +1,53 @@
+
+\subsection{Introduction}
+
+three options for partitioning are fdisk, gdisk and parted. parted generally seems the better option.
+
+\subsection{fdisk}
+
+fdisk is designed with MBR in mind, but later versions have some GPT support:
+
+\begin{itemize}
+  \item fdisk -l (list things in /dev/) (or can use lsblk)
+  \item fdisk /dev/sda (or whatever correct device is)
+  \item this opens dialogue:
+  \begin{itemize}
+    \item "d" to delete partitions
+    \item create a new table, using MBR or GPT
+    \item create partitions (can press "n" for new)
+    \item make one bootable
+    \item "w" to write"
+  \end{itemize}
+\end{itemize}
+
+\subsection{parted}
+
+partitioning using parted:
+
+\begin{itemize}
+  \item supports MBR and GPT
+  \item different to fdisk? needed if drives over 2TB?
+  \item parted -l (list things in /dev/) (or can use lsblk)
+  \item parted /dev/sda (or whatever correct device is)
+  \item this opens dialogue:
+  \begin{itemize}
+    \item see status with "print"
+    \item type "quit" when done
+    \item make gpt using "mklabel gpt"
+    \item make mbr using "mklabel msdos"
+    \item make partitions: "mkpart". is interactive
+    \item make one bootable? "set <partition> boot on"
+  \end{itemize}
+\end{itemize}
+  
+\subsection{gdisk}
+
+gdisk is similar to fdisk but aimed at GPT.
+
+\subsection{What partitions can be used?}
+
+root partition
+if uefi, efi system partition (boot partition). also need boot partition if doing LVM or encryption on BIOS
+swap, though this is discussed later
+
+

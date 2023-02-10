@@ -1,9 +1,7 @@
 
-\subsection{Introduction}
+\subsection{Function declaration}
 
 Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
-
-dynamically typed functions
 
 \begin{verbatim}
 function myFunction(a, b) {
@@ -11,6 +9,63 @@ function myFunction(a, b) {
 }
 myFunction(10, 2);
 \end{verbatim}
+
+\subsection{Function scope}
+
+We might expect the following to fail, but it doesn't.
+
+\begin{verbatim}
+function myFunction() {
+    x = 5;
+}
+myFunction();
+var y = x;
+\end{verbatim}
+
+The following does fail, as x has not been declared.
+
+\begin{verbatim}
+"use strict";
+function myFunction() {
+    x = 5;
+}
+myFunction();
+var y = x;
+\end{verbatim}
+
+As does the following, because declaring the variable keeps it in the scope of the function.
+
+\begin{verbatim}
+"use strict";
+function myFunction() {
+    var x = 5;
+}
+myFunction();
+var y = x;
+\end{verbatim}
+
+
+\subsection{Function expressions}
+
+The function here is an anonymous function. We just happen to be naming it.
+
+\begin{verbatim}
+const myFunction = function(a, b) {
+    return a * b
+};
+\end{verbatim}
+
+Function expressions are not necessarily in the global score, and so can be preferred.
+
+\subsection{Arrow function expressions}
+
+Another way of writing function expressions.
+
+\begin{verbatim}
+const myFunction = (a, b) => a * b;
+\end{verbatim}
+
+Again this is an anonymous function, that has happened to have been named. The function itself can be used as a parameter in eg a map.
 
 \subsection{Callbacks}
 
@@ -27,4 +82,7 @@ function myCalculator(num1, num2, myCallback) {
 myCalculator(5, 5, myDisplayer);
 \end{verbatim}
 
+
+\subsection{Sort}
+dynamically typed functions
 

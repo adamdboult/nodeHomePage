@@ -15,27 +15,40 @@
 
 \include{preface}
 
-%\part{Comparison of machine languages}
-%Reduced Instruction Set Computer (RISC)
-%Complex Instruction Set Computer (CISC)
+\part{File systems}
+% file systems:
+% + exfat; fat12; fat32; apfs; macos/extended
+\include{fileSystems}
+\include{fileSystemsJournalling}
+\include{partitions}
 
-%Main ones
-%IBM System/360
-%Motorola 6800
-%Motorola 68000
-%Zilog Z80 (gameboy based on this, ppu separate). based on intel 8080
-%Intel 8086 (x86)
-%ARM
-%PowerPC
-%MIPS
+\part{Boot loaders}
+\include{bootLoaderFirst}
+\include{bootLoaderSecond}
 
-\part{OS basics}
+\part{Character devices}
+\include{printerKeyboard}
 
-\include{batchProcessing}
-\include{interrupts}
-\include{concurrencyControl}
-\include{bios}
+\part{Tools for partitioning and formatting drives}
+\include{partitioningFormatting}
 
+%+ fsck[fix file system]
+
+\part{Linux kernel}
+\include{fileSystemsLinux}
+
+% character device drivers
+% block device drivers
+
+% /dev folder. /dev/null, /dev/zero, /dev/random.  % inc /dev/random, /dev/urandom, security risks (because pseudo)
+% block devices
+% where is character device shown? keyboard? printer?
+
+% trailing & and nohup somewhere?
+% comm and sort somewhere
+
+% /boot ?
+% /boot/vmlinuz-... (kernel)
 
 %printk (print in kernel world, different to printf in user world)
 %lsmod to list kernel modules
@@ -46,33 +59,40 @@
 % #include <linux/init.h> to use __init and __exit
 % #include <linux/fs.h> to use file_operations struct
 
-% /boot ?
-% /boot/vmlinuz-... (kernel)
+\part{OS basics}
+\include{batchProcessing}
+\include{interrupts}
+\include{concurrencyControl}
 
-\part{Linux file systems}
-%doing before devices because file systems can be just in RAM - no devices. eg linux distros which just load from flash drive
+\part{GNU}
+%+ mount
+%+ umount
 
-% trailing & and nohup somewhere?
-% comm and sort somewhere
+%commands:
+%+ swapon
+%+ mkswap
+%+ df
+%swapfile (separate to partition)
+%fstab
+%/mnt
+%/media
 
-\include{fileSystems}
-\include{fileSystemsLinux}
+\include{fileSystemsCommands}
+\include{sedTr}
+
+\part{GNU coreutils}
 \include{fileSystemsNavigation}
 \include{fileSystemsChanging}
 \include{shellReading}
-\include{fileSystemsCommands}
-\include{sedTr}
+
+\part{GNU cont.}
 \include{thompsonShellXargs}
 \include{edVi}
 \include{checkSums}
 \include{compression}
 \include{jails}
 
-\part{Devices}
-% /dev folder. /dev/null, /dev/zero, /dev/random.  % inc /dev/random, /dev/urandom, security risks (because pseudo)
-
-% character devices
-% block devices
+\part{The shell}
 \include{basicShell}
 \include{keyboardLocales}
 
@@ -95,17 +115,11 @@
 %/usr generally read only stuff
 % /var more write only?
 
-
-
-
-
-
 \part{Systemd}
 % new includes init, service
 %\include{cron} %old
 
 \part{Compiling}
-
 % diff and patch
 % diff -u oldFile newFile > mods.diff  # -u tells diff to output unified diff format
 % patch < mods.diff
@@ -120,91 +134,29 @@
 
 %\include{stackTrace} % using backtrace() function from glibc to do stack trace
 
-\part{Programming techniques}
-\include{staticAnalysis}
-\include{dynamicAnalysis}
-
-\part{Package management}
-% uname[to get info on kernel etc]
-
-% debian package updates
-% apt-get update to get list of packages possible updates
-% apt-get upgrade to upgrade packages
-
-% debian install package:
-% apt-get install <package>
-% apt-get remove <package>
-% apt-get purge <package> # removes conf files too
-
-% debian rebuild package from source:
-% apt-get build-dep <package> # gets dependencies of building pacakge
-% apt-get source <package>
-
-% apt exists as alternative to apt-get and apt-cache. front end for it, somewhat more user friendly
-
-\include{debian}
-\include{redHat}
-\include{arch}
-\include{docker}
-%\include{snapFlatpakAppImage}
-
 \part{Scripting}
 \include{sh}
 \include{bash}
 \include{awk}
 \include{perl}
 
-\part{Parallel programming}
-% map reduce
-% race conditions
-% multi threading
-% thread safety. mutex. semaphore. locks.
-% futures and promises
-% cuda and gpgpu
-\include{parallel}
-
-\part{Databases}
+\part{Serialisation}
 \include{csv}
 \include{XML}
 \include{JSON}
 \include{YAML}
-\include{databases}
-\include{SQL}
-\include{SQLite}
-%\include{noSQL} % mongo
-
-\part{Device storage}
-%commands:
-%+ fdisk
-%+ mount
-%+ umount
-%+ swapon
-%+ mkswap
-%+ df
-%+ mkfs
-%+ fsck[fix file system]
-%swapfile (separate to partition)
-%fstab
-%/mnt
-%/media
-
-\part{Text editors}
-\include{vim}
-\include{emacs}
 
 \part{Encryption}
 \include{encryptionHardDrive}
 \include{encryptionRAM}
 
-\part{Decompiling}
+\part{Analysing programs}
+\include{staticAnalysis}
+\include{dynamicAnalysis}
 \include{hexEditor}
 \include{ghidra}
 %\include{trojan} % concept of time bomb/logic bomb? payload
 %\include{virus} % To networks?and worms? ceoncept of spread and replication not in trojan
-
-\part{Improving knowledge}
-\include{knowledge}
-\include{expert}
 
 \end{document}
 

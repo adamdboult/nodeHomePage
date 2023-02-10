@@ -1,15 +1,10 @@
 
 
-\subsection{Variable assignment}
+\subsection{Variable assignment and data types}
 
 \begin{verbatim}
-var x = 1;
-let x = 1; (?)
-x = 1; (global?)
-const x = 1;
+x = 1;
 \end{verbatim}
-
-\subsection{Data types}
 
 undefined
 
@@ -18,6 +13,54 @@ null
 boolean
 
 "number", other sort of number?
+
+
+\subsection{"var" keyword and strict}
+
+Following will run, but the typo no noticed.
+\begin{verbatim}
+myVariable = 1;
+myVaraible = myVariable + 1;
+\end{verbatim}
+
+We can enforce declaration of variables to help prevent this.
+
+\begin{verbatim}
+"use strict"
+var x = 1;
+x = 1;
+\end{verbatim}
+
+\subsection{"let" keyword and block scope}
+
+This works, even though we may not expect it to.
+\begin{verbatim}
+{
+    var x = 1;
+}
+var y = x;
+\end{verbatim}
+
+Block requires "let"
+
+\begin{verbatim}
+{
+    let x = 1;
+}
+var y = x;
+\end{verbatim}
+
+
+"let" is a newer keyword than "var". Broadly "use strict" and "let" should be used throughout.
+
+\subsection{"const" keyword}
+
+Like let (uses block scope) but can't reassign.
+This increases safety and can make compiler work better.
+
+\begin{verbatim}
+
+\end{verbatim}
 
 \subsection{Dynamic typing}
 

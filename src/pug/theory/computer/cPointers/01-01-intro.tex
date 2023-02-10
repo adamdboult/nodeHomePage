@@ -9,15 +9,14 @@ variable pointers with \& and * in c
 int a = 1;
 int * b = &a;
 \end{verbatim}
-\(*p\) assumes \(p\) is pointer and gets what it points at. \(\&p\) assumes \(p\) is value and gets address of \(p\).
+\(\*p\) assumes \(p\) is pointer and gets what it points at. \(\&p\) assumes \(p\) is value and gets address of \(p\).
 
 
-NULL as literal pointer to no valid data. same as \(0\).
+\(NULL\) is literal pointer to no valid data. same as \(0\).
 
 pointer of zero doesn't work, reserved
 
 \subsection{Dangling pointers}
-
 
 \begin{verbatim}
 int * p = NULL;
@@ -27,38 +26,5 @@ int * p = NULL;
 }
 \end{verbatim}
 
-p is dangling after because scope ends.
-
-
-
-\subsection{Arrays}
-
-
-arrays:
-+ a[i] is syntactic sugar for *(a+i)
-
-
-
-Regular arrays. If want to insert or remove can create new array with new size.
-Traversal of array is O(1)
-
-array shifting. relevant for insertion in place
-
-
-array slices etc operations
-
-
-sizeof. can get length of array. determined at compile time
-
-c increase size of array. automatically creates array twice as big?? how does this work with stack??
-
-size of array unknown at runtime unless provided
-
-
-arrays if you have array of length 4 and you look at 5 what happens? Does compiler prevent? What about if just have pointer to array?
-
-multi dimensional array. How does memory work? In a[X][y] where in offset does it look? doesn't it need to know dimensions of a to do this? (which it knows at compile time i guess)
-
-
-buffer overflows
+\(p\) is dangling after because scope ends.
 

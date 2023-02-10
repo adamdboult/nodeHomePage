@@ -2,3 +2,36 @@
 \subsection{Introduction}
 
 What they are. tree? heap? concept of mapping from path to file
+
+\subsection{Garbage management of files}
+
+The link count is stored per file. If there are zero links to a file then the file system manager knows that the file can be deleted.
+
+\subsection{inodes}
+
+Bad blocks are noted in inode1.
+
+Root is inode 2.
+
+inode 0 is null.
+
+
+Within a partition, each file or folder has a unique inode.
+
+Each partition divided into blocks. numbered from 0. Blocks are the minimum size for readable or writable operations. Changing a block means needing to read the whole block, making a change and then rewriting the block.
+
+Files can be stored across many blocks. Block don't have to be next to each other.
+
+Because a block is the mimimum size of any operation, there can only be one file per block, and each file takes up at least one block.
+
+File names are the property of folders.
+
+
+\subsection{ext}
+
+\subsection{ext2}
+
+\subsection{FAT12}
+
+\subsection{FAT32}
+

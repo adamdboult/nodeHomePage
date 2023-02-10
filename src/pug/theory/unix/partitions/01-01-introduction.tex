@@ -1,0 +1,19 @@
+
+\subsection{MBR and GPT}
+
+Drives are divided into sectors. Each sector contains a fixed number of bytes, eg 4096 bytes.
+
+File systems can be partitioned using either MBR or GPT:
+
+\begin{itemize}
+  \item Master Boot Record (MBR)
+  \item Globally Unique IDentifiers (GUID) Partition Table (GPT)
+\end{itemize}
+GPT is newer than MBR.
+
+\subsection{Boot sectors}
+
+The first sector of a disk is the boot sector. This applies to both MBR and GPT.
+
+GPT does not use the boot sector, and it is just kept for compatibility reasons. An EFI system partition is used instead, as discussed later.
+
