@@ -1,0 +1,103 @@
+\subsection{General commands}
+
+List installed
+\begin{verbatim}
+systemctl list-unit-files
+\end{verbatim}
+
+\begin{verbatim}
+systemctl status
+\end{verbatim}
+
+running
+\begin{verbatim}
+systemctl list-units
+\end{verbatim}
+
+
+\begin{verbatim}
+systemctl daemon-reload
+\end{verbatim}
+
+
+
+see if thing failed:
+
+\begin{verbatim}
+systemctl --failed
+\end{verbatim}
+
+
+
+\subsection{journalctl}
+
+see logs: journalctl (part of systemd?)
+\begin{verbatim}
+journalctl
+\end{verbatim}
+
+\subsection{Unit specific commands}
+
+\begin{verbatim}
+systemctl status <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl help <help>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl is-enabled <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl start <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl start <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl stop <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl restart <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl reload <unit>
+\end{verbatim}
+
+Starts at boot, or starts now.
+\begin{verbatim}
+systemctl enable <unit>
+systemctl enable <unit> --now
+\end{verbatim}
+
+\begin{verbatim}
+systemctl disable <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl reenable <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl mask <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl unmask <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl edit <unit>
+\end{verbatim}
+
+\begin{verbatim}
+systemctl revert <unit>
+\end{verbatim}
+
+

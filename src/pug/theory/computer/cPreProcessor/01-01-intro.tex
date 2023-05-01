@@ -1,0 +1,47 @@
+
+
+\subsection{define}
+
+use of \#define
+
+\begin{verbatim}
+#define PI 3.149
+x=PI*4;
+\end{verbatim}
+
+can define functions using macros
+can define
+\begin{verbatim}
+#define TIMES_THREE(x) (x * 3)
+y=TIMES_THREE(5);
+\end{verbatim}
+
+can turn on DEBUG eg
+\begin{verbatim}
+#define DEBUG
+\end{verbatim}
+
+
+or do with compiler eg
+
+\begin{verbatim}
+GCC -DDEBUG (D then macro name)
+\end{verbatim}
+
+why use const over define? handled by compiler not preprocessor. means you can do type checking
+
+\subsection{include}
+
+\subsection{undef}
+
+\subsection{ifdef}
+
+ifdef thing:
+following prints "a" only if DEBUG is defined
+\begin{verbatim}
+#ifdef DEBUG
+printf("a");
+#endif
+\end{verbatim}
+
+

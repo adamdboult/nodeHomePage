@@ -1,2 +1,55 @@
 
-\subsection{Introduction}
+
+\subsection{dm-crypt}
+
+Short for Device Manager enCRYPTion.
+
+/etc/crypttab
+
+encrypt a partition. will prompt for password
+
+
+\subsection{Linux Unified Key Setup (LUKS)}
+
+\begin{verbatim}
+cryptsetup luksFormat /dev/<device>
+cryptsetup luksFormat /dev/sda1
+\end{verbatim}
+
+
+can check with:
+
+\begin{verbatim}
+cryptsetup open /dev/sda1 name
+\end{verbatim}
+Creates in
+\begin{verbatim}
+/dev/mapper/name
+\end{verbatim}
+
+Can close:
+\begin{verbatim}
+cryptsetup close name
+\end{verbatim}
+
+When open can eg format it:
+
+\begin{verbatim}
+mkfs -t ext4 /dev/mapper/name
+\end{verbatim}
+
+\subsection{Sort}
+
+Public Key Cryptography Standards (PKCS)\#11 tokens
+Fast IDentity Online 2 (FIDO2) tokens
+
+
+dm-verity
+dm-integrity
+
+/proc/crypto
+
+
+
+/etc/initcpio/hooks/openswap
+

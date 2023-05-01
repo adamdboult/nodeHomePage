@@ -1,9 +1,13 @@
 
 \subsection{Finite-state machines}
 
-A finite-state machine has \(n\) states. The machine moves through these states through the use of inputs, and the movement between these states can be represented by a graph.
+A finite-state machine has \(n\) states and \(m\) possible inputs.
 
-We can represent the machine with table. One axis shows the inputs, the other the states. The cells can be filled with (if available) movements between the states.
+Each combination of state and input returns a new state.
 
-Similar to combinatorial logic, but output is the new state.
+This can be representated with an \(m\) by \(n\) matrix, or a graph.
+
+This is similar to combinatorial logic, but the output is the new state rather than a general output.
+
+This means that successive inputs can be given to a finite state machine, whereas for combinatorial logic only the most recent input matters.
 

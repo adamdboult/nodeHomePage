@@ -1,45 +1,7 @@
 
 \subsection{Introduction}
 
-Take physical disk drives, create logical disk drives.
-
-\subsection{Striping}
-
-A single file is spread over multiple disks.
-
-Can be done at bit/byte/block level.
-
-\subsection{Mirroring}
-
-Same data on multiple drives
-
-\subsection{Parity}
-
-Used for error detection.
-
-In protocol for sending/saving we say that all bits must be even (eg 1100) (or odd)
-
-For given bit of info, we add parity bit to guarantee that bit is indeed even/odd. 1100 becomes 11000; 1000 becomes 10000
-
-Cannot correct errors, just detect them. only detects if odd number of errors.
-
-Parity can be stored on dedicate disk, distributed.
-
-alternative to parity bit: hamming code
-
-\subsection{RAID levels}
-
-RAID 0: Uses striping across disks, but no redunency. allows for improved read/write times. if any drive fails, all fail
-RAID 1: Data written identically to two drives. read times increased, as with raid 0, due to mirroring. writing is slower. no parity or striping
-RAID 2: bit level striping and hamming code. rarely used
-RAID 3: rarely used. byte level stripping. Dedicated parity disk
-RAID 4: dedicated parity disk
-RAID 5: block level striping, distributed parity
-RIAD 6: double distributed parity
-
-\subsection{ZFS}
-
-RAID-Z: Under ZFC, similar to RAID 5
+Discussed software RAID in "unix". Hardware RAID here
 
 \subsection{Off-site backups}
 

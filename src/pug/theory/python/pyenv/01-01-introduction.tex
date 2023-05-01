@@ -1,0 +1,93 @@
+
+\subsection{Introduction}
+
+
+pyenv (and pyenv-virtualenv and pyenv-virtualenvwrapper)
+
+pyenv-virtualenv allows use of virtualenv and pyenv
+
+eg can run 
+\begin{verbatim}
+pyenv install 2.7.15
+\end{verbatim}
+
+\begin{verbatim}
+pyenv uninstall 2.7.15
+\end{verbatim}
+
+to list installed versions
+\begin{verbatim}
+pyenv versions
+\end{verbatim}
+
+switch to version:
+
+\begin{verbatim}
+pyenv global 2.7.15
+\end{verbatim}
+
+\begin{verbatim}
+pyenv local 2.7.15
+\end{verbatim}
+
+\begin{verbatim}
+pyenv shell 2.7.15
+\end{verbatim}
+
+restore:
+
+\begin{verbatim}
+pyenv global system
+\end{verbatim}
+
+now python/pip will use the python version in question
+
+
+\subsection{pipenv}
+
+
+basically integrates adn replaces pip and venv
+
+uses Pipfile
+
+automatically creates virtual environments
+
+\begin{verbatim}
+pipenv install pandas
+\end{verbatim}
+
+automatically works with Pipfile and creates if needed
+
+\begin{verbatim}
+pipenv uninstall pandas
+\end{verbatim}
+
+\begin{verbatim}
+pipenv run python main.py
+\end{verbatim}
+
+update lock file
+\begin{verbatim}
+pipenv lock
+\end{verbatim}
+
+install from lock
+\begin{verbatim}
+pipenv sync
+\end{verbatim}
+
+does lock and sync
+\begin{verbatim}
+pipenv update
+\end{verbatim}
+
+spawns shell in environment. exit with exit()
+\begin{verbatim}
+pipenv shell
+\end{verbatim}
+
+see dependency graph
+\begin{verbatim}
+pipenv graph
+\end{verbatim}
+

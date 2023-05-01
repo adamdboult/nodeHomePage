@@ -1,0 +1,50 @@
+
+\subsection{Introduction}
+
+dpkg, apt, aptitude, sources.list
+
+package updates
+
+to get list of packages possible updates
+
+\begin{verbatim}
+apt-get update
+\end{verbatim}
+
+to upgrade packages
+\begin{verbatim}
+apt-get upgrade
+\end{verbatim}
+
+debian install package
+
+\begin{verbatim}
+apt-get install <package>
+\end{verbatim}
+
+purge removes conf files too
+\begin{verbatim}
+apt-get remove <package>
+apt-get purge <package>
+\end{verbatim}
+
+
+rebuild package from source:
+\begin{verbatim}
+apt-get source <package>
+\end{verbatim}
+
+gets dependencies of building package
+
+\begin{verbatim}
+apt-get build-dep <package>
+\end{verbatim}
+
+\subsection{apt}
+apt exists as alternative to apt-get and apt-cache. front end for it, somewhat more user friendly
+
+
+\subsection{SORT}
+apt list --installed
+apt-get source <package>
+

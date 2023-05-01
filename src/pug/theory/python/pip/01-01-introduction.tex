@@ -1,0 +1,40 @@
+
+\subsection{Introduction}
+
+\begin{verbatim}
+python -m pip install pandas
+python -m pip install --user pandas
+python -m pip install --upgrade pandas
+python -m pip install git+<path_to_git>
+\end{verbatim}
+
+\subsection{requirements.txt}
+
+pip install -r requirements
+
+can have pip install git+https equiv in there
+
+python -m pip freeze > requirements.txt
+
+can make manually instead. better because freeze puts dependencies too
+
+\subsection{Pipfile}
+
+Pipfile is replacement for requirements.txt
+
+python -m pip install -p <file>
+
+Pipfile generates Pipfile.lock
+can run "pipenv lock"
+pipfile listed python version expected
+
+
+
+\subsection{Mirroring pip}
+
+can set up mirror and use pip config to access it
+
+
+
+
+

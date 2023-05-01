@@ -1,0 +1,18 @@
+
+\subsection{Introduction}
+
+Similar to counter machine but:
+
++ Allows indirect reference of registers. Where \(r\) previously would have referred to the register itself, (eg \(INC(r)\), we can now refer to the value of a pointer using \([r]\). This allows us to write eg \([3]\rightarrow 4\) which means put the value of register \(3\) into register \(4\).
+
+Increments can be rewritten
+
+INC(r) to \([r]+1\rightarrow r\)
+DEC(r) to \([r]-1\rightarrow r\)
+
+Also for the changes to the instruction register
+
+normally is \([IR]+1\rightarrow IR\)
+with jump is before JZ(r,z). now if \([r]=0\) then \(z\rightarrow IR\). if \([r]!=0\) then \([IR]+1\rightarrow IR\)
+
+The register machine introduces additional operations, taking advantage of indirect operations.

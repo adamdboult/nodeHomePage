@@ -7,13 +7,57 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Univariate time series}
+\title{Univariate time series and encryption}
 \maketitle
 
 \setcounter{tocdepth}{0}
 \tableofcontents
 
 \include{preface}
+
+\part{Univariate stochastic processes}
+\include{stochastic}
+\include{stochasticStationary}
+\include{randomWalk}
+\include{martingale}
+\include{stochasticMarkov}
+\include{survivalFunctions}
+
+\part{Univariate Continuous-time stochastic processes}
+\include{brownian}
+\include{SDEs}
+
+\part{Univariate discrete-time stochastic processes}
+\include{stochasticOrderIntegration}
+\include{stochasticWold}
+
+\part{Sampling}
+\include{samplingMCMC}
+\include{samplingProcess}
+\include{samplingStochastic}
+
+\part{Signal processing}
+\include{signalQuant}
+\include{signalDFT}
+\include{signalDown}
+\include{signalFFT}
+\include{signalNoisy}
+
+\part{Advanced inference (time series univariate)}
+\include{missingInferenceTimeSeries}
+
+\part{Estimating time series models}
+\include{markov}
+\include{markovHMMEstimation}
+\include{forecastingUni}
+\include{time}
+\include{survivalAnalysis}
+
+\part{Communication}
+\include{hashes}
+\include{encryptionClassical}
+\include{encryptionModern}
+\include{encryptionAsymmetric}
 
 \end{document}
 

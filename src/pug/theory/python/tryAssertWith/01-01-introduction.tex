@@ -1,0 +1,66 @@
+
+\subsection{try,except,else,finally}
+
+\begin{verbatim}
+try:
+    print(x)
+except:
+    print("exception occured")
+\end{verbatim}
+
+can do different types of exception
+
+\begin{verbatim}
+try:
+    c = a // b
+except ZeroDivisionError:
+    print("Dividing by zero")
+except:
+    print("Some other problem happened")
+\end{verbatim}
+
+Can add else for if no exceptions
+
+\begin{verbatim}
+try:
+    print(x)
+except:
+    print("Exception happend")
+else:
+    print("No exception happened")
+\end{verbatim}
+
+Can add "finally" black to always execute regardly of type of exception or if it just did else
+
+\begin{verbatim}
+try:
+    print(x)
+except:
+    print("Exception happened")
+else:
+    print("No exception happened")
+finally:
+    print("This prints if an exception happens or not")
+\end{verbatim}
+
+\subsection{Manually raising exceptions with "raise"}
+
+We can manually raise exceptions
+
+\begin{verbatim}
+raise Exception
+raise ZeroDivisionError
+\end{verbatim}
+
+\subsection{assert}
+assert here too:
+assert(False)
+raises AssertionError
+
+
+\subsection{with}
+
+"with" function
+easier to use than try except
+released objects afterwards, so need to worry less about clean up if eg opening files
+

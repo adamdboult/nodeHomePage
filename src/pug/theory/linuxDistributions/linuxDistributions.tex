@@ -1,0 +1,40 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Specific Linux distributions}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Introduction}
+\include{introduction}
+
+\part{Package management}
+\include{debian}
+\include{ubuntu}
+\include{redHat}
+\include{arch}
+\include{gentoo}
+\include{slack}
+\include{qubes}
+\include{nixos}
+\include{void}
+\include{SUSE}
+\include{openwrt}
+
+\part{Other package managements}
+\include{docker}
+\include{flatpak}
+\include{appImage}
+
+\end{document}
+

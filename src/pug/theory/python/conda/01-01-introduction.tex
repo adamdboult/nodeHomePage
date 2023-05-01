@@ -1,0 +1,53 @@
+
+\subsection{Introduction}
+
+
+
+miniconda vs anaconda (anaconda same but more default pacakges). 
++ neither available on official repos, licencing?
+
+miniconda more lightweight. fewer packages installed by default
+
+environment.yml
+conda env create -f environment.yml
++ creates from environment file
+
+conda install packages
+conda virtual environemnts
+
+\begin{verbatim}
+conda create --name <env_name>
+conda create -n myenv python=3.9
+conda install -n myenv scipy
+conda install -n myenv scipy=0.17.3
+conda create -n myenv python=3.9 scipy=0.17.3 astroid babel
+conda create --prefix ./envs jupyterlab=3.2 matplotlib=3.5 numy=1.21
+conda activate ./envs
+conda deactivate
+\end{verbatim}
+
+
+update environment
+\begin{verbatim}
+conda env update --prefix ./env --file environment.yml --prune
+\end{verbatim}
+
+list environments
+\begin{verbatim}
+conda info --envs
+\end{verbatim}
+
+within environemtns
+\begin{verbatim}
+conda list (list packages)
+conda install scipy
+\end{verbatim}
+
+pip in conda
+
+if we install pip when making environment, can install using pip inside conda
+
+.condarc (has default packages for new environemnts?)
+
+conda: page on local mirror using conda-mirror
+

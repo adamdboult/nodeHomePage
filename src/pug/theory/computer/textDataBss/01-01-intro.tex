@@ -1,0 +1,23 @@
+
+\subsection{Introduction}
+
+three parts?
++ .bss section (block starting symbol) has unitialised statically allocated data
++ .data section has initialised statically allocated data
++ code (aka text) which has the instructions
+  * 
+
+text file starts eg like
+
+\begin{verbatim}
+section .bss
+
+section .data
+  hello: db "Hello world!", 10
+  helloLen: equ $-hello
+
+section .text
+  global _start
+  _start:
+\end{verbatim}
+

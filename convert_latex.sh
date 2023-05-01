@@ -2,26 +2,8 @@
 
 current_dir=$(pwd)
 
-# Create tex file for each folder
-#python createDerivedLatexFiles.py
-
-# Create sidebars
-#python create_sidebars.py
-
 # Convert all tex files
 
-#declare -a subjects=(
-#    "logic" "algebra" "analysis" "geometry" "computer"
-#    "probabilityUnivariate" "probabilityMultivariate" "probabilityTimeSeriesUnivariate" "probabilityTimeSeriesMultivariate" "machineLearning" "neuralNetworks"
-#    "physics" "biology" "engineering" "applied"
-#    "unix" "graphics" "networks" "databases" "cpp" "java" "javascript" "python"
-#    "VMEmulation" "otherCLanguages" "otherLispLanguages" "otherCompiledLanguages" "R" "otherLanguages" "windows" "distributedComputing"
-#    "ai" "equilibrium" "IO" "MBF" "economics" "macroeconomics" "publicChoice" "history" "epistemologyOntology" "philosophy"
-#)
-
-#for subject in "${subjects[@]}"
-#for subject in src/pug/theory/*/
-#for subject in $(cd src/pug/theory/; ls -d; cd $current_dir;)
 for subject in src/pug/theory/*/
 do
     # remove trailing "/"
@@ -33,9 +15,6 @@ do
     subject=${subject#*/}
 
     printf "Doing \"${subject}\"...\n"
-    # remove trailing "/"
-    #subject2 =${subject%???}
-    #printf "Doing \"${subject2}\"...\n"
     
     # Create tex file
     python createDerivedLatexFiles.py $subject
@@ -53,7 +32,6 @@ do
 
         cd $d
         pandoc $s --mathjax -o $o
-        #pandoc $s --number-sections --toc --toc-depth 2 -o $p
         cd $current_dir
 
     done
@@ -70,8 +48,4 @@ do
     python copy_pdf.py $subject
 
 done
-
-
-# Copy pdf
-#python copy_pdf.py
 

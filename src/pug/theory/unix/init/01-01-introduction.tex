@@ -1,0 +1,47 @@
+
+\subsection{Introduction}
+
+/sbin/init
+/etc/init/
+/etc/init.d/
+/etc/inittab
+
+
+
+\subsection{openrc}
+
+\subsection{runit}
+
+
+\subsection{/etc/fstab}
+
+Example from arch wiki:
+
+\begin{verbatim}
+
+# <device>                                <dir> <type> <options> <dump> <fsck>
+UUID=0a3407de-014b-458b-b5c1-848e92a327a3 /     ext4   noatime   0      1
+UUID=f9fe0b69-a280-415d-a03a-a32752370dee none  swap   defaults  0      0
+UUID=b411dc99-f0a0-4c87-9e05-184977be8539 /home ext4   noatime   0      2
+
+\end{verbatim}
+
+
+Devices can also be eg /dev/sda2, but UUIDs safer.
+
+dump refers to backing up disks
+
+fsck says whether there should be a check first. 0 means no. 1 means 1 and is root. 2 means yes and is not root.
+
+Options include:
+
++ rw (read and write)
++ suid (use set user IDs and group IDs from file system)
++ dev ("Interpret character or block special devices on the filesystem")
++ exec (allow execution of binaries)
++ auto (can mount with -a)
++ nouser (don't allow normal user to mount)
++ async
+
+The option "defaults" uses all of these
+

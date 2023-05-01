@@ -43,3 +43,18 @@ for ch in x:
     print(ch)
 \end{verbatim}
 
+\subsection{SORT}
+
+if define a string, is unicode.
+can convert to bytes
+
+"my string".encode() to get the bytes which encode the string
+
+b"b string".decode() to convert byte string into unicode string
+
+eg for hebrew characters
+\begin{verbatim}
+"hellò".encode()
+b'\xd7\xa9\xd7\x9c\xd7\x95\xd7\x9d \xd7\xa2\xd7\x95\xd7\x9c\xd7\x9d'.decode()
+\end{verbatim}
+

@@ -1,0 +1,42 @@
+
+\subsection{Introduction}
+
+three options for partitioning are fdisk, gdisk and parted. parted generally seems the better option.
+
+
+root partition
+if uefi, efi system partition (boot partition). also need boot partition if doing LVM or encryption on BIOS
+swap, though this is discussed later
+
+\subsection{fdisk}
+
+fdisk is designed with MBR in mind, but later versions have some GPT support:
+
+\begin{itemize}
+  \item fdisk -l (list things in /dev/) (or can use lsblk)
+  \item fdisk /dev/sda (or whatever correct device is)
+  \item this opens dialogue:
+  \begin{itemize}
+    \item "d" to delete partitions
+    \item create a new table, using MBR or GPT
+    \item create partitions (can press "n" for new)
+    \item make one bootable
+    \item "w" to write"
+  \end{itemize}
+\end{itemize}
+
+\subsection{cfdisk}
+
+\subsection{lsblk}
+
+See devices in /dev/
+\subsection{fsck}
+
+Fix file system.
+
+\subsection{gdisk}
+
+gdisk is similar to fdisk but aimed at GPT (is it part of util-linux though?)
+
+\subsection{wipefs}
+

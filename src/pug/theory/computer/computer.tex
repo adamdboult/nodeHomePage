@@ -30,40 +30,53 @@
 \include{arithmetic}
 \include{regularExpressions}
 
-\part{Turing machines}
+\part{Pushdown automatons}
 \include{automatons}
+\include{chomsky}
+
+\part{Turing machines}
+\include{turing}
+\include{universalTuringMachines}
 \include{busyBeaver}
 
 \part{Register machines}
-\include{registerMachines}
-\include{pointers}
+\include{counterMachines}
+\include{machineCode}
+\include{randomAccessMachines}
+\include{randomAccessSPMachines}
+
+\part{ARM}
+\include{ARM}
+\include{ARMfloating}
+\include{branchesLoops}
+\include{subroutines}
+\include{externalMemory}
+\include{pseudoInstructions}
+\include{macros}
+\include{textDataBss}
+\include{advancedAssembly}
+
+\part{Arrays}
 \include{arrays}
 
-\part{Assembly language and macros for register machines}
-\include{machineCode}
+\part{Stack machines}
+\include{stackMachines}
 
 \part{Other abstract machines}
-\include{stackMachines}
 \include{analyticEngine}
 
+\part{Other Reduced Instruction Set Computers (RISC)}
+\include{RISC}
+\include{PowerPC}
+\include{MIPS}
 
-
-%\part{Comparison of machine languages}
-% find simple example of register machine. put that in register machine
-% ditto for stack machine
-
-%Reduced Instruction Set Computer (RISC)
-%Complex Instruction Set Computer (CISC)
-
-%Main ones
-%IBM System/360
-%Motorola 6800
-%Motorola 68000
-%Zilog Z80 (gameboy based on this, ppu separate). based on intel 8080
-%Intel 8086 (x86)
-%ARM
-%PowerPC
-%MIPS
+\part{Complex Instruction Set Computers (CISC)}
+\include{CISC}
+\include{IBM360}
+\include{motorola6800_6502}
+\include{motorola68000}
+\include{intel8080_z80}
+\include{x86}
 
 \part{Unstructured programming with C}
 \include{cVariables}
@@ -76,6 +89,8 @@
 \include{strings}
 \include{cFloats}
 \include{cStruct}
+\include{constVolatileRegister}
+\include{cPreProcessor}
 
 \part{Structured and procedural programming with C}
 \include{cGlobalLocal}
@@ -101,9 +116,6 @@
 \part{Assessing algorithms}
 \include{algorithms}
 \include{complexity}
-
-\part{Divide and conquer algorithms}
-\include{divideConquer}
 
 \part{Numerical methods for real numbers}
 \include{numbersReal}

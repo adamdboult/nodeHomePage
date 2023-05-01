@@ -1,0 +1,35 @@
+
+\subsection{Introduction}
+
+List containers:
+\begin{verbitim}
+docker ps
+\end{verbatim}
+
+List images:
+\begin{verbitim}
+docker images
+\end{verbatim}
+
+\subsection{SSH into containers}
+
+\begin{verbitim}
+docker exec -it <container_name> /bin/bash
+\end{verbitim}
+
+Can then eg install things from within the container:
+
+\begin{verbitim}
+apt-get update
+apt-get upgrade
+apt-get install vim
+\end{verbitim}
+
+
+\subsection{Docker Compose}
+
+\begin{verbitim}
+sudo docker-compose build --no-cache
+sudo docker-compose up --detach
+\end{verbitim}
+

@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Unix}
+\title{GNU/Linux}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -16,115 +16,97 @@
 \include{preface}
 
 \part{File systems}
-% file systems:
-% + exfat; fat12; fat32; apfs; macos/extended
 \include{fileSystems}
 \include{fileSystemsJournalling}
 \include{partitions}
+
+\part{Tools for partitioning and formatting drives}
+\include{partitioning}
+\include{formatting}
 
 \part{Boot loaders}
 \include{bootLoaderFirst}
 \include{bootLoaderSecond}
 
-\part{Character devices}
-\include{printerKeyboard}
-
-\part{Tools for partitioning and formatting drives}
-\include{partitioningFormatting}
-
-%+ fsck[fix file system]
-
 \part{Linux kernel}
+\include{bootPartitionKernel}
 \include{fileSystemsLinux}
 
-% character device drivers
-% block device drivers
+\part{The init process and user space}
+\include{init}
+\include{cron}
+\include{swap}
+\include{tmp}
 
-% /dev folder. /dev/null, /dev/zero, /dev/random.  % inc /dev/random, /dev/urandom, security risks (because pseudo)
-% block devices
-% where is character device shown? keyboard? printer?
-
-% trailing & and nohup somewhere?
-% comm and sort somewhere
-
-% /boot ?
-% /boot/vmlinuz-... (kernel)
-
-%printk (print in kernel world, different to printf in user world)
-%lsmod to list kernel modules
-%insmod to insert kernel module
-% dmesg to see kernel messages
-% module_init() and module_exit() to specify functions to run when module loaded and unloaded
-% #include <linux/module.h> to use module_init() and module_exit()
-% #include <linux/init.h> to use __init and __exit
-% #include <linux/fs.h> to use file_operations struct
-
-\part{OS basics}
+\part{Linux multi stuff?}
 \include{batchProcessing}
 \include{interrupts}
 \include{concurrencyControl}
 
-\part{GNU}
-%+ mount
-%+ umount
+\part{Encryption and early user space}
+\include{encryptionHardDrive}
+\include{encryptionRAM}
+\include{earlyUserSpace}
 
-%commands:
-%+ swapon
-%+ mkswap
-%+ df
-%swapfile (separate to partition)
-%fstab
-%/mnt
-%/media
+\part{Logical volume management (LVM) and encrypting the boot partition}
+\include{LVM}
 
-\include{fileSystemsCommands}
-\include{sedTr}
+\part{Securing the boot partition}
+\include{LVMUEFI}
+\include{TPM}
 
-\part{GNU coreutils}
-\include{fileSystemsNavigation}
-\include{fileSystemsChanging}
-\include{shellReading}
+\part{Redundant array of independent disks (RAID) in software}
+\include{RAID}
 
-\part{GNU cont.}
-\include{thompsonShellXargs}
-\include{edVi}
-\include{checkSums}
-\include{compression}
-\include{jails}
-
-\part{The shell}
-\include{basicShell}
-\include{keyboardLocales}
-
-\part{Users and permissions}
-% passwd(give root a password?)
-%useradd, userdel[what happens to files with user as owner?],logout. use passwd to set passwords. whoami. /etc/passwd is file with info on users. also /etc/shadow (which contains hash of password). pinky
-%chown, su[run as different user], sudo command, pinky/finger
-% /root is root home directory. /home/[user] folders. 
-% /sbin for binaries only root can run
-% /usr/bin and /usr/sbin    for binaries for all users. not aimed for use by system admin?.
-%\include{users}
-%groups. usermod to add user to group. users have primary group associated with just them, usually same name. can change using usermod. groupadd, groupdel, groupmod, 777 etc. what happens to file when group deleted? chgrp. command groups shows what groups a user is in
-%cont groups gpasswd to set passwords for groups. /etc/groups, /etc/gshadow
-%masks for permissions. umask
-%run elevated temp using setuid setgid
-%\include{groups}
-
-%prevening attacks: ulimit to prevent fork bomb[ie setting up many processes to do a denial of service attack]. ulimit also prevents excessive use of memory/cpu. stored in /etc/security/limits.conf
-% Linux Security Modules and SElinux page
-%/usr generally read only stuff
-% /var more write only?
+\part{ZFS and BTRFS}
+\include{ZFS}
+\include{BTRFS}
 
 \part{Systemd}
-% new includes init, service
-%\include{cron} %old
+\include{systemd}
+
+\part{Character devices}
+\include{printerKeyboard}
+\include{pseudoCharacter}
+\include{loopDevices}
+
+\part{The login shell}
+
+\part{Terminals and shells}
+\include{basicShell}
+\include{keyboardLocales}
+\include{utilLinux}
+\include{linuxModules}
+
+\part{GNU coreutils: Basics}
+\include{fileSystemsNavigation}
+\include{shellReading}
+\include{fileSystemsChanging}
+\include{tr}
+\include{checkSums}
+
+\part{Managing users and groups with shadow-utils}
+\include{shadow}
+\include{passwords}
+\include{users}
+
+\part{GNU coreutils: groups and users}
+\include{who}
+
+\part{Managing users and groups SORT}
+\include{home}
+\include{groups}
+
+\part{GNU findutils}
+\include{findutils}
+
+\part{GNU text editors}
+\include{edVi}
+\include{nano}
+
+\part{GNU binutils}
 
 \part{Compiling}
-% diff and patch
-% diff -u oldFile newFile > mods.diff  # -u tells diff to output unified diff format
-% patch < mods.diff
-% xdelta is similar, but aimed at binary files, whereas diff and patch are aimed at text files
-
 \include{gcc}
 \include{cHeaders}
 \include{gdb}
@@ -132,13 +114,35 @@
 \include{cLibrariesNamespaces}
 \include{cMacros}
 
-%\include{stackTrace} % using backtrace() function from glibc to do stack trace
+\part{Other GNU programs}
+\include{fileSystemsCommands}
+\include{grep}
+\include{sed}
+\include{sudo}
 
 \part{Scripting}
 \include{sh}
-\include{bash}
+\include{thompsonShell}
 \include{awk}
 \include{perl}
+
+\part{Additional shells}
+\include{bash}
+\include{zsh}
+\include{csh}
+\include{fish}
+\include{ksh}
+\include{tcsh}
+\include{ash}
+\include{dash}
+
+\part{Archiving and compressing}
+\include{archive}
+\include{gzip}
+\include{tarZip}
+
+\part{GNU cont.}
+\include{jails}
 
 \part{Serialisation}
 \include{csv}
@@ -146,17 +150,12 @@
 \include{JSON}
 \include{YAML}
 
-\part{Encryption}
-\include{encryptionHardDrive}
-\include{encryptionRAM}
-
 \part{Analysing programs}
 \include{staticAnalysis}
 \include{dynamicAnalysis}
 \include{hexEditor}
 \include{ghidra}
-%\include{trojan} % concept of time bomb/logic bomb? payload
-%\include{virus} % To networks?and worms? ceoncept of spread and replication not in trojan
+\include{trojan}
 
 \end{document}
 

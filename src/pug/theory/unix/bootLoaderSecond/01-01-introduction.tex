@@ -9,16 +9,8 @@ The second-stage bootloader loads the linux kernel then runs "init".
 
 GRUB is a second-stage bootloader.
 
-\begin{itemize}
-  \item /etc/default/grub
-  \item /etc/grub.d/
-\end{itemize}
+If the drive is partitioned using MBR, it is stored in the MBR.
 
-memtest: run from grub
-
-\subsection{systemd-boot}
-
-Alternative to GRUB which supports UEFI.
-
-\subsection{EFISTUB}
+With BIOS and GPT, there needs to be a separate boot partition for it.
+With UEFI and GPT, it can sit in the EFI partition.
 

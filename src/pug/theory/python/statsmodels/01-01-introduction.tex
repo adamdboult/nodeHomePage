@@ -2,3 +2,10 @@
 \subsection{Introduction}
 
 builds on numpy, pandas, matplotlib
+
+import statsmodels.api as sm
+
+results = sm.OLS(y, X).fit()
+
+print(results.summary())
+

@@ -1,4 +1,22 @@
 
+\subsection{SORT}
+
+
+list slice:
+
+\begin{verbatim}
+v[1:3]
+\end{verbatim}
+
+
++ can also do third thing?
+
+ reverses???
+\begin{verbatim}
+v[::-1]
+\end{verbatim}
+
+  
 \subsection{Introduction}
 
 Python get array size,  size of other iterables, sets
@@ -13,16 +31,57 @@ is a set an iterable?
 Python lists are dynamic arrays.
 
 \begin{verbatim}
-
 a = [1,2,3]
-
 \end{verbatim}
 
 Lists are mutable.
 
+
+How to do each of following:
+
+concatenation
+
+slice/filter
+
+insert
+
+pop
+
+traverse
+
+map
+
+sort
+
+reverse
+
 \subsection{List slices}
 
 \subsection{List comprehensions}
+
+Eg the following defines a list, and then the second line returns that list.
+
+\begin{verbatim}
+my_list = [1,2,3]
+[x for x in my_list]
+\end{verbatim}
+
+can do functions too. following returns [3,4,5]
+\begin{verbatim}
+[x + 2 for x in my_list]
+\end{verbatim}
+
+filter
+
+\begin{verbatim}
+[x for x in my_list if x >2]
+\end{verbatim}
+
+can be on any iterable:
+
+\begin{verbatim}
+[x for x in range(10)]
+\end{verbatim}
 
 \subsection{Lambda functions}
 filter
@@ -33,9 +92,7 @@ filter
 \subsection{Tuples}
 
 \begin{verbatim}
-
 a = (1,2,3)
-
 \end{verbatim}
 
 Tuples are immutable.

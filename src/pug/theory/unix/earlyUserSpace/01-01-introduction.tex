@@ -1,0 +1,58 @@
+
+\subsection{Introduction}
+
+Doing this encrypts the root partition.
+
+The boot partition must remain unencrypted for this.
+
+unified kernel image (UKI)
++ can be loaded by UEFI
++ contains all of: uefi stub loader (eg systemd-stub); kernel command line; microcode; initramfs image; kernel image; splash screen
+
+
+/etc/mkinitcpio.conf
+/etc/mkinitcpio.d/
+
+
+/boot/initramfs-%
+
+dracut (context of initrd)
+
+initramfs
++ can be used to make logical volumes root. also used for encrpyted file systems as discussed later.
+
+logical volume manager (LVM)
+
+
+dm-crypt is kernel thing
++ cryptsetup and cryptmount are frontends for user space
++ dm-crypt encrypts a loop file? different to full disk encryption?
+
+page on early user space/initramfs
++ after kernel is loaded, before init process is started
++ loads a temporary root file system
++ initrd and initramfs are alternative implementation
+  * initrd
+    1. mounts /dev/ram
+    2. runs /linuxrc
+    3. when done prep is done so runs /sbin/init
+  * initramfs
+    1. newer
++ used for logical partitions and encrypted drives
+
+
+mkinitcpio on the early user space
+
+done after loading kernel, before init process
++ used for eg encrpying swap disk and allowing reload on boot.
++ but not for encrpyting root drive right? if encrypted file system, how can we load the kernel? main root partition must be unencrpted during boot right?
+
+
+
+  * encrypting boot partition using GRUB
+  * plain dm-crypt
+  * dm-crypt + LUKS
+    1. LUKS2 encrpyed root partition (/), unencrypted (/boot) partition
+  * approaches using LVM:
+    1. LUKS on LVM
+    2. LVM on LUKS
