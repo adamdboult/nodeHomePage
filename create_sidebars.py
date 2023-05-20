@@ -1,6 +1,6 @@
 
 import os
-import shutil
+#import shutil
 
 import sys
 
@@ -18,6 +18,9 @@ subjects = [
 ]
 """
 subjects = [sys.argv[1]]
+
+# def test():
+#    assert(
 
 for subject in subjects:
 

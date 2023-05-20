@@ -1,5 +1,54 @@
 
-\subsection{Run-length encoding}
+\subsection{Run-length encoding: The ND model}
 
 eg 12W6RABC4D is WWWWWWWWWWWWRRRRRRABCDDD
+
+or 4444444aaaaaa123 to 447aa6123
+
+ND model. N is number of repeats, D is what to repeat. if bigger than N can take, then split up
+
+eg 111111111111: 9131
+
+\subsection{RLE with binary/bitstream}
+
+thing next on how that works with binary/bitsteam (eg could do 3 bits at a time for 85)
+
+\subsection{Run-length encoding: The data packet model}
+
+If there is something which repeats a lot (eg 0) then can split that out and then do data packets for the rest
+
+eg if we have 00003640000000000006305: 04364090363015
+
+this is RND model?
+
+The strength of RLE with data packets depends on frequency of special character.
+
+\subsection{Run-length encoding with delta encoding}
+
+we can use delta encoding to make repeated characters more likely to be 0 and non zero is present.
+
+do 2 digits to show going to be a run
+
+what about cases like 1111122222
+
+becomes 115225, but how do we know it's not 52 1s, a 2 then a 5? encoding tricks?
+
+\subsection{LZW compression}
+
+A. Lempel and J. Ziv, with later modifications by Terry A. Welch
+
+code table. eg \(2^12 = 4096\) codes. first \(256 (0-255)\) are the literal bytes
+
+
+256-4095 are blocks of bytes
+
+algorithm is how to determine code table
+
+\subsection{zip, deflate and lzma2}
+
+zip
+
+deflate
+
+lzma2
 

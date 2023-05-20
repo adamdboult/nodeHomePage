@@ -1,0 +1,45 @@
+
+\subsection{enum}
+
+\begin{verbatim}
+enum flag {const1, const2, ..., constN};
+const1 = 0 by default
+\end{verbatim}
+
+can do const1+1 etc
+
+Changing default values of enum constants
+
+\begin{verbatim}
+enum suit {
+    club = 0,
+    diamonds = 10,
+    hearts = 20,
+    spades = 3,
+};
+\end{verbatim}
+
+can initialse from enum
+\begin{verbatim}
+enum week day;
+\end{verbatim}
+
+or when defining
+\begin{verbatim}
+enum week{Mon, Tue, Wed}day;
+
+day = Wed;
+\end{verbatim}
+
+\subsection{CONST and modifiable lvalues}
+
+use of "const" here? page? motivation? is it actually stored in memory or just compiled?
+
+basically throws an error if you try to modify. still actually stored in memory. eg a function can take a const as an input. variable at compile time. const and run time.
+
+distinction between unmodifiable lvalues and modifiable lvalues
+\begin{verbatim}
+const int a = 1;
+a = 2; // bad, even though a is an lvalue.
+\end{verbatim}
+

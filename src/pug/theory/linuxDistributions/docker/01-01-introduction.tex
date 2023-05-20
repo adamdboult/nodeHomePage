@@ -2,34 +2,34 @@
 \subsection{Introduction}
 
 List containers:
-\begin{verbitim}
+\begin{verbatim}
 docker ps
 \end{verbatim}
 
 List images:
-\begin{verbitim}
+\begin{verbatim}
 docker images
 \end{verbatim}
 
 \subsection{SSH into containers}
 
-\begin{verbitim}
+\begin{verbatim}
 docker exec -it <container_name> /bin/bash
-\end{verbitim}
+\end{verbatim}
 
 Can then eg install things from within the container:
 
-\begin{verbitim}
+\begin{verbatim}
 apt-get update
 apt-get upgrade
 apt-get install vim
-\end{verbitim}
+\end{verbatim}
 
 
 \subsection{Docker Compose}
 
-\begin{verbitim}
+\begin{verbatim}
 sudo docker-compose build --no-cache
 sudo docker-compose up --detach
-\end{verbitim}
+\end{verbatim}
 

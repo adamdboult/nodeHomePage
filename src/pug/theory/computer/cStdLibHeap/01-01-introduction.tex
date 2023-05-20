@@ -1,0 +1,66 @@
+
+\subsection{Introduction}
+
+variable length array using the heap or the stack
+\begin{verbatim}
+void my_function(int n){
+    float vals[n];
+    return process(n, vals);
+}
+\end{verbatim}
+stack approach above. deleted when function ends
+
+\begin{verbatim}
+void my_function(int n){
+    [something using malloc]
+}
+\end{verbatim}
+
+heap memory: allocated at run time
+needs to be manually removed
+
+stack overflow
++ stack hits point reserved for heap?
+
++ memory leaks
+
+space for stack limitated with need to reserve space to prevent overlapping with heap
+heap in c doesn't mean data structure. heap as in pile, or pool, just a description. just synonym for pile, area etc.
+Heap in c. Allocate with malloc?
+
+
+
+\subsection{malloc}
+malloc (memory allocation):
+\begin{verbatim}
+int * ptr = (int *) malloc(10 * sizeof(int));
+\end{verbatim}
+
+\subsection{calloc}
+calloc (contiguous allocation):
+\begin{verbatim}
+int * ptr = (int *) calloc(10, sizeof(int));
+\end{verbatim}
+
+calloc initiates all to 0
+
+\subsection{free}
+can free
+\begin{verbatim}
+int * ptr = (int *) malloc(10 * sizeof(int));
+free(ptr);
+\end{verbatim}
+
+or
+\begin{verbatim}
+int * ptr = (int *) calloc(10, sizeof(int));
+free(ptr);
+\end{verbatim}
+
+
+\subsection{realloc}
+\begin{verbatim}
+int * ptr = (int *) malloc(10 * sizeof(int));
+ptr = realloc(ptr, 20*sizeof(int));
+\end{verbatim}
+

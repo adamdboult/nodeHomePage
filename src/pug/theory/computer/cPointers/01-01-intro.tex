@@ -9,7 +9,7 @@ variable pointers with \& and * in c
 int a = 1;
 int * b = &a;
 \end{verbatim}
-\(\*p\) assumes \(p\) is pointer and gets what it points at. \(\&p\) assumes \(p\) is value and gets address of \(p\).
+\(*p\) assumes \(p\) is pointer and gets what it points at. \(\&p\) assumes \(p\) is value and gets address of \(p\).
 
 
 \(NULL\) is literal pointer to no valid data. same as \(0\).
@@ -27,4 +27,7 @@ int * p = NULL;
 \end{verbatim}
 
 \(p\) is dangling after because scope ends.
+
+
+\subsection{Void pointers}
 
