@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Computer science and C}
+\title{Computer science}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -54,19 +54,21 @@
 \include{pseudoInstructions}
 \include{macros}
 \include{textDataBss}
-\include{advancedAssembly}
 
 \part{Arrays}
 \include{arrays}
 
 \part{Stack machines}
 \include{stackMachines}
+\include{stackOnRegisterMachines}
 
 \part{Other abstract machines}
 \include{analyticEngine}
 
 \part{Other Reduced Instruction Set Computers (RISC)}
 \include{RISC}
+\include{mmix}
+\include{riscv}
 \include{PowerPC}
 \include{MIPS}
 
@@ -78,39 +80,8 @@
 \include{intel8080_z80}
 \include{x86}
 
-\part{Unstructured programming with C}
-\include{cVariables}
-\include{cArithmeticAddition}
-\include{cArithmeticOther}
-\include{cIntegerTypes}
-\include{cGotoSwitch}
-\include{cPointers}
-\include{cBitwise}
-\include{strings}
-\include{cFloats}
-\include{cStruct}
-\include{constVolatileRegister}
-\include{cPreProcessor}
-\include{enumConst}
-
-\part{Structured and procedural programming with C}
-\include{cGlobalLocal}
-\include{cControlFlow}
-\include{cFunctions}
-\include{sideEffects}
-\include{cTypedef}
-\include{cOptimisation}
-
-\part{C standard library}
-\include{cStdDef}
-\include{cMath}
-\include{cTime}
-\include{cString}
-\include{cBool}
-
-\part{C standard library: <stdlib.h>}
-\include{cStdLibHeap}
-\include{cStdLibNonHeap}
+\part{Writing assemblers}
+\include{advancedAssembly}
 
 \part{Doing maths stuff}
 \include{sqrtNatural}
@@ -160,10 +131,6 @@
 
 \part{Compression}
 \include{compression}
-
-\part{Other}
-\include{fortran}
-\include{algol}
 
 \end{document}
 

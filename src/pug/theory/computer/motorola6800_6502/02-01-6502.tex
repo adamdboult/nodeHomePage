@@ -1,3 +1,57 @@
 
 \subsection{Introduction}
 
+\begin{verbatim}
+general convention:
++ %00000001 for binary
++ $FA for eg hex of 8 bit (single byte requires 2&8=8*8)
++ 123 for decimal
+
+Registers:
++ A (accumulator)
++ X
++ Y
++ PC (program counter)
++ S (stack pointer)
++ P (status)
+
+status flags:
++ N (negative)
++ V (overflow)
++ B (break)
++ D (decimal)
++ I (interrupt disable)
++ Z (zero)
++ C (carry)
+
+instructions
++ LDA (load accumulator with memory)
+  * 16  bit address space, so $0000 format
+  * LDA $1002 (load value at memory $1002 into accumulator)
+  * LDA $02 (load value at memory $0002 into accumulator) (defaults to 00 if missing - zero page)
+  * LDA #$02 (load hex $02 into accumulator)
++ LDX (load X with memory)
++ LDY (load Y with memory)
++ STA (store accumulator in memory)
++ STX (store X in memory)
++ STY (store y in memory)
+
+arithmetic:
++ ADC (add memory to accumulator with carry)
++ SBC (substract memory from accumulator with borrow)
++ INC (increment memory)
++ INX (incrememt index X)
++ INY (increment index Y)
++ DEC (decrement memory)
++ DEX (decrement index X)
++ DEY (decrement index Y)
+
++ ASL (arithmetic shift left)
++ ASR (arithmetic shift right)
++ ROL (rotate left)
++ ROR (rotate right)
++ AND (and memory with accumulator)
++ OR (or memory with accumulator)
++ EOR (exclusive or memory with accumulator)
+
+\end{verbatim}

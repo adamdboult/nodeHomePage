@@ -1,0 +1,72 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{C}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Unstructured integer programming with C}
+\include{cVariables}
+\include{cArithmeticAddition}
+\include{cArithmeticOther}
+\include{abstractSyntaxTree}
+\include{cIntegerTypes}
+\include{cGotoSwitch}
+\include{constVolatileRegister}
+\include{cPreProcessor}
+\include{enumConst}
+\include{cBitwise}
+
+\part{Other data types in C}
+\include{cPointers}
+\include{strings}
+\include{cFloats}
+\include{cStruct}
+
+\part{Structured and procedural programming with C}
+\include{cGlobalLocal}
+\include{cControlFlow}
+\include{cFunctions}
+\include{sideEffects}
+\include{cTypedef}
+\include{cOptimisation}
+
+\part{Freestanding headers for C}
+\include{cStdDef}
+\include{cStdBool}
+\include{cStdArg}
+\include{cStdInt}
+\include{cStdNoReturn}
+\include{cStdAlign}
+\include{cLimits}
+\include{cISO646}
+\include{cFloatH}
+
+\part{Hosted C: C standard library}
+\include{cMath}
+\include{cTime}
+\include{cString}
+
+\part{Hosted C: C standard library: stdlib.h}
+\include{cStdLibMath}
+\include{cStdLibControl}
+\include{cStdLibConversion}
+\include{cStdLibHeap}
+\include{cStdLibAlgorithms}
+
+\part{Other}
+\include{fortran}
+\include{algol}
+
+\end{document}
+

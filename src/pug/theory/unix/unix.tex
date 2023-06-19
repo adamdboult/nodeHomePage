@@ -20,7 +20,11 @@
 \include{fileSystemsJournalling}
 \include{partitions}
 
-\part{Tools for partitioning and formatting drives}
+\part{Character devices}
+\include{printerKeyboard}
+\include{terminals}
+
+\part{Block devices and tools for partitioning and formatting drives}
 \include{partitioning}
 \include{formatting}
 
@@ -65,14 +69,14 @@
 \part{Systemd}
 \include{systemd}
 
-\part{Character devices}
-\include{printerKeyboard}
+\part{Pseudo-character devices}
 \include{pseudoCharacter}
 \include{loopDevices}
 
 \part{The login shell}
 
-\part{Terminals and shells}
+\part{Shells}
+\include{ash_dash}
 \include{basicShell}
 \include{keyboardLocales}
 \include{utilLinux}
@@ -106,6 +110,9 @@
 
 \part{GNU binutils}
 
+\part{procps}
+\include{procps}
+
 \part{Compiling}
 \include{gcc}
 \include{cHeaders}
@@ -119,30 +126,24 @@
 \include{grep}
 \include{sed}
 \include{sudo}
+\include{jails}
 
 \part{Scripting}
 \include{sh}
-\include{thompsonShell}
 \include{awk}
 \include{perl}
 
 \part{Additional shells}
 \include{bash}
 \include{zsh}
-\include{csh}
-\include{fish}
+\include{csh_tsch}
 \include{ksh}
-\include{tcsh}
-\include{ash}
-\include{dash}
+\include{fish}
 
 \part{Archiving and compressing}
 \include{archive}
 \include{gzip}
 \include{tarZip}
-
-\part{GNU cont.}
-\include{jails}
 
 \part{Serialisation}
 \include{csv}

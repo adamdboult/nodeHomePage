@@ -9,7 +9,7 @@ import sys
 ###################################
 """
 subjects = [
-    "logic", "algebra", "analysis", "geometry", "computer",
+    "logic", "algebra", "analysis", "geometry", "computer", "C", "scheme",
     "probabilityUnivariate", "probabilityMultivariate", "probabilityTimeSeriesUnivariate", "probabilityTimeSeriesMultivariate", "machineLearning", "neuralNetworks",
     "physics", "biology", "engineering", "applied",
     "unix", "graphics", "networks", "databases", "cpp", "java", "javascript", "python",

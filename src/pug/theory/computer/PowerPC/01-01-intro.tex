@@ -1,3 +1,55 @@
 
 \subsection{Introduction}
 
+li r3, 4 (move 4 into register 3)
+
+r0 is always zero
+
+r1 is stack pointer
+
+r3 is return value
+
+\subsection{Arithmetic}
+add r1, r2, r3 (add r2 and r3 and put in r1)
+
+addi r1, r2, 3 (add r2 and immediate value of 3 and put in r1)
+
+can do "move" by adding zero to something and putting it in destination
+
+\subsection{Branching}
+b label (branch to label)
+
+cmp 0, 0, r1, r2 (compare two values into condition register 0)
+
+blt label (go to branch if previous comparison was less than)
+ble
+beq
+bge
+bgt
+bne
+
+\subsection{RAM}
+
+accessing RAM
+stw r1, 8(r2) (store r1 in location indicated by r2 offset by 8)
+lwz r1, 8(r2) (replace r1 with data in location indicated by r2 offset by 8)
+
+\subsection{Functions}
+
+functions:
+bl label (branch and link - saves return address in link register)
+blr (branch to link register - ending a function)
+
+\subsection{Floating point}
+floating point
+f0, f1, etc are floating point registers
+lfs (load float single)
+lfd
+stfs
+stfd (store float dobule)
+
+fadd (floating add)
+fadds (floating add single precision)
+fmul
+fmadd
+fdiv

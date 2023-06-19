@@ -1,0 +1,21 @@
+
+\subsection{Introduction}
+
+imported via other libaries, so don't need to directly call
+
+
+\subsection{size\_t and the sizeof operator}
+
+\begin{verbatim}
+
+int x = 1;
+size_t x = sizeof(x);
+
+size_t y = sizeof(int);
+\end{verbatim}
+
+
+\(sizeof\) operator is calculated at compile time. \(sizeof\) is in base C, but the data type \(size\_t\) is not, and requires the stddef.h header.
+
+\subsection{NULL}
+

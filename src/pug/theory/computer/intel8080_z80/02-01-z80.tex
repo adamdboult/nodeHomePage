@@ -5,5 +5,29 @@ Based on Intel 8080.
 
 Different mnemonics, but binary compatible?
 
+
+ld a, 5
+
+add a, b
++ adds b to accumulator a
+
+sub
+adc
+sbc
+
+use of memory:
+ld [Output], a (writes accumulatoro to memory)
+
+
+jumps:
+jp CC, Target
+jr CC, Target
+
+stack
+push af (pushes accumulator and flag (because together are 16 bit)
+pop
+
+functions
+
 \subsection{Gameboy}
 gameboy based on this, ppu separate.
