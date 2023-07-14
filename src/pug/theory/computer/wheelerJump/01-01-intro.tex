@@ -1,0 +1,13 @@
+
+\subsection{Introduction}
+
+Used on some machines which didn't have ability to save return address. relevant for registers/stacks?
+
+Before calling the subroutine, put the program counter's current location in the accumulator.
+
+At start of subroutine, take the location in the accumulator, add to it (eg just 1) and write this to the end of the subroutine CODE.
+
+Then when subroutine ends, can go back.
+
+Limitations: slow because writes to memory, not register or stack. also can't do recursion.
+

@@ -1,0 +1,39 @@
+
+\subsection{Introduction}
+
+\begin{verbatim}
+char c[] = "c string";
+\end{verbatim}
+
+can declare. eg
+
+\begin{verbatim}
+char s[6];
+s = "hello";
+\end{verbatim}
+
+
+
+Can over declare, givng spare space.
+\begin{verbatim}
+char c[50] = "hello";
+\end{verbatim}
+
+
+\subsection{Null character}
+
+Compiler adds null character automatically.\\0 is null character.
+
+\begin{verbatim}
+char c[] = {"h", "e", "l", "l", "o", "\0"};
+\end{verbatim}
+
+\subsection{Strings and pointers}
+
+Strings are arrays of characters, and so we can use pointers to access. 
+
+\(*c\) returns \("h"\). \(*(c+1)\) returns \("e"\).
+
+
+
+

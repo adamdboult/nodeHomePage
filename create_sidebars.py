@@ -7,16 +7,6 @@ import sys
 ###################################
 # Create tex file for each folder #
 ###################################
-"""
-subjects = [
-    "logic", "algebra", "analysis", "geometry", "computer", "C", "scheme",
-    "probabilityUnivariate", "probabilityMultivariate", "probabilityTimeSeriesUnivariate", "probabilityTimeSeriesMultivariate", "machineLearning", "neuralNetworks",
-    "physics", "biology", "engineering", "applied",
-    "unix", "graphics", "networks", "databases", "cpp", "java", "javascript", "python",
-    "VMEmulation", "otherCLanguages", "otherLispLanguages", "otherCompiledLanguages", "R", "otherLanguages", "distributedComputing",
-    "ai", "equilibrium", "IO", "MBF", "economics", "macroeconomics", "publicChoice", "history", "epistemologyOntology", "philosophy"
-]
-"""
 subjects = [sys.argv[1]]
 
 # def test():

@@ -1,0 +1,41 @@
+
+\subsection{Words}
+
+Words (size of register on a pc. eg 8 bits on 8bit, 64 bit on 64 bit)
+
+What does it mean eg to be 8 bit register machine?
+
+16-bit means registers have 16 bits. Can cover \(0\) to \(65535\).
+
+8-bit means registers have 8 bits. Can cover \(0\) to \(255\).
+
+Each possible value in an address register can refer to a unique word in memory.
+
+\subsection{Bytes and nibbles}
+
+Bytes (8 bit by standard)
+
+Nibbles (4 bit)
+
+\subsection{How much memory can be accessed by registers}
+
+For an \(n\)-bit register there can be \(2^n\) possible values, and this can cover \(n*2^n\) bits of data, because each word stores \(n\) bits.
+
+For a \(8\)-bit register this means \(8*2^8=2048\) bits, or \(256\) bytes.
+
+For a \(16\)-bit register this means \(16*2^16=1048576\) bits, or \(65536\) bytes.
+
+\subsection{Using hexidecimal to refer to memory addresses}
+
+Can refer to memory addresses using \(\$FF\) if 8-bit \((16*16=2^8)\).
+
+Can refer to memory addresses using \(\$FFFF\) if 16-bit \((16^4=2^16)\).
+
+\subsection{Memory extension beyond \(2^16\) bytes. Memory segmentation}
+
+\subsection{Other}
+
+Bit arrays
+
+Bit fields (special use cases for bit arrays? bit arrays more fundamental. bit field more like "we can use first bit for checking if zero"
+

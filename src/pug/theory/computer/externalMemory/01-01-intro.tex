@@ -1,4 +1,13 @@
 
+
+\subsection{Using buses to read from and write to external memory}
+
+Buses facilitate communication between the CPU (including registers) and memory.
+
+bus takes read (just address) write (address and data)
+
+things can read, rw or write on bus. devices on bus can monitor address outputs of cpu. if address corresponds to device can take actions.
+
 \subsection{Address bus}
 
 Address bus connects to part of memory. setting the address bus to x will allow accessing ram at x.
@@ -8,14 +17,4 @@ Address bus connects to part of memory. setting the address bus to x will allow 
 Data bus reads or writes to memory at location of address bus.
 
 eg if loading byte of ram at position \(\#FF00\) to accumulator, address bus is \(\#FF00\).
-
-
-using RAM: LDR and STR
-str r0, [r1]
-store value in r0 at memory location indicated by r1
-ldr r0, [r1]
-load value at r1 in memory to r0
-ldr r0, [r1, \#4]
-load value at r1 offset by 4 to r0
-
 

@@ -32,25 +32,42 @@
 
 \part{Pushdown automatons}
 \include{automatons}
+\include{contextFree}
 \include{chomsky}
 
 \part{Turing machines}
 \include{turing}
+\include{recursivelyEnumerable}
+\include{turingMultiTape}
+\include{churchTuring}
 \include{universalTuringMachines}
 \include{busyBeaver}
+
+\part{Stack machines}
+\include{stackMachines}
+
+\part{Other Turing-complete abstract machines}
+\include{analyticEngine}
 
 \part{Register machines}
 \include{counterMachines}
 \include{machineCode}
 \include{randomAccessMachines}
 \include{randomAccessSPMachines}
+\include{stackOnRegisterMachines}
+\include{simulatingFiniteStateMachine}
+
+\part{Making RASP machines more realsistic}
+\include{limitedBitRegisters}
+\include{externalMemory}
+\include{ALU}
 
 \part{ARM}
 \include{ARM}
 \include{ARMfloating}
 \include{branchesLoops}
 \include{subroutines}
-\include{externalMemory}
+\include{ARMExternalMemory}
 \include{pseudoInstructions}
 \include{macros}
 \include{textDataBss}
@@ -58,19 +75,14 @@
 \part{Arrays}
 \include{arrays}
 
-\part{Stack machines}
-\include{stackMachines}
-\include{stackOnRegisterMachines}
-
-\part{Other abstract machines}
-\include{analyticEngine}
-
 \part{Other Reduced Instruction Set Computers (RISC)}
 \include{RISC}
 \include{mmix}
 \include{riscv}
 \include{PowerPC}
 \include{MIPS}
+\include{JVM}
+\include{webAssembly}
 
 \part{Complex Instruction Set Computers (CISC)}
 \include{CISC}
@@ -82,6 +94,9 @@
 
 \part{Writing assemblers}
 \include{advancedAssembly}
+
+\part{Implementing functions in assembly}
+\include{wheelerJump}
 
 \part{Doing maths stuff}
 \include{sqrtNatural}
@@ -95,9 +110,29 @@
 \include{sortingInsertion}
 \include{searching}
 
-\part{Assessing algorithms}
+\part{Decision problems and assessing algorithms}
+\include{decisionProblems}
 \include{algorithms}
 \include{complexity}
+\include{PTIME}
+\include{hardnessCompleteness}
+\include{LSPACE}
+\include{P_L_PSPACE}
+
+\part{Problems reducible to decision problems: Search problems and optimisation problems}
+\include{searchProblems}
+\include{optimisationProblems}
+
+\part{Problems not reducible to decision problems: Counting problems and function problems}
+\include{countingProblems}
+\include{functionProblems}
+\include{polynomialTimeReduction}
+\include{logSpaceReduction}
+
+\part{Non-deterministic Turing machines, oracles, and the halting problem}
+\include{NTM}
+\include{oracles}
+\include{halting}
 
 \part{Numerical methods for real numbers}
 \include{numbersReal}

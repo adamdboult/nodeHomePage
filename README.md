@@ -2,7 +2,7 @@
 # Docker instructions
 
 ```bash
-sudo docker-compose build --no-cache
-sudo docker-compose up --detach
+docker-compose build --no-cache
+docker-compose up --detach
 ```
 

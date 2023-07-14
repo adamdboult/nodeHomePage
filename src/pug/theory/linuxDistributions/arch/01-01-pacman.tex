@@ -1,0 +1,79 @@
+
+\subsection{pacman -S}
+
+
+pacman -S (sync) is family of commands
+
+
+
+to refresh packages and upgrade (u upgrade, y, download database from remote)
+
+\begin{verbatim}
+pacman -Syu
+\end{verbatim}
+
+
+install it
+\begin{verbatim}
+pacman -S my_package
+\end{verbatim}
+
+remove it
+\begin{verbatim}
+pacman -R my_package
+\end{verbatim}
+
+
+cache is stored in pacman in /var/cache/pacman/pkg/
+
+/etc/pacman.conf
+
+
+can clear cache of uninstalled packages with
+\begin{verbatim}
+pacman -Sc
+\end{verbatim}
+
+double clean to be more aggressive (remove cache of installed packages)
+\begin{verbatim}
+pacman -Scc
+\end{verbatim}
+
+\subsection{paccache}
+
+paccache is a separate package. Not available by default.
+
+can remove all but last 3 with either of:
+
+\begin{verbatim}
+paccache -r
+paccache -rk3
+\end{verbatim}
+
+To remove all uninstalled:
+\begin{verbatim}
+paccache -rk0 remove all uninstalled
+\end{verbatim}
+
+\subsection{SORT}
+
+list of explicitly installed: pacman -Qe
+
+To see packages installed without pacman (eg AUR) use
+pacman -Qm
+
+source code for package: /var/cache/pacman/pkg (i think?)
+
+makepkg
+
+PKGBUILD
+
+/etc/makepkg.conf
+
+/etc/pacman.conf
+
+
+asp bigger page:
++ asp export <package> to get build instructuons
++ asp checkout <package> to get code
+
