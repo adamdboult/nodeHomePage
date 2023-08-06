@@ -1,3 +1,102 @@
 
-\subsection{Introduction}
+\subsection{Macros for logic}
+
+Adds "and", "or", "not" and "not\_eq".
+
+\begin{verbatim}
+
+int x = 1;
+int y = 0;
+
+// These are the same.
+int z = x && y;
+int z = x and y;
+
+\end{verbatim}
+
+\begin{verbatim}
+
+int x = 1;
+
+// These are the same.
+int z = ! x;
+int z = not x;
+
+\end{verbatim}
+
+\begin{verbatim}
+
+int x = 1;
+int y = 0;
+
+// These are the same.
+int z = x || y;
+int z = x or y;
+
+\end{verbatim}
+
+\begin{verbatim}
+
+int x = 1;
+int y = 0;
+
+// These are the same.
+int z = x != y;
+int z = x not_eq y;
+
+\end{verbatim}
+
+\subsection{Macros for bitwise operations}
+
+\begin{verbatim}
+
+int x = 12;
+int y = 10;
+
+// These are the same.
+int z = x & y;
+int z = x bitand y;
+
+// These are the same.
+int z = x | y;
+int z = x bitor y;
+
+// These are the same.
+int z = x ^ y;
+int z = x xor y;
+
+\end{verbatim}
+
+Also eq versions
+
+\begin{verbatim}
+
+int x = 12;
+int y = 10;
+
+// These are the same.
+int y &= x;
+int y and_eq x;
+
+// These are the same.
+int y |= x;
+int y or_eq x;
+
+// These are the same.
+int y ^= x;
+int y xor_eq x;
+
+\end{verbatim}
+
+And also bitwise not
+
+\begin{verbatim}
+
+int x = 10;
+
+// These are the same.
+int y = ~x;
+int y = compl x;
+
+\end{verbatim}
 

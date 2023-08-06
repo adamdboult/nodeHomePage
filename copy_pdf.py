@@ -14,7 +14,7 @@ if not os.path.exists(directory_to_make):
 
 for subject in subjects:
     source = os.path.join(dir_path, "built", "pug", "theory", subject, subject + ".pdf")
-    print(os.listdir(os.path.join(dir_path, "built", "pug", "theory", subject)))
+    #print(os.listdir(os.path.join(dir_path, "built", "pug", "theory", subject)))
     destination = os.path.join(dir_path, "public", "theory", subject + ".pdf")
     shutil.copyfile(source, destination)
 

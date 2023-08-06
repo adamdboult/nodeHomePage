@@ -1,3 +1,27 @@
 
 \subsection{Introduction}
 
+Get number of bytes:
+
+\begin{verbatim}
+
+alignof(int);
+alignof(x);
+
+\end{verbatim}
+
+
+Set number of bytes:
+
+\begin{verbatim}
+alignas(double) int x;
+\end{verbatim}
+
+
+Also adds macros to check if this is available:
+
+\begin{verbatim}
+__alignas_is_defined
+__alignof_is_defined
+\end{verbatim}
+

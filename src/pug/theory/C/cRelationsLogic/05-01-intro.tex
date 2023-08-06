@@ -1,0 +1,39 @@
+
+\subsection{Logical AND, and short-circuiting for AND}
+
+Returns \(1\) if both positive. \(0\) otherwise.
+
+If first is not truthy, the second is not evaluated.
+
+\begin{verbatim}
+int x = 1;
+int y = 0;
+
+int z = x && y;
+
+\end{verbatim}
+
+\subsection{Logical OR, and short-circuiting for OR}
+
+Returns \(1\) if either positive. \(0\) otherwise.
+
+If first is truthy, the second is not evaluated.
+
+\begin{verbatim}
+int x = 1;
+int y = 0;
+
+int z = x || y;
+
+\end{verbatim}
+
+\subsection{Logical NOT}
+
+\begin{verbatim}
+int x = 1;
+int y = 0;
+
+int z = !(x && y);
+
+\end{verbatim}
+

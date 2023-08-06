@@ -1,3 +1,45 @@
 
 \subsection{Introduction}
 
+The following declares the new type va\_list at the start.
+
+Then between va\_start and va\_end we can access arguments using va\_args repeatedly, while giving it the type to take out.
+
+\begin{verbatim}
+
+void my_function(int count, ...) {
+
+    va_list args;
+    int i;
+    va_start(args, count);
+    for (i = 0; i < count; i++) {
+        int num = va_arg(args, int);
+    }
+    va_end(args);
+}
+
+\end{verbatim}
+
+When we traverse va\_arg we can't go back. Another approach is to use va\_copy to take a copy of the args before going through them.
+
+
+\begin{verbatim}
+
+void my_function(int count, ...) {
+
+    va_list args;
+    int i;
+    va_start(args, count);
+    va_copy(args_copy, args);
+    for (i = 0; i < count; i++) {
+        int num = va_arg(args, int);
+    }
+    for (i = 0; i < count; i++) {
+        int num = va_arg(args_copy, int);
+    }
+    va_end(args);
+    va_end(args_copy);
+}
+
+\end{verbatim}
+

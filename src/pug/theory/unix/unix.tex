@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{GNU/Linux}
+\title{GNU/Linux and hosted C}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -15,16 +15,13 @@
 
 \include{preface}
 
-\part{File systems}
+\part{Character devices}
+\include{printerKeyboardTerminal}
+
+\part{File systems, block devices and tools for partitioning and formatting drives}
 \include{fileSystems}
 \include{fileSystemsJournalling}
 \include{partitions}
-
-\part{Character devices}
-\include{printerKeyboard}
-\include{terminals}
-
-\part{Block devices and tools for partitioning and formatting drives}
 \include{partitioning}
 \include{formatting}
 
@@ -35,9 +32,9 @@
 \part{Linux kernel}
 \include{bootPartitionKernel}
 \include{fileSystemsLinux}
-
-\part{The init process and user space}
 \include{init}
+
+\part{User space}
 \include{cron}
 \include{swap}
 \include{tmp}
@@ -47,37 +44,12 @@
 \include{interrupts}
 \include{concurrencyControl}
 
-\part{Encryption and early user space}
-\include{encryptionHardDrive}
-\include{encryptionRAM}
-\include{earlyUserSpace}
-
-\part{Logical volume management (LVM) and encrypting the boot partition}
-\include{LVM}
-
-\part{Securing the boot partition}
-\include{LVMUEFI}
-\include{TPM}
-
-\part{Redundant array of independent disks (RAID) in software}
-\include{RAID}
-
-\part{ZFS and BTRFS}
-\include{ZFS}
-\include{BTRFS}
-
-\part{Systemd}
-\include{systemd}
-
 \part{Pseudo-character devices}
 \include{pseudoCharacter}
 \include{loopDevices}
 
-\part{The login shell}
-
 \part{Shells}
 \include{ash_dash}
-\include{basicShell}
 \include{keyboardLocales}
 \include{utilLinux}
 \include{linuxModules}
@@ -87,7 +59,16 @@
 \include{shellReading}
 \include{fileSystemsChanging}
 \include{tr}
+\include{readingMultiple}
 \include{checkSums}
+\include{jails}
+\include{systemInfo}
+\include{coreUtilsMath}
+\include{coreUtilsCondition}
+\include{coreUtilsSELinux}
+\include{coreUtilsPrint}
+\include{tee}
+\include{sleep}
 
 \part{Managing users and groups with shadow-utils}
 \include{shadow}
@@ -109,6 +90,7 @@
 \include{nano}
 
 \part{GNU binutils}
+\include{binutils}
 
 \part{procps}
 \include{procps}
@@ -118,26 +100,44 @@
 \include{cHeaders}
 \include{gdb}
 \include{make}
-\include{cLibrariesNamespaces}
-\include{cMacros}
+
+\part{Hosted C: C standard library: stdlib.h}
+\include{cStdLibMath}
+\include{cStdLibControl}
+\include{cStdLibConversion}
+\include{cStdLibHeap}
+\include{cStdLibAlgorithms}
+
+\part{Hosted C: C standard library}
+\include{cMathComplexTGMath}
+\include{cFEnv}
+\include{cSetJMP}
+\include{cLocale}
+\include{cTime}
+\include{cStringCType}
+\include{cIntTypes}
+\include{cErrNoSignalAssert}
+\include{cUCharWCharWCType}
+\include{cStdIO}
+\include{cThreadsStdAtomic}
 
 \part{Other GNU programs}
 \include{fileSystemsCommands}
 \include{grep}
 \include{sed}
 \include{sudo}
-\include{jails}
+\include{which}
+\include{tmux}
 
 \part{Scripting}
 \include{sh}
 \include{awk}
-\include{perl}
 
 \part{Additional shells}
 \include{bash}
-\include{zsh}
 \include{csh_tsch}
 \include{ksh}
+\include{zsh}
 \include{fish}
 
 \part{Archiving and compressing}
@@ -150,13 +150,11 @@
 \include{XML}
 \include{JSON}
 \include{YAML}
+\include{TOML}
 
 \part{Analysing programs}
 \include{staticAnalysis}
 \include{dynamicAnalysis}
-\include{hexEditor}
-\include{ghidra}
-\include{trojan}
 
 \end{document}
 

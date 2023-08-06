@@ -1,0 +1,75 @@
+Mathematics
+	logic
+	algebra
+	analysis
+	geometry
+Basics
+	physicsMechanics
+	physicsRigid
+	computer
+	computerFloating
+	C
+	dataStructuresAlgorithms
+Statistics
+	probabilityUnivariate
+	probabilityMultivariate
+	probabilityTimeSeriesUnivariate
+	probabilityTimeSeriesMultivariate
+Applied statistics
+	computerRandom
+	neuralNetworks
+	applied
+	appliedAudioText
+Science
+	physicsStatistical
+	physicsRelative
+	physics
+	chemistry
+	biology
+	engineering
+	electronics
+	engineeringComputer
+More coding
+	unix
+	unixAdvanced
+	networks
+	databases
+	audio
+	graphics
+	graphics3D
+	computerArchitecture
+	VMEmulation
+Other compiled languages
+	scheme
+	functionalLanguages
+	cpp
+	java
+	otherCLanguages
+	otherLispLanguages
+	otherCompiledLanguages
+Interpreted languages
+	javascript
+	python
+	R
+	otherLanguages
+Even more coding
+	linuxDistributions
+	BSD
+	nonGNU
+	windows
+	apple
+	distributedComputing
+	IDEs
+	reverseEngineering
+Economics
+	ai
+	equilibrium
+	IO
+	MBF
+	economics
+	macroeconomics
+	publicChoice
+	history
+	epistemologyOntology
+	philosophy
+

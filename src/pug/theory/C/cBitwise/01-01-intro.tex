@@ -1,28 +1,134 @@
 
-\subsection{Bitwise operations in C}
+\subsection{Bitwise AND}
 
 \begin{verbatim}
-\&
 
-|
+int x = 12;
+int y = 10;
 
-\textasciicircum
+z = x & y;
 
-\textasciitilde
+\end{verbatim}
 
->>
+\begin{verbatim}
 
-<<
+int x = 12;
+int y = 10;
 
-<<=
->>=
+// Following two lines are equivalent.
+x &= y;
+x = x & y;
+
+\end{verbatim}
 
 
-&=
-|=
-^=
-<<=
->>=
+\subsection{Bitwise OR}
+
+\begin{verbatim}
+
+int x = 12;
+int y = 10;
+
+z = x | y;
+
+\end{verbatim}
+
+\begin{verbatim}
+
+int x = 12;
+int y = 10;
+
+// Following two lines are equivalent.
+x |= y;
+x = x | y;
+
+\end{verbatim}
+
+\subsection{Bitwise NOT}
+
+\begin{verbatim}
+
+int x = 12;
+
+int y =  ~x;
+
+\end{verbatim}
+
+\subsection{Bitwise XOR}
+
+\begin{verbatim}
+
+int x = 12;
+int y = 10;
+
+z = x ^ y;
+
+\end{verbatim}
+
+\begin{verbatim}
+
+int x = 12;
+int y = 10;
+
+// Following two lines are equivalent.
+x ^= y;
+x = x ^ y;
+
+\end{verbatim}
+
+\subsection{Left bitshifts}
+
+Left shift shifts all bits to the left. In binary, left shift by 1 place is same as multiplying by 2, assuming no overflows.
+
+We can left shift by any number of places.
+
+The new bit on the furthest right is set to 0.
+
+\begin{verbatim}
+
+int x = 12;
+int y = 2;
+
+int z = x << y;
+
+\end{verbatim}
+
+\begin{verbatim}
+
+int x = 12;
+int y = 2;
+
+// Following two lines are equivalent.
+x <<= y;
+x = x << y;
+
+\end{verbatim}
+
+\subsection{Right bitshifts}
+
+Right shift shifts all bits to the right. In binary, right shift by 1 place is same as diving by 2 and dropping the remainder.
+
+We can right shift by any number of places.
+
+The new bit on the furthest left is set to 0.
+
+\begin{verbatim}
+
+int x = 12;
+int y = 2;
+
+int z = x >> y;
+
+\end{verbatim}
+
+\begin{verbatim}
+
+int x = 12;
+int y = 2;
+
+// Following two lines are equivalent.
+x >>= y;
+x = x >> y;
 
 \end{verbatim}
 

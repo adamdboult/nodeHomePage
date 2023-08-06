@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{C}
+\title{Freestanding C}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -32,9 +32,11 @@
 \include{strings}
 \include{cFloats}
 \include{cStruct}
+\include{bool}
 
 \part{Structured and procedural programming with C}
 \include{cGlobalLocal}
+\include{cRelationsLogic}
 \include{cControlFlow}
 \include{cFunctions}
 \include{sideEffects}
@@ -42,6 +44,7 @@
 \include{cOptimisation}
 
 \part{Freestanding headers for C}
+\include{cMacros}
 \include{cStdDef}
 \include{cStdBool}
 \include{cStdArg}
@@ -54,22 +57,6 @@
 
 \part{Compiling C code}
 \include{SSA}
-
-\part{Hosted C: C standard library}
-\include{cMath}
-\include{cTime}
-\include{cString}
-
-\part{Hosted C: C standard library: stdlib.h}
-\include{cStdLibMath}
-\include{cStdLibControl}
-\include{cStdLibConversion}
-\include{cStdLibHeap}
-\include{cStdLibAlgorithms}
-
-\part{Other}
-\include{fortran}
-\include{algol}
 
 \end{document}
 

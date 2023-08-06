@@ -1,3 +1,14 @@
 
 \subsection{Introduction}
 
+This adds new types of fixed width integers which won't vary by computer.
+
+To recap, existing variables, such as int have a lower bound but not an upper bound, as such the behaviour can vary machine to machine.
+
+The types are:
+
++ int8\_t: Signed 8 bit
++ uint8\_t: Unsigned 8 bit
++ Equivalents for 16, 32 and 64 bit (eg uint64).
+
+The header also provides macros to indicate the min and max of these types, including eg INT8\_MIN, UINT64\_MAX.

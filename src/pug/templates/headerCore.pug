@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(name="description", content="Adam Boult's homepage")
+
+		title Adam Boult
+
+		link(rel="stylesheet", href="/packages/bootstrap/css/bootstrap.min.css")
+
+		script(src="/packages/jquery/jquery.min.js")
+
+		script(src="/packages/popper.js/popper.min.js")
+		script(src="/packages/bootstrap/js/bootstrap.min.js")
+
+		script#MathJax-script(async src="/packages/mathjax/tex-mml-chtml.js")
+
+	body
+		nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+			a.navbar-brand.abs(href='/') Bou.lt
+			button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
+				span.navbar-toggler-icon
+			div.collapse.navbar-collapse#navbarNavAltMarkup
+				ul.navbar-nav
+					li.nav-item.dropdown
+						a.nav-link.dropdown-toggle(href="#", id=navbarOther, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Projects
+						div.dropdown-menu(aria-labelledby="navbarOther")
+							a.dropdown-item(href="https://www.artificialeconomist.com") ArtificialEconomist.com
+							a.dropdown-item(href="https://www.economoose.com") Economoose.com
+							a.dropdown-item(href="https://www.yetipredict.com") YetiPredict.com
+					li.nav-item.dropdown
+						a.nav-link.dropdown-toggle(href="#", id=navbarDropdown, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Notes
+						div.dropdown-menu(aria-labelledby="navbarDropdown")
+							block dropdown
+					//li.nav-item
+					//	a.nav-link(href="/news/") Blog
+				ul.navbar-nav.ml-auto
+					li.nav-item
+						a.nav-link(href="https://github.com/adamdboult/") GitHub
+					li.nav-item
+						a.nav-link(href="https://www.linkedin.com/in/adamdboult") LinkedIn
+		block content
+

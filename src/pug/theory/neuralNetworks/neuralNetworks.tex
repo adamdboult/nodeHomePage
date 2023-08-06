@@ -15,19 +15,23 @@
 
 \include{preface}
 
-\part{Supervised neural networks}
-\include{MLPBack}
+\part{Feedforward neural networks}
+\include{MLP}
+\include{neuralNetworksMulti}
+
+\part{Training feedforward neural networks}
+\include{backpropagation}
+\include{neuralNetworksAlternative}
 \include{neuralNetworksRegularising}
 \include{neuralNetworksNormalisation}
 \include{neuralNetworksLink}
-
-\part{Supervised neural networks cont.}
-\include{neuralNetworksAlternative}
-\include{neuralNetworksMulti}
-\include{neuralNetworksProbabilistic}
 \include{neuralNetworksPreTraining}
+
+\part{Other types of feedforward neural network}
+\include{neuralNetworksProbabilistic}
+
+\subsection{Architectures for images}
 \include{neuralNetworksConvolution}
-\include{neuralNetworksAttention}
 
 \part{Generative neural networks}
 \include{VAE}
@@ -35,8 +39,9 @@
 \include{SOM}
 \include{generativeNN}
 
-\part{Estimating time series models}
+\part{Architectures for sequences}
 \include{neuralNetworksRec}
 \include{RNNEncoderDecoder}
+\include{neuralNetworksAttention}
 
 \end{document}
