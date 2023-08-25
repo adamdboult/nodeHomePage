@@ -1,0 +1,16 @@
+
+\subsection{Getting the build instructions}
+
+\begin{verbatim}
+git clone https://gitlab.archlinux.org/archlinux/packaging/packages/apache.git
+\end{verbatim}
+
+\subsection{makepkg}
+
+From the folder with the PKGBUILD, can run makepkg
+
+/etc/makepkg.conf
+
+makepkg -si to sync dependencies and install
+
+Running "pacman -syu" will replace these packages with the repository ones. The PKGBUILD file can be amended to prevent that.

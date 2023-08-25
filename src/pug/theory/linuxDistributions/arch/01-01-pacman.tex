@@ -1,10 +1,8 @@
 
-\subsection{pacman -S}
+\subsection{pacman -S: Installing and updating packages}
 
 
 pacman -S (sync) is family of commands
-
-
 
 to refresh packages and upgrade (u upgrade, y, download database from remote)
 
@@ -15,16 +13,27 @@ pacman -Syu
 
 install it
 \begin{verbatim}
+pacman -Syu my_package
+\end{verbatim}
+
+This syncs as installing, which is safer. The following is less safe but can also be done:
+
+\begin{verbatim}
 pacman -S my_package
 \end{verbatim}
 
-remove it
+You can search for packages:
+
 \begin{verbatim}
-pacman -R my_package
+pacman -Ss string_in_package
 \end{verbatim}
 
 
+\subsection{pacman -S: Managing the cache}
+
+
 cache is stored in pacman in /var/cache/pacman/pkg/
+
 
 /etc/pacman.conf
 
@@ -39,41 +48,56 @@ double clean to be more aggressive (remove cache of installed packages)
 pacman -Scc
 \end{verbatim}
 
-\subsection{paccache}
 
-paccache is a separate package. Not available by default.
-
-can remove all but last 3 with either of:
-
+\subsection{pacman -R}
+remove it
 \begin{verbatim}
-paccache -r
-paccache -rk3
+pacman -Rns my_package
 \end{verbatim}
 
-To remove all uninstalled:
+The -s flag removes dependencies which are no longer needed.
+
+The -n flag removes config files.
+
+Can just remove the package and not dependencies:
+
 \begin{verbatim}
-paccache -rk0 remove all uninstalled
+pacman -R my_package
 \end{verbatim}
 
-\subsection{SORT}
 
-list of explicitly installed: pacman -Qe
 
-To see packages installed without pacman (eg AUR) use
+\subsection{pacman -Q}
+
+Query
+
+Info on a package, including what depends on it.
+\begin{verbatim}
+pacman -Qi <package>
+\end{verbatim}
+
+
+list of explicitly installed:
+\begin{verbatim}
+pacman -Qe
+\end{verbatim}
+To see packages installed without the official repository (eg AUR) use
+\begin{verbatim}
 pacman -Qm
+\end{verbatim}
 
-source code for package: /var/cache/pacman/pkg (i think?)
+Packages which were installed as dependencies
+\begin{verbatim}
+pacman -Qd
+\end{verbatim}
 
-makepkg
+Packages which are dependencies and orphans
+\begin{verbatim}
+pacman -Qdt
+\end{verbatim}
 
-PKGBUILD
-
-/etc/makepkg.conf
-
-/etc/pacman.conf
-
-
-asp bigger page:
-+ asp export <package> to get build instructuons
-+ asp checkout <package> to get code
+list of local files associated with package:
+\begin{verbatim}
+pacman -Ql <package_name>
+\end{verbatim}
 

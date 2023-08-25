@@ -1,0 +1,30 @@
+
+\subsection{Installing from source}
+
+rebuild package from source:
+
+Download the source:
+
+\begin{verbatim}
+apt-get source <package>
+\end{verbatim}
+
+gets dependencies of building package
+
+\begin{verbatim}
+apt-get build-dep <package>
+\end{verbatim}
+
+
+
+
+\begin{verbatim}
+dpkg-buildpackage -rfakeroot -uc -b (from source code folder)
+\end{verbatim}
+
+the above results in a .deb file
+
+\begin{verbatim}
+dpkg -i <package_file>.deb
+\end{verbatim}
+

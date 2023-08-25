@@ -1,7 +1,25 @@
 
 \subsection{Single linked lists}
 
-successor and key, null if nec
+A linked list is a collection of nodes. Each with a value and a pointer to the next element in the list.
 
-motivation. don't need to change who list to add things
+If the element is the last in the linked list, the pointer is a null pointer.
+
+The first item is the "head".
+
+\subsection{Traversing the linked list}
+
+Start at the head, and then get the pointer, go to that location and continue.
+
+\subsection{Advantages and disadvantages of linked lists over arrays}
+
+Advantages of linked lists include:
++ Can insert into the list without moving other elements, just changing the pointers.
++ Can add to the end of a list without needed the next physical space to be available.
+
+
+Disadvantages of linked lists include:
++ Takes time (\(O(n)\)) to traverse.
++ Pointers take up memory.
+
 

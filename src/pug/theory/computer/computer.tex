@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Computer science}
+\title{Computer science and integer RISC instructions (ARM)}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -37,10 +37,20 @@
 
 \part{Turing machines}
 \include{turing}
-\include{recursivelyEnumerable}
 \include{turingMultiTape}
 \include{churchTuring}
 \include{universalTuringMachines}
+
+\part{Decidability}
+\include{NTM}
+\include{decidable}
+\include{reduction}
+\include{rice}
+\include{postCorrespondence}
+\include{entscheidungsproblem}
+\include{recursivelyEnumerable}
+\include{oracles}
+\include{halting}
 \include{busyBeaver}
 
 \part{Stack machines}
@@ -57,58 +67,48 @@
 \include{stackOnRegisterMachines}
 \include{simulatingFiniteStateMachine}
 
-\part{Making RASP machines more realsistic}
+\part{Making RASP machines more realistic}
 \include{limitedBitRegisters}
 \include{externalMemory}
 \include{ALU}
 
-\part{ARM}
+\part{ARM basics}
 \include{ARM}
-\include{ARMfloating}
 \include{branchesLoops}
-\include{subroutines}
 \include{ARMExternalMemory}
 \include{pseudoInstructions}
+
+\part{Implementing functions in ARM}
+\include{ARMStack}
+\include{subroutines}
+\include{wheelerJump}
+
+\part{ARM assembly}
+\include{advancedAssembly}
 \include{macros}
 \include{textDataBss}
 
-\part{Arrays}
-\include{arrays}
+\part{ARM other}
+\include{ARMfloating}
 
-\part{Other Reduced Instruction Set Computers (RISC)}
-\include{RISC}
-\include{mmix}
-\include{riscv}
-\include{PowerPC}
-\include{MIPS}
-\include{JVM}
-\include{webAssembly}
-
-\part{Complex Instruction Set Computers (CISC)}
-\include{CISC}
-\include{IBM360}
-\include{motorola6800_6502}
-\include{motorola68000}
-\include{intel8080_z80}
-\include{x86}
-
-\part{Writing assemblers}
-\include{advancedAssembly}
-
-\part{Implementing functions in assembly}
-\include{wheelerJump}
-
-\part{Doing maths stuff}
+\part{Integer maths algorithms}
+\include{algorithmMultiplication}
+\include{algorithmDivision}
 \include{sqrtNatural}
 \include{primes}
 \include{factorise}
 
-\part{Simple array algorithms}
+\part{Arrays and simple array algorithms}
+\include{arrays}
+\include{arrayReverse}
 \include{arrayReduction}
 \include{sorting}
 \include{sortingSelection}
 \include{sortingInsertion}
 \include{searching}
+\include{arraySliceFilter}
+\include{arrayConcatenate}
+\include{arrayMerging}
 
 \part{Decision problems and assessing algorithms}
 \include{decisionProblems}
@@ -128,11 +128,6 @@
 \include{functionProblems}
 \include{polynomialTimeReduction}
 \include{logSpaceReduction}
-
-\part{Non-deterministic Turing machines, oracles, and the halting problem}
-\include{NTM}
-\include{oracles}
-\include{halting}
 
 \part{Compression}
 \include{compression}

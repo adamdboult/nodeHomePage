@@ -2,10 +2,11 @@ Mathematics
 	logic
 	algebra
 	analysis
+Basic physics
 	geometry
-Basics
 	physicsMechanics
 	physicsRigid
+Computer science
 	computer
 	computerFloating
 	C
@@ -15,8 +16,8 @@ Statistics
 	probabilityMultivariate
 	probabilityTimeSeriesUnivariate
 	probabilityTimeSeriesMultivariate
-Applied statistics
 	computerRandom
+Applied statistics
 	neuralNetworks
 	applied
 	appliedAudioText
@@ -28,8 +29,9 @@ Science
 	biology
 	engineering
 	electronics
+Computers
 	engineeringComputer
-More coding
+	computerInstructions
 	unix
 	unixAdvanced
 	networks
@@ -39,14 +41,17 @@ More coding
 	graphics3D
 	computerArchitecture
 	VMEmulation
+	computerAdvanced
 Other compiled languages
-	scheme
+	otherImperativeLanguages
 	functionalLanguages
 	cpp
 	java
 	otherCLanguages
-	otherLispLanguages
+	otherConcurrentLanguages
 	otherCompiledLanguages
+	scheme
+	otherLispLanguages
 Interpreted languages
 	javascript
 	python

@@ -3,31 +3,17 @@
 
 replaces init
 
-
-systemd-gpt-auto-generator
-systemd.automount
-
-systemd-cryptenroll
-
-
-
 systemd:
+
 + /usr/lib/systemd/system/
 + /etc/systemd/system/
 
-
-systemd-homed
-
 systemd init system (doesn't have runlevels)
 
-/lib/systemd/system/<nginx.service)
+/lib/systemd/system/<nginx.service>
 
 /etc/systemd/system/multi-user.target.wants/<nginx.service>
 
 
-\subsection{systemd-stub}
-
-\subsection{systemd and swap partition}
-if using systemd and gpt, don't need to manually create swap for partition in /etc/fstab, systemd will find it by going through partitions
 
 /etc/inittab not on systemd

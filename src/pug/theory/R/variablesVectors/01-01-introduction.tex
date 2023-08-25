@@ -1,0 +1,135 @@
+
+\subsection{Introduction}
+
+
+\subsection{Filter}
+Filter()
+
+
+subsetting vectors eg x[!is.na(x)].
+
+slices
+
+\subsection{Reduce and length}
+Reduce()
+
+length()
+\subsection{Map}
+Map()
+
+\subsection{Type checking}
+is.[x]
+
+typeof
+
+\subsection{Random numbers}
+random numbers
+
+set.seed
+
+
+
+
+\subsection{Sorting vectors}
+
+\subsection{Factors on vectors}
+factors in r: ordered, unordered
+
+\subsection{Casting between types}
+as.name
+
+as.[x]
+
+\subsection{Defining variables}
+
+c function is concatenate
+
+\begin{verbatim}
+a =  c(1, 2, 3)
+a <- c(1, 2, 3)
+\end{verbatim}
+defining using eg 1L to get variable types
+
+nested vector just a vector
+
+\begin{verbatim}
+y <- c(  1, 2 , 3)
+y <- c(c(1, 2), 3)
+\end{verbatim}
+y <- c(x, 1). 
+
+
+
+complex numbers, other number types in r
+
+
+getting sequences, 1:30 etc
+
+seq() function
+rep() function
+
+
+\subsection{Using variables on the right hand side}
+
+
+is R copy on write? what happens if you set y = x? copies or just two pointers?
+
+\begin{verbatim}
+a <- c(1, 2, 3)
+b <- c(a, 1)
+\end{verbatim}
+
+\begin{verbatim}
+a <- c(1, 2, 3)
+b <- a + 1
+\end{verbatim}
+
+
+\subsection{Substituting by conditions}
+substituting by conditions. eg
+
+\begin{verbatim}
+y[y<0]<-0
+\end{verbatim}
+
+\subsection{Arithmetic}
+
+\subsection{Logic}
+
+and or in R
+
+\subsection{SORT}
+
+
+what happens when make anything? all on heap with variable just being pointer?
+
+
+infinity in R
+
+
+inf eg 1/0 (-inf?)
+
++ most simple is a vector
++ arithmetic page:
+  * does stuff for each entry in vector eg x + 2
+  * summary stuf for vector. sum, min, max, len etc
++ null, na etc in R
++ nan
+
+
++ see what name points to:
+  * eg if x <- c(1,2,3)
+  * y <- x
+  * addresses are same
+  * if modify, addresses are different
+  * only creates copy when needs to
+  * aka copy on modify
+  * r objects generally immutable
+  * tra
+
+
+overflows of numbers in r. eg what happens if int gets too big
+
+dates and times in base R (other data types, int log etc)
+
+

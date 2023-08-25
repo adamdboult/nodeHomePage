@@ -1,4 +1,87 @@
 
-\subsection{Introduction}
+\subsection{Scripts}
 
-has scripts as opposed to ed/vi
+vim has scripts as opposed to ed/vi
+
+\subsection{Text highlighting}
+
+\subsection{Line wrapping}
+
+Can turn on or off with:
+
+\begin{verbatim}
+:set wrap
+:set unwrap
+\end{verbatim}
+
+
+\subsection{Splitting window}
+
+Split horizontal.
+\begin{verbatim}
+:split
+\end{verbatim}
+
+Split vertical
+\begin{verbatim}
+:vsplit
+\end{verbatim}
+
+
+to navigate between windows
+\begin{verbatim}
+ctrl-W h/j/k/l
+\end{verbatim}
+
+to resize
+\begin{verbatim}
+ctrl-W +-<>
+\end{verbatim}
+
+to reset sizes
+\begin{verbatim}
+ctrl-W =
+\end{verbatim}
+
+to swap window position
+\begin{verbatim}
+ctrl-W HJKL
+\end{verbatim}
+
+
+\subsection{Terminal}
+
+to verical split and add terminal to top on
+\begin{verbatim}
+:term
+\end{verbatim}
+
+
+\subsection{File tree}
+
+To explore file tree in command mode:
+\begin{verbatim}
+:Explore
+\end{verbatim}
+
+
+\subsection{Opening other files}
+
+As in vi we can do 
+\begin{verbatim}
+:e[dit] FILE_PATH
+\end{verbatim}
+
+\begin{verbatim}
+:vi[sual] FILE_PATH
+\end{verbatim}
+
+However these now support autocompletion.
+
+In addition we can also use, but this seems like a legacy feature?
+
+\begin{verbatim}
+:open FILE_PATH
+\end{verbatim}
+
+

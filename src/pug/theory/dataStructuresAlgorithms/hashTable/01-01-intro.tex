@@ -1,0 +1,25 @@
+
+\subsection{Introduction}
+
+\subsection{Hash functions}
+
+map from key to array offset
+
+\subsection{Hash collisions}
+
+
+\subsection{Resolving hash collisions with separate chaining}
+
+rather than return offset for array, returns pointer for linked list. items in linked list contain key, so if not correct one can go to next in list
+
+\subsection{Resolving hash collisions with open addressing}
+
+Store the key in the bucket. If the key doesn't match the bucket keep going down until you find it. This can also be used to insert.
+
+\subsection{Load factor of hash tables}
+
+Number of entries over number of possible entries.
+
+Performance deteriorates as load factor increases. can be rehashed with more possible entries.
+
+

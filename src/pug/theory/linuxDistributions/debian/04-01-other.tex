@@ -1,0 +1,47 @@
+
+\subsection{apt}
+apt exists as alternative to apt-get and apt-cache. front end for it, somewhat more user friendly
+
+
+\subsection{SORT}
+\begin{verbatim}
+apt list --installed
+\end{verbatim}
+
+dpkg, apt, aptitude, sources.list
+
+\subsection{apt-src}
+
+Streamlined way to install from source.
+
+
+
+
+\begin{verbatim}
+apt-src install <package>
+\end{verbatim}
+
+downloads vanilla source, dsc (?), a .changes file, source tree?
+
+\begin{verbatim}
+apt-src build <package>
+dpkg --install <path to compiled .deb>
+\end{verbatim}
+
+or:
+\begin{verbatim}
+apt-src --build install <package>
+\end{verbatim}
+
+does all in one line
+
+
+
+\subsection{apt-mirror}
+
+not installed by default on debian or ubuntu
+
+
+Allows you to set up a mirror repository of packages.
+
+Can then point sources.list for systems to point to the mirror.

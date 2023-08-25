@@ -48,9 +48,9 @@ allBigPaths = []
 for bigPagesDict in bigPagesList:
     allBigPaths = allBigPaths + bigPagesDict["items"]
 
-print(allBigPaths)
-print(len(allBigPaths))
-print(len(set(allBigPaths)))
+#print(allBigPaths)
+#print(len(allBigPaths))
+#print(len(set(allBigPaths)))
 if len(allBigPaths) != len(set(allBigPaths)):
     raise Exception("Non unique entries in big pages list")
 

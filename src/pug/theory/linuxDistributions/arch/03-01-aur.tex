@@ -1,0 +1,19 @@
+
+\subsection{Introduction}
+
+Can pull from AUR.
+\begin{verbatim}
+git clone https://aur.archlinux.org/gzdoom.git
+\end{verbatim}
+
+And then build as before.
+
+As these packages are not in the official repositories, running pacman -Syu will not replace them.
+
+Packages can be updated by pulling the git repo and rerunning makepkg as before.
+
+Can see explicitly installed non-pacman using
+\begin{verbatim}
+pacman -Qm
+\end{verbatim}
+

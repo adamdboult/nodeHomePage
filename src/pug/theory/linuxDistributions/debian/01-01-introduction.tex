@@ -1,7 +1,5 @@
 
-\subsection{Introduction}
-
-dpkg, apt, aptitude, sources.list
+\subsection{apt-get}
 
 package updates
 
@@ -28,23 +26,10 @@ apt-get remove <package>
 apt-get purge <package>
 \end{verbatim}
 
+\subsection{sources.list}
 
-rebuild package from source:
-\begin{verbatim}
-apt-get source <package>
-\end{verbatim}
+/etc/apt/sources.list
 
-gets dependencies of building package
+/etc/apt/sources.list.d/
 
-\begin{verbatim}
-apt-get build-dep <package>
-\end{verbatim}
-
-\subsection{apt}
-apt exists as alternative to apt-get and apt-cache. front end for it, somewhat more user friendly
-
-
-\subsection{SORT}
-apt list --installed
-apt-get source <package>
 
