@@ -49,29 +49,13 @@ pacman -Scc
 \end{verbatim}
 
 
-\subsection{pacman -R}
-remove it
-\begin{verbatim}
-pacman -Rns my_package
-\end{verbatim}
-
-The -s flag removes dependencies which are no longer needed.
-
-The -n flag removes config files.
-
-Can just remove the package and not dependencies:
-
-\begin{verbatim}
-pacman -R my_package
-\end{verbatim}
-
 
 
 \subsection{pacman -Q}
 
 Query
 
-Info on a package, including what depends on it.
+Info on a package, including what installed packages depends on it.
 \begin{verbatim}
 pacman -Qi <package>
 \end{verbatim}
@@ -100,4 +84,24 @@ list of local files associated with package:
 \begin{verbatim}
 pacman -Ql <package_name>
 \end{verbatim}
+
+
+
+
+\subsection{pacman -R}
+remove it
+\begin{verbatim}
+pacman -Rns my_package
+\end{verbatim}
+
+The -s flag removes dependencies which are no longer needed.
+
+The -n flag removes config files.
+
+Can just remove the package and not dependencies:
+
+\begin{verbatim}
+pacman -R my_package
+\end{verbatim}
+
 

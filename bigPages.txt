@@ -32,14 +32,16 @@ Science
 Computers
 	engineeringComputer
 	computerInstructions
-	unix
-	unixAdvanced
-	networks
-	databases
 	audio
 	graphics
 	graphics3D
 	computerArchitecture
+Operating systems
+	dos
+	unix
+	unixAdvanced
+	networks
+	databases
 	VMEmulation
 	computerAdvanced
 Other compiled languages
@@ -57,15 +59,16 @@ Interpreted languages
 	python
 	R
 	otherLanguages
-Even more coding
+	reverseEngineering
+More on Linux
 	linuxDistributions
+	distributedComputing
+	IDEs
+Other non-Linux operating systems
 	BSD
 	nonGNU
 	windows
 	apple
-	distributedComputing
-	IDEs
-	reverseEngineering
 Economics
 	ai
 	equilibrium
