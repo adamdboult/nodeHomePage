@@ -1,7 +1,13 @@
 
-\subsection{Introduction}
+\subsection{Editing text, saving and exiting}
  
 .emacs file; changing screens; opening files; search; saving
+
+emacs mode buffer. has info on file and mode
+
+text folding
+
+major modes, including text mode
 
 \subsection{Saving and exiting}
 
@@ -15,16 +21,6 @@ C-x C-s
 \end{verbatim}
 
 
-\subsection{GUI only: Font size and zooming}
-
-zoom out
-\begin{verbatim}
-C--
-\end{verbatim}
-zoom in
-\begin{verbatim}
-C-+
-\end{verbatim}
 
 
 
@@ -42,6 +38,7 @@ C-r
 
 
 \subsection{Copy and paste}
+
 emacs copy paste
 
 
@@ -65,46 +62,17 @@ kill buffer
 C-x k
 \end{verbatim}
 
-emacs mode buffer. has info on file and mode
 
-
-
-\subsection{Need to install: Magit-mode}
-
-For git
-
-\subsection{Company-mode}
-COMPlete ANY
 
 \subsection{dired}
 File browser. Installed by default.
 
-\subsection{Need to install: Evil mode}
-
-Use vi style bindings.
-
-\subsection{Javascript}
-
-\subsection{Shell}
-
-Start a shell:
-
 \begin{verbatim}
-M-x shell
+C-x d
 \end{verbatim}
 
-\subsection{Customising}
 
 
-\begin{verbatim}
-~/.emacs
-~/.emacs.el
-~/.emacs.d/init.el
-\end{verbatim}
-  
-\subsection{eww (Emacs Web Wowser)}
-
-Installed by default.
 
 \subsection{Macros}
 Allows you to see value of variable set:
@@ -116,134 +84,3 @@ M-x describe-variable
 
 M-x concept. runs macros?
 C-sfsjfls is shortcuts for macros? so for each thing should have the M-x and C-ses equivalent?
-
-
-
-\subsection{Windows}
-
-close window:
-\begin{verbatim}
-C-x 0
-\end{verbatim}
-close other windows:
-\begin{verbatim}
-C-x 1
-\end{verbatim}
-split on x axis:
-\begin{verbatim}
-C-x 2
-\end{verbatim}
-split on y axis:
-\begin{verbatim}
-C-x 3
-\end{verbatim}
-switch windows:
-\begin{verbatim}
-C-x o
-\end{verbatim}
-Make window wider:
-\begin{verbatim}
-C-x }
-\end{verbatim}
-Make window thinner:
-\begin{verbatim}
-C-x {
-\end{verbatim}
-balance window size:
-\begin{verbatim}
-C-x +
-\end{verbatim}
-make window smaller:
-\begin{verbatim}
-C-x -
-\end{verbatim}
-
-\subsection{GUI vs terminal}
-
-to start in terminal mode:
-\begin{verbatim}
-emacs -nw 
-\end{verbatim}
-
-\subsection{Package maangement and MELPA and ELPA repositories}
-
-\begin{verbatim}
-M-x list-packages
-\end{verbatim}
-
-i/I
-d/D
-x to execute the activity
-
-\subsection{Tramp for remote access}
-
-Built into Emacs
-
-\subsection{Python mode}
-
-to get python interactive shell from within python mode
-
-\begin{verbatim}
-C-c C-p
-\end{verbatim}
-
-"run-python" macro
-
-python.el provides python mode. built into emacs
-
-elpy (to evaluate script):
-\begin{verbatim}
-C-c C-c
-\end{verbatim}
-
-jedi for autocompletion
-
-
-\subsection{Org mode}
-
-customising using conf.org file
-
-
-
-org mode
-use of *
-use of +
-use of TODO: set with:
-
-\begin{verbatim}
-C-c C-t
-\end{verbatim}
-see agenda
-files to be in agenda stored in org-agenda-files
-
-to change state and record note:
-\begin{verbatim}
-C-u C-c C-t
-\end{verbatim}
-
-cycle through agenda files:
-\begin{verbatim}
-C-'
-\end{verbatim}
-
-add current file to agenda files:
-\begin{verbatim}
-C-c [ 
-\end{verbatim}
-
-remove:
-\begin{verbatim}
-C-c ]
-\end{verbatim}
-
-view agenda:
-\begin{verbatim}
-M-x org-agenda
-\end{verbatim}
-
-change theme:
-\begin{verbatim}
-M-x load-theme
-\end{verbatim}
-
-

@@ -1,0 +1,12 @@
+\subsection{Docker files and building images}
+
+First, build the images.
+
+\begin{verbatim}
+docker build -t "ae:tensorflow" -f ./docker/tf/Dockerfile_jetson.gpu .
+\end{verbatim}
+
+Build
+\begin{verbatim}
+docker build -t localhost:32000/homepage-nodejs -f ./docker/web/Dockerfile .
+\end{verbatim}

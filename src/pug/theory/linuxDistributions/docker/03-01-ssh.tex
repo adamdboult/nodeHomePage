@@ -1,0 +1,18 @@
+
+
+\subsection{Detaching}
+\begin{verbatim}
+docker run --detach
+docker run -d
+\end{verbatim}
+\subsection{Running on reboot}
+
+making things start on reboot
+\begin{verbatim}
+docker run -d --restart=always
+\end{verbatim}
+\subsection{SSH into detached containers}
+
+\begin{verbatim}
+docker exec -it <container_name> /bin/bash
+\end{verbatim}

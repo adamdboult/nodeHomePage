@@ -1,0 +1,82 @@
+
+\subsection{Pulling images}
+
+\begin{verbatim}
+docker pull alpine:latest
+\end{verbatim}
+
+
+List images:
+\begin{verbatim}
+docker image ls
+\end{verbatim}
+
+Or:
+
+\begin{verbatim}
+docker images
+\end{verbatim}
+
+
+To remove an image:
+\begin{verbatim}
+docker image remove alpine:latest
+\end{verbatim}
+
+To remove all images (without an associated container):
+
+\begin{verbatim}
+docker image prune --all
+\end{verbatim}
+
+
+\subsection{Running images as containers}
+
+If the image is not already pulled, it will automatically be pulled, and so there is generally no need to manually pull images.
+
+\begin{verbatim}
+docker container create --name container_name alpine:latest
+docker create --name container_name alpine:latest
+\end{verbatim}
+
+If no name is provided, a random one will be created.
+
+Once a container has been created, it can be started.
+
+List containers. The "a" flag makes it show all containers, not just those running.
+\begin{verbatim}
+docker ps -a
+\end{verbatim}
+
+\begin{verbatim}
+docker container start container_name
+docker start container_name
+\end{verbatim}
+
+We can run it interactively and with a TTY.
+
+\begin{verbatim}
+docker container start --interactive --tty container_name
+docker start -it container_name
+\end{verbatim}
+
+Run can be used instead of create and start.
+\begin{verbatim}
+docker container run -it --name container_name alpine:latest
+docker run -it --name container_name alphine:latest
+\end{verbatim}
+
+Stopping containers.
+\begin{verbatim}
+sudo docker kill $(sudo docker ps -q)
+\end{verbatim}
+
+Removing containers.
+\begin{verbatim}
+sudo docker rm $(sudo docker ps -a -q)
+sudo docker system prune -af (this does much more than other stuff, saved lots of space. what does it do?)
+\end{verbatim}
+
+
+\subsection{Working without root}
+

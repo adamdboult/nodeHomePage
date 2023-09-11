@@ -15,7 +15,7 @@ all: empty_dest favicon packages scripts styles latex latex_convert home_header
 #    jshint server.js
 #    jshint config/**/*.js
 #    jshint src/**/*.js
-    
+
 empty_dest:
 	rm -rf built/
 	rm -rf public/

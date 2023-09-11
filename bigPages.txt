@@ -42,6 +42,7 @@ Operating systems
 	unixAdvanced
 	networks
 	databases
+	linuxAudioVideo
 	VMEmulation
 	computerAdvanced
 Other compiled languages
@@ -54,19 +55,19 @@ Other compiled languages
 	otherCompiledLanguages
 	scheme
 	otherLispLanguages
+	reverseEngineering
 Interpreted languages
 	javascript
 	python
 	R
 	otherLanguages
-	reverseEngineering
 More on Linux
 	linuxDistributions
 	distributedComputing
 	IDEs
+	nonGNU
 Other non-Linux operating systems
 	BSD
-	nonGNU
 	windows
 	apple
 Economics
