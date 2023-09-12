@@ -1,11 +1,12 @@
+#!/usr/bin/python3
 
 import os
 import shutil
 
-import sys
 
 ###################################
 # Get list of big pages available #
+import sys
 ###################################
 
 #print(os.path.basename(your_path))
@@ -66,13 +67,13 @@ if len(allBigPaths) != len(set(allBigPaths)):
 
 for thing in allBigPaths:
     if not thing in availableBigPages:
+        print(thing)
         raise Exception(f"{thing} requested but not available") 
-        #print(thing)
 
 for thing in availableBigPages:
     if not thing in allBigPaths:
-        raise Exception(f"{thing} available but not requested")
         #print(thing)
+        raise Exception(f"{thing} available but not requested")
 
 #################################
 # Get actual names of big pages #

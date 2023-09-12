@@ -18,11 +18,11 @@ do
     
     # Create tex file
     printf "   Creating derived latex files\n"
-    python createDerivedLatexFiles.py $subject
+    ./createDerivedLatexFiles.py $subject
     
     # Create sidebars
     printf "   Creating side bars\n"
-    python create_sidebars.py $subject
+    ./create_sidebars.py $subject
 
     printf "   Pandoc\n"
     for i in $(find built/pug/theory/${subject}/ -name \*.tex); do
@@ -50,7 +50,7 @@ do
     cd $current_dir
     
     # Copy pdf
-    python copy_pdf.py $subject
+    ./copy_pdf.py $subject
 
 done
 
