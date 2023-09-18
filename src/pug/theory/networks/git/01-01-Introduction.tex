@@ -11,6 +11,7 @@ add; commit; stash; checkout
 
 single dev using production machine:
 
+git commit: a flag adds files which have been already added but are modified. doesnt add new files
 
 reset hard
 
@@ -20,6 +21,12 @@ git checkout specific branch, force?
 
 ".gitconfig" file
 
+git:
++ return a file in git to last commit: git checkout -- file.txt
++ HEAD is most recent checkout
++ git checkout HEAD
+
+git diff: look at changes that will be commited before doing a commit
 \subsection{Setting up a remote server}
 
 git fetch
@@ -46,9 +53,13 @@ git blame
 
 
 
-+ git branch [branch name] (makes new branch)
+git branch [branch name] (makes new branch)
+\subsection{reflogs}
+\subsection{git-lfs}
+\subsection{Git server}
+\subsection{Hooks}
 
 
-
-
-
++ ./git/hooks directory exists by default in project. anything in there without an extension is a hook. examples with  extension are there by default.
++ types of hook: pre-commit; prepare-commit-msg; commit-msg; post-commit
++ page on server side git. server side git hooks.

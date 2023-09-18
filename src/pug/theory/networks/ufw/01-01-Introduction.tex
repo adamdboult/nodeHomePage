@@ -1,0 +1,23 @@
+\subsection{iptables}
+
+\subsection{ufw}
+ufw built on iptables
+
+\begin{verbatim}
+deny on port
+deny on ip
+\end{verbatim}
+using iptabes/ufw to block ports
+ufw status
+\begin{verbatim}
+ufw allow in on cni0 && sudo ufw allow out on cni0
+ufw default allow routed
+ufw allow 6443/tcp
+ufw allow 443/tcp
+
+\end{verbatim}
+
+ufw (uncomplicated firewall)
+\subsection{Firewalling a network}
+
+separate page on firewalling a network? software on a router?

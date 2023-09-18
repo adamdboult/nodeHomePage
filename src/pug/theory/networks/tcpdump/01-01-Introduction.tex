@@ -1,0 +1,28 @@
+
+\subsection{Introduction}
+
+can capture dns without extra stuff with
+\begin{verbatim}
+tcpdump -l -n port 53 | grep --line-buffered ' A? ' | awk -F ' A\\? ' '{ print $2 }' | awk -F'[ ]' '{ print $1 }'
+\end{verbatim}
+
+can use -n flag. otherwise does reverse dns on everything, and this shows up in traffic.
+
+can capture reverse dns results:
+\begin{verbatim}
+tcpdump -l not port 53 | grep --line-buffered -v " > archtop" | grep --line-buffered "archtop" | awk -F '> ' '{ print $2 }' | awk -F'[ ]' '{ print $1 }'
+\end{verbatim}
+
+can save output to pcap file with -w flag
+can monitor traffic of whole network, but for wifi need card to be in monitor mode. can be done using airmon-ng from aircrack-ng
+
+tcpdump port 53 (monitor dns requests)
+
+tcpdump -D (shows interfaces possible to capture on)
+tcpdump --interface any (capture on all) (default behaviour)
+
+can ignore specific domains:
+\begin{verbatim}
+tcpdump -f "not host ec2-44-228-235-78.us-west-2.compute.amazonaws.com"
+tcpdump -f "not host ec2-44-228-235-78.us-west-2.compute.amazonaws.com or host "
+\end{verbatim}

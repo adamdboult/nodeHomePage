@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Memory Mapping Units (MMUs), protection rings, GNU/Linux and hosted C}
+\title{Memory Mapping Units (MMUs), protection rings and GNU/Linux/Systemd}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -35,7 +35,6 @@
 \include{init}
 
 \part{User space}
-\include{cron}
 \include{swap}
 \include{tmp}
 
@@ -89,38 +88,8 @@
 \include{edVi}
 \include{nano}
 
-\part{GNU binutils}
-\include{binutils}
-
 \part{procps}
 \include{procps}
-
-\part{Compiling}
-\include{gcc}
-\include{cHeaders}
-\include{gdb}
-\include{make}
-
-\part{Hosted C: C standard library: stdlib.h}
-\include{cStdLibMath}
-\include{cStdLibControl}
-\include{cStdLibConversion}
-\include{cStdLibHeap}
-\include{cStdLibAlgorithms}
-
-\part{Hosted C: C standard library}
-\include{cMathComplexTGMath}
-\include{cFEnv}
-\include{cSetJMP}
-\include{cLocale}
-\include{cTime}
-\include{cStringCType}
-\include{cIntTypes}
-\include{cErrNoSignalAssert}
-\include{cUCharWCharWCType}
-\include{cStdIO}
-\include{cThreadsStdAtomic}
-\include{cType}
 
 \part{Other GNU programs}
 \include{fileSystemsCommands}
@@ -145,16 +114,11 @@
 \include{gzip}
 \include{tarZip}
 
-\part{Serialisation}
-\include{csv}
-\include{XML}
-\include{JSON}
-\include{YAML}
-\include{TOML}
+\part{Systemd}
+\include{systemd}
 
-\part{Analysing programs}
-\include{staticAnalysis}
-\include{dynamicAnalysis}
+\part{Alternatives to Systemd}
+\include{cron}
 
 \end{document}
 

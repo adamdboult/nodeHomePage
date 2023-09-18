@@ -1,0 +1,52 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Hosted C and Compiling C code with Linux}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{GNU binutils}
+\include{binutils}
+
+\part{Compiling}
+\include{gcc}
+\include{cHeaders}
+\include{gdb}
+\include{make}
+
+\part{Hosted C: C standard library: stdlib.h}
+\include{cStdLibMath}
+\include{cStdLibControl}
+\include{cStdLibConversion}
+\include{cStdLibHeap}
+\include{cStdLibAlgorithms}
+
+\part{Hosted C: C standard library}
+\include{cMathComplexTGMath}
+\include{cFEnv}
+\include{cSetJMP}
+\include{cLocale}
+\include{cTime}
+\include{cStringCType}
+\include{cIntTypes}
+\include{cErrNoSignalAssert}
+\include{cUCharWCharWCType}
+\include{cStdIO}
+\include{cThreadsStdAtomic}
+\include{cType}
+
+\part{Analysing programs}
+\include{staticAnalysis}
+\include{dynamicAnalysis}
+
+\end{document}

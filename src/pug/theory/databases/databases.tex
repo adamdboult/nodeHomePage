@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Single-node databases and Structured Query Language (SQL)}
+\title{Serialisation, single-node databases, Structured Query Language (SQL) and Extract-Transform-Load/Extract-Load-Transform}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -15,13 +15,22 @@
 
 \include{preface}
 
+\part{Using grep and awk with Comma-Separated Variables (CSVs)}
+\include{csv}
+
 \part{Databases}
 \include{basics}
 \include{SQL}
 \include{SQLite}
 
-\part{NoSQL}
+\part{Other serialisation types}
+\include{XML}
+\include{JSON}
+\include{YAML}
+\include{TOML}
+
 \include{mongoDB}
+\part{NoSQL}
 
 \part{Improving knowledge}
 \include{knowledge}

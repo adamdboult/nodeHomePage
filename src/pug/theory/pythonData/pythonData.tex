@@ -1,0 +1,37 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Python: Data}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Basic scientific libraries}
+\include{numpy}
+\include{numba}
+\include{matPlotLib}
+\include{sciPy}
+
+\part{Other scientific libraries}
+\include{pandas}
+\include{seaborn}
+\include{sklearn}
+\include{biopython}
+\include{plotly}
+\include{statsmodels}
+
+\part{Tensor libraries}
+\include{tensorflow}
+\include{pytorch}
+\include{jax}
+
+\end{document}

@@ -39,12 +39,12 @@ Computers
 Operating systems
 	dos
 	unix
+	linuxC
 	unixAdvanced
 	networks
 	databases
 	linuxAudioVideo
 	VMEmulation
-	computerAdvanced
 Other compiled languages
 	otherImperativeLanguages
 	functionalLanguages
@@ -56,11 +56,14 @@ Other compiled languages
 	scheme
 	otherLispLanguages
 	reverseEngineering
-Interpreted languages
-	javascript
+Interpreted languages and languages with runtimes
 	python
+	pythonData
 	R
 	otherLanguages
+Web development
+	HTMLCSS
+	javascript
 More on Linux
 	linuxDistributions
 	distributedComputing
@@ -78,6 +81,7 @@ Economics
 	economics
 	macroeconomics
 	publicChoice
+Philosophy
 	history
 	epistemologyOntology
 	philosophy
