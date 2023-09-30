@@ -3,7 +3,7 @@
 
 \subsubsection{Introduction}
 
-We want to train the parameters \(\theta \).
+We want to train the parameters \(\boldsymbol{\theta }\).
 
 We can do this with gradient descent, by working out how much the loss function falls as we change each parameter.
 
@@ -11,21 +11,59 @@ The delta rule tells us how to do this.
 
 \subsubsection{The loss function}
 
-The error of the network is:
+If we have \(n\) features and \(m\) samples The error of the network is:
 
-\(E=\sum_j\dfrac{1}{2}(y_j-a_j)^2\)
+\(E=\sum_j^m\dfrac{1}{2}(y_j-a_j)^2\)
 
-We know that \(a_j=a(\theta x_j)\) and so:
+We know that \(a_j=f(\boldsymbol{\theta x_j})=f(\sum_i^n\theta^i x_j^i)\) and so:
 
-\(E=\sum_j\dfrac{1}{2}(y_j-a(\theta x_j))^2\)
+\(E=\sum_j\dfrac{1}{2}(y_j-f(\boldsymbol{\theta x_j}))^2\)
+
+\(E=\sum_j\dfrac{1}{2}(y_j-f(\sum_i\theta^i x_j^i))^2\)
 
 \subsubsection{Minimising loss}
 
 We can see the change in error as we change the parameter:
 
-\(\dfrac{\delta E}{\delta \theta_i }=\sum_j \dfrac{\delta E}{\delta a_j}\dfrac{\delta a_j}{\delta z_j}\dfrac{\delta z_j}{\delta \theta_i}\)
+\(\dfrac{\delta E}{\delta \theta^i }=\dfrac{\delta }{\delta \theta^i}\sum_j\dfrac{1}{2}(y_j-f(\boldsymbol{\theta x_j}))^2\)
 
-\(\dfrac{\delta E}{\delta \theta_i }=-\sum_j(y_j-a_j)a'(z_j)x_{ij}\)
+\(\dfrac{\delta E}{\delta \theta^i }=\dfrac{\delta }{\delta \theta^i}\sum_j\dfrac{1}{2}(y_j-f(\sum_i\theta^i x_j^i))^2\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=\sum_j(y_j-f(\boldsymbol{\theta x_j}))\dfrac{\delta }{\delta \theta^i}(y_j-f(\boldsymbol{\theta x_j}))\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=\sum_j(y_j-f(\sum_i\theta^i x_j^i))\dfrac{\delta }{\delta \theta^i}(y_j-f(\sum_i\theta^i x_j^i))\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=\sum_j(y_j-f(\boldsymbol{\theta x_j}))\dfrac{\delta }{\delta \theta^i}(-f(\boldsymbol{\theta x_j}))\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-f(\sum_i\theta^i x_j^i))\dfrac{\delta }{\delta \theta^i}f(\sum_i\theta^i x_j^i)\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-f(\sum_i\theta^i x_j^i))\dfrac{\delta f(\sum_i\theta^ix_j^i)}{\delta \theta^i}\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-f(\sum_i\theta^i x_j^i))\dfrac{\delta f(\sum_i\theta^ix_j^i)}{\sum_i\theta^ix_j^i}\dfrac{\sum_i\theta^ix_j^i}{\delta \theta^i}\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-f(\sum_i\theta^i x_j^i))f'(\sum_i\theta^ix_j^i)x_j^i\)
+
+By defining \(z_j=\sum_i\theta^ix_j^i\) and \(a=f\) we have:
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-a(z_j))a'(z_j)x_j^i\)
+
+\subsubsection{Minimising loss: Other simpler attempt}
+
+We can see the change in error as we change the parameter:
+
+\(\dfrac{\delta E}{\delta \theta^i }=\dfrac{\delta }{\delta \theta^i}\sum_j\dfrac{1}{2}(y_j-f(\boldsymbol{\theta x_j}))^2\)
+
+By defining \(z_j=\sum_i\theta^ix_j^i\) and \(a=f\) we have:
+
+\(\dfrac{\delta E}{\delta \theta^i }=\dfrac{\delta }{\delta \theta^i}\sum_j\dfrac{1}{2}(y_j-a(z_j))^2\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=\dfrac{\delta E}{\delta a_j}\dfrac{\delta a_j}{\delta z_j}\dfrac{\delta z_j}{\delta \theta^i}\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=\dfrac{\delta E}{\delta a}a'(z_j)x_j\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=\sum_ja'(z_j)x_j\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-a(z_j))a'(z_j)x_j^i\)
 
 \subsubsection{Delta}
 
@@ -35,11 +73,10 @@ We define delta as:
 
 So:
 
-\(\dfrac{\delta E}{\delta \theta_i }=\delta_i x_{ij}\)
+\(\dfrac{\delta E}{\delta \theta^i }=\delta_i x_{ij}\)
 
 \subsubsection{The delta rule}
 
 We update the parameters using gradient descent:
 
-\(\Delta \theta_i=\alpha \delta_i x_{ij}\)
-
+\(\Delta \theta_i=\alpha \delta^i x_{ij}\)

@@ -1,13 +1,18 @@
 
-\subsection{Introduction}
+\subsection{Introduction and installing miniconda}
+
+miniconda allows the creation of Python environments, including Python versions. Pip can be used inside these environments, and in addition other non-Python packages can be installed inside these environment.
+
+Miniconda is not available on official repos.
+
+\subsection{The "base" environment and creating conda environments}
 
 
 
-miniconda vs anaconda (anaconda same but more default pacakges). 
-+ neither available on official repos, licencing?
-
-miniconda more lightweight. fewer packages installed by default
-
+list environments
+\begin{verbatim}
+conda info --envs
+\end{verbatim}
 environment.yml
 conda env create -f environment.yml
 + creates from environment file
@@ -26,28 +31,32 @@ conda activate ./envs
 conda deactivate
 \end{verbatim}
 
+\subsection{Installing packages in conda environments}
+pip in conda
 
-update environment
-\begin{verbatim}
-conda env update --prefix ./env --file environment.yml --prune
-\end{verbatim}
-
-list environments
-\begin{verbatim}
-conda info --envs
-\end{verbatim}
-
+if we install pip when making environment, can install using pip inside conda
 within environemtns
 \begin{verbatim}
 conda list (list packages)
 conda install scipy
 \end{verbatim}
+update environment
+\begin{verbatim}
+conda env update --prefix ./env --file environment.yml --prune
+\end{verbatim}
 
-pip in conda
+\subsection{Deleting conda environments}
 
-if we install pip when making environment, can install using pip inside conda
-
+\subsection{.condarc}
 .condarc (has default packages for new environemnts?)
 
-conda: page on local mirror using conda-mirror
+The condarc file contains info on which environment should
+~/.condarc
 
+\subsection{Setting up a mirror for conda}
+
+
+page on local mirror using conda-mirror
+
+\subsection{anaconda}
+anaconda is miniconda but with additional default packages.

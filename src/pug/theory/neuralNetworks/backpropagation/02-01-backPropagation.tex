@@ -1,23 +1,57 @@
 
-\subsection{Adapting the delta rule}
+\subsection{Recap on the delta rule}
 
 To arrive at the delta rule we considered the cost function:
 
 \(E=\sum_j\dfrac{1}{2}(y_j-a_j)^2\)
 
-And used the chain rule:
-
-\(\dfrac{\delta E}{\delta \theta_i }=\dfrac{\delta E}{\delta a_j}\dfrac{\delta a_j}{\delta z_j}\dfrac{\delta z_j}{\delta \theta_i}\)
-
 This gave us:
 
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-f(\sum_i\theta^i x_j^i))f'(\sum_i\theta^ix_j^i)x_j^i\)
+
+By defining \(z_j=\sum_i\theta^ix_j^i\) and \(a=f\) we have:
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-a(z_j))a'(z_j)x_j^i\)
+
+\(\delta_i=-\dfrac{\delta E}{\delta z_j}=\sum_j(y_j-a_j)a'(z_j)\)
+
+So:
+
+\(\dfrac{\delta E}{\delta \theta_i }=\delta_i x_{ij}\)
+
+\(\dfrac{\delta E}{\delta \theta^i }=-\sum_j(y_j-a(z_j))f'(z_j)x_j^i\)
+
+
+We define delta as:
+
+\(\delta_i=-\dfrac{\delta E}{\delta z_j}=\sum_j(y_j-a_j)a'(z_j)\)
+
+So:
+
+\(\dfrac{\delta E}{\delta \theta_i }=\delta_i x_{ij}\)
+
+
 \(\Delta \theta_i=\alpha \sum_j(y_j-a_j)a'(z_j)x_{ij}\)
+
+We update the parameters using gradient descent:
+
+\(\Delta \theta_i=\alpha \delta_i x_{ij}\)
+
+
 
 Or, setting \(\delta_i=-\dfrac{\delta E}{\delta z_j}=\sum_j(y_j-a_j)a'(z_j)\)
 
 \(\Delta \theta_i=\alpha \delta_j x_{ij}\)
 
+\subsection{Adapting the delta rule for multiple layers}
+
 Let's update the rule for multiple layers:
+
+And used the chain rule:
+
+\(\dfrac{\delta E}{\delta \theta^i }=\dfrac{\delta E}{\delta a_j}\dfrac{\delta a_j}{\delta z_j}\dfrac{\delta z_j}{\delta \theta^i}\)
+
+Where \(a_j=f(z_j)\) and \(z_j=\boldsymbol{\theta x_j}\)
 
 \(\dfrac{\delta E}{\delta \theta_{li}}=\dfrac{\delta E}{\delta a_{lj}}\dfrac{\delta a_{lj}}{\delta z_{lj}}\dfrac{\delta z_{lj}}{\delta \theta_{li}}\)
 
@@ -26,8 +60,6 @@ Previously \(\dfrac{\delta z_{lj}}{\delta \theta_{li}}=x_i\). We now use the mor
 We can then instead write:
 
 \(\Delta \theta_i=\alpha \delta_{lj} a_{li}\)
-
-\subsection{Calculating delta values}
 
 Now we need a way of calculating the value of \(\delta_{lj}\) for all neurons.
 

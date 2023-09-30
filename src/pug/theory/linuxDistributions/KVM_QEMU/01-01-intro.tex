@@ -1,0 +1,41 @@
+
+\subsection{QEMU}
+\begin{verbatim}
+qemu-img create -f raw ./image\_file 4G
+qemu-img create -f qcow2 ./image\_file 4G
+\end{verbatim}
+
+Can also use dd or fallocate.
+
+Can resize
+
+\begin{verbatim}
+qemu-img resize disk_image +10G
+qemu-img resize --shrink disk_image -10G
+\end{verbatim}
+
+Install:
+
+\begin{verbatim}
+qemu-system-x86_64 -cdrom iso_image -boot order=d -drive file=disk_image,format=raw
+\end{verbatim}
+
+Run
+\begin{verbatim}
+qemu-system-x86_64 options disk_image
+\end{verbatim}
+\subsection{KVM}
+
+\begin{verbatim}
+qemu-system-x86_64 -accel kvm -cdrom iso_image -boot order=d -drive file=disk_image,format=raw
+
+qemu-system-x86_64 -accel kvm options disk_image
+\end{verbatim}
+
+
+\subsection{3D drivers}
+
+\begin{verbatim}
+-device virtio-vga-gl
+
+\end{verbatim}

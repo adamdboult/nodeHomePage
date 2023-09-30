@@ -36,6 +36,7 @@ Computers
 	graphics
 	graphics3D
 	computerArchitecture
+	VMEmulation
 Operating systems
 	dos
 	unix
@@ -44,7 +45,6 @@ Operating systems
 	networks
 	databases
 	linuxAudioVideo
-	VMEmulation
 Other compiled languages
 	otherImperativeLanguages
 	functionalLanguages
@@ -59,11 +59,15 @@ Other compiled languages
 Interpreted languages and languages with runtimes
 	python
 	pythonData
+	pythonInternet
 	R
+	RPackages
+	specificModels
 	otherLanguages
 Web development
 	HTMLCSS
 	javascript
+	javascriptFrameworks
 More on Linux
 	linuxDistributions
 	distributedComputing

@@ -1,3 +1,25 @@
 
 \subsection{Introduction}
 
+
+using multiple classes in a generic function
+function templates
+
+
+\begin{verbatim}
+template <class myType>
+myType GetMax (myType a, myType b) {
+ return (a>b?a:b);
+}
+
+int x,y;
+GetMax <int> (x,y);
+\end{verbatim}
+
+note: can use
+
+\begin{verbatim}
+template <class myType>
+template <typename myType>
+\end{verbatim}
+interchangeably

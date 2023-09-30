@@ -1,0 +1,35 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Specific packages for R}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Datatable}
+\include{rDataTable}
+
+\part{Tidyverse}
+\include{tidyr}
+\include{ggplot}
+\include{dplyr}
+\include{purrr}
+\include{tibble}
+\include{rmarkdown}
+\include{rShiny}
+
+\part{Other}
+\include{caret}
+\include{rstan}
+\include{mlr}
+
+\end{document}

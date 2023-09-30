@@ -1,3 +1,21 @@
 
-\subsection{Introduction}
+\subsection{/etc/hosts}
 
+\begin{verbatim}
+/etc/hosts
+127.0.0.1       localhost
+#Can route an actual website
+
+0.0.0.0       example.org
+\end{verbatim}
+
+
+\subsection{dnsmasq}
+
+The following in the following file will allow traffic to google.com and block everything else.
+
+\begin{verbatim}
+/etc/dnsmasq.conf
+address=/google.com/
+address=/#/0.0.0.0
+\end{verbatim}

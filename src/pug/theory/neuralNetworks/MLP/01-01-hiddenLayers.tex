@@ -1,32 +1,47 @@
 
-\subsection{Hidden layers}
+\subsection{Recap: Perceptron}
 
-In the perceptron we have input vector \(x\), and output:
+In the perceptron we have input vector \(\textbf{x}\), and output:
 
-\(a=a(wx)\)
+\(a=f(\textbf{wx})=f(\sum_i^n {w_ix_i})\)
+
+
+\subsection{Adding additional layers to the perceptron}
 
 We can augment the perceptron by adding a hidden layer.
 
 Now the output on the activation function is an input to a second layer. By using different weights, we can create a second vector of inputs to the second layer.
 
-\subsection{The parameters of a feed forward model}
+\(\Theta^{j}\) is a matrix of weights for mapping layer \(j\) to \(j+1\).
 
-\(\Theta^{j}\) is a matrix of weights for mapping layer \(j\) to \(j+1\). So we have \(\Theta^1\) and \(\Theta^2\).
+In a \(2\)-layer perceptron we have \(\Theta^0\) and \(\Theta^1\).
 
 If we have \(s\) units in the hidden layer, \(n\) features and \(k\) classes:
 
 \begin{itemize}
-\item The dimension of \(\Theta^1\) is \((n+1) \times s\)
-\item The dimension of \(\Theta^2\) is \((s+1) \times k\)
+\item The dimension of \(\Theta^0\) is \((n+1) \times s\)
+\item The dimension of \(\Theta^1\) is \((s+1) \times k\)
 \end{itemize}
 
 These include the offsets for each layer.
 
 \subsection{The activation function of a multi-layer perceptron}
 
-For a perceptron we had \(a=f(wx)\). Now we have:
+For a perceptron we had:
 
-\(a_i^j=f(a_{j-1}\Theta_{j-1})\)
+\(a=f(\textbf{wx})=f(\sum_i^n{w_ix_i})\).
+
+Now we have:
+
+\(a_i^1=f(\boldsymbol{x\Theta^0 })=f(\sum_i^n{x_i\Theta_i^0 })\)
+
+
+\(a_i^2=f(\boldsymbol{a^1\Theta^1 })=f(\sum_i^n{a_i^1\Theta_i^1 })\)
+
+
+For additional layers this is:
+
+\(a_i^j=f(\boldsymbol{a^{j-1}\Theta^{j-1} })=f(\sum_i^s{a_i^{j-1}\Theta_i^{j-1} })\)
 
 We refer to the value of a node as \(a_i^{j}\), the activation of unit \(i\) in layer \(j\).
 

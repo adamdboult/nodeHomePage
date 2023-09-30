@@ -1,12 +1,94 @@
 
 \subsection{Introduction}
 
-get numpy size, 
+
+\subsection{Creating NumPy arrays}
+
+\begin{verbatim}
+import numpy as np
+a = np.array([0,1,2])
+b = np.array([3,4,5])
+\end{verbatim}
+
+Can do basic element-wise operations on these.
+
+\begin{verbatim}
+import numpy as np
+a = np.array([0,1,2])
+b = np.array([3,4,5])
+sum = a+b
+minux = a-b
+element_wise_product = a*b
+divided = a/d
+dot_product_scalar = a@b
+\end{verbatim}
+
+You don't need to use the symbols.
+
+\begin{verbatim}
+import numpy as np
+a = np.array([0,1,2])
+b = np.array([3,4,5])
+sum = np.add(a, b)
+minus = np.subtract(a,b)
+element_wise_product = np.multiply(a,b)
+divided = np.divide(a, b)
+dot_product_scalar = np.dot(a,b)
+\end{verbatim}
+
+Can also define ones like this
+
+\begin{verbatim}
+np.eye(n)
+np.ones(i, j, k, ...)
+np.full(i, j, k, ...)
+np.rand(i, j, k, ...)
+np.zeroes(i, j, k, ..)
+\end{verbatim}
+\subsection{Multi-dimensional arrays}
+
+\begin{verbatim}
+import numpy as np
+A = np.array([[0,1],[2,3]])
+transposed = A.T
+determinant = np.linalg.det(A)
+inverse = np.linalg.inv(A)
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+\end{verbatim}
+
+Note that it's .shape, not .shape()
+
+\begin{verbatim}
+import numpy as np
+A = np.array([[0,1],[2,3]])
+A.shape
+\end{verbatim}
 
 
-numpy algebra:
-+ *,@,+,-
-+ np.load, np.save
+We can multiply two matrices together. Note that using * would be elementwise, and probably not what is wanted.
 
-numpy
-+ data structures
+
+\begin{verbatim}
+import numpy as np
+A = np.array([[0,1],[2,3]])
+B = np.array([[4,5],[6,7]])
+A@B
+\end{verbatim}
+
+
+\subsection{dtypes}
+
+
+\begin{verbatim}
+import numpy as np
+A = np.array([[0,1],[2,3]], dtype = np.int32)
+\end{verbatim}
+
+\subsection{Solving linear matrix equations}
+\begin{verbatim}
+a = np.array([[1, 2], [3, 5]])
+b = np.array([1, 2])
+x = np.linalg.solve(a, b)
+array([-1.,  1.])
+\end{verbatim}

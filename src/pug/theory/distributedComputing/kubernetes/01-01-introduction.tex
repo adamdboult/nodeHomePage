@@ -1,3 +1,97 @@
 
 \subsection{Introduction}
 
+
+
+
+
+Pods are collections of docker containers. Can be just one docker container or more
+
+Nodes are where pods are deployed. Could be one node, or more.
+
+Cluster is a collection of nodes
+
+\subsection{Kubernetes (k8s)}
+
+
+\subsection{minikube}
+Developed by developers of k8s.
+
+\subsection{k3s}
+
+Developed by Rancher
+
+\begin{verbatim}
+systemctl status k3s
+systemctl stop k3s
+systemctl start k3s
+\end{verbatim}
+
+
+\subsection{microk8s}
+
+Developed by Canonical.
+
+Might need to change firewall rules
+
+\begin{verbatim}
+https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#2-deploying-microk8s
+\end{verbatim}
+If need to hard reset
+
+\begin{verbatim}
+sudo microk8s reset --destroy-storage
+sudo microk8s kubectl delete --all deployments --namespace=foo
+\end{verbatim}
+
+
+
+Enable things.
+Registry allows the use of local Docker builds.
+
+sudo microk8s enable dns dashboard storage registry
+
+check all running
+\begin{verbatim}
+microk8s kubectl get all --all-namespaces
+\end{verbatim}
+read off ip of dashboard. go to https://ip:443
+
+get token
+\begin{verbatim}
+sudo microk8s config
+\end{verbatim}
+
+Enable loadbalancer. Separate as asks questions.
+
+\begin{verbatim}
+sudo microk8s enable metallb
+\end{verbatim}
+
+Run dashboard. Go to IP and port for service/kubernetes-dashboard.
+
+\begin{verbatim}
+sudo microk8s dashboard-proxy
+\end{verbatim}
+
+
+
+\subsection{Kompose}
+
+
+
+using kompose to convert docker-compose file to kubernetes file
+First convert the docker compose file to a kubernetes file.
+
+\begin{verbatim}
+kompose --file docker-compose.yml --build convert
+\end{verbatim}
+
+But change image name to local
+
+\begin{verbatim}
+
+    spec:
+      containers:
+      - image: localhost:32000/homepage-nodejs
+\end{verbatim}
