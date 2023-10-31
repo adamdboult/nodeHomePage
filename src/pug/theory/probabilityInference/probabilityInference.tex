@@ -1,0 +1,33 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Multivariate probability inference}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Linear regression for inference}
+\include{olsInference}
+\include{hypothesisRegression}
+\include{hypothesisMultiple}
+\include{gls}
+\include{generalLinearModels}
+
+\part{Advanced inference}
+\include{anova}
+\include{olsMore}
+\include{missingInference}
+\include{measurementError}
+\include{semiParametric}
+
+\end{document}
+

@@ -1,0 +1,52 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\usepackage{parskip}
+
+\begin{document}
+
+\author{Adam Boult (www.bou.lt)}
+\title{Multivariate probability discriminative including machine learning}
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{preface}
+
+\part{Estimating discriminative probability distributions}
+\include{bayesianDiscriminative}
+\include{parametric}
+\include{hypothesis}
+\include{testValidation}
+\include{choosingDiscriminative}
+
+\part{Supervised linear regression}
+\include{ols}
+\include{linearML}
+\include{linearMLChoosing}
+\include{glm}
+\include{glmMulti}
+
+\part{Supervised machine learning}
+\include{trees}
+\include{treesRegression}
+\include{treesBayesian}
+\include{SVM}
+\include{variationalBayes}
+\include{supervisedNaiveBayes}
+\include{supervisedKNN}
+\include{discriminantAnalysis}
+\include{MLregression}
+\include{ensemble}
+\include{treesEnsemble}
+\include{supervised}
+\include{supervisedConfidence}
+\include{supervisedInterpret}
+\include{semiSupervised}
+\include{missingSupervised}
+\include{recommend}
+
+\end{document}
+

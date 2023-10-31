@@ -2,11 +2,11 @@
 
 import os
 import shutil
+import sys
 
 
 ###################################
 # Get list of big pages available #
-import sys
 ###################################
 
 #print(os.path.basename(your_path))

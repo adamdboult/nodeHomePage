@@ -16,6 +16,9 @@ do
 
     printf "Doing \"${subject}\"...\n"
     
+    # Copy preface.tex to the folder.
+    cp preface.tex built/pug/theory/${subject}/
+    
     # Create tex file
     printf "   Creating derived latex files\n"
     ./createDerivedLatexFiles.py $subject

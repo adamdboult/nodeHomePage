@@ -14,11 +14,13 @@ Computer science
 Statistics
 	probabilityUnivariate
 	probabilityMultivariate
+	probabilityDiscriminative
+	neuralNetworks
 	probabilityTimeSeriesUnivariate
 	probabilityTimeSeriesMultivariate
+	probabilityInference
 	computerRandom
 Applied statistics
-	neuralNetworks
 	applied
 	appliedAudioText
 Science
