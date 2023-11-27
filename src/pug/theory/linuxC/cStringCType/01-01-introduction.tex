@@ -1,3 +1,48 @@
 
-\subsection{Introduction}
+\subsection{string.h}
+string.h Functions on strings using
+void * memchr
++ find character in string, return pointer
+int memcmp
++ are 2 blocks of strings the same
+void * memcpy
++ copy n  characters from sour e to dest
+void * memmove
++ also copy n characters
+void * memset
++ replace first n characters of string by a single character
+char * strcat
++ concatenate 2 strings
+char * strncat
++ concatenate 2 strings, first n characters
+char * strchr
++ find character in string
+int strcmp
++ compare 2 strings
+int strncmp
++ compare first n characters of 2 strings
+int strcoll
++ compare 2 strings according to locale
+char * strcpy
++ copy a string
+char * strncpy
++ copy first n characters of string
+size_t strcspn
++ return span (number of characters) in string 1 until found any matching characters in string 2
+char * strerror
++ returns pointer to string with error
+size_t strlen
++ return length of string
+char * strpbrk
++ like strcspn but returns pointer
+char * strrchr
++ find last instance of character in string
+size_t strspn
++ like strcspn but until found character any not matching characters in string 2
+char * strstr
++ find first instance of substring *needle in string *haystack
+char * strtok
++ breaks string up using delimiters
+size_t strxfrm
++ copy part of a string and convert using locale
 
