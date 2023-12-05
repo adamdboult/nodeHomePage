@@ -51,13 +51,14 @@ Other compiled languages
 	otherImperativeLanguages
 	functionalLanguages
 	cpp
-	java
 	otherCLanguages
 	otherConcurrentLanguages
 	otherCompiledLanguages
 	scheme
 	otherLispLanguages
 	reverseEngineering
+Process virtual machines
+	java
 Interpreted languages and languages with runtimes
 	python
 	pythonData
