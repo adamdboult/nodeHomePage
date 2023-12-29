@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Memory Mapping Units (MMUs), protection rings and GNU/Linux/Systemd}
+\title{Memory Mapping Units (MMUs), Address Generation Units (AGUs), protection rings and GNU/Linux/Systemd}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -18,6 +18,8 @@
 \part{To DOS}
 \include{partitionsMBR}
 \include{fileSystemsFAT}
+\include{bootLoaderFirstDOS}
+\include{DOS_FDISK}
 
 \part{File systems, block devices and tools for partitioning and formatting drives}
 \include{fileSystems}
@@ -26,9 +28,12 @@
 \include{partitioning}
 \include{formatting}
 
-\part{Boot loaders}
-\include{bootLoaderFirst}
+\part{UEFI and non-BIOS first-stage bootloaders, and second-stage boot loaders}
+\include{bootLoaderFirstUEFI}
 \include{bootLoaderSecond}
+
+\part{Memory Mapping Units (MMUs):}
+\part{Address Generation Units (AGUs): }
 
 \part{Linux kernel}
 \include{bootPartitionKernel}

@@ -55,10 +55,11 @@ Other compiled languages
 	otherConcurrentLanguages
 	otherCompiledLanguages
 	scheme
-	otherLispLanguages
 	reverseEngineering
 Process virtual machines
 	java
+	otherLispLanguages
+	otherConcurrentLanguagesVM
 Interpreted languages and languages with runtimes
 	python
 	pythonData
@@ -67,6 +68,8 @@ Interpreted languages and languages with runtimes
 	RPackages
 	specificModels
 	otherLanguages
+Other
+	validatingCode
 Web development
 	HTMLCSS
 	javascript
@@ -76,7 +79,7 @@ More on Linux
 	distributedComputing
 	IDEs
 	nonGNU
-Other non-Linux operating systems
+Other non-Linux multi-tasking operating systems
 	BSD
 	windows
 	apple
