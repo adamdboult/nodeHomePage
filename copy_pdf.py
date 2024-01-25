@@ -18,3 +18,9 @@ for subject in subjects:
     destination = os.path.join(dir_path, "public", "theory", subject + ".pdf")
     shutil.copyfile(source, destination)
 
+    # Also copy a version to syncthing if it exists (ie we're on home computer)
+    syncthing_dir = os.path.join(os.path.expanduser("~/Syncthing/all/generated_from_projects/nodeHomePage/"))
+    if os.path.exists(syncthing_dir):
+        destination = os.path.join(syncthing_dir, subject + ".pdf")
+        shutil.copyfile(source, destination)
+

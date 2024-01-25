@@ -20,9 +20,6 @@ Statistics
 	probabilityTimeSeriesMultivariate
 	probabilityInference
 	computerRandom
-Applied statistics
-	applied
-	appliedAudioText
 Science
 	physicsStatistical
 	physicsRelative
@@ -34,52 +31,64 @@ Science
 Computers
 	engineeringComputer
 	computerInstructions
-	audio
+	computerNonRisc
 	graphics
+	storage
+	networks
+	audio
 	graphics3D
-	computerArchitecture
-	VMEmulation
+	computerMultiCore
+	GPU
 Operating systems
-	dos
 	unix
 	linuxC
 	unixAdvanced
-	networks
-	databases
+	networksLinux
 	linuxAudioVideo
-Other compiled languages
+	databases
+Other languages which compile to machine code with dynamic or static libraries/runtime libraries
 	otherImperativeLanguages
-	functionalLanguages
 	cpp
 	otherCLanguages
-	otherConcurrentLanguages
-	otherCompiledLanguages
+Other languages which compile to machine code with embedded or external runtime systems
 	scheme
-	reverseEngineering
-Process virtual machines
+	otherCompiledLanguages
+	otherConcurrentLanguages
+	csharp
+Languages which compile to machine code for process virtual machines
 	java
 	otherLispLanguages
 	otherConcurrentLanguagesVM
-Interpreted languages and languages with runtimes
+Interpreted languages
+	functionalLanguages
 	python
 	pythonData
 	pythonInternet
-	R
-	RPackages
-	specificModels
 	otherLanguages
-Other
-	validatingCode
-Web development
+Web development and JavaScript
 	HTMLCSS
 	javascript
 	javascriptFrameworks
+Domain specific languages
+	R
+	RPackages
+	validatingCode
+	logicalLanguage
+Applications
+	VMEmulation
+	reverseEngineering
+Applied statistics
+	appliedText
+	appliedAudioText
+	applied
+	specificModels
 More on Linux
 	linuxDistributions
 	distributedComputing
 	IDEs
 	nonGNU
-Other non-Linux multi-tasking operating systems
+Other operating systems
+	dos
 	BSD
 	windows
 	apple
