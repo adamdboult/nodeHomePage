@@ -100,6 +100,7 @@ Economics
 	economics
 	macroeconomics
 	publicChoice
+	economicsSoftware
 Philosophy
 	history
 	epistemologyOntology
