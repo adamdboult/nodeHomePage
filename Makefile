@@ -9,7 +9,7 @@
 # JSHINT #
 ##########
 
-all: empty_dest favicon packages scripts styles latex latex_convert home_header
+all: empty_dest favicon packages scripts styles latex latex_convert
 
 #jshint:
 #    jshint server.js
@@ -47,5 +47,3 @@ latex:
 latex_convert:
 	./convert_latex.sh
 
-home_header:
-	./createHomeHeader.py

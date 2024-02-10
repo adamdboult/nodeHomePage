@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import os
-#import shutil
 
 import sys
 
@@ -9,9 +8,6 @@ import sys
 # Create tex file for each folder #
 ###################################
 subjects = [sys.argv[1]]
-
-# def test():
-#    assert(
 
 for subject in subjects:
 
