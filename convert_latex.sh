@@ -50,7 +50,8 @@ do
 
         cd $d
         printf "     sed ${s}\n"
-        sed -i 's/\\_/_/g' $s
+        #sed -i 's/\\_/_/g' $s
+        # Not doing sed for now, breaking pandoc on server
         printf "     Pandoc ${s}\n"
         pandoc $s --mathjax -o $o
         cd $current_dir
