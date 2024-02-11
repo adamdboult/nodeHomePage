@@ -10,29 +10,33 @@ html(lang="en")
 
 		link(rel="stylesheet", href="/packages/bootstrap/css/bootstrap.min.css")
 
-		script(src="/packages/jquery/jquery.min.js")
+		//script(src="/packages/jquery/jquery.min.js")
 
-		script(src="/packages/popper.js/popper.min.js")
-		script(src="/packages/bootstrap/js/bootstrap.min.js")
+		//script(src="/packages/popper.js/popper.min.js")
+		//script(src="/packages/bootstrap/js/bootstrap.min.js")
+		script(src="/packages/bootstrap/js/bootstrap.bundle.min.js")
 
 		script#MathJax-script(async src="/packages/mathjax/tex-mml-chtml.js")
 
 	body
 		nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-			a.navbar-brand.abs(href='/') Bou.lt
-			button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
+			a.navbar-brand(href='/') Bou.lt
+			button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
 				span.navbar-toggler-icon
 			div.collapse.navbar-collapse#navbarNavAltMarkup
 				ul.navbar-nav
 					li.nav-item.dropdown
-						a.nav-link.dropdown-toggle(href="#", id=navbarOther, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Projects
-						div.dropdown-menu(aria-labelledby="navbarOther")
-							a.dropdown-item(href="https://www.artificialeconomist.com") ArtificialEconomist.com
-							a.dropdown-item(href="https://www.economoose.com") Economoose.com
-							a.dropdown-item(href="https://www.yetipredict.com") YetiPredict.com
+						a.nav-link.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Projects
+						ul.dropdown-menu
+							li
+								a.dropdown-item(href="https://www.artificialeconomist.com") ArtificialEconomist.com
+							li
+								a.dropdown-item(href="https://www.economoose.com") Economoose.com
+							li
+								a.dropdown-item(href="https://www.yetipredict.com") YetiPredict.com
 					li.nav-item.dropdown
-						a.nav-link.dropdown-toggle(href="#", id=navbarDropdown, role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Notes
-						div.dropdown-menu(aria-labelledby="navbarDropdown")
+						a.nav-link.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Notes
+						div.dropdown-menu
 							block dropdown
 					//li.nav-item
 					//	a.nav-link(href="/news/") Blog
