@@ -40,6 +40,7 @@ do
     cp preface.tex built/pug/theory/${subject}/
     my_list=$(find built/pug/theory/${subject}/ -name \*.tex)
     for i in $my_list; do
+        printf "     loop ${i}\n"
         b=$(basename -- $i)
         b=${b%.tex}
         s=$b".tex"
@@ -48,8 +49,9 @@ do
         d="$(dirname "${i}")/"
 
         cd $d
-        printf "     Pandoc ${s}\n"        
+        printf "     sed ${s}\n"
         sed -i 's/\\_/_/g' $s
+        printf "     Pandoc ${s}\n"
         pandoc $s --mathjax -o $o
         cd $current_dir
     
