@@ -2,8 +2,10 @@ Mathematics
 	logic
 	algebra
 	analysis
-Basic physics
+	analysisComplex
 	geometry
+	topology
+Basic physics
 	physicsMechanics
 	physicsRigid
 Computer science
@@ -52,6 +54,7 @@ Other languages which compile to machine code with dynamic or static libraries/r
 	otherCLanguages
 Other languages which compile to machine code with embedded or external runtime systems
 	scheme
+	functionalLanguages
 	otherCompiledLanguages
 	otherConcurrentLanguages
 	csharp
@@ -60,11 +63,11 @@ Languages which compile to machine code for process virtual machines
 	otherLispLanguages
 	otherConcurrentLanguagesVM
 Interpreted languages
-	functionalLanguages
+	otherLanguages
+Python (Virtual machine and interpreter)
 	python
 	pythonData
 	pythonInternet
-	otherLanguages
 Web development and JavaScript
 	HTMLCSS
 	javascript
