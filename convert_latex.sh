@@ -59,7 +59,8 @@ do
     done
     
     cd built/pug/theory/${subject}/
-    sed -i 's/\\_/_/g' ${subject}.tex
+    #sed -i 's/\\_/_/g' ${subject}.tex
+    # Not doing sed for now, breaking pandoc on server
     cd $current_dir
     
     # Create sidebars
