@@ -8,6 +8,7 @@ Mathematics
 Basic physics
 	physicsMechanics
 	physicsRigid
+	physicsRelative
 Computer science
 	computer
 	computerFloating
@@ -22,10 +23,9 @@ Statistics
 	probabilityTimeSeriesMultivariate
 	probabilityInference
 	computerRandom
-Science
 	physicsStatistical
-	physicsRelative
 	physics
+Chemistry, biology and engineering
 	chemistry
 	biology
 	engineering
