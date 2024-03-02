@@ -22,7 +22,7 @@ do
     printf "Doing \"${subject}\"...\n"
     # Create tex file
     printf "   Creating derived latex files\n"
-    python createDerivedLatexFiles.py $subject
+    python3 createDerivedLatexFiles.py $subject
     
     
     # Run twice to get table of contents
@@ -37,7 +37,7 @@ do
     cd $current_dir
     
     # Copy pdf
-    python copy_pdf.py $subject
+    python3 copy_pdf.py $subject
 
     printf "   Pandoc\n"
 
@@ -71,9 +71,9 @@ do
     # Create sidebars
     printf "   Creating side bars\n"
     # Doing this after pandoc because it needs the sed commands too.
-    python create_sidebars.py $subject
+    python3 create_sidebars.py $subject
     
 
 done
 
-python createHomeHeader.py
+python3 createHomeHeader.py
