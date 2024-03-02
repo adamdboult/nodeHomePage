@@ -2,6 +2,11 @@
 
 current_dir=$(pwd)
 
+# Make errors in called scripts fail.
+set -e
+set -o pipefail
+
+
 # Convert all tex files
 
 for subject in src/pug/theory/*/
@@ -17,7 +22,7 @@ do
     printf "Doing \"${subject}\"...\n"
     # Create tex file
     printf "   Creating derived latex files\n"
-    ./createDerivedLatexFiles.py $subject
+    python createDerivedLatexFiles.py $subject
     
     
     # Run twice to get table of contents
@@ -32,7 +37,7 @@ do
     cd $current_dir
     
     # Copy pdf
-    ./copy_pdf.py $subject
+    python copy_pdf.py $subject
 
     printf "   Pandoc\n"
 
@@ -66,9 +71,9 @@ do
     # Create sidebars
     printf "   Creating side bars\n"
     # Doing this after pandoc because it needs the sed commands too.
-    ./create_sidebars.py $subject
+    python create_sidebars.py $subject
     
 
 done
 
-./createHomeHeader.py
+python createHomeHeader.py
