@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import os
 import shutil
 import sys
@@ -8,12 +6,8 @@ import sys
 ###################################
 # Get list of big pages available #
 ###################################
-
-#print(os.path.basename(your_path))
-#print(os.walk(os.path.join("src/pug/theory")))
 availableBigPages = [ os.path.basename(f.path) for f in os.scandir(os.path.join("src/pug/theory")) if f.is_dir() ]
-#print(availableBigPages)
-#raise Exception("hi")
+
 #####################
 # Get ordering page #
 #####################
@@ -28,30 +22,19 @@ with open('bigPages.txt') as bigPages:
             continue
         #line = line,
         line = line.replace("\n", "")
-        #print("THING")
-        #print(line)
-        #print(line,)
-        #print("DONE")
         if line[0] == "\t":
-            #print("here")
             currentHeader["items"].append(line[1:])
         else:
-            #print("there")
             if first is False:
                 bigPagesList.append(currentHeader)
             first = False
             currentHeader = {"heading": line, "items": []}
     bigPagesList.append(currentHeader)
         
-#print(bigPagesList)
-#raise Exception("hi")
 allBigPaths = []
 for bigPagesDict in bigPagesList:
     allBigPaths = allBigPaths + bigPagesDict["items"]
 
-#print(allBigPaths)
-#print(len(allBigPaths))
-#print(len(set(allBigPaths)))
 if len(allBigPaths) != len(set(allBigPaths)):
     raise Exception("Non unique entries in big pages list")
 
@@ -60,11 +43,6 @@ if len(allBigPaths) != len(set(allBigPaths)):
 # Check unique and not missed any/extra #
 #########################################
 
-#print(len(allBigPaths))
-#print(len(availableBigPages))
-#print(list(set(allBigPaths)))
-#print(list(set(availableBigPages)))
-
 for thing in allBigPaths:
     if not thing in availableBigPages:
         print(thing)
@@ -72,7 +50,7 @@ for thing in allBigPaths:
 
 for thing in availableBigPages:
     if not thing in allBigPaths:
-        #print(thing)
+        print(thing)
         raise Exception(f"{thing} available but not requested")
 
 #################################
@@ -95,11 +73,6 @@ for bigPagesDict in bigPagesList:
                 #line = line.replace("\n", "")
 
         #\title{Algebra}
-
-        #print(os.bigPageShort)
-#print(nameMapper)
-#raise Exception("hia")
-
 
 ######################
 # Create header file #
