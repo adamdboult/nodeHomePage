@@ -64,14 +64,14 @@ Languages which compile to machine code for process virtual machines
 	otherConcurrentLanguagesVM
 Interpreted languages
 	otherLanguages
-Python (Virtual machine and interpreter)
-	python
-	pythonData
-	pythonInternet
 Web development and JavaScript
 	HTMLCSS
 	javascript
 	javascriptFrameworks
+Python (Virtual machine and interpreter)
+	python
+	pythonData
+	pythonInternet
 Domain specific languages
 	R
 	RPackages
