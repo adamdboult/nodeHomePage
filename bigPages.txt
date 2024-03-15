@@ -3,6 +3,7 @@ Mathematics
 	algebra
 	analysis
 	analysisComplex
+	algebraAbstract
 	geometry
 	topology
 Basic physics
@@ -11,6 +12,7 @@ Basic physics
 	physicsRelative
 Computer science
 	computer
+	computerSimple
 	computerFloating
 	C
 	dataStructuresAlgorithms
