@@ -1,0 +1,28 @@
+
+\subsection{Introduction}
+\begin{verbatim}
+L = T-V
+T = \sum_i^n(1/2)m_iv_i^2
+V=G\sum_i^{n-1}\sum_{i+1}^n\frac{m_im_j}{|\bold{r}_i-\bold{r}_j|}
+\end{verbatim}
+\subsection{euler lagrange}
+\begin{verbatim}
+\dfrac{d}{dt}(\dfrac{\delta L}{\delta \bold{r}^{dot}_i})-\dfrac{\delta L}{\delta \bold{r}_i}=0
+\dfrac{\delta L}{\delta \bold{r}^{dot}_i}=m_i\bold{r}^{dot}_i=\bold{p}_i
+\dfrac{\delta L}{\delta \bold{r}_i}=-G\sum_{j=1,j\ne i}^nm_im_j\dfrac{\bold{r}_i-\bold{r}_j}{|\bold{r}_i-\bold{r}_j|^3}
+\end{verbatim}
+
+gives us
+\begin{verbatim}
+m_i\bold{r}^{dot dot}_i=-G\sum_{j=1,j\ne i}^nm_im_j\dfrac{\bold{r}_i-\bold{r}_j}{|r_i-r_j|^3}
+\end{verbatim}
+which is
+\begin{verbatim}
+~ ma=F
+\end{verbatim}
+also gives
+\begin{verbatim}
+\bold{r}^{dot dot}_i=-G\sum_{j=1,j\ne i}^nm_j\dfrac{\bold{r}_i-\bold{r}_j}{|r_i-r_j|^3}
+
+\end{verbatim}
+

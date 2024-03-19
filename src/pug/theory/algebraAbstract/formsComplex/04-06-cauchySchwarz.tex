@@ -1,0 +1,26 @@
+
+\subsection{Cauchy-Schwarz inequality}
+
+This states that:
+
+\(|\langle u,v\rangle |^2 \le \langle u, u\rangle \dot \langle v, v\rangle \)
+
+Consider the vectors \(u\) and \(v\). We construct a third vector \(u-\lambda v\).
+We know the length of any vector is non-negative.
+\(0\le \langle u-\lambda v, u-\lambda v\rangle\)
+
+\(0\le \langle u, u\rangle+ \langle u, -\lambda v\rangle+\langle -\lambda v, u\rangle+ \langle -\lambda v, -\lambda v\rangle\)
+
+\(0\le \langle u, u\rangle-\bar{\lambda }\langle u, v\rangle-\lambda { \langle v, u\rangle }+ \lambda \bar{\lambda }\langle v, v\rangle\)
+
+
+We now look for a value of \(\lambda \) to simplify this equation.
+
+\(\lambda = \dfrac{\langle u,v \rangle}{\langle v, v\rangle}\)
+
+\(0\le \langle u, u\rangle-\dfrac{\langle v,u \rangle\langle u, v\rangle}{\langle v, v\rangle}-\dfrac{\langle u,v \rangle  \langle v, u\rangle }{\langle v, v\rangle}+ \dfrac{\langle u,v \rangle}{\langle v, v\rangle}\dfrac{\langle v,u \rangle}{\langle v, v\rangle}\langle v, v\rangle\)
+
+\(0\le \langle u, u\rangle-\dfrac{|\langle u,v \rangle|^2}{\langle v, v\rangle}\)
+
+\(|\langle u,v \rangle|^2\ge \langle u, u\rangle\langle v, v\rangle\)
+
