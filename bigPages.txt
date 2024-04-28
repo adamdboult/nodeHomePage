@@ -25,9 +25,9 @@ Statistics
 	probabilityTimeSeriesMultivariate
 	probabilityInference
 	computerRandom
+Chemistry, biology and engineering
 	physicsStatistical
 	physics
-Chemistry, biology and engineering
 	chemistry
 	biology
 	engineering
