@@ -16,15 +16,14 @@ do
     
     # remove src/pug/theory/
     subject=${subject#*/}
-    subject=${subject#*/}
-    subject=${subject#*/}
+    #subject=${subject#*/}
+    #subject=${subject#*/}
 
     printf "Doing \"${subject}\"...\n"
     # Create tex file
     printf "   Creating derived latex files\n"
     python3 createDerivedLatexFiles.py $subject
-    
-    
+
     # Run twice to get table of contents
     # Doing this before pandoc because we change the data for that to reverse escape \_
     # Can't make 2 data copies easily - use of \include is automatic
@@ -32,10 +31,9 @@ do
     cd $subject
     printf "   pdflatex ${subject}\n"
     pdflatex ${subject}.tex > /dev/null 2>&1
-    printf "   pdflatex ${subject}\n"
     pdflatex ${subject}.tex > /dev/null 2>&1
     cd $current_dir
-    
+
     # Copy pdf
     python3 copy_pdf.py $subject
 
@@ -43,10 +41,12 @@ do
 
     # Copy preface.tex to the folder.
     cp preface.tex built/pug/theory/${subject}/
-    my_list=$(find built/pug/theory/${subject}/ -name \*.tex)
-    for i in $my_list; do
+
+    # Next
+    tex_files=$(find built/pug/theory/${subject}/ -name \*.tex)
+    for tex_file in $tex_files; do
         printf "     loop ${i}\n"
-        b=$(basename -- $i)
+        b=$(basename -- $tex_file)
         b=${b%.tex}
         s=$b".tex"
         o=$b".html"
@@ -55,7 +55,7 @@ do
 
         cd $d
         printf "     sed ${s}\n"
-        #sed -i 's/\\_/_/g' $s
+        sed -i 's/\\_/_/g' $s
         # Not doing sed for now, breaking pandoc on server
         printf "     Pandoc ${s}\n"
         pandoc $s --mathjax -o $o
@@ -64,7 +64,7 @@ do
     done
     
     cd built/pug/theory/${subject}/
-    #sed -i 's/\\_/_/g' ${subject}.tex
+    sed -i 's/\\_/_/g' ${subject}.tex
     # Not doing sed for now, breaking pandoc on server
     cd $current_dir
     
