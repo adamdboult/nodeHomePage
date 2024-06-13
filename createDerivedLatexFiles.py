@@ -23,7 +23,7 @@ for subject in subjects:
         lines = []
 
         for tex_file in tex_files:
-            line = "\input{" + folder + "/" + os.path.splitext(tex_file)[0] + "}"
+            line = r"\input{" + folder + "/" + os.path.splitext(tex_file)[0] + "}"
             lines.append(line)
         #print(lines)
         f = open(os.path.join(directory_to_walk, folder + ".tex"), "w")
