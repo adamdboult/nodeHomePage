@@ -35,6 +35,7 @@ module.exports=function(app){
     app.get('/theory/:area', function(req,res){
 	res.render('theory/'+req.params.area, {}, function(err, html) {
 	    if(err) {
+	    console.log(err);
 		res.render('404', { url: req.url });
 	    } else {
 		res.send(html);
@@ -45,6 +46,7 @@ module.exports=function(app){
     app.get('/theory/:area/:subject', function(req,res){
 	res.render('theory/'+req.params.area+'/'+req.params.subject, {}, function(err, html) {
 	    if(err) {
+	    console.log(err);
 		res.render('404', { url: req.url });
 	    } else {
 		res.send(html);

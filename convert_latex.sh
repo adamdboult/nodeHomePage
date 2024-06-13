@@ -43,7 +43,7 @@ for subject in built/pug/theory/*/; do
     tex_files=$(find built/pug/theory/${subject}/ -maxdepth 1 -name \*.tex)
     for tex_file in $tex_files; do
         printf "    $tex_file\n"
-        html_file="${tex_file%.txt}.html"
+        html_file="${tex_file%.tex}.html"
         tex_basename="${tex_file##*/}"
         html_basename="${html_file##*/}"
         printf "        pandoc\n"
@@ -52,16 +52,19 @@ for subject in built/pug/theory/*/; do
         cd "$(dirname "$tex_file")"
         pandoc $tex_basename --mathjax -o $html_basename
         cd $current_dir
-        printf "        sed\n"
+
+    done
+
+    # Override tex stuff with escapes so it can be ripped when creating the headers
+    # Note different max depth here. Need to change title stuff inside each folder if relevant.
+    tex_files=$(find built/pug/theory/${subject}/ -maxdepth 2 -name \*.tex)
+    for tex_file in $tex_files; do
         # Doing the sed after so it's ready for the create_sidebar bit (?). pandoc needs the \_ stuff just like pdflatex does
         # I only think we care about doing this to the header stuff because we're grabbing it later, so messing around with \(\) stuff shouldn't be an issue
         sed -i 's/\\_/_/g' $tex_file
         sed -i 's/\\#/#/g' $tex_file
         sed -i 's/\\\//\//g' $tex_file
-        printf "        done\n"
-
     done
-
     # Create sidebars
     printf "   Creating side bars\n"
     # sed just needed for create_sidebars, but also needed on main tex thing too as well as individual pages as above
