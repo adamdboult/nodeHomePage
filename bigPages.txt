@@ -8,8 +8,8 @@ Mathematics
 	topology
 Basic physics
 	physicsMechanics
-	physicsRigid
 	physicsRelative
+	physicsRigid
 Computer science
 	computer
 	computerSimple
@@ -25,7 +25,7 @@ Statistics
 	probabilityTimeSeriesMultivariate
 	probabilityInference
 	computerRandom
-Chemistry, biology and engineering
+Science and engineering
 	physicsStatistical
 	physics
 	chemistry
@@ -34,6 +34,7 @@ Chemistry, biology and engineering
 	electronics
 Computers
 	engineeringComputer
+	microarchitecture
 	computerInstructions
 	computerNonRisc
 	graphics
@@ -100,11 +101,14 @@ Other operating systems
 Economics
 	ai
 	equilibrium
+	accounting
 	IO
 	MBF
 	economics
+	business
 	macroeconomics
 	publicChoice
+	cryptoCurrency
 	economicsSoftware
 Philosophy
 	history
