@@ -7,7 +7,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Non-volatile editable memory: bootloaders and computer storage including magnetic memory (magnetic core memory, magnetic tape, floppy disks, hard drives), Semiconductor memory incuding SSD (EPROM/EEPROM/flash memory), optical memory (CD/DVD etc)}
+\title{Non-volatile editable memory: bootloaders and computer storage including magnetic memory (magnetic core memory, magnetic tape, floppy disks, hard drives), Semiconductor memory incuding SSD (EPROM/EEPROM/flash memory), optical memory (CD/DVD etc), Master Boot Record (MBR) and FAT32}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -16,14 +16,9 @@
 \include{preface}
 
 \part{Introduction}
-
-\part{Manufacturing CPUs}
-
-\part{RAM and storage}
-
-\part{Motherboards}
-
-\part{Keyboards, printers and terminals}
+\include{partitionsMBR}
+\include{fileSystemsFAT}
+\include{bootLoaderFirstDOS}
 
 \end{document}
 
