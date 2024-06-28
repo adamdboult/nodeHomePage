@@ -110,6 +110,7 @@ Economics
 	macroeconomics
 	publicChoice
 	cryptoCurrency
+	legislationRegulation
 	economicsSoftware
 Philosophy
 	history
