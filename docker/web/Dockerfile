@@ -1,5 +1,11 @@
 FROM node:16
-RUN apt-get update && apt-get -y install build-essential apache2 git python3 pandoc texlive-full
+RUN apt-get update && apt-get -y install \
+  build-essential                        \
+  python3                                \
+  pandoc                                 \
+  texlive-full                           #\
+#  apache2                                \
+#  git                                    \
 
 # Avoid ascii errors when reading files in Python
 ENV LANG C.UTF-8
@@ -8,5 +14,5 @@ ENV LANG C.UTF-8
 WORKDIR /Projects/nodeHomePage/
 
 COPY . .
-RUN npm install && make
+RUN npm ci && make
 CMD [ "node", "server.js", "80" ]
