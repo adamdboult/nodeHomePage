@@ -3,7 +3,8 @@ RUN apt-get update && apt-get -y install \
   build-essential                        \
   python3                                \
   pandoc                                 \
-  texlive-full                           #\
+  texlive-full
+#RUN apt-get -y install \
 #  apache2                                \
 #  git                                    \
 
@@ -14,5 +15,5 @@ ENV LANG C.UTF-8
 WORKDIR /Projects/nodeHomePage/
 
 COPY . .
-RUN npm ci && make
+RUN npm install --package-lock-only && npm ci && make
 CMD [ "node", "server.js", "80" ]
