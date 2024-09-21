@@ -22,6 +22,9 @@ for subject in built/pug/theory/*/; do
     printf "   Creating derived latex files\n"
     python3 createDerivedLatexFiles.py $subject
 
+    # Copy preface.tex to the folder. Needed for creating the pdf/html files
+    cp preface.tex built/pug/theory/${subject}/
+
     # Run twice to get table of contents
     # Doing this before pandoc because we change the data for that to reverse escape \_
     # (not sure this is the reason, it's about the later stuff I think?)
@@ -42,9 +45,6 @@ for subject in built/pug/theory/*/; do
     python3 copy_pdf.py $subject
 
     printf "   Pandoc\n"
-
-    # Copy preface.tex to the folder.
-    cp preface.tex built/pug/theory/${subject}/
 
     # Next
     tex_files=$(find built/pug/theory/${subject}/ -maxdepth 1 -name \*.tex)
