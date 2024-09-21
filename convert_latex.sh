@@ -24,11 +24,18 @@ for subject in built/pug/theory/*/; do
 
     # Run twice to get table of contents
     # Doing this before pandoc because we change the data for that to reverse escape \_
+    # (not sure this is the reason, it's about the later stuff I think?)
     # Can't make 2 data copies easily - use of \include is automatic
     cd "built/pug/theory/$subject"
     printf "   pdflatex ${subject}\n"
-    pdflatex ${subject}.tex > /dev/null 2>&1
-    pdflatex ${subject}.tex > /dev/null 2>&1
+    use_pdf_latex=true
+    if [ "$use_pdf_latex" = true ]; then
+        pdflatex ${subject}.tex > /dev/null 2>&1
+        pdflatex ${subject}.tex > /dev/null 2>&1
+    else
+        echo "something else"
+    fi
+        pandoc ${subject}.tex -o ${subject}.pdf
     cd $current_dir
 
     # Copy pdf
