@@ -1,9 +1,11 @@
 FROM node:22
-RUN apt-get update && apt-get -y install \
-  build-essential                        \
-  python3-full                           \
-  pandoc                                 \
-  texlive-full
+RUN apt-get update && apt-get install --no-install-recommends --yes \
+  build-essential                                                   \
+  python3-full                                                      \
+  pandoc                                                            \
+  texlive-full                                                      \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 # Avoid ascii errors when reading files in Python
 ENV LANG C.UTF-8
