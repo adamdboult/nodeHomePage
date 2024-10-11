@@ -1,7 +1,7 @@
 FROM node:22
 RUN apt-get update && apt-get install --no-install-recommends --yes \
   build-essential                                                   \
-  python3-full                                                      \
+  python3                                                           \
   pandoc                                                            \
   texlive-full                                                      \
   && apt-get clean \

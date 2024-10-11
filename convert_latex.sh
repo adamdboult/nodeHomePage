@@ -35,9 +35,9 @@ for subject in built/pug/theory/*/; do
 		pdflatex ${subject}.tex >/dev/null 2>&1
 		pdflatex ${subject}.tex >/dev/null 2>&1
 	else
+		#pandoc ${subject}.tex -o ${subject}.pdf
 		echo "something else"
 	fi
-	pandoc ${subject}.tex -o ${subject}.pdf
 	cd $current_dir
 
 	# Copy pdf
