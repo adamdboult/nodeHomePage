@@ -18,6 +18,5 @@ eslint.config.mjs
 
 public/
 built/
-private/
 data/
 
