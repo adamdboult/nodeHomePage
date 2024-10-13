@@ -6,7 +6,7 @@
 .PHONY: scripts
 .PHONY: styles
 .PHONY: pug
-.PHONY: latex
+.PHONY: latex	
 .PHONY: all
 
 all: empty_dest favicon packages scripts styles pug latex

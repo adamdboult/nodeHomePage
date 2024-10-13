@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install --no-install-recommends --yes \
 ENV LANG C.UTF-8
 
 # Needed for the empty folder stuff to work
-WORKDIR /Projects/nodeHomePage/
+WORKDIR /app
 
 # Copy package.json and package-lock.json to leverage Docker cache
 COPY package.json package-lock.json ./
