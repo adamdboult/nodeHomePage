@@ -1,17 +1,17 @@
 
 
-.PHONY: empty_dest
 .PHONY: favicon
 .PHONY: packages
 .PHONY: scripts
 .PHONY: styles
 .PHONY: pug
-.PHONY: latex	
+.PHONY: latex
 .PHONY: all
+.PHONY: clean
 
-all: empty_dest favicon packages scripts styles pug latex
+all: clean favicon packages scripts styles pug latex
 
-empty_dest:
+clean:
 	rm -rf built/
 	rm -rf public/
 	mkdir built/
