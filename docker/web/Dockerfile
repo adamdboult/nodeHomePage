@@ -3,10 +3,16 @@ RUN apt-get update && apt-get install --no-install-recommends --yes \
   build-essential                                                   \
   python3                                                           \
   pandoc                                                            \
-  texlive-full                                                      \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  texlive-latex-base                                                \
+  texlive-latex-recommended                                         \
+  texlive-latex-extra                                               \
+  texlive-fonts-recommended                                         \
+  && apt-get clean                                                  \
+  && rm -rf /var/lib/apt/lists/*                                    \
+  && rm -rf /usr/share/doc/* /usr/share/man/*
 
+#  texlive-full                                                      \
+  
 # Avoid ascii errors when reading files in Python
 ENV LANG C.UTF-8
 
