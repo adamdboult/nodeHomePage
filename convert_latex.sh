@@ -19,7 +19,7 @@ for subject in built/pug/theory/*/; do
 	printf "Doing \"${subject}\"...\n"
 	# Create tex file
 	printf "   Creating derived latex files\n"
-	python3 createDerivedLatexFiles.py $subject
+	python3 createDerivedLatexFiles.py "$subject"
 
 	# Copy preface.tex to the folder. Needed for creating the pdf/html files
 	cp preface.tex built/pug/theory/${subject}/
@@ -32,21 +32,21 @@ for subject in built/pug/theory/*/; do
 	printf "   pdflatex ${subject}\n"
 	use_pdf_latex=true
 	if [ "$use_pdf_latex" = true ]; then
-		pdflatex ${subject}.tex >/dev/null 2>&1
-		pdflatex ${subject}.tex >/dev/null 2>&1
+		pdflatex "${subject}.tex" >/dev/null 2>&1
+		pdflatex "${subject}.tex" >/dev/null 2>&1
 	else
 		#pandoc ${subject}.tex -o ${subject}.pdf
 		echo "something else"
 	fi
-	cd $current_dir
+	cd "$current_dir"
 
 	# Copy pdf
-	python3 copy_pdf.py $subject
+	python3 copy_pdf.py "$subject"
 
 	printf "   Pandoc\n"
 
 	# Next
-	tex_files=$(find built/pug/theory/${subject}/ -maxdepth 1 -name \*.tex)
+	tex_files=$(find built/pug/theory/"${subject}"/ -maxdepth 1 -name \*.tex)
 	for tex_file in $tex_files; do
 		printf "    $tex_file\n"
 		html_file="${tex_file%.tex}.html"
@@ -56,8 +56,8 @@ for subject in built/pug/theory/*/; do
 		#pandoc $tex_file --mathjax -o $html_file
 		# Need to be in the directory for the \include stuff to work
 		cd "$(dirname "$tex_file")"
-		pandoc $tex_basename --mathjax -o $html_basename
-		cd $current_dir
+		pandoc "$tex_basename" --mathjax -o "$html_basename"
+		cd "$current_dir"
 
 	done
 
@@ -67,9 +67,9 @@ for subject in built/pug/theory/*/; do
 	for tex_file in $tex_files; do
 		# Doing the sed after so it's ready for the create_sidebar bit (?). pandoc needs the \_ stuff just like pdflatex does
 		# I only think we care about doing this to the header stuff because we're grabbing it later, so messing around with \(\) stuff shouldn't be an issue
-		sed -i 's/\\_/_/g' $tex_file
-		sed -i 's/\\#/#/g' $tex_file
-		sed -i 's/\\\//\//g' $tex_file
+		sed -i 's/\\_/_/g' "$tex_file"
+		sed -i 's/\\#/#/g' "$tex_file"
+		sed -i 's/\\\//\//g' "$tex_file"
 	done
 	# Create sidebars
 	printf "   Creating side bars\n"
@@ -80,7 +80,7 @@ for subject in built/pug/theory/*/; do
 	# Need to figure out how to do this last sed correctly trying to replace \/ with /
 	sed -i 's/\\\//\//g' "built/pug/theory/${subject}/${subject}.tex"
 	# Doing this after pandoc because it needs the sed commands too.
-	python3 create_sidebars.py $subject
+	python3 create_sidebars.py "$subject"
 
 done
 
