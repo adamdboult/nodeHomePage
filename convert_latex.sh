@@ -16,20 +16,22 @@ for subject in built/pug/theory/*/; do
 	# remove src/pug/theory/
 	subject="${subject##*/}"
 
-	printf "Doing \"${subject}\"...\n"
+	#printf "Doing \"${subject}\"...\n"
+	printf "Doing \%s\"...\n" "$subject"
 	# Create tex file
 	printf "   Creating derived latex files\n"
-	python3 createDerivedLatexFiles.py "$subject"
+	python3 create_derived_latex_files.py "$subject"
 
 	# Copy preface.tex to the folder. Needed for creating the pdf/html files
-	cp preface.tex built/pug/theory/${subject}/
+	cp preface.tex "built/pug/theory/${subject}/"
 
 	# Run twice to get table of contents
 	# Doing this before pandoc because we change the data for that to reverse escape \_
 	# (not sure this is the reason, it's about the later stuff I think?)
 	# Can't make 2 data copies easily - use of \include is automatic
 	cd "built/pug/theory/$subject"
-	printf "   pdflatex ${subject}\n"
+	#printf "   pdflatex ${subject}\n"
+	printf "   pdflatex %s\n" "$subject"
 	use_pdf_latex=true
 	if [ "$use_pdf_latex" = true ]; then
 		pdflatex "${subject}.tex" >/dev/null 2>&1
@@ -48,7 +50,8 @@ for subject in built/pug/theory/*/; do
 	# Next
 	tex_files=$(find built/pug/theory/"${subject}"/ -maxdepth 1 -name \*.tex)
 	for tex_file in $tex_files; do
-		printf "    $tex_file\n"
+		#printf "    $tex_file\n"
+		printf "    %s\n" "$tex_file"
 		html_file="${tex_file%.tex}.html"
 		tex_basename="${tex_file##*/}"
 		html_basename="${html_file##*/}"
@@ -63,7 +66,7 @@ for subject in built/pug/theory/*/; do
 
 	# Override tex stuff with escapes so it can be ripped when creating the headers
 	# Note different max depth here. Need to change title stuff inside each folder if relevant.
-	tex_files=$(find built/pug/theory/${subject}/ -maxdepth 2 -name \*.tex)
+	tex_files=$(find built/pug/theory/"${subject}"/ -maxdepth 2 -name \*.tex)
 	for tex_file in $tex_files; do
 		# Doing the sed after so it's ready for the create_sidebar bit (?). pandoc needs the \_ stuff just like pdflatex does
 		# I only think we care about doing this to the header stuff because we're grabbing it later, so messing around with \(\) stuff shouldn't be an issue
@@ -84,4 +87,4 @@ for subject in built/pug/theory/*/; do
 
 done
 
-python3 createHomeHeader.py
+python3 create_home_header.py

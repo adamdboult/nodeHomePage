@@ -22,14 +22,12 @@ for subject in subjects:
 
     # subject_proper = subject
 
-    sidebar_file_data = open(sidebar_file, "w")
-    non_sidebar_file_data = open(non_sidebar_file, "w")
-    # f2 = open(source_file, "r")
-
     ####
     # Get proper subject
     ####
-    with open(source_file, "r") as source_file_data:
+    subject_proper = None
+
+    with open(source_file, "r", encoding="utf-8") as source_file_data:
         for item in source_file_data:
             item = item.replace("\n", "")
             item = item.replace("\t", " ")
@@ -37,74 +35,81 @@ for subject in subjects:
             if item[0:7] == "\\title{":
                 subject_proper = item[7 : len(item) - 1]
 
+    if subject_proper is None:
+        raise ValueError("No title found in the source file.")
+
     ####
     # Write non-sidebar
     ####
-    non_sidebar_file_data.write("extends ../templates/header.pug\n")
-    non_sidebar_file_data.write("block content\n")
-    non_sidebar_file_data.write("	div.container-fluid\n")
-    non_sidebar_file_data.write("		div.row\n")
-    non_sidebar_file_data.write(
-        "			//nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n"
-    )
-    non_sidebar_file_data.write("			nav.col-md-2.bg-light.sidebar\n")
-    non_sidebar_file_data.write("				div.sidebar-sticky\n")
-    non_sidebar_file_data.write("					br\n")
-    non_sidebar_file_data.write("					include ./" + subject + "_sidebar.pug\n")
-    non_sidebar_file_data.write(
-        '			//main.col-md-9.ml-sm-auto.col-lg-10.px-4(role="main")\n'
-    )
-    non_sidebar_file_data.write("			.col-md-10\n")
-    non_sidebar_file_data.write("				br\n")
-    non_sidebar_file_data.write("				p Please select a chapter from the left.\n")
-    non_sidebar_file_data.write("				include ./" + subject + "/preface.html\n")
+    with open(non_sidebar_file, "w", encoding="utf-8") as non_sidebar_file_data:
+
+        non_sidebar_file_data.write("extends ../templates/header.pug\n")
+        non_sidebar_file_data.write("block content\n")
+        non_sidebar_file_data.write("	div.container-fluid\n")
+        non_sidebar_file_data.write("		div.row\n")
+        non_sidebar_file_data.write(
+            "			//nav.col-md-2.d-none.d-md-block.bg-light.sidebar\n"
+        )
+        non_sidebar_file_data.write("			nav.col-md-2.bg-light.sidebar\n")
+        non_sidebar_file_data.write("				div.sidebar-sticky\n")
+        non_sidebar_file_data.write("					br\n")
+        non_sidebar_file_data.write("					include ./" + subject + "_sidebar.pug\n")
+        non_sidebar_file_data.write(
+            '			//main.col-md-9.ml-sm-auto.col-lg-10.px-4(role="main")\n'
+        )
+        non_sidebar_file_data.write("			.col-md-10\n")
+        non_sidebar_file_data.write("				br\n")
+        non_sidebar_file_data.write("				p Please select a chapter from the left.\n")
+        non_sidebar_file_data.write("				include ./" + subject + "/preface.html\n")
 
     ####
     # Write basic
     ####
-    sidebar_file_data.write("div\n")
-    sidebar_file_data.write('	h2(style="text-decoration:none;")\n')
-    sidebar_file_data.write("		b\n")
-    sidebar_file_data.write(
-        '			a(href="/theory/' + subject + '") ' + subject_proper + "\n"
-    )
-    sidebar_file_data.write("	p\n")
-    sidebar_file_data.write('		a(href="/theory/' + subject + '.pdf") Download PDF\n')
+    with open(sidebar_file, "w", encoding="utf-8") as sidebar_file_data:
+        sidebar_file_data.write("div\n")
+        sidebar_file_data.write('	h2(style="text-decoration:none;")\n')
+        sidebar_file_data.write("		b\n")
+        sidebar_file_data.write(
+            '			a(href="/theory/' + subject + '") ' + subject_proper + "\n"
+        )
+        sidebar_file_data.write("	p\n")
+        sidebar_file_data.write(
+            '		a(href="/theory/' + subject + '.pdf") Download PDF\n'
+        )
 
-    ####
-    # Main stuff
-    ####
-    contents_in_tex = []
-    with open(source_file, "r") as source_file_data:
-        for item in source_file_data:
-            item = item.replace("\n", "")
-            item = item.replace("\t", " ")
-            item = item.strip()
-
-            ####
-            # Do h3
-            ####
-            if item[0:6] == "\\part{":
-                content = item[6 : len(item) - 1]
-                sidebar_file_data.write("	h3\n")
-                sidebar_file_data.write("		b " + content + "\n")
-
-            ####
-            # Do links
-            ####
-            elif item[0:9] == "\\include{":
-                content = item[9 : len(item) - 1]
+        ####
+        # Main stuff
+        ####
+        contents_in_tex = []
+        with open(source_file, "r", encoding="utf-8") as source_file_data:
+            for item in source_file_data:
+                item = item.replace("\n", "")
+                item = item.replace("\t", " ")
+                item = item.strip()
 
                 ####
-                # Skip preface
+                # Do h3
                 ####
-                if content == "preface":
-                    continue
+                if item[0:6] == "\\part{":
+                    content = item[6 : len(item) - 1]
+                    sidebar_file_data.write("	h3\n")
+                    sidebar_file_data.write("		b " + content + "\n")
 
                 ####
-                # Carry on
+                # Do links
                 ####
-                else:
+                elif item[0:9] == "\\include{":
+                    content = item[9 : len(item) - 1]
+
+                    ####
+                    # Skip preface
+                    ####
+                    if content == "preface":
+                        continue
+
+                    ####
+                    # Carry on
+                    ####
                     contents_in_tex.append(content)
 
                     ####
@@ -121,13 +126,19 @@ for subject in subjects:
                         content,
                         "00-00-Chapter_name.tex",
                     )
-                    with open(content_file, "r") as f3:
+
+                    content_proper = None
+
+                    with open(content_file, "r", encoding="utf-8") as f3:
                         for item2 in f3:
                             item2 = item2.replace("\n", "")
                             item2 = item2.replace("\t", " ")
                             item2 = item2.strip()
                             if item2[0:9] == "\\chapter{":
                                 content_proper = item2[9 : len(item2) - 1]
+
+                    if content_proper is None:
+                        raise ValueError("No chapter title found in the source file.")
 
                     ####
                     # Write
@@ -175,10 +186,4 @@ for subject in subjects:
                 if content not in contents_in_folder
             ]
         )
-        raise Exception("Contents do no match")
-
-    ####
-    # Fin
-    ####
-    sidebar_file_data.close()
-    non_sidebar_file_data.close()
+        raise ValueError("Contents do no match")
