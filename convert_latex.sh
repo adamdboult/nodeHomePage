@@ -17,7 +17,7 @@ for subject in built/pug/theory/*/; do
 	subject="${subject##*/}"
 
 	#printf "Doing \"${subject}\"...\n"
-	printf "Doing \%s\"...\n" "$subject"
+	printf "Doing \"%s\"...\n" "$subject"
 	# Create tex file
 	printf "   Creating derived latex files\n"
 	python3 create_derived_latex_files.py "$subject"

@@ -6,25 +6,16 @@ import os
 
 import sys
 
+
 ###################################
 # Create tex file for each folder #
 ###################################
-subjects = [sys.argv[1]]
 
-for subject in subjects:
 
-    ####
-    # Prep
-    ####
-    source_file = os.path.join("built", "pug", "theory", subject, subject + ".tex")
-    sidebar_file = os.path.join("built", "pug", "theory", subject + "_sidebar.pug")
-    non_sidebar_file = os.path.join("built", "pug", "theory", subject + ".pug")
-
-    # subject_proper = subject
-
-    ####
-    # Get proper subject
-    ####
+def get_subject_proper(source_file):
+    """
+    Documentation
+    """
     subject_proper = None
 
     with open(source_file, "r", encoding="utf-8") as source_file_data:
@@ -37,10 +28,14 @@ for subject in subjects:
 
     if subject_proper is None:
         raise ValueError("No title found in the source file.")
+    return subject_proper
 
-    ####
-    # Write non-sidebar
-    ####
+
+def write_non_sidebar(subject, non_sidebar_file):
+    """
+    Documentation
+    """
+
     with open(non_sidebar_file, "w", encoding="utf-8") as non_sidebar_file_data:
 
         non_sidebar_file_data.write("extends ../templates/header.pug\n")
@@ -62,9 +57,13 @@ for subject in subjects:
         non_sidebar_file_data.write("				p Please select a chapter from the left.\n")
         non_sidebar_file_data.write("				include ./" + subject + "/preface.html\n")
 
-    ####
-    # Write basic
-    ####
+
+def write_sidebar_and_return_contents_in_tex(
+    subject, subject_proper, source_file, sidebar_file
+):
+    """
+    Documentation
+    """
     with open(sidebar_file, "w", encoding="utf-8") as sidebar_file_data:
         sidebar_file_data.write("div\n")
         sidebar_file_data.write('	h2(style="text-decoration:none;")\n')
@@ -153,6 +152,39 @@ for subject in subjects:
                         + content_proper
                         + "\n"
                     )
+    return contents_in_tex
+
+
+def my_function(subject):
+    """
+    documentation
+    """
+
+    ####
+    # Prep
+    ####
+    source_file = os.path.join("built", "pug", "theory", subject, subject + ".tex")
+    sidebar_file = os.path.join("built", "pug", "theory", subject + "_sidebar.pug")
+    non_sidebar_file = os.path.join("built", "pug", "theory", subject + ".pug")
+
+    # subject_proper = subject
+
+    ####
+    # Get proper subject
+    ####
+    subject_proper = get_subject_proper(source_file)
+
+    ####
+    # Write non-sidebar
+    ####
+    write_non_sidebar(subject, non_sidebar_file)
+
+    ####
+    # Write basic
+    ####
+    contents_in_tex = write_sidebar_and_return_contents_in_tex(
+        subject, subject_proper, source_file, sidebar_file
+    )
 
     ####
     # Check all folders used
@@ -187,3 +219,18 @@ for subject in subjects:
             ]
         )
         raise ValueError("Contents do no match")
+
+
+def main():
+    """
+    Main
+    """
+
+    subjects = [sys.argv[1]]
+
+    for subject in subjects:
+        my_function(subject)
+
+
+if __name__ == "__main__":
+    main()
