@@ -1,7 +1,6 @@
 FROM node:22
 RUN apt-get update && apt-get install --no-install-recommends --yes \
-  build-essential                                                   \
-  python3                                                           \
+  python3.11                                                        \
   pandoc                                                            \
   texlive-latex-base                                                \
   texlive-latex-recommended                                         \
@@ -11,6 +10,7 @@ RUN apt-get update && apt-get install --no-install-recommends --yes \
   && rm -rf /var/lib/apt/lists/*                                    \
   && rm -rf /usr/share/doc/* /usr/share/man/*
 
+#  build-essential                                                   \
 #  texlive-full                                                      \
   
 # Avoid ascii errors when reading files in Python
