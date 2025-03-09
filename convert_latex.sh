@@ -40,11 +40,18 @@ for subject in built/pug/theory/*/; do
 		#pandoc ${subject}.tex -o ${subject}.pdf
 		echo "something else"
 	fi
-	cd "$current_dir"
 
 	# Copy pdf
-	python3 copy_pdf.py "$subject"
+	#python copy_pdf.py "$subject"
+	#source = os.path.join(dir_path, "built", "pug", "theory", subject, subject + ".pdf")
+	#destination = os.path.join(dir_path, "public", "theory", subject + ".pdf")
+	#pwd
+	#ls "../../../../"
+	#ls "../../../../public/"
+	mkdir -p "../../../../public/theory/"
+	cp "${subject}.pdf" "../../../../public/theory/"
 
+	cd "$current_dir"
 	printf "   Pandoc\n"
 
 	# Next
@@ -86,5 +93,3 @@ for subject in built/pug/theory/*/; do
 	python3 create_sidebars.py "$subject"
 
 done
-
-python3 create_home_header.py

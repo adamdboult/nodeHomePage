@@ -1,15 +1,14 @@
 
-
 .PHONY: favicon
 .PHONY: packages
 .PHONY: scripts
-.PHONY: styles
+#.PHONY: styles
 .PHONY: pug
 .PHONY: latex
 .PHONY: all
 .PHONY: clean
 
-all: clean favicon packages scripts styles pug latex
+all: clean favicon packages scripts pug latex
 
 clean:
 	rm -rf built/
@@ -38,4 +37,5 @@ pug:
 
 latex:
 	./convert_latex.sh
+	python3 create_home_header.py
 
