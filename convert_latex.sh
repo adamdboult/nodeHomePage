@@ -20,7 +20,7 @@ for subject in built/pug/theory/*/; do
 	printf "Doing \"%s\"...\n" "$subject"
 	# Create tex file
 	printf "   Creating derived latex files\n"
-	python3 create_derived_latex_files.py "$subject"
+	python create_derived_latex_files.py "$subject"
 
 	# Copy preface.tex to the folder. Needed for creating the pdf/html files
 	cp preface.tex "built/pug/theory/${subject}/"
@@ -90,6 +90,6 @@ for subject in built/pug/theory/*/; do
 	# Need to figure out how to do this last sed correctly trying to replace \/ with /
 	sed -i 's/\\\//\//g' "built/pug/theory/${subject}/${subject}.tex"
 	# Doing this after pandoc because it needs the sed commands too.
-	python3 create_sidebars.py "$subject"
+	python create_sidebars.py "$subject"
 
 done

@@ -37,5 +37,5 @@ pug:
 
 latex:
 	./convert_latex.sh
-	python3 create_home_header.py
+	python create_home_header.py
 
