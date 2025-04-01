@@ -5,21 +5,16 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-# Setting NODE_ENV means the development packages get skipped
 ENV NODE_ENV=production
 RUN npm ci
 
-#FROM python:3.11
 FROM node:22
 
 WORKDIR /app
 
-# Copy Node.js dependencies from the build stage
-#COPY --from=node-build /usr/local/lib/node_modules ./
 COPY --from=node-build /app/node_modules ./node_modules
 
-# Set up environment variables
-#ENV PATH="/usr/local/lib/node_modules/.bin:$PATH"
+ENV PATH="/usr/local/lib/node_modules/.bin:$PATH"
 
 RUN apt-get update && apt-get install --no-install-recommends --yes \
   python3.11                                                        \
@@ -35,18 +30,13 @@ RUN apt-get update && apt-get install --no-install-recommends --yes \
   && rm -rf /var/lib/apt/lists/*                                    \
   && rm -rf /usr/share/doc/* /usr/share/man/*
 
-# One reason to do this is so we can use "python" rather than "python3" in the makefile
-#RUN python3 -m venv /opt/venv \
-#    && /opt/venv/bin/pip install --disable-pip-version-check --no-cache-dir --no-deps --require-hashes -r requirements.txt
+# One reason to do this is so we can use "python" rather than "python3" in the makefile, even if we don't need to install any packages from requirements.txt
 RUN python3 -m venv /opt/venv
-
-# Ensure the virtual environment is activated for future commands
+#RUN /opt/venv/bin/pip install --disable-pip-version-check --no-cache-dir --no-deps --require-hashes -r requirements.txt
 ENV PATH="/opt/venv/bin:$PATH"
-
 
 # Avoid ascii errors when reading files in Python
 ENV LANG C.UTF-8
-
 
 COPY . .
 
