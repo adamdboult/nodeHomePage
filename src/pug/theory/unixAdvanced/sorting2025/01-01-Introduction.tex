@@ -1,0 +1,33 @@
+
+\subsection{Introduction}
+
+
+on securing the linux boot process: anti evil maid attacks. related to bios/tcm
+
+hardware security features (some of these to earlier?):
++ W\^X
++ NX bit
++ Executable-space protection
+uefi secureboot
+
+boot process:
++ platform configuration registers (PCRs)
++ trusted platform module (TPM)
+AES instruction set on advanced cpu
+intel me
+amd psp
+hardware security module (HSM)
+
+\subsection{h3: updating boot process and firmware after installing: encrypted}
+\subsection{h3: LVM and encrypting boot partition}
+
+lvm commands (lvm2 package):
++ vgcreate: volume group create
++ pvcreate: physical volume create in lvm
++ vgextend: extend volume group
++ lvcreate: logical volume create
+\subsection{h3: Securing the boot process with secureboot and TPM}
+tpm and systemd-cryptenroll page
+
+can see status of secure boot: dmesg | grep -i secure
+

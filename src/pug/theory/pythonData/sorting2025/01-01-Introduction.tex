@@ -1,0 +1,69 @@
+
+\subsection{Introduction}
+
+python data: engineering pipelines using apache airflow (python specific)
+
+
+
+
+
+more packages related to pandas
+pandera
+dask
+modin
+PySpark dataframe
+vaex
+
+\subsection{pytorch}
+pytorch: transfomer; lstm; convolution
+pytorch stuff
+pytorch.nn.Sequential (stack layers together)
+nn.Linear(a,b)
+nn.ReLU()
+nn.Sigmoid()
+
+nn.Module() (class, can inherit from it, has methods)
+
+torch.optim
+torch.optim.Adam()
+
+can define loss functions
+nn.BCELoss (binary cross entropy)
+\subsection{numpy}
+arr.np.array([1,2,3])
+can create views and copies
+x = arr.view()
+y = arr.copy()
+chaning x changes arr, changing y doesn't change arr
+
+can check with x.base, y.base, arr.base
+returns none if not a view
+
+note that no () at end.
+
+numpy: difference between view and copy
+numpy data types. NaN only float, not int? does numpy support int?
+\subsection{pandas}
+ can do the base copy view checks for can do for series too, as in numpy
+data types in pandas, inc objects
+
+concepts of missing data in pandas. different approaches, what role None and NaN play, also NaT, NASA
+shift on pandas
+
+page on pandas:
++ loc, iloc, selection with brackets, at, iat (at and iat are for elecemnts, loc and iloc for sub df). loc and at work on named index, iat and iloc on index offset? is that right?.
+df.\_is\_copy
+df.\_is\_view
+\subsection{Non data packages (maybe separate big page? something else?)}
+h3 on econ modules?
++ quantecon
++ dynare
+\subsection{specific non standard library packages}
+
+pystan in python
+
+page on mpmath (arbitrarily accurate numbers)
+
+page on sympy (depends on mpmath)
+
+

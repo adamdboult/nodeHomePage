@@ -34,8 +34,10 @@ for subject in built/pug/theory/*/; do
 	printf "   pdflatex %s\n" "$subject"
 	use_pdf_latex=true
 	if [ "$use_pdf_latex" = true ]; then
-		pdflatex "${subject}.tex" >/dev/null 2>&1
-		pdflatex "${subject}.tex" >/dev/null 2>&1
+		#pdflatex "${subject}.tex" >/dev/null 2>&1
+		#pdflatex "${subject}.tex" >/dev/null 2>&1
+		pdflatex "${subject}.tex"
+		pdflatex "${subject}.tex"
 	else
 		#pandoc ${subject}.tex -o ${subject}.pdf
 		echo "something else"

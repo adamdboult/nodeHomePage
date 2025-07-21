@@ -1,0 +1,162 @@
+
+\subsection{Introduction}
+
+what are the linux C extensions? discuss in big page in same context as hosted C? Does musl include Linux c extensions?
+
+fuzz testing
++ C linux has an h3 on static analysis, dynamic analysis and gdb. Maybe this could be its own separate big page along with development stuff?
++ could be in "More on linux, after IDEs"
++ or could move/adapt "validating code and compilers"
+
+
+gnu autoupdate/autoconf?
+
+"..hosted C AND BOOTSTRAPPING ASSEMBLERS AND A C COMPILER"
+
+ldd command. shows what libraries associated with command. owned by glibc
+
+
+ensure not missing any from gnu/unix:
+https://en.wikipedia.org/wiki/C\_POSIX\_library
+
+using backtrace() function from glibc to do stack trace
+
+shared object: .so.n (n is version number in integer. eg v 6.0 through 6.9 would have same interface so could be used in .so.6)
+static library: .o
+
+
+difference between GAC (GNU assembly code) and NASM somewhere
+
+\subsection{COMPILING}
+printk (print in kernel world, different to printf in user world)
+module\_init() and module\_exit() to specify functions to run when module loaded and unloaded
+\begin{verbatim}
+
+#include <linux/module.h> to use module_init() and module_exit()
+#include <linux/init.h> to use __init and __exit
+#include <linux/fs.h> to use file_operations struct
+\end{verbatim}
+
+\subsection{C POSIX library (eg <sys/mman.h>}
+c standard library allows for editing environment variables
+
+mmap and mummap different to heap? used for accessing files and devices
++ is this standard library or something else?
+
+\subsection{c standard library}
+
+
+heap stuff
++ c sytstem calls used to allocate heap. why?
++ mmap munmap vs malloc
++ rather than allocate for each part of the heap, can allocate huge amount and then allocate within by hand. allows domain specific understanding to be reflected. can increase efficiency.
+
+error handling
+
++ c printing: %d; %x, %o, (%X is hex but in caps eg 0xFFFF vs 0xffff)
+
+linkers. static. dynamic.
+c exception handling
++ raise requires signal.h
+
+use of static in c, in unix (applies to other files, not really core c logic) (is is part of library)?
+
+for unix: grab c arguments using main
+int main (int argc, char **argv)
+
+DNDEBUG can use this flag to remove asserts. used for production
+<fenv.h> floating point functions for controlling specific work environment?
+
+following 2 are macros for int and float respectively. seem to be environemnt/distro related?
+<limits.h>
+<float.h>
+
+<iso646.h> macros so can say "and" instead of \&\&. here not in c because based on macros
+<stdnoreturn.h> macros on returning?
+<stdalign.h> macros for "alignment"???
+\subsection{alternatives to glibc: musl; bionic; newlib}
+\subsection{--NEW LAYOUT--}
+\subsection{GNU Binutils}
+assembler: assemvly to object file
+linker: object file to executable
+eg object has placeholders for how to implement printf. linker gets this from libraries. relocation
+\subsection{GCC and make}
+use of \$(MAKE) in makefiles.
+up-clean:
+  \$(MAKE) down-clean
+  \$(MAKE) up
+
+when compile in gcc, specify the example.c file to be compiled too
+make
++ installing
++ configure (get info on system for make process)
++ make (compile)
++ make install (copy files to system)
+
+gcc:
++ -S flag compiles to assembly
++ -c flag creates object file
++ -ffreestanding to do that over hosted
++ -fhosted to force hosted
+\subsection{stdlib.h}
+
+\subsection{rest of standard library}
+
+limits and float on same page? also stdint?
+\subsection{alternatives to glibc}
+\subsection{scientific libraries}
+c headers on stuff:
++ GNU scientific library. GSL.
++ Basic Linear Algebra Subprograms (BLAS) (is this just cpu?)
++ openmp (open multiprocessing) (is this cpu header for c?)
+\subsection{linux specific headers}
+outside of standard library is also some linux/posix specific header stuff
++ fcntl.h
++ unist.h
+note, these are not part of c standard library
+\subsection{tools for making stuff}
+m4 (macro processor)
+autoconf
+automake
+debugedit
+libtool
+\subsection{Analysing programs}
+page on linter
+\subsection{make own c library}
+making own header file
+\begin{verbatim}
+#include "myhead.h"
+\end{verbatim}
+
+
+best practice: splitting up function declearation and function definitions
+just have declarations in .h
+make .c file with same name. eg example.h and example.c
+have definitions in c
+\begin{verbatim}
+#include "example.h" in example.c
+\end{verbatim}
+
+
+can guard against name already existing in .h file
+\begin{verbatim}
+#ifndef MY_HEADER_H
+# define MY_HEADER_H
+//put your function headers here
+
+#endif
+\end{verbatim}
+
+\subsection{compiling the linux kernel}
+Dynamic Kernel Module Support (DKMS)
++ Allows modules with source code outside linux kernel source tree
+
+page on kthreads.h
+
+h3 on changing linux kernel
++ compiling the kernel
++ flags
++ adding/removing modules
++ pattching code
++ eBPF (extended berkely packet filter, but not really a network thing. allows programs to run skipping the kernel??)
+

@@ -1,0 +1,112 @@
+
+\subsection{Groups}
+Constructing \(d_6\) from \(c_6\) and ??
+
+\(S^1\), \(SO(2)\) and \(U(1)\) all circles
+
+
+maybe h3 on more on groups after fields for things like general linear, orthogonal uniarty, special linear etc?
++ so these are currently discussed in abstract linear algebra, in part because they are defined on an arbitrary field
++ could define in groups when over specifically R or C
+
+algebra: groups: discrete logarithm (which is defined for prime modular arithmetic, finite groups)
++ if b in group, \(b^k\) defined for all k integers
++ \(a = b^k\)
+if we know a and b, finding k is the discrete logarithm problem
+
+Cyclic and alternating groups are the fundamental finite ones of interest
+
+Countable infinite group: addition and z. Uncountable: lie group.
+H3 on finite between. Finite should include isomorphism to complex numbers with length 1 and a generator
+
+\subsection{Fields}
+in fields
+	pag eon field extensions and galois theory
+
+GPT/internet. finite fields. there's a section already but:
++ why does p have to be prime?
++ is this definitely a field? can't divide right? or can I?
+finite field stuff:
++ as with all fields:
++ addition and multiplication are commutative and associative.
++ identity eleemnts for addition and multipcation exist.
++ multiuplicaton distributes over addition
++ defining division:
++ for any nonzero element a, there exists another unique element \(a^-1\) such \(a.a^-1 = 1 mod p\)
++ division is multiplication but multiplicative inverse
++ divison by zero not defined, as in all fields.
+in all integers mod n (aka Z/nZ, fancy Z), subtraction is uniqueless defined.
+but for multiplication we need \(a.a^-1=1\)
+\(a^-1\) doesn't always exist unless n is prime. (can sometimes exists, eg \(a=1\), \(a^-1\) is \(1\))
++ why is n being prime sufficient?
++ a and n are coprime: GCD is 1 because n is prime and \(a < n\)
++ bezout identity: exist x and y such \(ax+ny=1\)
++ reduce both sides modulo n:
++ \(ax+ny=1 mod n\)
++ \(ax = 1 mod n\) (because ny is multiple of n)
++ therefore x exists
+is x unique?
++ \(ax=1 mod n\)
++ \(ay=1 mod n\)
++ \(ax-ay=1-1 mod n\)
++ \(a(x-y)= 0 mod n\)
++ so n divides \(a(x-y)\), but n prime so
++ \(x-y = 0 mod n\)
++ \(x=y mod n\)
++ because x, \(y < n\), both are the same.
+how do we know n = p is necessary?
++ if \(n = a.b\)
++ \(ac=1 mod n\)
++ \(ac=1 mod a.b\)
++ this is a contradictin
+
+group theory
+	split out
+	page on Z int as group and isomorphism
+		iso symbo: $\cong$
+
+	page on modular arithmetic as group
+	page on continous group, inc lie, weyl groups
+
+	page on direct product and semi direct product
+		direct product:
+			\(\times\)
+	normal subgroup
+		X is subgroup of Y: \(X <= Y\)
+			all X in Y, X forms group
+		normal subgroup: \(X\unlhd Y\).
+			\(yxy^{-1} \in X\)
+		every subgroup of abelian group is normal
+	page on cosets in groups
+		right and left coset
+		can be used to decompose groups
+		finding cosets
+			take a subgroup H of G
+			take g in G
+			gH forms a left coset
+			Hg forms a right coset
+			does the coset vary by g?
+				left(right) cosets are either disjoint or identical
+		if normal, then left and right cosets are same for all g
+	quotient group:
+		X/Y
+		divide a group X by a subgroup of X (Y has to be a (normal?) subgroup of X)
+		\(G/N = {aN:a\in G}\)
+\subsection{Vector space}
+
+tensors split to "einstein notation and writing homorphisms as tensors" then "third order and higher tensors"
++ 3+ tensor bit to later h3, with exterior product etc too
+Polynomial long division on algebra
+
+	spin group when discussing \(SO(n)\)
+	group automorphisms
+		if do function on each element in group, original group relations still hold
+		for abelian, inverse is an automorphisms. Trivial automorphism exists for all
+		for \(z_p\) more automorphisms exist
+		automorphism group is the group of all automorphisms on a group
+			\(Aut(G)\)
+		holomorph: a group which contains the group and automorphism group
+			\(Hol(G)=G x| Aut(G)\) ["x|" should be the semidirect product symbol]
+in vector space stuff, page on clifford algebra
+
+

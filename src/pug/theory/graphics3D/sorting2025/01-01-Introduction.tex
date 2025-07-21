@@ -1,0 +1,144 @@
+
+\subsection{Introduction}
+
+\subsection{basic wireframe, including model space, world space and camera space}
+
+local space (aka ?) model space
++ has vertices and meshes of model
+world space
++ position, rotation and scaling of models
++ affine transformation from model space
+camera space aka view space
++ camera has location, view angle, origin of camera is now from camera at camera angle
++ then project, every vertex has matrix multiplication, field of view
+
+
+heightmaps for 3d terrain
+
+vertex: 3d point
+triangle: 3 vertices
+normal: 3d vector per vertex in triangle describing surface orientation
+
+\subsection{clipping space, wireframe culling and depth buffers, and perspective divide}
+
+Frustom culling . Hide things too far left right up down far back
+Occulision culling ..hide.things hidden by other things
+
+perspective divide - results in image space, aka normalised device coordinates (ndc)
+
+
+culling and normals and clipping and depth buffer (inc z sorting)
+
+\subsection{texture mapping}
+
+Perspective correction
+Texture map involves changing each pixel from raw texture. Proper operation is non linear, different from each pixel, Eg part of texture further away have points closer to each other
+But this expensive. Can do contact vales to each pixel but this causes texture warping
+Perspective correct texture mapping
+Can divide polygons to subdivision levels to reduce warping
+
+mip mapping
+image scaled to be 1/2 ength. can then be used as texture  at further distances without shimmering effects
+
+pixel to texture ratio calculated. if one way do mip mapping, if other magnification
+
+trilinear filtering is extension of mip mapping? interpolation betweeen mipmap levels
+
+textures should be powers of 2 to support mip mapping
+
+after done the trnasformations, want to figure out what pixels are what
+rasterisation/scanline interpolation
+go row by row
+see if pixel "in" triangle
+
+AS filtering
+bilinear filtering
+linear filtering
+trilinear filtering
+
+How to draw nearest thing for given pixel? Depth buffer. Depth buffer is distance to object for every pixel.
+Can loop over every object and draw. Ie loop over every pixel. Only draw if depth less than depth buffer, store depth in depth buffer if is closest so can save for future comparisons
+How to get z buffer in advance?
++ Render at lower resolution with lower poly count objects. Hierarchical z buffer
++ Can then use z buffer to drop objects before rendering anything
+
+3d rendering. Can use fixed bins to determine draw order. Is what PS1 did. Is faster but less accurate
+
+\subsection{lighting}
+
+h3 on lighting (with just value per vertex applied across?)
+
+3d bump mapping
+Stencil shadow
+
+alpha textures. height map for material
+
+concept of baked lighting?
+
+something called "the rendering equation" for lighting?
+Bidirectional Reflectance Distribution Function
+
+lighting types:
++ ambient lighting
++ diffuse lighting
++ specular lighting
++ above 3 combine to make "phong reflection". attentuation also plays role
+
+phong lighting is per fragment lighting. gourand shading is per vertex. flat shading is also a thing
+
+
+bump mapping
+height map (black and white)
+normal map
+spec map
+material maps
+channel map
+channel packing (use alpha channel for other stuff)
+
+ray tracing?
+
+specularity
+
+\subsection{animation and key frames}
+
+\subsection{post processing}
+
+anti aliasing and types
+
+
+\subsection{scaling and rotating sprites inc mode 7 and super scalar}
+
+\subsection{sort}
+
+
+3dfx voodoo
+nvidia 256
+opengl
+glcore
+vulkan
+sdl
+glide
+direct3d
+direct 3d
+directx 789
+
+nvtop. monitors gpu stuff
+
+k-d trees after binary space partitioning on 3d.
+
+texel
+
+skybox
+
+pseudo 3d: super scaler; mode 7; wolf/doom/duke
+
+
+gpu drivers, what for?
+just have single threaded here?
+
+rasterisation is 3d thing . convert eg vector of line to pixel
+
+rasterisation Vs raytracing Vs earlier (wolfen/doom):
+
+
+

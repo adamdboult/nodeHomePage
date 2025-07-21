@@ -1,0 +1,657 @@
+
+\subsection{Introduction}
+
+ext2 was v soon after ext1 so can discuss at same time?
+
+sleep signals on devices: S3 vs S0ix
+		part of ACPI?
+
+
+os thing: preemptive multitasking. distinct from cooperative multitasking. preemptive has interrupts.
+
+ext3 is basically ext2 with journaling
+
+journaling is related to defragging but not just about that
+	journaling useful even for ssd
+
+C mitigation for buffer overflow
+Relrow
+Aslr
+Nx
+Stack canaries
+
+block in /dev
++ SCSI also used by libATA/SATA, usb?
+  * sda, sdb for first, second
++ mem (for memory)
++ mmc
++ nvme
+
+other buses on linux: SATA; USB; m.2; pci express. outputs: hdmi, displayport
+
+linux: can convert between iso and bin cue using bchunk?
+can't directly mount cue bin? can convert first if not actual cd thing. ie don't care about track listings.
+
+pciutils
+
+running shim, ssd cleaning stuff? wasn't this recommended on arch?
+
+Want to use CDs?
+ccd/img/sub as cd rip format.
+working with iso, bin, cue files
+sudo mount -o loop=/dev/loop0 /path/to/example.iso /media/example
+sudo mount -o loop /path/to/example.iso /media/example
+sudo umount /media/example
+Convert bin/cue to iso?
+bchunk file.bin file.cue file.iso
+
+
+thing on drivers in linux?
+    cat > file                (minimalistic text editor, \^D to exit saving, \^C to exit erasing the file)
+	can do enter to do multi line
+    cat << wq > file          (nearly complete emulation of ed)
+	wq is delimiter, could be anything? Denotes end of file?
+
+basenc
+	encode or decode and print to stdout
+		basenc --base64
+		basenc --base32
+
+have ">" "<" ">>" "<<" "|" in page title on linux
+
+linux and cpu microcode. where is it? what is it?
++ we already discuss microcode in CPUs, here just want to discuss how accessed in linux
+
+Make errors in called scripts fail.
+a bit like cd in the sense that it is is posix but part of shell, not a binary command
+set -e
+set -o pipefail
+
+When talking about hosted c, linker in big name?
+
+Coreutils: nice (gives program a given priority). Have in section on priorities?
+
+Gnu libtools, part of autotools?
+M4 on gnu?
+Gnu flex
+Gnu bison
+
+rv32imf\_s
+with supervisior stuff, like memory mapping, interrupts.
+
+on OS, RV64IMF\_S
+
+gnu c: c extensions
+
+gnu compiler collection 4.7 can be built with just c.
++ can compile c and c++, therefore later versions of gcc
+
+tcc needs meslibc to be built
+tcc + meslibc can build musl, gives tcc+musl
+
+interrupt descriptor table.
+what happens when interrupt is triggered is in table.
+eg keyboard
+programmable interval timer
+
+"info" is like man but different software, came later. installed by default on gnu stuff.
+
+executible stack (related to NX bits?)
+
+
+
+in linux note that we can replace use of mbr with gpt. in title of page?
+
+dynamic frequency scaling somewhere, maybe regular linux?
+
+linux: concept of oom killer (out of memory killer): daemon which monitors for high memory usage and kills. systemd-oom is one version.
+
+linux: monitor, log and report hardware errors; machine-check exception. rasdaemon is one tool
+
+linux bin format: executable and linkable format (ELF)
+thing on fstab options
+running strace to see what a program is using.
+make sure cron is at end, after systemd. have alternative init programs there too?
+page on swap; zram and zswap
+note that with MMU, reduce need for position-indepedent code. can load program and map it to multiple address space, or one addresss space. either way appears to be absolute.
+virtual memory: demand paging; anticipatory paging
+
+kthread
+kthreadd
+kworker
+kswapd
+
+
+unix: can monitor how long simething takes with either /usr/bin/time, or "time" which is built into bash
+
+Protection ring
+
+util linux: flock
+
+
+cpu microcode somewhere. regular linux?
+
+gettext (internationalism?)
+"file" command
+which
+attr (something about ACL support)
+
+
+
+bison
+flex
+groff
+
+lshw
+
+both echo and printf. printf is mostly same, but some diffs eg can use "\\n" and will print out with line break.
+ansi escape codes for color, bold etc
+
+bc: arbitary precison calculator (important, actually a build requirement of linux kernel)
+dc: like bc but reverse polish.
+round robin algorithm(about scheduling, so on early OS stuff), but after dos?
+
+linux: strace (sys-call trace. not part of core utils, is its own thing)
+
+psmisc: fuser
+
+"split" command.
+
+"fakeroot". temporarily pretend to be root? used for package building mainly. doesn't do anything couldn't do without being root, but allows you to eg set ownership of created files at end without worrying about permissions as much.
+
+fstack protector in gcc. protects against stack smashing, eg adds buffers between things.
+
+Intel x86: real mode and protected mode
+Send message to give Linux user: write. Send message to all: wall. User can control what is written with mesg utility
+Os memory stuff: segmentation fault is when accessing out of bounds
+Address space layout randomisation on that too.
+translation lookaside buffer (virtual memory thing, MMU related)
+page, memory page and virtual page in MMU area too. page table.
+
+concept of swap when doing pages, virtual memory. naturally appears there
+
+wheel group
+
+env stuff. related to printenv, env
+environmental variables \$TERM, \$TERMINFO, \$TERMCAP available. in terminal emulators these are provided by the emulator, and do not reflect the actual display.
+
+/etc/profile file read by login shell
+
+/var/log folder
+/var/log/boot.log
+
+/usr/share/dict/words
+
+/usr generally read only stuff
+/var more write only?
+same for "/bin";
+same for /usr/sbin; /usr/bin; /usr/lib
+same for /usr/local
+
+/etc/localtime
+
+thing on folders ending in ".d". for monitoring?
+
+preventing attacks: ulimit to prevent fork bomb[ie setting up many processes to do a denial of service attack]. ulimit also prevents excessive use of memory/cpu. stored in /etc/security/limits.conf
+
+\subsection{suspend to disk}
+
+s3: suspend to ram. just keep ram on, everything else off to save power
+s4: suspend to disk. state kept in swap and powers off machine
+
+\subsection{updating boot process and firmware after installing: regular}
+
+microcode updates
+fwupd (update firmware)
+update-grub command
+
+page on unified kernel images
+
+tools to create initramfs:
++ dracut
++ ukify (systemd?) combines kernel and initrd to uki
+
+\subsection{non-SATA: USB, PCI, NVME, floppy, CD, ACPI}
+
+Advanced Configuration and Power Interface (ACPI). standard for interactive with power management and other stuff?
+
+h3 on other device types?
++ nvme
++ pci (and pciutils/lspci)
++ usb (and usbutils/lsusb)
++ floppy
++ cd (iso and bin/cue)
+
+
+
+iso and bin/cue
+loop devices
+
+nvme devices
++ /dev/nvme<x>
+
+fstrim and SSDs
+
+trim considerations when encrpyting?
+
+\subsection{pseudo CHARACTER DEVICES (what are loop devices? are these different? to later??)}
+
+device registers
++ cpu polls device registers to see if needs attention. also instead can use interrupt table?
+
+\subsection{shadow utils}
+
+masks for permissions. umask
+
+/etc/sudoers
+
+/etc/login.defs contains shadow defs
+
+default shell for new users is on /etc/default/useradd
+
+login shells:
++ /etc/profile
++ /etc/profile.d/
++ ~/.profile also applies?
+
+"login shell" in name/h3
+page on running non-login shells from login shell
++ differences include behaviour of exit
+
+exit command somewhere. part of shell? not in bin/ similar to cd then?
+
+
+/sbin for binaries only root can run
+
+/usr/bin and /usr/sbin for binaries for all users. not aimed for use by system admin?.
+
+
+visudo
+/etc/sudoers
+
+prevent logging in as root: passwd --lock root
+
+/etc/security/access.conf
+
+run elevated temp using setuid setgid
+
+\subsection{other gnu programs}
+
+pages on various little programs
++ strace
++ less
+
+xdelta is similar to diff/patch, but aimed at binary files, whereas diff and patch are aimed at text files
+
+lshw
+lshw -C cpu aka
+can just run lshw | grep -A 5 -B 5 i5 (or similar)
+
+lm\_sensors package
++ sensors (command to get tempreratures)
+
+"file" command. own program
+
+aspell (spell check). own package
+
+\subsection{pipes?}
+
+Pipe() call makes anon pipe. just returns 2 desriptors. 1 read 1 write.
+pipes connect processes. same device. are files. accessed differently.
+
+\subsection{"mknod" command}
+
+mknod for inotes. can use to make pipes. fifo is in memory not disk?
+
+\subsection{/dev/tty, /dev/console and /dev/vcs}
+
+ANSI can set foreground and background color
+American National Standards Institute
+
+switch tty with ctrl alt f1-x
+/dev/tty1 is tty 1?
+unix. concept for tty, that there are multiple, that can switch with ctrl/alt shift whatever fsomething
+TeleTYpewriter (tty)
+/dev/console is active one. can switch alt+Fx where x is 1+ so alt-F1 for /dev/tty1
+terminal devices:
++ /dev/tty<x>
+
+line discipline in terminals. part of kernel?
+
+ANSI escape sequences. used to place things as specific part of terminal
+
+environment variables are generally in caps.in shell environment variables can be accesed with "echo \$THING"
+TERM: details of terminal inc colour capabilities.
+SHELL: current shell
+USER: user name
+PATH: where to look for binaries to run. in part based on /etc/environment
+PWD: get current directory
+EDITOR: not present on ubuntu at least
+MAIL: not present on ubuntu at least
+
+/dev/vcs1 is virtual console 1?
+
+\subsection{user stuff (to later?)}
+
+umask. anything process creates has certain permissions? mask is last step of permissioning to remove permissions. either 0 or 1?
+
+exec in directory. means allowed to use directory in exec
+write in direc. can add/delete/rename
+read in direc. can see what files, ls results.
+
+each process has an associated user id.
+system calls fail if user id does not have priviledge. eg write access to file.
+
+chmod etc system calls.
+only owner or root can change permissions.
+
+each process has real user id. effective user id. saved user id.
+ids can be changed with exec calls. setuid. seteuid.
+
+calls setgid, setegid. effecitve group id. saved group also associated with each process. one of each of these associated with each process.
+
+\subsection{working with mounted block devices}
+
+how to make file larger. keep writing to it (how does prevent overlapping with other file?)
+
+system call "truncate". shrink file. or more generally resized to a given length. can even be longer.
+lseek system call changes marker position. can lseek past end to expand file and fill with 0.
+marker held by descrition not descriptor.
+open also returns new file descriptor.
+
+questions to address. how to ensure writes finished before reading? how to stop other processes making changes?
+
+is marker different if two different processes read from different points?
+
+when reading or writing from/to file. have a marker of current position in file. can move with calls. description and descritor. description unique per file. descriptor has info on descriptor.
+opening a file returns a descriptor.
+
+write buffer in system calls after write. means you don't get notivied when actual write is completed. up to os.
+also a read buffer. collects more than requested, so following requests can be done from the buffer alone
+buffer is per description not descriptor (ie unique)
+if two processes write to buffer can mess up and go together/replace
+process can have exclusive ownership of file (how?)
+
+system calls for dealng with files
++ open
++ close
++ read
++ write
+
+ln makes a file. file just contained address. system knows this and follows address
+
+unlink vs rm
+
+link vs open. is link only on existing files?
+
+mkdir and rmdir system calls
+
+getdents system call. get directly entries. GET Directory ENTries.
+
+ln creates symlink system call
+
+link system call. adds file to directly. file can be in multiple directories with different names
+unlink.
+
+\subsection{minor graphics stuff?}
+
+latin 1 (ISO/IEC 8859-1)
+unicode (utf1, utf 8)
++ maybe these in graphics instead?
+
+ncurses in regular unix or graphics? is it used for things like vi, less, man?
+
+terminfo/termcap type thing is used for vi etc?
++ termcap came first. terminfo can emulate termcap
+
+termcap: terminal capability. allows programs to be written for any sort of terminal, portability of code.
+termcap provides database with info on terminal. inc width in columns, how to scroll.
+
+
+
+curses: ncurses is implementation. can use terminfo or termcap
+
+monochrome vs colour terminal. what's happening with colour?
+
+
+\subsection{NEW VERSION}
+
+\subsection{FILE SYSTEMS}
+
+exfat; fat12; fat32; apfs; macos/extended
+
+when having pages on file systems, split out also pages for:
++ copy on write
++ checksumming
+
+exfat? is it journaling?
+same for apfs; macos/extended
+
+GPT has UUIDs
+
+vFAT (required by EFI boot partition)
+
+uefi partition has "shim". list of certificates
+
+\subsection{BOOTLOADERS AND MOUNTING BLOCK DEVICES}
+
+/boot/vmlinuz-%
+port mapped io
+memory mapped io
+direct memory access
+
+\subsection{LINUX KERNEL}
+
+environment variables passed down each process to any forks
+
+protection ring, ring 0 etc
+
+privilege escalation
+
+after loaded kernel, mounts the root partition as read only
+then runs init
+
+when linux starts one partition must get mounted as root partition. becomes /
+
+init unmounts and then mounts things in /etc/fstab. will include mounting as write if specified there.
+
+/proc/meminfo
+
+daemon?
+
+mount points vs directory
+mount and unmount system call
+
+what does exec system call do? how different to fork?
+exec system call. how different from fork?
+fork system call to make new processes
+how is ram allocated? how know how much ram needed if heap starts from one end and stack from another?
+
+making new processes. fork system call
+copy memory or copy table of memory locations
+copy on write if changing
+process knows whether it is a fork or not by return from system call.
+init is first process. everything else forked from that. PID of 1.
+end process. exit system call (different to c function?)
+system call 0 means went ok. other results are specific errors.
+what errors mean is specific to program.
+
+when a system call is made, os blocks program. does thingrelateing to system call. returns. unblocks program.
+
+wait system call. wait for exti call.
+handler process when receiving signal
+what do system calls look like in assembly?
+kill system call sends signal to other process. default response to signal is to stop therefore kill, but not the only outcome.
+
+control registers. includes interrupts.
+
+Supervisor Mode Execution Protection (SMEP)
+Supervisor Mode Access Prevention (SMAP)
+
+privilege escalation in linux
+
+
+init has pid 1. user is root id 0
+spawns login. pid 2 . user is root id 0
+shell is pid 3. user is user
+
+can only send signals to processes owned by same user.
+
+when running an executable:
++ runs a loader
++ allocates memory (how much??)
++ copies data and code
+
+monitor and receive signals for eg trying to access out of memory bounds. signals between process and os. system calls for terminals. in and out
+
+can c catch signal errors, eg load file but doesn't exist?
+
+
+
+each process has a current directory and a root directory as passed from system.
+
+each process has a PID and parent PID (PPID)
+
+drivers
++ eg that let open ntfs; that let interact with specific type of hardware
+
+buffer for each block if reading or writing
+
+block device file has info on block device
+devices for storage start with sd. eg /dev/sda
+block device files for eg hard drive
+
+kernel includes character device drivers
+
+kexec command in linux. loads another kernel without returning to bios/uefi
+
+/etc/kernel/
+
+\subsection{USER SPACE}
+
+\subsection{LINUX MULTI STUFF}
+
+\subsection{PSEDUO CHARACTER}
+
+\subsection{SHELLS}
+
+bash. can be run in sh compliant mode.
+
+\subsection{CORE UTILS: BASICS}
+
+NEW stuff about file names. new page for this? doesn't directly interact with drive, just grammar
++ basename (returns file name, without directory to it. eg basename /home/adam/thing.txt is thing.txt. basename ./thing.txt is thing.txt)
++ dirname (returns folder path, but doesn't expand. eg dirname /home/adam/thing.txt is /home/adam, dirname ./thing.txt is .)
++ pathchk (check whether path name is valid, not whether exists though)
++ realpath (expands . and ~. realpath ./thing.txt is /home/adam/thing.txt, realpath ~/thing.txt is same)
+
+\subsection{SHADOW UTILS}
+
+\subsection{CORE UTILS: GROUPS AND USERS}
+
+\subsection{FINDUTILS}
+
+\subsection{TEXT EDITORS}
+
+\subsection{PROCPS}
+
+\subsection{OTHER GNU}
+
++ GNU diffutils: diff and patch
+diff -u oldFile newFile > mods.diff  (-u tells diff to output unified diff format)
+patch < mods.diff
+\subsection{SCRIPTING}
+
+\subsection{SORT BASH OR DASH?}
+
+
+dash:
++ logic:
+  * \&
+  * \&\&
+  * (
+  * )
+  * ;
+  * ;;
+  * |
+  * ||
+  * <newline>
+  * <
+  * >
+  * <<
+  * >>
+  * >|
+  * <\&
+  * >\&
+  * <<-
+  * <>
+  * while; elif
+
++ source
+source command in unix. difference between "source ./thing.sh" vs just "./thing.sh"
++ shell command rather than binary? no man source result. bash (not dash)
++ trailing \& in shell
++ eval
++ .
++ :
++ alias
++ bg
++ break
++ cd
++ command
++ continue
++ echo (?)
++ eval
++ exec
++ exit
++ export
++ false
++ fg
++ getopts
++ hash
++ jobs
++ pwd
++ read
++ readonly
++ set
++ shift
++ test
++ times
++ trap
++ true (?)
++ type
++ ulimit
++ umask
++ unalias
++ unset
++ wait
+
+
+clear as shell command (in dash?)
++ actually seems to be regular command. can do "which clear"
+
+bash (or dash?) stuff:
++ use of [ and [[ (closed by ] and ]])
++ shells have keywords, eg case, do fi if, for
+
+\subsection{ADDITIONAL SHELLS}
+
+\subsection{ARCHIVING AND COMPRESSION}
+
+xz (xz and lzma compression)
+bzip2
+zstd for compression
+zlib for gzip and pkzip
+
+\subsection{SYSTEMD}
+
+
+shutdown, reboot. are these util, core, something else?
++ these are implmented in systemd. equivalents under previous init systems
+
+
+systemd-oomd
++ bootctl status to see status of secure boot and other part of boot process. systemd-boot not needed to use this.
+
+
+

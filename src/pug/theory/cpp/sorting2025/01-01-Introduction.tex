@@ -1,0 +1,121 @@
+
+\subsection{Introduction}
+
+transpilers,
++ llvm can do this, so can discuss c++ -> C. c++ -> IR -> C
+
+cpp uses libstdc++, equiv of glibc
+
+C++:
+frame as bare metal and hosted c++, and stdlibc++ or whatever it is called.
+
+is there a concept of freestanding C++?
++ manually write eg new, delete, what other functions?
++ yes hosted c++ and freestanding c++ exist as concepts, but linux kernel just written in c, not c++, so leave?
+
+late binding a thing which c++ does which c doesn't? "virtual". can have some objects which are not known at compile time?
+
+c++:
++ passing arrays to functions. what is passed? reference ot first? length separately?
++ repeating an array n times
+
+later on c++, different c++ standard library implementations. are various.
+
+big thing on closures in c++? nested functions. are located on the heap not the stack? check?
+
+new array and linked list type things
++ concatenation
++ slice/filter
++ insert
++ pop
++ traverse
++ map
++ sort
++ reverse
+
+new keywods:
++ virtual
++ noexcept
++ override
++ const after function declaration
+
+getters and setters
+
+page on memory allocation on heap in c++, after c standard library
+
+iterating over a string
+
+operator overloading
+
+changes to c standard library: printing
+"this" keyword in structs, classes (in methods)
+
+algorithm header file (standard c++ library?) has for\_each function. functional related?
+
+h3 on functional programming
+currying
+std::transform. can do simple functional?
+functors
+lambda
+std::bind (partial function application)
+
+partial functions in h3 section on functional
+
+something on polymorphism (can be done in the context of structs)
+
+parallel threads
+\begin{verbatim}
+
+#include<thread> // std::thread
+
+void foo();
+void bar(int x);
+
+// Carries on after starting thread
+std::thread first (foo)
+std::thread second (bar, 0)
+
+// Following waits for threads to finish
+first.join();
+second.join();
+\end{verbatim}
+
+\subsection{OBJECTS and CLASSES}
+\subsection{reframing c structs as objects}
+structs still exist, but objects can be used instead
+\subsection{new things in objects, inc inheritance and OOP (h3?)}
+dynamic name binding on derived objects?
+
+encapsulation?
+
+how methods talk to each other. encapsulation
+
+class templates
+operator overloading. eg can make "+" do something for custom class
+
+
+
+public methods and private methods
+\subsection{inheritance}
+creating inherited class c++, inherit from multiple?
+
+messages are sent betweeen objects. via inheritance?
+\subsection{object oriented programming}
+motivation behind OOP. global state leads to problems. answers are objects oriented or functional.
+\subsection{PACKAGES}
+\subsection{standard library: stuff from c and changes}
+h3 on standard library. page on use of c standard library. page speciifcally on malloc to new. on << and >>?
+\subsection{standard library? new pointer things}
+Shared pointer
+Unique pointer
+weak pointers
+smart points
+
+smart pointers do reference counting. do any others?
+
+\subsection{other new stuff in standard library}
+
+vector as data type
++ part of c++ standard library, not in regular c
+
+

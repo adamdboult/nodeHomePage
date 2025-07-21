@@ -1,0 +1,170 @@
+
+\subsection{Introduction}
+
+have thing on various graphics there. cga, ega, vga, svga. are hardware oututs
+
+page on flash. flasharch program to run flash files?
+
+xdg-open (opens in desktop environment. eg run "xdg-open file.jpg" to open in default image viewer)
+fonts in 2d
+TrueType fonts (ttf)
+OpenType font (otf)
+
+linux: imagemagick
+
+2d: alpha compositing (transparency stuff)
+
+
+on graphics, page for each of prominant ppu
++ nes
++ gb/gbc
++ gba
++ snes
++ genesis
++ master system/gg
++ arcade: CPS Super Chip
+
+GNU texinfo
+
+
+GNU roff (groff)
+mobi
+epub
+
+page on replacing login shell (they don't use one? do different approach?)
+
+graphics/audio firmware?
+
+gnu plotutils (graphics)
+
+Mathematical Markup Language (mathml)
+
+gimp
+
+\subsection{2D}
+scalable vector graphics (SVG)
+
+Computer engineering frame buffer
+
+decompilation of stuff with images:
++ can open as images to find uncompresed images
+
+big page on graphics
++ framebuffer
+
++ bitmap on 2d
++ vector based on 2d
++ image compression h3
+  * jpeg
+
++ colours
+  * rgb model
+    1. \#ffffff (6)
+    2. \#fff(3)
+  * indexed color
+    * eg option of 7 colors and 8th for transparency. 7 colours defined in palette
+    * allows sprites to take up less space, be easier to process, to integrate transparency
+
+tile maps for eg nes backgrounds
+separate to sprites
+can enable scrolling in 1 direction at least?
+can say mirror/flip
+bigger than screen. can update tile map by changing when offscreen
+
+animated tilemaps?
+relation between rom and ram for tilset? uncompress when bring out tiles?
+
+2d graphics: masks. bitmaps.
+\subsection{2d hardware on consoles}
+on eg snes/genesis, multiple tilemaps? transparency?
+
+\subsection{dos (CGA, EGA, VGA)}
+CGA (color graphics adapter)
+EGA (enhanced grahics adapter)
+VGA (video graphics array)
+\subsection{nes}
+nes graphics:
++ tiles of 8x8.
++ two layers. background. sprites
++ 4 colour limit on tiles
+
+\subsection{snes}
+snes:
++ tiles of 8x8 or 16x16
++ up to 4 background layer
++ smoother scrolling of background layers
++ modes 0-6 for different setups of scrolling layer, bits per pixel in layers
++ between 2 and 8 bits per pixel for colours (between 4 colours and 256)
+
+\subsection{markup and latex}
+latex: new line for each sentence
+allows picked up by diff etc easier
+
+h3 markup language
++ html
+  * pug
++ markdown
++ epub
++ org mode
++ pdf
++ css
++ latex
++ PostScript
++ djvu
+
+Utf8 ASCII etc. More complex on post c?
+\subsection{2d physics}
+
+2d physics.
++ colission detection. hurtbox/hitboxs
+
+\subsection{desktop and window environments}
++ wayland?
+
+in graphical deskptop environment, something on polkit? allows authentication outside the non graphical terminal? or is this just an arch thing.
+
+pages on desktop environments:
++ KDE
++ GNOME
++ Xfce
++ LXDE
++ Cinnamon
+
+xorg
++ /usr/share/X11/xorg.conf.d/
++ /etc/X11/xorg.conf.d/
++ /etc/X11/xorg.conf OR /etc/xorg.conf
++ can generate conf template using Xorg :0 -configure
+
+tiling window managers
+gtk
+qt
+\subsection{video and ffmpeg}
++ video codec
+  * encorder page, then page on container?
+  * h.263
+  * mpeg 2
+    1. h.262/mpeg-2 part 2
+  * mpeg 4
+    * mpeg-4 part 2
+    * advanced video coding
+    * h.264 or mpeg-4 part 10
+  * mpeg-h
+    * high efficiency video coding (hevc)
+    * h.265
+  * vp8 (open)
+  * vp9 (open)
+  * av1 (open)
+  * concept of profiles
+  * concept of levels
+  * average bitrate
+  * two-pass
+  * 1 pass
+  * constant quality
+  * constrained quality
+  * constant quality
+  * lossess
+
+video compression. containers. formats. bitrates. audio formats etc
+
+

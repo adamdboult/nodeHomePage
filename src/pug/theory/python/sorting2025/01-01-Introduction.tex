@@ -1,0 +1,144 @@
+
+\subsection{Introduction}
+
+
+within python venv, can use "deactivate" to leave
+to delete a venv, just delete the folder.
+
+python:
++ pyenv and pipenv should be separate 01-00 and 02-00. for each have subsection on
++ installing the package
++ creating envs
++ exiting
++ listing
++ deleting
++ installing packages inside
+
+
+python: itertools
+
+for \_ in range
++ means that we don't care about how many times it has run so far, don't get i to play with
++ can still do print(\_) though
+
+r strings . raw strings.
+r"hello"
+don't need to eg escape backslashes
+
+super() function around classes
+
+\subsection{core stuff, no package}
+\subsubsection{basic variables}
+str and repr
+
+"is" keyword
+\subsubsection{FUNCTIONS}
+
+can do currying stuff with base python?
+writing curried functions with nested
+currying existing functions
+currying with def function; currying with lambda functions
+
+
+functions stuff:
+if function parameter has mutable default, might not work on repeated calls?
+eg
+\begin{verbatim}
+def my_function(my_parameter = []):
+    my_parameter.append(1)
+    print(my_parameter)
+\end{verbatim}
+each time will print larger list
+
+
+can create partial functions using lambdas
+sum=lambda x, y: x+y
+incr = lambda y: sum(1,y)
+
+
+scope:
+can access variables in outer scope, but not change them?
+declare global x inside function to change global
+a=1
+
+similarly, nonlocal declaration can be used to access variables from outer function
+
+build ins:
+map
+filter
+reduce
+
+
+
+
+meaning of * prefix
+eg function call * and ** prefix for args
+means split up v in *v and pass each as parameter
+print(v) prints the list
+print(*v) same as print(v[0], v[1], v[2],...)
+double ** prefix similar but for dict
+
+\subsubsection{CLASSES}
+
+factories (design pattern for classes)
+
+composites and components
+design pattern, can be used instead of inheritance in some cases
+create an instance of another class from within a class. then can use methods etc associated with that class
+
+classes: can get type of object with
+\begin{verbatim}
+type(obj)
+obj.__class__
+\end{verbatim}
+type of base classes is "type"
+type of type is type
+
+base classes are int, float, dict, list, tuple, type
+
+metaclass:
++ classes normally are based on type
++ we can instead use another class, a metaclass. can then overwrite eg \_\_new\_\_.
++ different to regular inheritnace, doesn't look to metaclass for methods etc
+
+\begin{verbatim}
+class MyClass(metaclass=my_metaclass):
+\end{verbatim}
+
+\subsection{standard library}
+
+functools
+\begin{verbatim}
+def my_function(a,b,c):
+    return a+b+c
+functools.partial(my_function,1)
+\end{verbatim}
+
+
+datetime. also have time, calendar. time has time.perf\_counter. better for measuring performance than time.time
+
+logging module
+
+typing (can do additional static analysis)
+Protocol is part of typing module
+
+import x looks for x in sys.path
+
+abstract base class (ABC) module
+abstract methods (part of abc)
+
+python -m ast to get abstract syntax tree
+can also do "import ast"
+\subsection{package managers (to later? can do lots without eg pip, eg install using pacman)}
+pipx
++ allows for applications to be distributed
++ uses same python binary as installed?
+
+"poetry"? package manager??
+\subsection{package creation}
+
+package creation stuff?
++ distutils and setup.py and setup.cfg
++ pyproject.toml
+
+

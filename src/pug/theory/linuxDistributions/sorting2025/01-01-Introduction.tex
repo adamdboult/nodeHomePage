@@ -1,0 +1,94 @@
+
+\subsection{Introduction}
+
+arch notes:
++ h3 on mkinitcpio
+
+pacman -Q. note that doing Qq means the version numbers aren't returned, which is probably what you want
+
+
+title include: Os level virtualisation, system virtual machines
+native:
++ kvm (Kernel-based Virtual Machine)
+  * vfio-pci
+  * host pass through
+  * runs on top of linux kernel
+  * requires intel vt or amd v
+to something on running software inc OS for same hardware
++ vmware
++ virtualbox
+"vagrant" with virtualbox?
+hosted:
++ qemu
+  * emulates hardware
+  * jit/interpreter? is dynamic recompilation something else?
+proxmox: kvm + qemu
+to uninstall orphans:
+pacman -Qtdq | sudo pacman -Rns -
+
+
+guix
++ guix install emacs
++ guix remove emacs
+don't need sudo, instals locally.
++ "guix pull" to update package information
++ "guix upgrade" to upgrade installed packages
++ can run eg "guix shell emacs --" to open guix shell which includes emacs. can then run "emacs"
++ alt can do "guix shell emacs -- emacs"
++ maybe just "guix shell emacs"
++ can view DAG with "guix graph --type=package emacs > emacs-graph.dot"
++ running eg "guix shell emacs" gives packages required to run emacs, ie runtime dependencies. running "guix shell --development" emacs gives build time dependencies.
++
+
+
+nix-shell from non-nix os
+eg can run nix-shell -p lolcow cowsay to get shell with both
+can run "nix-shell -p lolcow --run lolcow" to just run it
+nix-collect-garbage
+nix-env exists, but can clash with existing packages
+pacakges stored in /nix/store/
+run nix-channel update to update packages
+can maintain shell.nix file to save exact config. running nix-shell looks for this file in same folder.
+
+docker save (creates tar?)
+
+docker: how to use GPU/CUDA
+
+docker rm --rum (removes after finished running)
+docker rmi is alias for docker image rm
+docker rm ias alias for remove a container
+docker: section on tags
+docker compose to separate page
+podman page tookrebuild and restart docker-compose after pulling:
++ docker-compose up -d --build
+  + actually don't need to do down first?
+  + can do this at the start too. replace readme with this? or just remove this stuff from readme given it's in my home page
+
+
+
+pacman.
++ --asdeps
++ can use that flag when installing a package, and it will be treated as a dependency on other thing
++ if install something which has that as optional, will be uninstalled.
+
+
+XEN as alternative to KVM. XEN runs bare metal, no need for host OS?
+docker update or something?
+
+managing qemu installs with virt-manager, libvert
+
+arch linux: concept of groups as well as packages. mega packages (packages which just depend on others, means now backages which get added are added too).
+makepkg -r flag to uninstall anything just installed for the creation procesd
+arch: makepkg makes tarball
+using pacman -U after makepkg installs from tarbvall?
+using -i flag with makepkg just automates this
+
+both porgage and emerge on gentoo page name
+
+thing on unattended upgrades in page on each distro
+
+alpine linux. very lightweight. has own package manager. alpine pacakge keeper. uses musl libc and busybox. lightweight
+
+buildroot. distro for embedded systems
+
+

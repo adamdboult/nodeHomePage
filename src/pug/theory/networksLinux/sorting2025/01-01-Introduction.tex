@@ -1,0 +1,205 @@
+
+\subsection{Introduction}
+
+Clusters of Linux machines on networks. Beowolf cluster
+
+traeffik
+	alt to nginx?
+
+
+git stuff:
++ git config --get pull.rebase
++ git config --global --get pull.rebase
+to find out if default is rebase
+networks: network address translation (NAT)
+
+linux: nmcli network manager cli, also nmtui (text user interface)
+
+previous known as letsencrypt/lets encrypt
+
+
+Install certbot
+
+\begin{verbatim}
+https://certbot.eff.org/instructions?ws=apache&os=ubuntufocal
+\end{verbatim}
+
+\begin{verbatim}
+sudo certbot --apache -d bou.lt -d www.bou.lt -d cloud.bou.lt
+sudo certbot --apache -d economoose.com -d www.economoose.com
+sudo certbot --apache -d artificialeconomist.com -d www.artificialeconomist.com
+sudo certbot --apache -d yetipredict.com -d www.yetipredict.com
+\end{verbatim}
+
+Might not be necessary by default, auto does?
+\begin{verbatim}
+sudo certbot renew
+\end{verbatim}
+
+nfs on networks if it isn't there already? sshfs (might be better if only sometimes available). page on samba too.
+networks: nfs:
++ showmount -e server\_name (part of nfs-utils)
++ showmount -e tower
++ mount -t nfs server\_name:/path/to/dir /mnt/nfs
++ mount -t nfs tower:/media/adam/Five-0/Media /mnt/nfs
++ umount -f -l /mnt/nfs
+
+
+git log @{u}..
+checks for unpushed commits. in my script use that and only push if not nothing.
+
+tor
+maybe thing in networks on c server?
++ Algorithmic complexity attack (make software use worst case complexity rather than average case?)
+
+view git commits since last push:
++ git log origin/master..HEAD
+view diffs since last push:
++ git diff origin/master..HEAD
+merge unpushed commits:
++ git rebase -i origin/master
+
+
+/etc/hosts.allow and /etc/hosts.deny are legacy and from tcp\_wrappers.
+
+systemd-resolved. alt to dnsmasq?? or is it??? something about stub?
+Name Service Caching Daemon (nscd)
+
+
+blocking known DoH providers by domain in dnsmasq, and by ipaddress in iptables
+
+
+/etc/resolv.conf
+nameserver 127.0.0.1
+
+sudo systemctl restart dnsmasq
+
+mac address and mac address spoofing. reverse - getting information from mac addresses. cloned mac addresses
+development stuff:
++ continuous integration (CI)
++ continuous delivery/deployment (CD)
+
+vpn
+tor
+
+tailscale
+
+CDNs (content delivery network), or should this be elsewhere?
+APIs
+DDoS
+
+sequoia: pgp library.
+
+network: sharing drive using samba. nfs as alternative
+
+on networks, page on syncing (eg rsync, syncthing) and another page on backups (eg borg? backburner?)
+
+timeshift on network (section on offsite backups more generally?)
+
+role of things like cloudflare in networks? or elsewhere?
+
+/etc/ssh/sshd\_config
+can use this to prevent ssh login as root
+
+rfkill. used for disabling network devices at kernel level
+
+viruses: and worms? concept of spread and replication not in trojan (which are discussed in unix)
+
++ Pretty Good Privacy (pgp). proprietary software. collection of existing algorithms, not algorithm itself so belongs in unix/networks
++ openpgp. open source implementation
++ gpg (gnu privacy guard). another open source implementation
+
+tcp over tcp tunnel a bad idea because tcp relies on loss? check?
+
+sshuttle
+
+torrent on network
+
+ipfs on network?
+
+denial of service:
++ ddos
++ regular expression denial of service (ReDoS)
+
+remote procedure call
+
+page on buildbot?
+
+openssh in name for ssh. (also sftp, scp, ssh-add, ssh-agent, ssh-copy-id, ssh-keygen, ssh-keyscan, sshd)
+
+iptables and iptables-nft. before ufw? or same page? different pacakges though.
+
+/etc/resolv.conf for dns nameserver
+can ask router for wide ip address
+upnpc -s
+\subsection{file transfer protocl (ftp) (outdated, sftp exists, but maybe nfs more relevant?)}
+\subsection{secure shell (ssh)}
+\subsection{H3: DNS}
+Name Service Switch (nss)
+
+
+
+/etc/hostname
+(dns) ttl. time to live. tells people contacting you how long they should cache for. what happens if you update during cache? can shorten ttl while making changes
+dynamic host configuration protocol (dhcp). assiigns ip addresses?
+extension mechanisms for dns (edns)
+root name servers on dns
+dns uses port 53. port 53 hijacking exists as risk. can use dns over https, or dns over tls? dnssec?
+dns records: "a record", mxrecord
+mx records can be hijacked, as can others?
+dig: domain information groper. is command to get ip from dns.
+dhcp allocate ip addresses
+rfc and codes?related to dhcp?
+Dynamic Host Configuration Protocol (DHCP)
+how to view dnscache in linux? where stored?
++ not by default on linux
++ but possible under systemd systemd-resolved
+
+dnsmasq. dhcp and dns server?
+\subsection{H3: APPLICATIONS}
+\subsection{wget and curl}
+using curl to go via proxy tunnel
+\subsection{apache and nginx}
+apache:
++ a2ensite
++ a2enmod
++ rewriting
++ redirecting
++ .htaccess
+\subsection{H3: NETWORK MONITORING APPLICATIONS}
+network stuff:
++ tcpflow
++ ntopng
++ tshark
+\subsection{ntop}
+ntop
++ ntopng is next generation of ntop
++ is a daemon. can access with localhost:3000
+\subsection{iftop}
+iftop (shows activity by domain destination (but often incorrect/not helpful, ie youtube not shown as youtube)
+\subsection{wireshark}
+
+wireshark
++ gui. similar to tcpdump
+
+\subsection{nethogs}
+nethogs
++ shows activity by process. can find out what processes using bandwidth
++ tcp only? doesn't show udp traffic
++ newer versions allow udp too. -C flag
+\subsection{H3: SETTING UP OTHER MACHINES}
+on networks, h3 on setting up other machine:
+page on ssh-copy-id (from openssh, so indicate in chapter name, and have earlier page on rest of openssh)
+note can disable remote password logins:sudo nano /etc/ssh/sshd\_config
+ansible:ansible-playbook --connection=local 127.0.0.1 playbook.yml
+same rsa key pair can be used for openssl and openpgp/gnupg. discuss in networks. page on openssl, openpgp, gnupg
+\subsection{H3: OTHER APPLICATIONS}
+security
++ sqlmap (find vuls in online applications)
++ metasploit
++ burp suite
++ OWASP ZAP
+\subsection{aircrack}
+Aircrack-ng. crack WEP keys on wifi
+
+

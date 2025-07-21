@@ -1,0 +1,76 @@
+
+\subsection{Introduction}
+
+\subsection{h3 lisp. first h3}
+stack memory in lisp?
+
+homoiconicity: treat code as data (lisp?)
+\subsubsection{s expressions}
+(1) returns 1
+(+ 1 2 3) returns 6
+
+can nest them
+
+(+ 1 (- 2 1)) returns 1
+\subsubsection{list operations in lisp}
+lists in lisp
++ concatenation
++ slice/filter
++ insert
++ pop
++ traverse
++ map
++ sort
++ reverse
+\subsubsection{branching}
+(if predicate if\_true else)
+\subsection{h3 lisp. second h3. functions}
+\subsubsection{functional with lisp}
+page on side effects, in c? or lisp??
+pure function
+
+first-class functions
+
+closure
+
+After lisp, section on scheme? Different and very influential.
+More minor pages on clojure, common lisp, racket
+Clojure is on JVM, so maybe move there
+
+functions:
++ stack frames/call stack
++ limits of imperative programming (ackermann revisited? discussed in computation)
+\subsubsection{recursion}
+regular recursion
+tail recursion
+
+recursion as technique. eg factoria n = n * factorial n-1
+\subsection{h3 lisp. third h3}
+\subsubsection{constructs}
+cons (CONStructs)
+2 parts. car (Contents of the Address part of the Register)
+cdr (Contents of the Decrement part of the Register)
+
+(cons 1 2) creates a structure
+(1 . 2)
+
+can create nested structures
+(cons 1 (cons 2 3))
+\subsubsection{defining things}
+
+define string as variable
+(define vhello "Hello world")
+
+define function
+(define fhello (lambda () "Hello world"))
+
+can take parameter
+
+(define add2 (lambda (a b) (+ a b)))
+
+in scheme can just leave lambda and use alt form
+(define (add2 a b) (+ a b))
+\subsubsection{Garbage collection in lisp}
+\subsubsection{local variable}
+"let" stuff
+

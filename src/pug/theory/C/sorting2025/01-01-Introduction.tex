@@ -1,0 +1,74 @@
+
+\subsection{Introduction}
+
+
+union in c
+
+similar syntact to a struct, but only memory of largest element allocated. that means variables overlap. can use to do automatic type conversion, pseduo polymorphism. eg can have large int and 
+struct of chars in a union. each char represents a part of the large int. can use to model eg a register.
+
+freestanding c doesn't have to start at main? confirm
+H3 in c: type systems and type safety and static type checking
+
+c: how to do long or float when ALU doesn't support (eg 32 bit on 16 bit CPU, float on int only ALU)
+
+c:
++ on c, thing on what c does if fpu, int mul, int division not available. which algorithms does it use. same for powers? also thing for int division, remainder.
++ power not in c, need math.h
++ how it checks for greater than, equals?
+
+thing on implementing the assembly algorithms discussed in various pre C parts
++ Array algorithms
++ Integer algorithms
+
+does C have any built in array operations, eg insert, pop?
+
+can do complex numbers with \_Complex? complex.h in hosted expands on this, but \_Complex available in base C?
+
+static: two uses. inside function means keeps value between calls. static global variable is only seen in file made in
+
+does freestanding need main? does it use main? \_\_name\_\_== "Main" or whatever?
+if not then that stuff should be moved to GNU/Linux
+
+if (var) evaluates to true if var is a positive integer
+
+\subsection{h3 c unstructured (int)}
+
+?? below. what are the list of storage classes? is typedef an storage class? seems like something to make it safer to write functions. similar for extern
+
+c storage classes. all variables/functions are one of these. can use as keyword when defining:
++ extern (just does declaring rather than defining too. means memory can be allocated in eg other file
++ typedef
+
+stages:
++ lexer
++ parser (to intermediate form)
++ generator (to assembly)
+(does one (or more) of these stages use abstract syntax trees? if so discuss? after section on AST for formulae.
+
+dynamic vs static libraries (??)
+
+programming language semantics
++ operational semantics
++ programming language theory
+
+c code itself stored in memory, before global
+\subsection{h3 c structured/procedural}
+
+c:
++ passing arrays to functions. what is passed? reference ot first? length separately?
++ repeating an array n times
+
+auto (local variable, in block scope inc functions). don't need to do, done automatically in local scope
+
+static (global variables. done automatically in global scope, but can do when defining functions)
+
+when declaring a function, eg "int foo(int);", implicity adds extern before. means can declare many times in eg different files, define once
+
+iterating over a string in c
+\subsection{h3 natural numbers algorithms}
+
+GCD/LCN algorithms here. Euclidian algorithm?
+
+page on factorial
+

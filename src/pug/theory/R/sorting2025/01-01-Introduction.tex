@@ -1,0 +1,159 @@
+
+\subsection{Introduction}
+
+R packages are generally installed from source
+
+r has named vectors. Like dicts???
+
+r: renv for package management. rig for pyenv equivalent.
+
+shift equivalent on R. ie take lagged variables
+
+r:
++ repeating an array n times
+
+
+S3 vs S4 vs RC vs R6.
+
+sloop package (Relates to OOP)
+otype(obj) return object type. more granular than is.object()
+objects are base objects or oo objects
+class()
+typeof()
+
+linked lists/arrays in R
++ concatenation
++ slice/filter
++ insert
++ pop
++ traverse
++ map
++ sort
++ reverse
+
+methods are outside of variables. eg f(x) rather than x.f()
+is this generics?
+eg can do names(list) names(df)
+
+macro nature of R. eg can do %>%. bit like lisp
+
+iterating over a string
+
+how dynamic typing works. is it duck typed? implicit conversion?
+
+parallel h3
+functional h3
+
+library: obj F\_addr, lobstr
+
+r startup:
++ look for .Renviron
++ look for .Rprofile
++ look in the following order. first match used
+  * current dir (getwd())
+  * HOME (Sys.getenv("HOME"))
+  * R\_HOME (can check with R.home())
+
+base package:
++ eval
++ names
++ diff
++ table
++ do.call
++ try (to see if error, catch it)
++ apply
++ tapply
++ length
++ tracemem
++ cut
++ stopifnot (R version of assert)
+
+base but for dataframes
++ colMeans
++ by
++ rowSums, colSums, .rowSums, .colSums
+
+
+stats package (Default)
++ aggregate
++ xtabs
+
+r stop script from anywhere without throwing? quit?
+
+R:
++ copying in R
++ timer for code
+
+data structures, and accessing parts using [i,j], [i], [[]], \$
++ data creation using csv, through explicity series and lists
+
+\subsection{BASE}
+\subsection{basic terminal input and output}
++ logging
++ readline
+
+\subsection{classes in R}
+class() function exists
+\subsection{DATAFRAMES}
+\subsection{REGRESSION ETC?}
+\subsection{standard stats}
+filter is stats r package
+
+base r(in stats package?): ave
+
+base r(stats pacakge): setNames
+
+rnorm(stats) function
+runif(stats) function
+\subsection{formula stuff}
++ formula writing: y ~ x + m. or a*b interactions. a:b interactions
++ training models OLS
+\subsection{CONT}
+\subsection{working with os}
+r os stuff:
++ getwd
++ setwd
+
++ IO in base. read.table etc read.csv etc are variations on read.csv
+\subsection{integrating with bash}
++ grab arguments from bash?
+\subsection{multi threading}
+\subsection{interactive interpreter}
+R "?" Command for manual
+clear for R
+\subsection{PACKAGES}
+\subsection{how to use libraries}
+renv replaced packrat
+
++ namespaces in R
+require vs library
+
+library
+require
+\subsection{creating libraries using R}
+\subsection{creating libraries using [c?]}
+\subsection{r tidyverse}
+map
+
+rlang:
++ package. part of tidyverse
++ !!, !!!, as\_name, sym
+
+magrittr (pipe %>%)
+
+plyr vs dplyr
+bang bang "!!" in dplyr
++ mutate/select/filter/summarise/arrange
++ group\_by\_ungroup()
+\subsection{rstudio}
+
+rmd
+knit
+kable
++ rmd in R
+"vignettes"
+
++ View()
++ view() (lowercase, in tidyverse maybe?)
+
+

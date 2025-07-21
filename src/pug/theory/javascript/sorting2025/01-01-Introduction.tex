@@ -1,0 +1,183 @@
+
+\subsection{Introduction}
+
+APIs in network. REST
+
+mathjax. mathml(mathml upstream elsewhere?)
+
+Deconstructing object. {a, b, c} = myObj;
+arrow functions can't use "this"?
+.push in array to add to it.
+
+js:
+"+" before variable to make it a number
++"5.3" makes 5.3
++ +"0xAA" makes 170
++ uses the valueOf() method in an object, can define for custom stuff too.
+
+webapis (where running async tasks are stored when in browser runtime
++ different name for node?
+
+can use "this" in function, not just object. gets window? what about node?
+
+"export" keyword. used for multiple files
+"import" rgddr "from"
+
+static keyword for methods
+
+rename h3 with eg do to "web api"
+
+garbage collection
+
+try catch
+
+timer for code
+To see out of date.
+
+\begin{verbatim}
+npm outdated
+\end{verbatim}
+
+Update minor versions.
+
+\begin{verbatim}
+npm update
+\end{verbatim}
+
+Update major versions.
+
+\begin{verbatim}
+npm install <name>@latest
+\end{verbatim}
+
+Audit.
+
+\begin{verbatim}
+npm audit
+\end{verbatim}
+
+See warnings for existing packages by installing them, either manually for each one, or by:
+
+\begin{verbatim}
+rm -rf node_modules/
+npm install
+\end{verbatim}
+
+
+\subsection{BASICS}
+\subsection{numerical variables}
+how dynamic typing works. is it duck typed? implicit conversion?
+
+if use "var", can be hoisted up out of bracket scope
+
+semi colons are optional
+use strict
++ no octal numbers
+\subsection{control flow}
+\subsection{functions}
++ passing arrays to functions. what is passed? reference ot first? length separately?
+Use of (...args) when defining a function.
+"arguments" is a keyword available in functions.
+Immediately Invoked Function Expression (IIFE). Anon function expression which is immediately called.
+Map; weakmap
+call and apply
+stack in js
+numbers passed by value
+(how are strings passed?)
+
+can you use "const" in parameters?
+
+dynamic so no need for generics
+
+use strict
++ no duplicate parameter names in functions
+
+currying and partial application in JS
+
+js supports closures. data moved to heap (?)
+\subsection{strings}
+\subsection{arrays}
+linked lists in javascript:
++ concatenation
++ slice/filter
++ insert
++ pop
++ traverse
++ map
++ sort
++ reverse
+js:
++ repeating an array n times
+arrays in javascript:
++ concatenation
++ slice/filter
++ insert
++ pop
++ traverse
++ map
++ sort
++ reverse
+\subsection{objects and prototypes}
+
+use strict:
++ no defining properties more than once in objects
+  * removes "delete" keyword
+  * no escape characters
+
+objects are passed to functions by reference
+
+"class" keyword is syntactic sugar
+
+"new" keyword for object constructor
+
+"bind" keyword in js. bind function to object
+\subsection{console object}
+js console:
+console.warn()
+console.error()
+console.time()
+console.timeEnd()
+console.table()
+JSON object, inc JSON.stringify
+\subsection{PARALLEL AND ASYNC}
+\subsection{concurrency and event loop}
+settimeout
+
+callback queue
+
+promise on async
+
+task queue
+
+event loop
+
+async keyword when defining function. await keyword
+
+two ways:
++ async
++ promises
+
+multithreading discussion here?
+\subsection{SERVER}
+nvm to manage multiple versions of node and npm. equiv to eg pyenv
+yarn as alt to npm
+page on npx
+\subsection{CLIENT including firefox and chromium as implementations}
+directly updating dom
+eg to change text, document.body.x = "hi" (is this right? check?)
+do similar for CSS? update the CSS?
++ cookie
++ user agent string
++ fingerprinting
++ cookies
++ user angent string (maybe later? contains info on layout). part of http
+window.document.querySelector()
+querySelectorAll()
+when have, can do addEventListener()
+links to js pages in html
+
+can't render unless stack clear? check
+dom: scroll event
+window.document (window object. document object a parameter of that)
+js inline in html
+

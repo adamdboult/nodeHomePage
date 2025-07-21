@@ -1,0 +1,65 @@
+
+\subsection{Introduction}
+
+Database join. Shuffling. Broadcast join. Sorted bucket join
+
+dbt in name for sql big page
+sql: on-line transaction processing (OLTP); on-line analytical processing (OLAP)
+"databases and ELT/ETL"
+
+gnu recutils. text based database
+
+Redis
+
+shift thing on sql. take lagged variable
+
+COMMIT statement in SQL
+
+page on SQLite
+page on postgresql
+
+data build tool ()
+sql: add primary keys; multiple primary keys
+sql: common table expression (CTE)
+sql: normalisation and normal forms. first normal form. can't use row order. can't have differnt data types in column (can't do this anyway in sql). have to use a primary key. prevent multiple rows with the same primary key.
+
+2nd normal form. storing repeated data across rows rather than using separate table. eg if table has transactions, have just the customer ID rather than eg name, age as well.
+also in 2nd: deletion anomoly. insertion anomoly.
+
+sql: creating and saving new tables based on others.
+
+in sql page on time series and panel data (windows)
+
+dynamic sql
+
+databases
++ why if you don't need multiple systems?
++ first, multiple users on 1 system
++ multiple processes on same data
++ use of library for read write stuff. makes coding simplier
++ faster access than eg read/write csv
+
+database:
+w own h3 or big page?
+manage multiple attempts to read change data
+ensure data structure maintained
+acid acronym in databases
+need guaranteed write ownership, accuracy
+
+serialised data:
++ related but different: csv, yaml json etc
+\subsection{data strategies}
+Data warehouse
+Data warehouses (structured). Datalakes (not structured)
+Data cloud
+Data lake
+
+REST? REpresentational State Transfer
+
+Extract, transform, load(ETL)
++ older. get data (extract) transform (clean,) load(save somewhere visible)
+
+Extract, load, transform(ELT)
++ data originally stored uncleared, unstructured. processed within data structure from there
++ essentially means do the transformation (ie cleaning) within sql, nosql, or whatever
+

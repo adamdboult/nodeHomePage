@@ -1,0 +1,82 @@
+
+\subsection{Introduction}
+
+arbitrary precision arithmetic when doing mult/floating algos etc
+kahan summation algorithm there too
+
+Floating point algos: frame as int mult div too, then can introduce rv64IMF for both M and F
+
+division: fixed point multiplication as algorithm to do division. division by invariant multiplication?
+
+do floating points in cpus have concept of nan? separately, does numpy/python nan inherit from this?
++ yes they do.
+
+simplex algorithm
+
+numerical methods for real numbers: split to 2 h3s: second called numerical methods for real FUNCTIONS
+
+floating: fast inverse square root
+page called discrete linear algebra exists, this should be moved to discrete section
+
+page called linear algebra: delete linear programming (has own section)
++ rest split: represetning, adding, multiplying, scalar multiplying
++ page on demposing andinverting
+
+gradient descent:
++ sections here on algorithmic complexity. should not be here
++ "sort" at bottom. move all
++ things on adaptive learning rates: move to new page, Adam in title
++ stuff on stochastic and mini-batch to own page (it uses some randomness to shuffle, and can do select with replacement. so maybe better nearer to simulated annealing in probabilistic) (actually should go to stats, only makes sense in the contxt of data stuff)
+
+comp sci floating:
++ stuff on calculating trig functions, square roots etc
+
+Floating algorithms
+root finding algorithms:
++ newton-raphson aka newton's method (requires 1st derivative)
+
+thing on using root finding algorithms for max/min of functions
++ can find root of first derivative. if root finding requires 1st derivative, opt requires 2nd. eg newton requires 2nd for optimisation.
+
+plain min finding:
++ gradient descent (requires just 1st derivate, newton requires 2 for min/max finding
++ gauss newton? (also jus requires 1st derivative)
+
+gauss newton algorithm:
++ solve non-linear least squares
+
+
+
+\subsection{h3 numerical methods for real numbers}
+complexity classes: elliptic curve
+
+id fast inverse square root. provides cheap first guess for newton
+
+root finding algorithms: newton appropximation. householder methods generally
+\subsection{h3 linear algebra}
+
+auto diff is alt to manually working out differential functions/symbolic differentiation algorithms.
+why not symbolic differentiation algorithm? can have exponential growth in function size. also requires closed form which might not be possible.
+auto diff doesn't get the function, it just gets the value of the differential at that point.
+two types:
++ forward
++ reverse
+implementation:
++ operator overloading
++ source code exposire??
+
+numerical differentiation using finite differences
++ [f(x+h)-f(x)]/h
++ [f(x+h)-f(x-h)]/(2h)
++ can do this in vector space
++ computationally expensive?
++ error prone with floats
+
+numerican differentiation
+computer algebra aka symbolic computation
+automatic differentiation
+\subsection{h3 unconstrained optimisation}
+newton raphson
+gradient descent
+
+
