@@ -1,0 +1,347 @@
+
+\subsection{Introduction}
+
+have thing on various graphics there. cga, ega, vga, svga. are hardware oututs
+
+page on flash. flasharch program to run flash files?
+
+xdg-open (opens in desktop environment. eg run "xdg-open file.jpg" to open in default image viewer)
+fonts in 2d
+TrueType fonts (ttf)
+OpenType font (otf)
+
+linux: imagemagick
+
+2d: alpha compositing (transparency stuff)
+
+
+on graphics, page for each of prominant ppu
++ nes
++ gb/gbc
++ gba
++ snes
++ genesis
++ master system/gg
++ arcade: CPS Super Chip
+
+GNU texinfo
+
+
+GNU roff (groff)
+mobi
+epub
+
+page on replacing login shell (they don't use one? do different approach?)
+
+graphics/audio firmware?
+
+gnu plotutils (graphics)
+
+Mathematical Markup Language (mathml)
+
+gimp
+
+\subsection{2D}
+scalable vector graphics (SVG)
+
+Computer engineering frame buffer
+
+decompilation of stuff with images:
++ can open as images to find uncompresed images
+
+big page on graphics
++ framebuffer
+
++ bitmap on 2d
++ vector based on 2d
++ image compression h3
+  * jpeg
+
++ colours
+  * rgb model
+    1. \#ffffff (6)
+    2. \#fff(3)
+  * indexed color
+    * eg option of 7 colors and 8th for transparency. 7 colours defined in palette
+    * allows sprites to take up less space, be easier to process, to integrate transparency
+
+tile maps for eg nes backgrounds
+separate to sprites
+can enable scrolling in 1 direction at least?
+can say mirror/flip
+bigger than screen. can update tile map by changing when offscreen
+
+animated tilemaps?
+relation between rom and ram for tilset? uncompress when bring out tiles?
+
+2d graphics: masks. bitmaps.
+\subsection{2d hardware on consoles}
+on eg snes/genesis, multiple tilemaps? transparency?
+
+\subsection{dos (CGA, EGA, VGA)}
+CGA (color graphics adapter)
+EGA (enhanced grahics adapter)
+VGA (video graphics array)
+\subsection{nes}
+nes graphics:
++ tiles of 8x8.
++ two layers. background. sprites
++ 4 colour limit on tiles
+
+\subsection{snes}
+snes:
++ tiles of 8x8 or 16x16
++ up to 4 background layer
++ smoother scrolling of background layers
++ modes 0-6 for different setups of scrolling layer, bits per pixel in layers
++ between 2 and 8 bits per pixel for colours (between 4 colours and 256)
+
+\subsection{markup and latex}
+latex: new line for each sentence
+allows picked up by diff etc easier
+
+h3 markup language
++ html
+  * pug
++ markdown
++ epub
++ org mode
++ pdf
++ css
++ latex
++ PostScript
++ djvu
+
+Utf8 ASCII etc. More complex on post c?
+\subsection{2d physics}
+
+2d physics.
++ colission detection. hurtbox/hitboxs
+
+\subsection{desktop and window environments}
++ wayland?
+
+in graphical deskptop environment, something on polkit? allows authentication outside the non graphical terminal? or is this just an arch thing.
+
+pages on desktop environments:
++ KDE
++ GNOME
++ Xfce
++ LXDE
++ Cinnamon
+
+xorg
++ /usr/share/X11/xorg.conf.d/
++ /etc/X11/xorg.conf.d/
++ /etc/X11/xorg.conf OR /etc/xorg.conf
++ can generate conf template using Xorg :0 -configure
+
+tiling window managers
+gtk
+qt
+\subsection{video and ffmpeg}
++ video codec
+  * encorder page, then page on container?
+  * h.263
+  * mpeg 2
+    1. h.262/mpeg-2 part 2
+  * mpeg 4
+    * mpeg-4 part 2
+    * advanced video coding
+    * h.264 or mpeg-4 part 10
+  * mpeg-h
+    * high efficiency video coding (hevc)
+    * h.265
+  * vp8 (open)
+  * vp9 (open)
+  * av1 (open)
+  * concept of profiles
+  * concept of levels
+  * average bitrate
+  * two-pass
+  * 1 pass
+  * constant quality
+  * constrained quality
+  * constant quality
+  * lossess
+
+video compression. containers. formats. bitrates. audio formats etc
+
+
+\subsection{Audio Introduction}
+
+soundcard in title?
+sound card
+audio: digital signal processing
+
+pipewire on linux. audio server? alt to pulseaudio?
+
+\subsection{audio}
+
+music editing with  audacity?
+
+advanced linux sound architecture (ALSA)
++ alsamixer
+
+sound card:
++ amixer sset Master unmute
++ amixer sset Speaker unmute
++ amxier sset Headphone unmute
+speaker-test -c 2
+speaker-test -c 8 (for 7.1)
+
+pulse audio
++ provides interfaces for interacting with alsa
++ pulseaudio-alsa package to manage alsa using pulseaudio
+
+the "audio" group
+
+audio
++ cmus
++ pulseaudio
++ mpd (music player daemon)
+
+
+\subsection{3D Introduction}
+
+\subsection{basic wireframe, including model space, world space and camera space}
+
+local space (aka ?) model space
++ has vertices and meshes of model
+world space
++ position, rotation and scaling of models
++ affine transformation from model space
+camera space aka view space
++ camera has location, view angle, origin of camera is now from camera at camera angle
++ then project, every vertex has matrix multiplication, field of view
+
+
+heightmaps for 3d terrain
+
+vertex: 3d point
+triangle: 3 vertices
+normal: 3d vector per vertex in triangle describing surface orientation
+
+\subsection{clipping space, wireframe culling and depth buffers, and perspective divide}
+
+Frustom culling . Hide things too far left right up down far back
+Occulision culling ..hide.things hidden by other things
+
+perspective divide - results in image space, aka normalised device coordinates (ndc)
+
+
+culling and normals and clipping and depth buffer (inc z sorting)
+
+\subsection{texture mapping}
+
+Perspective correction
+Texture map involves changing each pixel from raw texture. Proper operation is non linear, different from each pixel, Eg part of texture further away have points closer to each other
+But this expensive. Can do contact vales to each pixel but this causes texture warping
+Perspective correct texture mapping
+Can divide polygons to subdivision levels to reduce warping
+
+mip mapping
+image scaled to be 1/2 ength. can then be used as texture  at further distances without shimmering effects
+
+pixel to texture ratio calculated. if one way do mip mapping, if other magnification
+
+trilinear filtering is extension of mip mapping? interpolation betweeen mipmap levels
+
+textures should be powers of 2 to support mip mapping
+
+after done the trnasformations, want to figure out what pixels are what
+rasterisation/scanline interpolation
+go row by row
+see if pixel "in" triangle
+
+AS filtering
+bilinear filtering
+linear filtering
+trilinear filtering
+
+How to draw nearest thing for given pixel? Depth buffer. Depth buffer is distance to object for every pixel.
+Can loop over every object and draw. Ie loop over every pixel. Only draw if depth less than depth buffer, store depth in depth buffer if is closest so can save for future comparisons
+How to get z buffer in advance?
++ Render at lower resolution with lower poly count objects. Hierarchical z buffer
++ Can then use z buffer to drop objects before rendering anything
+
+3d rendering. Can use fixed bins to determine draw order. Is what PS1 did. Is faster but less accurate
+
+\subsection{lighting}
+
+h3 on lighting (with just value per vertex applied across?)
+
+3d bump mapping
+Stencil shadow
+
+alpha textures. height map for material
+
+concept of baked lighting?
+
+something called "the rendering equation" for lighting?
+Bidirectional Reflectance Distribution Function
+
+lighting types:
++ ambient lighting
++ diffuse lighting
++ specular lighting
++ above 3 combine to make "phong reflection". attentuation also plays role
+
+phong lighting is per fragment lighting. gourand shading is per vertex. flat shading is also a thing
+
+
+bump mapping
+height map (black and white)
+normal map
+spec map
+material maps
+channel map
+channel packing (use alpha channel for other stuff)
+
+ray tracing?
+
+specularity
+
+\subsection{animation and key frames}
+
+\subsection{post processing}
+
+anti aliasing and types
+
+
+\subsection{scaling and rotating sprites inc mode 7 and super scalar}
+
+\subsection{sort}
+
+
+3dfx voodoo
+nvidia 256
+opengl
+glcore
+vulkan
+sdl
+glide
+direct3d
+direct 3d
+directx 789
+
+nvtop. monitors gpu stuff
+
+k-d trees after binary space partitioning on 3d.
+
+texel
+
+skybox
+
+pseudo 3d: super scaler; mode 7; wolf/doom/duke
+
+
+gpu drivers, what for?
+just have single threaded here?
+
+rasterisation is 3d thing . convert eg vector of line to pixel
+
+rasterisation Vs raytracing Vs earlier (wolfen/doom):
+
+
+

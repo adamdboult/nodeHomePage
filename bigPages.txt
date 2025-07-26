@@ -32,19 +32,12 @@ Science and engineering
 	biology
 	engineering
 	electronics
-	preComputerElectronics
+	storage
 Computers
 	engineeringComputer
-	microarchitecture
-	computerInstructions
-	computerNonRisc
-	graphics
-	storage
+	graphicsAudio
 	networks
-	audio
-	graphics3D
-	computerMultiCore
-	GPU
+	computerMultiCoreGPU
 Operating systems
 	unix
 	linuxC
@@ -52,33 +45,23 @@ Operating systems
 	networksLinux
 	linuxAudioVideo
 	databases
-Other languages which compile to machine code with dynamic or static libraries/runtime libraries
-	otherImperativeLanguages
+Programming languages
 	cpp
+	javascript
+	python
+Other languages
+	otherImperativeLanguages
 	otherCLanguages
-Other languages which compile to machine code with embedded or external runtime systems
 	scheme
 	functionalLanguages
 	otherCompiledLanguages
 	otherConcurrentLanguages
 	csharp
-Languages which compile to machine code for process virtual machines
 	java
 	otherLispLanguages
 	otherConcurrentLanguagesVM
-Interpreted languages
 	otherLanguages
-Web development and JavaScript
-	HTMLCSS
-	javascript
-	javascriptFrameworks
-Python (Virtual machine and interpreter)
-	python
-	pythonData
-	pythonInternet
-Domain specific languages
 	R
-	RPackages
 	validatingCode
 	logicalLanguage
 Applications
@@ -89,16 +72,12 @@ Applied statistics
 	appliedAudioText
 	applied
 	specificModels
-More on Linux
+More on operating systems
 	linuxDistributions
 	distributedComputing
 	IDEs
 	nonGNU
-Other operating systems
 	dos
-	BSD
-	windows
-	apple
 Economics
 	ai
 	equilibrium
