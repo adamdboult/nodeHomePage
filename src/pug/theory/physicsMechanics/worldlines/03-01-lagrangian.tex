@@ -23,25 +23,25 @@ That is, the coordinates and their velocities are such that action is stationary
 
 We have \(q(t)\) which makes the action stationary. Consider adding proportion \(\epsilon \) of another function \(f(t)\) to \(q(t)\).
 
-\(A’=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f’(t)]dt\)
+\(A'=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f'(t)]dt\)
 
-\(\dfrac{A’-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f’(t)]-L[q,\dot q]dt\)
+\(\dfrac{A'-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f'(t)]-L[q,\dot q]dt\)
 
-We can do a Taylor expansion of \(A’\).
+We can do a Taylor expansion of \(A'\).
 
-\(A’=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f’(t)]dt\)
+\(A'=\int_{t_0}^{t_1} L[q(t)+\epsilon f(t), \dot {q(t)}+\epsilon f'(t)]dt\)
 
-\(A’=\int_{t_0}^{t_1} L[q(t),\dot {q(t)}]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]+\epsilon^2 [...]dt\)
+\(A'=\int_{t_0}^{t_1} L[q(t),\dot {q(t)}]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]+\epsilon^2 [...]dt\)
 
 So:
 
-\(\dfrac{A’-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1}L[q(t),\dot {q(t)}]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]+\epsilon^2 [...]-L[q,\dot q]dt\)
+\(\dfrac{A'-A}{\epsilon }=\dfrac{1}{\epsilon}\int_{t_0}^{t_1}L[q(t),\dot {q(t)}]+\epsilon [f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta q^.}]+\epsilon^2 [...]-L[q,\dot q]dt\)
 
-\(\dfrac{A’-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot {q}}]+\epsilon [...]dt\)
+\(\dfrac{A'-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot {q}}]+\epsilon [...]dt\)
 
 We can now make the left side \(0\), by using the definition of stationary action.
 
-\(\lim_{\epsilon \rightarrow 0} \dfrac{A’-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]dt\)
+\(\lim_{\epsilon \rightarrow 0} \dfrac{A'-A}{\epsilon }=\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]dt\)
 
 \(\int_{t_0}^{t_1}[f\dfrac{\delta L}{\delta q}+f^.\dfrac{\delta L}{\delta \dot q}]dt=0\)
 

@@ -36,8 +36,22 @@ for subject in built/pug/theory/*/; do
 	if [ "$use_pdf_latex" = true ]; then
 		#pdflatex "${subject}.tex" >/dev/null 2>&1
 		#pdflatex "${subject}.tex" >/dev/null 2>&1
-		pdflatex "${subject}.tex"
-		pdflatex "${subject}.tex"
+		pdflatex -halt-on-error "${subject}.tex"
+		# ── If the word “warning” shows up anywhere in the .log, fail the build ──
+		if grep -qi warning "${subject}.log"; then
+			echo "GREP BELOW"
+			grep -C 3 -i warning "${subject}.log"
+			echo "\!\! A warning was found in ${subject}.log – treating as fatal."
+			exit 1
+		fi
+		pdflatex -halt-on-error "${subject}.tex"
+		# ── If the word “warning” shows up anywhere in the .log, fail the build ──
+		if grep -qi warning "${subject}.log"; then
+			echo "GREP BELOW"
+			grep -C 3 -i warning "${subject}.log"
+			echo "\!\! A warning was found in ${subject}.log – treating as fatal."
+			exit 1
+		fi
 	else
 		#pandoc ${subject}.tex -o ${subject}.pdf
 		echo "something else"
