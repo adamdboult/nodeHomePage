@@ -49,6 +49,8 @@ Programming languages
 	cpp
 	javascript
 	python
+	rust
+	R
 Other languages
 	otherImperativeLanguages
 	otherCLanguages
@@ -61,7 +63,6 @@ Other languages
 	otherLispLanguages
 	otherConcurrentLanguagesVM
 	otherLanguages
-	R
 	validatingCode
 	logicalLanguage
 Applications
@@ -71,7 +72,6 @@ Applied statistics
 	appliedText
 	appliedAudioText
 	applied
-	specificModels
 More on operating systems
 	linuxDistributions
 	distributedComputing
