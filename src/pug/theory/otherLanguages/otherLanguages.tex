@@ -8,7 +8,7 @@
 \begin{document}
 
 \author{Adam Boult (www.bou.lt)}
-\title{Other interpreted languages: Lua, Perl, Ruby, Julia, Octave, PHP and FreeBASIC}
+\title{Other programming languages}
 \maketitle
 
 \setcounter{tocdepth}{0}
@@ -16,13 +16,57 @@
 
 \include{preface}
 
-\part{Introduction}
+\part{Other imperative languages: Fortran, Algol, Pascal}
+\include{fortran}
+\include{algol}
+\include{pascal}
+\include{sorting2025_otherImperativeLanguages}
+
+\part{Other C-family languages: Zig}
+\include{sorting2025_otherCLanguages}
+
+\part{Scheme and Common Lisp (compiled natively), and dynamic typing}
+\include{function}
+\include{lambda}
+\include{functional}
+\include{lisp}
+\include{sorting2025_scheme}
+
+\part{Functional languages: Meta Language (ML), Caml, OCaml and Haskell}
+\include{sorting2025_functionalLanguages}
+
+\part{Other compiled languages with runtime systems: Objective-C, Nim, Forth, COBOL, Smalltalk and Simula}
+\include{forth}
+\include{sorting2025_otherCompiledLanguages}
+
+\part{Communicating Sequential Processes (CSP) and actor model concurrent languages: Swift, Go}
+\include{sorting2025_otherConcurrentLanguages}
+
+\part{C\#, F\#, VB.NET and mono}
+\include{sorting2025_csharp}
+
+\part{Java, garbage collection, process virtual machines and Kotlin}
+\include{javaintro}
+\include{sorting2025_java}
+
+\part{Other Lisp-family languages, and compiling them to VM: Racket, Clojure and Scala}
+\include{sorting2025_otherLispLanguages}
+
+\part{Communicating Sequential Processes (CSP) and actor model concurrent languages with virual machines: The BEAM VM and Erlang, Elixer, Dart (other concurrency model?)}
+\include{sorting2025_otherConcurrentLanguagesVM}
+
+\part{Other interpreted languages: Lua, Perl, Ruby, Julia, Octave, PHP and FreeBASIC}
 \include{lua}
 \include{perl}
 \include{BASIC}
+\include{sorting2025_otherLanguages}
 
-\part{SORT}
-\include{sorting2025}
+\part{Validating code and compilers: Coq (ocaml), compcert, hol (ocaml), isabelle, agda (haskell)}
+\include{coq}
+\include{sorting2025_validatingCode}
+
+\part{Logical programming languages including ada and prolog}
+\include{sorting2025_logicalLanguage}
 
 \end{document}
 

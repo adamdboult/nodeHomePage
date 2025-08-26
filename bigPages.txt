@@ -51,20 +51,7 @@ Programming languages
 	python
 	rust
 	R
-Other languages
-	otherImperativeLanguages
-	otherCLanguages
-	scheme
-	functionalLanguages
-	otherCompiledLanguages
-	otherConcurrentLanguages
-	csharp
-	java
-	otherLispLanguages
-	otherConcurrentLanguagesVM
 	otherLanguages
-	validatingCode
-	logicalLanguage
 Applications
 	VMEmulation
 	reverseEngineering
