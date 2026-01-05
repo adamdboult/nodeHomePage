@@ -47,9 +47,9 @@ Operating systems
 	databases
 Programming languages
 	cpp
+	rust
 	javascript
 	python
-	rust
 	R
 	otherLanguages
 Applications
