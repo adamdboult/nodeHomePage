@@ -64,7 +64,6 @@ More on operating systems
 	distributedComputing
 	IDEs
 	nonGNU
-	dos
 Economics
 	ai
 	equilibrium
