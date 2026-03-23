@@ -109,3 +109,5 @@ for subject in built/pug/theory/*/; do
 	python create_sidebars.py "$subject"
 
 done
+
+python create_home_header.py

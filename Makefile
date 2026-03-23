@@ -36,6 +36,5 @@ pug:
 	cp -R src/pug built/pug
 
 latex:
-	./convert_latex.sh
-	python create_home_header.py
+	./convert_latex_and_create_home_header.sh
 

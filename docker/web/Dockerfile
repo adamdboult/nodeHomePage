@@ -1,12 +1,19 @@
 FROM node:22 AS node-build
-RUN npm install -g npm@latest
+#RUN npm install -g npm@latest
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+#COPY package.json package-lock.json ./
+COPY package.json pnpm-lock.yaml ./
+COPY vendor/pnpm-store ./vendor/pnpm-store
 
-ENV NODE_ENV=production
-RUN npm ci
+#ENV NODE_ENV=production
+#RUN npm ci
+#RUN corepack enable pnpm && pnpm install --frozen-lockfile --prod
+#RUN corepack enable pnpm
+RUN npm install -g pnpm@10
+#RUN pnpm config set store-dir vendor/pnpm-store
+RUN pnpm install --offline --frozen-lockfile --prod --store-dir vendor/pnpm-store
 
 FROM node:22
 
@@ -16,11 +23,11 @@ COPY --from=node-build /app/node_modules ./node_modules
 
 ENV PATH="/usr/local/lib/node_modules/.bin:$PATH"
 
+#  python3-pip                                                       \
+#  python3.11-dev                                                    \
 RUN apt-get update && apt-get install --no-install-recommends --yes \
   python3.11                                                        \
   python3.11-venv                                                   \
-  python3.11-dev                                                    \
-  python3-pip                                                       \
   pandoc                                                            \
   texlive-latex-base                                                \
   texlive-latex-recommended                                         \
@@ -32,7 +39,6 @@ RUN apt-get update && apt-get install --no-install-recommends --yes \
 
 # One reason to do this is so we can use "python" rather than "python3" in the makefile, even if we don't need to install any packages from requirements.txt
 RUN python3 -m venv /opt/venv
-#RUN /opt/venv/bin/pip install --disable-pip-version-check --no-cache-dir --no-deps --require-hashes -r requirements.txt
 ENV PATH="/opt/venv/bin:$PATH"
 
 # Avoid ascii errors when reading files in Python
