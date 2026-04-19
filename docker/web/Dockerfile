@@ -10,7 +10,8 @@ RUN npm install -g ./vendor/npm/pnpm_tgz/pnpm-10.33.0.tgz --prefix vendor/npm/pn
 
 RUN ./vendor/npm/pnpm_bin/bin/pnpm install --offline --frozen-lockfile --prod --store-dir vendor/pnpm-store
 
-FROM node:22
+#FROM node:22
+FROM adam_node_pandoc_texlive:22
 
 WORKDIR /app
 
@@ -20,17 +21,17 @@ ENV PATH="/usr/local/lib/node_modules/.bin:$PATH"
 
 #  python3-pip                                                       \
 #  python3.11-dev                                                    \
-RUN apt-get update && apt-get install --no-install-recommends --yes \
-  python3.11                                                        \
-  python3.11-venv                                                   \
-  pandoc                                                            \
-  texlive-latex-base                                                \
-  texlive-latex-recommended                                         \
-  texlive-latex-extra                                               \
-  texlive-fonts-recommended                                         \
-  && apt-get clean                                                  \
-  && rm -rf /var/lib/apt/lists/*                                    \
-  && rm -rf /usr/share/doc/* /usr/share/man/*
+#RUN apt-get update && apt-get install --no-install-recommends --yes \
+#  python3.11                                                        \
+#  python3.11-venv                                                   \
+#  pandoc                                                            \
+#  texlive-latex-base                                                \
+#  texlive-latex-recommended                                         \
+#  texlive-latex-extra                                               \
+#  texlive-fonts-recommended                                         \
+#  && apt-get clean                                                  \
+#  && rm -rf /var/lib/apt/lists/*                                    \
+#  && rm -rf /usr/share/doc/* /usr/share/man/*
 
 # One reason to do this is so we can use "python" rather than "python3" in the makefile, even if we don't need to install any packages from requirements.txt
 RUN python3 -m venv /opt/venv
