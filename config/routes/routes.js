@@ -3,6 +3,10 @@ module.exports = function (app) {
     res.render("home");
   });
 
+  app.get("/home", function (req, res) {
+    res.render("home");
+  });
+
   app.get("/theory", function (req, res) {
     res.redirect("/");
   });

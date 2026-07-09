@@ -18,7 +18,7 @@ VENV_DIR := .venv
 PYTHON := $(VENV_DIR)/bin/python
 
 
-all: clean favicon packages scripts pug latex
+all: clean favicon packages scripts html pug latex
 
 vendor: vendor_nodejs vendor_python
 	
@@ -57,6 +57,10 @@ scripts:
 #styles:
 #	mkdir public/css/
 #	cp -R./src/styles/. ./public/css
+
+html:
+	cp -R src/html/. public/
+	cp src/html/mills-review-explorer.html public/index.html
 
 pug:
 	cp -R src/pug built/pug
