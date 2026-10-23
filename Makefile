@@ -60,7 +60,7 @@ scripts:
 
 html:
 	cp -R src/html/. public/
-	cp src/html/mills-review-explorer.html public/index.html
+	#cp src/html/mills-review-explorer.html public/index.html
 
 pug:
 	cp -R src/pug built/pug
