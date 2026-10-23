@@ -66,7 +66,10 @@ pug:
 	cp -R src/pug built/pug
 
 latex:
-	./convert_latex_and_create_home_header.sh
+	python build_scripts/create_derived_latex_files.py
+	./build_scripts/convert_latex.sh
+	python build_scripts/create_sidebars.py
+	python build_scripts/create_home_header.py
 
 install: install_python install_nodejs
 	

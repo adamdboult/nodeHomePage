@@ -4,8 +4,6 @@ Readme
 
 import os
 
-import sys
-
 
 ###################################
 # Create tex file for each folder #
@@ -226,7 +224,11 @@ def main():
     Main
     """
 
-    subjects = [sys.argv[1]]
+    # All subject folders in built/pug/theory/ (e.g. "algebra", "C")
+    theory_dir = os.path.join("built", "pug", "theory")
+    subjects = sorted(
+        name for name in os.listdir(theory_dir) if os.path.isdir(os.path.join(theory_dir, name))
+    )
 
     for subject in subjects:
         my_function(subject)

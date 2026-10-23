@@ -19,11 +19,9 @@ for subject in built/pug/theory/*/; do
 	#printf "Doing \"${subject}\"...\n"
 	printf "Doing \"%s\"...\n" "$subject"
 	# Create tex file
-	printf "   Creating derived latex files\n"
-	python create_derived_latex_files.py "$subject"
 
 	# Copy preface.tex to the folder. Needed for creating the pdf/html files
-	cp preface.tex "built/pug/theory/${subject}/"
+	cp src/preface.tex "built/pug/theory/${subject}/"
 
 	# Run twice to get table of contents
 	# Doing this before pandoc because we change the data for that to reverse escape \_
@@ -97,17 +95,12 @@ for subject in built/pug/theory/*/; do
 		sed -i 's/\\#/#/g' "$tex_file"
 		sed -i 's/\\\//\//g' "$tex_file"
 	done
-	# Create sidebars
-	printf "   Creating side bars\n"
 	# sed just needed for create_sidebars, but also needed on main tex thing too as well as individual pages as above
 	sed -i 's/\\_/_/g' "built/pug/theory/${subject}/${subject}.tex"
 	sed -i 's/\\#/#/g' "built/pug/theory/${subject}/${subject}.tex"
 
 	# Need to figure out how to do this last sed correctly trying to replace \/ with /
 	sed -i 's/\\\//\//g' "built/pug/theory/${subject}/${subject}.tex"
-	# Doing this after pandoc because it needs the sed commands too.
-	python create_sidebars.py "$subject"
 
 done
 
-python create_home_header.py
