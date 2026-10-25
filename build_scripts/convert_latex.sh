@@ -103,4 +103,3 @@ for subject in built/pug/theory/*/; do
 	sed -i 's/\\\//\//g' "built/pug/theory/${subject}/${subject}.tex"
 
 done
-

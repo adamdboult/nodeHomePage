@@ -126,7 +126,6 @@ def create_header_file(big_pages_list, name_mapper):
     with open(
         os.path.join("built/pug/templates/header.pug"), "w", encoding="utf-8"
     ) as f:
-
         f.write("extends headerCore.pug\n")
         f.write("block dropdown\n")
 
@@ -151,12 +150,11 @@ def create_home_file(big_pages_list, name_mapper):
     Documentation
     """
     with open(os.path.join("built/pug/home.pug"), "w", encoding="utf-8") as f:
-
         f.write("extends homeCore.pug\n")
         f.write("block bigNotes\n")
 
         for big_pages_dict in big_pages_list:
-            f.write(f'	p {big_pages_dict["heading"]}\n')
+            f.write(f"	p {big_pages_dict['heading']}\n")
             f.write("	ul\n")
             for big_page_short in big_pages_dict["items"]:
                 f.write("		li\n")

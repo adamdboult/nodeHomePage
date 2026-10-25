@@ -10,11 +10,12 @@ import os
 # All subject folders in built/pug/theory/ (e.g. "algebra", "C")
 theory_dir = os.path.join("built", "pug", "theory")
 subjects = sorted(
-    name for name in os.listdir(theory_dir) if os.path.isdir(os.path.join(theory_dir, name))
+    name
+    for name in os.listdir(theory_dir)
+    if os.path.isdir(os.path.join(theory_dir, name))
 )
 
 for subject in subjects:
-
     directory_to_walk = os.path.join("built", "pug", "theory", subject)
 
     for folder in os.listdir(directory_to_walk):
@@ -34,14 +35,12 @@ for subject in subjects:
         with open(
             os.path.join(directory_to_walk, folder + ".tex"), "w", encoding="utf-8"
         ) as f:
-
             for line in lines:
                 f.write(line + "\n")
 
         with open(
             os.path.join(directory_to_walk, folder + ".pug"), "w", encoding="utf-8"
         ) as f:
-
             f.write("extends ../../templates/header.pug\n")
             f.write("block content\n")
             f.write("	style\n")

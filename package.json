@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "express": "^4.22.2",
+    "express": "^4.22.3",
     "mathjax": "^3.2.2",
     "pug": "^3.0.4"
   },

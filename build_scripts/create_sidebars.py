@@ -35,7 +35,6 @@ def write_non_sidebar(subject, non_sidebar_file):
     """
 
     with open(non_sidebar_file, "w", encoding="utf-8") as non_sidebar_file_data:
-
         non_sidebar_file_data.write("extends ../templates/header.pug\n")
         non_sidebar_file_data.write("block content\n")
         non_sidebar_file_data.write("	div.container-fluid\n")
@@ -46,14 +45,20 @@ def write_non_sidebar(subject, non_sidebar_file):
         non_sidebar_file_data.write("			nav.col-md-2.bg-light.sidebar\n")
         non_sidebar_file_data.write("				div.sidebar-sticky\n")
         non_sidebar_file_data.write("					br\n")
-        non_sidebar_file_data.write("					include ./" + subject + "_sidebar.pug\n")
+        non_sidebar_file_data.write(
+            "					include ./" + subject + "_sidebar.pug\n"
+        )
         non_sidebar_file_data.write(
             '			//main.col-md-9.ml-sm-auto.col-lg-10.px-4(role="main")\n'
         )
         non_sidebar_file_data.write("			.col-md-10\n")
         non_sidebar_file_data.write("				br\n")
-        non_sidebar_file_data.write("				p Please select a chapter from the left.\n")
-        non_sidebar_file_data.write("				include ./" + subject + "/preface.html\n")
+        non_sidebar_file_data.write(
+            "				p Please select a chapter from the left.\n"
+        )
+        non_sidebar_file_data.write(
+            "				include ./" + subject + "/preface.html\n"
+        )
 
 
 def write_sidebar_and_return_contents_in_tex(
@@ -227,7 +232,9 @@ def main():
     # All subject folders in built/pug/theory/ (e.g. "algebra", "C")
     theory_dir = os.path.join("built", "pug", "theory")
     subjects = sorted(
-        name for name in os.listdir(theory_dir) if os.path.isdir(os.path.join(theory_dir, name))
+        name
+        for name in os.listdir(theory_dir)
+        if os.path.isdir(os.path.join(theory_dir, name))
     )
 
     for subject in subjects:

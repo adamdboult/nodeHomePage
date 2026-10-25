@@ -26,7 +26,8 @@ module.exports = function (app) {
     if (!isSafeName(req.params.area)) {
       return res.render("404", { url: req.url });
     }
-    res.render("theory/" + req.params.area, {}, function (err, html) {      if (err) {
+    res.render("theory/" + req.params.area, {}, function (err, html) {
+      if (err) {
         console.log(err);
         res.render("404", { url: req.url });
       } else {
@@ -39,7 +40,7 @@ module.exports = function (app) {
     if (!isSafeName(req.params.area) || !isSafeName(req.params.subject)) {
       return res.render("404", { url: req.url });
     }
-    res.render(    
+    res.render(
       "theory/" + req.params.area + "/" + req.params.subject,
       {},
       function (err, html) {
